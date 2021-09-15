@@ -1,0 +1,135 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<link rel=preload as=font href=/fonts/vendor/jost/jost-v4-latin-regular.woff2 type=font/woff2 crossorigin>
+<link rel=preload as=font href=/fonts/vendor/jost/jost-v4-latin-700.woff2 type=font/woff2 crossorigin>
+<link rel=stylesheet href=/main.d469fadfe4eed4687c29c8cc10eb4e246c1cf31098dd7efa655628dd0ea1dbfd35b640f29b0cd2d40ff4cf815f46e1a8512dda1607cd96e2f91d16f60f228d25.css integrity="sha512-1Gn63+Tu1Gh8KcjMEOtOJGwc8xCY3X76ZVYo3Q6h2/01tkDymwzS1A/0z4FfRuGoUS3aFgfNluL5HRb2DyKNJQ==" crossorigin=anonymous>
+<noscript><style>img.lazyload{display:none}</style></noscript>
+<meta name=robots content="index, follow">
+<meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<title>Combine EJB and WAR file in a same web service EAR - Gerald Nguyen</title>
+<meta name=description content="An admirer of (Vulcan) logic, diversity and multidisciplinary approaches">
+<link rel=canonical href=/blog/combine-ejb-and-war-file-in-a-same-web-service-ear/>
+<meta property="og:locale" content>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Combine EJB and WAR file in a same web service EAR">
+<meta property="og:description" content="That has been my challenge since yesterday. And I think I have just got it :D
+Let&rsquo;s see if I can reconstruct a step-by-step manual:
+1. First of all, let have some understanding of the structure of a EAR file. EAR stands for Enterprise ARchive. It&rsquo;s a convenient mean to to pack and deploy components of an enterprise application. Essentially, you can pack WAR, EJB, Resource Adapter and supporting libraries inside a EAR file.">
+<meta property="og:url" content="/blog/combine-ejb-and-war-file-in-a-same-web-service-ear/">
+<meta property="og:site_name" content="Gerald Nguyen">
+<meta property="article:published_time" content="2010-03-02T09:19:42+01:00">
+<meta property="article:modified_time" content="2010-03-02T09:19:42+01:00">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:site content>
+<meta name=twitter:creator content>
+<meta name=twitter:title content="Combine EJB and WAR file in a same web service EAR">
+<meta name=twitter:description content>
+<meta name=twitter:card content="summary">
+<meta name=twitter:image:alt content="Combine EJB and WAR file in a same web service EAR">
+<script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/1","name":"","url":"/","sameAs":[],"image":{"@type":"ImageObject","@id":"/#/schema/image/1","url":"/\u003cnil\u003e","width":null,"height":null,"caption":""}},{"@type":"WebSite","@id":"/#/schema/website/1","url":"/","name":"Gerald Nguyen","description":"An admirer of (Vulcan) logic, diversity and multidisciplinary approaches","publisher":{"@id":"/#/schema/person/1"}},{"@type":"WebPage","@id":"/blog/combine-ejb-and-war-file-in-a-same-web-service-ear/","url":"/blog/combine-ejb-and-war-file-in-a-same-web-service-ear/","name":"Combine EJB and WAR file in a same web service EAR","description":"","isPartOf":{"@id":"/#/schema/website/1"},"about":{"@id":"/#/schema/person/1"},"datePublished":"2010-03-02T09:19:42CET","dateModified":"2010-03-02T09:19:42CET","breadcrumb":{"@id":"/blog/combine-ejb-and-war-file-in-a-same-web-service-ear/#/schema/breadcrumb/1"},"primaryImageOfPage":{"@id":"/blog/combine-ejb-and-war-file-in-a-same-web-service-ear/#/schema/image/2"},"inLanguage":"","potentialAction":[{"@type":"ReadAction","target":["/blog/combine-ejb-and-war-file-in-a-same-web-service-ear/"]}]},{"@type":"BreadcrumbList","@id":"/blog/combine-ejb-and-war-file-in-a-same-web-service-ear/#/schema/breadcrumb/1","name":"Breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"/","url":"/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"/blogcombine-ejb-and-war-file-in-a-same-web-service-ear/"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"/#/schema/article/1","headline":"Combine EJB and WAR file in a same web service EAR","description":"","isPartOf":{"@id":"/blog/combine-ejb-and-war-file-in-a-same-web-service-ear/"},"mainEntityOfPage":{"@id":"/blog/combine-ejb-and-war-file-in-a-same-web-service-ear/"},"datePublished":"2010-03-02T09:19:42CET","dateModified":"2010-03-02T09:19:42CET","author":{"@id":"/#/schema/person/2"},"publisher":{"@id":"/#/schema/person/1"},"image":{"@id":"/blog/combine-ejb-and-war-file-in-a-same-web-service-ear/#/schema/image/2"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/2","name":null,"sameAs":[]}]},{"@context":"https://schema.org","@graph":[{"@type":"ImageObject","@id":"/blog/combine-ejb-and-war-file-in-a-same-web-service-ear/#/schema/image/2","url":null,"contentUrl":null,"caption":"Combine EJB and WAR file in a same web service EAR"}]}]}</script>
+<meta name=theme-color content="#fff">
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=manifest crossorigin=use-credentials href=/site.webmanifest>
+</head>
+<body class="blog single">
+<div class="header-bar fixed-top"></div>
+<header class="navbar fixed-top navbar-expand-md navbar-light">
+<div class=container>
+<input class="menu-btn order-0" type=checkbox id=menu-btn>
+<label class="menu-icon d-md-none" for=menu-btn><span class=navicon></span></label>
+<a class="navbar-brand order-1 order-md-0 me-auto" href=/>Gerald Nguyen</a>
+<button id=mode class="btn btn-link order-2 order-md-4" type=button aria-label="Toggle mode">
+<span class=toggle-dark><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></span>
+<span class=toggle-light><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+</button>
+<ul class="navbar-nav social-nav order-3 order-md-5">
+<li class=nav-item>
+<a class=nav-link href=https://github.com/geraldnguyen><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg><span class="ms-2 visually-hidden">GitHub</span></a>
+</li>
+</ul>
+<div class="collapse navbar-collapse order-4 order-md-1">
+<ul class="navbar-nav main-nav me-auto order-5 order-md-2"><li class="nav-item active">
+<a class=nav-link href=/blog/>Blog</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/about/>About</a>
+</li>
+</ul>
+<div class="break order-6 d-md-none"></div>
+<form class="navbar-form flex-grow-1 order-7 order-md-3">
+<input id=userinput class="form-control is-search" type=search placeholder="Search docs..." aria-label="Search docs..." autocomplete=off>
+<div id=suggestions class="shadow bg-white rounded"></div>
+</form>
+</div>
+</div>
+</header>
+<div class="wrap container" role=document>
+<div class=content>
+<div class="row justify-content-center">
+<div class="col-md-12 col-lg-10 col-xl-8">
+<article>
+<div class=blog-header>
+<h1>Combine EJB and WAR file in a same web service EAR</h1>
+<p><small>Posted March 2, 2010 by &nbsp;&dash;&nbsp;<strong>3&nbsp;min read</strong></small><p>
+</div>
+<p class=lead></p>
+<p>That has been my challenge since yesterday. And I think I have just got it :D</p>
+<p>Let&rsquo;s see if I can reconstruct a step-by-step manual:</p>
+<h4 id=1-first-of-all-let-have-some-understanding-of-the-structure-of-a-ear-file>1. First of all, let have some understanding of the structure of a EAR file.</h4>
+<p>EAR stands for Enterprise ARchive. It&rsquo;s a convenient mean to to pack and deploy components of an enterprise application. Essentially, you can pack WAR, EJB, Resource Adapter and supporting libraries inside a EAR file. Having them all in one place, as a single unit tremendously helps release management and deployment. But it does pose some challenges in the context of class-loading.</p>
+<p>For weblogic application, each EAR file must contain a application.xml file under META-INF. jwsc will automatically generate this file is none is specified in its applicationXml attribute. However, the generated file only contain 1 entry - the WAR file. In order to use EJB, we will need to overwrite that file by our own. The below ant script will do the work:</p>
+<pre><code class=language-xml>&lt;copy overwrite=&quot;true&quot; todir=&quot;${env.MATRIX_CODEBASE}/${project}/build/ear/META-INF&quot;&gt;               
+    &lt;FileSet dir=&quot;${env.MATRIX_CODEBASE}/${project}/etc&quot;&gt;
+        &lt;include name=&quot;application.xml&quot; /&gt;
+    &lt;/FileSet&gt;           
+&lt;/copy&gt;
+</code></pre>
+<h4 id=2-class-loading-where-you-can-place-librarycode-shared-by-both-war-file-and-ejb>2. Class-loading. Where you can place library/code shared by both WAR file and EJB.</h4>
+<p>Web application load classes from either their <code>WEB-INF/classes</code> or <code>WEB-INF/lib</code> directories. EJB as JAR file can depends on dependency mapping in its MANIFEST file.</p>
+<p>But be careful when we pack them together. Weblogic class-loaders are organized into hierarchy with Webapp class-loader below EJB&rsquo;s. Class-loading hell, as I saw the term somewhere, is used to refered to situation when a single class is loaded by both webapp and EJB class-loaders. Everything seems correct, webapp and EJB work fine on their own, but the application breaks down the minute those 2 exchanges objects of type loaded by both class-loaders.</p>
+<p>Take some minutes (or even hours) to read weblogic class-loading mechanism. Webapp is under EJB thus is able to delegate the loading task to EJB. The reverse is not possible, EJB cannot load library under webapp&rsquo;s WEB-INF/lib directory. So, it&rsquo;s safer to let EJB do class-loading.</p>
+<h4 id=3-build-order>3. Build order.</h4>
+<p>Webapp is the front-end, it&rsquo;s the one first invoked by client&rsquo;s request. It will subsequently delegate the task to EJB. So, in order to compile webapp, we will need EJB.</p>
+<h4 id=4-project-structure>4. Project Structure</h4>
+<p>EJB requires its own descriptors like ejb-jar.xml and <code>weblogic-ejb-jar.xml</code>. Enterprise Application that uses EJB also requires EJB declaration insides its application.xml. I have them all under /etc folder.</p>
+<p>Shared classes and library between EJB and webapp, as explained earlier, can be loaded by EJB class-loader. Hence, they should be stored in a same level with EJB JAR and WAR files. I group them all into -common.jar which is referenced by EJB JAR.</p>
+<p>Ok, everything prepared. Let&rsquo;s get real!</p>
+<ol start=5>
+<li>Ant script</li>
+</ol>
+<p>Step 1: build <code>-common.jar</code> that includes all shared java classes and configuration</p>
+<p>Step 2: build <code>-ejb.jar</code> that reference `-common.jar and shared libraries</p>
+<p>Step 3: Process JWS file with classpath includes <code>-common.jar</code>, <code>-ejb.jar</code> and shared libraries. The result is a WAR file.</p>
+<p>Step 4: Pack all generated file into an EAR file.</p>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer text-muted">
+<div class=container>
+<div class=row>
+<div class="col-lg-8 order-last order-lg-first">
+<ul class=list-inline>
+<li class=list-inline-item>Powered by <a href=https://gohugo.io/>Hugo</a>, and <a href=https://getdoks.org/>Doks</a></li>
+</ul>
+</div>
+<div class="col-lg-8 order-first order-lg-last text-lg-end">
+<ul class=list-inline>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<script src=/js/bootstrap.min.586171fec3966d1a44fa8aa2edb24b861dc3a72be8cc24aa4e0dabe4c312a0dae5fe1eaa7c93180a6211fa4d7c5461b0d228fdf741be2eae279a376dfa1e7d81.js integrity="sha512-WGFx/sOWbRpE+oqi7bJLhh3DpyvozCSqTg2r5MMSoNrl/h6qfJMYCmIR+k18VGGw0ij990G+Lq4nmjdt+h59gQ==" crossorigin=anonymous defer></script>
+<script src=/js/highlight.min.e13cfba4c5524e30386cb9ea71f0f191f39d15b25b222f4b67549689f7c076158f42a2282446044f5cdacc76a6d003efbfa252a84aea0116703803b6339ae35f.js integrity="sha512-4Tz7pMVSTjA4bLnqcfDxkfOdFbJbIi9LZ1SWiffAdhWPQqIoJEYET1zazHam0APvv6JSqErqARZwOAO2M5rjXw==" crossorigin=anonymous defer></script>
+<script src=/main.min.9e62c9b0c5dc8279689cc9cb693a32c8ea1d19032f574f98c782ff59a0417d3662ff94b1a7755ab72a7a1862644bf00a58492c65aa0adabbc58080f4018c61bc.js integrity="sha512-nmLJsMXcgnlonMnLaToyyOodGQMvV0+Yx4L/WaBBfTZi/5Sxp3Vatyp6GGJkS/AKWEksZaoK2rvFgID0AYxhvA==" crossorigin=anonymous defer></script>
+<script src=/index.min.177e5d23ef2cca9f490939925b2e6d748d9bb8005b5423f0c2075bde603b8249fe761b3e8b5d7e3e477b2cf7e73cba3c80e7809e0c3845646c2ca14ee2220663.js integrity="sha512-F35dI+8syp9JCTmSWy5tdI2buABbVCPwwgdb3mA7gkn+dhs+i11+Pkd7LPfnPLo8gOeAngw4RWRsLKFO4iIGYw==" crossorigin=anonymous defer></script>
+</body>
+</html>

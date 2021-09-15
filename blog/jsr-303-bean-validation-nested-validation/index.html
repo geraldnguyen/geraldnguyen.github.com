@@ -1,0 +1,173 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<link rel=preload as=font href=/fonts/vendor/jost/jost-v4-latin-regular.woff2 type=font/woff2 crossorigin>
+<link rel=preload as=font href=/fonts/vendor/jost/jost-v4-latin-700.woff2 type=font/woff2 crossorigin>
+<link rel=stylesheet href=/main.d469fadfe4eed4687c29c8cc10eb4e246c1cf31098dd7efa655628dd0ea1dbfd35b640f29b0cd2d40ff4cf815f46e1a8512dda1607cd96e2f91d16f60f228d25.css integrity="sha512-1Gn63+Tu1Gh8KcjMEOtOJGwc8xCY3X76ZVYo3Q6h2/01tkDymwzS1A/0z4FfRuGoUS3aFgfNluL5HRb2DyKNJQ==" crossorigin=anonymous>
+<noscript><style>img.lazyload{display:none}</style></noscript>
+<meta name=robots content="index, follow">
+<meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<title>JSR 303 – Bean Validation – Nested Validation - Gerald Nguyen</title>
+<meta name=description content="An admirer of (Vulcan) logic, diversity and multidisciplinary approaches">
+<link rel=canonical href=/blog/jsr-303-bean-validation-nested-validation/>
+<meta property="og:locale" content>
+<meta property="og:type" content="article">
+<meta property="og:title" content="JSR 303 – Bean Validation – Nested Validation">
+<meta property="og:description" content="Following up from my previous post about JSR 303 – Bean Validation, we will see how to apply it to any nested property and how to display validation error on screen using Spring MVC’s JSP tags
+1. Bean Validation on Nested Property
+Recall that to validate any property, we only need to put a Constraint annotation on top of its declaration. Example of common constraints are @NotEmpty, @Pattern, @Email. One thing in common of these constraints are that the applied property has to be of type String.">
+<meta property="og:url" content="/blog/jsr-303-bean-validation-nested-validation/">
+<meta property="og:site_name" content="Gerald Nguyen">
+<meta property="article:published_time" content="2012-08-09T09:19:42+01:00">
+<meta property="article:modified_time" content="2012-08-09T09:19:42+01:00">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:site content>
+<meta name=twitter:creator content>
+<meta name=twitter:title content="JSR 303 – Bean Validation – Nested Validation">
+<meta name=twitter:description content>
+<meta name=twitter:card content="summary">
+<meta name=twitter:image:alt content="JSR 303 – Bean Validation – Nested Validation">
+<script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/1","name":"","url":"/","sameAs":[],"image":{"@type":"ImageObject","@id":"/#/schema/image/1","url":"/\u003cnil\u003e","width":null,"height":null,"caption":""}},{"@type":"WebSite","@id":"/#/schema/website/1","url":"/","name":"Gerald Nguyen","description":"An admirer of (Vulcan) logic, diversity and multidisciplinary approaches","publisher":{"@id":"/#/schema/person/1"}},{"@type":"WebPage","@id":"/blog/jsr-303-bean-validation-nested-validation/","url":"/blog/jsr-303-bean-validation-nested-validation/","name":"JSR 303 – Bean Validation – Nested Validation","description":"","isPartOf":{"@id":"/#/schema/website/1"},"about":{"@id":"/#/schema/person/1"},"datePublished":"2012-08-09T09:19:42CET","dateModified":"2012-08-09T09:19:42CET","breadcrumb":{"@id":"/blog/jsr-303-bean-validation-nested-validation/#/schema/breadcrumb/1"},"primaryImageOfPage":{"@id":"/blog/jsr-303-bean-validation-nested-validation/#/schema/image/2"},"inLanguage":"","potentialAction":[{"@type":"ReadAction","target":["/blog/jsr-303-bean-validation-nested-validation/"]}]},{"@type":"BreadcrumbList","@id":"/blog/jsr-303-bean-validation-nested-validation/#/schema/breadcrumb/1","name":"Breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"/","url":"/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"/blogjsr-303-bean-validation-nested-validation/"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"/#/schema/article/1","headline":"JSR 303 – Bean Validation – Nested Validation","description":"","isPartOf":{"@id":"/blog/jsr-303-bean-validation-nested-validation/"},"mainEntityOfPage":{"@id":"/blog/jsr-303-bean-validation-nested-validation/"},"datePublished":"2012-08-09T09:19:42CET","dateModified":"2012-08-09T09:19:42CET","author":{"@id":"/#/schema/person/2"},"publisher":{"@id":"/#/schema/person/1"},"image":{"@id":"/blog/jsr-303-bean-validation-nested-validation/#/schema/image/2"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/2","name":null,"sameAs":[]}]},{"@context":"https://schema.org","@graph":[{"@type":"ImageObject","@id":"/blog/jsr-303-bean-validation-nested-validation/#/schema/image/2","url":null,"contentUrl":null,"caption":"JSR 303 – Bean Validation – Nested Validation"}]}]}</script>
+<meta name=theme-color content="#fff">
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=manifest crossorigin=use-credentials href=/site.webmanifest>
+</head>
+<body class="blog single">
+<div class="header-bar fixed-top"></div>
+<header class="navbar fixed-top navbar-expand-md navbar-light">
+<div class=container>
+<input class="menu-btn order-0" type=checkbox id=menu-btn>
+<label class="menu-icon d-md-none" for=menu-btn><span class=navicon></span></label>
+<a class="navbar-brand order-1 order-md-0 me-auto" href=/>Gerald Nguyen</a>
+<button id=mode class="btn btn-link order-2 order-md-4" type=button aria-label="Toggle mode">
+<span class=toggle-dark><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></span>
+<span class=toggle-light><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+</button>
+<ul class="navbar-nav social-nav order-3 order-md-5">
+<li class=nav-item>
+<a class=nav-link href=https://github.com/geraldnguyen><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg><span class="ms-2 visually-hidden">GitHub</span></a>
+</li>
+</ul>
+<div class="collapse navbar-collapse order-4 order-md-1">
+<ul class="navbar-nav main-nav me-auto order-5 order-md-2"><li class="nav-item active">
+<a class=nav-link href=/blog/>Blog</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/about/>About</a>
+</li>
+</ul>
+<div class="break order-6 d-md-none"></div>
+<form class="navbar-form flex-grow-1 order-7 order-md-3">
+<input id=userinput class="form-control is-search" type=search placeholder="Search docs..." aria-label="Search docs..." autocomplete=off>
+<div id=suggestions class="shadow bg-white rounded"></div>
+</form>
+</div>
+</div>
+</header>
+<div class="wrap container" role=document>
+<div class=content>
+<div class="row justify-content-center">
+<div class="col-md-12 col-lg-10 col-xl-8">
+<article>
+<div class=blog-header>
+<h1>JSR 303 – Bean Validation – Nested Validation</h1>
+<p><small>Posted August 9, 2012 by &nbsp;&dash;&nbsp;<strong>2&nbsp;min read</strong></small><p>
+</div>
+<p class=lead></p>
+<p>Following up from my <a href=/blog/jsr-303-bean-validation-basic/>previous post</a> about JSR 303 – Bean Validation, we will see how to apply it to any nested property and how to display validation error on screen using Spring MVC’s JSP tags</p>
+<p><strong>1. Bean Validation on Nested Property</strong></p>
+<p>Recall that to validate any property, we only need to put a <em>Constraint</em> annotation on top of its declaration. Example of common constraints are <code>@NotEmpty</code>, <code>@Pattern</code>, <code>@Email</code>. One thing in common of these constraints are that the applied property has to be of type <code>String</code>.</p>
+<p>But if you have a bean called <code>Person</code> with an <code>Address</code> property and using these provided constraints, how do you validate that <code>houseNumber</code>, <code>streetName</code> are mandatory while <code>country</code>, <code>province</code> is not?</p>
+<pre><code>public class Person {
+   @NotEmpty
+   private String fullName;
+ 
+   @Email
+   private String email;
+ 
+   @Pattern (regexp = &quot;[0-9]+&quot;)
+   private String telNo;
+ 
+   @NotNull
+   private Address address;
+}
+ 
+class Address {
+   private String houseNumber;
+ 
+   private String streetName;
+ 
+   private String province;
+ 
+   private String country;
+}
+</code></pre>
+<p>You can create a <em>custom constraint</em> (e.g. <code>@ValidAddress</code>) – we will explore this option in the next post. Or you can use <code>@Valid</code> on the <code>address</code> property in combination of other constraints inside <code>Address</code> class. A valid example would be:</p>
+<pre><code>public class Person {
+   @NotEmpty
+   private String fullName;
+ 
+   @Email
+   private String email;
+ 
+   @Pattern (regexp = &quot;[0-9]+&quot;)
+   private String telNo;
+ 
+   @NotNull
+   @Valid
+   private Address address;
+}
+ 
+class Address {
+   @NotEmpty
+   private String houseNumber;
+ 
+   @NotEmpty
+   private String streetName;
+ 
+   private String province;
+ 
+   private String country;
+}
+</code></pre>
+<p><code>@Valid</code> constraint will instruct the Bean Validator to delve to the type of its applied property and validate all constraints found there. In above example, the validator, when seeing a <code>@Valid</code> constraint on <code>address</code> property, will explore the <code>Address</code> class and validate all JSR 303 Constraints found inside. Because <code>houseNumber</code> and <code>streetName</code> are marked with <code>@NotEmpty</code> constraints, they are mandatory; <code>province</code> and <code>country</code> on the other hand are optional.</p>
+<p><strong>2. Display Validation Error Using Spring MVC’s JSP Tags</strong></p>
+<p>Spring MVC tag library (<code>&lt;%@ taglib prefix=”form” uri=”[http://www.springframework.org/tags/form&#8221](http://www.springframework.org/tags/form&#8221); %></code>) offers a consistent way to display and collect input form. For our purpose, the tag used to display validation error is <code>errors</code></p>
+<p>Assume an instance <code>of Person</code> is an backing object of an input form and is displayed using Spring MVC tag.</p>
+<p>Validation error on <code>fullName</code> field can be make visible by below code:</p>
+<pre><code>&lt;form:errors path=&quot;fullName&quot; /&gt;
+</code></pre>
+<p>Validation error on <em>nested</em> field such as <code>houseNumber</code> of <code>address</code> property can be make visible by specifying the full path:</p>
+<pre><code>&lt;form:errors path=&quot;address.houseNumber&quot; /&gt;
+</code></pre>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer text-muted">
+<div class=container>
+<div class=row>
+<div class="col-lg-8 order-last order-lg-first">
+<ul class=list-inline>
+<li class=list-inline-item>Powered by <a href=https://gohugo.io/>Hugo</a>, and <a href=https://getdoks.org/>Doks</a></li>
+</ul>
+</div>
+<div class="col-lg-8 order-first order-lg-last text-lg-end">
+<ul class=list-inline>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<script src=/js/bootstrap.min.586171fec3966d1a44fa8aa2edb24b861dc3a72be8cc24aa4e0dabe4c312a0dae5fe1eaa7c93180a6211fa4d7c5461b0d228fdf741be2eae279a376dfa1e7d81.js integrity="sha512-WGFx/sOWbRpE+oqi7bJLhh3DpyvozCSqTg2r5MMSoNrl/h6qfJMYCmIR+k18VGGw0ij990G+Lq4nmjdt+h59gQ==" crossorigin=anonymous defer></script>
+<script src=/js/highlight.min.e13cfba4c5524e30386cb9ea71f0f191f39d15b25b222f4b67549689f7c076158f42a2282446044f5cdacc76a6d003efbfa252a84aea0116703803b6339ae35f.js integrity="sha512-4Tz7pMVSTjA4bLnqcfDxkfOdFbJbIi9LZ1SWiffAdhWPQqIoJEYET1zazHam0APvv6JSqErqARZwOAO2M5rjXw==" crossorigin=anonymous defer></script>
+<script src=/main.min.9e62c9b0c5dc8279689cc9cb693a32c8ea1d19032f574f98c782ff59a0417d3662ff94b1a7755ab72a7a1862644bf00a58492c65aa0adabbc58080f4018c61bc.js integrity="sha512-nmLJsMXcgnlonMnLaToyyOodGQMvV0+Yx4L/WaBBfTZi/5Sxp3Vatyp6GGJkS/AKWEksZaoK2rvFgID0AYxhvA==" crossorigin=anonymous defer></script>
+<script src=/index.min.177e5d23ef2cca9f490939925b2e6d748d9bb8005b5423f0c2075bde603b8249fe761b3e8b5d7e3e477b2cf7e73cba3c80e7809e0c3845646c2ca14ee2220663.js integrity="sha512-F35dI+8syp9JCTmSWy5tdI2buABbVCPwwgdb3mA7gkn+dhs+i11+Pkd7LPfnPLo8gOeAngw4RWRsLKFO4iIGYw==" crossorigin=anonymous defer></script>
+</body>
+</html>
