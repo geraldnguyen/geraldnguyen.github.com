@@ -1,5 +1,5 @@
 ---
-title: "JSR 303 – BEAN VALIDATION – CUSTOM CONSTRAINT"
+title: "JSR 303 – Bean Validation – Custom Constraints"
 date: 2012-08-25T09:19:42+01:00
 draft: false
 weight: 50

@@ -1,5 +1,5 @@
 ---
-title: "JSR 303 – BEAN VALIDATION – BASIC"
+title: "JSR 303 – Bean Validation – Basic"
 date: 2012-08-03T09:19:42+01:00
 draft: false
 weight: 50

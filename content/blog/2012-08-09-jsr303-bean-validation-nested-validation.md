@@ -1,5 +1,5 @@
 ---
-title: "JSR 303 – BEAN VALIDATION – NESTED VALIDATION"
+title: "JSR 303 – Bean Validation – Nested Validation"
 date: 2012-08-09T09:19:42+01:00
 draft: false
 weight: 50

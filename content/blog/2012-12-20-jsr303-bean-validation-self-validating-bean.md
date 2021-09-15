@@ -1,5 +1,5 @@
 ---
-title: "JSR 303 – BEAN VALIDATION – LET YOUR BEAN VALIDATE ITSELF"
+title: "JSR 303 – Bean Validation – Let Your Bean Validate Itself"
 date: 2012-12-20T09:19:42+01:00
 draft: false
 weight: 50
