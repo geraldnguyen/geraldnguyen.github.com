@@ -10,32 +10,34 @@
 <meta name=robots content="index, follow">
 <meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<title>Gerald Nguyen - Seasoned Full Stack Developer</title>
+<title>javax.transaction.Transactional vs org.springframework.transaction.annotation.Transactional - Gerald Nguyen</title>
 <meta name=description content="An admirer of (Vulcan) logic, diversity and multidisciplinary approaches">
-<link rel=canonical href=/>
+<link rel=canonical href=/blog/javax.transaction.transactional-vs-org.springframework.transaction.annotation.transactional/>
 <meta property="og:locale" content>
-<meta property="og:type" content="website">
-<meta property="og:title" content="Welcome">
-<meta property="og:description" content="An admirer of (Vulcan) logic, diversity and multidisciplinary approaches">
-<meta property="og:url" content="/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javax.transaction.Transactional vs org.springframework.transaction.annotation.Transactional">
+<meta property="og:description" content="If you’re using Spring or Spring Boot, then use the Spring @Transactional annotation, as it allows you to configure more attributes than the Java EE @Transactional annotation.
+If you are using Java EE alone, and you deploy your application on a Java EE application server, then use the Java EE @Transactional annotation.
+ https://stackoverflow.com/a/62702146/575457">
+<meta property="og:url" content="/blog/javax.transaction.transactional-vs-org.springframework.transaction.annotation.transactional/">
 <meta property="og:site_name" content="Gerald Nguyen">
-<meta property="og:updated_time" content="2021-09-03T09:19:42+01:00">
+<meta property="article:published_time" content="2020-09-10T09:19:42+01:00">
+<meta property="article:modified_time" content="2020-09-10T09:19:42+01:00">
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:site content>
 <meta name=twitter:creator content>
-<meta name=twitter:title content="Welcome">
+<meta name=twitter:title content="javax.transaction.Transactional vs org.springframework.transaction.annotation.Transactional">
 <meta name=twitter:description content>
 <meta name=twitter:card content="summary">
-<meta name=twitter:image:alt content="Welcome">
-<link rel=alternate type=application/rss+xml href=/index.xml>
-<script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/1","name":"","url":"/","sameAs":[],"image":{"@type":"ImageObject","@id":"/#/schema/image/1","url":"/\u003cnil\u003e","width":null,"height":null,"caption":""}},{"@type":"WebSite","@id":"/#/schema/website/1","url":"/","name":"Gerald Nguyen","description":"An admirer of (Vulcan) logic, diversity and multidisciplinary approaches","publisher":{"@id":"/#/schema/person/1"}},{"@type":"WebPage","@id":"/","url":"/","name":"Welcome","description":"","isPartOf":{"@id":"/#/schema/website/1"},"about":{"@id":"/#/schema/person/1"},"datePublished":"0001-01-01T00:00:00CET","dateModified":"2021-09-03T09:19:42CET","breadcrumb":{"@id":"/#/schema/breadcrumb/1"},"primaryImageOfPage":{"@id":"/#/schema/image/2"},"inLanguage":"","potentialAction":[{"@type":"ReadAction","target":["/"]}]},{"@type":"BreadcrumbList","@id":"/#/schema/breadcrumb/1","name":"Breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"/"}}]},{"@context":"https://schema.org","@graph":[{"@type":"ImageObject","@id":"/#/schema/image/2","url":null,"contentUrl":null,"caption":"Welcome"}]}]}</script>
+<meta name=twitter:image:alt content="javax.transaction.Transactional vs org.springframework.transaction.annotation.Transactional">
+<script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/1","name":"","url":"/","sameAs":[],"image":{"@type":"ImageObject","@id":"/#/schema/image/1","url":"/\u003cnil\u003e","width":null,"height":null,"caption":""}},{"@type":"WebSite","@id":"/#/schema/website/1","url":"/","name":"Gerald Nguyen","description":"An admirer of (Vulcan) logic, diversity and multidisciplinary approaches","publisher":{"@id":"/#/schema/person/1"}},{"@type":"WebPage","@id":"/blog/javax.transaction.transactional-vs-org.springframework.transaction.annotation.transactional/","url":"/blog/javax.transaction.transactional-vs-org.springframework.transaction.annotation.transactional/","name":"javax.transaction.Transactional vs org.springframework.transaction.annotation.Transactional","description":"","isPartOf":{"@id":"/#/schema/website/1"},"about":{"@id":"/#/schema/person/1"},"datePublished":"2020-09-10T09:19:42CET","dateModified":"2020-09-10T09:19:42CET","breadcrumb":{"@id":"/blog/javax.transaction.transactional-vs-org.springframework.transaction.annotation.transactional/#/schema/breadcrumb/1"},"primaryImageOfPage":{"@id":"/blog/javax.transaction.transactional-vs-org.springframework.transaction.annotation.transactional/#/schema/image/2"},"inLanguage":"","potentialAction":[{"@type":"ReadAction","target":["/blog/javax.transaction.transactional-vs-org.springframework.transaction.annotation.transactional/"]}]},{"@type":"BreadcrumbList","@id":"/blog/javax.transaction.transactional-vs-org.springframework.transaction.annotation.transactional/#/schema/breadcrumb/1","name":"Breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"/","url":"/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"/blogjavax.transaction.transactional-vs-org.springframework.transaction.annotation.transactional/"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"/#/schema/article/1","headline":"javax.transaction.Transactional vs org.springframework.transaction.annotation.Transactional","description":"","isPartOf":{"@id":"/blog/javax.transaction.transactional-vs-org.springframework.transaction.annotation.transactional/"},"mainEntityOfPage":{"@id":"/blog/javax.transaction.transactional-vs-org.springframework.transaction.annotation.transactional/"},"datePublished":"2020-09-10T09:19:42CET","dateModified":"2020-09-10T09:19:42CET","author":{"@id":"/#/schema/person/2"},"publisher":{"@id":"/#/schema/person/1"},"image":{"@id":"/blog/javax.transaction.transactional-vs-org.springframework.transaction.annotation.transactional/#/schema/image/2"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/2","name":null,"sameAs":[]}]},{"@context":"https://schema.org","@graph":[{"@type":"ImageObject","@id":"/blog/javax.transaction.transactional-vs-org.springframework.transaction.annotation.transactional/#/schema/image/2","url":null,"contentUrl":null,"caption":"javax.transaction.Transactional vs org.springframework.transaction.annotation.Transactional"}]}]}</script>
 <meta name=theme-color content="#fff">
 <link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
 <link rel=manifest crossorigin=use-credentials href=/site.webmanifest>
 </head>
-<body class=home>
+<body class="blog single">
 <div class="header-bar fixed-top"></div>
 <header class="navbar fixed-top navbar-expand-md navbar-light">
 <div class=container>
@@ -52,7 +54,7 @@
 </li>
 </ul>
 <div class="collapse navbar-collapse order-4 order-md-1">
-<ul class="navbar-nav main-nav me-auto order-5 order-md-2"><li class=nav-item>
+<ul class="navbar-nav main-nav me-auto order-5 order-md-2"><li class="nav-item active">
 <a class=nav-link href=/blog/>Blog</a>
 </li>
 <li class=nav-item>
@@ -69,65 +71,24 @@
 </header>
 <div class="wrap container" role=document>
 <div class=content>
-<section class="section container-fluid mt-n3 pb-3">
 <div class="row justify-content-center">
-<div class="col-lg-12 text-center">
-<h1 class=mt-0>Welcome</h1>
+<div class="col-md-12 col-lg-10 col-xl-8">
+<article>
+<div class=blog-header>
+<h1>javax.transaction.Transactional vs org.springframework.transaction.annotation.Transactional</h1>
+<p><small>Posted September 10, 2020 by &nbsp;&dash;&nbsp;<strong>1&nbsp;min read</strong></small><p>
 </div>
-<div class="col-lg-9 col-xl-8 text-center">
-<p class=lead></p>
-</div>
-</div>
-</section>
-</div>
-</div>
-<section class="section section-sm container-fluid">
-<div class="row justify-content-center text-center">
-<div class=col-lg-9>
-<div>
-<h2><a href=/blog/java-try-with-resource/>Java Try-with-resource</a></h2>
-<p>Java's try-with-resource is a convenient syntactic shortcut. It frees developers from keeping track of closeable resources and closing in a `finally` block</p>
-</div>
-<div>
-<h2><a href=/blog/the-best-way-to-fix-the-hibernate-multiplebagfetchexception/>The best way to fix the Hibernate MultipleBagFetchException</a></h2>
-<p>Excerpt from See https://vladmihalcea.com/hibernate-multiplebagfetchexception/ with an adoption for Spring Data JPA</p>
-</div>
-<div>
-<h2><a href=/blog/javax.transaction.transactional-vs-org.springframework.transaction.annotation.transactional/>javax.transaction.Transactional vs org.springframework.transaction.annotation.Transactional</a></h2>
-<p>It’s easy to mix especially when we only need the default setting</p>
-</div>
-<div>
-<h2><a href=/blog/jsr-303-bean-validation-let-your-bean-validate-itself/>JSR 303 – Bean Validation – Let Your Bean Validate Itself</a></h2>
-<p></p>
-</div>
-<div>
-<h2><a href=/blog/jsr-303-bean-validation-custom-constraints/>JSR 303 – Bean Validation – Custom Constraints</a></h2>
-<p></p>
-</div>
-<div>
-<h2><a href=/blog/jsr-303-bean-validation-nested-validation/>JSR 303 – Bean Validation – Nested Validation</a></h2>
-<p></p>
-</div>
-<div>
-<h2><a href=/blog/jsr-303-bean-validation-basic/>JSR 303 – Bean Validation – Basic</a></h2>
-<p></p>
-</div>
-<div>
-<h2><a href=/blog/illegal-sport-betting-during-euro-cup/>ILLEGAL SPORT BETTING DURING EURO CUP</a></h2>
-<p>A cover of Tuoitre Cuoi magazine</p>
-</div>
-<div>
-<h2><a href=/blog/spring-mvc-sessionattributes-annotation/>SPRING MVC – SESSIONATTRIBUTES ANNOTATION</a></h2>
-<p></p>
-</div>
-<div>
-<h2><a href=/blog/how-your-consumption-benefit-society/>HOW YOUR CONSUMPTION BENEFIT SOCIETY?</a></h2>
-<p>Is $2000 = $3000 ? Mathematically no. Economically yes (or at least it seems to)</p>
-</div>
-<a href=/blog/>and more</a>
+<p class=lead>It’s easy to mix especially when we only need the default setting</p>
+<blockquote>
+<p>If you’re using Spring or Spring Boot, then use the Spring @Transactional annotation, as it allows you to configure more attributes than the Java EE @Transactional annotation.</p>
+<p>If you are using Java EE alone, and you deploy your application on a Java EE application server, then use the Java EE @Transactional annotation.</p>
+</blockquote>
+<p>https://stackoverflow.com/a/62702146/575457</p>
+</article>
 </div>
 </div>
-</section>
+</div>
+</div>
 <footer class="footer text-muted">
 <div class=container>
 <div class=row>
