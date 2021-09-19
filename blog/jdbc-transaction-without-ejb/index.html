@@ -10,28 +10,25 @@
 <meta name=robots content="index, follow">
 <meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<title>Quicksort vs Merge sort in Java - Gerald Nguyen</title>
+<title>JDBC TRANSACTION WITHOUT EJB - Gerald Nguyen</title>
 <meta name=description content="An admirer of (Vulcan) logic, diversity and multidisciplinary approaches">
-<link rel=canonical href=/blog/quicksort-vs-merge-sort-in-java/>
+<link rel=canonical href=/blog/jdbc-transaction-without-ejb/>
 <meta property="og:locale" content>
 <meta property="og:type" content="article">
-<meta property="og:title" content="Quicksort vs Merge sort in Java">
-<meta property="og:description" content="The title is a little larger that what I have in this entry :D
-If you want the answer fast, go here http://www.coderanch.com/t/520171/java/java/Why-Collections-sort-merge-sort#2355668
-And here is a longer write-up:
-I participated in an thread in Javaranche regarding why Arrays uses quicksort and Collections use merge sort (http://www.coderanch.com/t/520171/java/java/Why-Collections-sort-merge-sort). The thread starter claimed that quicksort is the best sort algorithm, for which I disagreed. I also replied with a link to wikipedia about merge sort performs better when the underlying datatype does not support random access (as does array).">
-<meta property="og:url" content="/blog/quicksort-vs-merge-sort-in-java/">
+<meta property="og:title" content="JDBC TRANSACTION WITHOUT EJB">
+<meta property="og:description" content="Create a DAO method in which you set JDBC connection’s auto-commit property to false  dbConn.setAutoCommit(false);  Execute all your queries  stmt = dbConn.createStatement(); result = stmt.executeQuery(query); stmt.executeUpdate(update);  Commit or rollback the transaction  dbConn.commit();  Reset auto-commit to true again for other execution  dbConn.setAutoCommit(true);  This is really simple, as it should be for something purely mechanical. The challenge for every programmer is how to write your transaction code or order your queries such that you can achieve desired result.">
+<meta property="og:url" content="/blog/jdbc-transaction-without-ejb/">
 <meta property="og:site_name" content="Gerald Nguyen">
-<meta property="article:published_time" content="2010-12-12T09:19:42+01:00">
-<meta property="article:modified_time" content="2010-12-12T09:19:42+01:00">
+<meta property="article:published_time" content="2012-10-24T09:19:42+01:00">
+<meta property="article:modified_time" content="2012-10-24T09:19:42+01:00">
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:site content>
 <meta name=twitter:creator content>
-<meta name=twitter:title content="Quicksort vs Merge sort in Java">
+<meta name=twitter:title content="JDBC TRANSACTION WITHOUT EJB">
 <meta name=twitter:description content>
 <meta name=twitter:card content="summary">
-<meta name=twitter:image:alt content="Quicksort vs Merge sort in Java">
-<script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/1","name":"","url":"/","sameAs":[],"image":{"@type":"ImageObject","@id":"/#/schema/image/1","url":"/\u003cnil\u003e","width":null,"height":null,"caption":""}},{"@type":"WebSite","@id":"/#/schema/website/1","url":"/","name":"Gerald Nguyen","description":"An admirer of (Vulcan) logic, diversity and multidisciplinary approaches","publisher":{"@id":"/#/schema/person/1"}},{"@type":"WebPage","@id":"/blog/quicksort-vs-merge-sort-in-java/","url":"/blog/quicksort-vs-merge-sort-in-java/","name":"Quicksort vs Merge sort in Java","description":"","isPartOf":{"@id":"/#/schema/website/1"},"about":{"@id":"/#/schema/person/1"},"datePublished":"2010-12-12T09:19:42CET","dateModified":"2010-12-12T09:19:42CET","breadcrumb":{"@id":"/blog/quicksort-vs-merge-sort-in-java/#/schema/breadcrumb/1"},"primaryImageOfPage":{"@id":"/blog/quicksort-vs-merge-sort-in-java/#/schema/image/2"},"inLanguage":"","potentialAction":[{"@type":"ReadAction","target":["/blog/quicksort-vs-merge-sort-in-java/"]}]},{"@type":"BreadcrumbList","@id":"/blog/quicksort-vs-merge-sort-in-java/#/schema/breadcrumb/1","name":"Breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"/","url":"/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"/blogquicksort-vs-merge-sort-in-java/"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"/#/schema/article/1","headline":"Quicksort vs Merge sort in Java","description":"","isPartOf":{"@id":"/blog/quicksort-vs-merge-sort-in-java/"},"mainEntityOfPage":{"@id":"/blog/quicksort-vs-merge-sort-in-java/"},"datePublished":"2010-12-12T09:19:42CET","dateModified":"2010-12-12T09:19:42CET","author":{"@id":"/#/schema/person/2"},"publisher":{"@id":"/#/schema/person/1"},"image":{"@id":"/blog/quicksort-vs-merge-sort-in-java/#/schema/image/2"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/2","name":null,"sameAs":[]}]},{"@context":"https://schema.org","@graph":[{"@type":"ImageObject","@id":"/blog/quicksort-vs-merge-sort-in-java/#/schema/image/2","url":null,"contentUrl":null,"caption":"Quicksort vs Merge sort in Java"}]}]}</script>
+<meta name=twitter:image:alt content="JDBC TRANSACTION WITHOUT EJB">
+<script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/1","name":"","url":"/","sameAs":[],"image":{"@type":"ImageObject","@id":"/#/schema/image/1","url":"/\u003cnil\u003e","width":null,"height":null,"caption":""}},{"@type":"WebSite","@id":"/#/schema/website/1","url":"/","name":"Gerald Nguyen","description":"An admirer of (Vulcan) logic, diversity and multidisciplinary approaches","publisher":{"@id":"/#/schema/person/1"}},{"@type":"WebPage","@id":"/blog/jdbc-transaction-without-ejb/","url":"/blog/jdbc-transaction-without-ejb/","name":"JDBC TRANSACTION WITHOUT EJB","description":"","isPartOf":{"@id":"/#/schema/website/1"},"about":{"@id":"/#/schema/person/1"},"datePublished":"2012-10-24T09:19:42CET","dateModified":"2012-10-24T09:19:42CET","breadcrumb":{"@id":"/blog/jdbc-transaction-without-ejb/#/schema/breadcrumb/1"},"primaryImageOfPage":{"@id":"/blog/jdbc-transaction-without-ejb/#/schema/image/2"},"inLanguage":"","potentialAction":[{"@type":"ReadAction","target":["/blog/jdbc-transaction-without-ejb/"]}]},{"@type":"BreadcrumbList","@id":"/blog/jdbc-transaction-without-ejb/#/schema/breadcrumb/1","name":"Breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"/","url":"/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"/blogjdbc-transaction-without-ejb/"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"/#/schema/article/1","headline":"JDBC TRANSACTION WITHOUT EJB","description":"","isPartOf":{"@id":"/blog/jdbc-transaction-without-ejb/"},"mainEntityOfPage":{"@id":"/blog/jdbc-transaction-without-ejb/"},"datePublished":"2012-10-24T09:19:42CET","dateModified":"2012-10-24T09:19:42CET","author":{"@id":"/#/schema/person/2"},"publisher":{"@id":"/#/schema/person/1"},"image":{"@id":"/blog/jdbc-transaction-without-ejb/#/schema/image/2"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/2","name":null,"sameAs":[]}]},{"@context":"https://schema.org","@graph":[{"@type":"ImageObject","@id":"/blog/jdbc-transaction-without-ejb/#/schema/image/2","url":null,"contentUrl":null,"caption":"JDBC TRANSACTION WITHOUT EJB"}]}]}</script>
 <meta name=theme-color content="#fff">
 <link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
@@ -76,22 +73,35 @@ I participated in an thread in Javaranche regarding why Arrays uses quicksort an
 <div class="col-md-12 col-lg-10 col-xl-8">
 <article>
 <div class=blog-header>
-<h1>Quicksort vs Merge sort in Java</h1>
-<p><small>Posted December 12, 2010 by &nbsp;&dash;&nbsp;<strong>2&nbsp;min read</strong></small><p>
+<h1>JDBC TRANSACTION WITHOUT EJB</h1>
+<p><small>Posted October 24, 2012 by &nbsp;&dash;&nbsp;<strong>1&nbsp;min read</strong></small><p>
 </div>
-<p class=lead></p>
-<p>The title is a little larger that what I have in this entry :D</p>
-<p>If you want the answer fast, go here http://www.coderanch.com/t/520171/java/java/Why-Collections-sort-merge-sort#2355668</p>
-<p>And here is a longer write-up:</p>
-<p>I participated in an thread in Javaranche regarding why Arrays uses quicksort and Collections use merge sort (http://www.coderanch.com/t/520171/java/java/Why-Collections-sort-merge-sort). The thread starter claimed that quicksort is the best sort algorithm, for which I disagreed. I also replied with a link to wikipedia about merge sort performs better when the underlying datatype does not support random access (as does array). I thought that was the reason why Collections use merge sort: because a collection type such as LinkedList does not necessarily support random access.</p>
-<p>I had some doubt then, though. I did noticed &ldquo;This implementation dumps the specified list into an array, sorts the array&rdquo; in the javadoc and wondered why wasn&rsquo;t quicksort be used. But lazy me doesn&rsquo;t want to do further googling and reading; I replied with the right-but-was-not-correct arguments.</p>
-<p>Later, I checked that thread again and found an answer from a user named &ldquo;Martin Vajsar&rdquo;. His explanation is brilliant, but let me rephrase them here:</p>
-<ul>
-<li>Merge sort is stable. Quicksort may not, especially if the implementation must be efficient.</li>
-<li>Stable is important for sorting object. That&rsquo;s why merge sort is used in Collections and <code>Arrays.sort (Object[] ...)</code>. (Yes, it&rsquo;s true. A<code>rrays.sort (Object[] ...)</code> uses merge sort!)</li>
-<li>Stable is not important for primitive types, since 2 primitive values are indistinguishable if they are equals. And quicksort may be better than merge sort when operating on array.</li>
-</ul>
-<p>There is another bonus information from Martin: &ldquo;Mergesort&rsquo;s ability to efficiently sort sequentially accessed data is of no real use in Java. This feature is used when sorting data so large that they don&rsquo;t fit to memory and must be written to disk&rdquo;</p>
+<p class=lead>EJB 3 is simple enough that delegating transaction management to it only cost little in creating and annotating an EJB business interface method. However, if you want to skip EJB altogether yet ensure all queries get executed inside a transaction, here’s a quick way</p>
+<ol>
+<li>Create a DAO method in which you set JDBC connection’s auto-commit property to false</li>
+</ol>
+<pre><code>dbConn.setAutoCommit(false);
+</code></pre>
+<ol start=2>
+<li>Execute all your queries</li>
+</ol>
+<pre><code>stmt = dbConn.createStatement();
+
+result = stmt.executeQuery(query);
+
+stmt.executeUpdate(update);
+</code></pre>
+<ol start=3>
+<li>Commit or rollback the transaction</li>
+</ol>
+<pre><code>dbConn.commit();
+</code></pre>
+<ol start=4>
+<li>Reset auto-commit to true again for other execution</li>
+</ol>
+<pre><code>dbConn.setAutoCommit(true);
+</code></pre>
+<p>This is really simple, as it should be for something purely mechanical. The challenge for every programmer is how to write your transaction code or order your queries such that you can achieve desired result.</p>
 </article>
 </div>
 </div>
