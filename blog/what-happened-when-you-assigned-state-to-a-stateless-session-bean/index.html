@@ -10,32 +10,33 @@
 <meta name=robots content="index, follow">
 <meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<title>Gerald Nguyen - Seasoned Full Stack Developer</title>
+<title>What Happened When You Assigned State to a Stateless Session Bean? - Gerald Nguyen</title>
 <meta name=description content="An admirer of (Vulcan) logic, diversity and multidisciplinary approaches">
-<link rel=canonical href=/>
+<link rel=canonical href=/blog/what-happened-when-you-assigned-state-to-a-stateless-session-bean/>
 <meta property="og:locale" content>
-<meta property="og:type" content="website">
-<meta property="og:title" content="Welcome">
-<meta property="og:description" content="An admirer of (Vulcan) logic, diversity and multidisciplinary approaches">
-<meta property="og:url" content="/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="What Happened When You Assigned State to a Stateless Session Bean?">
+<meta property="og:description" content="Here’s a scenario that illustrate above possibility
+ T1 | T2 1) setupState [A] | <- store state as a variable | in bean instance [A] | 2) setupState [A] <- [A] is free, so the container | allocate it to serve T2 request | 3) someLongRunMethod [A] | 3') aMethod [B] <- Because A is busy with T1, another instance (B) is created to serve T2 request. If aMethod depends on previously setup state it will encounter error  ">
+<meta property="og:url" content="/blog/what-happened-when-you-assigned-state-to-a-stateless-session-bean/">
 <meta property="og:site_name" content="Gerald Nguyen">
-<meta property="og:updated_time" content="2021-09-08T09:19:42+01:00">
+<meta property="article:published_time" content="2013-09-10T09:19:42+01:00">
+<meta property="article:modified_time" content="2013-09-10T09:19:42+01:00">
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:site content>
 <meta name=twitter:creator content>
-<meta name=twitter:title content="Welcome">
+<meta name=twitter:title content="What Happened When You Assigned State to a Stateless Session Bean?">
 <meta name=twitter:description content>
 <meta name=twitter:card content="summary">
-<meta name=twitter:image:alt content="Welcome">
-<link rel=alternate type=application/rss+xml href=/index.xml>
-<script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/1","name":"","url":"/","sameAs":[],"image":{"@type":"ImageObject","@id":"/#/schema/image/1","url":"/\u003cnil\u003e","width":null,"height":null,"caption":""}},{"@type":"WebSite","@id":"/#/schema/website/1","url":"/","name":"Gerald Nguyen","description":"An admirer of (Vulcan) logic, diversity and multidisciplinary approaches","publisher":{"@id":"/#/schema/person/1"}},{"@type":"WebPage","@id":"/","url":"/","name":"Welcome","description":"","isPartOf":{"@id":"/#/schema/website/1"},"about":{"@id":"/#/schema/person/1"},"datePublished":"0001-01-01T00:00:00CET","dateModified":"2021-09-08T09:19:42CET","breadcrumb":{"@id":"/#/schema/breadcrumb/1"},"primaryImageOfPage":{"@id":"/#/schema/image/2"},"inLanguage":"","potentialAction":[{"@type":"ReadAction","target":["/"]}]},{"@type":"BreadcrumbList","@id":"/#/schema/breadcrumb/1","name":"Breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"/"}}]},{"@context":"https://schema.org","@graph":[{"@type":"ImageObject","@id":"/#/schema/image/2","url":null,"contentUrl":null,"caption":"Welcome"}]}]}</script>
+<meta name=twitter:image:alt content="What Happened When You Assigned State to a Stateless Session Bean?">
+<script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/1","name":"","url":"/","sameAs":[],"image":{"@type":"ImageObject","@id":"/#/schema/image/1","url":"/\u003cnil\u003e","width":null,"height":null,"caption":""}},{"@type":"WebSite","@id":"/#/schema/website/1","url":"/","name":"Gerald Nguyen","description":"An admirer of (Vulcan) logic, diversity and multidisciplinary approaches","publisher":{"@id":"/#/schema/person/1"}},{"@type":"WebPage","@id":"/blog/what-happened-when-you-assigned-state-to-a-stateless-session-bean/","url":"/blog/what-happened-when-you-assigned-state-to-a-stateless-session-bean/","name":"What Happened When You Assigned State to a Stateless Session Bean?","description":"","isPartOf":{"@id":"/#/schema/website/1"},"about":{"@id":"/#/schema/person/1"},"datePublished":"2013-09-10T09:19:42CET","dateModified":"2013-09-10T09:19:42CET","breadcrumb":{"@id":"/blog/what-happened-when-you-assigned-state-to-a-stateless-session-bean/#/schema/breadcrumb/1"},"primaryImageOfPage":{"@id":"/blog/what-happened-when-you-assigned-state-to-a-stateless-session-bean/#/schema/image/2"},"inLanguage":"","potentialAction":[{"@type":"ReadAction","target":["/blog/what-happened-when-you-assigned-state-to-a-stateless-session-bean/"]}]},{"@type":"BreadcrumbList","@id":"/blog/what-happened-when-you-assigned-state-to-a-stateless-session-bean/#/schema/breadcrumb/1","name":"Breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"/","url":"/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"/blogwhat-happened-when-you-assigned-state-to-a-stateless-session-bean/"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"/#/schema/article/1","headline":"What Happened When You Assigned State to a Stateless Session Bean?","description":"","isPartOf":{"@id":"/blog/what-happened-when-you-assigned-state-to-a-stateless-session-bean/"},"mainEntityOfPage":{"@id":"/blog/what-happened-when-you-assigned-state-to-a-stateless-session-bean/"},"datePublished":"2013-09-10T09:19:42CET","dateModified":"2013-09-10T09:19:42CET","author":{"@id":"/#/schema/person/2"},"publisher":{"@id":"/#/schema/person/1"},"image":{"@id":"/blog/what-happened-when-you-assigned-state-to-a-stateless-session-bean/#/schema/image/2"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/2","name":null,"sameAs":[]}]},{"@context":"https://schema.org","@graph":[{"@type":"ImageObject","@id":"/blog/what-happened-when-you-assigned-state-to-a-stateless-session-bean/#/schema/image/2","url":null,"contentUrl":null,"caption":"What Happened When You Assigned State to a Stateless Session Bean?"}]}]}</script>
 <meta name=theme-color content="#fff">
 <link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
 <link rel=manifest crossorigin=use-credentials href=/site.webmanifest>
 </head>
-<body class=home>
+<body class="blog single">
 <div class="header-bar fixed-top"></div>
 <header class="navbar fixed-top navbar-expand-md navbar-light">
 <div class=container>
@@ -52,7 +53,7 @@
 </li>
 </ul>
 <div class="collapse navbar-collapse order-4 order-md-1">
-<ul class="navbar-nav main-nav me-auto order-5 order-md-2"><li class=nav-item>
+<ul class="navbar-nav main-nav me-auto order-5 order-md-2"><li class="nav-item active">
 <a class=nav-link href=/blog/>Blog</a>
 </li>
 <li class=nav-item>
@@ -69,65 +70,33 @@
 </header>
 <div class="wrap container" role=document>
 <div class=content>
-<section class="section container-fluid mt-n3 pb-3">
 <div class="row justify-content-center">
-<div class="col-lg-12 text-center">
-<h1 class=mt-0>Welcome</h1>
+<div class="col-md-12 col-lg-10 col-xl-8">
+<article>
+<div class=blog-header>
+<h1>What Happened When You Assigned State to a Stateless Session Bean?</h1>
+<p><small>Posted September 10, 2013 by &nbsp;&dash;&nbsp;<strong>1&nbsp;min read</strong></small><p>
 </div>
-<div class="col-lg-9 col-xl-8 text-center">
-<p class=lead></p>
-</div>
-</div>
-</section>
-</div>
-</div>
-<section class="section section-sm container-fluid">
-<div class="row justify-content-center text-center">
-<div class=col-lg-9>
-<div>
-<h2><a href=/blog/work-hard-mocking-or-work-smart-mocking/>Work-hard Mocking or Work-smart Mocking</a></h2>
-<p></p>
-</div>
-<div>
-<h2><a href=/blog/java-try-with-resource/>Java Try-with-resource</a></h2>
-<p>Java's try-with-resource is a convenient syntactic shortcut. It frees developers from keeping track of closeable resources and closing in a `finally` block</p>
-</div>
-<div>
-<h2><a href=/blog/kubernetes-memory-units/>Kubernetes Memory Units</a></h2>
-<p></p>
-</div>
-<div>
-<h2><a href=/blog/the-best-way-to-fix-the-hibernate-multiplebagfetchexception/>The best way to fix the Hibernate MultipleBagFetchException</a></h2>
-<p>Excerpt from See https://vladmihalcea.com/hibernate-multiplebagfetchexception/ with an adoption for Spring Data JPA</p>
-</div>
-<div>
-<h2><a href=/blog/javax.transaction.transactional-vs-org.springframework.transaction.annotation.transactional/>javax.transaction.Transactional vs org.springframework.transaction.annotation.Transactional</a></h2>
-<p>It’s easy to mix especially when we only need the default setting</p>
-</div>
-<div>
-<h2><a href=/blog/using-bootstrap-with-react/>Using Bootstrap with React</a></h2>
-<p>Because both are great!</p>
-</div>
-<div>
-<h2><a href=/blog/what-happened-when-you-assigned-state-to-a-stateless-session-bean/>What Happened When You Assigned State to a Stateless Session Bean?</a></h2>
-<p>It’ll probably result in an EJBTransactionRolledbackException caused by a NullPointerException</p>
-</div>
-<div>
-<h2><a href=/blog/excel-bulk-linking-cells-to-sheets-whose-name-equates-cells-value/>[Excel] Bulk Linking Cells to Sheets Whose Name Equates Cell's value</a></h2>
-<p>If you have an excel with an index page and many detailed sheets, you may find the below macro useful. The only requirement is to name your sheet with value of your cell/link in the index page</p>
-</div>
-<div>
-<h2><a href=/blog/vba-save-attachements-from-multiple-emails/>[VBA] Save Attachements from Multiple Emails</a></h2>
-<p></p>
-</div>
-<div>
-<h2><a href=/blog/unix-recursively-listing-files-under-a-directory/>[Unix] – Recursively Listing Files Under a Directory</a></h2>
-<p></p>
-</div>
-<a href=/blog/>and more</a>
+<p class=lead>It’ll probably result in an EJBTransactionRolledbackException caused by a NullPointerException</p>
+<p>Here’s a scenario that illustrate above possibility</p>
+<pre><code>    T1                   |     T2
+1) setupState [A]        |                   &lt;- store state as a variable
+                         |                      in bean instance [A]
+                         | 2) setupState [A] &lt;- [A] is free, so the container
+                         |                      allocate it to serve T2 request
+                         |
+3) someLongRunMethod [A] | 3') aMethod [B]   &lt;- Because A is busy with T1, 
+                                                another instance (B) is created 
+                                                to serve T2 request. If aMethod 
+                                                depends on previously setup state
+                                                it will encounter error
+
+</code></pre>
+</article>
 </div>
 </div>
-</section>
+</div>
+</div>
 <footer class="footer text-muted">
 <div class=container>
 <div class=row>
