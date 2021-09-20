@@ -1,5 +1,5 @@
 ---
-title: "MYTHS OF SECURE WEB BROWSING"
+title: "Myths of Secure Web Browsing"
 date: 2013-05-18T09:19:42+01:00
 draft: false
 weight: 50
