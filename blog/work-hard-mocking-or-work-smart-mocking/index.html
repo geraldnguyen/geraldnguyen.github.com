@@ -1,0 +1,170 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<link rel=preload as=font href=/fonts/vendor/jost/jost-v4-latin-regular.woff2 type=font/woff2 crossorigin>
+<link rel=preload as=font href=/fonts/vendor/jost/jost-v4-latin-700.woff2 type=font/woff2 crossorigin>
+<link rel=stylesheet href=/main.d7e8e82690ad19bad9eca78ad1cf2e8a40410802b4f2afe706081f28c45f407bb7a0cb05f2bf90de986cd236c2f2e103823ba2b8cdc53dbe5dde2f6241569c96.css integrity="sha512-1+joJpCtGbrZ7KeK0c8uikBBCAK08q/nBggfKMRfQHu3oMsF8r+Q3phs0jbC8uEDgjuiuM3FPb5d3i9iQVaclg==" crossorigin=anonymous>
+<noscript><style>img.lazyload{display:none}</style></noscript>
+<meta name=robots content="index, follow">
+<meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<title>Work-hard Mocking or Work-smart Mocking - Gerald Nguyen</title>
+<meta name=description content="An admirer of (Vulcan) logic, diversity and multidisciplinary approaches">
+<link rel=canonical href=/blog/work-hard-mocking-or-work-smart-mocking/>
+<meta property="og:locale" content>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Work-hard Mocking or Work-smart Mocking">
+<meta property="og:description" content="To be honest, I prefer strict mocking over relaxed mocking + verify. That is, if my mocking becomes neccessary (because of strict mocking), it also functions as a verify. I can save a few chunks of codes by sacrifying a little explicitness and sometimes verbosity of verify and ArgumentCaptor setup.
+Here&rsquo;s a sample
+Assuming we want to test method createSampleEntity from service SampleService, there are 3 things we want to verify: i) sampleRepository.">
+<meta property="og:url" content="/blog/work-hard-mocking-or-work-smart-mocking/">
+<meta property="og:site_name" content="Gerald Nguyen">
+<meta property="article:published_time" content="2021-09-08T09:19:42+01:00">
+<meta property="article:modified_time" content="2021-09-08T09:19:42+01:00">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:site content>
+<meta name=twitter:creator content>
+<meta name=twitter:title content="Work-hard Mocking or Work-smart Mocking">
+<meta name=twitter:description content>
+<meta name=twitter:card content="summary">
+<meta name=twitter:image:alt content="Work-hard Mocking or Work-smart Mocking">
+<script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/1","name":"","url":"/","sameAs":[],"image":{"@type":"ImageObject","@id":"/#/schema/image/1","url":"/\u003cnil\u003e","width":null,"height":null,"caption":""}},{"@type":"WebSite","@id":"/#/schema/website/1","url":"/","name":"Gerald Nguyen","description":"An admirer of (Vulcan) logic, diversity and multidisciplinary approaches","publisher":{"@id":"/#/schema/person/1"}},{"@type":"WebPage","@id":"/blog/work-hard-mocking-or-work-smart-mocking/","url":"/blog/work-hard-mocking-or-work-smart-mocking/","name":"Work-hard Mocking or Work-smart Mocking","description":"","isPartOf":{"@id":"/#/schema/website/1"},"about":{"@id":"/#/schema/person/1"},"datePublished":"2021-09-08T09:19:42CET","dateModified":"2021-09-08T09:19:42CET","breadcrumb":{"@id":"/blog/work-hard-mocking-or-work-smart-mocking/#/schema/breadcrumb/1"},"primaryImageOfPage":{"@id":"/blog/work-hard-mocking-or-work-smart-mocking/#/schema/image/2"},"inLanguage":"","potentialAction":[{"@type":"ReadAction","target":["/blog/work-hard-mocking-or-work-smart-mocking/"]}]},{"@type":"BreadcrumbList","@id":"/blog/work-hard-mocking-or-work-smart-mocking/#/schema/breadcrumb/1","name":"Breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"/","url":"/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"/blogwork-hard-mocking-or-work-smart-mocking/"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"/#/schema/article/1","headline":"Work-hard Mocking or Work-smart Mocking","description":"","isPartOf":{"@id":"/blog/work-hard-mocking-or-work-smart-mocking/"},"mainEntityOfPage":{"@id":"/blog/work-hard-mocking-or-work-smart-mocking/"},"datePublished":"2021-09-08T09:19:42CET","dateModified":"2021-09-08T09:19:42CET","author":{"@id":"/#/schema/person/2"},"publisher":{"@id":"/#/schema/person/1"},"image":{"@id":"/blog/work-hard-mocking-or-work-smart-mocking/#/schema/image/2"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/2","name":null,"sameAs":[]}]},{"@context":"https://schema.org","@graph":[{"@type":"ImageObject","@id":"/blog/work-hard-mocking-or-work-smart-mocking/#/schema/image/2","url":null,"contentUrl":null,"caption":"Work-hard Mocking or Work-smart Mocking"}]}]}</script>
+<meta name=theme-color content="#fff">
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=manifest crossorigin=use-credentials href=/site.webmanifest>
+</head>
+<body class="blog single">
+<div class="header-bar fixed-top"></div>
+<header class="navbar fixed-top navbar-expand-md navbar-light">
+<div class=container>
+<input class="menu-btn order-0" type=checkbox id=menu-btn>
+<label class="menu-icon d-md-none" for=menu-btn><span class=navicon></span></label>
+<a class="navbar-brand order-1 order-md-0 me-auto" href=/>Gerald Nguyen</a>
+<button id=mode class="btn btn-link order-2 order-md-4" type=button aria-label="Toggle mode">
+<span class=toggle-dark><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></span>
+<span class=toggle-light><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+</button>
+<ul class="navbar-nav social-nav order-3 order-md-5">
+<li class=nav-item>
+<a class=nav-link href=https://github.com/geraldnguyen><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg><span class="ms-2 visually-hidden">GitHub</span></a>
+</li>
+</ul>
+<div class="collapse navbar-collapse order-4 order-md-1">
+<ul class="navbar-nav main-nav me-auto order-5 order-md-2"><li class="nav-item active">
+<a class=nav-link href=/blog/>Blog</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/about/>About</a>
+</li>
+</ul>
+<div class="break order-6 d-md-none"></div>
+<form class="navbar-form flex-grow-1 order-7 order-md-3">
+<input id=userinput class="form-control is-search" type=search placeholder="Search docs..." aria-label="Search docs..." autocomplete=off>
+<div id=suggestions class="shadow bg-white rounded"></div>
+</form>
+</div>
+</div>
+</header>
+<div class="wrap container" role=document>
+<div class=content>
+<div class="row justify-content-center">
+<div class="col-md-12 col-lg-10 col-xl-8">
+<article>
+<div class=blog-header>
+<h1>Work-hard Mocking or Work-smart Mocking</h1>
+<p><small>Posted September 8, 2021 by &nbsp;&dash;&nbsp;<strong>2&nbsp;min read</strong></small><p>
+</div>
+<p class=lead></p>
+<p>To be honest, I prefer <em>strict</em> mocking over relaxed mocking + <code>verify</code>. That is, if my mocking becomes neccessary (because of <em>strict</em> mocking), it also functions as a <code>verify</code>. I can save a few chunks of codes by sacrifying a little explicitness and sometimes verbosity of <code>verify</code> and <code>ArgumentCaptor</code> setup.</p>
+<p>Here&rsquo;s a sample</p>
+<p>Assuming we want to test method <code>createSampleEntity</code> from service <code>SampleService</code>, there are 3 things we want to verify: i) <code>sampleRepository.save</code> is called, ii) with the right <code>sampleEntity</code>, and iii) the resulted entity is returned</p>
+<pre><code>@Service
+public class SampleService {
+    private final SampleRepository sampleRepository;
+
+    public SampleService(SampleRepository sampleRepository) {
+        this.sampleRepository = sampleRepository;
+    }
+
+    public SampleEntity createSampleEntity() {
+        SampleEntity sampleEntity = new SampleEntity();
+        sampleEntity.setName(&quot;sample&quot;);
+
+        return sampleRepository.save(sampleEntity);
+    }
+}
+</code></pre>
+<h2 id=work-hard-mocking-with-verify-and-argumentcaptor>Work hard Mocking with <code>verify</code> and <code>ArgumentCaptor</code></h2>
+<p>In a typical unit test using <code>verify</code>, we need to mock <code>sampleRepository.save</code> method returning an expected entity. We will then <code>assertEquals</code> the mocked entity and the value returned from <code>sampleService.createSampleEntity()</code> method to ascertain the repository&rsquo;s <code>save()</code> was indeed called. Lastly, we will have to capture the argument to <code>save(SampleEntity)</code> to make sure that the right parameter is passed to it</p>
+<pre><code>    @Test
+    void workHardMocking() {
+        // arrange
+        SampleEntity mockEntity = new SampleEntity();
+        mockEntity.setId(1L);
+        when(sampleRepository.save(any(SampleEntity.class))).thenReturn(mockEntity);
+
+        // act
+        SampleEntity sampleEntity = sampleService.createSampleEntity();
+
+        // assert - the right entity returned
+        assertEquals(mockEntity, sampleEntity);
+        // assert - the right param passed
+        ArgumentCaptor&lt;SampleEntity&gt; sampleEntityArgumentCaptor = ArgumentCaptor.forClass(SampleEntity.class);
+        verify(sampleRepository).save(sampleEntityArgumentCaptor.capture());
+        assertEquals(&quot;sample&quot;, sampleEntityArgumentCaptor.getValue().getName());
+        assertNull(sampleEntityArgumentCaptor.getValue().getId());
+    }
+</code></pre>
+<h2 id=work-smart-testing>Work-smart Testing</h2>
+<p>The same effect can be achieved by the below strategy. By <code>assertEquals</code> the entity&rsquo;s id, we effectively verify the right return value and <code>sampleRepository.save</code> is called. Furthermore, as we planted several <code>assertXYZ</code> method inside the mocking of <code>sampleRepository.save</code>, we have also verified that the right parameter has been passed in</p>
+<pre><code>    @Test
+    void workSmartMocking() {
+        // arrange
+        when(sampleRepository.save(any(SampleEntity.class))).thenAnswer(a -&gt; {
+            // assert - the right param passed
+            SampleEntity entity = a.getArgument(0);
+            assertEquals(&quot;sample&quot;, entity.getName());
+            assertNull(entity.getId());
+            entity.setId(1L);
+            return entity;
+        });
+
+        // act
+        SampleEntity sampleEntity = sampleService.createSampleEntity();
+
+        // assert - the right entity returned
+        assertEquals(1L, sampleEntity.getId());
+    }
+</code></pre>
+<p>While the difference in LOC is not significant (0 actually), the former approach is 35% more verbose compared to the later (790 chars vs 584 chars). If clean code is your preference, I believe you will also prefer to shave as much code as possible while maintaining the same clarity.</p>
+<p>Checkout the code from <a href=https://github.com/geraldnguyen/kitchensink/blob/main/java/src/test/java/example/service/SampleServiceTest.java>https://github.com/geraldnguyen/kitchensink</a></p>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer text-muted">
+<div class=container>
+<div class=row>
+<div class="col-lg-8 order-last order-lg-first">
+<ul class=list-inline>
+<li class=list-inline-item>Powered by <a href=https://gohugo.io/>Hugo</a>, and <a href=https://getdoks.org/>Doks</a></li>
+</ul>
+</div>
+<div class="col-lg-8 order-first order-lg-last text-lg-end">
+<ul class=list-inline>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<script src=/js/bootstrap.min.586171fec3966d1a44fa8aa2edb24b861dc3a72be8cc24aa4e0dabe4c312a0dae5fe1eaa7c93180a6211fa4d7c5461b0d228fdf741be2eae279a376dfa1e7d81.js integrity="sha512-WGFx/sOWbRpE+oqi7bJLhh3DpyvozCSqTg2r5MMSoNrl/h6qfJMYCmIR+k18VGGw0ij990G+Lq4nmjdt+h59gQ==" crossorigin=anonymous defer></script>
+<script src=/js/highlight.min.e13cfba4c5524e30386cb9ea71f0f191f39d15b25b222f4b67549689f7c076158f42a2282446044f5cdacc76a6d003efbfa252a84aea0116703803b6339ae35f.js integrity="sha512-4Tz7pMVSTjA4bLnqcfDxkfOdFbJbIi9LZ1SWiffAdhWPQqIoJEYET1zazHam0APvv6JSqErqARZwOAO2M5rjXw==" crossorigin=anonymous defer></script>
+<script src=/main.min.9e62c9b0c5dc8279689cc9cb693a32c8ea1d19032f574f98c782ff59a0417d3662ff94b1a7755ab72a7a1862644bf00a58492c65aa0adabbc58080f4018c61bc.js integrity="sha512-nmLJsMXcgnlonMnLaToyyOodGQMvV0+Yx4L/WaBBfTZi/5Sxp3Vatyp6GGJkS/AKWEksZaoK2rvFgID0AYxhvA==" crossorigin=anonymous defer></script>
+<script src=/index.min.177e5d23ef2cca9f490939925b2e6d748d9bb8005b5423f0c2075bde603b8249fe761b3e8b5d7e3e477b2cf7e73cba3c80e7809e0c3845646c2ca14ee2220663.js integrity="sha512-F35dI+8syp9JCTmSWy5tdI2buABbVCPwwgdb3mA7gkn+dhs+i11+Pkd7LPfnPLo8gOeAngw4RWRsLKFO4iIGYw==" crossorigin=anonymous defer></script>
+</body>
+</html>

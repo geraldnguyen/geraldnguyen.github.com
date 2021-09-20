@@ -10,12 +10,12 @@
 <meta name=robots content="index, follow">
 <meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<title>JDBC TRANSACTION WITHOUT EJB - Gerald Nguyen</title>
+<title>JDBC Transaction Without EJB - Gerald Nguyen</title>
 <meta name=description content="An admirer of (Vulcan) logic, diversity and multidisciplinary approaches">
 <link rel=canonical href=/blog/jdbc-transaction-without-ejb/>
 <meta property="og:locale" content>
 <meta property="og:type" content="article">
-<meta property="og:title" content="JDBC TRANSACTION WITHOUT EJB">
+<meta property="og:title" content="JDBC Transaction Without EJB">
 <meta property="og:description" content="Create a DAO method in which you set JDBC connection’s auto-commit property to false  dbConn.setAutoCommit(false);  Execute all your queries  stmt = dbConn.createStatement(); result = stmt.executeQuery(query); stmt.executeUpdate(update);  Commit or rollback the transaction  dbConn.commit();  Reset auto-commit to true again for other execution  dbConn.setAutoCommit(true);  This is really simple, as it should be for something purely mechanical. The challenge for every programmer is how to write your transaction code or order your queries such that you can achieve desired result.">
 <meta property="og:url" content="/blog/jdbc-transaction-without-ejb/">
 <meta property="og:site_name" content="Gerald Nguyen">
@@ -24,11 +24,11 @@
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:site content>
 <meta name=twitter:creator content>
-<meta name=twitter:title content="JDBC TRANSACTION WITHOUT EJB">
+<meta name=twitter:title content="JDBC Transaction Without EJB">
 <meta name=twitter:description content>
 <meta name=twitter:card content="summary">
-<meta name=twitter:image:alt content="JDBC TRANSACTION WITHOUT EJB">
-<script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/1","name":"","url":"/","sameAs":[],"image":{"@type":"ImageObject","@id":"/#/schema/image/1","url":"/\u003cnil\u003e","width":null,"height":null,"caption":""}},{"@type":"WebSite","@id":"/#/schema/website/1","url":"/","name":"Gerald Nguyen","description":"An admirer of (Vulcan) logic, diversity and multidisciplinary approaches","publisher":{"@id":"/#/schema/person/1"}},{"@type":"WebPage","@id":"/blog/jdbc-transaction-without-ejb/","url":"/blog/jdbc-transaction-without-ejb/","name":"JDBC TRANSACTION WITHOUT EJB","description":"","isPartOf":{"@id":"/#/schema/website/1"},"about":{"@id":"/#/schema/person/1"},"datePublished":"2012-10-24T09:19:42CET","dateModified":"2012-10-24T09:19:42CET","breadcrumb":{"@id":"/blog/jdbc-transaction-without-ejb/#/schema/breadcrumb/1"},"primaryImageOfPage":{"@id":"/blog/jdbc-transaction-without-ejb/#/schema/image/2"},"inLanguage":"","potentialAction":[{"@type":"ReadAction","target":["/blog/jdbc-transaction-without-ejb/"]}]},{"@type":"BreadcrumbList","@id":"/blog/jdbc-transaction-without-ejb/#/schema/breadcrumb/1","name":"Breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"/","url":"/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"/blogjdbc-transaction-without-ejb/"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"/#/schema/article/1","headline":"JDBC TRANSACTION WITHOUT EJB","description":"","isPartOf":{"@id":"/blog/jdbc-transaction-without-ejb/"},"mainEntityOfPage":{"@id":"/blog/jdbc-transaction-without-ejb/"},"datePublished":"2012-10-24T09:19:42CET","dateModified":"2012-10-24T09:19:42CET","author":{"@id":"/#/schema/person/2"},"publisher":{"@id":"/#/schema/person/1"},"image":{"@id":"/blog/jdbc-transaction-without-ejb/#/schema/image/2"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/2","name":null,"sameAs":[]}]},{"@context":"https://schema.org","@graph":[{"@type":"ImageObject","@id":"/blog/jdbc-transaction-without-ejb/#/schema/image/2","url":null,"contentUrl":null,"caption":"JDBC TRANSACTION WITHOUT EJB"}]}]}</script>
+<meta name=twitter:image:alt content="JDBC Transaction Without EJB">
+<script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/1","name":"","url":"/","sameAs":[],"image":{"@type":"ImageObject","@id":"/#/schema/image/1","url":"/\u003cnil\u003e","width":null,"height":null,"caption":""}},{"@type":"WebSite","@id":"/#/schema/website/1","url":"/","name":"Gerald Nguyen","description":"An admirer of (Vulcan) logic, diversity and multidisciplinary approaches","publisher":{"@id":"/#/schema/person/1"}},{"@type":"WebPage","@id":"/blog/jdbc-transaction-without-ejb/","url":"/blog/jdbc-transaction-without-ejb/","name":"JDBC Transaction Without EJB","description":"","isPartOf":{"@id":"/#/schema/website/1"},"about":{"@id":"/#/schema/person/1"},"datePublished":"2012-10-24T09:19:42CET","dateModified":"2012-10-24T09:19:42CET","breadcrumb":{"@id":"/blog/jdbc-transaction-without-ejb/#/schema/breadcrumb/1"},"primaryImageOfPage":{"@id":"/blog/jdbc-transaction-without-ejb/#/schema/image/2"},"inLanguage":"","potentialAction":[{"@type":"ReadAction","target":["/blog/jdbc-transaction-without-ejb/"]}]},{"@type":"BreadcrumbList","@id":"/blog/jdbc-transaction-without-ejb/#/schema/breadcrumb/1","name":"Breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"/","url":"/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"/blogjdbc-transaction-without-ejb/"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"/#/schema/article/1","headline":"JDBC Transaction Without EJB","description":"","isPartOf":{"@id":"/blog/jdbc-transaction-without-ejb/"},"mainEntityOfPage":{"@id":"/blog/jdbc-transaction-without-ejb/"},"datePublished":"2012-10-24T09:19:42CET","dateModified":"2012-10-24T09:19:42CET","author":{"@id":"/#/schema/person/2"},"publisher":{"@id":"/#/schema/person/1"},"image":{"@id":"/blog/jdbc-transaction-without-ejb/#/schema/image/2"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/2","name":null,"sameAs":[]}]},{"@context":"https://schema.org","@graph":[{"@type":"ImageObject","@id":"/blog/jdbc-transaction-without-ejb/#/schema/image/2","url":null,"contentUrl":null,"caption":"JDBC Transaction Without EJB"}]}]}</script>
 <meta name=theme-color content="#fff">
 <link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
@@ -73,7 +73,7 @@
 <div class="col-md-12 col-lg-10 col-xl-8">
 <article>
 <div class=blog-header>
-<h1>JDBC TRANSACTION WITHOUT EJB</h1>
+<h1>JDBC Transaction Without EJB</h1>
 <p><small>Posted October 24, 2012 by &nbsp;&dash;&nbsp;<strong>1&nbsp;min read</strong></small><p>
 </div>
 <p class=lead>EJB 3 is simple enough that delegating transaction management to it only cost little in creating and annotating an EJB business interface method. However, if you want to skip EJB altogether yet ensure all queries get executed inside a transaction, here’s a quick way</p>
