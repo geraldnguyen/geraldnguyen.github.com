@@ -10,25 +10,26 @@
 <meta name=robots content="index, follow">
 <meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<title>JDBC Transaction Without EJB - Gerald Nguyen</title>
+<title>Code Review as an interview tool - Gerald Nguyen</title>
 <meta name=description content="An admirer of (Vulcan) logic, diversity and multidisciplinary approaches">
-<link rel=canonical href=/blog/jdbc-transaction-without-ejb/>
+<link rel=canonical href=/blog/code-review-as-an-interview-tool/>
 <meta property="og:locale" content>
 <meta property="og:type" content="article">
-<meta property="og:title" content="JDBC Transaction Without EJB">
-<meta property="og:description" content="Create a DAO method in which you set JDBC connection’s auto-commit property to false  dbConn.setAutoCommit(false);  Execute all your queries  stmt = dbConn.createStatement(); result = stmt.executeQuery(query); stmt.executeUpdate(update);  Commit or rollback the transaction  dbConn.commit();  Reset auto-commit to true again for other execution  dbConn.setAutoCommit(true);  This is really simple, as it should be for something purely mechanical. The challenge for every programmer is how to write your transaction code or order your queries such that you can achieve desired result.">
-<meta property="og:url" content="/blog/jdbc-transaction-without-ejb/">
+<meta property="og:title" content="Code Review as an interview tool">
+<meta property="og:description" content="In my team, we value and encourage every one to participate in code review. We consider it an important part in our Engineering Excellence guideline as a way of learning and contributing:
+When you review other people codes, you help them and the team uncovered requirement/design/coding issues before they get into main codebase and eventually production. You also assure a consistent practice and coding standard are followed across all team members.">
+<meta property="og:url" content="/blog/code-review-as-an-interview-tool/">
 <meta property="og:site_name" content="Gerald Nguyen">
-<meta property="article:published_time" content="2012-10-24T09:19:42+01:00">
-<meta property="article:modified_time" content="2012-10-24T09:19:42+01:00">
+<meta property="article:published_time" content="2021-10-01T09:19:42+01:00">
+<meta property="article:modified_time" content="2021-10-01T09:19:42+01:00">
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:site content>
 <meta name=twitter:creator content>
-<meta name=twitter:title content="JDBC Transaction Without EJB">
+<meta name=twitter:title content="Code Review as an interview tool">
 <meta name=twitter:description content>
 <meta name=twitter:card content="summary">
-<meta name=twitter:image:alt content="JDBC Transaction Without EJB">
-<script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/1","name":"","url":"/","sameAs":[],"image":{"@type":"ImageObject","@id":"/#/schema/image/1","url":"/\u003cnil\u003e","width":null,"height":null,"caption":""}},{"@type":"WebSite","@id":"/#/schema/website/1","url":"/","name":"Gerald Nguyen","description":"An admirer of (Vulcan) logic, diversity and multidisciplinary approaches","publisher":{"@id":"/#/schema/person/1"}},{"@type":"WebPage","@id":"/blog/jdbc-transaction-without-ejb/","url":"/blog/jdbc-transaction-without-ejb/","name":"JDBC Transaction Without EJB","description":"","isPartOf":{"@id":"/#/schema/website/1"},"about":{"@id":"/#/schema/person/1"},"datePublished":"2012-10-24T09:19:42CET","dateModified":"2012-10-24T09:19:42CET","breadcrumb":{"@id":"/blog/jdbc-transaction-without-ejb/#/schema/breadcrumb/1"},"primaryImageOfPage":{"@id":"/blog/jdbc-transaction-without-ejb/#/schema/image/2"},"inLanguage":"","potentialAction":[{"@type":"ReadAction","target":["/blog/jdbc-transaction-without-ejb/"]}]},{"@type":"BreadcrumbList","@id":"/blog/jdbc-transaction-without-ejb/#/schema/breadcrumb/1","name":"Breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"/","url":"/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"/blogjdbc-transaction-without-ejb/"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"/#/schema/article/1","headline":"JDBC Transaction Without EJB","description":"","isPartOf":{"@id":"/blog/jdbc-transaction-without-ejb/"},"mainEntityOfPage":{"@id":"/blog/jdbc-transaction-without-ejb/"},"datePublished":"2012-10-24T09:19:42CET","dateModified":"2012-10-24T09:19:42CET","author":{"@id":"/#/schema/person/2"},"publisher":{"@id":"/#/schema/person/1"},"image":{"@id":"/blog/jdbc-transaction-without-ejb/#/schema/image/2"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/2","name":null,"sameAs":[]}]},{"@context":"https://schema.org","@graph":[{"@type":"ImageObject","@id":"/blog/jdbc-transaction-without-ejb/#/schema/image/2","url":null,"contentUrl":null,"caption":"JDBC Transaction Without EJB"}]}]}</script>
+<meta name=twitter:image:alt content="Code Review as an interview tool">
+<script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/1","name":"","url":"/","sameAs":[],"image":{"@type":"ImageObject","@id":"/#/schema/image/1","url":"/\u003cnil\u003e","width":null,"height":null,"caption":""}},{"@type":"WebSite","@id":"/#/schema/website/1","url":"/","name":"Gerald Nguyen","description":"An admirer of (Vulcan) logic, diversity and multidisciplinary approaches","publisher":{"@id":"/#/schema/person/1"}},{"@type":"WebPage","@id":"/blog/code-review-as-an-interview-tool/","url":"/blog/code-review-as-an-interview-tool/","name":"Code Review as an interview tool","description":"","isPartOf":{"@id":"/#/schema/website/1"},"about":{"@id":"/#/schema/person/1"},"datePublished":"2021-10-01T09:19:42CET","dateModified":"2021-10-01T09:19:42CET","breadcrumb":{"@id":"/blog/code-review-as-an-interview-tool/#/schema/breadcrumb/1"},"primaryImageOfPage":{"@id":"/blog/code-review-as-an-interview-tool/#/schema/image/2"},"inLanguage":"","potentialAction":[{"@type":"ReadAction","target":["/blog/code-review-as-an-interview-tool/"]}]},{"@type":"BreadcrumbList","@id":"/blog/code-review-as-an-interview-tool/#/schema/breadcrumb/1","name":"Breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"/","url":"/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"/blogcode-review-as-an-interview-tool/"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"/#/schema/article/1","headline":"Code Review as an interview tool","description":"","isPartOf":{"@id":"/blog/code-review-as-an-interview-tool/"},"mainEntityOfPage":{"@id":"/blog/code-review-as-an-interview-tool/"},"datePublished":"2021-10-01T09:19:42CET","dateModified":"2021-10-01T09:19:42CET","author":{"@id":"/#/schema/person/2"},"publisher":{"@id":"/#/schema/person/1"},"image":{"@id":"/blog/code-review-as-an-interview-tool/#/schema/image/2"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"/#/schema/person/2","name":null,"sameAs":[]}]},{"@context":"https://schema.org","@graph":[{"@type":"ImageObject","@id":"/blog/code-review-as-an-interview-tool/#/schema/image/2","url":null,"contentUrl":null,"caption":"Code Review as an interview tool"}]}]}</script>
 <meta name=theme-color content="#fff">
 <link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
@@ -73,35 +74,58 @@
 <div class="col-md-12 col-lg-10 col-xl-8">
 <article>
 <div class=blog-header>
-<h1>JDBC Transaction Without EJB</h1>
-<p><small>Posted October 24, 2012 by &nbsp;&dash;&nbsp;<strong>1&nbsp;min read</strong></small><p>
+<h1>Code Review as an interview tool</h1>
+<p><small>Posted October 1, 2021 by &nbsp;&dash;&nbsp;<strong>2&nbsp;min read</strong></small><p>
 </div>
-<p class=lead>EJB 3 is simple enough that delegating transaction management to it only cost little in creating and annotating an EJB business interface method. However, if you want to skip EJB altogether yet ensure all queries get executed inside a transaction, here’s a quick way</p>
-<ol>
-<li>Create a DAO method in which you set JDBC connection’s auto-commit property to false</li>
-</ol>
-<pre><code>dbConn.setAutoCommit(false);
-</code></pre>
-<ol start=2>
-<li>Execute all your queries</li>
-</ol>
-<pre><code>stmt = dbConn.createStatement();
+<p class=lead>Reviewing code as a way of learning and contributing</p>
+<p>In my team, we value and encourage every one to participate in code review. We consider it an important part in our Engineering Excellence guideline as a way of learning and contributing:</p>
+<p>When you review other people codes, you help them and the team uncovered requirement/design/coding issues before they get into main codebase and eventually production. You also assure a consistent practice and coding standard are followed across all team members.</p>
+<p>You also learn. If you&rsquo;re new or inexperienced, reviewing other people codes help you learn how certain tasks are acomplished. If you are experienced, code reviewing helps you keep track of how the codebase evolves. Furthermore, it will be a delightful surprise to see how new solutions pop up from time to time.</p>
+<p>It is thus important that we evaluate candidates in their ability in reviewing codes. Typically, we would share a piece of codes and ask them to review. For example:</p>
+<pre><code>/**
+ * This model class contains 2 properties `name` and `description`
+ * It also contains method name `maxLength` which returns the longest
+ * prefix whose reversed order is a suffix (e.g. `abXXXXba`) without overlapping
+ *
+ * Imagine a colleague create this class and submit it for code review,
+ * please show us how you would review this code
+ */
+public class PrefixSuffixProblem {
+    public String name;
+    public String description;
 
-result = stmt.executeQuery(query);
+    public String getName() {
+        return name;
+    }
 
-stmt.executeUpdate(update);
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String maxLength(String str){
+        String temp = &quot;&quot;;
+        for(int i=0;i&lt;str.length()/2;i++   ){
+        if (str.charAt(i) == str.charAt(str.length() - 1 - i)) {
+        temp = temp + str.charAt(i);
+    }
+    else
+        break;
+        }
+        return temp;
+    }
+}
+
 </code></pre>
-<ol start=3>
-<li>Commit or rollback the transaction</li>
-</ol>
-<pre><code>dbConn.commit();
-</code></pre>
-<ol start=4>
-<li>Reset auto-commit to true again for other execution</li>
-</ol>
-<pre><code>dbConn.setAutoCommit(true);
-</code></pre>
-<p>This is really simple, as it should be for something purely mechanical. The challenge for every programmer is how to write your transaction code or order your queries such that you can achieve desired result.</p>
+<p>Our goal is not to find someone with the same coding standard or preference, but someone serious about code quality and maintainability. We normally share them the code and ask their opinions of what was done well, what not and how they would fix them (aka code suggestion)</p>
+<p>Checkout the code from <a href=https://github.com/geraldnguyen/kitchensink/blob/main/java/src/main/java/example/codereview/PrefixSuffixProblem.java>https://github.com/geraldnguyen/kitchensink</a></p>
 </article>
 </div>
 </div>
