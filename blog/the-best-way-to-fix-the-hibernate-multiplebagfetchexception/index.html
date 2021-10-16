@@ -134,6 +134,10 @@ Recommended fix: Instead of executing a single JPQL query that fetches two assoc
 </code></pre>
 <p><strong>Note</strong>: Don’t forget the <code>@QueryHints(value = { @QueryHint(name = HINT_PASS_DISTINCT_THROUGH, value = "false")})</code> on the repository methods (e.g. <code>findPostsFetchComments</code>) to not send the distinct into the SQL. <a href=https://vladmihalcea.com/jpql-distinct-jpa-hibernate/>For parent-child entity queries where the child collection is using JOIN FETCH, the DISTINCT keyword should only be applied after the ResultSet is got from JDBC, therefore avoiding passing DISTINCT to the SQL statement that gets executed</a></p>
 </article>
+<div id=disqus_thread></div>
+<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//geraldnguyen.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
 </div>
 </div>
 </div>
