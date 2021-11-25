@@ -7,13 +7,15 @@ weight: 50
 tags: java, kitchensink, interview, code review
 ---
 
-In my team, we value and encourage every one to participate in code review. We consider it an important part in our Engineering Excellence guideline as a way of learning and contributing:
+In all software development teams that I have been part of, we always value and encourage every one to participate in code review. We consider it an important part in our Engineering Excellence guideline as a way of learning and contributing:
 
 When you review other people codes, you help them and the team uncovered requirement/design/coding issues before they get into main codebase and eventually production. You also assure a consistent practice and coding standard are followed across all team members.
 
 You also learn. If you're new or inexperienced, reviewing other people codes help you learn how certain tasks are acomplished. If you are experienced, code reviewing helps you keep track of how the codebase evolves. Furthermore, it will be a delightful surprise to see how new solutions pop up from time to time.
 
-It is thus important that we evaluate candidates in their ability in reviewing codes. Typically, we would share a piece of codes and ask them to review. For example:
+It is thus important that when we hire, we should evaluate candidates in their ability to review codes. 
+
+For example, we could share a piece of codes and ask them to review. For example:
 
 ```
 /**
@@ -59,7 +61,7 @@ public class PrefixSuffixProblem {
 
 ```
 
-Our goal is not to find someone with the same coding standard or preference, but someone serious about code quality and maintainability. We normally share them the code and ask their opinions of what was done well, what not and how they would fix them (aka code suggestion)
+Our goal is not to find someone with the same coding standard or preference, but someone serious about code quality and maintainability. We seek their opinions of what was done well, what not and how they would fix them (aka code suggestion)
 
 
 Checkout the code from [https://github.com/geraldnguyen/kitchensink](https://github.com/geraldnguyen/kitchensink/blob/main/java/src/main/java/example/codereview/PrefixSuffixProblem.java)
