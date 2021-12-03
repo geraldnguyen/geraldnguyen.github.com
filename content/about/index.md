@@ -6,11 +6,12 @@ draft: false
 images: []
 ---
 
-*   [Professional Profile](https://geraldnguyen.github.io/about/#professional-profile)
-*   [Personal Projects](https://geraldnguyen.github.io/about/#personal-projects)
-    *   [HTML to Markdown](https://geraldnguyen.github.io/about/#html-to-markdown)
-    *   [Tiếng kêu của thú rừng & Buồn vui chuyện nhặt cỏ](https://geraldnguyen.github.io/about/#ti%E1%BA%BFng-k%C3%AAu-c%E1%BB%A7a-th%C3%BA-r%E1%BB%ABng--bu%E1%BB%93n-vui-chuy%E1%BB%87n-nh%E1%BA%B7t-c%E1%BB%8F)
-*   [Highly Recommended](https://geraldnguyen.github.io/about/#highly-recommended)
+*   [Professional Profile](/about/#professional-profile)
+*   [Personal Projects](/about/#personal-projects)
+    *   [HTML to Markdown](/about/#html-to-markdown)
+    *   [Tiếng kêu của thú rừng & Buồn vui chuyện nhặt cỏ](/about/#books-by-father)
+    *   [Tuyên Ngôn Agile - Vietnamese translation of the Agile Manifesto](/about/#agile-manifesto-vietnamese-translation)
+*   [Highly Recommended](/about/#highly-recommended)
 
 ## Professional Profile
 
@@ -33,12 +34,15 @@ An Chrome extension that translate selected HTML text to equivalent markdown for
 It allows user to select and convert headers, paragraphs, images or links on the web into Markdown text quickly and effortlessly
 
 ### [Tiếng kêu của thú rừng](https://tkctr.nvhung.nqtam.com/) & [Buồn vui chuyện nhặt cỏ](https://bvcnc.nvhung.nqtam.com/)
+<a id="books-by-father"></a>
+
 
 Books published by my father
 
 Powered by [Hugo](https://gohugo.io/) and [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/) and [Azure Search](https://azure.microsoft.com/en-us/services/search/)
 
 ### [Tuyên Ngôn Agile - Vietnamese translation of the Agile Manifesto](https://geraldnguyen.github.io/agile-manifesto-vietnamese-translation/)
+<a id="agile-manifesto-vietnamese-translation"></a>
 
 An quality translation of the Agile Manifesto into Vietnamese
 
