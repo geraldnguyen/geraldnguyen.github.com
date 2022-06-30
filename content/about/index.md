@@ -1,6 +1,6 @@
 ---
 title : "About"
-description: "Nguyen The Huy / Gerald"
+description: "Gerald Nguyen The Huy"
 lead: "Seasoned Full Stack Developer"
 draft: false
 images: []
