@@ -1,7 +1,7 @@
 ---
 title: "Shift Left Testing"
 date: 2022-09-26T09:19:42+01:00
-draft: true
+draft: false
 weight: 50
 tags: API
 ---
@@ -18,9 +18,9 @@ A picture is worth a thousand words. Here are how Shift Left differs from the tr
 
 We started with **unit testing**, by developers, for their own codes. This is the easiest shift to implement, though it still tooks time, effort and patience to get it right. I recommend https://pragprog.com/titles/utj2/pragmatic-unit-testing-in-java-8-with-junit/ if you want quickly level-up
 
-The next step is to subject our codes to static analysis testings such as [Sonar](https://www.sonarqube.org/) and [Veracode](https://www.veracode.com/).
+The next step is to submit our codes to **static analysis testings** such as [Sonar](https://www.sonarqube.org/) and [Veracode](https://www.veracode.com/).
 
-We plan to further shift left by adopting Behavior-Driven Development and involving our QA colleagues as early as the design stage. This is the most challenges of all because it involves multiple groups of people with different skills and preferences. We'll need to find the right concensus, attitudes and skillset to get it working. I figure once we deliver a first success, the rest will fall in line more naturally.
+We plan to further shift left by adopting **Behavior-Driven Development** and involving our QA colleagues as early as the design stage. This is a challenging approach because it involves multiple groups of people with different skills and preferences. We'll need to find a concensus among them, appropriate attitudes and the right skillsets to get it working. I figure once we deliver a first success, the rest will follow more naturally.
 
 ## Reference
 
