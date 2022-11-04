@@ -10,6 +10,7 @@ images: []
 *   [Personal Projects](/about/#personal-projects)
     *   [HTML to Markdown](/about/#html-to-markdown)
     *   [Tiếng kêu của thú rừng & Buồn vui chuyện nhặt cỏ](/about/#books-by-father)
+    *   [Echo Rest Controller](/about/#echo-rest-controller)
 *   [Writings & Translation](/about/#writings--translation))
     *   [What are APIs?](/about/#what-are-apis)
     *   [Tuyên Ngôn Agile - Vietnamese translation of the Agile Manifesto](/about/#agile-manifesto-vietnamese-translation)
@@ -41,6 +42,11 @@ It allows user to select and convert headers, paragraphs, images or links on the
 Books published by my father
 
 Powered by [Hugo](https://gohugo.io/) and [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/) and [Azure Search](https://azure.microsoft.com/en-us/services/search/)
+
+### [Echo Rest Controller](https://github.com/geraldnguyen/echo)
+
+A maven library of a `/echo` API that echo HTTP request info back to the caller
+
 
 ## Writings & Translation
 
