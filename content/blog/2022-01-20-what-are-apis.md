@@ -20,11 +20,11 @@ And they send your orders to the kitchen. Like what [Fetch API](https://develope
 
 ## APIs belongs in the Backend
 
-With the Kitchen being Backend, APIs are the kitchen's offering of available dishes to waiters and customers. For examples, the API `GET /kitchen/dishes` tells its consumers what they can order today, the `GET /kitchen/dishes/hawaian-pizza` returns detailed description of that delicious food, or `POST ttps://the-kitchen/tables/123/orders` accepts a new order.
+With the Kitchen being Backend, APIs are the kitchen's offering of available dishes to waiters and customers. For examples, the API `GET /kitchen/dishes` tells its consumers what they can order today, the `GET /kitchen/dishes/hawaian-pizza` returns detailed description of that delicious food, or `POST /kitchen/tables/123/orders` accepts a new order.
 
 Fulfillment of API requests are of course completed in the Kitchen. The chef determines the menu, set out recipe of each dish, and cooks all customer orders.
 
-## Note: There may not be a Frontend
+## There may not be a Frontend
 
 ![](/images/icecream-truck-small.jpg)
 
