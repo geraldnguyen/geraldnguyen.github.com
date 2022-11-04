@@ -10,7 +10,10 @@ images: []
 *   [Personal Projects](/about/#personal-projects)
     *   [HTML to Markdown](/about/#html-to-markdown)
     *   [Tiếng kêu của thú rừng & Buồn vui chuyện nhặt cỏ](/about/#books-by-father)
+*   [Writings & Translation](/about/#writings--translation))
+    *   [What are APIs?](/about/#what-are-apis)
     *   [Tuyên Ngôn Agile - Vietnamese translation of the Agile Manifesto](/about/#agile-manifesto-vietnamese-translation)
+    *   [The 2020 Scrum Guide™ - Hướng Dẫn Scrum 2020](/about/#the-2020-scrum-guide---h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-scrum-2020)
 *   [Highly Recommended](/about/#highly-recommended)
 
 ## Professional Profile
@@ -34,17 +37,24 @@ An Chrome extension that translate selected HTML text to equivalent markdown for
 It allows user to select and convert headers, paragraphs, images or links on the web into Markdown text quickly and effortlessly
 
 ### [Tiếng kêu của thú rừng](https://tkctr.nvhung.nqtam.com/) & [Buồn vui chuyện nhặt cỏ](https://bvcnc.nvhung.nqtam.com/)
-<a id="books-by-father"></a>
-
 
 Books published by my father
 
 Powered by [Hugo](https://gohugo.io/) and [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/) and [Azure Search](https://azure.microsoft.com/en-us/services/search/)
 
-### [Tuyên Ngôn Agile - Vietnamese translation of the Agile Manifesto](https://geraldnguyen.github.io/agile-manifesto-vietnamese-translation/)
-<a id="agile-manifesto-vietnamese-translation"></a>
+## Writings & Translation
 
-An quality translation of the Agile Manifesto into Vietnamese
+### [What are APIs?](https://geraldnguyen.github.io/blog/what-are-apis/)
+
+Debunk a misconception and briefly explain what APIs are
+
+### [Tuyên Ngôn Agile - Vietnamese translation of the Agile Manifesto](https://geraldnguyen.github.io/agile-manifesto-vietnamese-translation/)
+
+A quality translation of the Agile Manifesto into Vietnamese
+
+### [The 2020 Scrum Guide™ - Hướng Dẫn Scrum 2020](https://geraldnguyen.github.io/scrum-guide-vietnamese-translation/)
+
+A quality translation of the The Scrum Guide™ into Vietnamese
 
 
 ## Highly Recommended
@@ -54,3 +64,5 @@ An quality translation of the Agile Manifesto into Vietnamese
 [Martin Fowler](https://martinfowler.com/): A website on building software effectively
 
 [Singapore National Library Board](https://www.nlb.gov.sg/): If you are in Singapore, visit this often!
+
+[Understaing Apache Maven](https://cguntur.me/2020/05/20/understanding-apache-maven-the-series/): BNYM Java Champion [Chandra Guntur](https://www.linkedin.com/in/ACoAAAB3fyIBRCYsJL4MNfKIgR4o2Ui3i-R4dfM). It is practical, visual and concise
