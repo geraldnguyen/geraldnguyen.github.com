@@ -3,7 +3,6 @@ title: "Shift Left Testing"
 date: 2022-09-26T09:19:42+01:00
 draft: false
 weight: 50
-tags: API
 ---
 
 ## What is Shift Left Testing?
