@@ -1,5 +1,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+
+{{ $pageTitle := "Title" }} 
+{{ if .IsHome }}
+  {{ $pageTitle = site.Title }}
+{{ else }}
+  {{ $pageTitle = .Title }}
+{{ end }}
+
+<title>{{ $pageTitle }}</title>
+<meta data-rh="true" property="og:url" content="{{ page.Permalink  }}">
+<meta data-rh="true" property="og:title" content="{{ $pageTitle }}">
+<meta data-rh="true" name="description" content="{{ page.Description  }}">
+<meta data-rh="true" property="og:site_name" content="{{ site.Title }}">
+<meta data-rh="true" property="og:description" content="{{ page.Description  }}">
+<meta data-rh="true" name="twitter:description" content="{{ page.Description  }}">
+<meta data-rh="true" property="al:web:url" content="{{ page.Permalink }}">
+<meta data-rh="true" property="og:type" content="article">
+
+{{ with resources.Get (or page.Params.Image site.Params.Image) }}
+  <meta property="og:image" content="{{ .Permalink }}" data-rh="true">
+{{ end }}
+
+
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}

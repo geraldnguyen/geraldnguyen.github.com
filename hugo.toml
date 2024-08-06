@@ -2,3 +2,6 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'Gerald Nguyen'
 theme = 'medium'
+
+[params]
+  Image = "geraldnguyen-profile.jpg"
