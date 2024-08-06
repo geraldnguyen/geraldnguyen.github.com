@@ -1,0 +1,18 @@
+{{ define "header-content" }}
+    {{ .Content }}
+{{ end }}
+
+{{ define "main" }}
+
+<div class="content"> 
+
+  <!-- Pinned Stories Section -->
+  {{ partial "pinned-stories.html" . }}
+
+  <!-- Latest Stories Section -->
+  {{ partial "latest-stories.html" . }}
+</div>
+
+{{ end }}
+
+

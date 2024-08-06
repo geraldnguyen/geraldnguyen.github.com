@@ -1,0 +1,10 @@
+<div class="story border-bottom p-2 border-opacity-10">
+  <a href="{{ .RelPermalink }}">
+      {{ with .Params.featured_image }}
+      <img src="{{ . }}" alt="{{ $.Title }}">
+      {{ end }}
+      <h3>{{ .Title }}</h3>
+      <p>{{ .Summary }}</p>
+      <p class="meta">{{ .Date.Format "January 2, 2006" }} · {{ .ReadingTime }} min read</p>
+  </a>
+</div>
