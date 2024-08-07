@@ -1,9 +1,38 @@
-{{ define "main" }}
-  <h1>{{ .Title }}</h1>
+{{ define "header-content"}}
+<h2 class="subtitle">{{ .Params.Subtitle }}</h2>
 
-  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-  {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+{{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+{{ $dateHuman := .Date | time.Format ":date_long" }}
+{{ $profileName := .Site.Params.DisplayName }}
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    {{ with resources.Get (.Site.Params.ProfileThumbnail) }}
+    <img alt="{{ $profileName }}" class="profile-thumbnail rounded-circle"
+          src="{{ .Permalink }}" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    {{ end }}
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="{{ .Site.BaseURL}}">
+        {{ .Site.Params.DisplayName }}
+      </a>
+    </div>
+    <div>
+      <span>{{ .ReadingTime}} min read</span>
+      <span>·</span>
+      <span><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></span>
+    </div>
+  </div>
+            
+</div>  
+{{ end }}
+
+
+
+{{ define "main" }}
+  
 
   {{ .Content }}
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}

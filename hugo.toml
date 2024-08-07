@@ -4,7 +4,9 @@ title = 'Gerald Nguyen'
 theme = 'medium'
 
 [params]
+  DisplayName = "Gerald Nguyen"
   Image = "geraldnguyen-profile.jpg"
+  ProfileThumbnail = "geraldnguyen-profile-thumbnail.jpg"
 
 
 [[menus.main]]
