@@ -3,12 +3,14 @@
 <head>
   {{ partial "head.html" . }}
 </head>
-<body>
+<body class="container-fluid">
+  <div class="top-menu">
+    {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+  </div>
+
   <header>
     <h1>{{ page.Title }}</h1>
     {{ block "header-content" .}} {{ end }}
-
-    {{ partial "header.html" . }}
   </header>
   <main>
     {{ block "main" . }}{{ end }}
