@@ -2,6 +2,7 @@
 title = 'How to join video files in a semi-automated way'
 subtitle = 'Simple tech tip'
 date = 2024-05-04T08:00:00-07:00
+tags = [ "Ffmpeg", "Video Editing", "Tutorial", "Tech Tips"]
 +++
 
 TLDR;

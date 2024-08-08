@@ -32,8 +32,7 @@
 
 
 {{ define "main" }}
-  
-
   {{ .Content }}
+  
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ end }}
