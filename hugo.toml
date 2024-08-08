@@ -7,6 +7,11 @@ theme = 'medium'
   DisplayName = "Gerald Nguyen"
   Image = "geraldnguyen-profile.jpg"
   ProfileThumbnail = "geraldnguyen-profile-thumbnail.jpg"
+  twitter = 'https://x.com/geraldnguyensg'
+  linkedin = 'https://www.linkedin.com/in/nthehuy/'
+  github = 'https://github.com/geraldnguyen'
+
+
 
 
 [[menus.main]]
