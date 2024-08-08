@@ -91,6 +91,20 @@ li {
   margin-bottom: 0;
 }
 
+.top-menu nav ul li {
+  padding-left: unset;
+  margin-left: unset;
+}
+
+.top-menu nav ul li a:first-child {
+  padding-left: unset;
+  margin-left: unset;
+}
+
+.latest-stories a, .pinned-stories a, .tags-list a, .story-profile-brief a {
+  text-decoration: none;
+}
+
 .page-break {
   -webkit-text-size-adjust: 100%;
   --reach-tabs: 1;
