@@ -33,8 +33,13 @@ a {
   font-weight: 400;
   color: #242424;
   word-break: break-word;
-  font-style: normal;
   font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+blockquote {
+  box-shadow: inset 3px 0 0 0 #242424;
+  margin-left: -20px;
+  padding-left: 23px;
 }
 
 p {
