@@ -8,9 +8,8 @@ pinned = true
 
 Being called _solid_ is a compliment. The word carries the positive notions of reliability and respectability. All of us should aim to become one.
 
-![](1_jgPZbah9dkZgepyo6D2xwQ.webp)
+{{< figure src="1_jgPZbah9dkZgepyo6D2xwQ.webp" caption="https://www.collinsdictionary.com/dictionary/english/solid (screenshot)" >}}
 
-[https://www.collinsdictionary.com/dictionary/english/solid](https://www.collinsdictionary.com/dictionary/english/solid) (screenshot)
 
 If you are a software engineer or want to become one, you are in luck because there is a set of SOLID principles to guide your way.
 
@@ -44,9 +43,7 @@ Open-close principle
 
 The `EmailService` can be extended by a `RecallableEmailService` which adds recall-ability feature to the email just sent.
 
-![](1_cvKw_Z8ZspbkJieyjInM0w.webp)
-
-EmailService and its associations
+{{< figure src="1_cvKw_Z8ZspbkJieyjInM0w.webp" caption="EmailService and its associations" >}}
 
 The `ElectricCar` adds electric features without modifying the internal of `Car`.
 
@@ -70,9 +67,8 @@ An `OrderService` does not need to `recallEmail(...)` . Hence it only depends on
 
 Similarly, an `UrbanTripPlanner` does not need the `recharge(...)` method from an `EletricCar`. It depends only on the interface provided by `Car`
 
-![](1_AZ1fklqQkAmglfU5NxLC3g.webp)
+{{< figure src="1_AZ1fklqQkAmglfU5NxLC3g.webp" caption="Car and its associations" >}}
 
-Car and its associations
 
 Dependency inversion
 ====================
@@ -83,10 +79,8 @@ The _procedural_ dependency mechanism starts from the top, gradually expands, an
 
 In Object-oriented programming, the dependency is _inverted_. The majority of dependencies should be upon abstractions. And where implementation exists, its relationship with abstraction _inverts_. Rather than being directly depended on, the implementation now depends on abstraction.
 
-![](1_xZNkJr8o1fxcJ2efNggICA.webp)
+{{< figure src="1_xZNkJr8o1fxcJ2efNggICA.webp" caption="Source: Uncle Bob’s Design Principles and  Design Patterns" >}}
 
-Source: Uncle Bob’s Design Principles and  
-Design Patterns
 
 An `OrderService` depends on the interface provided by `EmailService` and not its IMAP or POP implementation.
 
