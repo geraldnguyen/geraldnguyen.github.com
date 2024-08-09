@@ -212,6 +212,17 @@ pre code {
   line-height: 28px;
 }
 
+.story .subtitle {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.story .meta {
+  font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+}
+
 .tags-list {
   -webkit-text-size-adjust: 100%;
   --reach-tabs: 1;
