@@ -1,6 +1,4 @@
-<div class="pinned-stories">
-  
-
+<div class="pinned-stories pb-4">
     {{ $pinned := where .Site.RegularPages "Params.pinned" true }}
     {{ range $pinned }}
       <div class="pin-story-icon d-flex align-items-center p-2" >

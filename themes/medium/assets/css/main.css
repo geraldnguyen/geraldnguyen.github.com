@@ -9,6 +9,7 @@ body {
 header {
   border-bottom: 1px solid #222;
   margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 footer {
@@ -329,4 +330,9 @@ figcaption * {
 
 figcaption a {
   color: #6B6B6B;
+}
+
+.social-links a {
+  width: 3em;
+  height: 2em;
 }
