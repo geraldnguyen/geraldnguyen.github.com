@@ -4,6 +4,7 @@ subtitle = 'Interviewer: ask them if your interview is running out of time. Inte
 date = 2023-02-17T08:00:00-07:00
 tags = [ "Interview Questions", "Interview", "Java", "JavaScript", "Programming"]
 pinned = true
+image = "0_qxJpBdXPqAG2Z7NJ.jpg"
 +++
 
 {{< figure src="https://miro.medium.com/v2/resize:fit:700/0*qxJpBdXPqAG2Z7NJ" caption="Photo by [Wes Hicks](https://unsplash.com/@sickhews?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)" >}}
