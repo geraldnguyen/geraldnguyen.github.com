@@ -2,6 +2,7 @@
 title = 'Behavior Driven Development (BDD) with Selenium in Python'
 subtitle = 'A beginner guide'
 date = 2024-05-20T08:00:00-07:00
+image = "1_ZWQCCWcTUsb9DoEVUAwcTQ.jpeg"
 tags = [ "Programming", "Python", "Selenium", "BDD", "Tutorial"]
 +++
 

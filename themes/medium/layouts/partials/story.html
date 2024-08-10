@@ -1,10 +1,20 @@
 <div class="story border-bottom mb-3 p-2 border-opacity-10">
   <a href="{{ .RelPermalink }}">
-      {{ with .Params.featured_image }}
-      <img src="{{ . }}" alt="{{ $.Title }}">
+    <div class="d-flex align-items-start justify-content-between">
+      <div>
+        <h3>{{ .Title }}</h3>
+        <p class="subtitle">{{ .Params.Subtitle }}</p>
+        <p class="meta">{{ .Date.Format "January 2, 2006" }} · {{ .ReadingTime }} min read</p>
+      </div>
+      
+      {{ $page := . }}
+      {{ with .Params.Image }}
+          {{ $originalImg := $page.Resources.GetMatch ($page.Params.image) }}
+          {{ if $originalImg }}
+              {{ $thumbnailImg := $originalImg.Fit "200x100" }}
+              <img src="{{ $thumbnailImg.RelPermalink }}" alt="{{ $page.Title | safeHTML }}" />
+          {{end}}      
       {{ end }}
-      <h3>{{ .Title }}</h3>
-      <p class="subtitle">{{ .Params.Subtitle }}</p>
-      <p class="meta">{{ .Date.Format "January 2, 2006" }} · {{ .ReadingTime }} min read</p>
+    </div>
   </a>
 </div>

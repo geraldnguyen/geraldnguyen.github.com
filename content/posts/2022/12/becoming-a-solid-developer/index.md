@@ -3,6 +3,7 @@ title = 'Becoming a SOLID developer'
 subtitle = 'By following SOLID software engineering principles'
 date = 2022-12-07T08:00:00-07:00
 tags = [ "Software Engineering", "SOLID principles", "Uncle Bob", "Object Oriented"]
+image = "1_jgPZbah9dkZgepyo6D2xwQ.png"
 pinned = true
 +++
 
