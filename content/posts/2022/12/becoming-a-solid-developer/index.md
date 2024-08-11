@@ -115,7 +115,7 @@ Other articles in this series:
 
 *   [Becoming a SOLID developer](.)
 *   [SOLID in Action — the Single Responsibility Principle]({{< ref "solid-single-responsibility-principle" >}})
-*   [SOLID in Action — the Open-closed principle](https://medium.com/codex/solid-in-action-the-open-closed-principle-5b8d09a60a5a)
+*   [SOLID in Action — the Open-closed principle]({{< ref "solid-open-close-principle" >}})
 *   [SOLID in Action — the Liskov Substitution principle](https://medium.com/geekculture/solid-in-action-the-liskov-substitution-principle-4b1868ad81fd)
 *   [SOLID in Action — the Interface Segregation principle](https://medium.com/geekculture/solid-in-action-the-interface-segregation-principle-6c8f92d2133a)
 *   [SOLID in Action — the Dependency Inversion principle](https://medium.com/geekculture/solid-in-action-the-dependency-inversion-principle-5567bddd6cfc)
