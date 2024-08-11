@@ -92,3 +92,5 @@ The OCP is certainly among the most important principles in Software Engineering
 We have visited two traditional ways of applying this principle: Inheritance and Abstraction. Arguably, Abstraction is preferred with a broader impact and more robust effect.
 
 We also examined a third option for applying the principle. There are 2 prominent sub-categories, Plugins and APIs & Events under this approach.
+
+{{< include "posts/2022/12/becoming-a-solid-developer/series.include" >}}

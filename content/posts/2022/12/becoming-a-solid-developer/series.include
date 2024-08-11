@@ -1,0 +1,14 @@
+{{< pagebreak >}}
+
+If you like this article, please [follow me](https://geraldnguyen.medium.com/subscribe) for more quality content.
+
+Other articles in this series:
+
+*   [Becoming a SOLID developer]({{< ref "posts/2022/12/becoming-a-solid-developer" >}})
+*   [SOLID in Action — the Single Responsibility Principle]({{< ref "posts/2022/12/solid-single-responsibility-principle" >}})
+*   [SOLID in Action — the Open-closed principle]({{< ref "posts/2022/12/solid-open-close-principle" >}})
+*   [SOLID in Action — the Liskov Substitution principle]({{< ref "posts/2023/01/solid-liskov-substitution-principle" >}})
+*   [SOLID in Action — the Interface Segregation principle](https://medium.com/geekculture/solid-in-action-the-interface-segregation-principle-6c8f92d2133a)
+*   [SOLID in Action — the Dependency Inversion principle](https://medium.com/geekculture/solid-in-action-the-dependency-inversion-principle-5567bddd6cfc)
+
+Thank you.

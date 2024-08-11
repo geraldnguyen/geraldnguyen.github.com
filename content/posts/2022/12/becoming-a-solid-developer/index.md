@@ -107,17 +107,5 @@ References
 *   [Clean Architecture: A Craftsman’s Guide to Software Structure and Design](https://www.oreilly.com/library/view/clean-architecture-a/9780134494272/)
 *   [https://en.wikipedia.org/wiki/SOLID](https://en.wikipedia.org/wiki/SOLID)
 
-{{< pagebreak >}}
 
-If you like this article, please [follow me](https://geraldnguyen.medium.com/subscribe) for more quality content.
-
-Other articles in this series:
-
-*   [Becoming a SOLID developer](.)
-*   [SOLID in Action — the Single Responsibility Principle]({{< ref "solid-single-responsibility-principle" >}})
-*   [SOLID in Action — the Open-closed principle]({{< ref "solid-open-close-principle" >}})
-*   [SOLID in Action — the Liskov Substitution principle](https://medium.com/geekculture/solid-in-action-the-liskov-substitution-principle-4b1868ad81fd)
-*   [SOLID in Action — the Interface Segregation principle](https://medium.com/geekculture/solid-in-action-the-interface-segregation-principle-6c8f92d2133a)
-*   [SOLID in Action — the Dependency Inversion principle](https://medium.com/geekculture/solid-in-action-the-dependency-inversion-principle-5567bddd6cfc)
-
-Thank you.
+{{< include "posts/2022/12/becoming-a-solid-developer/series.include" >}}

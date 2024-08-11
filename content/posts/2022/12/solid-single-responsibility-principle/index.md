@@ -104,3 +104,5 @@ SRP is not always achievable or maintainable, unfortunately. We analyzed two sce
 We have not discussed how to resolve those violations. That is on purpose because fixing them is as hard as fixing the technical debts every team accumulates over time.
 
 Last but not least, we discuss utility class as a form of anthological responsibility.
+
+{{< include "posts/2022/12/becoming-a-solid-developer/series.include" >}}
