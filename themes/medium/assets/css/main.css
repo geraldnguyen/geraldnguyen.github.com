@@ -248,6 +248,13 @@ pre code {
   list-style: none;
 }
 
+.tags-list ul {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  padding-inline-start: 0px;
+}
+
 .tags-list ul li {
   display: inline-block;
   text-rendering: optimizeLegibility;
@@ -266,6 +273,8 @@ pre code {
   padding: 8px 16px;
   border-radius: 100px;
   white-space: nowrap;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .categories-list ul {
