@@ -8,11 +8,11 @@ image = "0_2JS1H36QRQHFriO0.jpg.png"
 
 +++
 
-{{< figure src="0_2JS1H36QRQHFriO0.jpg" caption="Photos by [Eugen Str](https://unsplash.com/@eugen1980?utm_source=medium&utm_medium=referral) (left) and [Patrick](https://unsplash.com/@pf91_photography?utm_source=medium&utm_medium=referral) (right) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)">}}
+{{< figure src="0_2JS1H36QRQHFriO0.jpg" caption="Photos by [Eugen Str](https://unsplash.com/@eugen1980?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)">}}
 
-{{< figure src="0_MRP8w8sESbbxCOzU.jpg" caption="Photos by [Eugen Str](https://unsplash.com/@eugen1980?utm_source=medium&utm_medium=referral) (left) and [Patrick](https://unsplash.com/@pf91_photography?utm_source=medium&utm_medium=referral) (right) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)">}}
+{{< figure src="0_MRP8w8sESbbxCOzU.jpg" caption="Photos by [Patrick](https://unsplash.com/@pf91_photography?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)">}}
 
-If you are going to build a house, a table, or a chair, what is your preferred option? The multiple tools on the left or one Swiss knife on the right?
+If you are going to build a house, a table, or a chair, what is your preferred option? The multiple tools on the first picture or one Swiss knife on the second?
 
 Yep, you are right. If you want to create something useful that last for years, you need specialized tools. The same thinking applies to software development, if you want to create a serious application, you need specialized components represented by their own, purposely designed interfaces. The Interface Segregation Principle (ISP) is available to guide the creation of those interfaces.
 
