@@ -1,5 +1,5 @@
 <div class="latest-stories">
-  {{ range .Site.RegularPages }}
+  {{ range . }}
     {{ partial "story.html" . }}
   {{ end }}
 </div>

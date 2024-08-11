@@ -1,8 +1,11 @@
 {{ define "main" }}
   <h1>{{ .Title }}</h1>
   {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+  
+  <!-- Pinned Stories Section -->
+  {{ partial "pinned-stories.html" .Pages }}
+
+  <!-- Latest Stories Section -->
+  {{ partial "latest-stories.html" .Pages }}
+  
 {{ end }}
