@@ -4,7 +4,7 @@ subtitle = 'Many client-specific interfaces are better than one general-purpose 
 date = 2023-01-27T08:00:00-07:00
 tags = [ "Software Engineering", "SOLID principles", "Programming", "Object Oriented", "Interface Segregation"]
 categories = ["Software Development"]
-image = "0_2JS1H36QRQHFriO0.jpg.png"
+image = "0_2JS1H36QRQHFriO0.jpg"
 
 +++
 
