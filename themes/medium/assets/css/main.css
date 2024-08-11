@@ -107,7 +107,11 @@ li {
   margin-left: unset;
 }
 
-.latest-stories a, .pinned-stories a, .tags-list a, .story-profile-brief a {
+.latest-stories a, 
+.pinned-stories a, 
+.tags-list a, 
+.categories-list a, 
+.story-profile-brief a {
   text-decoration: none;
 }
 
@@ -240,7 +244,7 @@ pre code {
   margin-top: 6px;
 }
 
-.tags-list ul {
+.tags-list ul, .categories-list ul {
   list-style: none;
 }
 
@@ -262,6 +266,36 @@ pre code {
   padding: 8px 16px;
   border-radius: 100px;
   white-space: nowrap;
+}
+
+.categories-list ul {
+  padding-inline-start: 0px;
+
+}
+
+.categories-list ul li {
+  -webkit-text-size-adjust: 100%;
+  --reach-tabs: 1;
+  --reach-menu-button: 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  word-break: break-word;
+  word-wrap: break-word;
+  box-sizing: inherit;
+  margin: 0;
+  margin-bottom: -0.31em;
+  text-transform: uppercase;
+  margin-top: 16px;
+}
+
+.categories-list a {
+  font-weight: 400;
+  font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #6B6B6B;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.077em;
+  font-style: normal;
 }
 
 figure {

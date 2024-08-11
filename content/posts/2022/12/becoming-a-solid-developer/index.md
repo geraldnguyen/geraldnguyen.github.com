@@ -3,6 +3,7 @@ title = 'Becoming a SOLID developer'
 subtitle = 'By following SOLID software engineering principles'
 date = 2022-12-07T08:00:00-07:00
 tags = [ "Software Engineering", "SOLID principles", "Uncle Bob", "Object Oriented"]
+categories = ["Software Development"]
 image = "1_jgPZbah9dkZgepyo6D2xwQ.png"
 pinned = true
 +++
@@ -112,7 +113,7 @@ If you like this article, please [follow me](https://geraldnguyen.medium.com/sub
 
 Other articles in this series:
 
-*   [Becoming a SOLID developer](https://medium.com/codex/becoming-a-solid-developer-7f0e0ab359f6)
+*   [Becoming a SOLID developer](.)
 *   [SOLID in Action — the Single Responsibility Principle](https://medium.com/codex/solid-in-action-the-single-responsibility-principle-7cb70c32cc03)
 *   [SOLID in Action — the Open-closed principle](https://medium.com/codex/solid-in-action-the-open-closed-principle-5b8d09a60a5a)
 *   [SOLID in Action — the Liskov Substitution principle](https://medium.com/geekculture/solid-in-action-the-liskov-substitution-principle-4b1868ad81fd)
