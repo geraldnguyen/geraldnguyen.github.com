@@ -26,6 +26,18 @@ An Chrome extension that translate selected HTML text to equivalent markdown for
 
 It allows user to select and convert headers, paragraphs, images or links on the web into Markdown text quickly and effortlessly
 
+### [LGTM - Approve!](https://chromewebstore.google.com/detail/lgtm-approve/odeollamfjdmamamonbfigajkhakcmag)
+
+Look Good To Me - Approve
+
+A chrome extension that automatically adds a comment while approving the request. Doing so cements the collaboration between the reviewer and the merge request's submitter
+
+The comment is default to "LGTM" (Look Good to Me) and can be customized.
+
+### [CKAD Prep (2020)](https://github.com/geraldnguyen/ckad-prep)
+
+A collection of exercises I prepared myself when I took the CKAD certification test in 2020
+
 ### [Tiếng kêu của thú rừng](https://tkctr.nvhung.nqtam.com/) & [Buồn vui chuyện nhặt cỏ](https://bvcnc.nvhung.nqtam.com/)
 
 Books published by my father
