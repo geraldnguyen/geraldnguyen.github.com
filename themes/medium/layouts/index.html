@@ -5,13 +5,15 @@
 
 {{ define "main" }}
 
+{{ $pages := where site.RegularPages "Type" "posts" }}
+
 <div class="content"> 
 
   <!-- Pinned Stories Section -->
-  {{ partial "pinned-stories.html" .Site.RegularPages }}
+  {{ partial "pinned-stories.html" $pages }}
 
   <!-- Latest Stories Section -->
-  {{ partial "latest-stories.html" .Site.RegularPages }}
+  {{ partial "latest-stories.html" $pages }}
 </div>
 
 {{ end }}
