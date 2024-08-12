@@ -11,9 +11,6 @@ theme = 'medium'
   linkedin = 'https://www.linkedin.com/in/nthehuy/'
   github = 'https://github.com/geraldnguyen'
 
-
-
-
 [[menus.main]]
 name = 'Home'
 pageRef = '/'
@@ -26,6 +23,6 @@ weight = 20
 
 [[menus.main]]
 name = 'About'
-pageRef = '/about'
+pageRef = '/pages/about'
 weight = 30
 
