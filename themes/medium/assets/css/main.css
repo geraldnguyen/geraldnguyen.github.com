@@ -194,6 +194,7 @@ pre {
   padding: 32px;
   border: 1px solid #E5E5E5;
   margin-top: 56px;
+  text-wrap: balance;
 }
 
 pre code {
@@ -598,7 +599,8 @@ figcaption a {
       grid-template-areas:
       "content toc";
       grid-template-rows: auto 1fr;
-      grid-template-columns: 4fr 1fr;
+      grid-template-columns: 3.5fr 1fr;
+      gap: 1rem;
   }
 }
 
