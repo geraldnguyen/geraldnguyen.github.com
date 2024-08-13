@@ -35,9 +35,13 @@
 
 {{ end }}
 
-
+{{ define "table-of-content" }}
+  <div class="toc-header">On this page</div>
+  {{ .TableOfContents }}
+{{ end }}
 
 {{ define "main" }}
+
   {{ .Content }}
   
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}

@@ -26,3 +26,8 @@ name = 'About'
 pageRef = '/pages/about'
 weight = 30
 
+[markup]
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 1
