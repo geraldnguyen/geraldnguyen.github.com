@@ -3,6 +3,24 @@
     {{ .Content }}
 {{ end }}
 
+{{ define "table-of-content" }}
+  <div class="toc-header">Categories</div>
+  <ul>
+    {{ range .Site.Taxonomies.categories }}
+      <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
+    {{ end }}
+  </ul>
+
+  <div class="toc-header">Tags</div>
+  <ul>
+    {{ range .Site.Taxonomies.tags }}
+      <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
+    {{ end }}
+  </ul>
+
+{{ end }}
+
+
 {{ define "main" }}
 
 {{ $pages := where site.RegularPages "Type" "posts" }}
