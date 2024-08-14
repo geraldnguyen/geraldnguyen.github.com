@@ -3,7 +3,8 @@ title: "Who owns the source code? Employee or employer?"
 date: 2010-12-21T09:19:42+01:00
 draft: false
 weight: 50
-tags: [copyright, old blog]
+categories: [Software Development]
+tags: [copyright law, old blog]
 ---
 
 I found these 2 articles discussing "who owns the source code" issue.

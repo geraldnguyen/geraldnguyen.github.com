@@ -3,7 +3,8 @@ title: "Weblogic SAXParserFactory Issue"
 date: 2010-10-26T09:19:42+01:00
 draft: false
 weight: 50
-tags: [j2ee, weblogic, old blog]
+categories: [Software Development]
+tags: [j2ee, weblogic, debugging, old blog]
 ---
 
 I have just wasted 1 whole day trying to debug this issues. Since I get most help from the internet, here is what I can do in return :D

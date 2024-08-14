@@ -3,6 +3,7 @@ title: "How do you initialize an EJB3 Stateful Session Bean ?"
 date: 2010-11-20T09:19:42+01:00
 draft: false
 weight: 50
+categories: [Software Development]
 tags: [j2ee, ejb3, programming, old blog]
 ---
 

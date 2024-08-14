@@ -3,6 +3,7 @@ title: "Combine EJB and WAR file in a same web service EAR"
 date: 2010-03-02T09:19:42+01:00
 draft: false
 weight: 50
+categories: [Software Development]
 tags: [j2ee, tutorial, old blog]
 ---
 
@@ -27,8 +28,6 @@ For weblogic application, each EAR file must contain a application.xml file unde
 ```
 
 ###  2. Class-loading. Where you can place library/code shared by both WAR file and EJB.
-
-
 
 Web application load classes from either their `WEB-INF/classes` or `WEB-INF/lib` directories. EJB as JAR file can depends on dependency mapping in its MANIFEST file. 
 

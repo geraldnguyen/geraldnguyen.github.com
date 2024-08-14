@@ -4,14 +4,14 @@ date: 2009-03-08T09:19:42+01:00
 draft: false
 weight: 50
 tags: [interesting, old blog]
-categories: [Miscellaneous]
+categories: [Non-Tech]
 ---
 
-#### Capitalism vs Socialism
+### Capitalism vs Socialism
 
 > “Capitalism is the unequal distribution of wealth. Socialism is the equal distribution of poverty.” – Winston Churchill
 
-#### President Harry Truman
+### President Harry Truman
 
 > President Harry Truman once said that he wanted to find a one-armed economist.
 > 

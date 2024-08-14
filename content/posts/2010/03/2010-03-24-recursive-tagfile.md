@@ -4,7 +4,8 @@ subtitle: "This is my experience with recursive tagfile on Weblogic 10.3. I also
 date: 2010-03-24T09:19:42+01:00
 draft: false
 weight: 50
-tags: [j2ee, old blog]
+categories: [Software Development]
+tags: [j2ee, tagfile, debugging, old blog]
 ---
 
 Tagfile is a good alternative for lazy people like me who hates doing java coding and XML configuration for simple task with lots of HTML codes.
@@ -18,6 +19,7 @@ The tagfile is named `catalogue.tag`. Its purpose is to display recursively a hi
 The tagfile takes in an attribute named value of type `TreeNode`. This type contains properties call Object (for the actual object), Parent (of type TreeNode) and Children (List of TreeNodes). Below is how it can be invoked.
 
 The recursion solution may appear very simple. So I thought.
+
 My first attempt is shown below:
 
 ![](http://2.bp.blogspot.com/_g19EQrkxY30/S6nilSER_tI/AAAAAAAAABU/_omvFkdPJWc/s640/hier2.png)
