@@ -9,7 +9,13 @@
   </div>
 
   <header>
-    {{ block "header-content" . }} {{ end }}
+    <div class="header-content">
+      {{ block "header-content" . }} {{ end }}
+    </div>
+    <div class="header-nav">
+      {{ block "header-nav" . }} {{ end }}
+    </div>
+    
   </header>
 
   <main>

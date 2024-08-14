@@ -605,11 +605,20 @@ figcaption a {
 @media (min-width: 992px) {
   main {
     display: grid;
-      grid-template-areas:
-      "content toc";
-      grid-template-rows: auto 1fr;
-      grid-template-columns: 3.5fr 1fr;
-      gap: 1rem;
+    grid-template-areas:
+    "content toc";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 3.5fr 1fr;
+    gap: 1rem;
+  }
+
+  header {
+    display: grid;
+    grid-template-areas:
+    "content nav";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 3.5fr 1fr;
+    gap: 1rem;
   }
 }
 
@@ -625,6 +634,10 @@ figcaption a {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+}
+
+.bd-toc nav ul li {
+  margin-left: 0;
 }
 
 .bd-toc nav a.active {

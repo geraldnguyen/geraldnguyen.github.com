@@ -1,3 +1,14 @@
+{{ define "header-nav" }}
+  {{ with .Prev }}
+  <a href="{{ .RelPermalink }}">Previous</a>
+  {{ end }}
+  <span> | </span>
+  {{ with .Next }}
+  <a href="{{ .RelPermalink }}">Next</a>
+  {{ end }}
+
+{{ end }}
+
 {{ define "header-content"}}
 
 {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
