@@ -300,6 +300,15 @@ pre code {
   margin-bottom: -0.31em;
   text-transform: uppercase;
   margin-top: 16px;
+  display: inline-block;
+}
+
+.categories-list ul li::before {
+  content: "| ";
+}
+
+.categories-list ul li:first-child::before {
+  content: "";
 }
 
 .categories-list a {
