@@ -2,10 +2,14 @@
 title: "Code Review as an interview tool"
 date: 2021-10-01T09:19:42+01:00
 subtitle: Reviewing code as a way of learning and contributing
-draft: false
+draft: true
 weight: 50
 tags: [java, kitchensink, interview, code review]
 ---
+
+**Note 2024-08-15: An updated version of this article was published in Medium at https://medium.com/50ld/code-review-as-an-interview-tool-f57eb66e5da0?source=user_profile---------86----------------------------**
+
+-----------------
 
 In all software development teams that I have been part of, we always value and encourage every one to participate in code review. We consider it an important part in our Engineering Excellence guideline as a way of learning and contributing:
 

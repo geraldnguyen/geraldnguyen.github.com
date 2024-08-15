@@ -2,10 +2,14 @@
 title: "Java Try-with-resource"
 date: 2021-09-03T09:19:42+01:00
 subtitle: "Java's try-with-resource is a convenient syntactic shortcut. It frees developers from keeping track of closeable resources and closing in a `finally` block"
-draft: false
+draft: true
 weight: 50
 tags: [java, kitchensink, programming, unit testing]
 ---
+
+**Note 2024-08-15: An updated version of this article was published in Medium at https://medium.com/codex/unit-testing-javas-try-with-resource-2cf793fdbc34?source=user_profile---------84----------------------------**
+
+-----------------
 
 ### Overview
 

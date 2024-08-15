@@ -1,10 +1,14 @@
 ---
 title: "Work-hard Mocking or Work-smart Mocking"
 date: 2021-09-08T09:19:42+01:00
-draft: false
+draft: true
 weight: 50
 tags: [java, kitchensink, unit testing, mockito, programming]
 ---
+
+**Note 2024-08-15: An updated version of this article was published in Medium at https://medium.com/@geraldnguyen/work-hard-verifying-or-work-smart-mocking-9e0c645c839e?source=user_profile---------65----------------------------**
+
+-----------------
 
 To be honest, I prefer *strict* mocking over relaxed mocking + `verify`. That is, if my mocking becomes neccessary (because of *strict* mocking), it also functions as a `verify`. I can save a few chunks of codes by sacrifying a little explicitness and sometimes verbosity of `verify` and `ArgumentCaptor` setup.
 
