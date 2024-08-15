@@ -3,6 +3,7 @@ title: "[Database] Exists or Inner Join: Duplicate Records"
 date: 2013-06-16T09:19:42+01:00
 draft: false
 weight: 50
+categories: [Software Development]
 tags: [database, sql, programming, old blog]
 ---
 
@@ -23,7 +24,6 @@ Assume all 3 tables share a same-name `PK_COL` column.
 Assume the following condition is used to extract data: Select from `TABLE_NAME` every record whose value in `PK_COL` is also present in `LOOKUP_TABLE.PK_COL`. Both `TABLE_NAME` and `LOOKUP_TABLE` have unique constrain on `PK_COL`. In this case, EXISTS and INNER JOIN is interchangeable:
 
 ```
-
 INSERT INTO COPY_TABLE_NAME
 (    SELECT B.*
 FROM TABLE_NAME B

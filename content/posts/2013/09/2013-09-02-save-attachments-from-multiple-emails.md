@@ -3,6 +3,7 @@ title: "[VBA] Save Attachements from Multiple Emails"
 date: 2013-09-02T09:19:42+01:00
 draft: false
 weight: 50
+categories: [Tech Related]
 tags: [VBA, Programming, old blog]
 ---
 

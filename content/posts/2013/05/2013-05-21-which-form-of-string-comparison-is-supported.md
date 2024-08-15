@@ -3,6 +3,7 @@ title: "Which Form of String Comparison Is Supported"
 date: 2013-05-21T09:19:42+01:00
 draft: false
 weight: 50
+categories: [Software Development]
 tags: [database, sql, programming, old blog]
 ---
 Below example is for Oracle DB, but adopting for other DBMS e.g. Sybase, MS SQL… should be straightforward.

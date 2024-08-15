@@ -3,6 +3,7 @@ title: "[Unix] – Recursively Listing Files Under a Directory"
 date: 2013-07-22T09:19:42+01:00
 draft: false
 weight: 50
+categories: [Software Development]
 tags: [shell, unix, old blog]
 ---
 
