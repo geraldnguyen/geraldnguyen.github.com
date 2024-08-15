@@ -4,6 +4,7 @@ date: 2020-04-20T09:19:42+01:00
 subtitle: "Because both are great!"
 draft: false
 weight: 50
+categories: [Software Development]
 tags: [react, bootstrap, programming, javascript]
 ---
 

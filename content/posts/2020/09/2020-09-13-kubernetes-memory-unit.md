@@ -4,6 +4,7 @@ date: 2020-09-13T09:19:42+01:00
 draft: false
 weight: 50
 tags: [Kubernetes]
+categories: [Software Development]
 ---
 
 Default memory unit in Kubernetes is bytes, in addition to other shorter forms with one of supported suffixes: E, P, T, G, M, K, Ei, Pi, Ti, Gi, Mi, Ki. 
