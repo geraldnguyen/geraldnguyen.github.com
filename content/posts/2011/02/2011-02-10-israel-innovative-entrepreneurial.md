@@ -3,8 +3,8 @@ title: "What makes Israel so innovative and entrepreneurial?"
 date: 2011-02-10T09:19:42+01:00
 draft: false
 weight: 50
-tags: [miscellaneous, old blog]
-categories: [Miscellaneous]
+tags: [miscellaneous, Israel, innovation, entrepreneurial, old blog]
+categories: [Non-Tech]
 ---
 I really admire the Israel mindset.
 

@@ -5,7 +5,7 @@ lead: "○ ● ◐ ◑ ◒ ◓ ◔ ◕"
 draft: false
 weight: 50
 tags: [miscellaneous, old blog]
-categories: [Miscellaneous]
+categories: [Non-Tech]
 ---
 
 http://en.wikipedia.org/wiki/Harvey_Balls

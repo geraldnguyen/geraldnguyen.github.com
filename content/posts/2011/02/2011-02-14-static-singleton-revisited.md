@@ -3,8 +3,11 @@ title: "Static vs Singleton Revisited"
 date: 2011-02-10T09:19:42+01:00
 draft: false
 weight: 50
-tags: [design, programming, old blog]
+categories: [Software Development]
+tags: [design, static method, singleton, dependency injection, old blog]
 ---
+
+# Static vs Singleton vs Dependency Injection
 
 Why visited? Because I wrote [one]({{< ref "2011-01-16-static-method-singleton.md" >}}) before 
 
@@ -15,6 +18,8 @@ I no longer favor **static** over **singleton** as much as before. Static is con
 Here is how I use singleton.
 
 Previously I implement singleton the traditional way. It's not trivial unfortunately (see my first post). But I have found a new alternative: Spring IoC. Several inconveniences of the old singleton way are eliminated: set up code, writing synchronized methods, maintaining static variables... Instead of implementing the singleton pattern with synchronized method, static variables in several classes, I only have to declare them in a single XML file. And the setup code is beautifully (and mysteriously) replaced by Spring's Dependency Injection.
+
+# Dependency Injection into EJB instances
 
 However, there are still challenges: Spring cannot dependency-inject into container-managed instances such as EJB or JSP tags. To some people, that is not a problem, because Spring does have EJB alternative. But I can't use those, for it is dictated by my boss that I must use EJB. Naturally I resort to Service Locator or something conceptually similar. It is not as clean as Dependency Injection (which is not possible), but it is the second best ([Martin Fowler's discussion on Dependency Injection vs Service Locator](http://martinfowler.com/articles/injection.html)). But that often means the same dependency is declared/coded in both Spring and Service Locator. This duplication seems small, acceptable, but it may be not. What if there is a change in that depended class, and you forget to update both Spring and Service Locator. Or what if you want to real singleton, but you have 2 instances: 1 from Spring, and 1 from Service Locator.
 
@@ -42,7 +47,7 @@ The trick is to have `SpringUtil` implements ApplicationContextAware interface. 
 The rest of `SpringUtil` code is straighforward:
 
 ```
-      public static T getBean(Class c) {
+    public static T getBean(Class c) {
         return appCtx.getBean(c);
     }
    

@@ -4,7 +4,8 @@ date: 2011-01-09T09:19:42+01:00
 lead: "Insight from Berth Bates, lead developers of many Sun's certification exam"
 draft: false
 weight: 50
-tags: [certification, old blog]
+categories: [Training]
+tags: [certification, learning, old blog]
 ---
 
 > "Without getting into too much detail, I can tell you some of what Sun did to create their various Java certification exams. So, in the old Sun days...

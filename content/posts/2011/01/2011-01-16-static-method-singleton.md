@@ -4,14 +4,19 @@ date: 2011-01-16T09:19:42+01:00
 subtitle: "Sometimes we write java class that has no state, each of its method is self-sufficient. It's then make sense (convenience, performance gain included) to convert those methods into static. Or, we can apply Singleton pattern on that class. So, which way?"
 draft: false
 weight: 50
-tags: [design, old blog]
+categories: [Software Development]
+tags: [design, static method, singleton, dependency injection, old blog]
 ---
+
+# Static method
 
 It really depends. If you hate storing object reference or passing it around, static is a excellent tool.
 
 But remember: `static` method CANNOT be overridden by sub-classing, it's only hidden. Refer to http://faq.javaranch.com/view?OverridingVsHiding for a simple explanation. (Side note: invoking a static method on a object reference only brings confusion, it's the variable data type that determine which static method's code will execute - remember: **hidden**, not overridden).
 
 Since static method cannot be overridden, the polymorphism power of OOP is lost, and we fall back to the realm of procedural programming. Some even complain about the difficult of unit testing with static method.
+
+# Singleton
 
 Singleton, in contrast, preserve the polymorphism of OOP while mimic the behavior of static methods. The only inconvenience is that you must have created and maintain references to the singleton object. In that case, util method can ease pretty much of that inconvenience. But be WARNED, it's not that straightforward.
 
@@ -56,6 +61,8 @@ public static synchronized MySingleton getInstance() {
 ```
 
 More information here: http://java.sun.com/developer/technicalArticles/Programming/singletons/
+
+# Inversion of Control / Dependency Injection
 
 Beside the above, there's a new way to employ Singleton pattern: **Inversion of Control**. IoC such as Spring often creates only 1 instance of any declare bean, such is exactly the expected result of Singleton pattern.
 

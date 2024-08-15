@@ -3,14 +3,19 @@ title: "Consistency in framework design"
 date: 2011-01-06T09:19:42+01:00
 draft: false
 weight: 50
-tags: [architecture, design, old blog]
+categories: [Software Development]
+tags: [architecture, design, framework, old blog]
 ---
+
+# Concistency
 
 > Framework: a set of ideas, principles, agreements, or rules that provides the basis or outline for something intended to be more fully developed at a later stage (MSN Dictionary)
 
 Not sure if you agree, but for me, the above definition implies "consistency" as a essential effect of using a framework. In the context of software development, using a framework usually equals to following its design guideline, or  implementing/extending its interfaces/base classes. Things can stuck or go wrong and time will definitely be wasted if you don't.
 
 I have only used 4 different application framework (.NET framework not included since it is comparably as big as Java standard API). 2 of them, Struts 2 and Spring MVC do not force me to explicitly implement their own interfaces, but implicitly I still have to. Such is due to expectation such as "execute" method returning a String in Struts 2 Action class or a controller method returning a ModelAndView in Spring MVC Controller classes. Futhermore, the fact that these semantically identical classes carrying different names in different frameworks (Action, Controller) clearly proves the influence of framework's design on the implementation details. The other 2 frameworks, both in-house, explicitly requires extending framework's base classes.
+
+# Building an inhouse framework
 
 So, for me, consistency is expected if I use a framework. It is even more desirable if I build one.
 
