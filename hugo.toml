@@ -31,3 +31,6 @@ weight = 30
     endLevel = 3
     ordered = false
     startLevel = 1
+  
+  [markup.highlight]
+    style = 'github'

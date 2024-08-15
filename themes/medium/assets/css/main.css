@@ -170,9 +170,13 @@ code {
     box-sizing: inherit;
     font-weight: 400;
     background-color: #F2F2F2;
-    padding: 2px 4px;
+    /* padding: 2px 4px; */
     font-size: 75%;
     font-family: source-code-pro, Menlo, Monaco, "Courier New", Courier, monospace;
+}
+
+code span {
+  font-family: var(--bs-font-monospace);
 }
 
 pre {
