@@ -6,14 +6,14 @@
 {{ define "table-of-content" }}
   <div class="toc-header">Categories</div>
   <ul>
-    {{ range .Site.Taxonomies.categories }}
+    {{ range .Site.Taxonomies.categories.ByCount }}
       <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
     {{ end }}
   </ul>
 
   <div class="toc-header">Tags</div>
   <ul>
-    {{ range .Site.Taxonomies.tags }}
+    {{ range .Site.Taxonomies.tags.ByCount }}
       <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
     {{ end }}
   </ul>
