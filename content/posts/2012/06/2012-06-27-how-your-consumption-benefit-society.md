@@ -1,7 +1,7 @@
 ---
 title: "HOW YOUR CONSUMPTION BENEFIT SOCIETY?"
 date: 2012-06-27T09:19:42+01:00
-lead: "Is $2000 = $3000 ? Mathematically no. Economically yes (or at least it seems to)"
+subtitle: "Is $2000 = $3000 ? Mathematically no. Economically yes (or at least it seems to)"
 draft: false
 weight: 50
 tags: [miscellaneous, old blog]
