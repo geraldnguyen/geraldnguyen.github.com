@@ -3,13 +3,14 @@ title: "JSR 303 – Bean Validation – Nested Validation"
 date: 2012-08-09T09:19:42+01:00
 draft: false
 weight: 50
+categories: [Software Development]
 tags: [java, jsr303 bean validation, old blog]
 ---
 
 
 Following up from my [previous post]({{< ref "2012-08-03-jsr303-bean-validation-basic.md" >}}) about JSR 303 – Bean Validation, we will see how to apply it to any nested property and how to display validation error on screen using Spring MVC’s JSP tags
 
-**1\. Bean Validation on Nested Property**
+## 1\. Bean Validation on Nested Property
 
 Recall that to validate any property, we only need to put a _Constraint_ annotation on top of its declaration. Example of common constraints are `@NotEmpty`, `@Pattern`, `@Email`. One thing in common of these constraints are that the applied property has to be of type `String`.
 
@@ -74,7 +75,7 @@ class Address {
 
 `@Valid` constraint will instruct the Bean Validator to delve to the type of its applied property and validate all constraints found there. In above example, the validator, when seeing a `@Valid` constraint on `address` property, will explore the `Address` class and validate all JSR 303 Constraints found inside. Because `houseNumber` and `streetName` are marked with `@NotEmpty` constraints, they are mandatory; `province` and `country` on the other hand are optional.
 
-**2\. Display Validation Error Using Spring MVC’s JSP Tags**
+## 2\. Display Validation Error Using Spring MVC’s JSP Tags
 
 Spring MVC tag library (`<%@ taglib prefix=”form” uri=”[http://www.springframework.org/tags/form&#8221](http://www.springframework.org/tags/form&#8221); %>`) offers a consistent way to display and collect input form. For our purpose, the tag used to display validation error is `errors`
 

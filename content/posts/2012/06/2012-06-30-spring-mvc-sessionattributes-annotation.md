@@ -3,6 +3,7 @@ title: "SPRING MVC – SESSIONATTRIBUTES ANNOTATION"
 date: 2012-06-30T09:19:42+01:00
 draft: false
 weight: 50
+categories: [Software Development]
 tags: [java, spring, old blog]
 ---
 

@@ -5,7 +5,7 @@ lead: "Is $2000 = $3000 ? Mathematically no. Economically yes (or at least it se
 draft: false
 weight: 50
 tags: [miscellaneous, old blog]
-categories: [Miscellaneous]
+categories: [Non-Tech]
 ---
 
 *(Disclaimer: I’m no economist. I simply find this story/concept interesting and want to share it)*

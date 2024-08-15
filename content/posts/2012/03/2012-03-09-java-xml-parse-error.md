@@ -3,7 +3,8 @@ title: "Java XML Parse error: Tried all: '1' addresses, but could not connect ov
 date: 2012-03-09T09:19:42+01:00
 draft: false
 weight: 50
-tags: [java, old blog]
+categories: [Software Development]
+tags: [java, XML, old blog]
 ---
 
 I had a [previous problem with Tiles and XML]({{< ref "2010-10-26-weblogic-saxparserfactory-issue.md" >}})  (and common-digester). I resolved it by telling WLS to use a different `SAXParserFactory`.

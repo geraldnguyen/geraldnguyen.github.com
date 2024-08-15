@@ -3,6 +3,7 @@ title: "JSR 303 – Bean Validation – Let Your Bean Validate Itself"
 date: 2012-12-20T09:19:42+01:00
 draft: false
 weight: 50
+categories: [Software Development]
 tags: [java, jsr303 bean validation, old blog]
 ---
 
