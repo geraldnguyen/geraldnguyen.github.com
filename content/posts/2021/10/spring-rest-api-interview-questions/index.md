@@ -1,6 +1,7 @@
 ---
 title: "Spring REST API Interview Questions"
 subtitle: "Use these to assess multiple practical aspects of a candidate’s skills and experience"
+image: 1_lOcYvYf5KARsBswgtPcoEQ.png
 date: 2021-10-19T09:19:42+01:00
 draft: false
 weight: 50

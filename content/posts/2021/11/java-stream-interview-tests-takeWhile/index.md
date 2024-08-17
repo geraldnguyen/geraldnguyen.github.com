@@ -2,6 +2,7 @@
 title: "Java Stream Interview Tests - takeWhile"
 date: 2021-11-01T09:19:42+01:00
 subtitle: Stream has been an important part of Java development since Java 8. This test assesses candidates' understanding of Stream’s mechanics
+image: 1_QnzX3SLxc1y3ALxkg6Rwyw.png
 draft: false
 weight: 50
 categories: [Software Development, Career Development]
