@@ -3,7 +3,7 @@ title: "Harvey Balls"
 date: 2011-01-23T09:19:42+01:00
 subtitle: "○ ● ◐ ◑ ◒ ◓ ◔ ◕"
 draft: false
-weight: 50
+
 tags: [miscellaneous, old blog]
 categories: [Non-Tech]
 ---

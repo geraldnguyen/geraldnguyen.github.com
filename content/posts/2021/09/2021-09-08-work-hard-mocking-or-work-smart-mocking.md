@@ -2,7 +2,7 @@
 title: "Work-hard Mocking or Work-smart Mocking"
 date: 2021-09-08T09:19:42+01:00
 draft: true
-weight: 50
+
 tags: [java, kitchensink, unit testing, mockito, programming]
 ---
 

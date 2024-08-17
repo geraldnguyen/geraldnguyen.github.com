@@ -2,7 +2,7 @@
 title: "What are APIs?"
 date: 2022-01-19T09:19:42+01:00
 draft: true
-weight: 50
+
 tags: [API]
 ---
 

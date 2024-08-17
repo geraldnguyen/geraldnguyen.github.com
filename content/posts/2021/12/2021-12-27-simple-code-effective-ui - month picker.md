@@ -2,7 +2,7 @@
 title: "Simple Code - Effective UI - Month Picker"
 date: 2021-12-27T09:19:42+01:00
 draft: true
-weight: 50
+
 tags: [simple code, UI tip, Month Picker]
 ---
 

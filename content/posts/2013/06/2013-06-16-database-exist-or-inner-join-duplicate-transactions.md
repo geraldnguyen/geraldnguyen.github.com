@@ -2,7 +2,7 @@
 title: "[Database] Exists or Inner Join: Duplicate Records"
 date: 2013-06-16T09:19:42+01:00
 draft: false
-weight: 50
+
 categories: [Software Development]
 tags: [database, sql, programming, old blog]
 ---

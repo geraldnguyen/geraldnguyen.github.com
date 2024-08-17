@@ -2,7 +2,7 @@
 title: "Interesting - 2009"
 date: 2009-03-08T09:19:42+01:00
 draft: false
-weight: 50
+
 tags: [interesting, old blog]
 categories: [Non-Tech]
 ---

@@ -2,7 +2,7 @@
 title: "How do you display input validation error"
 date: 2011-02-24T09:19:42+01:00
 draft: false
-weight: 50
+
 categories: [Software Development]
 tags: [miscellaneous, UI/UX, old blog]
 ---

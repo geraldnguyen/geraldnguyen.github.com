@@ -3,7 +3,7 @@ title: "javax.transaction.Transactional vs org.springframework.transaction.annot
 date: 2020-09-10T09:19:42+01:00
 subtitle: "It’s easy to mix especially when we only need the default setting"
 draft: false
-weight: 50
+
 categories: [Software Development]
 tags: [java, spring, transactional]
 ---

@@ -2,7 +2,7 @@
 title: "Consistency in framework design"
 date: 2011-01-06T09:19:42+01:00
 draft: false
-weight: 50
+
 categories: [Software Development]
 tags: [architecture, design, framework, old blog]
 ---

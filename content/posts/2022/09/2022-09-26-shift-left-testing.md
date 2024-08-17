@@ -2,7 +2,7 @@
 title: "Shift Left Testing"
 date: 2022-09-26T09:19:42+01:00
 draft: true
-weight: 50
+
 tags: [Shift Left, Testing, Software Engineering]
 ---
 

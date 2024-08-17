@@ -2,7 +2,7 @@
 title: "Enable Comment in Hugo site"
 date: 2021-10-17T09:19:42+01:00
 draft: false
-weight: 50
+
 categories: [Tech Related]
 tags: [hugo, disqus, comment, doks]
 ---

@@ -3,7 +3,7 @@ title: "Recursive Tagfile"
 subtitle: "This is my experience with recursive tagfile on Weblogic 10.3. I also describe a few problems encountered and how I solved them"
 date: 2010-03-24T09:19:42+01:00
 draft: false
-weight: 50
+
 categories: [Software Development]
 tags: [j2ee, tagfile, debugging, old blog]
 ---

@@ -3,7 +3,7 @@ title: "ILLEGAL SPORT BETTING DURING EURO CUP"
 date: 2012-07-10T09:19:42+01:00
 subtitle: "A cover of Tuoitre Cuoi magazine"
 draft: false
-weight: 50
+
 tags: [miscellaneous, old blog]
 categories: [Non-Tech]
 ---

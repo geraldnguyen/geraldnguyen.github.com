@@ -2,7 +2,7 @@
 title: "2-way SSL with WebLogic server 10.3"
 date: 2010-02-03T09:19:42+01:00
 draft: false
-weight: 50
+
 categories: [Software Development]
 tags: [weblogic, security, self-sign certificate, old blog]
 ---

@@ -3,7 +3,7 @@ title: "Code Review as an interview tool"
 date: 2021-10-01T09:19:42+01:00
 subtitle: Reviewing code as a way of learning and contributing
 draft: true
-weight: 50
+
 tags: [java, kitchensink, interview, code review]
 ---
 

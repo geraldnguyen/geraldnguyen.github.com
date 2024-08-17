@@ -2,7 +2,7 @@
 title: "Introducing Echo API"
 date: 2022-07-12T09:19:42+01:00
 draft: true
-weight: 50
+
 tags: [API]
 ---
 

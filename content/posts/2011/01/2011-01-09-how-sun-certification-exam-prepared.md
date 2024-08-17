@@ -3,7 +3,7 @@ title: "How Sun's certification exam are prepared"
 date: 2011-01-09T09:19:42+01:00
 subtitle: "Insight from Berth Bates, lead developers of many Sun's certification exam"
 draft: false
-weight: 50
+
 categories: [Career Development]
 tags: [certification, learning, old blog]
 ---

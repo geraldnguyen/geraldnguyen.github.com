@@ -2,7 +2,7 @@
 title: "Kubernetes Memory Units"
 date: 2020-09-13T09:19:42+01:00
 draft: false
-weight: 50
+
 tags: [Kubernetes]
 categories: [Software Development]
 ---

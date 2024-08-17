@@ -2,7 +2,7 @@
 title: "Quicksort vs Merge sort in Java"
 date: 2010-12-12T09:19:42+01:00
 draft: false
-weight: 50
+
 categories: [Software Development]
 tags: [java, algorithm, sort, old blog]
 ---

@@ -3,7 +3,7 @@ title: "[Excel] Bulk Linking Cells to Sheets Whose Name Equates Cell's value"
 date: 2013-09-10T09:19:42+01:00
 subtitle: "If you have an excel with an index page and many detailed sheets, you may find the below macro useful. The only requirement is to name your sheet with value of your cell/link in the index page"
 draft: false
-weight: 50
+
 categories: [Tech Related]
 tags: [VBA, Programming, old blog]
 ---

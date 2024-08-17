@@ -2,7 +2,7 @@
 title: "Java XML Parse error: Tried all: '1' addresses, but could not connect over HTTP to server"
 date: 2012-03-09T09:19:42+01:00
 draft: false
-weight: 50
+
 categories: [Software Development]
 tags: [java, XML, old blog]
 ---

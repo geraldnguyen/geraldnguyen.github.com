@@ -2,7 +2,7 @@
 title: "Java Method Reference"
 date: 2021-10-12T09:19:42+01:00
 draft: true
-weight: 50
+
 tags: [java, kitchensink, lambda, method reference, unit testing]
 ---
 
