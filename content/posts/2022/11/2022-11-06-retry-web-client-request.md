@@ -1,11 +1,16 @@
 ---
 title: "Retry WebClient Request"
 date: 2022-11-06T09:19:42+01:00
-draft: false
+draft: true
 weight: 50
 subtitle: Retrying a WebClient request using RetrySpec, and unit-testing it
 tags: [WebClient, Retry, Authorization]
 ---
+
+**Note 2024-08-15: An updated version of this article was published in Medium at https://geraldnguyen.medium.com/retry-webclient-request-f058fa4c337f?source=user_profile---------69----------------------------**
+
+-----------------
+
 
 ## Problem Statement
 

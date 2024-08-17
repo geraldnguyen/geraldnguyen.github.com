@@ -1,10 +1,14 @@
 ---
 title: "What are APIs?"
 date: 2022-01-19T09:19:42+01:00
-draft: false
+draft: true
 weight: 50
 tags: [API]
 ---
+
+**Note 2024-08-15: An updated version of this article was published in Medium at https://geraldnguyen.medium.com/what-are-apis-2259bb43ddb4?source=user_profile---------73----------------------------**
+
+-----------------
 
 ## Are API the waiters?
 

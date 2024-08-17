@@ -1,10 +1,15 @@
 ---
 title: "Introducing Echo API"
 date: 2022-07-12T09:19:42+01:00
-draft: false
+draft: true
 weight: 50
 tags: [API]
 ---
+
+
+**Note 2024-08-15: An updated version of this article was published in Medium at https://geraldnguyen.medium.com/echo-api-ef3408d520d2?source=user_profile---------83----------------------------**
+
+-----------------
 
 ## Introducing Echo API: 
 
