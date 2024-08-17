@@ -5,14 +5,14 @@
 
 {{ define "table-of-content" }}
   <div class="toc-header">Categories</div>
-  <ul>
+  <ul id="'toc-header-categories">
     {{ range .Site.Taxonomies.categories.ByCount }}
       <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
     {{ end }}
   </ul>
 
-  <div class="toc-header">Tags</div>
-  <ul>
+  <div class="toc-header d-none d-lg-block">Tags</div>
+  <ul id="toc-header-tags" class="d-none d-lg-block">
     {{ range .Site.Taxonomies.tags.ByCount }}
       <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
     {{ end }}
