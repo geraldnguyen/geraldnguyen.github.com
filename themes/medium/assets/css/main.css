@@ -850,3 +850,13 @@ figcaption a {
   box-sizing: border-box;
   font-size: .875rem;
 }
+
+#TableOfContents > ul > li {
+  font-size: 20px;
+  margin-left: 0;
+}
+
+#TableOfContents > ul > li li{
+  font-size: 18px;
+  margin-left: 1rem;
+}
