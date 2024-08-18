@@ -6,7 +6,7 @@ image: 0_iJLNpfR7xb2vY5dq.jpg
 draft: false
 categories: [Non-Tech]
 tags: [Medium, Writing, Singapore, Urban Planning, Translation, Southeast Asia]
-medium: https://medium.com/new-writers-welcome/from-programmer-to-writer-c345bad95d21
+medium: https://geraldnguyen.medium.com/singapore-city-in-a-garden-6cc777088f6
 ---
 
 {{< figure src="0_iJLNpfR7xb2vY5dq.webp" caption="Photo by [Kirill Petropavlov](https://unsplash.com/@kp89_?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)" >}}
