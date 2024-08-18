@@ -46,6 +46,44 @@ blockquote {
   padding-left: 23px;
 }
 
+blockquote.medium-quote {
+  -webkit-text-size-adjust: 100%;
+  --reach-tabs: 1;
+  --reach-menu-button: 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: rgba(0,0,0,0.8);
+  font-family: medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  word-break: break-word;
+  word-wrap: break-word;
+  box-sizing: inherit;
+  margin: 0;
+  padding-left: 30px;
+  box-shadow: unset;
+}
+
+.medium-quote p {
+  -webkit-text-size-adjust: 100%;
+  --reach-tabs: 1;
+  --reach-menu-button: 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  word-break: break-word;
+  word-wrap: break-word;
+  box-sizing: inherit;
+  margin: 0;
+  font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #6B6B6B;
+  font-style: normal;
+  margin-bottom: -0.46em;
+  line-height: 40px;
+  letter-spacing: -0.009em;
+  font-weight: 300;
+  font-size: 28px;
+  margin-top: 1.75em;
+}
+
 .bd-main blockquote {
   margin: 2rem 0 2rem;
 }
