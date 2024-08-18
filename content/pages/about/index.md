@@ -48,6 +48,8 @@ Powered by [Hugo](https://gohugo.io/) and [Azure DevOps](https://azure.microsoft
 
 A maven library of a `/echo` API that echo HTTP request info back to the caller
 
+Happy debugging here: https://echook.azurewebsites.net/echo
+
 ## My Writings
 
 ### Under employment:
