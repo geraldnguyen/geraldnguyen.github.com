@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Backend on Gerald Nguyen</title>
+    <link>https://example.org/tags/backend/</link>
+    <description>Recent content in Backend on Gerald Nguyen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Dec 2022 09:19:42 +0100</lastBuildDate>
+    <atom:link href="https://example.org/tags/backend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Are APIs?</title>
+      <link>https://example.org/posts/2022/12/what-are-apis/</link>
+      <pubDate>Tue, 27 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2022/12/what-are-apis/</guid>
+      <description>Are APIs the waiters? Source: Reddit and LinkedIn&#xA;No — The waiters are part of Frontend. They are responsible for creating a nice visual and interactive experience such as greeting customers, arranging the tables, present the dishes — like what React or Angular codes do.&#xA;They will take your orders — like how HTML forms accept your inputs, auto-complete your sentences, or apologize that certain dishes aren’t available.&#xA;And they send your orders to the kitchen.</description>
+    </item>
+  </channel>
+</rss>

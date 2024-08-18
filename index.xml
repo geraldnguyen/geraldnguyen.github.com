@@ -1,3 +1,460 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gerald Nguyen The Huy on</title><link>/</link><description>Recent content in Gerald Nguyen The Huy on</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Sun, 06 Nov 2022 09:19:42 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog</title><link>/blog/</link><pubDate>Sun, 06 Nov 2022 09:19:42 +0100</pubDate><guid>/blog/</guid><description/></item><item><title>About</title><link>/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/about/</guid><description>Professional Profile Personal Projects HTML to Markdown Tiếng kêu của thú rừng &amp;amp; Buồn vui chuyện nhặt cỏ Echo Rest Controller Writings &amp;amp; Translation) What are APIs? Tuyên Ngôn Agile - Vietnamese translation of the Agile Manifesto The 2020 Scrum Guide™ - Hướng Dẫn Scrum 2020 Highly Recommended Professional Profile My Linkedin page
-Writings:
-Locations and Places API - Getting started: It is easy to get started with Mastercard Locations and Places APIs</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gerald Nguyen</title>
+    <link>https://example.org/</link>
+    <description>Recent content on Gerald Nguyen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Aug 2024 08:00:00 -0700</lastBuildDate>
+    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gerald Nguyen</title>
+      <link>https://example.org/pages/about/</link>
+      <pubDate>Sat, 10 Aug 2024 08:00:00 -0700</pubDate>
+      <guid>https://example.org/pages/about/</guid>
+      <description>About me A software craftsman who writes clean code, automated tests, and practices continuous improvement&#xA;A seasoned IT professional with 17 years of experience in various industries, business domains, and roles&#xA;An admirer of (Vulcan) logic, diversity, and multidisciplinary approaches&#xA;Connect with me on Linkedin, or X (formerly Twitter)&#xA;Personal Projects HTML to Markdown An Chrome extension that translate selected HTML text to equivalent markdown format.&#xA;It allows user to select and convert headers, paragraphs, images or links on the web into Markdown text quickly and effortlessly</description>
+    </item>
+    <item>
+      <title>Behavior Driven Development (BDD) with Selenium in Python</title>
+      <link>https://example.org/posts/2024/05/behavior-driven-development-bdd-with-selenium-in-python/</link>
+      <pubDate>Mon, 20 May 2024 08:00:00 -0700</pubDate>
+      <guid>https://example.org/posts/2024/05/behavior-driven-development-bdd-with-selenium-in-python/</guid>
+      <description>This is a continuation from my previous article where we learned the basic of Selenium and how to program it in Python to perform UI automation testing.&#xA;Getting started on UI automation testing using Selenium with Python&#xA;Five Minimum Viable Interview Questions series — Updated 17 Feb 2023 Interviewer: ask them if your interview is running out of time. Interviewee: practice them if your preparation is running out of time. Basics of BDD Behavior Driven Development is a popular software development discipline.</description>
+    </item>
+    <item>
+      <title>How to join video files in a semi-automated way</title>
+      <link>https://example.org/posts/2024/05/how-to-join-video-semi-automated/</link>
+      <pubDate>Sat, 04 May 2024 08:00:00 -0700</pubDate>
+      <guid>https://example.org/posts/2024/05/how-to-join-video-semi-automated/</guid>
+      <description>TLDR;&#xA;You will need the following:&#xA;ffmpeg: https://ffmpeg.org/ Windows command prompt Create a script that use ffmpeg to join video files then save the script and grant it necessary execute permission (on Mac and Linux). Make sure ffmpeg is on executable path, usually the $PATH or %PATH% variable&#xA;On Windows, you can use the below.&#xA;@echo off setlocal enabledelayedexpansion del concat.txt rem Get the total number of parameters set &amp;#34;totalParams=0&amp;#34; for %%# in (%*) do set /a &amp;#34;totalParams += 1&amp;#34; set /a &amp;#34;to_merge=%totalParams%-1&amp;#34; echo There are a total of %to_merge% video to merge rem Loop through all parameters except the last one set &amp;#34;index=0&amp;#34; set &amp;#34;outputfile=&amp;#34; for %%f in (%*) do ( set /a &amp;#34;index+=1&amp;#34; if !</description>
+    </item>
+    <item>
+      <title>SOLID in Action: the Dependency Inversion Principle</title>
+      <link>https://example.org/posts/2023/02/solid-dependency-inversion-principle/</link>
+      <pubDate>Tue, 21 Feb 2023 08:00:00 -0700</pubDate>
+      <guid>https://example.org/posts/2023/02/solid-dependency-inversion-principle/</guid>
+      <description>Photo by ocd studio on Unsplash&#xA;The Dependency Inversion Principle (DIP) Naive application of traditional software development methods (e.g. SADT or Structured Analysis and Design Technique), in the past, often resulted in a type of relationship where high-level modules depended on lower implementation details. This form of relationship often leads to rigidity, fragility, and immobility. These are the symptoms of bad design according to Robert C. Martin.&#xA;A naive application of top-down approaches can lead to bad design.</description>
+    </item>
+    <item>
+      <title>Five Minimum Viable Interview Questions series — Updated 17 Feb 2023</title>
+      <link>https://example.org/posts/2023/02/five-minimum-viable-interview-questions-series/</link>
+      <pubDate>Fri, 17 Feb 2023 08:00:00 -0700</pubDate>
+      <guid>https://example.org/posts/2023/02/five-minimum-viable-interview-questions-series/</guid>
+      <description>Photo by Wes Hicks on Unsplash&#xA;Rationale Let’s face it. A developer is expected to know A LOT these days.&#xA;A typical job requirement (screenshot)&#xA;And that makes interviewing a candidate hard because there is never enough time to ask all the necessary questions.&#xA;On the other hand, that also makes preparing for an interview hard because there are too many areas and details to prepare for.&#xA;These are in fact the very challenges I faced every time I apply for a new job, or interview to hire a new team member.</description>
+    </item>
+    <item>
+      <title>SOLID in Action: the Interface Segregation Principle</title>
+      <link>https://example.org/posts/2023/01/solid-interface-segregation-principle/</link>
+      <pubDate>Fri, 27 Jan 2023 08:00:00 -0700</pubDate>
+      <guid>https://example.org/posts/2023/01/solid-interface-segregation-principle/</guid>
+      <description>Photos by Eugen Str on Unsplash&#xA;Photos by Patrick on Unsplash&#xA;If you are going to build a house, a table, or a chair, what is your preferred option? The multiple tools on the first picture or one Swiss knife on the second?&#xA;Yep, you are right. If you want to create something useful that last for years, you need specialized tools. The same thinking applies to software development, if you want to create a serious application, you need specialized components represented by their own, purposely designed interfaces.</description>
+    </item>
+    <item>
+      <title>SOLID in Action — the Liskov Substitution Principle</title>
+      <link>https://example.org/posts/2023/01/solid-liskov-substitution-principle/</link>
+      <pubDate>Mon, 09 Jan 2023 08:00:00 -0700</pubDate>
+      <guid>https://example.org/posts/2023/01/solid-liskov-substitution-principle/</guid>
+      <description>Let us start with a question:&#xA;Can social media connections substitute for real life friends and family?&#xA;Well, it depends on how we define &amp;ldquo;connection&amp;rdquo;. If we have it as below, then according to the Liskow Substitution Principle (LSP), the answer is No.&#xA;Connection classes&#xA;Before we go further into this example, let’s back it up a bit to study the official definition of LSP.&#xA;There is some math but I promise to keep it brief</description>
+    </item>
+    <item>
+      <title>Retry WebClient Request</title>
+      <link>https://example.org/posts/2022/12/retry-webclient-request/</link>
+      <pubDate>Fri, 30 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2022/12/retry-webclient-request/</guid>
+      <description>Problem Statement Sometimes web request fails, for whatever reason, and you need to retry it&#xA;Let’s simulate a failed request scenario in a unit test. In the below code, the webClient attempts to submit a GET request to /employee/100 (stored in constant PATH). We mocked the backend server to fail with common status codes such as BAD_REQUEST, UNAUTHORIZED and validate that the client throws WebClientResponseException upon receiving such statuses.&#xA;@ParameterizedTest @EnumSource(value = HttpStatus.</description>
+    </item>
+    <item>
+      <title>Regional economic development in Vietnam — Reform &amp; “Reorder”</title>
+      <link>https://example.org/posts/2022/12/regional-economic-development-in-vietnam-reform-reorder/</link>
+      <pubDate>Thu, 29 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2022/12/regional-economic-development-in-vietnam-reform-reorder/</guid>
+      <description>35 years of Đổi Mới (Economic Reform) helped Vietnam from a country that had to “run for rice” (see note 1) in the early 1980s to become a middle-income country, reaching the top 20 of the world’s leading economies in terms of international trade. The Reform has turned many poor rural areas into industrial districts, farmers into city dwellers, the number of poor households has decreased sharply, the middle class has increased rapidly… But the Reform process also led to the “Reorder” among provinces and regions.</description>
+    </item>
+    <item>
+      <title>The story of the drums in Singapore</title>
+      <link>https://example.org/posts/2022/12/the-story-of-the-drums-in-singapore/</link>
+      <pubDate>Tue, 27 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2022/12/the-story-of-the-drums-in-singapore/</guid>
+      <description>Many times when I visited Singapore, I noticed that under each apartment building, there were 2–3 red-painted drums in a straight line. These drums are modified with ventilation holes, have high legs, and have discharge doors… so that when households need to burn votive paper, they can do it here.&#xA;Incense burner (source: author’s father)&#xA;In a country where more than 70% of the population is Chinese with the tradition and custom of burning votive papers a lot every Lunar New Year, anniversaries, funerals, etc.</description>
+    </item>
+    <item>
+      <title>What Are APIs?</title>
+      <link>https://example.org/posts/2022/12/what-are-apis/</link>
+      <pubDate>Tue, 27 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2022/12/what-are-apis/</guid>
+      <description>Are APIs the waiters? Source: Reddit and LinkedIn&#xA;No — The waiters are part of Frontend. They are responsible for creating a nice visual and interactive experience such as greeting customers, arranging the tables, present the dishes — like what React or Angular codes do.&#xA;They will take your orders — like how HTML forms accept your inputs, auto-complete your sentences, or apologize that certain dishes aren’t available.&#xA;And they send your orders to the kitchen.</description>
+    </item>
+    <item>
+      <title>From Programmer to Writer</title>
+      <link>https://example.org/posts/2022/12/from-programmer-to-writer/</link>
+      <pubDate>Sun, 25 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2022/12/from-programmer-to-writer/</guid>
+      <description>Photo by Glenn Carstens-Peters on Unsplash&#xA;I’m a programmer by trade and write codes for a living. Then 1 month ago, I decided to become a writer. Here are the reasons why I did it and how I do it.&#xA;I’m pursuing my hobby I never considered writing a hobby. I barely managed to pass my literature and English classes. I preferred subjects that did not require writing such as Mathematics, Chemistry, or Physics.</description>
+    </item>
+    <item>
+      <title>Singapore: City in a Garden</title>
+      <link>https://example.org/posts/2022/12/singapore-city-in-a-garden/</link>
+      <pubDate>Sun, 25 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2022/12/singapore-city-in-a-garden/</guid>
+      <description>Photo by Kirill Petropavlov on Unsplash&#xA;What is worth learning from the Lion island nation is, first of all, the strategic vision of development and the solution to turn that vision into reality.&#xA;The goal is to continuously improve people’s quality of life&#xA;From the perspective of urban development, Singapore is considered to have a very good level of urban planning and management. With an area only slightly larger than Vietnam’s Phu Quoc island, a population of 5.</description>
+    </item>
+    <item>
+      <title>SOLID in Action — the Open-closed Principle</title>
+      <link>https://example.org/posts/2022/12/solid-open-close-principle/</link>
+      <pubDate>Sat, 24 Dec 2022 08:00:00 -0700</pubDate>
+      <guid>https://example.org/posts/2022/12/solid-open-close-principle/</guid>
+      <description>Photo by Richard Balog on Unsplash&#xA;In the physical world, a door closed is a closed door. In the software world, a closed entity may still be open for extension. And it should be so, according to the Open-closed principle (OCP).&#xA;There are 2 popular ways to apply this principle. We are going to discuss them both.&#xA;And a third option.&#xA;#1 — Inheritance This is the original application of OCP.</description>
+    </item>
+    <item>
+      <title>Simple Code — Effective UI — Month Picker</title>
+      <link>https://example.org/posts/2022/12/simple-code-effective-ui-month-picker/</link>
+      <pubDate>Thu, 22 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2022/12/simple-code-effective-ui-month-picker/</guid>
+      <description>Option 1: separate Month and Year dropdowns Separate month and year dropdowns&#xA;It may be verbose, but you have total control over their placements, label, and format&#xA;&amp;lt;select&amp;gt; &amp;lt;option&amp;gt;January&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;February&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;March&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;April&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;May&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;June&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;July&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;August&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;September&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;October&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;November&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;December&amp;lt;/option&amp;gt; &amp;lt;/select&amp;gt; Month &amp;lt;select&amp;gt; &amp;lt;option&amp;gt;2021&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;2022&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;2023&amp;lt;/option&amp;gt; &amp;lt;/select&amp;gt; Year Option 2: use the browser’s built-in month picker Built-in month picker&#xA;You have less control over the picker’s appearance, but the code is much cleaner.</description>
+    </item>
+    <item>
+      <title>Thu Duc, Ho Chi Minh City, Vietnam in December</title>
+      <link>https://example.org/posts/2022/12/thu-duc-hcmc-vietnam/</link>
+      <pubDate>Sun, 18 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2022/12/thu-duc-hcmc-vietnam/</guid>
+      <description>Taken during my vacation&#xA;Photos taken during my vacation in Thu Duc, Ho Chi Minh City, Vietnam on December 2022&#xA;Vinhome Grandpark, Thu Duc, Ho Chi Minh City&#xA;Heavy rain&#xA;Having fun!&#xA;Playground&#xA;Swimming Lesson&#xA;Manhattan Ave?</description>
+    </item>
+    <item>
+      <title>SOLID in Action — the Single Responsibility Principle</title>
+      <link>https://example.org/posts/2022/12/solid-single-responsibility-principle/</link>
+      <pubDate>Wed, 14 Dec 2022 08:00:00 -0700</pubDate>
+      <guid>https://example.org/posts/2022/12/solid-single-responsibility-principle/</guid>
+      <description>Photo by Robert Linder on Unsplash&#xA;We know the saying “Jack of all trades, master of none”. We dislike it when we are at the receiving end. We dislike it too when it is said to someone we love. That should extend to things that we love too.&#xA;We developers love the codes we created. We are proud of the function we write, the class we design, the component, the system, and the microservices… we develop.</description>
+    </item>
+    <item>
+      <title>Five Minimum Viable Javascript Interview Questions</title>
+      <link>https://example.org/posts/2022/12/5-minimum-viable-javascript-interview-questions/</link>
+      <pubDate>Fri, 09 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2022/12/5-minimum-viable-javascript-interview-questions/</guid>
+      <description>This is part of my Five Minimum Viable Interview Questions series where I research and compile Five essential interview questions on each interview topic. All of these questions aim to assess real and practical skills expected at work&#xA;It is common nowadays for companies to hire for full-stack positions. A full-stack developer is typically expected to work on both frontend and backend development. That same expectation applies to interviews.</description>
+    </item>
+    <item>
+      <title>Becoming a SOLID developer</title>
+      <link>https://example.org/posts/2022/12/becoming-a-solid-developer/</link>
+      <pubDate>Wed, 07 Dec 2022 08:00:00 -0700</pubDate>
+      <guid>https://example.org/posts/2022/12/becoming-a-solid-developer/</guid>
+      <description>Being called solid is a compliment. The word carries the positive notions of reliability and respectability. All of us should aim to become one.&#xA;https://www.collinsdictionary.com/dictionary/english/solid (screenshot)&#xA;If you are a software engineer or want to become one, you are in luck because there is a set of SOLID principles to guide your way.&#xA;SOLID is an acronym in the software engineering profession. It stands for:&#xA;Single Responsibility principle Open-closed principle Liskov Substitution principle Interface segregation principle Dependency inversion principle The term was coined by Michael Feather around 2004 for the 5 object-oriented design principles first collected by Uncle Bob in his 2000 paper Design Principles and Design Patterns and his other articles and books</description>
+    </item>
+    <item>
+      <title>The best way to fix Hibernate’s MultipleBagFetchException</title>
+      <link>https://example.org/posts/2022/12/fixing-hibernate-multiplebagfetchexception/</link>
+      <pubDate>Sun, 04 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2022/12/fixing-hibernate-multiplebagfetchexception/</guid>
+      <description>There are 2 articles from https://vladmihalcea.com describing his analysis and solutions to Hibernate’s MultipleBagFetchException. The first one, appeared around 2020 (when I first researched this problem) or even earlier (2018?), offered an analysis of the problem and a solution using Hibernate’s EntityManager API. The second one appeared around Jun 2022, and offers a slightly different solution for JPA.&#xA;I will present below my understanding of his analysis, his solutions, and working sample codes which you can check out and validate your understanding and/or devise your own solutions.</description>
+    </item>
+    <item>
+      <title>Echo API</title>
+      <link>https://example.org/posts/2022/11/echo-api/</link>
+      <pubDate>Wed, 30 Nov 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2022/11/echo-api/</guid>
+      <description>Introduction The need for this library arose when I wanted assurance that my HTTP client was sending correctly formulated HTTP messages.&#xA;Another use of this /echo API is to capture and debug the remote calls from another service. Imagine you are providing a webhook endpoint. Before you even build one, you first need to know what incoming messages look like. Supplying an /echo API endpoint in the webhook’s registration allows you to capture and log all incoming messages</description>
+    </item>
+    <item>
+      <title>Unit testing Java’s try-with-resource</title>
+      <link>https://example.org/posts/2022/11/unit-testing-java-try-with-resource/</link>
+      <pubDate>Tue, 29 Nov 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2022/11/unit-testing-java-try-with-resource/</guid>
+      <description>Java’s try-with-resource is a convenient syntactic shortcut. It frees developers from keeping track of closeable resources and closing in a finally block&#xA;Unit testing try-with-resource&#xA;Overview Some of us may remember doing such boring and lengthy try-finally-if-not-null-close() A LOT!&#xA;On a typical day, we performed these steps a dozen times:&#xA;Obtained a DB connection, and execute a query within the try {...} And then, to avoid connection leak, we must close the statement and DB connection within the finally {.</description>
+    </item>
+    <item>
+      <title>Java Method Reference</title>
+      <link>https://example.org/posts/2022/11/java-method-reference/</link>
+      <pubDate>Sun, 27 Nov 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2022/11/java-method-reference/</guid>
+      <description>I first learned method reference from C#, so the Java concept is familiar to me. Or that’s what I thought until I picked up the Modern Java Recipes book.&#xA;In this article, we’ll explore 3 forms of method references in Java&#xA;object::instanceMethod Class::staticMethod Class::instanceMethod The last one is a bit more special, as we shall examine in detail&#xA;Source: author&#xA;object::instanceMethod The object::instanceMethod will invoke the referenced method on the said object with compatible arguments.</description>
+    </item>
+    <item>
+      <title>Code Review as an interview tool</title>
+      <link>https://example.org/posts/2022/11/code-review-as-an-interview-tool/</link>
+      <pubDate>Tue, 22 Nov 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2022/11/code-review-as-an-interview-tool/</guid>
+      <description>Rationale In all software development teams that I have been part of, we always value and encourage everyone to participate in code reviews. We see it as an effective way of learning and contributing. It has an important place in my Engineering practice.&#xA;We learn when we review other people’s codes. That’s actually an effective way of keeping up-to-date with what is happening to the code base, what sort of problems our colleagues are trying to solve, and what techniques they employed to solve them.</description>
+    </item>
+    <item>
+      <title>Java Stream Interview Tests - takeWhile</title>
+      <link>https://example.org/posts/2021/11/java-stream-interview-tests-takewhile/</link>
+      <pubDate>Mon, 01 Nov 2021 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2021/11/java-stream-interview-tests-takewhile/</guid>
+      <description>Generated by Dall-e&#xA;Why Java Stream? Since its introduction in Java 8, Stream has become more and more the preferred way of processing collection. But some of its APIs, are complicated and hard to understand, especially those of Collector and those for reduction.&#xA;I dare say that even experienced Java Stream users may still find them intimidating. Despite using it for several years and having prior experience with Stream-like operations in other programming languages, I still occasionally find some Stream-related tasks challenging.</description>
+    </item>
+    <item>
+      <title>Java Stream Interview Tests - Distinct Characters</title>
+      <link>https://example.org/posts/2021/10/java-stream-interview-tests-distinct-characters/</link>
+      <pubDate>Sat, 30 Oct 2021 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2021/10/java-stream-interview-tests-distinct-characters/</guid>
+      <description>Requirement Given a sentence comprising of one or multiple words separated by space (e.g. java, Hello World, aadsbbaba), return a sorted list of distinct characters excluding space&#xA;Solve this problem using Java Stream&#xA;Hint: Use String.split(“”)to split a string into a String[], then use String.charAt(0) to convert each single-char string to char&#xA;Discussion This problem tests candidate’s knowledge of the following Stream methods:&#xA;Stream.of(...) or Array.stream(...) to convert an array of single-char string (e.</description>
+    </item>
+    <item>
+      <title>Spring REST API Interview Questions</title>
+      <link>https://example.org/posts/2021/10/spring-rest-api-interview-questions/</link>
+      <pubDate>Tue, 19 Oct 2021 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2021/10/spring-rest-api-interview-questions/</guid>
+      <description>#1 Complete the REST controller Objective: Assess a candidate’s practical experience and knowledge&#xA;Instructions: Given the below controller, fill in Spring annotations according to instructions given in the code comments&#xA;Pay attention to:&#xA;Did the candidate notice the repetition of /friends prefix? Did he/she suggest a @RequestMapping(/friends) on the controller class instead? How did he/she annotate the optional parameter name and id in findFriends(String name, Long id) method? What annotation can be used to force a 204 (no content) response?</description>
+    </item>
+    <item>
+      <title>Enable Comment in Hugo site</title>
+      <link>https://example.org/posts/2021/10/2021-10-17-enable-commenting/</link>
+      <pubDate>Sun, 17 Oct 2021 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2021/10/2021-10-17-enable-commenting/</guid>
+      <description>Note 2024-08-15: An earlier version of this site ran on doks. I&amp;rsquo;m in the middle of updating it to a medium-like theme*&#xA;Introduction You may have noticed that this website is using a powerful-yet-easy-to-use doks theme.&#xA;As I wanted to have more interaction with my readers, enabling comment is a first step.&#xA;Enable Comment in Hugo Hugo provides built-in support for Disqus. It ships with a _internal/disqus.html template that we can simply copy &amp;amp; paste to wherever we want comment to appear.</description>
+    </item>
+    <item>
+      <title>Kubernetes Memory Units</title>
+      <link>https://example.org/posts/2020/09/2020-09-13-kubernetes-memory-unit/</link>
+      <pubDate>Sun, 13 Sep 2020 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2020/09/2020-09-13-kubernetes-memory-unit/</guid>
+      <description>Default memory unit in Kubernetes is bytes, in addition to other shorter forms with one of supported suffixes: E, P, T, G, M, K, Ei, Pi, Ti, Gi, Mi, Ki.&#xA;For example: 128974848, 129e6, 129M , 123Mi&#xA;Have you ever wondered what do those suffixes mean?&#xA;A popular reference is https://medium.com/@betz.mark/understanding-resource-limits-in-kubernetes-memory-6b41e9a955f9&#xA;But the root definition is at https://en.wikipedia.org/wiki/Binary_prefix</description>
+    </item>
+    <item>
+      <title>javax.transaction.Transactional vs org.springframework.transaction.annotation.Transactional</title>
+      <link>https://example.org/posts/2020/09/2020-09-10-transactional-annotation/</link>
+      <pubDate>Thu, 10 Sep 2020 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2020/09/2020-09-10-transactional-annotation/</guid>
+      <description>If you’re using Spring or Spring Boot, then use the Spring @Transactional annotation, as it allows you to configure more attributes than the Java EE @Transactional annotation.&#xA;If you are using Java EE alone, and you deploy your application on a Java EE application server, then use the Java EE @Transactional annotation.&#xA;https://stackoverflow.com/a/62702146/575457</description>
+    </item>
+    <item>
+      <title>Using Bootstrap with React</title>
+      <link>https://example.org/posts/2020/04/2020-04-20-using-bootstrap-with-react/</link>
+      <pubDate>Mon, 20 Apr 2020 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2020/04/2020-04-20-using-bootstrap-with-react/</guid>
+      <description>Mixing browser and React Insert links to Bootstrap&amp;rsquo;s javascript and CSS and its dependencies in app&amp;rsquo;s index.html&#xA;&amp;lt;head&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css&amp;#34; integrity=&amp;#34;sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!-- other content --&amp;gt; &amp;lt;script src=&amp;#34;https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js&amp;#34; integrity=&amp;#34;sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;https://code.jquery.com/jquery-3.4.1.slim.min.js&amp;#34; integrity=&amp;#34;sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js&amp;#34; integrity=&amp;#34;sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; Invoke appropriate method via window.$ jQuery object&#xA;window.$(&amp;#39;#about-modal&amp;#39;).modal() Pure React way Install Bootstrap as a NPM module&#xA;npm install bootstrap --save npm install jquery popper.js --save Load bootstrap CSS and Javascript in React app&amp;rsquo;s entry point (e.</description>
+    </item>
+    <item>
+      <title>[Excel] Bulk Linking Cells to Sheets Whose Name Equates Cell&#39;s value</title>
+      <link>https://example.org/posts/2013/12/2013-12-30-bulk-linking-cell-to-sheets/</link>
+      <pubDate>Tue, 10 Sep 2013 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2013/12/2013-12-30-bulk-linking-cell-to-sheets/</guid>
+      <description>Sub CreateLinkToSheet() Dim c As Range For Each c In Selection &amp;#39; MsgBox c.Value ActiveSheet.Hyperlinks.Add Anchor:=c, Address:=&amp;#34;&amp;#34;, _ SubAddress:=c.Value &amp;amp; &amp;#34;!A1&amp;#34;, TextToDisplay:=c.Value Next c End Sub How to run: Select the cells to create link and run the macro</description>
+    </item>
+    <item>
+      <title>What Happened When You Assigned State to a Stateless Session Bean?</title>
+      <link>https://example.org/posts/2013/09/2013-09-10-what-happened-when-assign-state-to-stateless-session-bean/</link>
+      <pubDate>Tue, 10 Sep 2013 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2013/09/2013-09-10-what-happened-when-assign-state-to-stateless-session-bean/</guid>
+      <description>Here’s a scenario that illustrate above possibility&#xA;T1 | T2 1) setupState [A] | &amp;lt;- store state as a variable | in bean instance [A] | 2) setupState [A] &amp;lt;- [A] is free, so the container | allocate it to serve T2 request | 3) someLongRunMethod [A] | 3&amp;#39;) aMethod [B] &amp;lt;- Because A is busy with T1, another instance (B) is created to serve T2 request. If aMethod depends on previously setup state it will encounter error </description>
+    </item>
+    <item>
+      <title>[VBA] Save Attachements from Multiple Emails</title>
+      <link>https://example.org/posts/2013/09/2013-09-02-save-attachments-from-multiple-emails/</link>
+      <pubDate>Mon, 02 Sep 2013 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2013/09/2013-09-02-save-attachments-from-multiple-emails/</guid>
+      <description>Prerequisite: Enable Developer tab, macro security and create “C:\mailattachment\” folder if not exists&#xA;Instruction: Select emails which have attachment to save (e.g. email containing daily report), select Developer, Macro, SaveAttachment&#xA;Sub SaveAttachment() Dim myOlapp As Outlook.Application Dim myNameSpace As Outlook.NameSpace Dim myFolder As Outlook.MAPIFolder Dim myItem As Outlook.MailItem Dim myAttachment As Outlook.Attachment Dim I As Long Set myOlapp = CreateObject(&amp;#34;Outlook.Application&amp;#34;) &amp;#39;Set myNameSpace = myOlapp.GetNamespace(&amp;#34;MAPI&amp;#34;) &amp;#39;Set myFolder = myNameSpace.GetDefaultFolder(olFolderInbox) &amp;#39;Set myFolder = myFolder.</description>
+    </item>
+    <item>
+      <title>[Unix] – Recursively Listing Files Under a Directory</title>
+      <link>https://example.org/posts/2013/07/2013-07-22-unix-recursively-listing-files/</link>
+      <pubDate>Mon, 22 Jul 2013 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2013/07/2013-07-22-unix-recursively-listing-files/</guid>
+      <description>If you prefer a DIY script:&#xA;#! /bin/bash function list { if [ -z $1 ] then echo list starting_dir [exclude_file_or_folder] [action_on_file] exit 1 elif [ &amp;#34;$1&amp;#34; == &amp;#34;-help&amp;#34; ] then echo list starting_dir [exclude_file_or_folder] [action_on_file] echo [exclude_file_or_folder]: use string that works with egrep e.g. &amp;#34;.jar|.log|.bak .jar|.log|.bak&amp;#34; echo [action_on_file]: if specified, output listing will not be in ls -l format exit 0 fi local path=$1 if [ -z $2 ] then ls -al $path else ls -al $path | egrep -v $2 fi for file in `ls -a $path` do if [ &amp;#34;$file&amp;#34; !</description>
+    </item>
+    <item>
+      <title>[Database] Exists or Inner Join: Duplicate Records</title>
+      <link>https://example.org/posts/2013/06/2013-06-16-database-exist-or-inner-join-duplicate-transactions/</link>
+      <pubDate>Sun, 16 Jun 2013 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2013/06/2013-06-16-database-exist-or-inner-join-duplicate-transactions/</guid>
+      <description>INNER JOIN vs. EXISTS Often, EXISTS and INNER JOIN can be used interchangeably to query data with existence in 2 or more tables. However, it is not always the case. There is an important inherent characteristics of INNER JOIN that every developer should keep in mind: INNER JOIN result may contain DUPLICATE data record. This is important for uniqueness-sensitive handling of query result (e.g. record count), or when migrating database table with unique constraints.</description>
+    </item>
+    <item>
+      <title>Which Form of String Comparison Is Supported</title>
+      <link>https://example.org/posts/2013/05/2013-05-21-which-form-of-string-comparison-is-supported/</link>
+      <pubDate>Tue, 21 May 2013 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2013/05/2013-05-21-which-form-of-string-comparison-is-supported/</guid>
+      <description>Below example is for Oracle DB, but adopting for other DBMS e.g. Sybase, MS SQL… should be straightforward.&#xA;select ‘both no space’ as “String comparison in Oracle” from dual where ‘a’ = ‘a’ -- union select ‘right has single trailing space’ from dual where ‘a’ = ‘a ‘ union select ‘right has multiple trailing space’ from dual where ‘a’ = ‘a ‘ union select ‘right has single leading space’ from dual where ‘a’ = ‘ a’ union select ‘right has multiple leading space’ from dual where ‘a’ = ‘ a’ -- union select ‘left has single trailing space’ from dual where ‘a ‘ = ‘a’ union select ‘left has multiple trailing space’ from dual where ‘a ‘ = ‘a’ union select ‘left has single leading space’ from dual where ‘ a’ = ‘a’ union select ‘left has multiple leading space’ from dual where ‘ a’ = ‘a’ -- union select ‘right has single leading and trailing space’ from dual where ‘a’ = ‘ a ‘ union select ‘right has multiple leading and trailing space’ from dual where ‘a’ = ‘ a ‘ union select ‘left has single leading and trailing space’ from dual where ‘ a ‘ = ‘a’ union select ‘left has multiple leading and trailing space’ from dual where ‘ a ‘ = ‘a’ —- union select ‘both has leading and trailing space but leading space are different’ from dual where ‘ a ‘ = ‘ a ‘ </description>
+    </item>
+    <item>
+      <title>Myths of Secure Web Browsing</title>
+      <link>https://example.org/posts/2013/05/2013-05-18-myths-of-secure-web-browsing/</link>
+      <pubDate>Sat, 18 May 2013 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2013/05/2013-05-18-myths-of-secure-web-browsing/</guid>
+      <description>1. I am safe because I never visited porn website Wrong. Nowadays, many more malware infection are linked to visit to legitimate and popular websites than porn or counterfeit sites.&#xA;According to Cisco 2013 Annual Security Report, Business/Industry site category stands at 3rd position behind advertising and dynamic content categories in the top 20 dangerous website categories. Included are Shopping (8th), Travel (9th), News (13th). Porn or counterfeit products (e.g. cheap Viagra) didn’t make it to top 20.</description>
+    </item>
+    <item>
+      <title>JSR 303 – Bean Validation – Let Your Bean Validate Itself</title>
+      <link>https://example.org/posts/2012/12/2012-12-20-jsr303-bean-validation-self-validating-bean/</link>
+      <pubDate>Thu, 20 Dec 2012 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2012/12/2012-12-20-jsr303-bean-validation-self-validating-bean/</guid>
+      <description>This is a simple application of my previous post whereby you can develop your own validation rule and enforcer.&#xA;The significance of this application is the use of SelfValidate interface to enable bean to define its own validation method and validator to invoke bean’s method. Typically this constraint is apply to a type, but application on field is also possible.&#xA;Constraint Annotation @Target({ElementType.TYPE}) @Retention(RetentionPolicy.RUNTIME) @Constraint(validatedBy=SelfValidator.class) public @interface SelfValidation { String message() default &amp;#34;Self-validation failed&amp;#34;; Class[] groups() default {}; Class&amp;lt;?</description>
+    </item>
+    <item>
+      <title>JDBC Transaction Without EJB</title>
+      <link>https://example.org/posts/2012/10/2012-10-24-jdbc-transaction-without-ejb/</link>
+      <pubDate>Wed, 24 Oct 2012 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2012/10/2012-10-24-jdbc-transaction-without-ejb/</guid>
+      <description>Create a DAO method in which you set JDBC connection’s auto-commit property to false dbConn.setAutoCommit(false); Execute all your queries stmt = dbConn.createStatement(); result = stmt.executeQuery(query); stmt.executeUpdate(update); Commit or rollback the transaction dbConn.commit(); Reset auto-commit to true again for other execution dbConn.setAutoCommit(true); This is really simple, as it should be for something purely mechanical. The challenge for every programmer is how to write your transaction code or order your queries such that you can achieve desired result.</description>
+    </item>
+    <item>
+      <title>JSR 303 – Bean Validation – Custom Constraints</title>
+      <link>https://example.org/posts/2012/08/2012-08-25-jsr303-bean-validation-custom-constraints/</link>
+      <pubDate>Sat, 25 Aug 2012 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2012/08/2012-08-25-jsr303-bean-validation-custom-constraints/</guid>
+      <description>So far, we have learn the basic and a not-so-common nested usage of JSR 303 Bean Validation, it’s time to learn how the declarative validation rule was implemented. In another word, we will learn to create a custom constraint this this post.&#xA;Constraint Annotation Custom constraint is a special kind of annotation that is itself annotated with @javax.validation.Constraint annotation. For example:&#xA;@Target({ElementType.FIELD}) @Retention(RetentionPolicy.RUNTIME) @Constraint(validatedBy=CustomeValidator.class) public @interface CustomConstraint { String message() default &amp;#34;Custom validation failed&amp;#34;; Class[] groups() default {}; Class&amp;lt;?</description>
+    </item>
+    <item>
+      <title>JSR 303 – Bean Validation – Nested Validation</title>
+      <link>https://example.org/posts/2012/08/2012-08-09-jsr303-bean-validation-nested-validation/</link>
+      <pubDate>Thu, 09 Aug 2012 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2012/08/2012-08-09-jsr303-bean-validation-nested-validation/</guid>
+      <description>Following up from my previous post about JSR 303 – Bean Validation, we will see how to apply it to any nested property and how to display validation error on screen using Spring MVC’s JSP tags&#xA;1. Bean Validation on Nested Property Recall that to validate any property, we only need to put a Constraint annotation on top of its declaration. Example of common constraints are @NotEmpty, @Pattern, @Email. One thing in common of these constraints are that the applied property has to be of type String.</description>
+    </item>
+    <item>
+      <title>JSR 303 – Bean Validation – Basic</title>
+      <link>https://example.org/posts/2012/08/2012-08-03-jsr303-bean-validation-basic/</link>
+      <pubDate>Fri, 03 Aug 2012 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2012/08/2012-08-03-jsr303-bean-validation-basic/</guid>
+      <description>JSR 303 – Bean Validation is defines a metadata model and API for JavaBean validation. The metadata is primarily in Annotation forms, with the possibility of being overridden or extended by XML descriptors. Hibernate Validator is the reference implementation of JSR 303.&#xA;The current version, as of August 2nd, 2012, of JSR303 is 1.0, and of Hibernate Validator version is 4.0.1.&#xA;1. Example A straightforward use of Bean Validation is to document and specify validation rules on JavaBean’s properties.</description>
+    </item>
+    <item>
+      <title>ILLEGAL SPORT BETTING DURING EURO CUP</title>
+      <link>https://example.org/posts/2012/07/2012-07-10-illegal-sport-bettings-during-euro-cup/</link>
+      <pubDate>Tue, 10 Jul 2012 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2012/07/2012-07-10-illegal-sport-bettings-during-euro-cup/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SPRING MVC – SESSIONATTRIBUTES ANNOTATION</title>
+      <link>https://example.org/posts/2012/06/2012-06-30-spring-mvc-sessionattributes-annotation/</link>
+      <pubDate>Sat, 30 Jun 2012 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2012/06/2012-06-30-spring-mvc-sessionattributes-annotation/</guid>
+      <description>Spring MVC’s SessionAttributes has 2 parameters: values (storing attributes’ names) and types (storing attributes’ types).&#xA;It’s pretty straightforward for values. You specify the name of your attribute and it is remembered.&#xA;It’s trickier for types. For example:&#xA;– @SessionAttributes (types= java.util.List.class) does not work!&#xA;– But @SessionAttributes (types= java.util.ArrayList.class) works (but not always)&#xA;The reason behind this peculiar behaviour is that Spring does exact matching of attribute’s type versus declared type, instead of assessing attribute object’s Is-A relationship.</description>
+    </item>
+    <item>
+      <title>HOW YOUR CONSUMPTION BENEFIT SOCIETY?</title>
+      <link>https://example.org/posts/2012/06/2012-06-27-how-your-consumption-benefit-society/</link>
+      <pubDate>Wed, 27 Jun 2012 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2012/06/2012-06-27-how-your-consumption-benefit-society/</guid>
+      <description>(Disclaimer: I’m no economist. I simply find this story/concept interesting and want to share it)&#xA;If you initially have $2000 cash and you buy yourself a new smartphone (or any other good). Let’s say it costs you $1000.&#xA;So, after your buying:&#xA;– You have $1000 left&#xA;– Seller have $1000 revenue&#xA;– You have a good (i.e. the phone) worth $1000.&#xA;Thus your initial $2000 is split into 3 pieces which in total worth $3000.</description>
+    </item>
+    <item>
+      <title>Java XML Parse error: Tried all: &#39;1&#39; addresses, but could not connect over HTTP to server</title>
+      <link>https://example.org/posts/2012/03/2012-03-09-java-xml-parse-error/</link>
+      <pubDate>Fri, 09 Mar 2012 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2012/03/2012-03-09-java-xml-parse-error/</guid>
+      <description>I had a previous problem with Tiles and XML (and common-digester). I resolved it by telling WLS to use a different SAXParserFactory.&#xA;But when my SAXParserFactory was correct and I still encountered XML parsing error for the sample code from Tiles&amp;rsquo;s website, it is really puzzling.&#xA;java.net.ConnectException: Tried all: &amp;#39;1&amp;#39; addresses, but could not connect over HTTP to server: &amp;#39;tiles.apache.org&amp;#39;, port: &amp;#39;80&amp;#39; at weblogic.net.http.HttpClient.openServer(HttpClient.java:312) ... at org.apache.commons.digester.Digester.createInputSourceFromURL(Digester.java:2072) at org.apache.commons.digester.Digester.resolveEntity(Digester.java:1725) at com.</description>
+    </item>
+    <item>
+      <title>How do you display input validation error</title>
+      <link>https://example.org/posts/2011/02/2011-02-24-display-input-validation-error/</link>
+      <pubDate>Thu, 24 Feb 2011 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2011/02/2011-02-24-display-input-validation-error/</guid>
+      <description>Display errors in red below each invalid input field Blogger: https://www.google.com/accounts/CreateAccount?continue=https%3A%2F%2Fwww.blogger.com%2Floginz%3Fd%3Dhttp%253A%252F%252Fwww.blogger.com%252Fhome%26a%3DADD_SERVICE_FLAG&amp;amp;hl=en_GB&amp;amp;service=blogger&amp;amp;skipvpage=true&amp;amp;ltmpl=start&amp;amp;naui=8&#xA;Yahoo Mail: https://edit.yahoo.com/registration?.intl=us&amp;amp;.pd=ym_ver%253D0%2526c%253D%2526ivt%253D%2526sg%253D&amp;amp;new=1&amp;amp;.done=http%3A//mail.yahoo.com&amp;amp;.src=ym&amp;amp;.v=0&amp;amp;.u=cgf061p6mc1fm&amp;amp;partner=&amp;amp;.partner=&amp;amp;pkg=&amp;amp;stepid=&amp;amp;.p=&amp;amp;promo=&amp;amp;.last=&#xA;Oracle Forum: https://myprofile.oracle.com/EndUser/faces/profile/createUser.jspx?nextURL=http%3A%2F%2Fforums.oracle.com&#xA;Twitter: https://twitter.com/account/create&#xA;Esnip (on Firefox): http://www.esnips.com/NewAccountAction.ns?action=init&#xA;Hotmail: https://signup.live.com/signup.aspx?id=64855&amp;amp;mkt=en-US&amp;amp;form=MWGELB&amp;amp;publ=SIGNINHM&amp;amp;crea=SITEACQ_CIMS015888_Hotmail_EN-US_0x0_36214&amp;amp;lic=1&#xA;Job Street: http://myjobstreet.jobstreet.com/registration/quick-register.php?site=sg&amp;amp;deposit_through=s&#xA;JobsDB: http://sg.jobsdb.com/SG/EN/JobSeeker/Registration&#xA;Property Guru: http://www.propertyguru.com.sg/register#top&#xA;Display an generic message at the top of the page + Display errors in red below each invalid input field Vietnamework.com: http://www.vietnamworks.com/jobseekers/signup.php?lang=2#err_top&#xA;Apple Store: https://store.apple.com/1800-MY-APPLE/WebObjects/singaporestore.woa/920184021/wo/nZMi8SOBKCCj343MT1tza3xYBZk/5.0.16.9.5.1.1.0.1&#xA;Display all invalid error at the top of the page Amazon.com: https://www.amazon.com/ap/signin?ie=UTF8&amp;amp;pf_rd_r=05JGGPJ2RGK60ME9AEBM&amp;amp;pf_rd_m=ATVPDKIKX0DER&amp;amp;pf_rd_t=6301&amp;amp;pf_rd_i=usflex&amp;amp;pf_rd_p=1277563402&amp;amp;pf_rd_s=signin-slot</description>
+    </item>
+    <item>
+      <title>Static vs Singleton Revisited</title>
+      <link>https://example.org/posts/2011/02/2011-02-14-static-singleton-revisited/</link>
+      <pubDate>Thu, 10 Feb 2011 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2011/02/2011-02-14-static-singleton-revisited/</guid>
+      <description>Static vs Singleton vs Dependency Injection Why visited? Because I wrote one before&#xA;I no longer favor static over singleton as much as before. Static is convenient (sometimes very!), low memory footprint. But it does take away several Object-Orientation (OO) &amp;rsquo;s strength. In addition, it couples your code to a specific implementation class. Singleton is less convenient (sometimes troublesome), slightly higher memory footprint, but it can deliver all OO&amp;rsquo;s strengths that static drops.</description>
+    </item>
+    <item>
+      <title>What makes Israel so innovative and entrepreneurial?</title>
+      <link>https://example.org/posts/2011/02/2011-02-10-israel-innovative-entrepreneurial/</link>
+      <pubDate>Thu, 10 Feb 2011 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2011/02/2011-02-10-israel-innovative-entrepreneurial/</guid>
+      <description>I really admire the Israel mindset.&#xA;Milking Israel&amp;rsquo;s dairy expertise in Vietnam (http://www.israel21c.org/201102078760/environment/milking-israels-dairy-expertise-in-vietnam)&#xA;New Zealand cows are arriving by the boatload in Vietnam as part of an Israeli-led $500 million dairy farm project there.&#xA;Israeli company, SAE Afikim is helping Vietnam develop its dairy industry, in the largest project of its kind in the world.&#xA;In the largest project of its kind in the world and the biggest ever undertaken by an Israeli firm, 30,000 dairy cows are being flown to Vietnam to supply 300 million liters of milk annually as part of a $500 million dairy farm project there.</description>
+    </item>
+    <item>
+      <title>Harvey Balls</title>
+      <link>https://example.org/posts/2011/01/2011-01-23-harvey-balls/</link>
+      <pubDate>Sun, 23 Jan 2011 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2011/01/2011-01-23-harvey-balls/</guid>
+      <description>http://en.wikipedia.org/wiki/Harvey_Balls</description>
+    </item>
+    <item>
+      <title>Static method vs Singleton class</title>
+      <link>https://example.org/posts/2011/01/2011-01-16-static-method-singleton/</link>
+      <pubDate>Sun, 16 Jan 2011 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2011/01/2011-01-16-static-method-singleton/</guid>
+      <description>Static method It really depends. If you hate storing object reference or passing it around, static is a excellent tool.&#xA;But remember: static method CANNOT be overridden by sub-classing, it&amp;rsquo;s only hidden. Refer to http://faq.javaranch.com/view?OverridingVsHiding for a simple explanation. (Side note: invoking a static method on a object reference only brings confusion, it&amp;rsquo;s the variable data type that determine which static method&amp;rsquo;s code will execute - remember: hidden, not overridden).</description>
+    </item>
+    <item>
+      <title>How Sun&#39;s certification exam are prepared</title>
+      <link>https://example.org/posts/2011/01/2011-01-09-how-sun-certification-exam-prepared/</link>
+      <pubDate>Sun, 09 Jan 2011 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2011/01/2011-01-09-how-sun-certification-exam-prepared/</guid>
+      <description>&amp;ldquo;Without getting into too much detail, I can tell you some of what Sun did to create their various Java certification exams. So, in the old Sun days&amp;hellip;&#xA;The whole process to create a new exam takes a long time. A first team of experts is assembled and for several months the team develops a new set of objectives. Once created, the new set of objectives go through all sorts of vetting / verification processes.</description>
+    </item>
+    <item>
+      <title>Consistency in framework design</title>
+      <link>https://example.org/posts/2011/01/2011-01-06-consistency-in-framework-design/</link>
+      <pubDate>Thu, 06 Jan 2011 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2011/01/2011-01-06-consistency-in-framework-design/</guid>
+      <description>Concistency Framework: a set of ideas, principles, agreements, or rules that provides the basis or outline for something intended to be more fully developed at a later stage (MSN Dictionary)&#xA;Not sure if you agree, but for me, the above definition implies &amp;ldquo;consistency&amp;rdquo; as a essential effect of using a framework. In the context of software development, using a framework usually equals to following its design guideline, or implementing/extending its interfaces/base classes.</description>
+    </item>
+    <item>
+      <title>Who owns the source code? Employee or employer?</title>
+      <link>https://example.org/posts/2010/12/2010-12-21-who-own-the-source-code/</link>
+      <pubDate>Tue, 21 Dec 2010 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2010/12/2010-12-21-who-own-the-source-code/</guid>
+      <description>I found these 2 articles discussing &amp;ldquo;who owns the source code&amp;rdquo; issue.&#xA;http://www.computerworld.com/s/article/print/9126595/Who_owns_the_code_Beware_copyright_pitfalls?taxonomyId=11&amp;amp;taxonomyName=Development&#xA;http://www.burgess.co.nz/law/copyright-ownership-and-software-development&#xA;The first article discusses the issues using US copyright law; the second is in the context of New Zealand. There are slight difference between the 2 laws with regard to Contractor/Customer relationship but the case of Employee/Employer is the same: without explicit agreement (contract), the Employer owns the source code.&#xA;In Singapore, it is the same: Employer is the copyright holder.</description>
+    </item>
+    <item>
+      <title>Quicksort vs Merge sort in Java</title>
+      <link>https://example.org/posts/2010/12/2010-12-12-quicksort-mergesort-java/</link>
+      <pubDate>Sun, 12 Dec 2010 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2010/12/2010-12-12-quicksort-mergesort-java/</guid>
+      <description>The title is a little larger that what I have in this entry :D&#xA;If you want the answer fast, go here http://www.coderanch.com/t/520171/java/java/Why-Collections-sort-merge-sort#2355668&#xA;And here is a longer write-up:&#xA;I participated in an thread in Javaranche regarding why Arrays uses quicksort and Collections use merge sort (http://www.coderanch.com/t/520171/java/java/Why-Collections-sort-merge-sort). The thread starter claimed that quicksort is the best sort algorithm, for which I disagreed. I also replied with a link to wikipedia about merge sort performs better when the underlying datatype does not support random access (as does array).</description>
+    </item>
+    <item>
+      <title>How do you initialize an EJB3 Stateful Session Bean ?</title>
+      <link>https://example.org/posts/2010/11/2010-11-10-initialize-ejb3-stateful-session-bean/</link>
+      <pubDate>Sat, 20 Nov 2010 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2010/11/2010-11-10-initialize-ejb3-stateful-session-bean/</guid>
+      <description>In EJB 3, we can obtain a reference to Stateful Session Bean either either by using @EJB annotation or performing JNDI look-up. Yet these 2 methods do not offer you a way to initialize a Stateful SB as EJB 2.1 Home interface&amp;rsquo;s createMETHODs do.&#xA;StatefulSB bean = home.create (arg0, arg1, arg2); EJB3 defines @Init annotation as a replacement for EJB 2.1 createMETHOD. But it is intended for bean written to 2.</description>
+    </item>
+    <item>
+      <title>Weblogic SAXParserFactory Issue</title>
+      <link>https://example.org/posts/2010/10/2010-10-26-weblogic-saxparserfactory-issue/</link>
+      <pubDate>Tue, 26 Oct 2010 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2010/10/2010-10-26-weblogic-saxparserfactory-issue/</guid>
+      <description>I have just wasted 1 whole day trying to debug this issues. Since I get most help from the internet, here is what I can do in return :D&#xA;I was trying to build a Spring 3.0 webapp with Tiles 2.2. Since Tiles depends on common-digester which subsequently depends on SAXParserFactory, I got stuck in a whole range of strange Weblogic behaviors.&#xA;Firstly, I got UnsupportedOperationException everytime I first access the webapp.</description>
+    </item>
+    <item>
+      <title>Recursive Tagfile</title>
+      <link>https://example.org/posts/2010/03/2010-03-24-recursive-tagfile/</link>
+      <pubDate>Wed, 24 Mar 2010 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2010/03/2010-03-24-recursive-tagfile/</guid>
+      <description>Tagfile is a good alternative for lazy people like me who hates doing java coding and XML configuration for simple task with lots of HTML codes.&#xA;But laziness knows no limit. Just now I ended up wasting haft a day on a recursive tagfile that would otherwise be completed within 1 hour at most. Yet it was an experience that&amp;rsquo;s worth sharing.&#xA;The tagfile is named catalogue.tag. Its purpose is to display recursively a hierarchy tree of catalogues.</description>
+    </item>
+    <item>
+      <title>Interesting - AKA</title>
+      <link>https://example.org/posts/2010/03/2010-03-10-interesting/</link>
+      <pubDate>Wed, 10 Mar 2010 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2010/03/2010-03-10-interesting/</guid>
+      <description>AKA = Also-Known-As</description>
+    </item>
+    <item>
+      <title>Combine EJB and WAR file in a same web service EAR</title>
+      <link>https://example.org/posts/2010/03/2010-03-02-combine-ejb-war-in-ear/</link>
+      <pubDate>Tue, 02 Mar 2010 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2010/03/2010-03-02-combine-ejb-war-in-ear/</guid>
+      <description>That has been my challenge since yesterday. And I think I have just got it :D&#xA;Let&amp;rsquo;s see if I can reconstruct a step-by-step manual:&#xA;1. First of all, let have some understanding of the structure of a EAR file. EAR stands for Enterprise ARchive. It&amp;rsquo;s a convenient mean to to pack and deploy components of an enterprise application. Essentially, you can pack WAR, EJB, Resource Adapter and supporting libraries inside a EAR file.</description>
+    </item>
+    <item>
+      <title>2-way SSL with WebLogic server 10.3</title>
+      <link>https://example.org/posts/2010/02/2010-02-03-weblogic-2way-ssl/</link>
+      <pubDate>Wed, 03 Feb 2010 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2010/02/2010-02-03-weblogic-2way-ssl/</guid>
+      <description>TOOLS keytool: a key and certificate management tool. Provided as part of Sun&amp;rsquo;s JDK Online reference: http://java.sun.com/javase/6/docs/technotes/tools/windows/keytool.htm.&#xA;utils.CertGen: a certification generate tool provided by WLS. By default it will generate certificates from default CertGenCA.der and CertGenCAKey.der; but have not been able to generate certificate from other cert and key (probably because of the lack of original cert &amp;amp; key AND CertGenCA has constraint of max 1 descendant). Online renference: http://download.oracle.com/docs/cd/E13222_01/wls/docs103/admin_ref/utils.html#wp1198920</description>
+    </item>
+    <item>
+      <title>J2EE Programming Tips</title>
+      <link>https://example.org/posts/2009/05/2009-05-04-j2ee-tips/</link>
+      <pubDate>Mon, 04 May 2009 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2009/05/2009-05-04-j2ee-tips/</guid>
+      <description>J2EE Programming Learn to program Java well. SCJP is nice to have.&#xA;Do program with performance-awareness.&#xA;Always try to optimize your program; performance is a big concern in any J2EE application.&#xA;Dont just follow what other people call best practices, they may not fit your need while being costly to implement.&#xA;J2EE application&amp;rsquo;s performance is often constraint by its interraction with database(s). Optimise your database access, data transaction management codes.</description>
+    </item>
+    <item>
+      <title>Interesting - 2009</title>
+      <link>https://example.org/posts/2009/03/2009-03-08-interesting/</link>
+      <pubDate>Sun, 08 Mar 2009 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2009/03/2009-03-08-interesting/</guid>
+      <description>Capitalism vs Socialism “Capitalism is the unequal distribution of wealth. Socialism is the equal distribution of poverty.” – Winston Churchill&#xA;President Harry Truman President Harry Truman once said that he wanted to find a one-armed economist.&#xA;When he asked his economists for advice, they always answered, “On the onehand, . . . . On the other hand, . . . .”</description>
+    </item>
+  </channel>
+</rss>

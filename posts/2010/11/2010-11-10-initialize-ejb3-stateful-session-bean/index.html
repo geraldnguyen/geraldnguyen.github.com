@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>How do you initialize an EJB3 Stateful Session Bean ?</title>
+<meta data-rh="true" property="og:url" content="https://example.org/posts/2010/11/2010-11-10-initialize-ejb3-stateful-session-bean/">
+<meta data-rh="true" property="og:title" content="How do you initialize an EJB3 Stateful Session Bean ?">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2010/11/2010-11-10-initialize-ejb3-stateful-session-bean/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+  <meta property="og:image" content="https://example.org/geraldnguyen-profile.jpg" data-rh="true">
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>How do you initialize an EJB3 Stateful Session Bean ?</h1>
+
+<h2 class="subtitle"></h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://example.org/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>2 min read</span>
+      <span>·</span>
+      <span><time datetime="2010-11-20T09:19:42&#43;01:00">November 20, 2010</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2010/10/2010-10-26-weblogic-saxparserfactory-issue/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2010/12/2010-12-12-quicksort-mergesort-java/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents"></nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <p>In EJB 3, we can obtain a reference to Stateful Session Bean either either by using <code>@EJB </code>annotation or performing JNDI look-up. Yet these 2 methods do not offer you a way to initialize a Stateful SB as EJB 2.1  Home interface&rsquo;s <code>createMETHODs</code> do.</p>
+<pre tabindex="0"><code>StatefulSB bean = home.create (arg0, arg1, arg2);
+</code></pre><p>EJB3 defines <code>@Init</code> annotation as a replacement for EJB 2.1 <code>createMETHOD</code>. But it is intended for bean written to 2.1 client view (that means you will need to define an home interface and annotate the bean class with <code>@RemoteHome</code> or <code>@LocalHome</code> annotations)</p>
+<p>So, how do you initialize an EJB3 Stateful Session Bean?</p>
+<p>Here&rsquo;s my solution:</p>
+<ul>
+<li>Define an <code>create (arg0, arg1, arg2)</code> as a business method in the business interface. You can change the name to something more relevant (e.g. <code>initialize</code>)</li>
+<li>Implement this method as you would do with any 2.1 <code>ejbCreate</code> method</li>
+<li>Invoke this method before any business methods.</li>
+</ul>
+<p>This way the Stateful SB is instantiated according to your requirement.</p>
+<hr>
+<p>I found a slightly different solution at <a href="http://community.jboss.org/message/524703#524703">http://community.jboss.org/message/524703#524703</a> by Carlo de Wolf. Repost it here for easy comparison:</p>
+<p>If you want you can even create a regular create method which mimicks the home interface:</p>
+<pre tabindex="0"><code>interface MyRemote {
+   MyRemote create(String state);
+}
+ 
+class MyBean implement MyRemote {
+   MyRemote create(String state) {
+      this.state = state;
+      return ctx.getBusinessObject(MyRemote.class);
+   }
+}
+</code></pre>
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/j2ee/">J2ee</a></li>
+        <li><a href="/tags/ejb3/">Ejb3</a></li>
+        <li><a href="/tags/programming/">Programming</a></li>
+        <li><a href="/tags/old-blog/">Old Blog</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

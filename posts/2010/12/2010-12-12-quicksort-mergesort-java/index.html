@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>Quicksort vs Merge sort in Java</title>
+<meta data-rh="true" property="og:url" content="https://example.org/posts/2010/12/2010-12-12-quicksort-mergesort-java/">
+<meta data-rh="true" property="og:title" content="Quicksort vs Merge sort in Java">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2010/12/2010-12-12-quicksort-mergesort-java/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+  <meta property="og:image" content="https://example.org/geraldnguyen-profile.jpg" data-rh="true">
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>Quicksort vs Merge sort in Java</h1>
+
+<h2 class="subtitle"></h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://example.org/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>2 min read</span>
+      <span>·</span>
+      <span><time datetime="2010-12-12T09:19:42&#43;01:00">December 12, 2010</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2010/11/2010-11-10-initialize-ejb3-stateful-session-bean/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2010/12/2010-12-21-who-own-the-source-code/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents"></nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <p>The title is a little larger that what I have in this entry :D</p>
+<p>If you want the answer fast, go here <a href="http://www.coderanch.com/t/520171/java/java/Why-Collections-sort-merge-sort#2355668">http://www.coderanch.com/t/520171/java/java/Why-Collections-sort-merge-sort#2355668</a></p>
+<p>And here is a longer write-up:</p>
+<p>I participated in an thread in Javaranche regarding why Arrays uses quicksort and Collections use merge sort (<a href="http://www.coderanch.com/t/520171/java/java/Why-Collections-sort-merge-sort)">http://www.coderanch.com/t/520171/java/java/Why-Collections-sort-merge-sort)</a>. The thread starter claimed that quicksort is the best sort algorithm, for which I disagreed. I also replied with a link to wikipedia about merge sort performs better when the underlying datatype does not support random access (as does array). I thought that was the reason why Collections use merge sort: because a collection type such as LinkedList does not necessarily support random access.</p>
+<p>I had some doubt then, though. I did noticed &ldquo;This implementation dumps the specified list into an array, sorts the array&rdquo; in the javadoc and wondered why wasn&rsquo;t quicksort be used. But lazy me doesn&rsquo;t want to do further googling and reading; I replied with the right-but-was-not-correct arguments.</p>
+<p>Later, I checked that thread again and found an answer from a user named &ldquo;Martin Vajsar&rdquo;. His explanation is brilliant, but let me rephrase them here:</p>
+<ul>
+<li>Merge sort is stable. Quicksort may not, especially if the implementation must be efficient.</li>
+<li>Stable is important for sorting object. That&rsquo;s why merge sort is used in Collections and <code>Arrays.sort (Object[] ...)</code>. (Yes, it&rsquo;s true. A<code>rrays.sort (Object[] ...)</code> uses merge sort!)</li>
+<li>Stable is not important for primitive types, since 2 primitive values are indistinguishable if they are equals. And quicksort may be better than merge sort when operating on array.</li>
+</ul>
+<p>There is another bonus information from Martin: &ldquo;Mergesort&rsquo;s ability to efficiently sort sequentially accessed data is of no real use in Java. This feature is used when sorting data so large that they don&rsquo;t fit to memory and must be written to disk&rdquo;</p>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/java/">Java</a></li>
+        <li><a href="/tags/algorithm/">Algorithm</a></li>
+        <li><a href="/tags/sort/">Sort</a></li>
+        <li><a href="/tags/old-blog/">Old Blog</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

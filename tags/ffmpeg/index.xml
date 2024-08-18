@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ffmpeg on Gerald Nguyen</title>
+    <link>https://example.org/tags/ffmpeg/</link>
+    <description>Recent content in Ffmpeg on Gerald Nguyen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 May 2024 08:00:00 -0700</lastBuildDate>
+    <atom:link href="https://example.org/tags/ffmpeg/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to join video files in a semi-automated way</title>
+      <link>https://example.org/posts/2024/05/how-to-join-video-semi-automated/</link>
+      <pubDate>Sat, 04 May 2024 08:00:00 -0700</pubDate>
+      <guid>https://example.org/posts/2024/05/how-to-join-video-semi-automated/</guid>
+      <description>TLDR;&#xA;You will need the following:&#xA;ffmpeg: https://ffmpeg.org/ Windows command prompt Create a script that use ffmpeg to join video files then save the script and grant it necessary execute permission (on Mac and Linux). Make sure ffmpeg is on executable path, usually the $PATH or %PATH% variable&#xA;On Windows, you can use the below.&#xA;@echo off setlocal enabledelayedexpansion del concat.txt rem Get the total number of parameters set &amp;#34;totalParams=0&amp;#34; for %%# in (%*) do set /a &amp;#34;totalParams += 1&amp;#34; set /a &amp;#34;to_merge=%totalParams%-1&amp;#34; echo There are a total of %to_merge% video to merge rem Loop through all parameters except the last one set &amp;#34;index=0&amp;#34; set &amp;#34;outputfile=&amp;#34; for %%f in (%*) do ( set /a &amp;#34;index+=1&amp;#34; if !</description>
+    </item>
+  </channel>
+</rss>

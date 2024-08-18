@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>The best way to fix Hibernate’s MultipleBagFetchException</title>
+<meta data-rh="true" property="og:url" content="https://example.org/posts/2022/12/fixing-hibernate-multiplebagfetchexception/">
+<meta data-rh="true" property="og:title" content="The best way to fix Hibernate’s MultipleBagFetchException">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2022/12/fixing-hibernate-multiplebagfetchexception/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>The best way to fix Hibernate’s MultipleBagFetchException</h1>
+
+<h2 class="subtitle">Adapting from https://vladmihalcea.com plus sample codes for Spring Data JPA</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://example.org/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>6 min read</span>
+      <span>·</span>
+      <span><time datetime="2022-12-04T09:19:42&#43;01:00">December 4, 2022</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2022/11/echo-api/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2022/12/becoming-a-solid-developer/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-entities-post-postcomment-and-tag">The entities: <code>Post</code>, <code>PostComment</code> and <code>Tag</code>.</a></li>
+    <li><a href="#retrieve-posts-with-minimum-number-of-db-queries">Retrieve Posts with minimum number of DB queries</a></li>
+    <li><a href="#why-hibernate-throws-multiplebagfetchexception">Why Hibernate throws <code>MultipleBagFetchException?</code></a></li>
+    <li><a href="#the-solution-use-2-queries-and-leverage-jpahibernates-first-level-cache-and-persistence-context">The solution: use 2 queries and leverage JPA/Hibernate’s first-level cache and Persistence Context</a>
+      <ul>
+        <li><a href="#a-possible-downside">A Possible Downside</a></li>
+      </ul>
+    </li>
+    <li><a href="#filtering-only-once-solution">Filtering-only-once solution</a></li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <p>There are 2 articles from <a href="https://vladmihalcea.com/hibernate-multiplebagfetchexception/">https://vladmihalcea.com</a> describing his analysis and solutions to Hibernate’s MultipleBagFetchException. The <a href="https://vladmihalcea.com/hibernate-multiplebagfetchexception/">first</a> one, appeared around 2020 (when I first researched this problem) or even earlier (2018?), offered an analysis of the problem and a solution using Hibernate’s EntityManager API. The <a href="https://vladmihalcea.com/spring-data-jpa-multiplebagfetchexception/">second</a> one appeared around Jun 2022, and offers a slightly different solution for JPA.</p>
+<p>I will present below my understanding of his analysis, his solutions, and working sample codes which you can check out and validate your understanding and/or devise your own solutions.</p>
+<p>The sample codes are available on my <a href="https://github.com/geraldnguyen/kitchensink/tree/main/springweb/src/main/java/com/example/springweb/multiple_bag_fetch_exception">GitHub</a>. I encourage you to check it out and follow along. If you do, you may want to <code>POST [http://localhost:8080/posts/samples](http://localhost:8080/posts/samples)</code> to set up sample data.</p>
+<h1 id="the-entities-post-postcomment-and-tag">The entities: <code>Post</code>, <code>PostComment</code> and <code>Tag</code>.</h1>
+<figure><img src="/posts/2022/12/fixing-hibernate-multiplebagfetchexception/1_ktBQBNx4LQ4E6G7PjoRivA.png"
+    alt="The entities: Post, PostComment and Tag"><figcaption>
+      <p><code>The entities: Post</code>, PostComment and Tag</p>
+    </figcaption>
+</figure>
+
+<p>A <code>Post</code> represents a blog post with attributes such as <code>id</code>, <code>title</code>…</p>
+<p>Readers of a post may leave comments. The relationship between <code>PostComment</code> to <code>Post</code> is <code>ManyToOne</code> :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">PostComment</span><span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@Id</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@GeneratedValue</span>(strategy<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>GenerationType.<span style="color:#008080">IDENTITY</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>Long<span style="color:#bbb"> </span>id;<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>review;<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@ManyToOne</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>Post<span style="color:#bbb"> </span>post;<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>There are a shared set of tags that a post may associate to:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">Tag</span><span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@Id</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@GeneratedValue</span>(strategy<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>GenerationType.<span style="color:#008080">IDENTITY</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>Long<span style="color:#bbb"> </span>id;<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>name;<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>The relationship between <code>Post</code> and <code>Tag</code> is <code>ManyToMany</code> using a <code>JoinTable</code>. The relationship between <code>Post</code> and <code>PostComment</code> is <code>OneToMany</code>. The full code of <code>Post</code> is available below:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">Post</span><span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@Id</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@GeneratedValue</span>(strategy<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>GenerationType.<span style="color:#008080">IDENTITY</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>Long<span style="color:#bbb"> </span>id;<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>title;<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@OneToMany</span>(<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>mappedBy<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;post&#34;</span>,<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>cascade<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>CascadeType.<span style="color:#008080">ALL</span>,<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>orphanRemoval<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">true</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>List<span style="color:#000;font-weight:bold">&lt;</span>PostComment<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>comments<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">new</span><span style="color:#bbb"> </span>ArrayList<span style="color:#000;font-weight:bold">&lt;&gt;</span>();<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@ManyToMany</span>(<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>cascade<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                    </span>CascadeType.<span style="color:#008080">PERSIST</span>,<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                    </span>CascadeType.<span style="color:#008080">MERGE</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@JoinTable</span>(<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>name<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;post_tag&#34;</span>,<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>joinColumns<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#3c5d5d;font-weight:bold">@JoinColumn</span>(name<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;post_id&#34;</span>),<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>inverseJoinColumns<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#3c5d5d;font-weight:bold">@JoinColumn</span>(name<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;tag_id&#34;</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>List<span style="color:#000;font-weight:bold">&lt;</span>Tag<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>tags<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">new</span><span style="color:#bbb"> </span>ArrayList<span style="color:#000;font-weight:bold">&lt;&gt;</span>();<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><h1 id="retrieve-posts-with-minimum-number-of-db-queries">Retrieve Posts with minimum number of DB queries</h1>
+<p>There are 3 ways of retrieving Posts with a lesser number of DB queries</p>
+<p><strong>#1 Retrieve</strong> <code>**Post**</code> <strong>entities only and let Hibernate issue queries to retrieve</strong> <code>**Tag**</code> <strong>and</strong> <code>**PostComment**</code> <strong>entities associated with each</strong> <code>**Post**</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#3c5d5d;font-weight:bold">@Query</span>(<span style="color:#d14">&#34;select distinct p\\n&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#d14">&#34;    from Post p&#34;</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>List<span style="color:#000;font-weight:bold">&lt;</span>Post<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">findAll_additionalFetching</span>();<span style="color:#bbb">
+</span></span></span></code></pre></div><p>The number of DB queries is <code>1 + 2n</code> with <code>n</code> being the number of <code>Post</code> entities retrieved</p>
+<ul>
+<li>1 query to retrieve <code>Post</code> entities</li>
+<li>2 queries for <em>each</em> <code>Post</code> to retrieve its associated <code>PostComment</code> and <code>Tag</code></li>
+</ul>
+<figure><img src="/posts/2022/12/fixing-hibernate-multiplebagfetchexception/1_vwtxgZoJXoTxlSKLec65AA.png"
+    alt="Result of http://localhost:8080/posts/additional-fetching"><figcaption>
+      <p>Result of <a href="http://localhost:8080/posts/additional-fetching">http://localhost:8080/posts/additional-fetching</a></p>
+    </figcaption>
+</figure>
+
+<p><strong>#2 Retrieve</strong> <code>**Post**</code> <strong><em>and</em> associated</strong> <code>**PostComment**</code> <strong>(or</strong> <code>**Tag**</code><strong>), and let Hibernate issue queries to retrieve</strong> <code>**Tag**</code> <strong>associated for each</strong> <code>**Post**</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#3c5d5d;font-weight:bold">@Query</span>(<span style="color:#d14">&#34;select distinct p\\n&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#d14">&#34;    from Post p\\n&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#d14">&#34;    join fetch p.comments&#34;</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>List<span style="color:#000;font-weight:bold">&lt;</span>Post<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">findAll_fetchComments</span>();<span style="color:#bbb">
+</span></span></span></code></pre></div><p>The number of DB queries is <code>1 + n</code> with <code>n</code> being the number of <code>Post</code> entities retrieved</p>
+<ul>
+<li>1 query to retrieve <code>Post</code> entities <em>and</em> their associated <code>PostComment</code> entities</li>
+<li>1 query for <em>each</em> <code>Post</code> to retrieve its associated <code>Tag</code></li>
+</ul>
+<figure><img src="/posts/2022/12/fixing-hibernate-multiplebagfetchexception/1_c7VdSVa3cAELHoAjVn8blA.png"
+    alt="Result of http://localhost:8080/posts/fetch-comments"><figcaption>
+      <p>Result of <a href="http://localhost:8080/posts/fetch-comments">http://localhost:8080/posts/fetch-comments</a></p>
+    </figcaption>
+</figure>
+
+<p><strong>#3 Retrieve both</strong> <code>**PostComment**</code> <strong>and</strong> <code>**Tag**</code> <strong>associations along with</strong> <code>**Post**</code> <strong>in a <em>single</em> query</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#3c5d5d;font-weight:bold">@Query</span>(<span style="color:#d14">&#34;select p\\n&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#d14">&#34;    from Post p\\n&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#d14">&#34;    left join fetch p.comments\\n&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#d14">&#34;    left join fetch p.tags&#34;</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>List<span style="color:#000;font-weight:bold">&lt;</span>Post<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">findAll_fetchCommentsAndTags</span>();<span style="color:#bbb">
+</span></span></span></code></pre></div><p><strong>BUT</strong> it does not work. The server will not even start because of <code>org.hibernate.loader.MultipleBagFetchException: cannot simultaneously fetch multiple bags: [Post.comments, Post.tags]</code> thrown by Hibernate
+<figure><img src="/posts/2022/12/fixing-hibernate-multiplebagfetchexception/1_hENd2hvGXgqOrwmd8k2H-Q.png"
+    alt="The server fails to start with MultipleBagFetchException"><figcaption>
+      <p>The server fails to start with MultipleBagFetchException</p>
+    </figcaption>
+</figure>
+</p>
+<h1 id="why-hibernate-throws-multiplebagfetchexception">Why Hibernate throws <code>MultipleBagFetchException?</code></h1>
+<p>Vlad Mihalcea <a href="https://vladmihalcea.com/hibernate-multiplebagfetchexception/">explained</a> it best:</p>
+<blockquote>
+<p><em>The reason why a</em> <code>_MultipleBagFetchException_</code> <em>is thrown by Hibernate is that duplicates can occur, and the unordered</em> <code>_List_</code><em>, which is called a</em> <strong><em>bag</em></strong> <em>in Hibernate terminology, is not supposed to remove duplicates.</em></p>
+</blockquote>
+<p>Indeed, as the article and the <a href="https://stackoverflow.com/a/5865605">StackOverFlow thread</a> pointed out, changing <code>Post</code>’s associations from <code>List</code> to <code>Set</code> “fix” the error.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">Post</span><span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>...<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>Set<span style="color:#000;font-weight:bold">&lt;</span>PostComment<span style="color:#a61717;background-color:#e3d2d2">\</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>comments<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">new</span><span style="color:#bbb"> </span>HashSet<span style="color:#000;font-weight:bold">&lt;&gt;</span>();<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>Set<span style="color:#000;font-weight:bold">&lt;</span>Tag<span style="color:#a61717;background-color:#e3d2d2">\</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>tags<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">new</span><span style="color:#bbb"> </span>HashSet<span style="color:#000;font-weight:bold">&lt;&gt;</span>();<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>...<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p><strong>BUT</strong> it’s not proper. Changing from <code>List</code> to <code>Set</code> may remove the obstacle for Hibernate to process the result set, but the generated query is very inefficient as it involves a cartesian product between <code>Post</code>, <code>PostComment</code> and <code>Tag</code> (technically, the join product between <code>Post</code> + <code>PostComment</code> intermediary result and <code>Post</code> + <code>Tag</code> intermediary result). This approach’s performance penalty in terms of processing cost and memory is undesirable.</p>
+<h1 id="the-solution-use-2-queries-and-leverage-jpahibernates-first-level-cache-and-persistence-context">The solution: use 2 queries and leverage JPA/Hibernate’s first-level cache and Persistence Context</h1>
+<p>Let’s look at the solution</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#998;font-style:italic">/****PostRepository ****/</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#3c5d5d;font-weight:bold">@Query</span>(<span style="color:#d14">&#34;select distinct p\\n&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#d14">&#34;    from Post p\\n&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#d14">&#34;    join fetch p.comments&#34;</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>List<span style="color:#000;font-weight:bold">&lt;</span>Post<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">findAll_fetchComments</span>();<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#3c5d5d;font-weight:bold">@Query</span>(<span style="color:#d14">&#34;select distinct p\\n&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#d14">&#34;    from Post p\\n&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#d14">&#34;    join fetch p.tags&#34;</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>List<span style="color:#000;font-weight:bold">&lt;</span>Post<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">findAll_fetchTags</span>();<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#998;font-style:italic">/**** PostController ****/</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#3c5d5d;font-weight:bold">@GetMapping</span>(<span style="color:#d14">&#34;/fetch-all&#34;</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span>List<span style="color:#000;font-weight:bold">&lt;</span>Post<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">fetchAll</span>()<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">var</span><span style="color:#bbb"> </span>posts<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>postRepository.<span style="color:#008080">findAll_fetchComments</span>();<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>postRepository.<span style="color:#008080">findAll_fetchTags</span>();<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>The first query <code>postRepository.findAll_fetchComments()</code> fetches <code>Post</code> and all associated <code>PostComment</code> entities.</p>
+<p>The second query <code>postRepository.findAll_fetchTags()</code> fetches <code>Post</code>and all associated <code>Tag</code>entities. Because the first query already retrieved and stored all <code>Post</code> entities in the Persistence Context, the <code>Post</code> and <code>Tag</code> entities from the second query are merged into the same <code>Post</code> entities that are already populated with associated <code>PostComment</code> entities</p>
+<p>As we can see from the console, there are only 2 queries issued to DB</p>
+<figure><img src="/posts/2022/12/fixing-hibernate-multiplebagfetchexception/1_XFi7sTmW9IqBb9TpBcpuSQ.png"
+    alt="Result from http://localhost:8080/posts/fetch-all"><figcaption>
+      <p>Result from http://localhost:8080/posts/fetch-all</p>
+    </figcaption>
+</figure>
+
+<h2 id="a-possible-downside">A Possible Downside</h2>
+<p>Assuming we want to apply some condition to filter the <code>Post</code> entities. Let’s find <code>Post</code> with odd <code>id</code></p>
+<figure><img src="/posts/2022/12/fixing-hibernate-multiplebagfetchexception/1_Baf1d0MDMoASNpHRA-fVpA.png"
+    alt="Result of http://localhost:8080/posts/odd"><figcaption>
+      <p>Result of http://localhost:8080/posts/odd</p>
+    </figcaption>
+</figure>
+
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#3c5d5d;font-weight:bold">@Query</span>(<span style="color:#d14">&#34;select distinct p\\n&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#d14">&#34;    from Post p\\n&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#d14">&#34;    join fetch p.comments\\n&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#d14">&#34;     where p.id % 2 = 1&#34;</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>List<span style="color:#000;font-weight:bold">&lt;</span>Post<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">findOddPosts_fetchComments</span>();<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#3c5d5d;font-weight:bold">@Query</span>(<span style="color:#d14">&#34;select distinct p\\n&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#d14">&#34;    from Post p\\n&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#d14">&#34;    join fetch p.tags\\n&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#d14">&#34;     where p.id % 2 = 1&#34;</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>List<span style="color:#000;font-weight:bold">&lt;</span>Post<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">findOddPosts_fetchTags</span>();<span style="color:#bbb">
+</span></span></span></code></pre></div><p>As you may notice, we need to duplicate the same condition <code>where p.id % 2 = 1</code> in both queries.</p>
+<p>In a real project, the filtering condition may not be this simple. We should avoid duplicating complex code if possible</p>
+<p>Or someone may forget to update a query if the condition changes in the distant future. Trust me, debugging that is not pleasant at all.</p>
+<h1 id="filtering-only-once-solution">Filtering-only-once solution</h1>
+<p>Let’s try this filtering-only-once solution to find all even-<code>id</code> posts</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#3c5d5d;font-weight:bold">@Query</span>(<span style="color:#d14">&#34;select distinct p\\n&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#d14">&#34;    from Post p\\n&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#d14">&#34;    join fetch p.comments\\n&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#d14">&#34;     where p.id % 2 = 0&#34;</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>List<span style="color:#000;font-weight:bold">&lt;</span>Post<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">findEvenPosts_fetchComments</span>();<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#3c5d5d;font-weight:bold">@Query</span>(<span style="color:#d14">&#34;select distinct p\\n&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#d14">&#34;    from Post p\\n&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#d14">&#34;    join fetch p.tags\\n&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">+</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#d14">&#34;     where p in  :posts&#34;</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>List<span style="color:#000;font-weight:bold">&lt;</span>Post<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">fetchTags</span>(<span style="color:#3c5d5d;font-weight:bold">@Param</span>(<span style="color:#d14">&#34;posts&#34;</span>)<span style="color:#bbb"> </span>List<span style="color:#000;font-weight:bold">&lt;</span>Post<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>posts);<span style="color:#bbb">
+</span></span></span></code></pre></div><p>The first query defines the main filtering criteria and fetches the <code>Post</code> entities along with the associated <code>PostComment</code> records.</p>
+<p>The second query simply fetches all identified <code>Post</code> entities using <code>p in :posts</code> condition along with their associated <code>Tag</code> entities.</p>
+<p>Even if the filtering condition is complex, we only have to code it in one place. That greatly simplifies the code’s maintainability.</p>
+<figure><img src="/posts/2022/12/fixing-hibernate-multiplebagfetchexception/1_ePoW_dc9Y36JVhNAZ_0Vww.png"
+    alt="Result of http://localhost:8080/posts/even"><figcaption>
+      <p>Result of http://localhost:8080/posts/even</p>
+    </figcaption>
+</figure>
+
+<p>There is a possible problem with this approach: the number of <code>Post</code> entities may be too high to fit in the <code>IN</code> condition. While it’s a valid concern, I think it does not happen often, especially if we have good filtering conditions or apply pagination techniques.</p>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/java/">Java</a></li>
+        <li><a href="/tags/jpa/">JPA</a></li>
+        <li><a href="/tags/hibernate/">Hibernate</a></li>
+        <li><a href="/tags/programming/">Programming</a></li>
+        <li><a href="/tags/exception/">Exception</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

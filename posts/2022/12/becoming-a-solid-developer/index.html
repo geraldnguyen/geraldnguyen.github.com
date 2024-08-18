@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>Becoming a SOLID developer</title>
+<meta data-rh="true" property="og:url" content="https://example.org/posts/2022/12/becoming-a-solid-developer/">
+<meta data-rh="true" property="og:title" content="Becoming a SOLID developer">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2022/12/becoming-a-solid-developer/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>Becoming a SOLID developer</h1>
+
+<h2 class="subtitle">By following SOLID software engineering principles</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://example.org/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>4 min read</span>
+      <span>·</span>
+      <span><time datetime="2022-12-07T08:00:00-07:00">December 7, 2022</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2022/12/fixing-hibernate-multiplebagfetchexception/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2022/12/5-minimum-viable-javascript-interview-questions/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#single-responsibility">Single Responsibility</a></li>
+    <li><a href="#open-close-principle">Open-close principle</a></li>
+    <li><a href="#liskov-substitution">Liskov substitution</a></li>
+    <li><a href="#interface-segregation">Interface segregation</a></li>
+    <li><a href="#dependency-inversion">Dependency inversion</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <p>Being called <em>solid</em> is a compliment. The word carries the positive notions of reliability and respectability. All of us should aim to become one.</p>
+<figure><img src="/posts/2022/12/becoming-a-solid-developer/1_jgPZbah9dkZgepyo6D2xwQ.webp"
+    alt="https://www.collinsdictionary.com/dictionary/english/solid (screenshot)"><figcaption>
+      <p><a href="https://www.collinsdictionary.com/dictionary/english/solid">https://www.collinsdictionary.com/dictionary/english/solid</a> (screenshot)</p>
+    </figcaption>
+</figure>
+
+<p>If you are a software engineer or want to become one, you are in luck because there is a set of SOLID principles to guide your way.</p>
+
+<div class="page-break" role="separator">
+  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+</div>
+<p>SOLID is an acronym in the software engineering profession. It stands for:</p>
+<ul>
+<li><strong>S</strong>ingle Responsibility principle</li>
+<li><strong>O</strong>pen-closed principle</li>
+<li><strong>L</strong>iskov Substitution principle</li>
+<li><strong>I</strong>nterface segregation principle</li>
+<li><strong>D</strong>ependency inversion principle</li>
+</ul>
+<p>The term was coined by <a href="https://michaelfeathers.silvrback.com/">Michael Feather</a> around 2004 for the 5 object-oriented design principles first collected by <a href="http://cleancoder.com/products">Uncle Bob</a> in his 2000 paper <a href="https://web.archive.org/web/20150906155800/http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf">Design Principles and Design Patterns</a> and his other <a href="http://www.butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod">articles</a> and <a href="https://www.oreilly.com/library/view/clean-architecture-a/9780134494272/">books</a></p>
+<p>Let’s look at these principles in more detail.</p>
+<h1 id="single-responsibility">Single Responsibility</h1>
+<blockquote>
+<p>Each class should have a single responsibility.</p>
+</blockquote>
+<p>An <code>EmailService</code> should just concern itself with sending emails, not with sending emails <em>and</em> updating order status.</p>
+<p>A <code>Car</code> class should be about cars only, not other types of motorized vehicles. If we need to describe an electric car, then a subclass such as<code>ElectricCar</code> is more appropriate than overloading <code>Car</code> with electric and petrol car characteristics.</p>
+<h1 id="open-close-principle">Open-close principle</h1>
+<blockquote>
+<p>A module should be open for extension but closed for modification</p>
+</blockquote>
+<p>The <code>EmailService</code> can be extended by a <code>RecallableEmailService</code> which adds recall-ability feature to the email just sent.</p>
+<figure><img src="/posts/2022/12/becoming-a-solid-developer/1_cvKw_Z8ZspbkJieyjInM0w.webp"
+    alt="EmailService and its associations"><figcaption>
+      <p>EmailService and its associations</p>
+    </figcaption>
+</figure>
+
+<p>The <code>ElectricCar</code> adds electric features without modifying the internal of <code>Car</code>.</p>
+<h1 id="liskov-substitution">Liskov substitution</h1>
+<blockquote>
+<p>Subclasses should be substitutable for their base classes</p>
+</blockquote>
+<p>In the context of Object-oriented design, a class or method that accepts an instance of a base class should be able to take any instance of its subclass.</p>
+<p>An <code>OrderService</code> should be able to use any instance that conforms to the interface of <code>EmailService</code> without concerning that the instance’s actual class is <code>EmailService</code> itself or <code>RecallableEmailService</code></p>
+<p>An <code>UrbanTripPlanner</code> should be able to use any instance of <code>Car</code> to determine a route without knowing whether it represents an electric or petrol car.</p>
+<h1 id="interface-segregation">Interface segregation</h1>
+<blockquote>
+<p>Many client specific interfaces are better than one general purpose interface</p>
+</blockquote>
+<p>An <code>OrderService</code> does not need to <code>recallEmail(...)</code> . Hence it only depends on <code>EmailService</code> for sending emails, not <code>RecallableEmailService</code></p>
+<p>Similarly, an <code>UrbanTripPlanner</code> does not need the <code>recharge(...)</code> method from an <code>EletricCar</code>. It depends only on the interface provided by <code>Car</code></p>
+<figure><img src="/posts/2022/12/becoming-a-solid-developer/1_AZ1fklqQkAmglfU5NxLC3g.webp"
+    alt="Car and its associations"><figcaption>
+      <p>Car and its associations</p>
+    </figcaption>
+</figure>
+
+<h1 id="dependency-inversion">Dependency inversion</h1>
+<blockquote>
+<p>Depend upon Abstractions. Do not depend upon concretions.</p>
+</blockquote>
+<p>The <em>procedural</em> dependency mechanism starts from the top, gradually expands, and depends on concrete implementation details.</p>
+<p>In Object-oriented programming, the dependency is <em>inverted</em>. The majority of dependencies should be upon abstractions. And where implementation exists, its relationship with abstraction <em>inverts</em>. Rather than being directly depended on, the implementation now depends on abstraction.</p>
+<figure><img src="/posts/2022/12/becoming-a-solid-developer/1_xZNkJr8o1fxcJ2efNggICA.webp"
+    alt="Source: Uncle Bob’s Design Principles and  Design Patterns"><figcaption>
+      <p>Source: Uncle Bob’s Design Principles and  Design Patterns</p>
+    </figcaption>
+</figure>
+
+<p>An <code>OrderService</code> depends on the interface provided by <code>EmailService</code> and not its IMAP or POP implementation.</p>
+<p>An <code>UrbanTripPlanner</code> depends on the interface provided by <code>Car</code> , not its Tesla or Toyota implementation</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>We have examined the origin of the SOLID acronym, as well as looked at each of them in detail with 2 object-oriented design use cases each.</p>
+<p>You may have followed some of these principles in the past without knowing because they are good practices. Encapsulation, in my opinion, is following the <strong>Open-close principle</strong>.</p>
+<p>You may have also applied some of them because it is the way things are. Syntactically, an <code>ElectricCar</code> object can always pass in for a <code>Car</code> parameter, thereby following the <strong>Liskov substitution principle</strong>. If you have used Dependency Injection, you already follow the <strong>Dependency Inversion principle</strong>.</p>
+<p>Other principles require a bit of thought. The <strong>Single Responsibility principle</strong> needs a good OO model to keep the method/class/module clean and lean. You may need good judgment to determine how deep the segregation should be while following the <strong>Interface Segregation principle</strong>.</p>
+<h1 id="references">References</h1>
+<ul>
+<li><a href="https://web.archive.org/web/20150906155800/http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf">Design Principles and Design Patterns</a> paper</li>
+<li><a href="http://www.butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod">Principles of OOD</a> article</li>
+<li><a href="https://www.oreilly.com/library/view/clean-architecture-a/9780134494272/">Clean Architecture: A Craftsman’s Guide to Software Structure and Design</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SOLID">https://en.wikipedia.org/wiki/SOLID</a></li>
+</ul>
+
+
+<div class="page-break" role="separator">
+  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+</div>
+<p>If you like this article, please <a href="https://geraldnguyen.medium.com/subscribe">follow me</a> for more quality content.</p>
+<p>Other articles in this series:</p>
+<ul>
+<li><a href="https://example.org/posts/2022/12/becoming-a-solid-developer/">Becoming a SOLID developer</a></li>
+<li><a href="https://example.org/posts/2022/12/solid-single-responsibility-principle/">SOLID in Action — the Single Responsibility Principle</a></li>
+<li><a href="https://example.org/posts/2022/12/solid-open-close-principle/">SOLID in Action — the Open-closed principle</a></li>
+<li><a href="https://example.org/posts/2023/01/solid-liskov-substitution-principle/">SOLID in Action — the Liskov Substitution principle</a></li>
+<li><a href="https://example.org/posts/2023/01/solid-interface-segregation-principle/">SOLID in Action — the Interface Segregation principle</a></li>
+<li><a href="https://example.org/posts/2023/02/solid-dependency-inversion-principle/">SOLID in Action — the Dependency Inversion principle</a></li>
+</ul>
+<p>Thank you.</p>
+
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/software-engineering/">Software Engineering</a></li>
+        <li><a href="/tags/solid-principles/">SOLID Principles</a></li>
+        <li><a href="/tags/uncle-bob/">Uncle Bob</a></li>
+        <li><a href="/tags/object-oriented/">Object Oriented</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

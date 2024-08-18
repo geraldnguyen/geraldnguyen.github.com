@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Gerald Nguyen</title>
+    <link>https://example.org/tags/</link>
+    <description>Recent content in Tags on Gerald Nguyen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 May 2024 08:00:00 -0700</lastBuildDate>
+    <atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BDD</title>
+      <link>https://example.org/tags/bdd/</link>
+      <pubDate>Mon, 20 May 2024 08:00:00 -0700</pubDate>
+      <guid>https://example.org/tags/bdd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>https://example.org/tags/programming/</link>
+      <pubDate>Mon, 20 May 2024 08:00:00 -0700</pubDate>
+      <guid>https://example.org/tags/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://example.org/tags/python/</link>
+      <pubDate>Mon, 20 May 2024 08:00:00 -0700</pubDate>
+      <guid>https://example.org/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Selenium</title>
+      <link>https://example.org/tags/selenium/</link>
+      <pubDate>Mon, 20 May 2024 08:00:00 -0700</pubDate>
+      <guid>https://example.org/tags/selenium/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tutorial</title>
+      <link>https://example.org/tags/tutorial/</link>
+      <pubDate>Mon, 20 May 2024 08:00:00 -0700</pubDate>
+      <guid>https://example.org/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ffmpeg</title>
+      <link>https://example.org/tags/ffmpeg/</link>
+      <pubDate>Sat, 04 May 2024 08:00:00 -0700</pubDate>
+      <guid>https://example.org/tags/ffmpeg/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tech Tips</title>
+      <link>https://example.org/tags/tech-tips/</link>
+      <pubDate>Sat, 04 May 2024 08:00:00 -0700</pubDate>
+      <guid>https://example.org/tags/tech-tips/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Video Editing</title>
+      <link>https://example.org/tags/video-editing/</link>
+      <pubDate>Sat, 04 May 2024 08:00:00 -0700</pubDate>
+      <guid>https://example.org/tags/video-editing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dependency Inversion</title>
+      <link>https://example.org/tags/dependency-inversion/</link>
+      <pubDate>Tue, 21 Feb 2023 08:00:00 -0700</pubDate>
+      <guid>https://example.org/tags/dependency-inversion/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Object Oriented</title>
+      <link>https://example.org/tags/object-oriented/</link>
+      <pubDate>Tue, 21 Feb 2023 08:00:00 -0700</pubDate>
+      <guid>https://example.org/tags/object-oriented/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software Engineering</title>
+      <link>https://example.org/tags/software-engineering/</link>
+      <pubDate>Tue, 21 Feb 2023 08:00:00 -0700</pubDate>
+      <guid>https://example.org/tags/software-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SOLID Principles</title>
+      <link>https://example.org/tags/solid-principles/</link>
+      <pubDate>Tue, 21 Feb 2023 08:00:00 -0700</pubDate>
+      <guid>https://example.org/tags/solid-principles/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Interview</title>
+      <link>https://example.org/tags/interview/</link>
+      <pubDate>Fri, 17 Feb 2023 08:00:00 -0700</pubDate>
+      <guid>https://example.org/tags/interview/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Interview Questions</title>
+      <link>https://example.org/tags/interview-questions/</link>
+      <pubDate>Fri, 17 Feb 2023 08:00:00 -0700</pubDate>
+      <guid>https://example.org/tags/interview-questions/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java</title>
+      <link>https://example.org/tags/java/</link>
+      <pubDate>Fri, 17 Feb 2023 08:00:00 -0700</pubDate>
+      <guid>https://example.org/tags/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JavaScript</title>
+      <link>https://example.org/tags/javascript/</link>
+      <pubDate>Fri, 17 Feb 2023 08:00:00 -0700</pubDate>
+      <guid>https://example.org/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Interface Segregation</title>
+      <link>https://example.org/tags/interface-segregation/</link>
+      <pubDate>Fri, 27 Jan 2023 08:00:00 -0700</pubDate>
+      <guid>https://example.org/tags/interface-segregation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Subtyping</title>
+      <link>https://example.org/tags/subtyping/</link>
+      <pubDate>Mon, 09 Jan 2023 08:00:00 -0700</pubDate>
+      <guid>https://example.org/tags/subtyping/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spring</title>
+      <link>https://example.org/tags/spring/</link>
+      <pubDate>Fri, 30 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/spring/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Unit Testing</title>
+      <link>https://example.org/tags/unit-testing/</link>
+      <pubDate>Fri, 30 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/unit-testing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Development</title>
+      <link>https://example.org/tags/web-development/</link>
+      <pubDate>Fri, 30 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/web-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Commentary</title>
+      <link>https://example.org/tags/commentary/</link>
+      <pubDate>Thu, 29 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/commentary/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Economics</title>
+      <link>https://example.org/tags/economics/</link>
+      <pubDate>Thu, 29 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/economics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Medium</title>
+      <link>https://example.org/tags/medium/</link>
+      <pubDate>Thu, 29 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/medium/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Southeast Asia</title>
+      <link>https://example.org/tags/southeast-asia/</link>
+      <pubDate>Thu, 29 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/southeast-asia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Translation</title>
+      <link>https://example.org/tags/translation/</link>
+      <pubDate>Thu, 29 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/translation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vietnam</title>
+      <link>https://example.org/tags/vietnam/</link>
+      <pubDate>Thu, 29 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/vietnam/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Writing</title>
+      <link>https://example.org/tags/writing/</link>
+      <pubDate>Thu, 29 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/writing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Analogy</title>
+      <link>https://example.org/tags/analogy/</link>
+      <pubDate>Tue, 27 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/analogy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>API</title>
+      <link>https://example.org/tags/api/</link>
+      <pubDate>Tue, 27 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/api/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Backend</title>
+      <link>https://example.org/tags/backend/</link>
+      <pubDate>Tue, 27 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/backend/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Environment</title>
+      <link>https://example.org/tags/environment/</link>
+      <pubDate>Tue, 27 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/environment/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Frontend</title>
+      <link>https://example.org/tags/frontend/</link>
+      <pubDate>Tue, 27 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/frontend/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pollution Control</title>
+      <link>https://example.org/tags/pollution-control/</link>
+      <pubDate>Tue, 27 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/pollution-control/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Singapore</title>
+      <link>https://example.org/tags/singapore/</link>
+      <pubDate>Tue, 27 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/singapore/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Urban Planning</title>
+      <link>https://example.org/tags/urban-planning/</link>
+      <pubDate>Sun, 25 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/urban-planning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Abstraction</title>
+      <link>https://example.org/tags/abstraction/</link>
+      <pubDate>Sat, 24 Dec 2022 08:00:00 -0700</pubDate>
+      <guid>https://example.org/tags/abstraction/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software Development</title>
+      <link>https://example.org/tags/software-development/</link>
+      <pubDate>Sat, 24 Dec 2022 08:00:00 -0700</pubDate>
+      <guid>https://example.org/tags/software-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTML</title>
+      <link>https://example.org/tags/html/</link>
+      <pubDate>Thu, 22 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/html/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Simplicity</title>
+      <link>https://example.org/tags/simplicity/</link>
+      <pubDate>Thu, 22 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/simplicity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>UI</title>
+      <link>https://example.org/tags/ui/</link>
+      <pubDate>Thu, 22 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/ui/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ho Chi Minh City</title>
+      <link>https://example.org/tags/ho-chi-minh-city/</link>
+      <pubDate>Sun, 18 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/ho-chi-minh-city/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Photography</title>
+      <link>https://example.org/tags/photography/</link>
+      <pubDate>Sun, 18 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/photography/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Thu Duc</title>
+      <link>https://example.org/tags/thu-duc/</link>
+      <pubDate>Sun, 18 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/thu-duc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Practical</title>
+      <link>https://example.org/tags/practical/</link>
+      <pubDate>Fri, 09 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/practical/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Uncle Bob</title>
+      <link>https://example.org/tags/uncle-bob/</link>
+      <pubDate>Wed, 07 Dec 2022 08:00:00 -0700</pubDate>
+      <guid>https://example.org/tags/uncle-bob/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Exception</title>
+      <link>https://example.org/tags/exception/</link>
+      <pubDate>Sun, 04 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/exception/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hibernate</title>
+      <link>https://example.org/tags/hibernate/</link>
+      <pubDate>Sun, 04 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/hibernate/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JPA</title>
+      <link>https://example.org/tags/jpa/</link>
+      <pubDate>Sun, 04 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/jpa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Open Source</title>
+      <link>https://example.org/tags/open-source/</link>
+      <pubDate>Wed, 30 Nov 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/open-source/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Try-With-Resource</title>
+      <link>https://example.org/tags/try-with-resource/</link>
+      <pubDate>Tue, 29 Nov 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/try-with-resource/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Functional Interface</title>
+      <link>https://example.org/tags/functional-interface/</link>
+      <pubDate>Sun, 27 Nov 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/functional-interface/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Method Reference</title>
+      <link>https://example.org/tags/method-reference/</link>
+      <pubDate>Sun, 27 Nov 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/method-reference/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Code Review</title>
+      <link>https://example.org/tags/code-review/</link>
+      <pubDate>Tue, 22 Nov 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/code-review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Coding Test</title>
+      <link>https://example.org/tags/coding-test/</link>
+      <pubDate>Mon, 01 Nov 2021 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/coding-test/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Stream</title>
+      <link>https://example.org/tags/stream/</link>
+      <pubDate>Mon, 01 Nov 2021 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/stream/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Annotation</title>
+      <link>https://example.org/tags/annotation/</link>
+      <pubDate>Tue, 19 Oct 2021 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/annotation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Testing</title>
+      <link>https://example.org/tags/testing/</link>
+      <pubDate>Tue, 19 Oct 2021 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/testing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Comment</title>
+      <link>https://example.org/tags/comment/</link>
+      <pubDate>Sun, 17 Oct 2021 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/comment/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Disqus</title>
+      <link>https://example.org/tags/disqus/</link>
+      <pubDate>Sun, 17 Oct 2021 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/disqus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Doks</title>
+      <link>https://example.org/tags/doks/</link>
+      <pubDate>Sun, 17 Oct 2021 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/doks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>https://example.org/tags/hugo/</link>
+      <pubDate>Sun, 17 Oct 2021 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kubernetes</title>
+      <link>https://example.org/tags/kubernetes/</link>
+      <pubDate>Sun, 13 Sep 2020 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Transactional</title>
+      <link>https://example.org/tags/transactional/</link>
+      <pubDate>Thu, 10 Sep 2020 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/transactional/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bootstrap</title>
+      <link>https://example.org/tags/bootstrap/</link>
+      <pubDate>Mon, 20 Apr 2020 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/bootstrap/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>React</title>
+      <link>https://example.org/tags/react/</link>
+      <pubDate>Mon, 20 Apr 2020 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/react/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ejb</title>
+      <link>https://example.org/tags/ejb/</link>
+      <pubDate>Tue, 10 Sep 2013 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/ejb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Old Blog</title>
+      <link>https://example.org/tags/old-blog/</link>
+      <pubDate>Tue, 10 Sep 2013 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/old-blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VBA</title>
+      <link>https://example.org/tags/vba/</link>
+      <pubDate>Tue, 10 Sep 2013 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/vba/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shell</title>
+      <link>https://example.org/tags/shell/</link>
+      <pubDate>Mon, 22 Jul 2013 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/shell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Unix</title>
+      <link>https://example.org/tags/unix/</link>
+      <pubDate>Mon, 22 Jul 2013 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/unix/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Database</title>
+      <link>https://example.org/tags/database/</link>
+      <pubDate>Sun, 16 Jun 2013 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/database/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sql</title>
+      <link>https://example.org/tags/sql/</link>
+      <pubDate>Sun, 16 Jun 2013 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/sql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>https://example.org/tags/security/</link>
+      <pubDate>Sat, 18 May 2013 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web</title>
+      <link>https://example.org/tags/web/</link>
+      <pubDate>Sat, 18 May 2013 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/web/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jsr303 Bean Validation</title>
+      <link>https://example.org/tags/jsr303-bean-validation/</link>
+      <pubDate>Thu, 20 Dec 2012 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/jsr303-bean-validation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jdbc</title>
+      <link>https://example.org/tags/jdbc/</link>
+      <pubDate>Wed, 24 Oct 2012 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/jdbc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Transaction</title>
+      <link>https://example.org/tags/transaction/</link>
+      <pubDate>Wed, 24 Oct 2012 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/transaction/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Miscellaneous</title>
+      <link>https://example.org/tags/miscellaneous/</link>
+      <pubDate>Tue, 10 Jul 2012 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/miscellaneous/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>XML</title>
+      <link>https://example.org/tags/xml/</link>
+      <pubDate>Fri, 09 Mar 2012 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/xml/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>UI/UX</title>
+      <link>https://example.org/tags/ui/ux/</link>
+      <pubDate>Thu, 24 Feb 2011 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/ui/ux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dependency Injection</title>
+      <link>https://example.org/tags/dependency-injection/</link>
+      <pubDate>Thu, 10 Feb 2011 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/dependency-injection/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Design</title>
+      <link>https://example.org/tags/design/</link>
+      <pubDate>Thu, 10 Feb 2011 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Entrepreneurial</title>
+      <link>https://example.org/tags/entrepreneurial/</link>
+      <pubDate>Thu, 10 Feb 2011 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/entrepreneurial/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Innovation</title>
+      <link>https://example.org/tags/innovation/</link>
+      <pubDate>Thu, 10 Feb 2011 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/innovation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Israel</title>
+      <link>https://example.org/tags/israel/</link>
+      <pubDate>Thu, 10 Feb 2011 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/israel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Singleton</title>
+      <link>https://example.org/tags/singleton/</link>
+      <pubDate>Thu, 10 Feb 2011 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/singleton/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Static Method</title>
+      <link>https://example.org/tags/static-method/</link>
+      <pubDate>Thu, 10 Feb 2011 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/static-method/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Certification</title>
+      <link>https://example.org/tags/certification/</link>
+      <pubDate>Sun, 09 Jan 2011 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/certification/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Learning</title>
+      <link>https://example.org/tags/learning/</link>
+      <pubDate>Sun, 09 Jan 2011 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Architecture</title>
+      <link>https://example.org/tags/architecture/</link>
+      <pubDate>Thu, 06 Jan 2011 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/architecture/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Framework</title>
+      <link>https://example.org/tags/framework/</link>
+      <pubDate>Thu, 06 Jan 2011 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/framework/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Copyright Law</title>
+      <link>https://example.org/tags/copyright-law/</link>
+      <pubDate>Tue, 21 Dec 2010 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/copyright-law/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Algorithm</title>
+      <link>https://example.org/tags/algorithm/</link>
+      <pubDate>Sun, 12 Dec 2010 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sort</title>
+      <link>https://example.org/tags/sort/</link>
+      <pubDate>Sun, 12 Dec 2010 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/sort/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ejb3</title>
+      <link>https://example.org/tags/ejb3/</link>
+      <pubDate>Sat, 20 Nov 2010 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/ejb3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>J2ee</title>
+      <link>https://example.org/tags/j2ee/</link>
+      <pubDate>Sat, 20 Nov 2010 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/j2ee/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Debugging</title>
+      <link>https://example.org/tags/debugging/</link>
+      <pubDate>Tue, 26 Oct 2010 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/debugging/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Weblogic</title>
+      <link>https://example.org/tags/weblogic/</link>
+      <pubDate>Tue, 26 Oct 2010 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/weblogic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tagfile</title>
+      <link>https://example.org/tags/tagfile/</link>
+      <pubDate>Wed, 24 Mar 2010 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/tagfile/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Interesting</title>
+      <link>https://example.org/tags/interesting/</link>
+      <pubDate>Wed, 10 Mar 2010 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/interesting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Self-Sign Certificate</title>
+      <link>https://example.org/tags/self-sign-certificate/</link>
+      <pubDate>Wed, 03 Feb 2010 09:19:42 +0100</pubDate>
+      <guid>https://example.org/tags/self-sign-certificate/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

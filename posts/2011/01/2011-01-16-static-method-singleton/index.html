@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>Static method vs Singleton class</title>
+<meta data-rh="true" property="og:url" content="https://example.org/posts/2011/01/2011-01-16-static-method-singleton/">
+<meta data-rh="true" property="og:title" content="Static method vs Singleton class">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2011/01/2011-01-16-static-method-singleton/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+  <meta property="og:image" content="https://example.org/geraldnguyen-profile.jpg" data-rh="true">
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>Static method vs Singleton class</h1>
+
+<h2 class="subtitle">Sometimes we write java class that has no state, each of its method is self-sufficient. It&#39;s then make sense (convenience, performance gain included) to convert those methods into static. Or, we can apply Singleton pattern on that class. So, which way?</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://example.org/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>3 min read</span>
+      <span>·</span>
+      <span><time datetime="2011-01-16T09:19:42&#43;01:00">January 16, 2011</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2011/01/2011-01-09-how-sun-certification-exam-prepared/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2011/01/2011-01-23-harvey-balls/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#static-method">Static method</a></li>
+    <li><a href="#singleton">Singleton</a></li>
+    <li><a href="#inversion-of-control--dependency-injection">Inversion of Control / Dependency Injection</a></li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <h1 id="static-method">Static method</h1>
+<p>It really depends. If you hate storing object reference or passing it around, static is a excellent tool.</p>
+<p>But remember: <code>static</code> method CANNOT be overridden by sub-classing, it&rsquo;s only hidden. Refer to <a href="http://faq.javaranch.com/view?OverridingVsHiding">http://faq.javaranch.com/view?OverridingVsHiding</a> for a simple explanation. (Side note: invoking a static method on a object reference only brings confusion, it&rsquo;s the variable data type that determine which static method&rsquo;s code will execute - remember: <strong>hidden</strong>, not overridden).</p>
+<p>Since static method cannot be overridden, the polymorphism power of OOP is lost, and we fall back to the realm of procedural programming. Some even complain about the difficult of unit testing with static method.</p>
+<h1 id="singleton">Singleton</h1>
+<p>Singleton, in contrast, preserve the polymorphism of OOP while mimic the behavior of static methods. The only inconvenience is that you must have created and maintain references to the singleton object. In that case, util method can ease pretty much of that inconvenience. But be WARNED, it&rsquo;s not that straightforward.</p>
+<p>The most simple way to implement Singleton is, however, not thread-safe:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#998;font-style:italic">// not thread-safe</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">static</span><span style="color:#bbb"> </span>MySingleton<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">getInstance</span>()<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">if</span><span style="color:#bbb"> </span>(_instance<span style="color:#000;font-weight:bold">==</span><span style="color:#000;font-weight:bold">null</span>)<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>_instance<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">new</span><span style="color:#bbb"> </span>MySingleton();<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>_instance;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>Double checking may look clever but it CAN fail and give you hard-to-debug mysterious problem</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#998;font-style:italic">// not safe and CAN fail</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">static</span><span style="color:#bbb"> </span>MySingleton<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">getInstance</span>()<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">if</span><span style="color:#bbb"> </span>(_instance<span style="color:#000;font-weight:bold">==</span><span style="color:#000;font-weight:bold">null</span>)<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">synchronized</span><span style="color:#bbb"> </span>(MySingleton.<span style="color:#008080">class</span>)<span style="color:#bbb"> </span>{<span style="color:#bbb"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#000;font-weight:bold">if</span><span style="color:#bbb"> </span>((_instance<span style="color:#000;font-weight:bold">==</span><span style="color:#000;font-weight:bold">null</span>)<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span>_instance<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">new</span><span style="color:#bbb"> </span>MySingleton();<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>_instance;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>Only this seems to work:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#998;font-style:italic">// correct solution</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">synchronized</span><span style="color:#bbb"> </span>MySingleton<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">getInstance</span>()<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">if</span><span style="color:#bbb"> </span>(_instance<span style="color:#000;font-weight:bold">==</span><span style="color:#000;font-weight:bold">null</span>)<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>_instance<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">new</span><span style="color:#bbb"> </span>MySingleton();<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>_instance;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>More information here: <a href="http://java.sun.com/developer/technicalArticles/Programming/singletons/">http://java.sun.com/developer/technicalArticles/Programming/singletons/</a></p>
+<h1 id="inversion-of-control--dependency-injection">Inversion of Control / Dependency Injection</h1>
+<p>Beside the above, there&rsquo;s a new way to employ Singleton pattern: <strong>Inversion of Control</strong>. IoC such as Spring often creates only 1 instance of any declare bean, such is exactly the expected result of Singleton pattern.</p>
+<p>Strictly speaking, Spring&rsquo;s singleton is not the Singleton.</p>
+<blockquote>
+<p>&ldquo;Please be aware that Spring&rsquo;s concept of a singleton bean is quite different from the Singleton pattern as defined in the seminal Gang of Four (GoF) patterns book. The GoF Singleton hard codes the scope of an object such that one and only one instance of a particular class will ever be created per ClassLoader. The scope of the Spring singleton is best described as per container and per bean. This means that if you define one bean for a particular class in a single Spring container, then the Spring container will create one and only one instance of the class defined by that bean definition&rdquo;</p>
+</blockquote>
+<p>But the core concept is still the same: 1 single instance per definition (be it at classical Java class context, or Spring bean definition).</p>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/design/">Design</a></li>
+        <li><a href="/tags/static-method/">Static Method</a></li>
+        <li><a href="/tags/singleton/">Singleton</a></li>
+        <li><a href="/tags/dependency-injection/">Dependency Injection</a></li>
+        <li><a href="/tags/old-blog/">Old Blog</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

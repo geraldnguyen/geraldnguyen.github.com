@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>SOLID in Action — the Open-closed Principle</title>
+<meta data-rh="true" property="og:url" content="https://example.org/posts/2022/12/solid-open-close-principle/">
+<meta data-rh="true" property="og:title" content="SOLID in Action — the Open-closed Principle">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2022/12/solid-open-close-principle/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>SOLID in Action — the Open-closed Principle</h1>
+
+<h2 class="subtitle">“A software entities (classes, modules, functions, etc.) should be open for extension but closed for modification”</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://example.org/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>5 min read</span>
+      <span>·</span>
+      <span><time datetime="2022-12-24T08:00:00-07:00">December 24, 2022</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2022/12/simple-code-effective-ui-month-picker/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2022/12/singapore-city-in-a-garden/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1--inheritance">#1 — Inheritance</a></li>
+    <li><a href="#2--polymorphism">#2 — Polymorphism</a>
+      <ul>
+        <li><a href="#_ocp-via-abstraction-is-broader-and-more-robust_"><em>OCP via Abstraction is broader and more robust.</em></a></li>
+      </ul>
+    </li>
+    <li><a href="#3--built-for-extension">#3 — Built for extension</a>
+      <ul>
+        <li><a href="#plug-in-add-on-add-in">Plug-in, Add-on, Add-in</a></li>
+        <li><a href="#apis-events">APIs, Events</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <figure><img src="/posts/2022/12/solid-open-close-principle/0_eqhYFU2kNfQ0TrN9.jpg"
+    alt="Photo by Richard Balog on Unsplash"><figcaption>
+      <p>Photo by <a href="https://unsplash.com/@ricsard?utm_source=medium&amp;utm_medium=referral">Richard Balog</a> on <a href="https://unsplash.com/?utm_source=medium&amp;utm_medium=referral">Unsplash</a></p>
+    </figcaption>
+</figure>
+
+<p>In the physical world, a door closed is a closed door. In the software world, a closed entity may still be open for extension. And it should be so, according to the Open-closed principle (OCP).</p>
+<p>There are 2 popular ways to apply this principle. We are going to discuss them both.</p>
+<p>And a third option.</p>
+<h1 id="1--inheritance">#1 — Inheritance</h1>
+<p>This is the original application of OCP. <a href="https://en.wikipedia.org/wiki/Bertrand_Meyer">Bertrand Meyer</a>, who introduced the term in his 1988 book <em>Object-Oriented Software Construction</em>, intended that:</p>
+<blockquote>
+<p>A class is closed, since it may be compiled, stored in a library, baselined, and used by client classes. But it is also open, since any new class may use it as parent, adding new features. When a descendant class is defined, there is no need to change the original or to disturb its clients.</p>
+</blockquote>
+<figure><img src="/posts/2022/12/solid-open-close-principle/0_K1ybfgKhmBmbZHbJ.png"
+    alt="Car and its associations"><figcaption>
+      <p>Car and its associations</p>
+    </figcaption>
+</figure>
+
+<p><code>Car</code> is <em>closed</em> because its source code is not available for modification, or because it is used by other client classes which would not approve of any changes.</p>
+<p>But <code>Car</code> is <em>open</em> for extension. Extending <code>Car</code> is in fact easy. A sub-type, <code>ElectricCar</code>, can extend from its parent class<code>Car</code>, supplying the actual values to the<code>model</code> and <code>seats</code> properties, and adding a new <code>batteryLevel</code> property and a new<code>recharge()</code> method.</p>
+<h1 id="2--polymorphism">#2 — Polymorphism</h1>
+<p>The 1990s saw the OCP re-interpreted to promote polymorphism via abstraction and implementation. According to Robert C. Martin’s “<a href="https://docs.google.com/a/cleancoder.com/viewer?a=v&amp;pid=explorer&amp;chrome=true&amp;srcid=0BwhCYaYDn8EgN2M5MTkwM2EtNWFkZC00ZTI3LWFjZTUtNTFhZGZiYmUzODc1&amp;hl=en">the Open-Closed Principle</a>” article:</p>
+<blockquote>
+<p>Abstraction is the key</p>
+</blockquote>
+<p><strong>Abstraction</strong>, according to Uncle Bob, is closed for modification yet open for extension through its unbounded implementations.</p>
+<p>Consider the abstraction provided by <code>Car</code>. It is fixed and therefore <em>closed</em>. As far as <code>UrbanTripPlanner</code> concerns, <code>Car</code> provides 2 properties (<code>model</code> and <code>seats</code>) and 2 methods (<code>getSpeed()</code> and <code>getPosition()</code>).</p>
+<p>Implementations of <code>Car</code>, either directly e.g. <code>ToyotaVios</code> or indirectly e.g. <code>TelsaModel3</code>, extend this abstraction with concrete information and behavior of a specific car’s model, number of seats, current speed, and current position. Thus, <code>Car</code> is <em>open</em> for extension.</p>
+<p>Compare with Inheritance, this interpretation of OCP focuses on the extension of concrete implementation to the <em>declared abstraction</em>. All extra properties, methods, or types introduced through Inheritance are ignored.</p>
+<h2 id="_ocp-via-abstraction-is-broader-and-more-robust_"><em>OCP via Abstraction is broader and more robust.</em></h2>
+<p>Let’s expand our view beyond <code>Car</code> to include<code>UrbanTripPlanner</code> and its implementations. If they know anything about <code>EletricCar</code>, then the behavior declared in the method <code>searchDirection(Car, Position, Position)</code> would violate the OCP principle, as it must be modified, thus no longer closed, to support the new type of <code>Car</code>. To avoid this violation is to ignore the identities of all <code>Car</code>’s sub-types and their extra properties and methods. That effectively trims Inheritance’s effect to just implementing <code>Car</code>’s abstraction.</p>
+<p>In addition, with abstraction, we enjoy much built-in support in Object-oriented programming languages and modern IDEs. Forgetting to implement a method? it is a compilation error. Wanting to accept a list of <code>Car</code> in a type-safe manner? Generic <code>List&lt;? extend Car&gt;</code> to the rescue. In our example, because<code>UrbanTripPlanner</code> only cares for <code>Car</code>, as long as <code>ToyotaVios</code>, <code>TeslaModel3</code> implement <code>Car</code>, our program is fine.</p>
+<figure><img src="/posts/2022/12/solid-open-close-principle/1_Wob8qj7FygA8GBeoEhS-qg.png"
+    alt="A Car abstraction — By DALL-E AI"><figcaption>
+      <p>A Car abstraction — By DALL-E AI</p>
+    </figcaption>
+</figure>
+
+<h1 id="3--built-for-extension">#3 — Built for extension</h1>
+<p>We have seen how Inheritance and Abstraction help us achieve the OCP. These two mechanisms are general tools determined by our choice of programming language or design decisions.</p>
+<p>In this section, we will explore the third approach to OCP in which the mechanism is more nuts-and-bolts to us. It is either directly coded in our program or indirectly provided by a library or framework that we use.</p>
+<h2 id="plug-in-add-on-add-in">Plug-in, Add-on, Add-in</h2>
+<p>These are simply different names for the same concept. According to <a href="https://www.britannica.com/technology/plug-in">Britannica</a>:</p>
+<blockquote>
+<p>plug-in, also called add-on or extension, computer software that adds new functions to a host program without altering the host program itself</p>
+</blockquote>
+<p>Plug-in is thus an obvious example of <em>openness</em> in built-for-extension host programs.</p>
+<p>Different types of software exist that depend heavily on extensions. For us developers, this should be intimately familiar as we use productivity and language plugins on a daily basis in our favorite IDE such as VSCode, Eclipse, and IntelliJ. Some browser extensions are invaluable to internet users. Plenty of emoji packs and filters exist to enhance the experience of mobile users…</p>
+<figure><img src="/posts/2022/12/solid-open-close-principle/0_gyhqGMvsWF1f40Q7.jpg"
+    alt="Photo by Ferenc Almasi on Unsplash"><figcaption>
+      <p>Photo by <a href="https://unsplash.com/@flowforfrank?utm_source=medium&amp;utm_medium=referral">Ferenc Almasi</a> on <a href="https://unsplash.com/?utm_source=medium&amp;utm_medium=referral">Unsplash</a></p>
+    </figcaption>
+</figure>
+
+<h2 id="apis-events">APIs, Events</h2>
+<p>A related, but merits its own sub-category, under build-for-extension is API and Events.</p>
+<p>The best-known extensions under this sub-category are HTML, CSS, and javascript codes. They all extend the functionality of the browser without modifying the internal of their host. They are made possible through the availability of API and Events defined by the browser’s programmable interface. <a href="https://html.spec.whatwg.org/multipage/">Standardization efforts</a> exist and have largely driven the development of the current Web 2.0 and Web 3.0 landscapes.</p>
+<figure><img src="/posts/2022/12/solid-open-close-principle/0_RUdrf75lTb7atrgD.png"
+    alt="https://commons.wikimedia.org/wiki/File:WHATWG_DOM.png"><figcaption>
+      <p><a href="https://commons.wikimedia.org/wiki/File:WHATWG_DOM.png">https://commons.wikimedia.org/wiki/File:WHATWG_DOM.png</a></p>
+    </figcaption>
+</figure>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>The OCP is certainly among the most important principles in Software Engineering. It provides protection against unwanted, inconsiderate changes yet allows extension when necessary.</p>
+<p>We have visited two traditional ways of applying this principle: Inheritance and Abstraction. Arguably, Abstraction is preferred with a broader impact and more robust effect.</p>
+<p>We also examined a third option for applying the principle. There are 2 prominent sub-categories, Plugins and APIs &amp; Events under this approach.</p>
+
+
+<div class="page-break" role="separator">
+  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+</div>
+<p>If you like this article, please <a href="https://geraldnguyen.medium.com/subscribe">follow me</a> for more quality content.</p>
+<p>Other articles in this series:</p>
+<ul>
+<li><a href="https://example.org/posts/2022/12/becoming-a-solid-developer/">Becoming a SOLID developer</a></li>
+<li><a href="https://example.org/posts/2022/12/solid-single-responsibility-principle/">SOLID in Action — the Single Responsibility Principle</a></li>
+<li><a href="https://example.org/posts/2022/12/solid-open-close-principle/">SOLID in Action — the Open-closed principle</a></li>
+<li><a href="https://example.org/posts/2023/01/solid-liskov-substitution-principle/">SOLID in Action — the Liskov Substitution principle</a></li>
+<li><a href="https://example.org/posts/2023/01/solid-interface-segregation-principle/">SOLID in Action — the Interface Segregation principle</a></li>
+<li><a href="https://example.org/posts/2023/02/solid-dependency-inversion-principle/">SOLID in Action — the Dependency Inversion principle</a></li>
+</ul>
+<p>Thank you.</p>
+
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/software-engineering/">Software Engineering</a></li>
+        <li><a href="/tags/solid-principles/">SOLID Principles</a></li>
+        <li><a href="/tags/software-development/">Software Development</a></li>
+        <li><a href="/tags/object-oriented/">Object Oriented</a></li>
+        <li><a href="/tags/abstraction/">Abstraction</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

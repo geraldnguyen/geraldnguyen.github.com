@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>UI on Gerald Nguyen</title>
+    <link>https://example.org/tags/ui/</link>
+    <description>Recent content in UI on Gerald Nguyen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 Dec 2022 09:19:42 +0100</lastBuildDate>
+    <atom:link href="https://example.org/tags/ui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simple Code — Effective UI — Month Picker</title>
+      <link>https://example.org/posts/2022/12/simple-code-effective-ui-month-picker/</link>
+      <pubDate>Thu, 22 Dec 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2022/12/simple-code-effective-ui-month-picker/</guid>
+      <description>Option 1: separate Month and Year dropdowns Separate month and year dropdowns&#xA;It may be verbose, but you have total control over their placements, label, and format&#xA;&amp;lt;select&amp;gt; &amp;lt;option&amp;gt;January&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;February&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;March&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;April&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;May&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;June&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;July&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;August&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;September&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;October&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;November&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;December&amp;lt;/option&amp;gt; &amp;lt;/select&amp;gt; Month &amp;lt;select&amp;gt; &amp;lt;option&amp;gt;2021&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;2022&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;2023&amp;lt;/option&amp;gt; &amp;lt;/select&amp;gt; Year Option 2: use the browser’s built-in month picker Built-in month picker&#xA;You have less control over the picker’s appearance, but the code is much cleaner.</description>
+    </item>
+    <item>
+      <title>How do you display input validation error</title>
+      <link>https://example.org/posts/2011/02/2011-02-24-display-input-validation-error/</link>
+      <pubDate>Thu, 24 Feb 2011 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2011/02/2011-02-24-display-input-validation-error/</guid>
+      <description>Display errors in red below each invalid input field Blogger: https://www.google.com/accounts/CreateAccount?continue=https%3A%2F%2Fwww.blogger.com%2Floginz%3Fd%3Dhttp%253A%252F%252Fwww.blogger.com%252Fhome%26a%3DADD_SERVICE_FLAG&amp;amp;hl=en_GB&amp;amp;service=blogger&amp;amp;skipvpage=true&amp;amp;ltmpl=start&amp;amp;naui=8&#xA;Yahoo Mail: https://edit.yahoo.com/registration?.intl=us&amp;amp;.pd=ym_ver%253D0%2526c%253D%2526ivt%253D%2526sg%253D&amp;amp;new=1&amp;amp;.done=http%3A//mail.yahoo.com&amp;amp;.src=ym&amp;amp;.v=0&amp;amp;.u=cgf061p6mc1fm&amp;amp;partner=&amp;amp;.partner=&amp;amp;pkg=&amp;amp;stepid=&amp;amp;.p=&amp;amp;promo=&amp;amp;.last=&#xA;Oracle Forum: https://myprofile.oracle.com/EndUser/faces/profile/createUser.jspx?nextURL=http%3A%2F%2Fforums.oracle.com&#xA;Twitter: https://twitter.com/account/create&#xA;Esnip (on Firefox): http://www.esnips.com/NewAccountAction.ns?action=init&#xA;Hotmail: https://signup.live.com/signup.aspx?id=64855&amp;amp;mkt=en-US&amp;amp;form=MWGELB&amp;amp;publ=SIGNINHM&amp;amp;crea=SITEACQ_CIMS015888_Hotmail_EN-US_0x0_36214&amp;amp;lic=1&#xA;Job Street: http://myjobstreet.jobstreet.com/registration/quick-register.php?site=sg&amp;amp;deposit_through=s&#xA;JobsDB: http://sg.jobsdb.com/SG/EN/JobSeeker/Registration&#xA;Property Guru: http://www.propertyguru.com.sg/register#top&#xA;Display an generic message at the top of the page + Display errors in red below each invalid input field Vietnamework.com: http://www.vietnamworks.com/jobseekers/signup.php?lang=2#err_top&#xA;Apple Store: https://store.apple.com/1800-MY-APPLE/WebObjects/singaporestore.woa/920184021/wo/nZMi8SOBKCCj343MT1tza3xYBZk/5.0.16.9.5.1.1.0.1&#xA;Display all invalid error at the top of the page Amazon.com: https://www.amazon.com/ap/signin?ie=UTF8&amp;amp;pf_rd_r=05JGGPJ2RGK60ME9AEBM&amp;amp;pf_rd_m=ATVPDKIKX0DER&amp;amp;pf_rd_t=6301&amp;amp;pf_rd_i=usflex&amp;amp;pf_rd_p=1277563402&amp;amp;pf_rd_s=signin-slot</description>
+    </item>
+  </channel>
+</rss>

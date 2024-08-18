@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>Combine EJB and WAR file in a same web service EAR</title>
+<meta data-rh="true" property="og:url" content="https://example.org/posts/2010/03/2010-03-02-combine-ejb-war-in-ear/">
+<meta data-rh="true" property="og:title" content="Combine EJB and WAR file in a same web service EAR">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2010/03/2010-03-02-combine-ejb-war-in-ear/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+  <meta property="og:image" content="https://example.org/geraldnguyen-profile.jpg" data-rh="true">
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>Combine EJB and WAR file in a same web service EAR</h1>
+
+<h2 class="subtitle"></h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://example.org/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>3 min read</span>
+      <span>·</span>
+      <span><time datetime="2010-03-02T09:19:42&#43;01:00">March 2, 2010</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2010/02/2010-02-03-weblogic-2way-ssl/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2010/03/2010-03-10-interesting/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#1-first-of-all-let-have-some-understanding-of-the-structure-of-a-ear-file">1. First of all, let have some understanding of the structure of a EAR file.</a></li>
+            <li><a href="#2-class-loading-where-you-can-place-librarycode-shared-by-both-war-file-and-ejb">2. Class-loading. Where you can place library/code shared by both WAR file and EJB.</a></li>
+            <li><a href="#3-build-order">3. Build order.</a></li>
+            <li><a href="#4-project-structure">4. Project Structure</a></li>
+            <li><a href="#5-ant-script">5. Ant script</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <p>That has been my challenge since yesterday. And I think I have just got it :D</p>
+<p>Let&rsquo;s see if I can reconstruct a step-by-step manual:</p>
+<h3 id="1-first-of-all-let-have-some-understanding-of-the-structure-of-a-ear-file">1. First of all, let have some understanding of the structure of a EAR file.</h3>
+<p>EAR stands for Enterprise ARchive. It&rsquo;s a convenient mean to to pack and deploy components of an enterprise application. Essentially, you can pack WAR, EJB, Resource Adapter and supporting libraries inside a EAR file. Having them all in one place, as a single unit tremendously helps release management and deployment. But it does pose some challenges in the context of class-loading.</p>
+<p>For weblogic application, each EAR file must contain a application.xml file under META-INF. jwsc will automatically generate this file is none is specified in its applicationXml attribute. However, the generated file only contain 1 entry - the WAR file. In order to use EJB, we will need to overwrite that file by our own. The below ant script will do the work:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#000080">&lt;copy</span> <span style="color:#008080">overwrite=</span><span style="color:#d14">&#34;true&#34;</span> <span style="color:#008080">todir=</span><span style="color:#d14">&#34;${env.MATRIX_CODEBASE}/${project}/build/ear/META-INF&#34;</span><span style="color:#000080">&gt;</span>               
+</span></span><span style="display:flex;"><span>    <span style="color:#000080">&lt;FileSet</span> <span style="color:#008080">dir=</span><span style="color:#d14">&#34;${env.MATRIX_CODEBASE}/${project}/etc&#34;</span><span style="color:#000080">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000080">&lt;include</span> <span style="color:#008080">name=</span><span style="color:#d14">&#34;application.xml&#34;</span> <span style="color:#000080">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000080">&lt;/FileSet&gt;</span>           
+</span></span><span style="display:flex;"><span><span style="color:#000080">&lt;/copy&gt;</span>
+</span></span></code></pre></div><h3 id="2-class-loading-where-you-can-place-librarycode-shared-by-both-war-file-and-ejb">2. Class-loading. Where you can place library/code shared by both WAR file and EJB.</h3>
+<p>Web application load classes from either their <code>WEB-INF/classes</code> or <code>WEB-INF/lib</code> directories. EJB as JAR file can depends on dependency mapping in its MANIFEST file.</p>
+<p>But be careful when we pack them together. Weblogic class-loaders are organized into hierarchy with Webapp class-loader below EJB&rsquo;s. Class-loading hell, as I saw the term somewhere, is used to refered to situation when a single class is loaded by both webapp and EJB class-loaders. Everything seems correct, webapp and EJB work fine on their own, but the application breaks down the minute those 2 exchanges objects of type loaded by both class-loaders.</p>
+<p>Take some minutes (or even hours) to read weblogic class-loading mechanism. Webapp is under EJB thus is able to delegate the loading task to EJB. The reverse is not possible, EJB cannot load library under webapp&rsquo;s WEB-INF/lib directory. So, it&rsquo;s safer to let EJB do class-loading.</p>
+<h3 id="3-build-order">3. Build order.</h3>
+<p>Webapp is the front-end, it&rsquo;s the one first invoked by client&rsquo;s request. It will subsequently delegate the task to EJB. So, in order to compile webapp, we will need EJB.</p>
+<h3 id="4-project-structure">4. Project Structure</h3>
+<p>EJB requires its own descriptors like ejb-jar.xml and <code>weblogic-ejb-jar.xml</code>. Enterprise Application that uses EJB also requires EJB declaration insides its application.xml. I have them all under /etc folder.</p>
+<p>Shared classes and library between EJB and webapp, as explained earlier, can be loaded by EJB class-loader. Hence, they should be stored in a same level with EJB JAR and WAR files. I group them all into -common.jar which is referenced by EJB JAR.</p>
+<p>Ok, everything prepared. Let&rsquo;s get real!</p>
+<h3 id="5-ant-script">5. Ant script</h3>
+<p>Step 1: build <code>-common.jar</code> that includes all shared java classes and configuration</p>
+<p>Step 2: build <code>-ejb.jar</code> that reference `-common.jar and shared libraries</p>
+<p>Step 3: Process JWS file with classpath includes <code>-common.jar</code>, <code>-ejb.jar</code> and shared libraries. The result is a WAR file.</p>
+<p>Step 4: Pack all generated file into an EAR file.</p>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/j2ee/">J2ee</a></li>
+        <li><a href="/tags/tutorial/">Tutorial</a></li>
+        <li><a href="/tags/old-blog/">Old Blog</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

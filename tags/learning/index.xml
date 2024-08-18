@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learning on Gerald Nguyen</title>
+    <link>https://example.org/tags/learning/</link>
+    <description>Recent content in Learning on Gerald Nguyen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Jan 2011 09:19:42 +0100</lastBuildDate>
+    <atom:link href="https://example.org/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How Sun&#39;s certification exam are prepared</title>
+      <link>https://example.org/posts/2011/01/2011-01-09-how-sun-certification-exam-prepared/</link>
+      <pubDate>Sun, 09 Jan 2011 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2011/01/2011-01-09-how-sun-certification-exam-prepared/</guid>
+      <description>&amp;ldquo;Without getting into too much detail, I can tell you some of what Sun did to create their various Java certification exams. So, in the old Sun days&amp;hellip;&#xA;The whole process to create a new exam takes a long time. A first team of experts is assembled and for several months the team develops a new set of objectives. Once created, the new set of objectives go through all sorts of vetting / verification processes.</description>
+    </item>
+  </channel>
+</rss>

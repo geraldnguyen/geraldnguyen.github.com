@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>Simple Code — Effective UI — Month Picker</title>
+<meta data-rh="true" property="og:url" content="https://example.org/posts/2022/12/simple-code-effective-ui-month-picker/">
+<meta data-rh="true" property="og:title" content="Simple Code — Effective UI — Month Picker">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2022/12/simple-code-effective-ui-month-picker/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>Simple Code — Effective UI — Month Picker</h1>
+
+<h2 class="subtitle">If you want to let users pick a specific month within a year, what’s the most simple yet effective UI?</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://example.org/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>1 min read</span>
+      <span>·</span>
+      <span><time datetime="2022-12-22T09:19:42&#43;01:00">December 22, 2022</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2022/12/thu-duc-hcmc-vietnam/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2022/12/solid-open-close-principle/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#option-1-separate-month-and-year-dropdowns">Option 1: separate Month and Year dropdowns</a></li>
+    <li><a href="#option-2-use-the-browsers-built-in-month-picker">Option 2: use the browser’s built-in month picker</a></li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <h1 id="option-1-separate-month-and-year-dropdowns">Option 1: separate Month and Year dropdowns</h1>
+<figure><img src="/posts/2022/12/simple-code-effective-ui-month-picker/1_QUOjPpvTDXEzv8HbvpJbNQ.png"
+    alt="Separate month and year dropdowns"><figcaption>
+      <p>Separate month and year dropdowns</p>
+    </figcaption>
+</figure>
+
+<p>It may be verbose, but you have total control over their placements, label, and format</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#000080">select</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">option</span>&gt;January&lt;/<span style="color:#000080">option</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">option</span>&gt;February&lt;/<span style="color:#000080">option</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">option</span>&gt;March&lt;/<span style="color:#000080">option</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">option</span>&gt;April&lt;/<span style="color:#000080">option</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">option</span>&gt;May&lt;/<span style="color:#000080">option</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">option</span>&gt;June&lt;/<span style="color:#000080">option</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">option</span>&gt;July&lt;/<span style="color:#000080">option</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">option</span>&gt;August&lt;/<span style="color:#000080">option</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">option</span>&gt;September&lt;/<span style="color:#000080">option</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">option</span>&gt;October&lt;/<span style="color:#000080">option</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">option</span>&gt;November&lt;/<span style="color:#000080">option</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">option</span>&gt;December&lt;/<span style="color:#000080">option</span>&gt;  
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#000080">select</span>&gt; Month  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#000080">select</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">option</span>&gt;2021&lt;/<span style="color:#000080">option</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">option</span>&gt;2022&lt;/<span style="color:#000080">option</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">option</span>&gt;2023&lt;/<span style="color:#000080">option</span>&gt;  
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#000080">select</span>&gt; Year
+</span></span></code></pre></div><h1 id="option-2-use-the-browsers-built-in-month-picker">Option 2: use the browser’s built-in month picker</h1>
+<figure><img src="/posts/2022/12/simple-code-effective-ui-month-picker/1_dngIUpZUj098xgpOSI526w.png"
+    alt="Built-in month picker"><figcaption>
+      <p>Built-in month picker</p>
+    </figcaption>
+</figure>
+
+<p>You have less control over the picker’s appearance, but the code is much cleaner. And localization support is free.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#000080">input</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;month&#39;</span>&gt; Month
+</span></span></code></pre></div><p>You are able to make some customization. For example, to restrict users to select month-ends of 2020 quarters only</p>
+<figure><img src="/posts/2022/12/simple-code-effective-ui-month-picker/1_Oc72XbohId4t-8R5Yf36LQ.png"
+    alt="2020 quarters only"><figcaption>
+      <p>2020 quarters only</p>
+    </figcaption>
+</figure>
+
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#000080">input</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;month&#39;</span> <span style="color:#008080">min</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;2020-03&#39;</span> <span style="color:#008080">max</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;2020-12&#39;</span> <span style="color:#008080">step</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;3&#39;</span>&gt;
+</span></span></code></pre></div><p>According to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/month">MDN</a>:</p>
+<blockquote>
+<p>The control’s UI varies in general from browser to browser; at the moment support is patchy, with only Chrome/Opera and Edge on desktop — and most modern mobile browser versions — having usable implementations. In browsers that don’t support month inputs, the control degrades gracefully to a simple <code>&lt;input type=”text”&gt;</code>, although there may be automatic validation of the entered text to ensure it’s formatted as expected.</p>
+</blockquote>
+<p>As of <a href="https://caniuse.com/mdn-html_elements_input_type_month">December 2022</a>, Firefox and Safari (Desktop) are yet to support this feature, while Chrome-based browsers (including the new Edge from Microsoft) and most mobile browsers (including Safari on iOS) do.</p>
+<figure><img src="/posts/2022/12/simple-code-effective-ui-month-picker/1_mvG1IQ1HwDjwQ2A1Yf-8dg.png"
+    alt="https://caniuse.com/mdn-html_elements_input_type_month (screenshot)"><figcaption>
+      <p><a href="https://caniuse.com/mdn-html_elements_input_type_month">https://caniuse.com/mdn-html_elements_input_type_month</a> (screenshot)</p>
+    </figcaption>
+</figure>
+
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/javascript/">JavaScript</a></li>
+        <li><a href="/tags/web-development/">Web Development</a></li>
+        <li><a href="/tags/ui/">UI</a></li>
+        <li><a href="/tags/simplicity/">Simplicity</a></li>
+        <li><a href="/tags/programming/">Programming</a></li>
+        <li><a href="/tags/html/">HTML</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

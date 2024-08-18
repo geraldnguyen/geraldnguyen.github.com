@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ejb3 on Gerald Nguyen</title>
+    <link>https://example.org/tags/ejb3/</link>
+    <description>Recent content in Ejb3 on Gerald Nguyen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 20 Nov 2010 09:19:42 +0100</lastBuildDate>
+    <atom:link href="https://example.org/tags/ejb3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How do you initialize an EJB3 Stateful Session Bean ?</title>
+      <link>https://example.org/posts/2010/11/2010-11-10-initialize-ejb3-stateful-session-bean/</link>
+      <pubDate>Sat, 20 Nov 2010 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2010/11/2010-11-10-initialize-ejb3-stateful-session-bean/</guid>
+      <description>In EJB 3, we can obtain a reference to Stateful Session Bean either either by using @EJB annotation or performing JNDI look-up. Yet these 2 methods do not offer you a way to initialize a Stateful SB as EJB 2.1 Home interface&amp;rsquo;s createMETHODs do.&#xA;StatefulSB bean = home.create (arg0, arg1, arg2); EJB3 defines @Init annotation as a replacement for EJB 2.1 createMETHOD. But it is intended for bean written to 2.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BDD on Gerald Nguyen</title>
+    <link>https://example.org/tags/bdd/</link>
+    <description>Recent content in BDD on Gerald Nguyen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 May 2024 08:00:00 -0700</lastBuildDate>
+    <atom:link href="https://example.org/tags/bdd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Behavior Driven Development (BDD) with Selenium in Python</title>
+      <link>https://example.org/posts/2024/05/behavior-driven-development-bdd-with-selenium-in-python/</link>
+      <pubDate>Mon, 20 May 2024 08:00:00 -0700</pubDate>
+      <guid>https://example.org/posts/2024/05/behavior-driven-development-bdd-with-selenium-in-python/</guid>
+      <description>This is a continuation from my previous article where we learned the basic of Selenium and how to program it in Python to perform UI automation testing.&#xA;Getting started on UI automation testing using Selenium with Python&#xA;Five Minimum Viable Interview Questions series — Updated 17 Feb 2023 Interviewer: ask them if your interview is running out of time. Interviewee: practice them if your preparation is running out of time. Basics of BDD Behavior Driven Development is a popular software development discipline.</description>
+    </item>
+  </channel>
+</rss>

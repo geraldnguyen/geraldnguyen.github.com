@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tagfile on Gerald Nguyen</title>
+    <link>https://example.org/tags/tagfile/</link>
+    <description>Recent content in Tagfile on Gerald Nguyen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Mar 2010 09:19:42 +0100</lastBuildDate>
+    <atom:link href="https://example.org/tags/tagfile/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recursive Tagfile</title>
+      <link>https://example.org/posts/2010/03/2010-03-24-recursive-tagfile/</link>
+      <pubDate>Wed, 24 Mar 2010 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2010/03/2010-03-24-recursive-tagfile/</guid>
+      <description>Tagfile is a good alternative for lazy people like me who hates doing java coding and XML configuration for simple task with lots of HTML codes.&#xA;But laziness knows no limit. Just now I ended up wasting haft a day on a recursive tagfile that would otherwise be completed within 1 hour at most. Yet it was an experience that&amp;rsquo;s worth sharing.&#xA;The tagfile is named catalogue.tag. Its purpose is to display recursively a hierarchy tree of catalogues.</description>
+    </item>
+  </channel>
+</rss>

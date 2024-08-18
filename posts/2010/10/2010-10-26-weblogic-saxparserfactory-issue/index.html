@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>Weblogic SAXParserFactory Issue</title>
+<meta data-rh="true" property="og:url" content="https://example.org/posts/2010/10/2010-10-26-weblogic-saxparserfactory-issue/">
+<meta data-rh="true" property="og:title" content="Weblogic SAXParserFactory Issue">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2010/10/2010-10-26-weblogic-saxparserfactory-issue/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+  <meta property="og:image" content="https://example.org/geraldnguyen-profile.jpg" data-rh="true">
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>Weblogic SAXParserFactory Issue</h1>
+
+<h2 class="subtitle"></h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://example.org/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>2 min read</span>
+      <span>·</span>
+      <span><time datetime="2010-10-26T09:19:42&#43;01:00">October 26, 2010</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2010/03/2010-03-24-recursive-tagfile/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2010/11/2010-11-10-initialize-ejb3-stateful-session-bean/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents"></nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <p>I have just wasted 1 whole day trying to debug this issues. Since I get most help from the internet, here is what I can do in return :D</p>
+<hr>
+<p>I was trying to build a Spring 3.0 webapp with Tiles 2.2. Since Tiles depends on <code>common-digester</code> which subsequently depends on <code>SAXParserFactory</code>, I got stuck in a whole range of strange Weblogic behaviors.</p>
+<p>Firstly, I got <code>UnsupportedOperationException</code> everytime I first access the webapp. Subsequent access is fine, but the first always encounters that exception. Hours of googling tells me that the exception is due to weblogic&rsquo;s <code>RegistrySAXParserFactory</code>.</p>
+<p><strong>Lesson learnt</strong>: google with the culpit classname and method: <code>RegistrySAXParserFactory</code> + <code>setXIncludeAware</code></p>
+<p>Secondly, my <code>common-digester.jar</code> is versioned 2.0 and it called <code>SAXParserFactory.setXIncludeAware</code>. As stated in apache website, Tiles 2.2 requires <code>common-digester</code> 2.0 or higher. Yet my webapp seems to work fines with c<code>ommon-digester</code> 1.8 (which does not call <code>SAXParserFactory.setXIncludeAware</code>).</p>
+<p><strong>Lesson learnt:</strong> beware of library version, especially if your server host other applications besides yours.</p>
+<hr>
+<p>WLS 10.3 has a default factory named <code>weblogic.xml.jaxp.RegistrySAXParserFactory</code>. You can find it in the <code>weblogic.jar</code></p>
+<p>This class seems like a wrapper factory, it delegates all method calls to underlying factory. EXCEPT for 1 method: <code>setXIncludeAware</code></p>
+<p>Instead of <code>setXIncludeAware</code>, the method name is wrongly typed <code>setXInludeAware</code> (<em>missing an &lsquo;c&rsquo;</em>). Thus instead of overriding the method, it inherits the unimplemented version which always throws <code>UnsupportedOperationException</code>.</p>
+<p>Now, to fix this problem, you can try telling the JVM to ignore Weblogic factory class and use a different one. For example, include in your server startup script:
+<code>-Djavax.xml.parsers.SAXParserFactory=com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl</code></p>
+<p>Or, create an <code>lib/jaxp.properties</code> in the JRE directory. This configuration file is in standard <code>java.util.Properties</code> format and contains the fully qualified name of the implementation class with the key being the system property defined above (<a href="http://download.oracle.com/javase/6/docs/api/javax/xml/parsers/SAXParserFactory.html">http://download.oracle.com/javase/6/docs/api/javax/xml/parsers/SAXParserFactory.html</a>)</p>
+<p>Or, use WLS Filtering classloader (<a href="http://download.oracle.com/docs/cd/E13222_01/wls/docs92/programming/classloading.html#wp1097263">http://download.oracle.com/docs/cd/E13222_01/wls/docs92/programming/classloading.html#wp1097263</a>)</p>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/j2ee/">J2ee</a></li>
+        <li><a href="/tags/weblogic/">Weblogic</a></li>
+        <li><a href="/tags/debugging/">Debugging</a></li>
+        <li><a href="/tags/old-blog/">Old Blog</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

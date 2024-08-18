@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Functional Interface on Gerald Nguyen</title>
+    <link>https://example.org/tags/functional-interface/</link>
+    <description>Recent content in Functional Interface on Gerald Nguyen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 Nov 2022 09:19:42 +0100</lastBuildDate>
+    <atom:link href="https://example.org/tags/functional-interface/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java Method Reference</title>
+      <link>https://example.org/posts/2022/11/java-method-reference/</link>
+      <pubDate>Sun, 27 Nov 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2022/11/java-method-reference/</guid>
+      <description>I first learned method reference from C#, so the Java concept is familiar to me. Or that’s what I thought until I picked up the Modern Java Recipes book.&#xA;In this article, we’ll explore 3 forms of method references in Java&#xA;object::instanceMethod Class::staticMethod Class::instanceMethod The last one is a bit more special, as we shall examine in detail&#xA;Source: author&#xA;object::instanceMethod The object::instanceMethod will invoke the referenced method on the said object with compatible arguments.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software Development on Gerald Nguyen</title>
+    <link>https://example.org/tags/software-development/</link>
+    <description>Recent content in Software Development on Gerald Nguyen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 24 Dec 2022 08:00:00 -0700</lastBuildDate>
+    <atom:link href="https://example.org/tags/software-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SOLID in Action — the Open-closed Principle</title>
+      <link>https://example.org/posts/2022/12/solid-open-close-principle/</link>
+      <pubDate>Sat, 24 Dec 2022 08:00:00 -0700</pubDate>
+      <guid>https://example.org/posts/2022/12/solid-open-close-principle/</guid>
+      <description>Photo by Richard Balog on Unsplash&#xA;In the physical world, a door closed is a closed door. In the software world, a closed entity may still be open for extension. And it should be so, according to the Open-closed principle (OCP).&#xA;There are 2 popular ways to apply this principle. We are going to discuss them both.&#xA;And a third option.&#xA;#1 — Inheritance This is the original application of OCP.</description>
+    </item>
+    <item>
+      <title>SOLID in Action — the Single Responsibility Principle</title>
+      <link>https://example.org/posts/2022/12/solid-single-responsibility-principle/</link>
+      <pubDate>Wed, 14 Dec 2022 08:00:00 -0700</pubDate>
+      <guid>https://example.org/posts/2022/12/solid-single-responsibility-principle/</guid>
+      <description>Photo by Robert Linder on Unsplash&#xA;We know the saying “Jack of all trades, master of none”. We dislike it when we are at the receiving end. We dislike it too when it is said to someone we love. That should extend to things that we love too.&#xA;We developers love the codes we created. We are proud of the function we write, the class we design, the component, the system, and the microservices… we develop.</description>
+    </item>
+    <item>
+      <title>Echo API</title>
+      <link>https://example.org/posts/2022/11/echo-api/</link>
+      <pubDate>Wed, 30 Nov 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2022/11/echo-api/</guid>
+      <description>Introduction The need for this library arose when I wanted assurance that my HTTP client was sending correctly formulated HTTP messages.&#xA;Another use of this /echo API is to capture and debug the remote calls from another service. Imagine you are providing a webhook endpoint. Before you even build one, you first need to know what incoming messages look like. Supplying an /echo API endpoint in the webhook’s registration allows you to capture and log all incoming messages</description>
+    </item>
+  </channel>
+</rss>

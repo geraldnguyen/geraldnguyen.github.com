@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Transaction on Gerald Nguyen</title>
+    <link>https://example.org/tags/transaction/</link>
+    <description>Recent content in Transaction on Gerald Nguyen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Oct 2012 09:19:42 +0100</lastBuildDate>
+    <atom:link href="https://example.org/tags/transaction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JDBC Transaction Without EJB</title>
+      <link>https://example.org/posts/2012/10/2012-10-24-jdbc-transaction-without-ejb/</link>
+      <pubDate>Wed, 24 Oct 2012 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2012/10/2012-10-24-jdbc-transaction-without-ejb/</guid>
+      <description>Create a DAO method in which you set JDBC connection’s auto-commit property to false dbConn.setAutoCommit(false); Execute all your queries stmt = dbConn.createStatement(); result = stmt.executeQuery(query); stmt.executeUpdate(update); Commit or rollback the transaction dbConn.commit(); Reset auto-commit to true again for other execution dbConn.setAutoCommit(true); This is really simple, as it should be for something purely mechanical. The challenge for every programmer is how to write your transaction code or order your queries such that you can achieve desired result.</description>
+    </item>
+  </channel>
+</rss>

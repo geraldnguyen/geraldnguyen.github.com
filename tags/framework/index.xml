@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Framework on Gerald Nguyen</title>
+    <link>https://example.org/tags/framework/</link>
+    <description>Recent content in Framework on Gerald Nguyen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 06 Jan 2011 09:19:42 +0100</lastBuildDate>
+    <atom:link href="https://example.org/tags/framework/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Consistency in framework design</title>
+      <link>https://example.org/posts/2011/01/2011-01-06-consistency-in-framework-design/</link>
+      <pubDate>Thu, 06 Jan 2011 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2011/01/2011-01-06-consistency-in-framework-design/</guid>
+      <description>Concistency Framework: a set of ideas, principles, agreements, or rules that provides the basis or outline for something intended to be more fully developed at a later stage (MSN Dictionary)&#xA;Not sure if you agree, but for me, the above definition implies &amp;ldquo;consistency&amp;rdquo; as a essential effect of using a framework. In the context of software development, using a framework usually equals to following its design guideline, or implementing/extending its interfaces/base classes.</description>
+    </item>
+  </channel>
+</rss>

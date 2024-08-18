@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>Using Bootstrap with React</title>
+<meta data-rh="true" property="og:url" content="https://example.org/posts/2020/04/2020-04-20-using-bootstrap-with-react/">
+<meta data-rh="true" property="og:title" content="Using Bootstrap with React">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2020/04/2020-04-20-using-bootstrap-with-react/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+  <meta property="og:image" content="https://example.org/geraldnguyen-profile.jpg" data-rh="true">
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>Using Bootstrap with React</h1>
+
+<h2 class="subtitle">Because both are great!</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://example.org/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>1 min read</span>
+      <span>·</span>
+      <span><time datetime="2020-04-20T09:19:42&#43;01:00">April 20, 2020</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2013/12/2013-12-30-bulk-linking-cell-to-sheets/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2020/09/2020-09-10-transactional-annotation/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#mixing-browser-and-react">Mixing browser and React</a></li>
+        <li><a href="#pure-react-way">Pure React way</a></li>
+        <li><a href="#reference">Reference</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <h2 id="mixing-browser-and-react">Mixing browser and React</h2>
+<p>Insert links to Bootstrap&rsquo;s javascript and CSS and its dependencies in app&rsquo;s <code>index.html</code></p>
+<pre tabindex="0"><code>&lt;head&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css&#34; integrity=&#34;sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh&#34; crossorigin=&#34;anonymous&#34;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;!-- other content --&gt;
+  
+  &lt;script src=&#34;https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js&#34; integrity=&#34;sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+
+  &lt;script src=&#34;https://code.jquery.com/jquery-3.4.1.slim.min.js&#34; integrity=&#34;sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+  &lt;script src=&#34;https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js&#34; integrity=&#34;sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+&lt;/body&gt;
+</code></pre><p>Invoke appropriate method via <code>window.$</code> jQuery object</p>
+<pre tabindex="0"><code>window.$(&#39;#about-modal&#39;).modal()
+</code></pre><h2 id="pure-react-way">Pure React way</h2>
+<p>Install Bootstrap as a NPM module</p>
+<pre tabindex="0"><code>npm install bootstrap --save
+npm install jquery popper.js --save 
+</code></pre><p>Load bootstrap CSS and Javascript in React app&rsquo;s entry point (e.g. <code>index.jsx</code> or <code>app.jsx</code>)</p>
+<pre tabindex="0"><code>import &#39;bootstrap/dist/css/bootstrap.min.css&#39;;
+import &#39;bootstrap&#39;;
+</code></pre><p>Obtain <code>$</code> jQuery object and invoke appropriate method</p>
+<pre tabindex="0"><code>import $ from &#39;jquery&#39;;
+...
+$(&#39;#sync-modal&#39;).modal(),
+</code></pre><h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://getbootstrap.com/docs/4.4/getting-started/webpack/">https://getbootstrap.com/docs/4.4/getting-started/webpack/</a></li>
+</ul>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/react/">React</a></li>
+        <li><a href="/tags/bootstrap/">Bootstrap</a></li>
+        <li><a href="/tags/programming/">Programming</a></li>
+        <li><a href="/tags/javascript/">JavaScript</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

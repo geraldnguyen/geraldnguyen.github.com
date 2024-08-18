@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>SOLID in Action — the Liskov Substitution Principle</title>
+<meta data-rh="true" property="og:url" content="https://example.org/posts/2023/01/solid-liskov-substitution-principle/">
+<meta data-rh="true" property="og:title" content="SOLID in Action — the Liskov Substitution Principle">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2023/01/solid-liskov-substitution-principle/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>SOLID in Action — the Liskov Substitution Principle</h1>
+
+<h2 class="subtitle">Subclasses should be substitutable for their base classes</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://example.org/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>7 min read</span>
+      <span>·</span>
+      <span><time datetime="2023-01-09T08:00:00-07:00">January 9, 2023</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2022/12/retry-webclient-request/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2023/01/solid-interface-segregation-principle/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-liskov-substitution-principle-lsp">The Liskov Substitution Principle (LSP)</a></li>
+    <li><a href="#syntactic-substitution">Syntactic substitution</a></li>
+    <li><a href="#preconditions-postconditions-invariants">Preconditions, Postconditions, Invariants</a></li>
+    <li><a href="#the-history-constraint">The History Constraint</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <p>Let us start with a question:</p>
+<blockquote>
+<p>Can social media connections <em>substitute</em> for real life friends and family?</p>
+</blockquote>
+<p>Well, it depends on how we define &ldquo;connection&rdquo;. If we have it as below, then according to the Liskow Substitution Principle (LSP), the answer is No.</p>
+<figure><img src="/posts/2023/01/solid-liskov-substitution-principle/1_IuKgDzlyhAKEuql9Yr7qGw.png"
+    alt="Connection classes"><figcaption>
+      <p>Connection classes</p>
+    </figcaption>
+</figure>
+
+<p>Before we go further into this example, let’s back it up a bit to study the official definition of LSP.</p>
+<blockquote>
+<p>There is some math but I promise to keep it brief</p>
+</blockquote>
+<h1 id="the-liskov-substitution-principle-lsp">The Liskov Substitution Principle (LSP)</h1>
+<p>The LSP was first introduced by <a href="https://en.wikipedia.org/wiki/Barbara_Liskov">Barbara Liskov</a> in 1988 and was further refined in 1994 together with <a href="https://en.wikipedia.org/wiki/Jeannette_Wing">Jeannette Wing</a>. The LSP defines a <strong>strong behavioral subtyping</strong> relation between parent and child classes.</p>
+<p>It goes beyond the syntactic substitution of the parent-child relationship to emphasize the semantic compliance of child classes to their parent.</p>
+<p>The 1994 definition is below:</p>
+<figure><img src="/posts/2023/01/solid-liskov-substitution-principle/1_gcSNYP36yQ9JmunXEu_WFQ.png"
+    alt="https://dl.acm.org/doi/pdf/10.1145/197320.197383"><figcaption>
+      <p><a href="https://dl.acm.org/doi/pdf/10.1145/197320.197383">https://dl.acm.org/doi/pdf/10.1145/197320.197383</a></p>
+    </figcaption>
+</figure>
+
+<p>Meaning, if S is a subtype of T, then whatever property (<em>characteristic in both syntactic and semantic manners</em>) that is true for instances of T should also be true for instances of S.</p>
+<h1 id="syntactic-substitution">Syntactic substitution</h1>
+<p>Syntactic substitution is a necessary condition for LSP. The following conditions should hold true when validating and enforcing method/function signatures:</p>
+<ul>
+<li><em>Contra-variance of the method parameter types</em>: the parameter types in a child’s inherited method can be more general than the types declared in the parent</li>
+<li><em>Co-variance of the return types</em>: the return type in a child’s inherited method can be more specific than the type declared in the parent</li>
+<li><em>No new exceptions</em> can be thrown, except if they are subtypes of exceptions already declared to be thrown by the methods of the parent.</li>
+</ul>
+<p>Let’s examine how the method <code>findMutual(Person): List&lt;Connection&gt;</code> in the parent<code>Connection</code> is overridden by <code>findMutual(Subject): List&lt;SocialConnection&gt;</code>in the child <code>SocialConnection</code>. We will pay special attention to how the co-variance of the return type and contra-variance of parameter types differ in the child from the parent.</p>
+<p>Let’s look at the below sample code:</p>
+<pre tabindex="0"><code>class News {}   
+class Subject {}  
+class Person extends Subject {}  
+  
+class Connection {  
+    constructor(public name: string, public since: number) {}  
+      
+    consumeNews(news: News) {}  
+  
+    findMutual(entity: Person): Connection\[\] {  
+        console.log(&#34;Print from Connection&#34;, entity);  
+        return \[\];  // mock values for now  
+    }  
+}  
+  
+class SocialConnection extends Connection {  
+    constructor(public platform: string, name: string) {  
+        super(name, Date.now())  
+    }  
+  
+    override findMutual(entity: Subject): SocialConnection\[\] {  
+        console.log(&#34;Print from SocialConnection&#34;, entity);  
+        return \[\]; // mock values for now  
+    }  
+}
+</code></pre><p>Notice the following:</p>
+<ul>
+<li><code>Person</code> extends <code>Subject</code></li>
+<li><code>SocialConnection</code> extends <code>Connection</code></li>
+<li>The return type of <code>findMutual</code> is more specific in the child: from <code>List&lt;Connection&gt;</code> to <code>Lit&lt;SocialConnection&gt;</code>. As a list of <code>SocialConnection</code> is a valid list of <code>Connection</code>, the metshod’s contract is not affected. This is called “<em>co-variance of the return types”</em></li>
+<li>The parameter types in <code>findMutual</code> is more general in the child: from <code>Person</code> to <code>Subject</code>. As a <code>Person</code> is a <code>Subject</code>, the <code>SocialConnection</code>’s version of the method is able to accept a <code>Person</code>, as specified in the parent <code>Connection</code>’s method’s signature. This is called <em>“contra-variance of the method parameter types”</em></li>
+</ul>
+<blockquote>
+<p>Co-variance and contra-variance are complex concepts. The above illustration only touches briefly on the surface. Please visit <a href="https://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)">https://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)</a> for a more detailed explanation.</p>
+</blockquote>
+<p>To my knowledge, support for syntactic substitution in programming languages such as Java, Kotlin, and C# is not complete, at least for the <em>contra-variance of the method parameter types</em>. The tricky challenge there is the way these programming languages handle multiple methods with the same name. If the parameter types in the child’s method differ, the child’s method <em>overloads</em> rather than <em>overrides</em> the parent’s method. That leads to multiple active implementations of the same method in the child type instead of one, as the LSP specifies. More relaxed languages such as Javascript and Typescript (which I used in the above example) do not have that problem, though they lack the strong type-safety provided by the formers.</p>
+<h1 id="preconditions-postconditions-invariants">Preconditions, Postconditions, Invariants</h1>
+<p>The LSP closely resembles the Design-by-Contract approach first introduced by <a href="https://en.wikipedia.org/wiki/Bertrand_Meyer">Bertrand Meyer</a> in its requirements for the Preconditions, Postconditions, and Invariants:</p>
+<ul>
+<li>Preconditions cannot be strengthened in the subtype</li>
+<li>Postconditions cannot be weakened in the subtype</li>
+<li>Invariants must be preserved in the subtype</li>
+</ul>
+<p>When applying to syntactic substitution, these requirements map to contra-variance, co-variance, and exception requirements respectively:</p>
+<ul>
+<li><em>Preconditions — Contra-variance of the method parameter types</em>: the parameter types in a child’s inherited method can be more general than the types declared in the parent</li>
+<li><em>Postcondition — Co-variance of the return types</em>: the return type in a child’s inherited method can be more specific than the type declared in the parent</li>
+<li><em>Invariant — No new exceptions</em> can be thrown, except if they are subtypes of exceptions already declared to be thrown by the methods of the parent.</li>
+</ul>
+<p>Of course, there is more to them than just syntax compliance or type safety:</p>
+<ul>
+<li>A <strong>Precondition</strong> specifies a condition that must be true <em>before</em> the execution of an operation. A method that tests a number for prime would reasonably expect a positive integer number as its argument. A negative or decimal number argument would thus fail the precondition.</li>
+<li>A <strong>Postcondition</strong> specifies a condition that must be true <em>after</em> the execution of an operation. An <code>isPrime(int)</code> method, for example, would return a boolean value (either true or false).</li>
+<li>An <strong>Invariant</strong> specifies a condition that must be true <em>before</em> and <em>after</em>. The <code>isPrime(int)</code> method must not modify the value of its parameter. That is for variable <code>number</code> holding value <code>7</code>, <code>number == 7</code> is true before and after executing <code>isPrime(number)</code>.</li>
+</ul>
+<p>The Invariant condition can have applications beyond the boundary of operations. A common example is <a href="https://en.wikipedia.org/wiki/Class_invariant">class invariant</a> conditions. From our very first example, if 2-way interaction is an invariant of <code>Connection</code>, then the <code>Follower</code> type has failed that invariant condition while <code>SocialConnection</code>, <code>RealLifeConnection</code>, <code>Friend</code>, and <code>Family</code> all satisfy it.</p>
+<h1 id="the-history-constraint">The History Constraint</h1>
+<p>Compared to Design-by-Contract, the LSP has an additional History constraint.</p>
+<p>The History constraint prohibits unauthorized modification of <em>inherited</em> state in the subtype. If the child class contains any new method that directly modifies the inherited state, such modification is considered unauthorized and thus violates the History constraint.</p>
+<p>This constraint, in my opinion, is the merger of Encapsulation and Invariant. Good object-oriented design promotes Encapsulation to maintain a consistent and usable object’s state through provided, thus <em>authorized</em>, mechanism. In a subtype, that consistency and usability through encapsulation should be preserved — the Invariant.</p>
+<p>Recall from our code example above <code>SocialConnection</code> inherits the <code>since</code> and the<code>name</code> properties from <code>Connection</code>. Because <code>since</code> denotes a fact, it must be unchanged after construction. However, because of the way these classes are written, it is possible for <code>SocialConnection</code> to introduce a method that modifies the inherited <code>since</code> property. That would violate the History constraint.</p>
+<blockquote>
+<p><strong>Alarm bell</strong> BUGGGG!<br>
+Calm down. Just re-declare <code>since</code> with the <code>readonly</code> modifier i.e. <code>public readonly since: number</code></p>
+</blockquote>
+<figure><img src="/posts/2023/01/solid-liskov-substitution-principle/1_fXMtjoukeOudyhZ1fJolKQ.jpg"
+    alt="Side joke: It’s not a bug, it is a feature! Source: internet — nobody knows the original source"><figcaption>
+      <p>Side joke: <strong>It’s not a bug, it is a feature</strong>! Source: internet — nobody knows the original source</p>
+    </figcaption>
+</figure>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>The LSP touches on multiple aspects of object-oriented design. The requirements altogether cross the syntactic compliance to the semantic realm.</p>
+<p>Following the LSP ultimately leads us to strong behavioral substitutability which is a desired property in software development. Behavioral substitutability enables not just type-safetiness but the assertion about expected behavior. These outcomes enable not only the confidence that our program behaves correctly but also the ability to <em>prove</em> its correctness through <a href="https://en.wikipedia.org/wiki/Hoare_logic">Hoare logic</a> <em>(which is a topic for another article)</em>.</p>
+<figure><img src="/posts/2023/01/solid-liskov-substitution-principle/1_YEttNur8_T0hEp4oDm5utg.png"
+    alt="Generated by AI DALL.E"><figcaption>
+      <p>Generated by AI DALL.E</p>
+    </figcaption>
+</figure>
+
+
+
+<div class="page-break" role="separator">
+  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+</div>
+<p>If you like this article, please <a href="https://geraldnguyen.medium.com/subscribe">follow me</a> for more quality content.</p>
+<p>Other articles in this series:</p>
+<ul>
+<li><a href="https://example.org/posts/2022/12/becoming-a-solid-developer/">Becoming a SOLID developer</a></li>
+<li><a href="https://example.org/posts/2022/12/solid-single-responsibility-principle/">SOLID in Action — the Single Responsibility Principle</a></li>
+<li><a href="https://example.org/posts/2022/12/solid-open-close-principle/">SOLID in Action — the Open-closed principle</a></li>
+<li><a href="https://example.org/posts/2023/01/solid-liskov-substitution-principle/">SOLID in Action — the Liskov Substitution principle</a></li>
+<li><a href="https://example.org/posts/2023/01/solid-interface-segregation-principle/">SOLID in Action — the Interface Segregation principle</a></li>
+<li><a href="https://example.org/posts/2023/02/solid-dependency-inversion-principle/">SOLID in Action — the Dependency Inversion principle</a></li>
+</ul>
+<p>Thank you.</p>
+
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/software-engineering/">Software Engineering</a></li>
+        <li><a href="/tags/solid-principles/">SOLID Principles</a></li>
+        <li><a href="/tags/programming/">Programming</a></li>
+        <li><a href="/tags/object-oriented/">Object Oriented</a></li>
+        <li><a href="/tags/subtyping/">Subtyping</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

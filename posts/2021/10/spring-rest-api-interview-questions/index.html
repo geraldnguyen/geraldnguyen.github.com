@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>Spring REST API Interview Questions</title>
+<meta data-rh="true" property="og:url" content="https://example.org/posts/2021/10/spring-rest-api-interview-questions/">
+<meta data-rh="true" property="og:title" content="Spring REST API Interview Questions">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2021/10/spring-rest-api-interview-questions/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+        <li><a href="/categories/career-development/">Career Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>Spring REST API Interview Questions</h1>
+
+<h2 class="subtitle">Use these to assess multiple practical aspects of a candidate’s skills and experience</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://example.org/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>4 min read</span>
+      <span>·</span>
+      <span><time datetime="2021-10-19T09:19:42&#43;01:00">October 19, 2021</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2021/10/2021-10-17-enable-commenting/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2021/10/java-stream-interview-tests-distinct-characters/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-complete-the-rest-controller">#1 Complete the REST controller</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-write-tests-for-controller">#2 Write tests for controller</a></li>
+    <li><a href="#3-handle-error">#3 Handle error</a></li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <h2 id="1-complete-the-rest-controller">#1 Complete the REST controller</h2>
+<p><strong>Objective</strong>: Assess a candidate’s practical experience and knowledge</p>
+<p><strong>Instructions</strong>: Given the below controller, fill in Spring annotations according to instructions given in the code comments</p>
+<p><strong>Pay attention to</strong>:</p>
+<ul>
+<li>Did the candidate notice the repetition of <code>/friends</code> prefix? Did he/she suggest a <code>@RequestMapping(/friends)</code> on the controller class instead?</li>
+<li>How did he/she annotate the <em>optional</em> parameter <code>name</code> and <code>id</code> in <code>findFriends(String name, Long id)</code> method?</li>
+<li>What annotation can be used to force a 204 (no content) response?</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#998;font-style:italic">/* Assume all package, imports and dependency classes are available */</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#998;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"> * A rest controller for Friend-related operations
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"> */</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">FriendController</span><span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">final</span><span style="color:#bbb"> </span>FriendService<span style="color:#bbb"> </span>friendService;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">FriendController</span>(FriendService<span style="color:#bbb"> </span>friendService)<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">this</span>.<span style="color:#008080">friendService</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>friendService;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * Response to GET /friends/ request
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @param name (optional) filter by name
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @param id (optional) filter by id
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @return a list of friends
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     */</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span>List<span style="color:#000;font-weight:bold">&lt;</span>FriendDTO<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">findFriends</span>(String<span style="color:#bbb"> </span>name,<span style="color:#bbb"> </span>Long<span style="color:#bbb"> </span>id)<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">if</span><span style="color:#bbb"> </span>(id<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">!=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">null</span>)<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>friendService.<span style="color:#008080">findByFriendId</span>(id);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>}<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">else</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">if</span><span style="color:#bbb"> </span>(StringUtils.<span style="color:#008080">hasText</span>(name))<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>friendService.<span style="color:#008080">findByName</span>(name);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>}<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">else</span><span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>friendService.<span style="color:#008080">findAll</span>();<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * Response to GET /friends/hello/{friend&#39;s name} request
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @param friend a friend&#39;s name
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @return a friendly Hello
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     */</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">hello</span>(String<span style="color:#bbb"> </span>friend)<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>String.<span style="color:#008080">format</span>(<span style="color:#d14">&#34;Hello %s&#34;</span>,<span style="color:#bbb"> </span>friend);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * Response to POST /friends/hello/{friend&#39;s name} request
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @param friend a friend&#39;s name which is to be saved
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @return a friendly Hello together with Id of the new friend
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     */</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">helloAndSave</span>(String<span style="color:#bbb"> </span>friend)<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>FriendDTO<span style="color:#bbb"> </span>dto<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>friendService.<span style="color:#008080">add</span>(FriendDTO.<span style="color:#008080">builder</span>().<span style="color:#008080">name</span>(friend).<span style="color:#008080">createDt</span>(LocalDateTime.<span style="color:#008080">now</span>()).<span style="color:#008080">build</span>());<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>String.<span style="color:#008080">format</span>(<span style="color:#d14">&#34;%s. Your Id is %d&#34;</span>,<span style="color:#bbb"> </span>hello(friend),<span style="color:#bbb"> </span>dto.<span style="color:#008080">getId</span>());<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * Un-friend
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * Response to DELETE /friends/{friend&#39;s id} request, 
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * return 204 if successful
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @param friendId the id of the friend
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     */</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">deleteFriend</span>(<span style="color:#458;font-weight:bold">long</span><span style="color:#bbb"> </span>friendId)<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>friendService.<span style="color:#008080">removeFriend</span>(friendId);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * Update friend name
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * Response to &lt;METHOD?&gt; /friends/{friend&#39;s id}/{new name} request, 
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * return update friend info
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @param friendId the id of the friend
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @param newName the new name of the friend
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @return updated friend&#39;s info
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     */</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span>FriendDTO<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">updateFriend</span>(<span style="color:#458;font-weight:bold">long</span><span style="color:#bbb"> </span>friendId,<span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>newName)<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>friendService.<span style="color:#008080">updateName</span>(friendId,<span style="color:#bbb"> </span>newName);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><figure><img src="/posts/2021/10/spring-rest-api-interview-questions/1_lOcYvYf5KARsBswgtPcoEQ.png"
+    alt="A friendly REST controller"><figcaption>
+      <p>A friendly REST controller</p>
+    </figcaption>
+</figure>
+
+<h1 id="2-write-tests-for-controller">#2 Write tests for controller</h1>
+<p><strong>Objective</strong>: Assess a candidate’s practical experience and knowledge</p>
+<p><strong>Instructions</strong>: As devising test scenarios and writing them can be time-consuming, it is perhaps best to go through the solution verbally</p>
+<p><strong>Pay attention to</strong>:</p>
+<ul>
+<li>Did the candidate use (or at least mention) any popular test libraries such as JUNIT, Mockito, Hamcrest, Spring Boot Test?</li>
+<li>Which approach did the candidate take:<br>
+a) Directly call controller method: <code>controller.hello(&quot;world)</code> . Did the candidate creates the controller instance with <code>var controller = new FriendController(mockFriendService);</code> or use the Mockito’s <code>@InjectMock</code>annotation to create the controller instance with dependencies auto-injected?<br>
+b) Use a test runner (e.g. <code>SpringRunner</code>) and write integration-level test codes (e.g. <code>webmvc.perform(...).andExpect(...)</code> )</li>
+<li>How did the candidate organize the testing codes? Unorganized or <code>Arrange...Act...Assert</code> or <code>Given...When...Then</code></li>
+</ul>
+<h1 id="3-handle-error">#3 Handle error</h1>
+<p><strong>Objective</strong>: Assess a candidate’s knowledge of HTTP status code, awareness of information disclosure, and exception handling</p>
+<p><strong>Questions &amp; Hints:</strong></p>
+<ol>
+<li>How do you respond to a search for a non-existent resource?<br>
+<em>An empty list</em> <code>_[]_</code> <em>is a fine response to a search query</em></li>
+<li>How do you respond to a <code>GET /friends/123</code> when there is no record with id 123?<br>
+<em>It should be a 404 response</em></li>
+<li>How do you respond to a <code>GET /friends/?id=some-name</code>?<br>
+<em>It should be 400 — Bad Request because</em> <code>_some-name_</code> <em>isn’t a</em> <code>_Long_</code></li>
+<li>What do you need to do to return 400 in question 3?<br>
+<em>Spring automatically detects that the supplied parameter value</em> <code>_&quot;some-name”_</code> <em>cannot be cast to the declared</em> <code>_Long id_</code> <em>method parameter and returns 400. The control never reaches the controller’s code</em></li>
+<li>How do you map an application exception to a particular HTTP status code?<br>
+<em>It could be a custom exception annotated with</em> <code>_@RequestStatus(status = HttpStatus.XYZ)_</code>_<br>
+Or apply the_<code>_@ExceptionHandler_</code> <em>on a controller’s method to handle thrown exception<br>
+Or implement an</em> <code>_@ControllerAdvice_</code> <em>global handler</em></li>
+<li>What HTTP status codes indicate successful execution?<br>
+<em>HTTP status in 200 range, most commonly 200, 201, 202 and 204</em></li>
+<li>When do we use these statuses?<br>
+<em>200 — OK<br>
+201 — Created<br>
+202 — Accepted<br>
+204 — No Content</em></li>
+<li>What do you need to do to return 202 response?<br>
+<em>Either</em> <code>_@ResponseStatus_</code><em>Or returning a</em> <code>_ResponseEntity.status(HttpStatus.CREATED)_</code></li>
+</ol>
+<p>Extra: <a href="https://geraldnguyen.medium.com/list/api-development-interview-a17c1f9ee5b7">https://geraldnguyen.medium.com/list/api-development-interview-a17c1f9ee5b7</a>: My articles related to API development and interview</p>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/java/">Java</a></li>
+        <li><a href="/tags/spring/">Spring</a></li>
+        <li><a href="/tags/api/">API</a></li>
+        <li><a href="/tags/interview/">Interview</a></li>
+        <li><a href="/tags/annotation/">Annotation</a></li>
+        <li><a href="/tags/testing/">Testing</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

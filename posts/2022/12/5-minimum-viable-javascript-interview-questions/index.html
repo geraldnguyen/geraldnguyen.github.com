@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>Five Minimum Viable Javascript Interview Questions</title>
+<meta data-rh="true" property="og:url" content="https://example.org/posts/2022/12/5-minimum-viable-javascript-interview-questions/">
+<meta data-rh="true" property="og:title" content="Five Minimum Viable Javascript Interview Questions">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2022/12/5-minimum-viable-javascript-interview-questions/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+        <li><a href="/categories/career-development/">Career Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>Five Minimum Viable Javascript Interview Questions</h1>
+
+<h2 class="subtitle">Interviewer: ask them if your interview is running out of time. Interviewee: practice them if your preparation is running out of time.</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://example.org/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>6 min read</span>
+      <span>·</span>
+      <span><time datetime="2022-12-09T09:19:42&#43;01:00">December 9, 2022</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2022/12/becoming-a-solid-developer/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2022/12/solid-single-responsibility-principle/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1--what-are-the-differences-between--and--operators">#1 — What are the differences between <code>==</code> and <code>===</code> operators?</a></li>
+    <li><a href="#2--when-do-you-use-const-let-and-var">#2 — When do you use <code>const</code>, <code>let</code> and <code>var</code>?</a></li>
+    <li><a href="#3-how-do-you-create-a-new-object">#3 —How do you create a new object?</a></li>
+    <li><a href="#4--how-do-you-create-a-new-5x5-square-object-with-a-method-that-computes-its-area">#4 — How do you create a new 5x5 Square object with a method that computes its area?</a></li>
+    <li><a href="#5--what-do-you-use-promise-or-observable-for">#5 — What do you use Promise (or Observable) for?</a></li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  
+<p><em>This is part of my</em> <a href="https://example.org/posts/2023/02/five-minimum-viable-interview-questions-series/"><em>Five Minimum Viable Interview Questions series</em></a> <em>where I research and compile Five essential interview questions on each interview topic. All of these questions aim to assess real and practical skills expected at work</em></p>
+
+<div class="page-break" role="separator">
+  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+</div>
+<p>It is common nowadays for companies to hire for full-stack positions. A full-stack developer is typically expected to work on both frontend and backend development. That same expectation applies to interviews.</p>
+<p>It is thus tough to interview or be interviewed for a full-stack position. There would be too many questions to ask or to prepare for. But if you are running out of time, here are five questions I think you should know.</p>
+<figure><img src="/posts/2022/12/5-minimum-viable-javascript-interview-questions/0_ufACmK4armozbXnU.jpg"
+    alt="Photo by Christina @ wocintechchat.com on Unsplash"><figcaption>
+      <p>Photo by <a href="https://unsplash.com/@wocintechchat?utm_source=medium&amp;utm_medium=referral">Christina @ wocintechchat.com</a> on <a href="https://unsplash.com/?utm_source=medium&amp;utm_medium=referral">Unsplash</a></p>
+    </figcaption>
+</figure>
+
+<h1 id="1--what-are-the-differences-between--and--operators">#1 — What are the differences between <code>==</code> and <code>===</code> operators?</h1>
+<blockquote>
+<p>Good Javascript practices discourage the use of <code>==</code> operator to reduce bugs due to type conversion. Modern linting tools typically flag any uses of <code>==</code> . Thus this question tests the candidate practical knowledge and experience with Javascript</p>
+</blockquote>
+<p>Both operators compare their two operands and return a Boolean result</p>
+<p>The strict equality operator <code>===</code> requires that its operands are of the same type and return <code>false</code> otherwise, while the <code>==</code> operator may attempt type conversion before comparing the resulting values.</p>
+<p>The <code>===</code> considers <code>null</code> and <code>undefined</code> different while <code>==</code> considers the same</p>
+<p>Sample codes:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#998;font-style:italic">/* Equality */</span>  
+</span></span><span style="display:flex;"><span><span style="color:#099">1</span> <span style="color:#000;font-weight:bold">==</span> <span style="color:#d14">&#34;1&#34;</span>           <span style="color:#998;font-style:italic">// true  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#099">1</span> <span style="color:#000;font-weight:bold">==</span> <span style="color:#d14">&#34;00001&#34;</span>       <span style="color:#998;font-style:italic">// true  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#099">1</span> <span style="color:#000;font-weight:bold">==</span> <span style="color:#d14">&#34;  00001   &#34;</span>  <span style="color:#998;font-style:italic">// true  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">null</span> <span style="color:#000;font-weight:bold">==</span> <span style="color:#000;font-weight:bold">undefined</span>  <span style="color:#998;font-style:italic">// true  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>  
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">/* Strict equality */</span>  
+</span></span><span style="display:flex;"><span><span style="color:#099">1</span> <span style="color:#000;font-weight:bold">===</span> <span style="color:#d14">&#34;1&#34;</span>          <span style="color:#998;font-style:italic">// false  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">null</span> <span style="color:#000;font-weight:bold">==</span> <span style="color:#000;font-weight:bold">undefined</span>  <span style="color:#998;font-style:italic">// false 
+</span></span></span></code></pre></div><p>References:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Equality">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Equality</a></li>
+</ul>
+<h1 id="2--when-do-you-use-const-let-and-var">#2 — When do you use <code>const</code>, <code>let</code> and <code>var</code>?</h1>
+<blockquote>
+<p>This question not only tests the candidate’s familiarity with newer constructs but also validate whether the candidate distinguishes a constant versus a normal variable.</p>
+</blockquote>
+<p><code>var</code> is the oldest way to declare a variable in Javascript. A variable declared with <code>var</code> within a function has that function’s scope. If declared outside any function, it has global scope. Variables declared using <code>var</code> are created <em>before</em> any code is executed in a process known as hoisting with initial values set to <code>undefined</code>. Redeclaring a variable using <code>var</code> will not trigger an error or reset its value unless another assignment is performed</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#d14">&#39;use strict&#39;</span>;  
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">function</span> foo() {  
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">function</span> bar() {  
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">var</span> y <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">2</span>;  
+</span></span><span style="display:flex;"><span>    console.log(x); <span style="color:#998;font-style:italic">// undefined (x is hoisted, carrying &#34;undefined&#34;)  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>    console.log(y); <span style="color:#998;font-style:italic">// 2 (`y` is in scope)  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>  }  
+</span></span><span style="display:flex;"><span>  bar();  
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">var</span> x <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1</span>;        <span style="color:#998;font-style:italic">// x is initialized  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>  console.log(x);   <span style="color:#998;font-style:italic">// 1 (`x` is in scope)  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>  console.log(y);   <span style="color:#998;font-style:italic">// ReferenceError in strict mode, `y` is scoped to `bar`  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>}  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>foo();
+</span></span></code></pre></div><p><code>let</code> is the newer and preferred way of declaring variables. A variable declared with <code>let</code> has block-scoped (visible to the same block and any nested scopes) and is only accessible after its declaration is <em>executed</em>. Redeclaring variables with <code>let</code> within the same block or function results in a syntax error</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#998;font-style:italic">/* block scope variable */</span>  
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">let</span> x <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1</span>;  
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">if</span> (x <span style="color:#000;font-weight:bold">===</span> <span style="color:#099">1</span>) {  
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">let</span> x <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">2</span>;       <span style="color:#998;font-style:italic">// OK, redeclare in a different block  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>  
+</span></span><span style="display:flex;"><span>  console.log(x);  <span style="color:#998;font-style:italic">// expected output: 2  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>}  
+</span></span><span style="display:flex;"><span>console.log(x);   <span style="color:#998;font-style:italic">// expected output: 1  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">let</span> x <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">10</span>;        <span style="color:#998;font-style:italic">// syntax error  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">/* Related concept: Temporal Dead Zone (TDZ) */</span>  
+</span></span><span style="display:flex;"><span>{  
+</span></span><span style="display:flex;"><span>  <span style="color:#998;font-style:italic">// TDZ starts at beginning of scope  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>  <span style="color:#000;font-weight:bold">const</span> func <span style="color:#000;font-weight:bold">=</span> () =&gt; console.log(letVar); <span style="color:#998;font-style:italic">// OK  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#998;font-style:italic">// Within the TDZ letVar access throws `ReferenceError` : Cannot access &#39;letVar&#39; before initialization
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">let</span> letVar <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">3</span>; <span style="color:#998;font-style:italic">// End of TDZ (for letVar)  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>  func();         <span style="color:#998;font-style:italic">// Called outside TDZ!  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>}
+</span></span></code></pre></div><p><code>const</code>, introduced after <code>var</code> and before <code>let</code>, is used to declare a constant whose value cannot be changed. Hence<code>const</code> declaration requires an initializer to assign a constant value to the variable. The variable’s scope can be global or block-scoped. Redeclare <code>const</code> variable results in a syntax error. A common convention is to use UPPERCASE for constant variable</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">const</span> MY_CONSTANT <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">111</span>;  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">/** Errors:  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">MY_CONSTANT= 20;   // TypeError: Assignment to constant variable.  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">const MY_CONSTANT= 20;  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">let MY_CONSTANT= 20;  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">var MY_CONSTANT= 20;  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">*/</span>  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">if</span> (<span style="color:#000;font-weight:bold">true</span>) {  
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">let</span> MY_CONSTANT <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">20</span>; <span style="color:#998;font-style:italic">// OK, different block scope  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>  console.log(<span style="color:#d14">&#34;my favorite number is &#34;</span> <span style="color:#000;font-weight:bold">+</span> MY_CONSTANT);  <span style="color:#998;font-style:italic">// 20  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>}  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>console.log(<span style="color:#d14">&#34;my favorite number is &#34;</span> <span style="color:#000;font-weight:bold">+</span> MY_CONSTANT);    <span style="color:#998;font-style:italic">// 111
+</span></span></span></code></pre></div><p>References:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var</a></li>
+</ul>
+<h1 id="3-how-do-you-create-a-new-object">#3 —How do you create a new object?</h1>
+<blockquote>
+<p>Despite being not an object-oriented language, object frequently featured in Javascript codes. Hence knowing how to create object with properties and methods is a must.</p>
+</blockquote>
+<p>The easiest way to create an object in Javascript is by using object initializer syntax: a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces <code>{}</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">const</span> emptyObject <span style="color:#000;font-weight:bold">=</span> {}  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">const</span> objectWithProperty <span style="color:#000;font-weight:bold">=</span> {   
+</span></span><span style="display:flex;"><span>   a<span style="color:#000;font-weight:bold">:</span> <span style="color:#099">1</span>,   
+</span></span><span style="display:flex;"><span>   b<span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#39;b&#39;</span>,   
+</span></span><span style="display:flex;"><span>   c<span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">true</span>,   
+</span></span><span style="display:flex;"><span>   d<span style="color:#000;font-weight:bold">:</span> { nested<span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#39;property&#39;</span>}   
+</span></span><span style="display:flex;"><span>}  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">const</span> a <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1</span>, b <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;b&#39;</span>, c <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">true</span>, d <span style="color:#000;font-weight:bold">=</span> { nested<span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#39;property&#39;</span>}  
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">const</span> anotherObjectWithProperty <span style="color:#000;font-weight:bold">=</span> { a, b, c, d }  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">// Computed property names  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">const</span> prop <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;foo&#39;</span>;  
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">const</span> computedObjectProperty <span style="color:#000;font-weight:bold">=</span> {  
+</span></span><span style="display:flex;"><span>  [prop]<span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#39;hey&#39;</span>,  
+</span></span><span style="display:flex;"><span>  [<span style="color:#d14">&#39;b&#39;</span> <span style="color:#000;font-weight:bold">+</span> <span style="color:#d14">&#39;ar&#39;</span>]<span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#39;there&#39;</span>,  
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p><code>new Object()</code> or <code>Object.create()</code> can also be used to create a new object</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">const</span> newObject <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">new</span> <span style="color:#0086b3">Object</span>();  
+</span></span><span style="display:flex;"><span>newObject.a <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1</span>;  
+</span></span><span style="display:flex;"><span>newObject.b <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;b&#39;</span>  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">const</span> anotherObject <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">Object</span>.create(<span style="color:#000;font-weight:bold">null</span>);
+</span></span></code></pre></div><p>References:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer</a></li>
+</ul>
+<h1 id="4--how-do-you-create-a-new-5x5-square-object-with-a-method-that-computes-its-area">#4 — How do you create a new 5x5 Square object with a method that computes its area?</h1>
+<blockquote>
+<p>This is similar to question #3 where we want to test the candidate’s ability to create object. In addition, it also tests candidate’s knowledge of <code>this</code> and different ways to declare object’s function</p>
+</blockquote>
+<p>There are 2 valid ways of declaring a method shown below in versions 1 and 2.</p>
+<p>The 3rd version is a trap because of the way arrow function captures the <code>this</code> of the enclosing context. Binding the arrow function to the object using <code>.call</code> or <code>.bind</code> does not work.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#998;font-style:italic">// version 1  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">const</span> square1 <span style="color:#000;font-weight:bold">=</span> {   
+</span></span><span style="display:flex;"><span>  side<span style="color:#000;font-weight:bold">:</span> <span style="color:#099">5</span>,  
+</span></span><span style="display:flex;"><span>  area<span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">function</span> () {  
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">this</span>.side <span style="color:#000;font-weight:bold">*</span> <span style="color:#000;font-weight:bold">this</span>.side;  
+</span></span><span style="display:flex;"><span>  }  
+</span></span><span style="display:flex;"><span>}  
+</span></span><span style="display:flex;"><span>square1.area();  <span style="color:#998;font-style:italic">// 25  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>  
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">// version 2  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">const</span> square2 <span style="color:#000;font-weight:bold">=</span> {   
+</span></span><span style="display:flex;"><span>  side<span style="color:#000;font-weight:bold">:</span> <span style="color:#099">5</span>,  
+</span></span><span style="display:flex;"><span>  area() {  
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">this</span>.side <span style="color:#000;font-weight:bold">*</span> <span style="color:#000;font-weight:bold">this</span>.side  
+</span></span><span style="display:flex;"><span>  }  
+</span></span><span style="display:flex;"><span>}  
+</span></span><span style="display:flex;"><span>square2.area();  <span style="color:#998;font-style:italic">// 25  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">// version 3: warning: this with arrow function  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">const</span> square3 <span style="color:#000;font-weight:bold">=</span> {   
+</span></span><span style="display:flex;"><span>  side<span style="color:#000;font-weight:bold">:</span> <span style="color:#099">5</span>,  
+</span></span><span style="display:flex;"><span>  area<span style="color:#000;font-weight:bold">:</span> () =&gt; <span style="color:#000;font-weight:bold">this</span>.side <span style="color:#000;font-weight:bold">*</span> <span style="color:#000;font-weight:bold">this</span>.side  
+</span></span><span style="display:flex;"><span>}  
+</span></span><span style="display:flex;"><span>square3.area();  <span style="color:#998;font-style:italic">// NaN - why?  
+</span></span></span></code></pre></div><p>References:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer</a></li>
+</ul>
+<h1 id="5--what-do-you-use-promise-or-observable-for">#5 — What do you use Promise (or Observable) for?</h1>
+<blockquote>
+<p>Asynchronous execution is quite prevalent. It is rare to program a frontend without making some network call, or setting up a timeout or interval. Knowledge of Promise (or Observable if you are using Angular or RxJs) is essential.</p>
+</blockquote>
+<p>Promise (or Observable) is a popular way of programming asynchronous Javascript. It allows a developer to write codes to:</p>
+<ul>
+<li>Trigger an asynchronous execution</li>
+<li>Then handle the result when it finishes successfully, or in error, or regardless.</li>
+</ul>
+<p>Promise (or Observable) allows chaining of calls and handlers. This enables a powerful yet intuitive way of programming multiple asynchronous executions and handling their results.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#998;font-style:italic">// Promise  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">const</span> hello <span style="color:#000;font-weight:bold">=</span> fetch(<span style="color:#d14">&#39;https://echook.azurewebsites.net/echo&#39;</span>)  
+</span></span><span style="display:flex;"><span>  .then(resp =&gt; resp.text())  
+</span></span><span style="display:flex;"><span>  .then(text =&gt; JSON.parse(text))   <span style="color:#998;font-style:italic">// or  resp.json() instead of text()  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>  .then(console.log)  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">// Angular&#39;s Observable  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">this</span>.httpClient.get<span style="color:#000;font-weight:bold">&lt;</span>string<span style="color:#a61717;background-color:#e3d2d2">\</span><span style="color:#000;font-weight:bold">&gt;</span>(<span style="color:#d14">&#39;https://echook.azurewebsites.net/echo&#39;</span>)  
+</span></span><span style="display:flex;"><span>   .subscribe(resp =&gt; {  
+</span></span><span style="display:flex;"><span>      console.log(resp.body)  
+</span></span><span style="display:flex;"><span>    });  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>References:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise</a></li>
+<li><a href="https://angular.io/guide/observables-in-angular">https://angular.io/guide/observables-in-angular</a></li>
+</ul>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/javascript/">JavaScript</a></li>
+        <li><a href="/tags/interview/">Interview</a></li>
+        <li><a href="/tags/practical/">Practical</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

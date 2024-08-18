@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>[Excel] Bulk Linking Cells to Sheets Whose Name Equates Cell&#39;s value</title>
+<meta data-rh="true" property="og:url" content="https://example.org/posts/2013/12/2013-12-30-bulk-linking-cell-to-sheets/">
+<meta data-rh="true" property="og:title" content="[Excel] Bulk Linking Cells to Sheets Whose Name Equates Cell&#39;s value">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2013/12/2013-12-30-bulk-linking-cell-to-sheets/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+  <meta property="og:image" content="https://example.org/geraldnguyen-profile.jpg" data-rh="true">
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/tech-related/">Tech Related</a></li>
+    </ul>
+  </div>
+
+
+<h1>[Excel] Bulk Linking Cells to Sheets Whose Name Equates Cell&#39;s value</h1>
+
+<h2 class="subtitle">If you have an excel with an index page and many detailed sheets, you may find the below macro useful. The only requirement is to name your sheet with value of your cell/link in the index page</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://example.org/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>1 min read</span>
+      <span>·</span>
+      <span><time datetime="2013-09-10T09:19:42&#43;01:00">September 10, 2013</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2013/09/2013-09-10-what-happened-when-assign-state-to-stateless-session-bean/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2020/04/2020-04-20-using-bootstrap-with-react/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents"></nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <pre tabindex="0"><code>Sub CreateLinkToSheet()
+    Dim c As Range
+    For Each c In Selection
+        &#39; MsgBox c.Value
+        ActiveSheet.Hyperlinks.Add Anchor:=c, Address:=&#34;&#34;, _
+        SubAddress:=c.Value &amp; &#34;!A1&#34;, TextToDisplay:=c.Value
+    Next c
+End Sub
+</code></pre><p><strong>How to run</strong>: Select the cells to create link and run the macro</p>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/vba/">VBA</a></li>
+        <li><a href="/tags/programming/">Programming</a></li>
+        <li><a href="/tags/old-blog/">Old Blog</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

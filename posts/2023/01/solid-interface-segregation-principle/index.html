@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>SOLID in Action: the Interface Segregation Principle</title>
+<meta data-rh="true" property="og:url" content="https://example.org/posts/2023/01/solid-interface-segregation-principle/">
+<meta data-rh="true" property="og:title" content="SOLID in Action: the Interface Segregation Principle">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2023/01/solid-interface-segregation-principle/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>SOLID in Action: the Interface Segregation Principle</h1>
+
+<h2 class="subtitle">Many client-specific interfaces are better than one general-purpose interface</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://example.org/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>4 min read</span>
+      <span>·</span>
+      <span><time datetime="2023-01-27T08:00:00-07:00">January 27, 2023</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2023/01/solid-liskov-substitution-principle/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2023/02/five-minimum-viable-interview-questions-series/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#flyable-swimmable-animals">Flyable, Swimmable Animals</a></li>
+    <li><a href="#backend-for-frontend">Backend for Frontend</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <figure><img src="/posts/2023/01/solid-interface-segregation-principle/0_2JS1H36QRQHFriO0.jpg"
+    alt="Photos by Eugen Str on Unsplash"><figcaption>
+      <p>Photos by <a href="https://unsplash.com/@eugen1980?utm_source=medium&amp;utm_medium=referral">Eugen Str</a> on <a href="https://unsplash.com/?utm_source=medium&amp;utm_medium=referral">Unsplash</a></p>
+    </figcaption>
+</figure>
+
+<figure><img src="/posts/2023/01/solid-interface-segregation-principle/0_MRP8w8sESbbxCOzU.jpg"
+    alt="Photos by Patrick on Unsplash"><figcaption>
+      <p>Photos by <a href="https://unsplash.com/@pf91_photography?utm_source=medium&amp;utm_medium=referral">Patrick</a> on <a href="https://unsplash.com/?utm_source=medium&amp;utm_medium=referral">Unsplash</a></p>
+    </figcaption>
+</figure>
+
+<p>If you are going to build a house, a table, or a chair, what is your preferred option? The multiple tools on the first picture or one Swiss knife on the second?</p>
+<p>Yep, you are right. If you want to create something useful that last for years, you need specialized tools. The same thinking applies to software development, if you want to create a serious application, you need specialized components represented by their own, purposely designed interfaces. The Interface Segregation Principle (ISP) is available to guide the creation of those interfaces.</p>
+<p>The popular description of this principle, by <a href="https://en.wikipedia.org/wiki/Robert_C._Martin">Robert C. Martin</a>, is</p>
+<blockquote>
+<p>Clients should not be forced to depend upon interfaces that they do not use</p>
+</blockquote>
+<p>While researching the SOLID principle, I found an older, perhaps original, description of this principle in his 2000 paper <a href="https://web.archive.org/web/20150906155800/http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf">Design Principles and Design Patterns</a></p>
+<blockquote>
+<p>Many client-specific interfaces are better than one general-purpose interface</p>
+</blockquote>
+<p>Even though I find the original description is easier to understand, both are fine and should result in the same abstraction.</p>
+<h1 id="flyable-swimmable-animals">Flyable, Swimmable Animals</h1>
+<blockquote>
+<p>Inspired by <a href="https://medium.matcha.fyi/solid-principles-using-typescript-b8d2cb84bfcf">this example</a> from <a href="https://medium.com/u/ca267f562fa8?source=post_page-----6c8f92d2133a--------------------------------">Asa LeHolland</a></p>
+</blockquote>
+<p>We have 3 separate interfaces representing Animals and abilities such as Flying and Swimming. They are <em>implemented</em> by real animals such as Dog, Fish, and Bird. This is a fine illustration of how small, specific interfaces keep the code organized, maintainable, and extensible.</p>
+<figure><img src="/posts/2023/01/solid-interface-segregation-principle/1_ePi9aZt4Psn6WgMzSh-2vA.png"
+    alt="Animal, Flyable, and Swimmable interfaces"><figcaption>
+      <p>Animal, Flyable, and Swimmable interfaces</p>
+    </figcaption>
+</figure>
+
+<p>It looks good until we realized that it forgot to present the client’s perspective. In fact, there is no client at all!</p>
+<p>Let’s assume that these interfaces and classes are part of a Pet Store application that shows a before-checkout questionnaire with relevant questions related to the selected items. If an animal is selected, a question about animal permits and noise regulation may be asked. If a flyable animal is selected, a concerning question about adequate flying space may be present. If a swimmable animal is selected, good access to clean water is in the questionnaire. So on and so forth.</p>
+<p>Let’s also assume that we have many other animals than just Dog, Bird, and Fish in our collections.</p>
+<figure><img src="/posts/2023/01/solid-interface-segregation-principle/1_LywD8n6D2RsJvY4Lwwpj5g.png"
+    alt="Animal, Flyable, and Swimmable interfaces: beyond"><figcaption>
+      <p>Animal, Flyable, and Swimmable interfaces: beyond</p>
+    </figcaption>
+</figure>
+
+<p>Apply ISP to simplify client integration and improve the design and implementation quality</p>
+<p>It is through this larger view showing both the component’s design and its client’s perspective that we understand the benefits of applying the ISP. Not only are the client-specific interfaces easier to integrate but it also simplifies the client’s implementation. Each questionnaire only concerns itself with a smaller set of attributes such as being Animal, or being Flyable… instead of dealing with multiple combinations of such attributes.</p>
+<h1 id="backend-for-frontend">Backend for Frontend</h1>
+<p>Popular in modern applications with multiple frontends, the <a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends">Backend-for-frontend (BFF) pattern</a> is pretty much a realization of the ISP principle.</p>
+<figure><img src="/posts/2023/01/solid-interface-segregation-principle/1_dqSwj5Y1Qy4E_LTeQZ6ZWw.png"
+    alt="Separate backend for each frontend"><figcaption>
+      <p>Separate backend for each frontend</p>
+    </figcaption>
+</figure>
+
+<p>The premise is this: if your multiple frontends start requiring different supports from a single backend, it is time to create a separate backend for each frontend.</p>
+<p>There are multiple considerations when implementing this pattern. The first presents the immediate concern: Cost. On-premise or on the cloud, it costs money to procure and expend computing, storage, IP address, domain name, development and maintenance time and manpower… The second, duplication of codes, even though is less important <em>now</em> but will accumulate and roll over as technical debt and maintenance costs.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>The ISP is one that looks simple but requires extra thought. Your task is not limited to just the component at hand but the larger context of how the various client of the component is going to integrate with it. Your task also does not end at breaking down complex interfaces but also paying attention to the impact of doing so.</p>
+
+
+<div class="page-break" role="separator">
+  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+</div>
+<p>If you like this article, please <a href="https://geraldnguyen.medium.com/subscribe">follow me</a> for more quality content.</p>
+<p>Other articles in this series:</p>
+<ul>
+<li><a href="https://example.org/posts/2022/12/becoming-a-solid-developer/">Becoming a SOLID developer</a></li>
+<li><a href="https://example.org/posts/2022/12/solid-single-responsibility-principle/">SOLID in Action — the Single Responsibility Principle</a></li>
+<li><a href="https://example.org/posts/2022/12/solid-open-close-principle/">SOLID in Action — the Open-closed principle</a></li>
+<li><a href="https://example.org/posts/2023/01/solid-liskov-substitution-principle/">SOLID in Action — the Liskov Substitution principle</a></li>
+<li><a href="https://example.org/posts/2023/01/solid-interface-segregation-principle/">SOLID in Action — the Interface Segregation principle</a></li>
+<li><a href="https://example.org/posts/2023/02/solid-dependency-inversion-principle/">SOLID in Action — the Dependency Inversion principle</a></li>
+</ul>
+<p>Thank you.</p>
+
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/software-engineering/">Software Engineering</a></li>
+        <li><a href="/tags/solid-principles/">SOLID Principles</a></li>
+        <li><a href="/tags/programming/">Programming</a></li>
+        <li><a href="/tags/object-oriented/">Object Oriented</a></li>
+        <li><a href="/tags/interface-segregation/">Interface Segregation</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

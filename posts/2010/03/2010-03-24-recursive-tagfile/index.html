@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>Recursive Tagfile</title>
+<meta data-rh="true" property="og:url" content="https://example.org/posts/2010/03/2010-03-24-recursive-tagfile/">
+<meta data-rh="true" property="og:title" content="Recursive Tagfile">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2010/03/2010-03-24-recursive-tagfile/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+  <meta property="og:image" content="https://example.org/geraldnguyen-profile.jpg" data-rh="true">
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>Recursive Tagfile</h1>
+
+<h2 class="subtitle">This is my experience with recursive tagfile on Weblogic 10.3. I also describe a few problems encountered and how I solved them</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://example.org/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>2 min read</span>
+      <span>·</span>
+      <span><time datetime="2010-03-24T09:19:42&#43;01:00">March 24, 2010</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2010/03/2010-03-10-interesting/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2010/10/2010-10-26-weblogic-saxparserfactory-issue/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents"></nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <p>Tagfile is a good alternative for lazy people like me who hates doing java coding and XML configuration for simple task with lots of HTML codes.</p>
+<p>But laziness knows no limit. Just now I ended up wasting haft a day on a recursive tagfile that would otherwise be completed within 1 hour at most. Yet it was an experience that&rsquo;s worth sharing.</p>
+<p>The tagfile is named <code>catalogue.tag</code>. Its purpose is to display recursively a hierarchy tree of catalogues..</p>
+<p><img src="http://4.bp.blogspot.com/_g19EQrkxY30/S6ngDQvrxyI/AAAAAAAAABM/cNJh_45dWlI/s320/hier1.png" alt=""></p>
+<p>The tagfile takes in an attribute named value of type <code>TreeNode</code>. This type contains properties call Object (for the actual object), Parent (of type TreeNode) and Children (List of TreeNodes). Below is how it can be invoked.</p>
+<p>The recursion solution may appear very simple. So I thought.</p>
+<p>My first attempt is shown below:</p>
+<p><img src="http://2.bp.blogspot.com/_g19EQrkxY30/S6nilSER_tI/AAAAAAAAABU/_omvFkdPJWc/s640/hier2.png" alt=""></p>
+<p>Notice the red box. That&rsquo;s the cause of my error:</p>
+<pre tabindex="0"><code>catalogue.tag:12:8: Current file&#39;s JSP version conflicts with current tag &#34;huy:catalogue&#34;&#39;s.
+</code></pre><p>As soon as I replace that with <code>tagdir</code> attribute, everything works. That seem strange but as long as it works I don&rsquo;t really care.</p>
+<p>But the page seem to take long time to load. The CPU usage is high. I tried put in some time measurement to check how long the recursive takes; less than 30 ms every time. I&rsquo;m really puzzled. It&rsquo;s definitely related to the recursive, but it seem more like how the Weblogic container prepares the recursive tagfile rather than how it invoke it.</p>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/j2ee/">J2ee</a></li>
+        <li><a href="/tags/tagfile/">Tagfile</a></li>
+        <li><a href="/tags/debugging/">Debugging</a></li>
+        <li><a href="/tags/old-blog/">Old Blog</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

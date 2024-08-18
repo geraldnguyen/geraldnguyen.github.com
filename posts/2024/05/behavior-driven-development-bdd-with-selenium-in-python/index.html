@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>Behavior Driven Development (BDD) with Selenium in Python</title>
+<meta data-rh="true" property="og:url" content="https://example.org/posts/2024/05/behavior-driven-development-bdd-with-selenium-in-python/">
+<meta data-rh="true" property="og:title" content="Behavior Driven Development (BDD) with Selenium in Python">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2024/05/behavior-driven-development-bdd-with-selenium-in-python/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+
+
+<h1>Behavior Driven Development (BDD) with Selenium in Python</h1>
+
+<h2 class="subtitle">A beginner guide</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://example.org/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>8 min read</span>
+      <span>·</span>
+      <span><time datetime="2024-05-20T08:00:00-07:00">May 20, 2024</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2024/05/how-to-join-video-semi-automated/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/pages/about/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#basics-of-bdd">Basics of BDD</a>
+      <ul>
+        <li><a href="#bdd-in-software-development-and-testing">BDD in Software Development and Testing</a></li>
+        <li><a href="#implementing-the-behavior-in-bdd">Implementing the Behavior in BDD</a></li>
+      </ul>
+    </li>
+    <li><a href="#bdd-with-selenium-in-python-overview">BDD with Selenium in Python: Overview</a>
+      <ul>
+        <li><a href="#dependencies">Dependencies</a></li>
+        <li><a href="#organization">Organization</a></li>
+        <li><a href="#write-feature-files-and-implement-the-steps">Write Feature files and implement the steps</a></li>
+        <li><a href="#execute-the-test">Execute the test</a></li>
+      </ul>
+    </li>
+    <li><a href="#bdd-with-selenium-in-python-demo">BDD with Selenium in Python: Demo</a>
+      <ul>
+        <li><a href="#quick-recap">Quick Recap</a></li>
+        <li><a href="#bdd-scenarios">BDD Scenarios</a></li>
+        <li><a href="#implementing-the-behaviors">Implementing the behaviors</a></li>
+        <li><a href="#execute-the-test-1">Execute the test</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <p>This is a continuation from my previous article where we learned the basic of Selenium and how to program it in Python to perform UI automation testing.</p>
+<p><a href="https://levelup.gitconnected.com/getting-started-on-ui-automation-testing-using-selenium-with-python-b4903dad5a74?source=post_page-----58390fcc0325--------------------------------">Getting started on UI automation testing using Selenium with Python</a></p>
+
+
+
+<div class="container alert alert-secondary">
+    <div><a href="/posts/2023/02/five-minimum-viable-interview-questions-series/" alt="Five Minimum Viable Interview Questions series — Updated 17 Feb 2023">
+        <strong>Five Minimum Viable Interview Questions series — Updated 17 Feb 2023</strong>
+    </a></div>
+    <div class="d-flex align-items-start">
+      
+          
+          
+              
+              <img src="/posts/2023/02/five-minimum-viable-interview-questions-series/0_qxJpBdXPqAG2Z7NJ_hu18368998056076422812.jpg" alt="Five Minimum Viable Interview Questions series — Updated 17 Feb 2023" />
+          
+      
+      <p class="px-1">
+        <small>Interviewer: ask them if your interview is running out of time. Interviewee: practice them if your preparation is running out of time.</small>
+      </p> 
+      
+    </div>
+    
+    
+</div>
+<h1 id="basics-of-bdd">Basics of BDD</h1>
+<p>Behavior Driven Development is a popular software development discipline. As its name suggests, BDD project is guided by definition and verification of <em>behaviors</em>. A common form of <em>behavior</em> can be expressed in the form of</p>
+<blockquote>
+<p><strong>given</strong> &lt;some pre-requisites&gt;</p>
+</blockquote>
+<blockquote>
+<p><strong>when</strong> &lt;some actions happen&gt;</p>
+</blockquote>
+<blockquote>
+<p><strong>then</strong> &lt;some results to verify&gt;</p>
+</blockquote>
+<p>This form of expression is popular enough that people created a language called <a href="https://cucumber.io/docs/gherkin/">Gherkin</a> to express and extend it. Gherkin organizes a software’s behaviors into one or more <code>.feature</code> files, each may contain one or more scenarios in the <em>given…when…then</em> form.</p>
+<p>Example:</p>
+<pre tabindex="0"><code># Source: https://cucumber.io/docs/gherkin/reference/#example  
+Feature: Guess the word  
+  
+  # The first example has two steps  
+  Scenario: Maker starts a game  
+    When the Maker starts a game  
+    Then the Maker waits for a Breaker to join  
+  
+  # The second example has three steps  
+  Scenario: Breaker joins a game  
+    Given the Maker has started a game with the word &#34;silky&#34;  
+    When the Breaker joins the Maker&#39;s game  
+    Then the Breaker must guess a word with 5 characters
+</code></pre><figure><img src="/posts/2024/05/behavior-driven-development-bdd-with-selenium-in-python/1_ZWQCCWcTUsb9DoEVUAwcTQ.webp"
+    alt="Gherkin as a language?"><figcaption>
+      <p>Gherkin as a language?</p>
+    </figcaption>
+</figure>
+
+<h2 id="bdd-in-software-development-and-testing">BDD in Software Development and Testing</h2>
+<p>Software development team uses BDD to describe software behaviors in simple, natural and consistent language. Its main functions are thus a documentation and communication tool across all disciplines and stakeholders such as end users, product managers, developers, testers.</p>
+<p>Arguably, BDD is often considered a special form of Test Driven Development (TDD) and is most popular among software testers or developers who develop automation tests.</p>
+<h2 id="implementing-the-behavior-in-bdd">Implementing the Behavior in BDD</h2>
+<p>Each BDD expression has a corresponding implementation. Take the second scenario above for example:</p>
+<p>When a scenario read <code>Given the Maker has started a game with the word “silky”</code>, there are setup codes executing to create a new gameboard with the specified word “silky”</p>
+<pre tabindex="0"><code>@given(&#39;the Maker has started a game with the word &#34;silky&#34;&#39;)  
+def step_impl(context):  
+    context.game = Game(&#34;silky&#34;)
+</code></pre><p>The implementation can be very elaborated or can be just as simple as doing nothing</p>
+<pre tabindex="0"><code>@when(u&#39;the Breaker joins the Maker\&#39;s game&#39;)  
+def step_impl(context):  
+    pass
+</code></pre><p>It’s an error if we miss an implementation. Suppose we forgot to implement the last expression <code>Then the Breaker must guess a word with 5 characters</code> , we will receive the following error:</p>
+<figure><img src="/posts/2024/05/behavior-driven-development-bdd-with-selenium-in-python/1_TV-yoUTewIRnchjXC2oTRw.webp"
+    alt="Missing implementation error"><figcaption>
+      <p>Missing implementation error</p>
+    </figcaption>
+</figure>
+
+<h1 id="bdd-with-selenium-in-python-overview">BDD with Selenium in Python: Overview</h1>
+<h2 id="dependencies">Dependencies</h2>
+<p>In Python, we can use <a href="https://behave.readthedocs.io/en/latest/">Behave</a> to run BDD tests. It will pick up the <code>.features</code> file, their implementation and execute them accordingly.</p>
+<pre tabindex="0"><code>pip install behave
+</code></pre><p>We also need <a href="https://www.selenium.dev/">Selenium</a> to launch and control Chrome</p>
+<pre tabindex="0"><code>pip install selenium
+</code></pre><h2 id="organization">Organization</h2>
+<p>We will organize our files in the following structure:</p>
+<pre tabindex="0"><code>Root project folder    
+  |-- features  
+        |-- steps  
+        |    |-- a_feature_implementation.py  
+        |-- environment.py  
+        |-- a_feature.feature
+</code></pre><ul>
+<li>Keep all <code>.feature</code> files under a single folder named <code>features</code></li>
+<li>Keep all implementation <code>.py</code> files under a subfolder named <code>steps</code> below <code>features</code></li>
+<li>If multiple features or scenarios shared the same setup, we can keep the setup (and cleanup) codes inside an <code>environment.py</code> file directly under the <code>features</code> folder</li>
+</ul>
+<h2 id="write-feature-files-and-implement-the-steps">Write Feature files and implement the steps</h2>
+<p>See the demo in the next section</p>
+<h2 id="execute-the-test">Execute the test</h2>
+<p>See the demo in the next section</p>
+<h1 id="bdd-with-selenium-in-python-demo">BDD with Selenium in Python: Demo</h1>
+<p>We will demonstrate how to describe and implement the 2 tests in the <a href="https://medium.com/gitconnected/getting-started-on-ui-automation-testing-using-selenium-with-python-b4903dad5a74">previous article</a> in BDD style.</p>
+<h2 id="quick-recap">Quick Recap</h2>
+<ul>
+<li>The 2 test cases are implemented in 2 function <code>test_tc1_get_python_org_title(self)</code> and <code>test_tc2_search_getting_started(self)</code> respectively.</li>
+<li>We use Selenium’s Chrome web driver to control the Chrome browser, inspect its content and simulate user actions. We define <code>setUp(self)</code> and <code>tearDown(self)</code> functions to handle the setting up and cleaning up of test’s fixture i.e. the Chrome web driver.</li>
+<li>We use Python’s <code>unittest</code> library to run and assert desired results</li>
+</ul>
+<pre tabindex="0"><code>import unittest  
+from selenium import webdriver  
+from selenium.webdriver.common.by import By  
+  
+class TestPythonOrg(unittest.TestCase):  
+    def setUp(self):  
+        self.driver = webdriver.Chrome()  
+  
+    def tearDown(self):  
+        self.driver.quit()  
+  
+    def test_tc1_get_python_org_title(self):  
+        driver = self.driver  
+        driver.get(&#34;https://www.python.org&#34;)  
+  
+        print(driver.title)  
+        self.assertEqual(&#34;Welcome to Python.org&#34;, driver.title)  
+  
+  
+    def test_tc2_search_getting_started(self):  
+        driver = self.driver  
+  
+        driver.get(&#34;https://www.python.org&#34;)  
+  
+        search_input_field = driver.find_element(By.ID, &#34;id-search-field&#34;)  
+        search_input_field.clear()  
+        search_input_field.send_keys(&#34;getting started in Python&#34;)  
+  
+        search_go_button = driver.find_element(By.ID, &#34;submit&#34;)  
+        search_go_button.click()  
+  
+        print(&#34;current url: &#34; + driver.current_url)  
+        self.assertEqual(&#34;https://www.python.org/search/?q=getting+started+in+Python&amp;submit=&#34;, driver.current_url)  
+  
+        results = driver.find_elements(By.CSS_SELECTOR, &#34;.list-recent-events li&#34;)  
+        print(f&#34;number of results: {len(results)}&#34;)  
+        self.assertGreater(len(results), 0)  
+  
+if __name__ == &#39;__main__&#39;:  
+    unittest.main()
+</code></pre><h2 id="bdd-scenarios">BDD Scenarios</h2>
+<p>We can express the previous test cases as the following 2 scenarios. We place them under a single feature here but you can have them in separate <code>.feature</code> files.</p>
+<pre tabindex="0"><code># file: lauch_python_org.feature  
+  
+Feature: Launch and Search Python.org  
+  
+    Scenario: Launch Python.org  
+      Given we have selenium installed  
+       When we launch https://www.python.org in chrome  
+       Then we obtain title &#34;Welcome to Python.org&#34;  
+  
+    Scenario: Search Getting started in Python  
+      Given we have selenium installed  
+       When we launch https://www.python.org in chrome  
+        And we search &#34;getting started in Python&#34;  
+       Then we arrive at search page  
+        And we obtain some result
+</code></pre><p>In both scenario:</p>
+<ul>
+<li>We make an explicit assumption that we have Selenium installed → the <code>Given</code></li>
+<li>Then we open <a href="https://www.python.org./">https://www.python.org</a> in Chrome → the <code>When</code>. Scenario 2 perform an extra action (search “getting started in Python”) → the <code>And</code> following a <code>When</code></li>
+<li>Each scenario performs their own validation of the obtained result → the <code>Then</code>. Scenario 1 validate that the page’s title is “Welcome to Python.org” while Scenario 2 asserts two conditions: that the browser arrived at the search page, and that it contains some search results → the <code>Then</code> and the <code>And</code> following that Then</li>
+</ul>
+<p>We can observe that <code>And</code> has flexible meanings depending on where it is used. It takes after the keyword it follows:</p>
+<ul>
+<li>Following a <code>Given</code>, it specifies an additional pre-requisite</li>
+<li>Following a <code>When</code>, it specifies an additional action</li>
+<li>Following a <code>Then</code>, it specifies an additional assertion</li>
+</ul>
+<h2 id="implementing-the-behaviors">Implementing the behaviors</h2>
+<p>Since our 2 test scenarios requires the use of Selenium to launch and control Chrome browser — so-called test’s fixture, we’ll create an <code>environment.py</code> to set that up.</p>
+<ul>
+<li>The <code>selenium_browser_chrome(context)</code> is responsible for setting Selenium’s Chrome <code>webdriver</code> and save its reference to the the <code>context.browser</code> attribute. It returns that attribute and <code>yield</code> the execution to Behave’s runtime to execute all the tests. When all tests finish, it gains back control and shutdown the Chrome browser by calling the <code>.quit()</code> method</li>
+<li>The <code>before_all(context)</code> method runs once at the beginning. It tells Behave to call <code>selenium_browser_chrome</code> method to setup the fixture.</li>
+</ul>
+<pre tabindex="0"><code># file: features/environment.py  
+from behave import fixture, use_fixture  
+from selenium import webdriver  
+  
+@fixture  
+def selenium_browser_chrome(context):  
+    context.browser = webdriver.Chrome()  
+    yield context.browser  
+    context.browser.quit()  
+  
+def before_all(context):  
+    use_fixture(selenium_browser_chrome, context)
+</code></pre><p>We implement the remaining behaviors as below:</p>
+<ul>
+<li>We create a file <code>features/steps/lauch_python_org.py</code> to contain our implementation</li>
+<li>We import necessary codes from Behave and Selenium at the start of the file</li>
+<li>For the <code>Given</code>, the <code>environment.py</code> already setup Selenium for us. We can just <code>pass</code> it, or we can explicitly assert that calling <code>assert hasattr(context, ‘browser’)</code></li>
+<li>We obtain the Chrome webdriver by the <code>context.browser</code> expression</li>
+<li>Using the Chrome webdriver, we open <a href="https://www.python.org,/">https://www.python.org,</a> examine its title, search “Getting started in Python”… just like we did in the <a href="https://medium.com/gitconnected/getting-started-on-ui-automation-testing-using-selenium-with-python-b4903dad5a74">previous article</a>.</li>
+</ul>
+<pre tabindex="0"><code># file: features/steps/lauch_python_org.py  
+  
+from behave import *  
+from selenium.webdriver.common.by import By  
+  
+@given(&#39;we have selenium installed&#39;)  
+def step_impl(context):  
+    assert hasattr(context, &#39;browser&#39;)  
+  
+@when(&#39;we launch https://www.python.org in chrome&#39;)  
+def step_impl(context):  
+    context.browser.get(&#34;https://www.python.org&#34;)  
+  
+@then(&#39;we obtain title &#34;Welcome to Python.org&#34;&#39;)  
+def step_impl(context):  
+    assert context.browser.title == &#34;Welcome to Python.org&#34;  
+  
+@when(&#39;we search &#34;getting started in Python&#34;&#39;)  
+def step_impl(contex):  
+    browser = contex.browser  
+    search_input_field = browser.find_element(By.ID, &#34;id-search-field&#34;)  
+    search_input_field.clear()  
+    search_input_field.send_keys(&#34;getting started in Python&#34;)  
+  
+    search_go_button = browser.find_element(By.ID, &#34;submit&#34;)  
+    search_go_button.click()  
+  
+@then(&#39;we arrive at search page&#39;)  
+def step_impl(context):  
+    assert context.browser.current_url == &#34;https://www.python.org/search/?q=getting+started+in+Python&amp;submit=&#34;  
+  
+@then(&#39;we obtain some result&#39;)  
+def step_impl(context):  
+    results = context.browser.find_elements(By.CSS_SELECTOR, &#34;.list-recent-events li&#34;)  
+    assert  len(results) &gt; 0
+</code></pre><h2 id="execute-the-test-1">Execute the test</h2>
+<p>Depending on how you setup your project, it can be as simple as typing <code>behave</code> into the terminal prompt (in PyCharm virtual environment setup), or as complicated as locating where <code>behave</code> is installed in order to execute it.</p>
+<p>If you have run <code>pip install behave</code> previously, you can also type <code>python -m behave</code> to execute the test</p>
+<pre tabindex="0"><code>PS ...\bdd-getting-started&gt; behave  
+DevTools listening on ws://127.0.0.1:59978/devtools/browser/9ab3805c-031d-45cc-bd58-b601e1979e50  
+Feature: Launch and Search Python.org # features/lauch_python_org.feature:1  
+  Scenario: Launch Python.org                       # features/lauch_python_org.feature:3  
+    Given we have selenium installed                # features/steps/launch_python_org.py:5  
+    When we launch https://www.python.org in chrome # features/steps/launch_python_org.py:8  
+    Then we obtain title &#34;Welcome to Python.org&#34;    # features/steps/launch_python_org.py:12  
+  Scenario: Search Getting started in Python        # features/lauch_python_org.feature:8  
+    Given we have selenium installed                # features/steps/launch_python_org.py:5  
+    When we launch https://www.python.org in chrome # features/steps/launch_python_org.py:8  
+    And we search &#34;getting started in Python&#34;       # features/steps/launch_python_org.py:16  
+    Then we arrive at search page                   # features/steps/launch_python_org.py:26  
+    And we obtain some result                       # features/steps/launch_python_org.py:30  
+1 feature passed, 0 failed, 0 skipped  
+2 scenarios passed, 0 failed, 0 skipped  
+8 steps passed, 0 failed, 0 skipped, 0 undefined  
+Took 0m1.844s
+</code></pre><h1 id="conclusion">Conclusion</h1>
+<p>We have briefly learn what Behavior-Driven development is, how a software development team uses it, and how we can do so with <a href="https://behave.readthedocs.io/">Behave</a>, <a href="https://www.selenium.dev/">Selenium</a> in Python.</p>
+<p>For the demo, we converted our <a href="https://levelup.gitconnected.com/getting-started-on-ui-automation-testing-using-selenium-with-python-b4903dad5a74">previous project</a>, which contains 2 simple Selenium-based UI automation tests, into 2 BDD scenarios. You can get the sample codes from the GitHub link below</p>
+<p><a href="https://github.com/geraldnguyen/bdd-getting-started?source=post_page-----58390fcc0325--------------------------------">GitHub - geraldnguyen/bdd-getting-started: Behavior Driven Development (BDD) with Selenium in…</a></p>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/programming/">Programming</a></li>
+        <li><a href="/tags/python/">Python</a></li>
+        <li><a href="/tags/selenium/">Selenium</a></li>
+        <li><a href="/tags/bdd/">BDD</a></li>
+        <li><a href="/tags/tutorial/">Tutorial</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

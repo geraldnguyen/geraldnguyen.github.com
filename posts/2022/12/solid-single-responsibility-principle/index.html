@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>SOLID in Action — the Single Responsibility Principle</title>
+<meta data-rh="true" property="og:url" content="https://example.org/posts/2022/12/solid-single-responsibility-principle/">
+<meta data-rh="true" property="og:title" content="SOLID in Action — the Single Responsibility Principle">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2022/12/solid-single-responsibility-principle/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>SOLID in Action — the Single Responsibility Principle</h1>
+
+<h2 class="subtitle">“A class should have one, and only one, reason to change.”</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://example.org/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>4 min read</span>
+      <span>·</span>
+      <span><time datetime="2022-12-14T08:00:00-07:00">December 14, 2022</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2022/12/5-minimum-viable-javascript-interview-questions/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2022/12/thu-duc-hcmc-vietnam/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#reusable-maintainable-and-understandable">Reusable, Maintainable, and Understandable</a></li>
+    <li><a href="#beware-feature-evolvement">Beware: Feature Evolvement</a></li>
+    <li><a href="#the-lesser-evil">The lesser evil</a></li>
+    <li><a href="#anthological-responsibility">Anthological Responsibility</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <figure><img src="/posts/2022/12/solid-single-responsibility-principle/0_AzgjytmEOFKBuWDZ.jpg"
+    alt="Photo by Robert Linder on Unsplash"><figcaption>
+      <p>Photo by <a href="https://unsplash.com/@rwlinder?utm_source=medium&amp;utm_medium=referral">Robert Linder</a> on <a href="https://unsplash.com/?utm_source=medium&amp;utm_medium=referral">Unsplash</a></p>
+    </figcaption>
+</figure>
+
+<p>We know the saying “Jack of all trades, master of none”. We dislike it when we are at the receiving end. We dislike it too when it is said to someone we love. That should extend to <em>things</em> that we love too.</p>
+<p>We developers love the codes we created. We are proud of the function we write, the class we design, the component, the system, and the microservices… we develop. We thus would not like it if they become “Jack of all trades, master of none”.</p>
+<p>Hence we should always keep in mind the Single Responsibility principle (SRP) when we work on new creations.</p>
+<p>There are 2 versions of this principle:</p>
+<ul>
+<li>Each class should have a single responsibility</li>
+<li>A class should have one, and only one, reason to change</li>
+</ul>
+<p>The latter is probably more famous, counting <a href="https://www.google.com/search?q=%22A+class+should+have+one%2C+and+only+one%2C+reason+to+change%22&amp;sxsrf=ALiCzsa2EBcvHhvDFVddG8qcLDNE_9YrBA%3A1670480497947&amp;ei=cYKRY5uVOb6dseMP7PKsuAk&amp;ved=0ahUKEwjbkbzlsOn7AhW-TmwGHWw5C5cQ4dUDCA8&amp;uact=5&amp;oq=%22A+class+should+have+one%2C+and+only+one%2C+reason+to+change%22&amp;gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzIECAAQHjIECAAQHjIFCAAQhgMyBQgAEIYDMgUIABCGAzIFCAAQhgM6BwgjELADECc6CggAEEcQ1gQQsANKBAhBGABKBAhGGABQ-xZY5yNg6CVoAXABeACAAYgBiAH9AZIBAzAuMpgBAKABAcgBCcABAQ&amp;sclient=gws-wiz-serp">22,600 results</a> on google. But I feel the former is easier to understand and relates better to whatever names we give to our creations. Regardless, the guidance is the same.</p>
+<h1 id="reusable-maintainable-and-understandable">Reusable, Maintainable, and Understandable</h1>
+<p>In the <a href="https://example.org/posts/2022/12/becoming-a-solid-developer/">first article</a>, I suggest that an <code>EmailService</code> should concern itself with sending emails only, not sending emails <em>and</em> updating order status.</p>
+<figure><img src="/posts/2022/12/solid-single-responsibility-principle/0_b2-Zh2F-uSHYQcOH.png"
+    alt="EmailService and its associations"><figcaption>
+      <p>EmailService and its associations</p>
+    </figcaption>
+</figure>
+
+<p>The benefits are multiple:</p>
+<ul>
+<li><code>EmailService</code> is more <strong>reusable</strong>. <code>StockManagementService</code> can also call it to raise “low stock” email alerts.</li>
+<li><code>EmailService</code> is more <strong>maintainable</strong>. We need to take care of one <code>sendEmail(EmailContent)</code> method and nothing else. We do not need to know the order management logic nor worry about how it may change to add a new status.</li>
+<li><code>EmailService</code> is more <strong>understandable</strong>. Without looking at a single line of code, we know with confidence that it is responsible for only sending emails.</li>
+</ul>
+<h1 id="beware-feature-evolvement">Beware: Feature Evolvement</h1>
+<p>As the application grows, the users demand more. Emails need to be better formatted e.g. in HTML, with design images and CSS. The development team decided to capture the complex email designs in template files instead of hardcoding them in codes.</p>
+<figure><img src="/posts/2022/12/solid-single-responsibility-principle/1_O_FdHcQ6a7JjYmlmRtomjw.png"
+    alt="Order confirmation (screenshot)"><figcaption>
+      <p>Order confirmation (screenshot)</p>
+    </figcaption>
+</figure>
+
+<p><code>EmailContent</code> is now extended to include 2 new fields: a <code>templateName</code> holding the name of the template file and <code>templateValues</code> holding the values of placeholders defined in the template (e.g. <code>customerName</code> maps to <code>Huy</code>, <code>orderAmount</code> maps to <code>42.90</code>, <code>orderCurrency</code> maps to <code>SGD</code>)</p>
+<pre tabindex="0"><code>data class EmailContent (  
+   // existing fields  
+   val fromEmail: String,   
+   val toEmail: String,   
+   val ccEmail: String,  
+   val emailBoy: String,  
+   // new fields  
+   val templateName: String,     
+   val templateValues: Map&lt;String, Object&gt;   
+)
+</code></pre><p>The team also added one new method to <code>EmailService</code> to read the <code>templateName</code>, fill it with values from <code>templateValues</code> , and send out the final email.</p>
+<pre tabindex="0"><code>interface EmailService {  
+    fun sendEmail(content: EmailContent): String  
+    fun sendEmailWithTemplate(content: EmailContent): String      
+}
+</code></pre><p>Unfortunately, this is a violation of the SRP. The new method adds template processing responsibility to the <code>EmailService</code>. While <code>EmailService</code> can still be reusable, it is obviously less maintainable and less understandable due to the extra logic.</p>
+<p>Though this violation is still easy to spot, it is a common pitfall. However good the original design is, feature evolvement is often involved in the violation of the SRP.</p>
+<h1 id="the-lesser-evil">The lesser evil</h1>
+<p>The business blooms and added 2 more modes of ordering. In addition to the original shopping cart ordering, orders can come from affiliates or monthly recurrent subscriptions. Regardless of which mode, customers expect confirmation emails when an order is created and their credit card is charged.</p>
+<p>To avoid repeating the codes that create and send confirmation emails in 3 different classes, the team decided to move them to <code>EmailService</code>’s <code>sendOrderConfirmation(OrderDetail)</code> method</p>
+<figure><img src="/posts/2022/12/solid-single-responsibility-principle/1_J1jUzedz3xlzOmlj2YdIiQ.png"
+    alt="Avoid code duplication or be true to the SRP"><figcaption>
+      <p>Avoid code duplication or be true to the SRP</p>
+    </figcaption>
+</figure>
+
+<p>This is an obvious violation of the SRP, but it has strong justification. Which is the lesser evil, code duplication in 3 classes, or having 1 more responsibility in <code>EmailService</code>?</p>
+<h1 id="anthological-responsibility">Anthological Responsibility</h1>
+<p>Have you watched The Ballad of Buster Scruggs, an <a href="https://en.wikipedia.org/wiki/Anthology_film">anthology film</a> by the Coen brothers? It is a collection of 6 short western stories.</p>
+<p>By analogy, let’s have an anthology class. Perhaps its best examples are utility classes.</p>
+<p>A common theme usually connects the individual reasons within the larger group. <a href="https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html">StringUtils</a>, for instance, collects many string manipulation methods.</p>
+<p>What if there is no clear theme? A <code>MiscellaneousUtils</code> (or its shorter form <code>MiscUtils</code>) is fine.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>The Single Responsibility principle brings many benefits. Reusability, maintainability, and understandability are just some of them.</p>
+<p>SRP is not always achievable or maintainable, unfortunately. We analyzed two scenarios where despite a good initial design, violation still manages to creep in.</p>
+<p>We have not discussed how to resolve those violations. That is on purpose because fixing them is as hard as fixing the technical debts every team accumulates over time.</p>
+<p>Last but not least, we discuss utility class as a form of anthological responsibility.</p>
+
+
+<div class="page-break" role="separator">
+  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+</div>
+<p>If you like this article, please <a href="https://geraldnguyen.medium.com/subscribe">follow me</a> for more quality content.</p>
+<p>Other articles in this series:</p>
+<ul>
+<li><a href="https://example.org/posts/2022/12/becoming-a-solid-developer/">Becoming a SOLID developer</a></li>
+<li><a href="https://example.org/posts/2022/12/solid-single-responsibility-principle/">SOLID in Action — the Single Responsibility Principle</a></li>
+<li><a href="https://example.org/posts/2022/12/solid-open-close-principle/">SOLID in Action — the Open-closed principle</a></li>
+<li><a href="https://example.org/posts/2023/01/solid-liskov-substitution-principle/">SOLID in Action — the Liskov Substitution principle</a></li>
+<li><a href="https://example.org/posts/2023/01/solid-interface-segregation-principle/">SOLID in Action — the Interface Segregation principle</a></li>
+<li><a href="https://example.org/posts/2023/02/solid-dependency-inversion-principle/">SOLID in Action — the Dependency Inversion principle</a></li>
+</ul>
+<p>Thank you.</p>
+
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/software-engineering/">Software Engineering</a></li>
+        <li><a href="/tags/solid-principles/">SOLID Principles</a></li>
+        <li><a href="/tags/software-development/">Software Development</a></li>
+        <li><a href="/tags/object-oriented/">Object Oriented</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

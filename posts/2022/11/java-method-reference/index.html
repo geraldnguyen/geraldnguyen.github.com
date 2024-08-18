@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>Java Method Reference</title>
+<meta data-rh="true" property="og:url" content="https://example.org/posts/2022/11/java-method-reference/">
+<meta data-rh="true" property="og:title" content="Java Method Reference">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2022/11/java-method-reference/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>Java Method Reference</h1>
+
+<h2 class="subtitle">Method reference lets you use an existing method as a lambda as long as their signature (input &amp; output) are compatible.</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://example.org/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>4 min read</span>
+      <span>·</span>
+      <span><time datetime="2022-11-27T09:19:42&#43;01:00">November 27, 2022</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2022/11/code-review-as-an-interview-tool/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2022/11/unit-testing-java-try-with-resource/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#objectinstancemethod">object::instanceMethod</a></li>
+    <li><a href="#classstaticmethod">Class::staticMethod</a></li>
+    <li><a href="#classinstancemethod">Class::instanceMethod</a></li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <p>I first learned method reference from C#, so the Java concept is familiar to me. Or that’s what I thought until I picked up the <a href="https://www.oreilly.com/library/view/modern-java-recipes/9781491973165/">Modern Java Recipes book</a>.</p>
+<p>In this article, we’ll explore 3 forms of method references in Java</p>
+<ul>
+<li><code>object::instanceMethod</code></li>
+<li><code>Class::staticMethod</code></li>
+<li><code>Class::instanceMethod</code></li>
+</ul>
+<p>The last one is a bit more special, as we shall examine in detail</p>
+<figure><img src="/posts/2022/11/java-method-reference/1_ypHleI7FEQsx3ZrsTQBvlQ.png"
+    alt="Source: author"><figcaption>
+      <p>Source: author</p>
+    </figcaption>
+</figure>
+
+<h1 id="objectinstancemethod">object::instanceMethod</h1>
+<p>The <code>object::instanceMethod</code> will invoke the referenced method on the said <em>object</em> with compatible arguments. In the following <a href="https://github.com/geraldnguyen/kitchensink/blob/main/java/src/test/java/core/MethodReferenceTest.java#L49">example</a>, the <code>&quot;hello &quot;</code> string’s <code>concat</code> method is invoked with arguments <code>&quot;a&quot;</code>, <code>&quot;b&quot;</code>, <code>&quot;c&quot;</code> resulting in <code>&quot;hello a&quot;</code>, <code>&quot;hello b&quot;</code>, <code>&quot;hello c&quot;</code> respectively</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#3c5d5d;font-weight:bold">@Test</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#458;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">invoke_the_method_on_the_owning_object</span>()<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">var</span><span style="color:#bbb"> </span>aList<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>List.<span style="color:#008080">of</span>(<span style="color:#d14">&#34;a&#34;</span>,<span style="color:#bbb"> </span><span style="color:#d14">&#34;b&#34;</span>,<span style="color:#bbb"> </span><span style="color:#d14">&#34;c&#34;</span>);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>assertEquals(<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>List.<span style="color:#008080">of</span>(<span style="color:#d14">&#34;hello a&#34;</span>,<span style="color:#bbb"> </span><span style="color:#d14">&#34;hello b&#34;</span>,<span style="color:#bbb"> </span><span style="color:#d14">&#34;hello c&#34;</span>),<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>aList.<span style="color:#008080">stream</span>().<span style="color:#008080">map</span>(<span style="color:#d14">&#34;hello &#34;</span>::concat).<span style="color:#008080">collect</span>(Collectors.<span style="color:#008080">toList</span>())<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>The holder of the method reference is responsible to invoke it with compatible method arguments. In the following <a href="https://github.com/geraldnguyen/kitchensink/blob/main/java/src/test/java/core/MethodReferenceTest.java#L58">example</a>, we test <code>object::instanceMethod</code> with zero, one, two, or more parameters (using a custom functional interface). As long as the number and types of arguments are compatible with the instance method’s signature, the codes compile and run correctly.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">noParam</span>(Supplier<span style="color:#000;font-weight:bold">&lt;</span>String<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>supplier)<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>supplier.<span style="color:#008080">get</span>();<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">oneParam</span>(Function<span style="color:#000;font-weight:bold">&lt;</span>String,<span style="color:#bbb"> </span>String<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>function)<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>function.<span style="color:#008080">apply</span>(<span style="color:#d14">&#34;1&#34;</span>);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">twoParam</span>(BiFunction<span style="color:#000;font-weight:bold">&lt;</span>Integer,<span style="color:#bbb"> </span>Integer,<span style="color:#bbb"> </span>String<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>function)<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>function.<span style="color:#008080">apply</span>(1,<span style="color:#bbb"> </span>2);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>LocalDateTime<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">threeParam</span>(ThreeParam1<span style="color:#bbb"> </span>function)<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>function.<span style="color:#008080">apply</span>(1,<span style="color:#bbb"> </span>2,<span style="color:#bbb"> </span>3);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">interface</span> <span style="color:#458;font-weight:bold">ThreeParam1</span><span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>LocalDateTime<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">apply</span>(<span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>one,<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>two,<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>three);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#3c5d5d;font-weight:bold">@Test</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#458;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">invoke_with_compatible_arguments</span>()<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">// like a Supplier  </span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>assertEquals(<span style="color:#d14">&#34;a&#34;</span>,<span style="color:#bbb"> </span>noParam(<span style="color:#d14">&#34;a &#34;</span>::trim));<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">// like a Function or Consumer  </span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>assertEquals(<span style="color:#d14">&#34;a1&#34;</span>,<span style="color:#bbb"> </span>oneParam(<span style="color:#d14">&#34;a&#34;</span>::concat));<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">// like a BiFunction or BiConsumer  </span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>assertEquals(<span style="color:#d14">&#34;1&#34;</span>,<span style="color:#bbb"> </span>twoParam(<span style="color:#d14">&#34;0123&#34;</span>::substring));<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">// or any compatible Functional Interface  </span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>assertEquals(<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>LocalDateTime.<span style="color:#008080">of</span>(2021,<span style="color:#bbb"> </span>10,<span style="color:#bbb"> </span>11,<span style="color:#bbb"> </span>1,<span style="color:#bbb"> </span>2,<span style="color:#bbb"> </span>3),<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>threeParam(LocalDate.<span style="color:#008080">of</span>(2021,<span style="color:#bbb"> </span>10,<span style="color:#bbb"> </span>11)::atTime));<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><h1 id="classstaticmethod">Class::staticMethod</h1>
+<p>The <code>Class::staticMethod</code> will invoke the referenced method on the declared <em>class</em> with compatible arguments. In the following <a href="https://github.com/geraldnguyen/kitchensink/blob/main/java/src/test/java/core/MethodReferenceTest.java#L135">example</a>, <code>String</code> class’ static method <code>valueOf</code> is invoked with arguments <code>1</code>, <code>2.0</code>, <code>true</code> resulting in <code>&quot;1&quot;</code>, <code>&quot;2.0&quot;</code>, <code>&quot;true&quot;</code> string instances respectively</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#3c5d5d;font-weight:bold">@Test</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#458;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">invoke_the_static_method_on_the_class</span>()<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">var</span><span style="color:#bbb"> </span>aList<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>List.<span style="color:#008080">of</span>(1,<span style="color:#bbb"> </span>2.<span style="color:#008080">0</span>,<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">true</span>);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>assertEquals(<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>List.<span style="color:#008080">of</span>(<span style="color:#d14">&#34;1&#34;</span>,<span style="color:#bbb"> </span><span style="color:#d14">&#34;2.0&#34;</span>,<span style="color:#bbb"> </span><span style="color:#d14">&#34;true&#34;</span>),<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>aList.<span style="color:#008080">stream</span>().<span style="color:#008080">map</span>(String::valueOf).<span style="color:#008080">collect</span>(Collectors.<span style="color:#008080">toList</span>())<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>The holder of the method reference is responsible to invoke it with compatible method arguments. In the following <a href="https://github.com/geraldnguyen/kitchensink/blob/main/java/src/test/java/core/MethodReferenceTest.java#L144">example</a>, we test <code>Class::staticMethod</code> with zero, one, two, or more parameters (using a custom functional interface). As long as the number and types of arguments are compatible with the instance method’s signature, the codes compile and run correctly.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">noParam</span>(Supplier<span style="color:#000;font-weight:bold">&lt;</span>String<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>supplier)<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>supplier.<span style="color:#008080">get</span>();<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">oneParam</span>(Function<span style="color:#000;font-weight:bold">&lt;</span>String,<span style="color:#bbb"> </span>String<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>function)<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>function.<span style="color:#008080">apply</span>(<span style="color:#d14">&#34;1&#34;</span>);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">twoParam</span>(BiFunction<span style="color:#000;font-weight:bold">&lt;</span>String,<span style="color:#bbb"> </span>String,<span style="color:#bbb"> </span>String<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>function)<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>function.<span style="color:#008080">apply</span>(<span style="color:#d14">&#34;%s&#34;</span>,<span style="color:#bbb"> </span><span style="color:#d14">&#34;1&#34;</span>);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>LocalDate<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">threeParam</span>(ThreeParam3<span style="color:#bbb"> </span>function)<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>function.<span style="color:#008080">apply</span>(1,<span style="color:#bbb"> </span>2,<span style="color:#bbb"> </span>3);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">interface</span> <span style="color:#458;font-weight:bold">ThreeParam3</span><span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>LocalDate<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">apply</span>(<span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>one,<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>two,<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>three);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#3c5d5d;font-weight:bold">@Test</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#458;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">invoke_with_compatible_arguments</span>()<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">// like a Supplier  </span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>assertEquals(System.<span style="color:#008080">lineSeparator</span>(),<span style="color:#bbb"> </span>noParam(System::lineSeparator));<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">// like a Function or Consumer  </span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>assertEquals(<span style="color:#d14">&#34;1&#34;</span>,<span style="color:#bbb"> </span>oneParam(String::valueOf));<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">// like a BiFunction or BiConsumer  </span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>assertEquals(<span style="color:#d14">&#34;1&#34;</span>,<span style="color:#bbb"> </span>twoParam(String::format));<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">// or any compatible Functional Interface  </span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>assertEquals(<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>LocalDate.<span style="color:#008080">of</span>(1,<span style="color:#bbb"> </span>2,<span style="color:#bbb"> </span>3),<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>threeParam(LocalDate::of));<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><h1 id="classinstancemethod">Class::instanceMethod</h1>
+<p>The <code>Class::instanceMethod</code> will invoke the referenced method on, of course, an instance of the said class. As I said earlier, this syntax is a bit special, because it isn’t clear what is that instance and who will provide it</p>
+<p>Fortunately, the <a href="https://github.com/geraldnguyen/kitchensink/blob/main/java/src/test/java/core/MethodReferenceTest.java#L92">below example</a> shed some light on that mystery. Let’s see how the <code>String::uppercase</code> method invocation gets its instance</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#3c5d5d;font-weight:bold">@Test</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#458;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">invoke_the_method_on_the_class_instance</span>()<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">var</span><span style="color:#bbb"> </span>aList<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>List.<span style="color:#008080">of</span>(<span style="color:#d14">&#34;a&#34;</span>,<span style="color:#bbb"> </span><span style="color:#d14">&#34;b&#34;</span>,<span style="color:#bbb"> </span><span style="color:#d14">&#34;c&#34;</span>);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>assertEquals(<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>aList.<span style="color:#008080">stream</span>().<span style="color:#008080">map</span>(a<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-&gt;</span><span style="color:#bbb"> </span>a.<span style="color:#008080">toUpperCase</span>()).<span style="color:#008080">collect</span>(Collectors.<span style="color:#008080">toList</span>()),<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>aList.<span style="color:#008080">stream</span>().<span style="color:#008080">map</span>(String::toUpperCase).<span style="color:#008080">collect</span>(Collectors.<span style="color:#008080">toList</span>())<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>It appears the JVM has a hand in this mystery. When <code>map</code> receives an object instance where <code>Class::instanceMethod</code> is specified, the JVM invokes that method (e.g. <code>toUpperCase()</code>) on the said object (e.g. <code>&quot;a&quot;</code>)</p>
+<p>There is a catch, however. <code>toUpperCase()</code> takes in no parameter while this<code>map(...)</code> expects a <code>Function&lt;String, String&gt;</code> with one parameter. It turns out that the <em>functional interface</em> has an extra parameter of the same type of declared class. As we established before, the JVM will then invoke the referenced method on that parameter.</p>
+<p>In the following example, each <code>Class::instanceMethod</code> is invoked with an extra first argument of the same type as the declared class. The remaining arguments (if there are any) must be compatible with their signature</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">noParam</span>(Supplier<span style="color:#000;font-weight:bold">&lt;</span>String<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>supplier)<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>supplier.<span style="color:#008080">get</span>();<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">oneParam</span>(Function<span style="color:#000;font-weight:bold">&lt;</span>String,<span style="color:#bbb"> </span>String<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>function)<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>function.<span style="color:#008080">apply</span>(<span style="color:#d14">&#34;1   &#34;</span>);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">twoParam</span>(BiFunction<span style="color:#000;font-weight:bold">&lt;</span>String,<span style="color:#bbb"> </span>String,<span style="color:#bbb"> </span>String<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>function)<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>function.<span style="color:#008080">apply</span>(<span style="color:#d14">&#34;1&#34;</span>,<span style="color:#bbb"> </span><span style="color:#d14">&#34;2&#34;</span>);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>LocalDateTime<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">threeParam</span>(ThreeParam2<span style="color:#bbb"> </span>function)<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>function.<span style="color:#008080">apply</span>(LocalDate.<span style="color:#008080">of</span>(2021,<span style="color:#bbb"> </span>10,<span style="color:#bbb"> </span>11),<span style="color:#bbb"> </span>2,<span style="color:#bbb"> </span>3);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">interface</span> <span style="color:#458;font-weight:bold">ThreeParam2</span><span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>LocalDateTime<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">apply</span>(LocalDate<span style="color:#bbb"> </span>one,<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>two,<span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">int</span><span style="color:#bbb"> </span>three);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#3c5d5d;font-weight:bold">@Test</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#458;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">invoke_with_compatible_arguments</span>()<span style="color:#bbb"> </span>{<span style="color:#bbb">   </span><span style="color:#998;font-style:italic">// as long as the 1st param is a class&#39;s instance  </span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">// like a Supplier                                  // Constructor is neither static nor instance  </span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>assertEquals(<span style="color:#d14">&#34;&#34;</span>,<span style="color:#bbb"> </span>noParam(String::<span style="color:#000;font-weight:bold">new</span>));<span style="color:#bbb">     </span><span style="color:#998;font-style:italic">// including here just to complete 0, 1, 2, 3 params  </span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">// like a Function or Consumer  </span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>assertEquals(<span style="color:#d14">&#34;1&#34;</span>,<span style="color:#bbb"> </span>oneParam(String::trim));<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">// like a BiFunction or BiConsumer  </span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>assertEquals(<span style="color:#d14">&#34;12&#34;</span>,<span style="color:#bbb"> </span>twoParam(String::concat));<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">// or any compatible Functional Interface  </span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>assertEquals(<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>LocalDateTime.<span style="color:#008080">of</span>(2021,<span style="color:#bbb"> </span>10,<span style="color:#bbb"> </span>11,<span style="color:#bbb"> </span>2,<span style="color:#bbb"> </span>3),<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>threeParam(LocalDate::atTime));<span style="color:#bbb"> </span><span style="color:#998;font-style:italic">// public LocalDateTime atTime(int hour, int minute)  </span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div>
+<div class="page-break" role="separator">
+  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+</div>
+<p>Checkout the code from <a href="https://github.com/geraldnguyen/kitchensink/blob/main/java/src/test/java/core/MethodReferenceTest.java">https://github.com/geraldnguyen/kitchensink/blob/main/java/src/test/java/core/MethodReferenceTest.java</a></p>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/java/">Java</a></li>
+        <li><a href="/tags/functional-interface/">Functional Interface</a></li>
+        <li><a href="/tags/method-reference/">Method Reference</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

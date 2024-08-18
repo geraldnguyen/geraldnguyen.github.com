@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Doks on Gerald Nguyen</title>
+    <link>https://example.org/tags/doks/</link>
+    <description>Recent content in Doks on Gerald Nguyen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 17 Oct 2021 09:19:42 +0100</lastBuildDate>
+    <atom:link href="https://example.org/tags/doks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enable Comment in Hugo site</title>
+      <link>https://example.org/posts/2021/10/2021-10-17-enable-commenting/</link>
+      <pubDate>Sun, 17 Oct 2021 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2021/10/2021-10-17-enable-commenting/</guid>
+      <description>Note 2024-08-15: An earlier version of this site ran on doks. I&amp;rsquo;m in the middle of updating it to a medium-like theme*&#xA;Introduction You may have noticed that this website is using a powerful-yet-easy-to-use doks theme.&#xA;As I wanted to have more interaction with my readers, enabling comment is a first step.&#xA;Enable Comment in Hugo Hugo provides built-in support for Disqus. It ships with a _internal/disqus.html template that we can simply copy &amp;amp; paste to wherever we want comment to appear.</description>
+    </item>
+  </channel>
+</rss>

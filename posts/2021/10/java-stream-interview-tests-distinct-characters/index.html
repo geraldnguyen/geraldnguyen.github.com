@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>Java Stream Interview Tests - Distinct Characters</title>
+<meta data-rh="true" property="og:url" content="https://example.org/posts/2021/10/java-stream-interview-tests-distinct-characters/">
+<meta data-rh="true" property="og:title" content="Java Stream Interview Tests - Distinct Characters">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2021/10/java-stream-interview-tests-distinct-characters/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+        <li><a href="/categories/career-development/">Career Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>Java Stream Interview Tests - Distinct Characters</h1>
+
+<h2 class="subtitle"></h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://example.org/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>3 min read</span>
+      <span>·</span>
+      <span><time datetime="2021-10-30T09:19:42&#43;01:00">October 30, 2021</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2021/10/spring-rest-api-interview-questions/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2021/11/java-stream-interview-tests-takewhile/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#requirement">Requirement</a></li>
+    <li><a href="#discussion">Discussion</a></li>
+    <li><a href="#sample-solution">Sample Solution</a></li>
+    <li><a href="#extra">Extra</a></li>
+    <li><a href="#imperative-solution">Imperative Solution</a></li>
+    <li><a href="#sample-codes">Sample Codes</a></li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <h1 id="requirement">Requirement</h1>
+<p>Given a sentence comprising of one or multiple words separated by space (e.g. <code>java</code>, <code>Hello World</code>, <code>aadsbbaba</code>), return a sorted list of distinct characters excluding space</p>
+<p>Solve this problem using Java Stream</p>
+<p><strong>Hint</strong>: Use <code>String.split(“”)</code>to split a string into a <code>String[]</code>, then use <code>String.charAt(0)</code> to convert each single-char string to <code>char</code></p>
+<h1 id="discussion">Discussion</h1>
+<p>This problem tests candidate’s knowledge of the following <code>Stream</code> methods:</p>
+<ul>
+<li><code>Stream.of(...)</code> or <code>Array.stream(...)</code> to convert an array of single-char string (e.g. from <code>str.split(&quot;&quot;)</code>) to <code>Stream&lt;String&gt;</code></li>
+<li><code>map(str -&gt; str.charAt(0))</code> to convert <code>String</code> to <code>Character</code>. <strong>Note</strong>: while <code>String.toCharArray</code> can readily convert a <code>String</code> to an <code>char[]</code>, turning the resulting array to a <code>Character</code> stream isn&rsquo;t straightforward due to lack of built-in support for <code>char</code> type in Stream and Collection API. The <code>Arrays.asList(str.toCharArray()</code> or <code>List.of(...)</code> results in a <code>List&lt;char[]&gt;</code> instead</li>
+<li><code>distinct()</code> to keep only 1 instance of each encountered character</li>
+<li><code>sorted()</code> to sort the encountered characters in their natural order</li>
+<li><code>collect(Collectors.toList())</code> to collect stream elements into a list</li>
+</ul>
+<h1 id="sample-solution">Sample Solution</h1>
+<p>A sample solution is shown below. In addition to above operations, we only utilize an extra <code>filter(...)</code> operation to discard spaces from getting into our response</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">static</span><span style="color:#bbb"> </span>List<span style="color:#000;font-weight:bold">&lt;</span>Character<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">distinctCharsStream2</span>(String<span style="color:#bbb"> </span>sentence)<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>Arrays.<span style="color:#008080">stream</span>(sentence.<span style="color:#008080">split</span>(<span style="color:#d14">&#34;&#34;</span>))<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>.<span style="color:#008080">map</span>(s<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-&gt;</span><span style="color:#bbb"> </span>s.<span style="color:#008080">charAt</span>(0))<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>.<span style="color:#008080">filter</span>(i<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-&gt;</span><span style="color:#bbb"> </span>i<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">!=</span><span style="color:#bbb"> </span><span style="color:#d14">&#39; &#39;</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>.<span style="color:#008080">distinct</span>()<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>.<span style="color:#008080">sorted</span>()<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>.<span style="color:#008080">collect</span>(Collectors.<span style="color:#008080">toList</span>());<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>Recall again the use of <code>String.split(&quot;&quot;)</code> and <code>String.charAt(0)</code> instead of <code>String.toCharArray()</code>. Due to the lack of built-in support for <code>char</code> type in Stream and Collection API, <code>Arrays.asList(sentence.toCharArray())</code> or <code>List.of(sentence.toCharArray())</code> result in a <code>List&lt;char[]&gt;</code> instead of <code>List&lt;Character&gt;</code> that we need</p>
+<h1 id="extra">Extra</h1>
+<p>Instead of a sentence string, candidate shall be given an list of words.</p>
+<p>This modification results in mostly the same solution as the original problem, with 2 twists:</p>
+<ul>
+<li>Spaces are omitted</li>
+<li>Candidate may use <code>flatMap</code> to merge characters from each word into a single <code>Stream&lt;Character&gt;</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>words.<span style="color:#008080">stream</span>()<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>.<span style="color:#008080">flatMap</span>(word<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-&gt;</span><span style="color:#bbb"> </span>Stream.<span style="color:#008080">of</span>(word.<span style="color:#008080">split</span>(<span style="color:#d14">&#34;&#34;</span>)))<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>.<span style="color:#008080">map</span>(s<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-&gt;</span><span style="color:#bbb"> </span>s.<span style="color:#008080">charAt</span>(0))<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>...<span style="color:#bbb">
+</span></span></span></code></pre></div><p>A small modification to the sample solution can lead us to the same <code>flatMap(...)</code> usage</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>Arrays.<span style="color:#008080">stream</span>(sentence.<span style="color:#008080">split</span>(<span style="color:#d14">&#34; &#34;</span>))<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>.<span style="color:#008080">flatMap</span>(word<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-&gt;</span><span style="color:#bbb"> </span>Stream.<span style="color:#008080">of</span>(word.<span style="color:#008080">split</span>(<span style="color:#d14">&#34;&#34;</span>)))<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>...<span style="color:#bbb">
+</span></span></span></code></pre></div><h1 id="imperative-solution">Imperative Solution</h1>
+<p>If we omit the Stream requirement, some candidate may derive an imperative solution using loop and <code>Set</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Set<span style="color:#000;font-weight:bold">&lt;</span>Character<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>characters<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">new</span><span style="color:#bbb"> </span>HashSet<span style="color:#000;font-weight:bold">&lt;&gt;</span>();<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">for</span><span style="color:#bbb"> </span>(<span style="color:#458;font-weight:bold">char</span><span style="color:#bbb"> </span>c<span style="color:#bbb"> </span>:<span style="color:#bbb"> </span>sentence.<span style="color:#008080">toCharArray</span>())<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">if</span><span style="color:#bbb"> </span>(c<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">==</span><span style="color:#bbb"> </span><span style="color:#d14">&#39; &#39;</span>)<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">continue</span>;<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>characters.<span style="color:#008080">add</span>(c);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>List<span style="color:#000;font-weight:bold">&lt;</span>Character<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>result<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">new</span><span style="color:#bbb"> </span>ArrayList<span style="color:#000;font-weight:bold">&lt;&gt;</span>(characters);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>result.<span style="color:#008080">sort</span>((c1,<span style="color:#bbb"> </span>c2)<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-&gt;</span><span style="color:#bbb"> </span>c1<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-</span><span style="color:#bbb"> </span>c2);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>result;<span style="color:#bbb">
+</span></span></span></code></pre></div><p>There is nothing wrong with this approach. To some extend, I think it is even more understandable than the Stream-based one.</p>
+<p>But as functional and reactive programming become more and more popular, so does the need to master Stream operations. If there are still time, I would politely ask the candidate to convert his/her codes to Stream.</p>
+<figure><img src="/posts/2021/10/java-stream-interview-tests-distinct-characters/1_BhOX_9_jetMTNa5WYqHqsQ.jpg"
+    alt="distinct characters"><figcaption>
+      <p>distinct characters</p>
+    </figcaption>
+</figure>
+
+<h1 id="sample-codes">Sample Codes</h1>
+<p>Checkout sample <a href="https://github.com/geraldnguyen/kitchensink/blob/main/java/src/main/java/example/codingtest/DistinctCharacters.java">solutions</a> and <a href="https://github.com/geraldnguyen/kitchensink/blob/main/java/src/test/java/example/codingtest/DistinctCharactersTest.java">tests</a> in my <a href="https://github.com/geraldnguyen/kitchensink">github</a></p>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/java/">Java</a></li>
+        <li><a href="/tags/stream/">Stream</a></li>
+        <li><a href="/tags/interview/">Interview</a></li>
+        <li><a href="/tags/coding-test/">Coding Test</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Weblogic on Gerald Nguyen</title>
+    <link>https://example.org/tags/weblogic/</link>
+    <description>Recent content in Weblogic on Gerald Nguyen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Oct 2010 09:19:42 +0100</lastBuildDate>
+    <atom:link href="https://example.org/tags/weblogic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Weblogic SAXParserFactory Issue</title>
+      <link>https://example.org/posts/2010/10/2010-10-26-weblogic-saxparserfactory-issue/</link>
+      <pubDate>Tue, 26 Oct 2010 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2010/10/2010-10-26-weblogic-saxparserfactory-issue/</guid>
+      <description>I have just wasted 1 whole day trying to debug this issues. Since I get most help from the internet, here is what I can do in return :D&#xA;I was trying to build a Spring 3.0 webapp with Tiles 2.2. Since Tiles depends on common-digester which subsequently depends on SAXParserFactory, I got stuck in a whole range of strange Weblogic behaviors.&#xA;Firstly, I got UnsupportedOperationException everytime I first access the webapp.</description>
+    </item>
+    <item>
+      <title>2-way SSL with WebLogic server 10.3</title>
+      <link>https://example.org/posts/2010/02/2010-02-03-weblogic-2way-ssl/</link>
+      <pubDate>Wed, 03 Feb 2010 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2010/02/2010-02-03-weblogic-2way-ssl/</guid>
+      <description>TOOLS keytool: a key and certificate management tool. Provided as part of Sun&amp;rsquo;s JDK Online reference: http://java.sun.com/javase/6/docs/technotes/tools/windows/keytool.htm.&#xA;utils.CertGen: a certification generate tool provided by WLS. By default it will generate certificates from default CertGenCA.der and CertGenCAKey.der; but have not been able to generate certificate from other cert and key (probably because of the lack of original cert &amp;amp; key AND CertGenCA has constraint of max 1 descendant). Online renference: http://download.oracle.com/docs/cd/E13222_01/wls/docs103/admin_ref/utils.html#wp1198920</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>Consistency in framework design</title>
+<meta data-rh="true" property="og:url" content="https://example.org/posts/2011/01/2011-01-06-consistency-in-framework-design/">
+<meta data-rh="true" property="og:title" content="Consistency in framework design">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2011/01/2011-01-06-consistency-in-framework-design/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+  <meta property="og:image" content="https://example.org/geraldnguyen-profile.jpg" data-rh="true">
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>Consistency in framework design</h1>
+
+<h2 class="subtitle"></h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://example.org/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>3 min read</span>
+      <span>·</span>
+      <span><time datetime="2011-01-06T09:19:42&#43;01:00">January 6, 2011</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2010/12/2010-12-21-who-own-the-source-code/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2011/01/2011-01-09-how-sun-certification-exam-prepared/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#concistency">Concistency</a></li>
+    <li><a href="#building-an-inhouse-framework">Building an inhouse framework</a></li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <h1 id="concistency">Concistency</h1>
+<blockquote>
+<p>Framework: a set of ideas, principles, agreements, or rules that provides the basis or outline for something intended to be more fully developed at a later stage (MSN Dictionary)</p>
+</blockquote>
+<p>Not sure if you agree, but for me, the above definition implies &ldquo;consistency&rdquo; as a essential effect of using a framework. In the context of software development, using a framework usually equals to following its design guideline, or  implementing/extending its interfaces/base classes. Things can stuck or go wrong and time will definitely be wasted if you don&rsquo;t.</p>
+<p>I have only used 4 different application framework (.NET framework not included since it is comparably as big as Java standard API). 2 of them, Struts 2 and Spring MVC do not force me to explicitly implement their own interfaces, but implicitly I still have to. Such is due to expectation such as &ldquo;execute&rdquo; method returning a String in Struts 2 Action class or a controller method returning a ModelAndView in Spring MVC Controller classes. Futhermore, the fact that these semantically identical classes carrying different names in different frameworks (Action, Controller) clearly proves the influence of framework&rsquo;s design on the implementation details. The other 2 frameworks, both in-house, explicitly requires extending framework&rsquo;s base classes.</p>
+<h1 id="building-an-inhouse-framework">Building an inhouse framework</h1>
+<p>So, for me, consistency is expected if I use a framework. It is even more desirable if I build one.</p>
+<p>But it didn&rsquo;t come as plentiful as I have hoped.</p>
+<p>My current project is to build an in-house application framework. I am the team lead. There is no explicit project manager, so I assume I am (but did it poorly). At the beginning, there are little to develop and review, so the structure, design and implementation are pretty consistent. But when I started delegating design and implementing tasks to my team members, the level of consistency just kept getting lower. It&rsquo;s still manageable, I think. But I wish if I could keep it consistent throughout, I would have saved myself lots of time trying to persuade other members to refactor their design.</p>
+<p>So, the lessons for me are:</p>
+<ul>
+<li>Communicate the goal, design and implementation standard to all team members. Make sure they agree and abide by them. In my situation, I didn&rsquo;t even have a design and implementation standard. So&hellip;</li>
+<li>Establish a design and implementation standard that all team members accept.</li>
+<li>Review the design and implementation  and compare them with the agreed design and implementation standard. Make this a regular and seemingly serious activity. In my situation, I didn&rsquo;t review all of them; and didn&rsquo;t do it regularly. And I didn&rsquo;t make it seem serious enough.</li>
+<li>Do not be afraid to discuss the design and implementation with your member. And willing to defend your idea (but be open to their reasonable arguments). In my situation, I sometimes afraid to discuss because my arguments are weak when there is no standard to back me up (and I&rsquo;m afraid of being seen micro-managing) .</li>
+<li>Set example for the rest to follow. It&rsquo;s a human nature.</li>
+</ul>
+<p>Among the above lessons, the most urgent and also very important one is to establish a standard. That&rsquo;s what I will do next. Better late than never.</p>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/architecture/">Architecture</a></li>
+        <li><a href="/tags/design/">Design</a></li>
+        <li><a href="/tags/framework/">Framework</a></li>
+        <li><a href="/tags/old-blog/">Old Blog</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software Engineering on Gerald Nguyen</title>
+    <link>https://example.org/tags/software-engineering/</link>
+    <description>Recent content in Software Engineering on Gerald Nguyen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Feb 2023 08:00:00 -0700</lastBuildDate>
+    <atom:link href="https://example.org/tags/software-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SOLID in Action: the Dependency Inversion Principle</title>
+      <link>https://example.org/posts/2023/02/solid-dependency-inversion-principle/</link>
+      <pubDate>Tue, 21 Feb 2023 08:00:00 -0700</pubDate>
+      <guid>https://example.org/posts/2023/02/solid-dependency-inversion-principle/</guid>
+      <description>Photo by ocd studio on Unsplash&#xA;The Dependency Inversion Principle (DIP) Naive application of traditional software development methods (e.g. SADT or Structured Analysis and Design Technique), in the past, often resulted in a type of relationship where high-level modules depended on lower implementation details. This form of relationship often leads to rigidity, fragility, and immobility. These are the symptoms of bad design according to Robert C. Martin.&#xA;A naive application of top-down approaches can lead to bad design.</description>
+    </item>
+    <item>
+      <title>SOLID in Action: the Interface Segregation Principle</title>
+      <link>https://example.org/posts/2023/01/solid-interface-segregation-principle/</link>
+      <pubDate>Fri, 27 Jan 2023 08:00:00 -0700</pubDate>
+      <guid>https://example.org/posts/2023/01/solid-interface-segregation-principle/</guid>
+      <description>Photos by Eugen Str on Unsplash&#xA;Photos by Patrick on Unsplash&#xA;If you are going to build a house, a table, or a chair, what is your preferred option? The multiple tools on the first picture or one Swiss knife on the second?&#xA;Yep, you are right. If you want to create something useful that last for years, you need specialized tools. The same thinking applies to software development, if you want to create a serious application, you need specialized components represented by their own, purposely designed interfaces.</description>
+    </item>
+    <item>
+      <title>SOLID in Action — the Liskov Substitution Principle</title>
+      <link>https://example.org/posts/2023/01/solid-liskov-substitution-principle/</link>
+      <pubDate>Mon, 09 Jan 2023 08:00:00 -0700</pubDate>
+      <guid>https://example.org/posts/2023/01/solid-liskov-substitution-principle/</guid>
+      <description>Let us start with a question:&#xA;Can social media connections substitute for real life friends and family?&#xA;Well, it depends on how we define &amp;ldquo;connection&amp;rdquo;. If we have it as below, then according to the Liskow Substitution Principle (LSP), the answer is No.&#xA;Connection classes&#xA;Before we go further into this example, let’s back it up a bit to study the official definition of LSP.&#xA;There is some math but I promise to keep it brief</description>
+    </item>
+    <item>
+      <title>SOLID in Action — the Open-closed Principle</title>
+      <link>https://example.org/posts/2022/12/solid-open-close-principle/</link>
+      <pubDate>Sat, 24 Dec 2022 08:00:00 -0700</pubDate>
+      <guid>https://example.org/posts/2022/12/solid-open-close-principle/</guid>
+      <description>Photo by Richard Balog on Unsplash&#xA;In the physical world, a door closed is a closed door. In the software world, a closed entity may still be open for extension. And it should be so, according to the Open-closed principle (OCP).&#xA;There are 2 popular ways to apply this principle. We are going to discuss them both.&#xA;And a third option.&#xA;#1 — Inheritance This is the original application of OCP.</description>
+    </item>
+    <item>
+      <title>SOLID in Action — the Single Responsibility Principle</title>
+      <link>https://example.org/posts/2022/12/solid-single-responsibility-principle/</link>
+      <pubDate>Wed, 14 Dec 2022 08:00:00 -0700</pubDate>
+      <guid>https://example.org/posts/2022/12/solid-single-responsibility-principle/</guid>
+      <description>Photo by Robert Linder on Unsplash&#xA;We know the saying “Jack of all trades, master of none”. We dislike it when we are at the receiving end. We dislike it too when it is said to someone we love. That should extend to things that we love too.&#xA;We developers love the codes we created. We are proud of the function we write, the class we design, the component, the system, and the microservices… we develop.</description>
+    </item>
+    <item>
+      <title>Becoming a SOLID developer</title>
+      <link>https://example.org/posts/2022/12/becoming-a-solid-developer/</link>
+      <pubDate>Wed, 07 Dec 2022 08:00:00 -0700</pubDate>
+      <guid>https://example.org/posts/2022/12/becoming-a-solid-developer/</guid>
+      <description>Being called solid is a compliment. The word carries the positive notions of reliability and respectability. All of us should aim to become one.&#xA;https://www.collinsdictionary.com/dictionary/english/solid (screenshot)&#xA;If you are a software engineer or want to become one, you are in luck because there is a set of SOLID principles to guide your way.&#xA;SOLID is an acronym in the software engineering profession. It stands for:&#xA;Single Responsibility principle Open-closed principle Liskov Substitution principle Interface segregation principle Dependency inversion principle The term was coined by Michael Feather around 2004 for the 5 object-oriented design principles first collected by Uncle Bob in his 2000 paper Design Principles and Design Patterns and his other articles and books</description>
+    </item>
+    <item>
+      <title>Code Review as an interview tool</title>
+      <link>https://example.org/posts/2022/11/code-review-as-an-interview-tool/</link>
+      <pubDate>Tue, 22 Nov 2022 09:19:42 +0100</pubDate>
+      <guid>https://example.org/posts/2022/11/code-review-as-an-interview-tool/</guid>
+      <description>Rationale In all software development teams that I have been part of, we always value and encourage everyone to participate in code reviews. We see it as an effective way of learning and contributing. It has an important place in my Engineering practice.&#xA;We learn when we review other people’s codes. That’s actually an effective way of keeping up-to-date with what is happening to the code base, what sort of problems our colleagues are trying to solve, and what techniques they employed to solve them.</description>
+    </item>
+  </channel>
+</rss>

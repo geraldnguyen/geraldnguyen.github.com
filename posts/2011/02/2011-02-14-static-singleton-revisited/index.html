@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>Static vs Singleton Revisited</title>
+<meta data-rh="true" property="og:url" content="https://example.org/posts/2011/02/2011-02-14-static-singleton-revisited/">
+<meta data-rh="true" property="og:title" content="Static vs Singleton Revisited">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2011/02/2011-02-14-static-singleton-revisited/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+  <meta property="og:image" content="https://example.org/geraldnguyen-profile.jpg" data-rh="true">
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>Static vs Singleton Revisited</h1>
+
+<h2 class="subtitle"></h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://example.org/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>3 min read</span>
+      <span>·</span>
+      <span><time datetime="2011-02-10T09:19:42&#43;01:00">February 10, 2011</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2011/02/2011-02-10-israel-innovative-entrepreneurial/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2011/02/2011-02-24-display-input-validation-error/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#static-vs-singleton-vs-dependency-injection">Static vs Singleton vs Dependency Injection</a></li>
+    <li><a href="#dependency-injection-into-ejb-instances">Dependency Injection into EJB instances</a></li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <h1 id="static-vs-singleton-vs-dependency-injection">Static vs Singleton vs Dependency Injection</h1>
+<p>Why visited? Because I wrote <a href="https://example.org/posts/2011/01/2011-01-16-static-method-singleton/">one</a> before</p>
+<p>I no longer favor <strong>static</strong> over <strong>singleton</strong> as much as before. Static is convenient (sometimes very!), low memory footprint. But it does take away several Object-Orientation (OO) &rsquo;s strength. In addition, it couples your code to a specific implementation class. Singleton is less convenient (sometimes troublesome), slightly higher memory footprint, but it can deliver all OO&rsquo;s strengths that static drops.</p>
+<p>(But don&rsquo;t abandon static - it is my best choice when OO is not important. I still use it where it makes most sense: utility functions, thread local, service locator.)</p>
+<p>Here is how I use singleton.</p>
+<p>Previously I implement singleton the traditional way. It&rsquo;s not trivial unfortunately (see my first post). But I have found a new alternative: Spring IoC. Several inconveniences of the old singleton way are eliminated: set up code, writing synchronized methods, maintaining static variables&hellip; Instead of implementing the singleton pattern with synchronized method, static variables in several classes, I only have to declare them in a single XML file. And the setup code is beautifully (and mysteriously) replaced by Spring&rsquo;s Dependency Injection.</p>
+<h1 id="dependency-injection-into-ejb-instances">Dependency Injection into EJB instances</h1>
+<p>However, there are still challenges: Spring cannot dependency-inject into container-managed instances such as EJB or JSP tags. To some people, that is not a problem, because Spring does have EJB alternative. But I can&rsquo;t use those, for it is dictated by my boss that I must use EJB. Naturally I resort to Service Locator or something conceptually similar. It is not as clean as Dependency Injection (which is not possible), but it is the second best (<a href="http://martinfowler.com/articles/injection.html">Martin Fowler&rsquo;s discussion on Dependency Injection vs Service Locator</a>). But that often means the same dependency is declared/coded in both Spring and Service Locator. This duplication seems small, acceptable, but it may be not. What if there is a change in that depended class, and you forget to update both Spring and Service Locator. Or what if you want to real singleton, but you have 2 instances: 1 from Spring, and 1 from Service Locator.</p>
+<p>There is another option: acquire a reference to Spring&rsquo;s ApplicationContext and retrieve the bean explicitly. That&rsquo;s not pretty, and not easy either. First, my business component (EJB) is now dependent on Spring&rsquo;s ApplicationContext. Second, I have to find a way to help my EJB to looks up ApplicationContext which is in web layer. This approach avoids the duplications described above, though.</p>
+<p>Now, given these 2 options, I would like to have a third: a combination of the first 2 that inherit the strength and avoid the weakness. As it turns out, there is.</p>
+<p>I will still program my EJB to acquire their dependency using a call to a external class. Previously, it is the Service Locator class. But now, it is a SpringUtil which will locate the instance in Spring Ioc and returns the reference to its caller (my EJB). Of course, my SpringUtil has access to Spring&rsquo;s ApplicationContext. No, it&rsquo;s even better, ApplicationContext gives itself to my SpringUtil.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">SpringUtil</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">implements</span><span style="color:#bbb"> </span>ApplicationContextAware{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">static</span><span style="color:#bbb"> </span>ApplicationContext<span style="color:#bbb"> </span>appCtx;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">       
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@Override</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">setApplicationContext</span>(ApplicationContext<span style="color:#bbb"> </span>arg0)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#000;font-weight:bold">throws</span><span style="color:#bbb"> </span>BeansException<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>appCtx<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>arg0;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>...<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>The trick is to have <code>SpringUtil</code> implements ApplicationContextAware interface. Any bean implements this interface will be given reference to the ApplicationContext it is stored in.</p>
+<p>The rest of <code>SpringUtil</code> code is straighforward:</p>
+<pre tabindex="0"><code>    public static T getBean(Class c) {
+        return appCtx.getBean(c);
+    }
+   
+    public static Object getBean (String id) {
+        return appCtx.getBean(id);
+    }
+</code></pre><p>Because my <code>SpringUtil</code> gets all of its singleton from Spring, there is no longer duplication mentioned previously. And <code>SpringUtil</code> is conceptually a Service Locator - it knows where to locate services.</p>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/design/">Design</a></li>
+        <li><a href="/tags/static-method/">Static Method</a></li>
+        <li><a href="/tags/singleton/">Singleton</a></li>
+        <li><a href="/tags/dependency-injection/">Dependency Injection</a></li>
+        <li><a href="/tags/old-blog/">Old Blog</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>
