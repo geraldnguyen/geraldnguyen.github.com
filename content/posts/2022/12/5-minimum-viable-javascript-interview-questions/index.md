@@ -8,7 +8,7 @@ categories: [Software Development, Career Development]
 tags: [JavaScript, Interview, Practical]
 ---
 
-{{< include "posts\2023\02\Five Minimum Viable Interview Questions series\series.include" >}}
+{{< include "posts/2023/02/Five Minimum Viable Interview Questions series/series.include" >}}
 
 It is common nowadays for companies to hire for full-stack positions. A full-stack developer is typically expected to work on both frontend and backend development. That same expectation applies to interviews.
 
