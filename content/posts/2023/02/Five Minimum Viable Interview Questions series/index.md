@@ -30,7 +30,7 @@ I hope they help you as they have helped me.
 Javascript
 ==========
 
-[Five Minimum Viable Javascript Interview Questions](https://javascript.plainenglish.io/five-minimum-viable-javascript-interview-questions-d839d855a8a4?source=post_page-----e8531b5f7db2--------------------------------)
+[Five Minimum Viable Javascript Interview Questions]({{< ref "posts\2022\12\5-minimum-viable-javascript-interview-questions">}})
 
 **Five Minimum Viable TypeScript Interview Questions**: _planned_
 
