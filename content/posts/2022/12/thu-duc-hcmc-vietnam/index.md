@@ -4,7 +4,7 @@ date: 2022-12-18T09:19:42+01:00
 image: 1_JSvnrmztXJaaQv2PphCiQQ.png
 draft: false
 categories: [Non-Tech]
-tags: [Vietnam, Ho Chi Minh City, Thu Duc, Photography]
+tags: [Vietnam, Ho Chi Minh City, Thu Duc, Photography, Southeast Asia]
 ---
 
 Taken during my vacation
