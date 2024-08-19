@@ -78,7 +78,7 @@ A quality translation of the Agile Manifesto into Vietnamese
 
 A quality translation of the The Scrum Guide™ into Vietnamese
 
-[What are APIs?](https://geraldnguyen.github.io/blog/what-are-apis/)
+[What are APIs?]({{< ref "posts/2022/12/what-are-apis" >}}/)
 
 Debunk a misconception and briefly explain what APIs are
 
