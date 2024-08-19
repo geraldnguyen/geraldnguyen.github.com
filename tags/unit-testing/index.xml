@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Unit Testing on Gerald Nguyen</title>
-    <link>https://example.org/tags/unit-testing/</link>
+    <link>https://geraldnguyen.github.io/tags/unit-testing/</link>
     <description>Recent content in Unit Testing on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 30 Dec 2022 09:19:42 +0100</lastBuildDate>
-    <atom:link href="https://example.org/tags/unit-testing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/unit-testing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Retry WebClient Request</title>
-      <link>https://example.org/posts/2022/12/retry-webclient-request/</link>
+      <link>https://geraldnguyen.github.io/posts/2022/12/retry-webclient-request/</link>
       <pubDate>Fri, 30 Dec 2022 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2022/12/retry-webclient-request/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2022/12/retry-webclient-request/</guid>
       <description>Problem Statement Sometimes web request fails, for whatever reason, and you need to retry it&#xA;Let’s simulate a failed request scenario in a unit test. In the below code, the webClient attempts to submit a GET request to /employee/100 (stored in constant PATH). We mocked the backend server to fail with common status codes such as BAD_REQUEST, UNAUTHORIZED and validate that the client throws WebClientResponseException upon receiving such statuses.&#xA;@ParameterizedTest @EnumSource(value = HttpStatus.</description>
     </item>
     <item>
       <title>Unit testing Java’s try-with-resource</title>
-      <link>https://example.org/posts/2022/11/unit-testing-java-try-with-resource/</link>
+      <link>https://geraldnguyen.github.io/posts/2022/11/unit-testing-java-try-with-resource/</link>
       <pubDate>Tue, 29 Nov 2022 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2022/11/unit-testing-java-try-with-resource/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2022/11/unit-testing-java-try-with-resource/</guid>
       <description>Java’s try-with-resource is a convenient syntactic shortcut. It frees developers from keeping track of closeable resources and closing in a finally block&#xA;Unit testing try-with-resource&#xA;Overview Some of us may remember doing such boring and lengthy try-finally-if-not-null-close() A LOT!&#xA;On a typical day, we performed these steps a dozen times:&#xA;Obtained a DB connection, and execute a query within the try {...} And then, to avoid connection leak, we must close the statement and DB connection within the finally {.</description>
     </item>
   </channel>

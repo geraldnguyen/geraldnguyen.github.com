@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Subtyping on Gerald Nguyen</title>
-    <link>https://example.org/tags/subtyping/</link>
+    <link>https://geraldnguyen.github.io/tags/subtyping/</link>
     <description>Recent content in Subtyping on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 09 Jan 2023 08:00:00 -0700</lastBuildDate>
-    <atom:link href="https://example.org/tags/subtyping/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/subtyping/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SOLID in Action — the Liskov Substitution Principle</title>
-      <link>https://example.org/posts/2023/01/solid-liskov-substitution-principle/</link>
+      <link>https://geraldnguyen.github.io/posts/2023/01/solid-liskov-substitution-principle/</link>
       <pubDate>Mon, 09 Jan 2023 08:00:00 -0700</pubDate>
-      <guid>https://example.org/posts/2023/01/solid-liskov-substitution-principle/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2023/01/solid-liskov-substitution-principle/</guid>
       <description>Let us start with a question:&#xA;Can social media connections substitute for real life friends and family?&#xA;Well, it depends on how we define &amp;ldquo;connection&amp;rdquo;. If we have it as below, then according to the Liskow Substitution Principle (LSP), the answer is No.&#xA;Connection classes&#xA;Before we go further into this example, let’s back it up a bit to study the official definition of LSP.&#xA;There is some math but I promise to keep it brief</description>
     </item>
   </channel>

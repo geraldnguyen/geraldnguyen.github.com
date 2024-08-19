@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web Development on Gerald Nguyen</title>
-    <link>https://example.org/tags/web-development/</link>
+    <link>https://geraldnguyen.github.io/tags/web-development/</link>
     <description>Recent content in Web Development on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 30 Dec 2022 09:19:42 +0100</lastBuildDate>
-    <atom:link href="https://example.org/tags/web-development/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/web-development/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Retry WebClient Request</title>
-      <link>https://example.org/posts/2022/12/retry-webclient-request/</link>
+      <link>https://geraldnguyen.github.io/posts/2022/12/retry-webclient-request/</link>
       <pubDate>Fri, 30 Dec 2022 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2022/12/retry-webclient-request/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2022/12/retry-webclient-request/</guid>
       <description>Problem Statement Sometimes web request fails, for whatever reason, and you need to retry it&#xA;Let’s simulate a failed request scenario in a unit test. In the below code, the webClient attempts to submit a GET request to /employee/100 (stored in constant PATH). We mocked the backend server to fail with common status codes such as BAD_REQUEST, UNAUTHORIZED and validate that the client throws WebClientResponseException upon receiving such statuses.&#xA;@ParameterizedTest @EnumSource(value = HttpStatus.</description>
     </item>
     <item>
       <title>Simple Code — Effective UI — Month Picker</title>
-      <link>https://example.org/posts/2022/12/simple-code-effective-ui-month-picker/</link>
+      <link>https://geraldnguyen.github.io/posts/2022/12/simple-code-effective-ui-month-picker/</link>
       <pubDate>Thu, 22 Dec 2022 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2022/12/simple-code-effective-ui-month-picker/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2022/12/simple-code-effective-ui-month-picker/</guid>
       <description>Option 1: separate Month and Year dropdowns Separate month and year dropdowns&#xA;It may be verbose, but you have total control over their placements, label, and format&#xA;&amp;lt;select&amp;gt; &amp;lt;option&amp;gt;January&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;February&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;March&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;April&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;May&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;June&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;July&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;August&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;September&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;October&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;November&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;December&amp;lt;/option&amp;gt; &amp;lt;/select&amp;gt; Month &amp;lt;select&amp;gt; &amp;lt;option&amp;gt;2021&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;2022&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;2023&amp;lt;/option&amp;gt; &amp;lt;/select&amp;gt; Year Option 2: use the browser’s built-in month picker Built-in month picker&#xA;You have less control over the picker’s appearance, but the code is much cleaner.</description>
     </item>
   </channel>

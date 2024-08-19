@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Code Review on Gerald Nguyen</title>
-    <link>https://example.org/tags/code-review/</link>
+    <link>https://geraldnguyen.github.io/tags/code-review/</link>
     <description>Recent content in Code Review on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 22 Nov 2022 09:19:42 +0100</lastBuildDate>
-    <atom:link href="https://example.org/tags/code-review/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/code-review/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Code Review as an interview tool</title>
-      <link>https://example.org/posts/2022/11/code-review-as-an-interview-tool/</link>
+      <link>https://geraldnguyen.github.io/posts/2022/11/code-review-as-an-interview-tool/</link>
       <pubDate>Tue, 22 Nov 2022 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2022/11/code-review-as-an-interview-tool/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2022/11/code-review-as-an-interview-tool/</guid>
       <description>Rationale In all software development teams that I have been part of, we always value and encourage everyone to participate in code reviews. We see it as an effective way of learning and contributing. It has an important place in my Engineering practice.&#xA;We learn when we review other people’s codes. That’s actually an effective way of keeping up-to-date with what is happening to the code base, what sort of problems our colleagues are trying to solve, and what techniques they employed to solve them.</description>
     </item>
   </channel>

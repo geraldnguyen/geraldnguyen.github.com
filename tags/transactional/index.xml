@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Transactional on Gerald Nguyen</title>
-    <link>https://example.org/tags/transactional/</link>
+    <link>https://geraldnguyen.github.io/tags/transactional/</link>
     <description>Recent content in Transactional on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 10 Sep 2020 09:19:42 +0100</lastBuildDate>
-    <atom:link href="https://example.org/tags/transactional/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/transactional/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>javax.transaction.Transactional vs org.springframework.transaction.annotation.Transactional</title>
-      <link>https://example.org/posts/2020/09/2020-09-10-transactional-annotation/</link>
+      <link>https://geraldnguyen.github.io/posts/2020/09/2020-09-10-transactional-annotation/</link>
       <pubDate>Thu, 10 Sep 2020 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2020/09/2020-09-10-transactional-annotation/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2020/09/2020-09-10-transactional-annotation/</guid>
       <description>If you’re using Spring or Spring Boot, then use the Spring @Transactional annotation, as it allows you to configure more attributes than the Java EE @Transactional annotation.&#xA;If you are using Java EE alone, and you deploy your application on a Java EE application server, then use the Java EE @Transactional annotation.&#xA;https://stackoverflow.com/a/62702146/575457</description>
     </item>
   </channel>

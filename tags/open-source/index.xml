@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Open Source on Gerald Nguyen</title>
-    <link>https://example.org/tags/open-source/</link>
+    <link>https://geraldnguyen.github.io/tags/open-source/</link>
     <description>Recent content in Open Source on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 30 Nov 2022 09:19:42 +0100</lastBuildDate>
-    <atom:link href="https://example.org/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Echo API</title>
-      <link>https://example.org/posts/2022/11/echo-api/</link>
+      <link>https://geraldnguyen.github.io/posts/2022/11/echo-api/</link>
       <pubDate>Wed, 30 Nov 2022 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2022/11/echo-api/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2022/11/echo-api/</guid>
       <description>Introduction The need for this library arose when I wanted assurance that my HTTP client was sending correctly formulated HTTP messages.&#xA;Another use of this /echo API is to capture and debug the remote calls from another service. Imagine you are providing a webhook endpoint. Before you even build one, you first need to know what incoming messages look like. Supplying an /echo API endpoint in the webhook’s registration allows you to capture and log all incoming messages</description>
     </item>
   </channel>

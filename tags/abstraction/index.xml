@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Abstraction on Gerald Nguyen</title>
-    <link>https://example.org/tags/abstraction/</link>
+    <link>https://geraldnguyen.github.io/tags/abstraction/</link>
     <description>Recent content in Abstraction on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 24 Dec 2022 08:00:00 -0700</lastBuildDate>
-    <atom:link href="https://example.org/tags/abstraction/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/abstraction/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SOLID in Action — the Open-closed Principle</title>
-      <link>https://example.org/posts/2022/12/solid-open-close-principle/</link>
+      <link>https://geraldnguyen.github.io/posts/2022/12/solid-open-close-principle/</link>
       <pubDate>Sat, 24 Dec 2022 08:00:00 -0700</pubDate>
-      <guid>https://example.org/posts/2022/12/solid-open-close-principle/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2022/12/solid-open-close-principle/</guid>
       <description>Photo by Richard Balog on Unsplash&#xA;In the physical world, a door closed is a closed door. In the software world, a closed entity may still be open for extension. And it should be so, according to the Open-closed principle (OCP).&#xA;There are 2 popular ways to apply this principle. We are going to discuss them both.&#xA;And a third option.&#xA;#1 — Inheritance This is the original application of OCP.</description>
     </item>
   </channel>

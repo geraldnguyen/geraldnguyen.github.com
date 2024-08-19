@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Photography on Gerald Nguyen</title>
-    <link>https://example.org/tags/photography/</link>
+    <link>https://geraldnguyen.github.io/tags/photography/</link>
     <description>Recent content in Photography on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 18 Dec 2022 09:19:42 +0100</lastBuildDate>
-    <atom:link href="https://example.org/tags/photography/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/photography/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Thu Duc, Ho Chi Minh City, Vietnam in December</title>
-      <link>https://example.org/posts/2022/12/thu-duc-hcmc-vietnam/</link>
+      <link>https://geraldnguyen.github.io/posts/2022/12/thu-duc-hcmc-vietnam/</link>
       <pubDate>Sun, 18 Dec 2022 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2022/12/thu-duc-hcmc-vietnam/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2022/12/thu-duc-hcmc-vietnam/</guid>
       <description>Taken during my vacation&#xA;Photos taken during my vacation in Thu Duc, Ho Chi Minh City, Vietnam on December 2022&#xA;Vinhome Grandpark, Thu Duc, Ho Chi Minh City&#xA;Heavy rain&#xA;Having fun!&#xA;Playground&#xA;Swimming Lesson&#xA;Manhattan Ave?</description>
     </item>
   </channel>

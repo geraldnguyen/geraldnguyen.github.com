@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Environment on Gerald Nguyen</title>
-    <link>https://example.org/tags/environment/</link>
+    <link>https://geraldnguyen.github.io/tags/environment/</link>
     <description>Recent content in Environment on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 27 Dec 2022 09:19:42 +0100</lastBuildDate>
-    <atom:link href="https://example.org/tags/environment/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/environment/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The story of the drums in Singapore</title>
-      <link>https://example.org/posts/2022/12/the-story-of-the-drums-in-singapore/</link>
+      <link>https://geraldnguyen.github.io/posts/2022/12/the-story-of-the-drums-in-singapore/</link>
       <pubDate>Tue, 27 Dec 2022 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2022/12/the-story-of-the-drums-in-singapore/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2022/12/the-story-of-the-drums-in-singapore/</guid>
       <description>Many times when I visited Singapore, I noticed that under each apartment building, there were 2–3 red-painted drums in a straight line. These drums are modified with ventilation holes, have high legs, and have discharge doors… so that when households need to burn votive paper, they can do it here.&#xA;Incense burner (source: author’s father)&#xA;In a country where more than 70% of the population is Chinese with the tradition and custom of burning votive papers a lot every Lunar New Year, anniversaries, funerals, etc.</description>
     </item>
   </channel>

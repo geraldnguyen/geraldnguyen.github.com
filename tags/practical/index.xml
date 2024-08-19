@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Practical on Gerald Nguyen</title>
-    <link>https://example.org/tags/practical/</link>
+    <link>https://geraldnguyen.github.io/tags/practical/</link>
     <description>Recent content in Practical on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 09 Dec 2022 09:19:42 +0100</lastBuildDate>
-    <atom:link href="https://example.org/tags/practical/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/practical/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Five Minimum Viable Javascript Interview Questions</title>
-      <link>https://example.org/posts/2022/12/5-minimum-viable-javascript-interview-questions/</link>
+      <link>https://geraldnguyen.github.io/posts/2022/12/5-minimum-viable-javascript-interview-questions/</link>
       <pubDate>Fri, 09 Dec 2022 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2022/12/5-minimum-viable-javascript-interview-questions/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2022/12/5-minimum-viable-javascript-interview-questions/</guid>
       <description>This is part of my Five Minimum Viable Interview Questions series where I research and compile Five essential interview questions on each interview topic. All of these questions aim to assess real and practical skills expected at work&#xA;It is common nowadays for companies to hire for full-stack positions. A full-stack developer is typically expected to work on both frontend and backend development. That same expectation applies to interviews.</description>
     </item>
   </channel>

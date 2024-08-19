@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sort on Gerald Nguyen</title>
-    <link>https://example.org/tags/sort/</link>
+    <link>https://geraldnguyen.github.io/tags/sort/</link>
     <description>Recent content in Sort on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 12 Dec 2010 09:19:42 +0100</lastBuildDate>
-    <atom:link href="https://example.org/tags/sort/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/sort/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Quicksort vs Merge sort in Java</title>
-      <link>https://example.org/posts/2010/12/2010-12-12-quicksort-mergesort-java/</link>
+      <link>https://geraldnguyen.github.io/posts/2010/12/2010-12-12-quicksort-mergesort-java/</link>
       <pubDate>Sun, 12 Dec 2010 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2010/12/2010-12-12-quicksort-mergesort-java/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2010/12/2010-12-12-quicksort-mergesort-java/</guid>
       <description>The title is a little larger that what I have in this entry :D&#xA;If you want the answer fast, go here http://www.coderanch.com/t/520171/java/java/Why-Collections-sort-merge-sort#2355668&#xA;And here is a longer write-up:&#xA;I participated in an thread in Javaranche regarding why Arrays uses quicksort and Collections use merge sort (http://www.coderanch.com/t/520171/java/java/Why-Collections-sort-merge-sort). The thread starter claimed that quicksort is the best sort algorithm, for which I disagreed. I also replied with a link to wikipedia about merge sort performs better when the underlying datatype does not support random access (as does array).</description>
     </item>
   </channel>

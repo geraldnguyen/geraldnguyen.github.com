@@ -2,241 +2,241 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Old Blog on Gerald Nguyen</title>
-    <link>https://example.org/tags/old-blog/</link>
+    <link>https://geraldnguyen.github.io/tags/old-blog/</link>
     <description>Recent content in Old Blog on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 10 Sep 2013 09:19:42 +0100</lastBuildDate>
-    <atom:link href="https://example.org/tags/old-blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/old-blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Excel] Bulk Linking Cells to Sheets Whose Name Equates Cell&#39;s value</title>
-      <link>https://example.org/posts/2013/12/2013-12-30-bulk-linking-cell-to-sheets/</link>
+      <link>https://geraldnguyen.github.io/posts/2013/12/2013-12-30-bulk-linking-cell-to-sheets/</link>
       <pubDate>Tue, 10 Sep 2013 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2013/12/2013-12-30-bulk-linking-cell-to-sheets/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2013/12/2013-12-30-bulk-linking-cell-to-sheets/</guid>
       <description>Sub CreateLinkToSheet() Dim c As Range For Each c In Selection &amp;#39; MsgBox c.Value ActiveSheet.Hyperlinks.Add Anchor:=c, Address:=&amp;#34;&amp;#34;, _ SubAddress:=c.Value &amp;amp; &amp;#34;!A1&amp;#34;, TextToDisplay:=c.Value Next c End Sub How to run: Select the cells to create link and run the macro</description>
     </item>
     <item>
       <title>What Happened When You Assigned State to a Stateless Session Bean?</title>
-      <link>https://example.org/posts/2013/09/2013-09-10-what-happened-when-assign-state-to-stateless-session-bean/</link>
+      <link>https://geraldnguyen.github.io/posts/2013/09/2013-09-10-what-happened-when-assign-state-to-stateless-session-bean/</link>
       <pubDate>Tue, 10 Sep 2013 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2013/09/2013-09-10-what-happened-when-assign-state-to-stateless-session-bean/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2013/09/2013-09-10-what-happened-when-assign-state-to-stateless-session-bean/</guid>
       <description>Here’s a scenario that illustrate above possibility&#xA;T1 | T2 1) setupState [A] | &amp;lt;- store state as a variable | in bean instance [A] | 2) setupState [A] &amp;lt;- [A] is free, so the container | allocate it to serve T2 request | 3) someLongRunMethod [A] | 3&amp;#39;) aMethod [B] &amp;lt;- Because A is busy with T1, another instance (B) is created to serve T2 request. If aMethod depends on previously setup state it will encounter error </description>
     </item>
     <item>
       <title>[VBA] Save Attachements from Multiple Emails</title>
-      <link>https://example.org/posts/2013/09/2013-09-02-save-attachments-from-multiple-emails/</link>
+      <link>https://geraldnguyen.github.io/posts/2013/09/2013-09-02-save-attachments-from-multiple-emails/</link>
       <pubDate>Mon, 02 Sep 2013 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2013/09/2013-09-02-save-attachments-from-multiple-emails/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2013/09/2013-09-02-save-attachments-from-multiple-emails/</guid>
       <description>Prerequisite: Enable Developer tab, macro security and create “C:\mailattachment\” folder if not exists&#xA;Instruction: Select emails which have attachment to save (e.g. email containing daily report), select Developer, Macro, SaveAttachment&#xA;Sub SaveAttachment() Dim myOlapp As Outlook.Application Dim myNameSpace As Outlook.NameSpace Dim myFolder As Outlook.MAPIFolder Dim myItem As Outlook.MailItem Dim myAttachment As Outlook.Attachment Dim I As Long Set myOlapp = CreateObject(&amp;#34;Outlook.Application&amp;#34;) &amp;#39;Set myNameSpace = myOlapp.GetNamespace(&amp;#34;MAPI&amp;#34;) &amp;#39;Set myFolder = myNameSpace.GetDefaultFolder(olFolderInbox) &amp;#39;Set myFolder = myFolder.</description>
     </item>
     <item>
       <title>[Unix] – Recursively Listing Files Under a Directory</title>
-      <link>https://example.org/posts/2013/07/2013-07-22-unix-recursively-listing-files/</link>
+      <link>https://geraldnguyen.github.io/posts/2013/07/2013-07-22-unix-recursively-listing-files/</link>
       <pubDate>Mon, 22 Jul 2013 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2013/07/2013-07-22-unix-recursively-listing-files/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2013/07/2013-07-22-unix-recursively-listing-files/</guid>
       <description>If you prefer a DIY script:&#xA;#! /bin/bash function list { if [ -z $1 ] then echo list starting_dir [exclude_file_or_folder] [action_on_file] exit 1 elif [ &amp;#34;$1&amp;#34; == &amp;#34;-help&amp;#34; ] then echo list starting_dir [exclude_file_or_folder] [action_on_file] echo [exclude_file_or_folder]: use string that works with egrep e.g. &amp;#34;.jar|.log|.bak .jar|.log|.bak&amp;#34; echo [action_on_file]: if specified, output listing will not be in ls -l format exit 0 fi local path=$1 if [ -z $2 ] then ls -al $path else ls -al $path | egrep -v $2 fi for file in `ls -a $path` do if [ &amp;#34;$file&amp;#34; !</description>
     </item>
     <item>
       <title>[Database] Exists or Inner Join: Duplicate Records</title>
-      <link>https://example.org/posts/2013/06/2013-06-16-database-exist-or-inner-join-duplicate-transactions/</link>
+      <link>https://geraldnguyen.github.io/posts/2013/06/2013-06-16-database-exist-or-inner-join-duplicate-transactions/</link>
       <pubDate>Sun, 16 Jun 2013 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2013/06/2013-06-16-database-exist-or-inner-join-duplicate-transactions/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2013/06/2013-06-16-database-exist-or-inner-join-duplicate-transactions/</guid>
       <description>INNER JOIN vs. EXISTS Often, EXISTS and INNER JOIN can be used interchangeably to query data with existence in 2 or more tables. However, it is not always the case. There is an important inherent characteristics of INNER JOIN that every developer should keep in mind: INNER JOIN result may contain DUPLICATE data record. This is important for uniqueness-sensitive handling of query result (e.g. record count), or when migrating database table with unique constraints.</description>
     </item>
     <item>
       <title>Which Form of String Comparison Is Supported</title>
-      <link>https://example.org/posts/2013/05/2013-05-21-which-form-of-string-comparison-is-supported/</link>
+      <link>https://geraldnguyen.github.io/posts/2013/05/2013-05-21-which-form-of-string-comparison-is-supported/</link>
       <pubDate>Tue, 21 May 2013 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2013/05/2013-05-21-which-form-of-string-comparison-is-supported/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2013/05/2013-05-21-which-form-of-string-comparison-is-supported/</guid>
       <description>Below example is for Oracle DB, but adopting for other DBMS e.g. Sybase, MS SQL… should be straightforward.&#xA;select ‘both no space’ as “String comparison in Oracle” from dual where ‘a’ = ‘a’ -- union select ‘right has single trailing space’ from dual where ‘a’ = ‘a ‘ union select ‘right has multiple trailing space’ from dual where ‘a’ = ‘a ‘ union select ‘right has single leading space’ from dual where ‘a’ = ‘ a’ union select ‘right has multiple leading space’ from dual where ‘a’ = ‘ a’ -- union select ‘left has single trailing space’ from dual where ‘a ‘ = ‘a’ union select ‘left has multiple trailing space’ from dual where ‘a ‘ = ‘a’ union select ‘left has single leading space’ from dual where ‘ a’ = ‘a’ union select ‘left has multiple leading space’ from dual where ‘ a’ = ‘a’ -- union select ‘right has single leading and trailing space’ from dual where ‘a’ = ‘ a ‘ union select ‘right has multiple leading and trailing space’ from dual where ‘a’ = ‘ a ‘ union select ‘left has single leading and trailing space’ from dual where ‘ a ‘ = ‘a’ union select ‘left has multiple leading and trailing space’ from dual where ‘ a ‘ = ‘a’ —- union select ‘both has leading and trailing space but leading space are different’ from dual where ‘ a ‘ = ‘ a ‘ </description>
     </item>
     <item>
       <title>Myths of Secure Web Browsing</title>
-      <link>https://example.org/posts/2013/05/2013-05-18-myths-of-secure-web-browsing/</link>
+      <link>https://geraldnguyen.github.io/posts/2013/05/2013-05-18-myths-of-secure-web-browsing/</link>
       <pubDate>Sat, 18 May 2013 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2013/05/2013-05-18-myths-of-secure-web-browsing/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2013/05/2013-05-18-myths-of-secure-web-browsing/</guid>
       <description>1. I am safe because I never visited porn website Wrong. Nowadays, many more malware infection are linked to visit to legitimate and popular websites than porn or counterfeit sites.&#xA;According to Cisco 2013 Annual Security Report, Business/Industry site category stands at 3rd position behind advertising and dynamic content categories in the top 20 dangerous website categories. Included are Shopping (8th), Travel (9th), News (13th). Porn or counterfeit products (e.g. cheap Viagra) didn’t make it to top 20.</description>
     </item>
     <item>
       <title>JSR 303 – Bean Validation – Let Your Bean Validate Itself</title>
-      <link>https://example.org/posts/2012/12/2012-12-20-jsr303-bean-validation-self-validating-bean/</link>
+      <link>https://geraldnguyen.github.io/posts/2012/12/2012-12-20-jsr303-bean-validation-self-validating-bean/</link>
       <pubDate>Thu, 20 Dec 2012 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2012/12/2012-12-20-jsr303-bean-validation-self-validating-bean/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2012/12/2012-12-20-jsr303-bean-validation-self-validating-bean/</guid>
       <description>This is a simple application of my previous post whereby you can develop your own validation rule and enforcer.&#xA;The significance of this application is the use of SelfValidate interface to enable bean to define its own validation method and validator to invoke bean’s method. Typically this constraint is apply to a type, but application on field is also possible.&#xA;Constraint Annotation @Target({ElementType.TYPE}) @Retention(RetentionPolicy.RUNTIME) @Constraint(validatedBy=SelfValidator.class) public @interface SelfValidation { String message() default &amp;#34;Self-validation failed&amp;#34;; Class[] groups() default {}; Class&amp;lt;?</description>
     </item>
     <item>
       <title>JDBC Transaction Without EJB</title>
-      <link>https://example.org/posts/2012/10/2012-10-24-jdbc-transaction-without-ejb/</link>
+      <link>https://geraldnguyen.github.io/posts/2012/10/2012-10-24-jdbc-transaction-without-ejb/</link>
       <pubDate>Wed, 24 Oct 2012 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2012/10/2012-10-24-jdbc-transaction-without-ejb/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2012/10/2012-10-24-jdbc-transaction-without-ejb/</guid>
       <description>Create a DAO method in which you set JDBC connection’s auto-commit property to false dbConn.setAutoCommit(false); Execute all your queries stmt = dbConn.createStatement(); result = stmt.executeQuery(query); stmt.executeUpdate(update); Commit or rollback the transaction dbConn.commit(); Reset auto-commit to true again for other execution dbConn.setAutoCommit(true); This is really simple, as it should be for something purely mechanical. The challenge for every programmer is how to write your transaction code or order your queries such that you can achieve desired result.</description>
     </item>
     <item>
       <title>JSR 303 – Bean Validation – Custom Constraints</title>
-      <link>https://example.org/posts/2012/08/2012-08-25-jsr303-bean-validation-custom-constraints/</link>
+      <link>https://geraldnguyen.github.io/posts/2012/08/2012-08-25-jsr303-bean-validation-custom-constraints/</link>
       <pubDate>Sat, 25 Aug 2012 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2012/08/2012-08-25-jsr303-bean-validation-custom-constraints/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2012/08/2012-08-25-jsr303-bean-validation-custom-constraints/</guid>
       <description>So far, we have learn the basic and a not-so-common nested usage of JSR 303 Bean Validation, it’s time to learn how the declarative validation rule was implemented. In another word, we will learn to create a custom constraint this this post.&#xA;Constraint Annotation Custom constraint is a special kind of annotation that is itself annotated with @javax.validation.Constraint annotation. For example:&#xA;@Target({ElementType.FIELD}) @Retention(RetentionPolicy.RUNTIME) @Constraint(validatedBy=CustomeValidator.class) public @interface CustomConstraint { String message() default &amp;#34;Custom validation failed&amp;#34;; Class[] groups() default {}; Class&amp;lt;?</description>
     </item>
     <item>
       <title>JSR 303 – Bean Validation – Nested Validation</title>
-      <link>https://example.org/posts/2012/08/2012-08-09-jsr303-bean-validation-nested-validation/</link>
+      <link>https://geraldnguyen.github.io/posts/2012/08/2012-08-09-jsr303-bean-validation-nested-validation/</link>
       <pubDate>Thu, 09 Aug 2012 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2012/08/2012-08-09-jsr303-bean-validation-nested-validation/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2012/08/2012-08-09-jsr303-bean-validation-nested-validation/</guid>
       <description>Following up from my previous post about JSR 303 – Bean Validation, we will see how to apply it to any nested property and how to display validation error on screen using Spring MVC’s JSP tags&#xA;1. Bean Validation on Nested Property Recall that to validate any property, we only need to put a Constraint annotation on top of its declaration. Example of common constraints are @NotEmpty, @Pattern, @Email. One thing in common of these constraints are that the applied property has to be of type String.</description>
     </item>
     <item>
       <title>JSR 303 – Bean Validation – Basic</title>
-      <link>https://example.org/posts/2012/08/2012-08-03-jsr303-bean-validation-basic/</link>
+      <link>https://geraldnguyen.github.io/posts/2012/08/2012-08-03-jsr303-bean-validation-basic/</link>
       <pubDate>Fri, 03 Aug 2012 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2012/08/2012-08-03-jsr303-bean-validation-basic/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2012/08/2012-08-03-jsr303-bean-validation-basic/</guid>
       <description>JSR 303 – Bean Validation is defines a metadata model and API for JavaBean validation. The metadata is primarily in Annotation forms, with the possibility of being overridden or extended by XML descriptors. Hibernate Validator is the reference implementation of JSR 303.&#xA;The current version, as of August 2nd, 2012, of JSR303 is 1.0, and of Hibernate Validator version is 4.0.1.&#xA;1. Example A straightforward use of Bean Validation is to document and specify validation rules on JavaBean’s properties.</description>
     </item>
     <item>
       <title>ILLEGAL SPORT BETTING DURING EURO CUP</title>
-      <link>https://example.org/posts/2012/07/2012-07-10-illegal-sport-bettings-during-euro-cup/</link>
+      <link>https://geraldnguyen.github.io/posts/2012/07/2012-07-10-illegal-sport-bettings-during-euro-cup/</link>
       <pubDate>Tue, 10 Jul 2012 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2012/07/2012-07-10-illegal-sport-bettings-during-euro-cup/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2012/07/2012-07-10-illegal-sport-bettings-during-euro-cup/</guid>
       <description></description>
     </item>
     <item>
       <title>SPRING MVC – SESSIONATTRIBUTES ANNOTATION</title>
-      <link>https://example.org/posts/2012/06/2012-06-30-spring-mvc-sessionattributes-annotation/</link>
+      <link>https://geraldnguyen.github.io/posts/2012/06/2012-06-30-spring-mvc-sessionattributes-annotation/</link>
       <pubDate>Sat, 30 Jun 2012 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2012/06/2012-06-30-spring-mvc-sessionattributes-annotation/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2012/06/2012-06-30-spring-mvc-sessionattributes-annotation/</guid>
       <description>Spring MVC’s SessionAttributes has 2 parameters: values (storing attributes’ names) and types (storing attributes’ types).&#xA;It’s pretty straightforward for values. You specify the name of your attribute and it is remembered.&#xA;It’s trickier for types. For example:&#xA;– @SessionAttributes (types= java.util.List.class) does not work!&#xA;– But @SessionAttributes (types= java.util.ArrayList.class) works (but not always)&#xA;The reason behind this peculiar behaviour is that Spring does exact matching of attribute’s type versus declared type, instead of assessing attribute object’s Is-A relationship.</description>
     </item>
     <item>
       <title>HOW YOUR CONSUMPTION BENEFIT SOCIETY?</title>
-      <link>https://example.org/posts/2012/06/2012-06-27-how-your-consumption-benefit-society/</link>
+      <link>https://geraldnguyen.github.io/posts/2012/06/2012-06-27-how-your-consumption-benefit-society/</link>
       <pubDate>Wed, 27 Jun 2012 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2012/06/2012-06-27-how-your-consumption-benefit-society/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2012/06/2012-06-27-how-your-consumption-benefit-society/</guid>
       <description>(Disclaimer: I’m no economist. I simply find this story/concept interesting and want to share it)&#xA;If you initially have $2000 cash and you buy yourself a new smartphone (or any other good). Let’s say it costs you $1000.&#xA;So, after your buying:&#xA;– You have $1000 left&#xA;– Seller have $1000 revenue&#xA;– You have a good (i.e. the phone) worth $1000.&#xA;Thus your initial $2000 is split into 3 pieces which in total worth $3000.</description>
     </item>
     <item>
       <title>Java XML Parse error: Tried all: &#39;1&#39; addresses, but could not connect over HTTP to server</title>
-      <link>https://example.org/posts/2012/03/2012-03-09-java-xml-parse-error/</link>
+      <link>https://geraldnguyen.github.io/posts/2012/03/2012-03-09-java-xml-parse-error/</link>
       <pubDate>Fri, 09 Mar 2012 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2012/03/2012-03-09-java-xml-parse-error/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2012/03/2012-03-09-java-xml-parse-error/</guid>
       <description>I had a previous problem with Tiles and XML (and common-digester). I resolved it by telling WLS to use a different SAXParserFactory.&#xA;But when my SAXParserFactory was correct and I still encountered XML parsing error for the sample code from Tiles&amp;rsquo;s website, it is really puzzling.&#xA;java.net.ConnectException: Tried all: &amp;#39;1&amp;#39; addresses, but could not connect over HTTP to server: &amp;#39;tiles.apache.org&amp;#39;, port: &amp;#39;80&amp;#39; at weblogic.net.http.HttpClient.openServer(HttpClient.java:312) ... at org.apache.commons.digester.Digester.createInputSourceFromURL(Digester.java:2072) at org.apache.commons.digester.Digester.resolveEntity(Digester.java:1725) at com.</description>
     </item>
     <item>
       <title>How do you display input validation error</title>
-      <link>https://example.org/posts/2011/02/2011-02-24-display-input-validation-error/</link>
+      <link>https://geraldnguyen.github.io/posts/2011/02/2011-02-24-display-input-validation-error/</link>
       <pubDate>Thu, 24 Feb 2011 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2011/02/2011-02-24-display-input-validation-error/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2011/02/2011-02-24-display-input-validation-error/</guid>
       <description>Display errors in red below each invalid input field Blogger: https://www.google.com/accounts/CreateAccount?continue=https%3A%2F%2Fwww.blogger.com%2Floginz%3Fd%3Dhttp%253A%252F%252Fwww.blogger.com%252Fhome%26a%3DADD_SERVICE_FLAG&amp;amp;hl=en_GB&amp;amp;service=blogger&amp;amp;skipvpage=true&amp;amp;ltmpl=start&amp;amp;naui=8&#xA;Yahoo Mail: https://edit.yahoo.com/registration?.intl=us&amp;amp;.pd=ym_ver%253D0%2526c%253D%2526ivt%253D%2526sg%253D&amp;amp;new=1&amp;amp;.done=http%3A//mail.yahoo.com&amp;amp;.src=ym&amp;amp;.v=0&amp;amp;.u=cgf061p6mc1fm&amp;amp;partner=&amp;amp;.partner=&amp;amp;pkg=&amp;amp;stepid=&amp;amp;.p=&amp;amp;promo=&amp;amp;.last=&#xA;Oracle Forum: https://myprofile.oracle.com/EndUser/faces/profile/createUser.jspx?nextURL=http%3A%2F%2Fforums.oracle.com&#xA;Twitter: https://twitter.com/account/create&#xA;Esnip (on Firefox): http://www.esnips.com/NewAccountAction.ns?action=init&#xA;Hotmail: https://signup.live.com/signup.aspx?id=64855&amp;amp;mkt=en-US&amp;amp;form=MWGELB&amp;amp;publ=SIGNINHM&amp;amp;crea=SITEACQ_CIMS015888_Hotmail_EN-US_0x0_36214&amp;amp;lic=1&#xA;Job Street: http://myjobstreet.jobstreet.com/registration/quick-register.php?site=sg&amp;amp;deposit_through=s&#xA;JobsDB: http://sg.jobsdb.com/SG/EN/JobSeeker/Registration&#xA;Property Guru: http://www.propertyguru.com.sg/register#top&#xA;Display an generic message at the top of the page + Display errors in red below each invalid input field Vietnamework.com: http://www.vietnamworks.com/jobseekers/signup.php?lang=2#err_top&#xA;Apple Store: https://store.apple.com/1800-MY-APPLE/WebObjects/singaporestore.woa/920184021/wo/nZMi8SOBKCCj343MT1tza3xYBZk/5.0.16.9.5.1.1.0.1&#xA;Display all invalid error at the top of the page Amazon.com: https://www.amazon.com/ap/signin?ie=UTF8&amp;amp;pf_rd_r=05JGGPJ2RGK60ME9AEBM&amp;amp;pf_rd_m=ATVPDKIKX0DER&amp;amp;pf_rd_t=6301&amp;amp;pf_rd_i=usflex&amp;amp;pf_rd_p=1277563402&amp;amp;pf_rd_s=signin-slot</description>
     </item>
     <item>
       <title>Static vs Singleton Revisited</title>
-      <link>https://example.org/posts/2011/02/2011-02-14-static-singleton-revisited/</link>
+      <link>https://geraldnguyen.github.io/posts/2011/02/2011-02-14-static-singleton-revisited/</link>
       <pubDate>Thu, 10 Feb 2011 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2011/02/2011-02-14-static-singleton-revisited/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2011/02/2011-02-14-static-singleton-revisited/</guid>
       <description>Static vs Singleton vs Dependency Injection Why visited? Because I wrote one before&#xA;I no longer favor static over singleton as much as before. Static is convenient (sometimes very!), low memory footprint. But it does take away several Object-Orientation (OO) &amp;rsquo;s strength. In addition, it couples your code to a specific implementation class. Singleton is less convenient (sometimes troublesome), slightly higher memory footprint, but it can deliver all OO&amp;rsquo;s strengths that static drops.</description>
     </item>
     <item>
       <title>What makes Israel so innovative and entrepreneurial?</title>
-      <link>https://example.org/posts/2011/02/2011-02-10-israel-innovative-entrepreneurial/</link>
+      <link>https://geraldnguyen.github.io/posts/2011/02/2011-02-10-israel-innovative-entrepreneurial/</link>
       <pubDate>Thu, 10 Feb 2011 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2011/02/2011-02-10-israel-innovative-entrepreneurial/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2011/02/2011-02-10-israel-innovative-entrepreneurial/</guid>
       <description>I really admire the Israel mindset.&#xA;Milking Israel&amp;rsquo;s dairy expertise in Vietnam (http://www.israel21c.org/201102078760/environment/milking-israels-dairy-expertise-in-vietnam)&#xA;New Zealand cows are arriving by the boatload in Vietnam as part of an Israeli-led $500 million dairy farm project there.&#xA;Israeli company, SAE Afikim is helping Vietnam develop its dairy industry, in the largest project of its kind in the world.&#xA;In the largest project of its kind in the world and the biggest ever undertaken by an Israeli firm, 30,000 dairy cows are being flown to Vietnam to supply 300 million liters of milk annually as part of a $500 million dairy farm project there.</description>
     </item>
     <item>
       <title>Harvey Balls</title>
-      <link>https://example.org/posts/2011/01/2011-01-23-harvey-balls/</link>
+      <link>https://geraldnguyen.github.io/posts/2011/01/2011-01-23-harvey-balls/</link>
       <pubDate>Sun, 23 Jan 2011 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2011/01/2011-01-23-harvey-balls/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2011/01/2011-01-23-harvey-balls/</guid>
       <description>http://en.wikipedia.org/wiki/Harvey_Balls</description>
     </item>
     <item>
       <title>Static method vs Singleton class</title>
-      <link>https://example.org/posts/2011/01/2011-01-16-static-method-singleton/</link>
+      <link>https://geraldnguyen.github.io/posts/2011/01/2011-01-16-static-method-singleton/</link>
       <pubDate>Sun, 16 Jan 2011 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2011/01/2011-01-16-static-method-singleton/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2011/01/2011-01-16-static-method-singleton/</guid>
       <description>Static method It really depends. If you hate storing object reference or passing it around, static is a excellent tool.&#xA;But remember: static method CANNOT be overridden by sub-classing, it&amp;rsquo;s only hidden. Refer to http://faq.javaranch.com/view?OverridingVsHiding for a simple explanation. (Side note: invoking a static method on a object reference only brings confusion, it&amp;rsquo;s the variable data type that determine which static method&amp;rsquo;s code will execute - remember: hidden, not overridden).</description>
     </item>
     <item>
       <title>How Sun&#39;s certification exam are prepared</title>
-      <link>https://example.org/posts/2011/01/2011-01-09-how-sun-certification-exam-prepared/</link>
+      <link>https://geraldnguyen.github.io/posts/2011/01/2011-01-09-how-sun-certification-exam-prepared/</link>
       <pubDate>Sun, 09 Jan 2011 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2011/01/2011-01-09-how-sun-certification-exam-prepared/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2011/01/2011-01-09-how-sun-certification-exam-prepared/</guid>
       <description>&amp;ldquo;Without getting into too much detail, I can tell you some of what Sun did to create their various Java certification exams. So, in the old Sun days&amp;hellip;&#xA;The whole process to create a new exam takes a long time. A first team of experts is assembled and for several months the team develops a new set of objectives. Once created, the new set of objectives go through all sorts of vetting / verification processes.</description>
     </item>
     <item>
       <title>Consistency in framework design</title>
-      <link>https://example.org/posts/2011/01/2011-01-06-consistency-in-framework-design/</link>
+      <link>https://geraldnguyen.github.io/posts/2011/01/2011-01-06-consistency-in-framework-design/</link>
       <pubDate>Thu, 06 Jan 2011 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2011/01/2011-01-06-consistency-in-framework-design/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2011/01/2011-01-06-consistency-in-framework-design/</guid>
       <description>Concistency Framework: a set of ideas, principles, agreements, or rules that provides the basis or outline for something intended to be more fully developed at a later stage (MSN Dictionary)&#xA;Not sure if you agree, but for me, the above definition implies &amp;ldquo;consistency&amp;rdquo; as a essential effect of using a framework. In the context of software development, using a framework usually equals to following its design guideline, or implementing/extending its interfaces/base classes.</description>
     </item>
     <item>
       <title>Who owns the source code? Employee or employer?</title>
-      <link>https://example.org/posts/2010/12/2010-12-21-who-own-the-source-code/</link>
+      <link>https://geraldnguyen.github.io/posts/2010/12/2010-12-21-who-own-the-source-code/</link>
       <pubDate>Tue, 21 Dec 2010 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2010/12/2010-12-21-who-own-the-source-code/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2010/12/2010-12-21-who-own-the-source-code/</guid>
       <description>I found these 2 articles discussing &amp;ldquo;who owns the source code&amp;rdquo; issue.&#xA;http://www.computerworld.com/s/article/print/9126595/Who_owns_the_code_Beware_copyright_pitfalls?taxonomyId=11&amp;amp;taxonomyName=Development&#xA;http://www.burgess.co.nz/law/copyright-ownership-and-software-development&#xA;The first article discusses the issues using US copyright law; the second is in the context of New Zealand. There are slight difference between the 2 laws with regard to Contractor/Customer relationship but the case of Employee/Employer is the same: without explicit agreement (contract), the Employer owns the source code.&#xA;In Singapore, it is the same: Employer is the copyright holder.</description>
     </item>
     <item>
       <title>Quicksort vs Merge sort in Java</title>
-      <link>https://example.org/posts/2010/12/2010-12-12-quicksort-mergesort-java/</link>
+      <link>https://geraldnguyen.github.io/posts/2010/12/2010-12-12-quicksort-mergesort-java/</link>
       <pubDate>Sun, 12 Dec 2010 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2010/12/2010-12-12-quicksort-mergesort-java/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2010/12/2010-12-12-quicksort-mergesort-java/</guid>
       <description>The title is a little larger that what I have in this entry :D&#xA;If you want the answer fast, go here http://www.coderanch.com/t/520171/java/java/Why-Collections-sort-merge-sort#2355668&#xA;And here is a longer write-up:&#xA;I participated in an thread in Javaranche regarding why Arrays uses quicksort and Collections use merge sort (http://www.coderanch.com/t/520171/java/java/Why-Collections-sort-merge-sort). The thread starter claimed that quicksort is the best sort algorithm, for which I disagreed. I also replied with a link to wikipedia about merge sort performs better when the underlying datatype does not support random access (as does array).</description>
     </item>
     <item>
       <title>How do you initialize an EJB3 Stateful Session Bean ?</title>
-      <link>https://example.org/posts/2010/11/2010-11-10-initialize-ejb3-stateful-session-bean/</link>
+      <link>https://geraldnguyen.github.io/posts/2010/11/2010-11-10-initialize-ejb3-stateful-session-bean/</link>
       <pubDate>Sat, 20 Nov 2010 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2010/11/2010-11-10-initialize-ejb3-stateful-session-bean/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2010/11/2010-11-10-initialize-ejb3-stateful-session-bean/</guid>
       <description>In EJB 3, we can obtain a reference to Stateful Session Bean either either by using @EJB annotation or performing JNDI look-up. Yet these 2 methods do not offer you a way to initialize a Stateful SB as EJB 2.1 Home interface&amp;rsquo;s createMETHODs do.&#xA;StatefulSB bean = home.create (arg0, arg1, arg2); EJB3 defines @Init annotation as a replacement for EJB 2.1 createMETHOD. But it is intended for bean written to 2.</description>
     </item>
     <item>
       <title>Weblogic SAXParserFactory Issue</title>
-      <link>https://example.org/posts/2010/10/2010-10-26-weblogic-saxparserfactory-issue/</link>
+      <link>https://geraldnguyen.github.io/posts/2010/10/2010-10-26-weblogic-saxparserfactory-issue/</link>
       <pubDate>Tue, 26 Oct 2010 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2010/10/2010-10-26-weblogic-saxparserfactory-issue/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2010/10/2010-10-26-weblogic-saxparserfactory-issue/</guid>
       <description>I have just wasted 1 whole day trying to debug this issues. Since I get most help from the internet, here is what I can do in return :D&#xA;I was trying to build a Spring 3.0 webapp with Tiles 2.2. Since Tiles depends on common-digester which subsequently depends on SAXParserFactory, I got stuck in a whole range of strange Weblogic behaviors.&#xA;Firstly, I got UnsupportedOperationException everytime I first access the webapp.</description>
     </item>
     <item>
       <title>Recursive Tagfile</title>
-      <link>https://example.org/posts/2010/03/2010-03-24-recursive-tagfile/</link>
+      <link>https://geraldnguyen.github.io/posts/2010/03/2010-03-24-recursive-tagfile/</link>
       <pubDate>Wed, 24 Mar 2010 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2010/03/2010-03-24-recursive-tagfile/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2010/03/2010-03-24-recursive-tagfile/</guid>
       <description>Tagfile is a good alternative for lazy people like me who hates doing java coding and XML configuration for simple task with lots of HTML codes.&#xA;But laziness knows no limit. Just now I ended up wasting haft a day on a recursive tagfile that would otherwise be completed within 1 hour at most. Yet it was an experience that&amp;rsquo;s worth sharing.&#xA;The tagfile is named catalogue.tag. Its purpose is to display recursively a hierarchy tree of catalogues.</description>
     </item>
     <item>
       <title>Interesting - AKA</title>
-      <link>https://example.org/posts/2010/03/2010-03-10-interesting/</link>
+      <link>https://geraldnguyen.github.io/posts/2010/03/2010-03-10-interesting/</link>
       <pubDate>Wed, 10 Mar 2010 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2010/03/2010-03-10-interesting/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2010/03/2010-03-10-interesting/</guid>
       <description>AKA = Also-Known-As</description>
     </item>
     <item>
       <title>Combine EJB and WAR file in a same web service EAR</title>
-      <link>https://example.org/posts/2010/03/2010-03-02-combine-ejb-war-in-ear/</link>
+      <link>https://geraldnguyen.github.io/posts/2010/03/2010-03-02-combine-ejb-war-in-ear/</link>
       <pubDate>Tue, 02 Mar 2010 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2010/03/2010-03-02-combine-ejb-war-in-ear/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2010/03/2010-03-02-combine-ejb-war-in-ear/</guid>
       <description>That has been my challenge since yesterday. And I think I have just got it :D&#xA;Let&amp;rsquo;s see if I can reconstruct a step-by-step manual:&#xA;1. First of all, let have some understanding of the structure of a EAR file. EAR stands for Enterprise ARchive. It&amp;rsquo;s a convenient mean to to pack and deploy components of an enterprise application. Essentially, you can pack WAR, EJB, Resource Adapter and supporting libraries inside a EAR file.</description>
     </item>
     <item>
       <title>2-way SSL with WebLogic server 10.3</title>
-      <link>https://example.org/posts/2010/02/2010-02-03-weblogic-2way-ssl/</link>
+      <link>https://geraldnguyen.github.io/posts/2010/02/2010-02-03-weblogic-2way-ssl/</link>
       <pubDate>Wed, 03 Feb 2010 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2010/02/2010-02-03-weblogic-2way-ssl/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2010/02/2010-02-03-weblogic-2way-ssl/</guid>
       <description>TOOLS keytool: a key and certificate management tool. Provided as part of Sun&amp;rsquo;s JDK Online reference: http://java.sun.com/javase/6/docs/technotes/tools/windows/keytool.htm.&#xA;utils.CertGen: a certification generate tool provided by WLS. By default it will generate certificates from default CertGenCA.der and CertGenCAKey.der; but have not been able to generate certificate from other cert and key (probably because of the lack of original cert &amp;amp; key AND CertGenCA has constraint of max 1 descendant). Online renference: http://download.oracle.com/docs/cd/E13222_01/wls/docs103/admin_ref/utils.html#wp1198920</description>
     </item>
     <item>
       <title>J2EE Programming Tips</title>
-      <link>https://example.org/posts/2009/05/2009-05-04-j2ee-tips/</link>
+      <link>https://geraldnguyen.github.io/posts/2009/05/2009-05-04-j2ee-tips/</link>
       <pubDate>Mon, 04 May 2009 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2009/05/2009-05-04-j2ee-tips/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2009/05/2009-05-04-j2ee-tips/</guid>
       <description>J2EE Programming Learn to program Java well. SCJP is nice to have.&#xA;Do program with performance-awareness.&#xA;Always try to optimize your program; performance is a big concern in any J2EE application.&#xA;Dont just follow what other people call best practices, they may not fit your need while being costly to implement.&#xA;J2EE application&amp;rsquo;s performance is often constraint by its interraction with database(s). Optimise your database access, data transaction management codes.</description>
     </item>
     <item>
       <title>Interesting - 2009</title>
-      <link>https://example.org/posts/2009/03/2009-03-08-interesting/</link>
+      <link>https://geraldnguyen.github.io/posts/2009/03/2009-03-08-interesting/</link>
       <pubDate>Sun, 08 Mar 2009 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2009/03/2009-03-08-interesting/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2009/03/2009-03-08-interesting/</guid>
       <description>Capitalism vs Socialism “Capitalism is the unequal distribution of wealth. Socialism is the equal distribution of poverty.” – Winston Churchill&#xA;President Harry Truman President Harry Truman once said that he wanted to find a one-armed economist.&#xA;When he asked his economists for advice, they always answered, “On the onehand, . . . . On the other hand, . . . .”</description>
     </item>
   </channel>

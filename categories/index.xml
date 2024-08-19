@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Gerald Nguyen</title>
-    <link>https://example.org/categories/</link>
+    <link>https://geraldnguyen.github.io/categories/</link>
     <description>Recent content in Categories on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 21 Feb 2023 08:00:00 -0700</lastBuildDate>
-    <atom:link href="https://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Software Development</title>
-      <link>https://example.org/categories/software-development/</link>
+      <link>https://geraldnguyen.github.io/categories/software-development/</link>
       <pubDate>Tue, 21 Feb 2023 08:00:00 -0700</pubDate>
-      <guid>https://example.org/categories/software-development/</guid>
+      <guid>https://geraldnguyen.github.io/categories/software-development/</guid>
       <description></description>
     </item>
     <item>
       <title>Non-Tech</title>
-      <link>https://example.org/categories/non-tech/</link>
+      <link>https://geraldnguyen.github.io/categories/non-tech/</link>
       <pubDate>Thu, 29 Dec 2022 09:19:42 +0100</pubDate>
-      <guid>https://example.org/categories/non-tech/</guid>
+      <guid>https://geraldnguyen.github.io/categories/non-tech/</guid>
       <description></description>
     </item>
     <item>
       <title>Career Development</title>
-      <link>https://example.org/categories/career-development/</link>
+      <link>https://geraldnguyen.github.io/categories/career-development/</link>
       <pubDate>Fri, 09 Dec 2022 09:19:42 +0100</pubDate>
-      <guid>https://example.org/categories/career-development/</guid>
+      <guid>https://geraldnguyen.github.io/categories/career-development/</guid>
       <description></description>
     </item>
     <item>
       <title>Tech Related</title>
-      <link>https://example.org/categories/tech-related/</link>
+      <link>https://geraldnguyen.github.io/categories/tech-related/</link>
       <pubDate>Sun, 17 Oct 2021 09:19:42 +0100</pubDate>
-      <guid>https://example.org/categories/tech-related/</guid>
+      <guid>https://geraldnguyen.github.io/categories/tech-related/</guid>
       <description></description>
     </item>
   </channel>

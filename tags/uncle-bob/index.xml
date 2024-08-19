@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Uncle Bob on Gerald Nguyen</title>
-    <link>https://example.org/tags/uncle-bob/</link>
+    <link>https://geraldnguyen.github.io/tags/uncle-bob/</link>
     <description>Recent content in Uncle Bob on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 07 Dec 2022 08:00:00 -0700</lastBuildDate>
-    <atom:link href="https://example.org/tags/uncle-bob/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/uncle-bob/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Becoming a SOLID developer</title>
-      <link>https://example.org/posts/2022/12/becoming-a-solid-developer/</link>
+      <link>https://geraldnguyen.github.io/posts/2022/12/becoming-a-solid-developer/</link>
       <pubDate>Wed, 07 Dec 2022 08:00:00 -0700</pubDate>
-      <guid>https://example.org/posts/2022/12/becoming-a-solid-developer/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2022/12/becoming-a-solid-developer/</guid>
       <description>Being called solid is a compliment. The word carries the positive notions of reliability and respectability. All of us should aim to become one.&#xA;https://www.collinsdictionary.com/dictionary/english/solid (screenshot)&#xA;If you are a software engineer or want to become one, you are in luck because there is a set of SOLID principles to guide your way.&#xA;SOLID is an acronym in the software engineering profession. It stands for:&#xA;Single Responsibility principle Open-closed principle Liskov Substitution principle Interface segregation principle Dependency inversion principle The term was coined by Michael Feather around 2004 for the 5 object-oriented design principles first collected by Uncle Bob in his 2000 paper Design Principles and Design Patterns and his other articles and books</description>
     </item>
   </channel>

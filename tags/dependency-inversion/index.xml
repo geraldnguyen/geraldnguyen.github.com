@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dependency Inversion on Gerald Nguyen</title>
-    <link>https://example.org/tags/dependency-inversion/</link>
+    <link>https://geraldnguyen.github.io/tags/dependency-inversion/</link>
     <description>Recent content in Dependency Inversion on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 21 Feb 2023 08:00:00 -0700</lastBuildDate>
-    <atom:link href="https://example.org/tags/dependency-inversion/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/dependency-inversion/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SOLID in Action: the Dependency Inversion Principle</title>
-      <link>https://example.org/posts/2023/02/solid-dependency-inversion-principle/</link>
+      <link>https://geraldnguyen.github.io/posts/2023/02/solid-dependency-inversion-principle/</link>
       <pubDate>Tue, 21 Feb 2023 08:00:00 -0700</pubDate>
-      <guid>https://example.org/posts/2023/02/solid-dependency-inversion-principle/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2023/02/solid-dependency-inversion-principle/</guid>
       <description>Photo by ocd studio on Unsplash&#xA;The Dependency Inversion Principle (DIP) Naive application of traditional software development methods (e.g. SADT or Structured Analysis and Design Technique), in the past, often resulted in a type of relationship where high-level modules depended on lower implementation details. This form of relationship often leads to rigidity, fragility, and immobility. These are the symptoms of bad design according to Robert C. Martin.&#xA;A naive application of top-down approaches can lead to bad design.</description>
     </item>
   </channel>

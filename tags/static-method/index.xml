@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Static Method on Gerald Nguyen</title>
-    <link>https://example.org/tags/static-method/</link>
+    <link>https://geraldnguyen.github.io/tags/static-method/</link>
     <description>Recent content in Static Method on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 10 Feb 2011 09:19:42 +0100</lastBuildDate>
-    <atom:link href="https://example.org/tags/static-method/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/static-method/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Static vs Singleton Revisited</title>
-      <link>https://example.org/posts/2011/02/2011-02-14-static-singleton-revisited/</link>
+      <link>https://geraldnguyen.github.io/posts/2011/02/2011-02-14-static-singleton-revisited/</link>
       <pubDate>Thu, 10 Feb 2011 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2011/02/2011-02-14-static-singleton-revisited/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2011/02/2011-02-14-static-singleton-revisited/</guid>
       <description>Static vs Singleton vs Dependency Injection Why visited? Because I wrote one before&#xA;I no longer favor static over singleton as much as before. Static is convenient (sometimes very!), low memory footprint. But it does take away several Object-Orientation (OO) &amp;rsquo;s strength. In addition, it couples your code to a specific implementation class. Singleton is less convenient (sometimes troublesome), slightly higher memory footprint, but it can deliver all OO&amp;rsquo;s strengths that static drops.</description>
     </item>
     <item>
       <title>Static method vs Singleton class</title>
-      <link>https://example.org/posts/2011/01/2011-01-16-static-method-singleton/</link>
+      <link>https://geraldnguyen.github.io/posts/2011/01/2011-01-16-static-method-singleton/</link>
       <pubDate>Sun, 16 Jan 2011 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2011/01/2011-01-16-static-method-singleton/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2011/01/2011-01-16-static-method-singleton/</guid>
       <description>Static method It really depends. If you hate storing object reference or passing it around, static is a excellent tool.&#xA;But remember: static method CANNOT be overridden by sub-classing, it&amp;rsquo;s only hidden. Refer to http://faq.javaranch.com/view?OverridingVsHiding for a simple explanation. (Side note: invoking a static method on a object reference only brings confusion, it&amp;rsquo;s the variable data type that determine which static method&amp;rsquo;s code will execute - remember: hidden, not overridden).</description>
     </item>
   </channel>

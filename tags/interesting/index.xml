@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Interesting on Gerald Nguyen</title>
-    <link>https://example.org/tags/interesting/</link>
+    <link>https://geraldnguyen.github.io/tags/interesting/</link>
     <description>Recent content in Interesting on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 10 Mar 2010 09:19:42 +0100</lastBuildDate>
-    <atom:link href="https://example.org/tags/interesting/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/interesting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Interesting - AKA</title>
-      <link>https://example.org/posts/2010/03/2010-03-10-interesting/</link>
+      <link>https://geraldnguyen.github.io/posts/2010/03/2010-03-10-interesting/</link>
       <pubDate>Wed, 10 Mar 2010 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2010/03/2010-03-10-interesting/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2010/03/2010-03-10-interesting/</guid>
       <description>AKA = Also-Known-As</description>
     </item>
     <item>
       <title>Interesting - 2009</title>
-      <link>https://example.org/posts/2009/03/2009-03-08-interesting/</link>
+      <link>https://geraldnguyen.github.io/posts/2009/03/2009-03-08-interesting/</link>
       <pubDate>Sun, 08 Mar 2009 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2009/03/2009-03-08-interesting/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2009/03/2009-03-08-interesting/</guid>
       <description>Capitalism vs Socialism “Capitalism is the unequal distribution of wealth. Socialism is the equal distribution of poverty.” – Winston Churchill&#xA;President Harry Truman President Harry Truman once said that he wanted to find a one-armed economist.&#xA;When he asked his economists for advice, they always answered, “On the onehand, . . . . On the other hand, . . . .”</description>
     </item>
   </channel>

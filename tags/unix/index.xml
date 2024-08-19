@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Unix on Gerald Nguyen</title>
-    <link>https://example.org/tags/unix/</link>
+    <link>https://geraldnguyen.github.io/tags/unix/</link>
     <description>Recent content in Unix on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 22 Jul 2013 09:19:42 +0100</lastBuildDate>
-    <atom:link href="https://example.org/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/unix/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Unix] – Recursively Listing Files Under a Directory</title>
-      <link>https://example.org/posts/2013/07/2013-07-22-unix-recursively-listing-files/</link>
+      <link>https://geraldnguyen.github.io/posts/2013/07/2013-07-22-unix-recursively-listing-files/</link>
       <pubDate>Mon, 22 Jul 2013 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2013/07/2013-07-22-unix-recursively-listing-files/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2013/07/2013-07-22-unix-recursively-listing-files/</guid>
       <description>If you prefer a DIY script:&#xA;#! /bin/bash function list { if [ -z $1 ] then echo list starting_dir [exclude_file_or_folder] [action_on_file] exit 1 elif [ &amp;#34;$1&amp;#34; == &amp;#34;-help&amp;#34; ] then echo list starting_dir [exclude_file_or_folder] [action_on_file] echo [exclude_file_or_folder]: use string that works with egrep e.g. &amp;#34;.jar|.log|.bak .jar|.log|.bak&amp;#34; echo [action_on_file]: if specified, output listing will not be in ls -l format exit 0 fi local path=$1 if [ -z $2 ] then ls -al $path else ls -al $path | egrep -v $2 fi for file in `ls -a $path` do if [ &amp;#34;$file&amp;#34; !</description>
     </item>
   </channel>

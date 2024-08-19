@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vietnam on Gerald Nguyen</title>
-    <link>https://example.org/tags/vietnam/</link>
+    <link>https://geraldnguyen.github.io/tags/vietnam/</link>
     <description>Recent content in Vietnam on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 29 Dec 2022 09:19:42 +0100</lastBuildDate>
-    <atom:link href="https://example.org/tags/vietnam/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/vietnam/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Regional economic development in Vietnam — Reform &amp; “Reorder”</title>
-      <link>https://example.org/posts/2022/12/regional-economic-development-in-vietnam-reform-reorder/</link>
+      <link>https://geraldnguyen.github.io/posts/2022/12/regional-economic-development-in-vietnam-reform-reorder/</link>
       <pubDate>Thu, 29 Dec 2022 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2022/12/regional-economic-development-in-vietnam-reform-reorder/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2022/12/regional-economic-development-in-vietnam-reform-reorder/</guid>
       <description>35 years of Đổi Mới (Economic Reform) helped Vietnam from a country that had to “run for rice” (see note 1) in the early 1980s to become a middle-income country, reaching the top 20 of the world’s leading economies in terms of international trade. The Reform has turned many poor rural areas into industrial districts, farmers into city dwellers, the number of poor households has decreased sharply, the middle class has increased rapidly… But the Reform process also led to the “Reorder” among provinces and regions.</description>
     </item>
     <item>
       <title>Thu Duc, Ho Chi Minh City, Vietnam in December</title>
-      <link>https://example.org/posts/2022/12/thu-duc-hcmc-vietnam/</link>
+      <link>https://geraldnguyen.github.io/posts/2022/12/thu-duc-hcmc-vietnam/</link>
       <pubDate>Sun, 18 Dec 2022 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2022/12/thu-duc-hcmc-vietnam/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2022/12/thu-duc-hcmc-vietnam/</guid>
       <description>Taken during my vacation&#xA;Photos taken during my vacation in Thu Duc, Ho Chi Minh City, Vietnam on December 2022&#xA;Vinhome Grandpark, Thu Duc, Ho Chi Minh City&#xA;Heavy rain&#xA;Having fun!&#xA;Playground&#xA;Swimming Lesson&#xA;Manhattan Ave?</description>
     </item>
   </channel>

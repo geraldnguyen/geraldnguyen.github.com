@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jdbc on Gerald Nguyen</title>
-    <link>https://example.org/tags/jdbc/</link>
+    <link>https://geraldnguyen.github.io/tags/jdbc/</link>
     <description>Recent content in Jdbc on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 24 Oct 2012 09:19:42 +0100</lastBuildDate>
-    <atom:link href="https://example.org/tags/jdbc/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/jdbc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JDBC Transaction Without EJB</title>
-      <link>https://example.org/posts/2012/10/2012-10-24-jdbc-transaction-without-ejb/</link>
+      <link>https://geraldnguyen.github.io/posts/2012/10/2012-10-24-jdbc-transaction-without-ejb/</link>
       <pubDate>Wed, 24 Oct 2012 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2012/10/2012-10-24-jdbc-transaction-without-ejb/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2012/10/2012-10-24-jdbc-transaction-without-ejb/</guid>
       <description>Create a DAO method in which you set JDBC connection’s auto-commit property to false dbConn.setAutoCommit(false); Execute all your queries stmt = dbConn.createStatement(); result = stmt.executeQuery(query); stmt.executeUpdate(update); Commit or rollback the transaction dbConn.commit(); Reset auto-commit to true again for other execution dbConn.setAutoCommit(true); This is really simple, as it should be for something purely mechanical. The challenge for every programmer is how to write your transaction code or order your queries such that you can achieve desired result.</description>
     </item>
     <item>
       <title>J2EE Programming Tips</title>
-      <link>https://example.org/posts/2009/05/2009-05-04-j2ee-tips/</link>
+      <link>https://geraldnguyen.github.io/posts/2009/05/2009-05-04-j2ee-tips/</link>
       <pubDate>Mon, 04 May 2009 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2009/05/2009-05-04-j2ee-tips/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2009/05/2009-05-04-j2ee-tips/</guid>
       <description>J2EE Programming Learn to program Java well. SCJP is nice to have.&#xA;Do program with performance-awareness.&#xA;Always try to optimize your program; performance is a big concern in any J2EE application.&#xA;Dont just follow what other people call best practices, they may not fit your need while being costly to implement.&#xA;J2EE application&amp;rsquo;s performance is often constraint by its interraction with database(s). Optimise your database access, data transaction management codes.</description>
     </item>
   </channel>

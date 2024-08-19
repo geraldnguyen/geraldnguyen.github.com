@@ -10,17 +10,17 @@
 
 
 <title>Java XML Parse error: Tried all: &#39;1&#39; addresses, but could not connect over HTTP to server</title>
-<meta data-rh="true" property="og:url" content="https://example.org/posts/2012/03/2012-03-09-java-xml-parse-error/">
+<meta data-rh="true" property="og:url" content="https://geraldnguyen.github.io/posts/2012/03/2012-03-09-java-xml-parse-error/">
 <meta data-rh="true" property="og:title" content="Java XML Parse error: Tried all: &#39;1&#39; addresses, but could not connect over HTTP to server">
 <meta data-rh="true" name="description" content="">
 <meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
 <meta data-rh="true" property="og:description" content="">
 <meta data-rh="true" name="twitter:description" content="">
-<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2012/03/2012-03-09-java-xml-parse-error/">
+<meta data-rh="true" property="al:web:url" content="https://geraldnguyen.github.io/posts/2012/03/2012-03-09-java-xml-parse-error/">
 <meta data-rh="true" property="og:type" content="article">
 
 
-  <meta property="og:image" content="https://example.org/geraldnguyen-profile.jpg" data-rh="true">
+  <meta property="og:image" content="https://geraldnguyen.github.io/geraldnguyen-profile.jpg" data-rh="true">
 
 
 
@@ -86,13 +86,13 @@
   <div class="me-2">
     
     <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
-          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          src="https://geraldnguyen.github.io/geraldnguyen-profile-thumbnail.jpg" width="44"
           height="44" loading="lazy" data-testid="authorPhoto">
     
   </div>
   <div>
     <div>
-      <a rel="noopener follow" href="https://example.org/">
+      <a rel="noopener follow" href="https://geraldnguyen.github.io/">
         Gerald Nguyen
       </a>
     </div>
@@ -132,7 +132,7 @@
     <div class="bd-main">
       
 
-  <p>I had a <a href="https://example.org/posts/2010/10/2010-10-26-weblogic-saxparserfactory-issue/">previous problem with Tiles and XML</a>  (and common-digester). I resolved it by telling WLS to use a different <code>SAXParserFactory</code>.</p>
+  <p>I had a <a href="https://geraldnguyen.github.io/posts/2010/10/2010-10-26-weblogic-saxparserfactory-issue/">previous problem with Tiles and XML</a>  (and common-digester). I resolved it by telling WLS to use a different <code>SAXParserFactory</code>.</p>
 <p>But when my <code>SAXParserFactory</code> was correct and I still encountered XML parsing error for the sample code from Tiles&rsquo;s website, it is really puzzling.</p>
 <pre tabindex="0"><code>java.net.ConnectException: Tried all: &#39;1&#39; addresses, but could not connect over HTTP to server: &#39;tiles.apache.org&#39;, port: &#39;80&#39;        at weblogic.net.http.HttpClient.openServer(HttpClient.java:312)  ...        at org.apache.commons.digester.Digester.createInputSourceFromURL(Digester.java:2072)        at org.apache.commons.digester.Digester.resolveEntity(Digester.java:1725)        at com.sun.org.apache.xerces.internal.util.EntityResolverWrapper.resolveEntity(EntityResolverWrapper.java:107)        at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.resolveEntityAsPerStax(XMLEntityManager.java:1018)        ..        at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:107)  ...        at org.apache.commons.digester.Digester.parse(Digester.java:1887)        at org.apache.tiles.definition.digester.DigesterDefinitionsReader.read(DigesterDefinitionsReader.java:267)
 </code></pre><p>After a few hours googling, I found the solution here: <a href="http://stackoverflow.com/questions/5067447/struts2-tiles-when-apache-org-is-down-my-webapp-fails-to-start">http://stackoverflow.com/questions/5067447/struts2-tiles-when-apache-org-is-down-my-webapp-fails-to-start</a>. To quote it:</p>

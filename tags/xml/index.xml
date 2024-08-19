@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>XML on Gerald Nguyen</title>
-    <link>https://example.org/tags/xml/</link>
+    <link>https://geraldnguyen.github.io/tags/xml/</link>
     <description>Recent content in XML on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 09 Mar 2012 09:19:42 +0100</lastBuildDate>
-    <atom:link href="https://example.org/tags/xml/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/xml/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java XML Parse error: Tried all: &#39;1&#39; addresses, but could not connect over HTTP to server</title>
-      <link>https://example.org/posts/2012/03/2012-03-09-java-xml-parse-error/</link>
+      <link>https://geraldnguyen.github.io/posts/2012/03/2012-03-09-java-xml-parse-error/</link>
       <pubDate>Fri, 09 Mar 2012 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2012/03/2012-03-09-java-xml-parse-error/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2012/03/2012-03-09-java-xml-parse-error/</guid>
       <description>I had a previous problem with Tiles and XML (and common-digester). I resolved it by telling WLS to use a different SAXParserFactory.&#xA;But when my SAXParserFactory was correct and I still encountered XML parsing error for the sample code from Tiles&amp;rsquo;s website, it is really puzzling.&#xA;java.net.ConnectException: Tried all: &amp;#39;1&amp;#39; addresses, but could not connect over HTTP to server: &amp;#39;tiles.apache.org&amp;#39;, port: &amp;#39;80&amp;#39; at weblogic.net.http.HttpClient.openServer(HttpClient.java:312) ... at org.apache.commons.digester.Digester.createInputSourceFromURL(Digester.java:2072) at org.apache.commons.digester.Digester.resolveEntity(Digester.java:1725) at com.</description>
     </item>
   </channel>

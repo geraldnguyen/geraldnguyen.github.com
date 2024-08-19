@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hibernate on Gerald Nguyen</title>
-    <link>https://example.org/tags/hibernate/</link>
+    <link>https://geraldnguyen.github.io/tags/hibernate/</link>
     <description>Recent content in Hibernate on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 04 Dec 2022 09:19:42 +0100</lastBuildDate>
-    <atom:link href="https://example.org/tags/hibernate/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/hibernate/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The best way to fix Hibernate’s MultipleBagFetchException</title>
-      <link>https://example.org/posts/2022/12/fixing-hibernate-multiplebagfetchexception/</link>
+      <link>https://geraldnguyen.github.io/posts/2022/12/fixing-hibernate-multiplebagfetchexception/</link>
       <pubDate>Sun, 04 Dec 2022 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2022/12/fixing-hibernate-multiplebagfetchexception/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2022/12/fixing-hibernate-multiplebagfetchexception/</guid>
       <description>There are 2 articles from https://vladmihalcea.com describing his analysis and solutions to Hibernate’s MultipleBagFetchException. The first one, appeared around 2020 (when I first researched this problem) or even earlier (2018?), offered an analysis of the problem and a solution using Hibernate’s EntityManager API. The second one appeared around Jun 2022, and offers a slightly different solution for JPA.&#xA;I will present below my understanding of his analysis, his solutions, and working sample codes which you can check out and validate your understanding and/or devise your own solutions.</description>
     </item>
   </channel>

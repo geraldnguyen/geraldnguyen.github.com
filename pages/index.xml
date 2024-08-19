@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Gerald Nguyen</title>
-    <link>https://example.org/pages/</link>
+    <link>https://geraldnguyen.github.io/pages/</link>
     <description>Recent content in Pages on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 10 Aug 2024 08:00:00 -0700</lastBuildDate>
-    <atom:link href="https://example.org/pages/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gerald Nguyen</title>
-      <link>https://example.org/pages/about/</link>
+      <link>https://geraldnguyen.github.io/pages/about/</link>
       <pubDate>Sat, 10 Aug 2024 08:00:00 -0700</pubDate>
-      <guid>https://example.org/pages/about/</guid>
+      <guid>https://geraldnguyen.github.io/pages/about/</guid>
       <description>About me A software craftsman who writes clean code, automated tests, and practices continuous improvement&#xA;A seasoned IT professional with 17 years of experience in various industries, business domains, and roles&#xA;An admirer of (Vulcan) logic, diversity, and multidisciplinary approaches&#xA;Connect with me on Linkedin, or X (formerly Twitter)&#xA;Personal Projects HTML to Markdown An Chrome extension that translate selected HTML text to equivalent markdown format.&#xA;It allows user to select and convert headers, paragraphs, images or links on the web into Markdown text quickly and effortlessly</description>
     </item>
   </channel>

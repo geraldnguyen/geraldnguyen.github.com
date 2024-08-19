@@ -10,17 +10,17 @@
 
 
 <title>Static vs Singleton Revisited</title>
-<meta data-rh="true" property="og:url" content="https://example.org/posts/2011/02/2011-02-14-static-singleton-revisited/">
+<meta data-rh="true" property="og:url" content="https://geraldnguyen.github.io/posts/2011/02/2011-02-14-static-singleton-revisited/">
 <meta data-rh="true" property="og:title" content="Static vs Singleton Revisited">
 <meta data-rh="true" name="description" content="">
 <meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
 <meta data-rh="true" property="og:description" content="">
 <meta data-rh="true" name="twitter:description" content="">
-<meta data-rh="true" property="al:web:url" content="https://example.org/posts/2011/02/2011-02-14-static-singleton-revisited/">
+<meta data-rh="true" property="al:web:url" content="https://geraldnguyen.github.io/posts/2011/02/2011-02-14-static-singleton-revisited/">
 <meta data-rh="true" property="og:type" content="article">
 
 
-  <meta property="og:image" content="https://example.org/geraldnguyen-profile.jpg" data-rh="true">
+  <meta property="og:image" content="https://geraldnguyen.github.io/geraldnguyen-profile.jpg" data-rh="true">
 
 
 
@@ -86,13 +86,13 @@
   <div class="me-2">
     
     <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
-          src="https://example.org/geraldnguyen-profile-thumbnail.jpg" width="44"
+          src="https://geraldnguyen.github.io/geraldnguyen-profile-thumbnail.jpg" width="44"
           height="44" loading="lazy" data-testid="authorPhoto">
     
   </div>
   <div>
     <div>
-      <a rel="noopener follow" href="https://example.org/">
+      <a rel="noopener follow" href="https://geraldnguyen.github.io/">
         Gerald Nguyen
       </a>
     </div>
@@ -138,7 +138,7 @@
       
 
   <h1 id="static-vs-singleton-vs-dependency-injection">Static vs Singleton vs Dependency Injection</h1>
-<p>Why visited? Because I wrote <a href="https://example.org/posts/2011/01/2011-01-16-static-method-singleton/">one</a> before</p>
+<p>Why visited? Because I wrote <a href="https://geraldnguyen.github.io/posts/2011/01/2011-01-16-static-method-singleton/">one</a> before</p>
 <p>I no longer favor <strong>static</strong> over <strong>singleton</strong> as much as before. Static is convenient (sometimes very!), low memory footprint. But it does take away several Object-Orientation (OO) &rsquo;s strength. In addition, it couples your code to a specific implementation class. Singleton is less convenient (sometimes troublesome), slightly higher memory footprint, but it can deliver all OO&rsquo;s strengths that static drops.</p>
 <p>(But don&rsquo;t abandon static - it is my best choice when OO is not important. I still use it where it makes most sense: utility functions, thread local, service locator.)</p>
 <p>Here is how I use singleton.</p>

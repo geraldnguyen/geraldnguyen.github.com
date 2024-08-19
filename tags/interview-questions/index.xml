@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Interview Questions on Gerald Nguyen</title>
-    <link>https://example.org/tags/interview-questions/</link>
+    <link>https://geraldnguyen.github.io/tags/interview-questions/</link>
     <description>Recent content in Interview Questions on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 17 Feb 2023 08:00:00 -0700</lastBuildDate>
-    <atom:link href="https://example.org/tags/interview-questions/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/interview-questions/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Five Minimum Viable Interview Questions series — Updated 17 Feb 2023</title>
-      <link>https://example.org/posts/2023/02/five-minimum-viable-interview-questions-series/</link>
+      <link>https://geraldnguyen.github.io/posts/2023/02/five-minimum-viable-interview-questions-series/</link>
       <pubDate>Fri, 17 Feb 2023 08:00:00 -0700</pubDate>
-      <guid>https://example.org/posts/2023/02/five-minimum-viable-interview-questions-series/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2023/02/five-minimum-viable-interview-questions-series/</guid>
       <description>Photo by Wes Hicks on Unsplash&#xA;Rationale Let’s face it. A developer is expected to know A LOT these days.&#xA;A typical job requirement (screenshot)&#xA;And that makes interviewing a candidate hard because there is never enough time to ask all the necessary questions.&#xA;On the other hand, that also makes preparing for an interview hard because there are too many areas and details to prepare for.&#xA;These are in fact the very challenges I faced every time I apply for a new job, or interview to hire a new team member.</description>
     </item>
   </channel>

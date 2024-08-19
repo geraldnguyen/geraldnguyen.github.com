@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Copyright Law on Gerald Nguyen</title>
-    <link>https://example.org/tags/copyright-law/</link>
+    <link>https://geraldnguyen.github.io/tags/copyright-law/</link>
     <description>Recent content in Copyright Law on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 21 Dec 2010 09:19:42 +0100</lastBuildDate>
-    <atom:link href="https://example.org/tags/copyright-law/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/copyright-law/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Who owns the source code? Employee or employer?</title>
-      <link>https://example.org/posts/2010/12/2010-12-21-who-own-the-source-code/</link>
+      <link>https://geraldnguyen.github.io/posts/2010/12/2010-12-21-who-own-the-source-code/</link>
       <pubDate>Tue, 21 Dec 2010 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2010/12/2010-12-21-who-own-the-source-code/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2010/12/2010-12-21-who-own-the-source-code/</guid>
       <description>I found these 2 articles discussing &amp;ldquo;who owns the source code&amp;rdquo; issue.&#xA;http://www.computerworld.com/s/article/print/9126595/Who_owns_the_code_Beware_copyright_pitfalls?taxonomyId=11&amp;amp;taxonomyName=Development&#xA;http://www.burgess.co.nz/law/copyright-ownership-and-software-development&#xA;The first article discusses the issues using US copyright law; the second is in the context of New Zealand. There are slight difference between the 2 laws with regard to Contractor/Customer relationship but the case of Employee/Employer is the same: without explicit agreement (contract), the Employer owns the source code.&#xA;In Singapore, it is the same: Employer is the copyright holder.</description>
     </item>
   </channel>

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutorial on Gerald Nguyen</title>
-    <link>https://example.org/tags/tutorial/</link>
+    <link>https://geraldnguyen.github.io/tags/tutorial/</link>
     <description>Recent content in Tutorial on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 20 May 2024 08:00:00 -0700</lastBuildDate>
-    <atom:link href="https://example.org/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Behavior Driven Development (BDD) with Selenium in Python</title>
-      <link>https://example.org/posts/2024/05/behavior-driven-development-bdd-with-selenium-in-python/</link>
+      <link>https://geraldnguyen.github.io/posts/2024/05/behavior-driven-development-bdd-with-selenium-in-python/</link>
       <pubDate>Mon, 20 May 2024 08:00:00 -0700</pubDate>
-      <guid>https://example.org/posts/2024/05/behavior-driven-development-bdd-with-selenium-in-python/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2024/05/behavior-driven-development-bdd-with-selenium-in-python/</guid>
       <description>This is a continuation from my previous article where we learned the basic of Selenium and how to program it in Python to perform UI automation testing.&#xA;Getting started on UI automation testing using Selenium with Python&#xA;Five Minimum Viable Interview Questions series — Updated 17 Feb 2023 Interviewer: ask them if your interview is running out of time. Interviewee: practice them if your preparation is running out of time. Basics of BDD Behavior Driven Development is a popular software development discipline.</description>
     </item>
     <item>
       <title>How to join video files in a semi-automated way</title>
-      <link>https://example.org/posts/2024/05/how-to-join-video-semi-automated/</link>
+      <link>https://geraldnguyen.github.io/posts/2024/05/how-to-join-video-semi-automated/</link>
       <pubDate>Sat, 04 May 2024 08:00:00 -0700</pubDate>
-      <guid>https://example.org/posts/2024/05/how-to-join-video-semi-automated/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2024/05/how-to-join-video-semi-automated/</guid>
       <description>TLDR;&#xA;You will need the following:&#xA;ffmpeg: https://ffmpeg.org/ Windows command prompt Create a script that use ffmpeg to join video files then save the script and grant it necessary execute permission (on Mac and Linux). Make sure ffmpeg is on executable path, usually the $PATH or %PATH% variable&#xA;On Windows, you can use the below.&#xA;@echo off setlocal enabledelayedexpansion del concat.txt rem Get the total number of parameters set &amp;#34;totalParams=0&amp;#34; for %%# in (%*) do set /a &amp;#34;totalParams += 1&amp;#34; set /a &amp;#34;to_merge=%totalParams%-1&amp;#34; echo There are a total of %to_merge% video to merge rem Loop through all parameters except the last one set &amp;#34;index=0&amp;#34; set &amp;#34;outputfile=&amp;#34; for %%f in (%*) do ( set /a &amp;#34;index+=1&amp;#34; if !</description>
     </item>
     <item>
       <title>Combine EJB and WAR file in a same web service EAR</title>
-      <link>https://example.org/posts/2010/03/2010-03-02-combine-ejb-war-in-ear/</link>
+      <link>https://geraldnguyen.github.io/posts/2010/03/2010-03-02-combine-ejb-war-in-ear/</link>
       <pubDate>Tue, 02 Mar 2010 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2010/03/2010-03-02-combine-ejb-war-in-ear/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2010/03/2010-03-02-combine-ejb-war-in-ear/</guid>
       <description>That has been my challenge since yesterday. And I think I have just got it :D&#xA;Let&amp;rsquo;s see if I can reconstruct a step-by-step manual:&#xA;1. First of all, let have some understanding of the structure of a EAR file. EAR stands for Enterprise ARchive. It&amp;rsquo;s a convenient mean to to pack and deploy components of an enterprise application. Essentially, you can pack WAR, EJB, Resource Adapter and supporting libraries inside a EAR file.</description>
     </item>
   </channel>

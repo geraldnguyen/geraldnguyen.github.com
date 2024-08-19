@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Try-With-Resource on Gerald Nguyen</title>
-    <link>https://example.org/tags/try-with-resource/</link>
+    <link>https://geraldnguyen.github.io/tags/try-with-resource/</link>
     <description>Recent content in Try-With-Resource on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 29 Nov 2022 09:19:42 +0100</lastBuildDate>
-    <atom:link href="https://example.org/tags/try-with-resource/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/try-with-resource/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Unit testing Java’s try-with-resource</title>
-      <link>https://example.org/posts/2022/11/unit-testing-java-try-with-resource/</link>
+      <link>https://geraldnguyen.github.io/posts/2022/11/unit-testing-java-try-with-resource/</link>
       <pubDate>Tue, 29 Nov 2022 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2022/11/unit-testing-java-try-with-resource/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2022/11/unit-testing-java-try-with-resource/</guid>
       <description>Java’s try-with-resource is a convenient syntactic shortcut. It frees developers from keeping track of closeable resources and closing in a finally block&#xA;Unit testing try-with-resource&#xA;Overview Some of us may remember doing such boring and lengthy try-finally-if-not-null-close() A LOT!&#xA;On a typical day, we performed these steps a dozen times:&#xA;Obtained a DB connection, and execute a query within the try {...} And then, to avoid connection leak, we must close the statement and DB connection within the finally {.</description>
     </item>
   </channel>

@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Spring on Gerald Nguyen</title>
-    <link>https://example.org/tags/spring/</link>
+    <link>https://geraldnguyen.github.io/tags/spring/</link>
     <description>Recent content in Spring on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 30 Dec 2022 09:19:42 +0100</lastBuildDate>
-    <atom:link href="https://example.org/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/spring/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Retry WebClient Request</title>
-      <link>https://example.org/posts/2022/12/retry-webclient-request/</link>
+      <link>https://geraldnguyen.github.io/posts/2022/12/retry-webclient-request/</link>
       <pubDate>Fri, 30 Dec 2022 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2022/12/retry-webclient-request/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2022/12/retry-webclient-request/</guid>
       <description>Problem Statement Sometimes web request fails, for whatever reason, and you need to retry it&#xA;Let’s simulate a failed request scenario in a unit test. In the below code, the webClient attempts to submit a GET request to /employee/100 (stored in constant PATH). We mocked the backend server to fail with common status codes such as BAD_REQUEST, UNAUTHORIZED and validate that the client throws WebClientResponseException upon receiving such statuses.&#xA;@ParameterizedTest @EnumSource(value = HttpStatus.</description>
     </item>
     <item>
       <title>Spring REST API Interview Questions</title>
-      <link>https://example.org/posts/2021/10/spring-rest-api-interview-questions/</link>
+      <link>https://geraldnguyen.github.io/posts/2021/10/spring-rest-api-interview-questions/</link>
       <pubDate>Tue, 19 Oct 2021 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2021/10/spring-rest-api-interview-questions/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2021/10/spring-rest-api-interview-questions/</guid>
       <description>#1 Complete the REST controller Objective: Assess a candidate’s practical experience and knowledge&#xA;Instructions: Given the below controller, fill in Spring annotations according to instructions given in the code comments&#xA;Pay attention to:&#xA;Did the candidate notice the repetition of /friends prefix? Did he/she suggest a @RequestMapping(/friends) on the controller class instead? How did he/she annotate the optional parameter name and id in findFriends(String name, Long id) method? What annotation can be used to force a 204 (no content) response?</description>
     </item>
     <item>
       <title>javax.transaction.Transactional vs org.springframework.transaction.annotation.Transactional</title>
-      <link>https://example.org/posts/2020/09/2020-09-10-transactional-annotation/</link>
+      <link>https://geraldnguyen.github.io/posts/2020/09/2020-09-10-transactional-annotation/</link>
       <pubDate>Thu, 10 Sep 2020 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2020/09/2020-09-10-transactional-annotation/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2020/09/2020-09-10-transactional-annotation/</guid>
       <description>If you’re using Spring or Spring Boot, then use the Spring @Transactional annotation, as it allows you to configure more attributes than the Java EE @Transactional annotation.&#xA;If you are using Java EE alone, and you deploy your application on a Java EE application server, then use the Java EE @Transactional annotation.&#xA;https://stackoverflow.com/a/62702146/575457</description>
     </item>
     <item>
       <title>SPRING MVC – SESSIONATTRIBUTES ANNOTATION</title>
-      <link>https://example.org/posts/2012/06/2012-06-30-spring-mvc-sessionattributes-annotation/</link>
+      <link>https://geraldnguyen.github.io/posts/2012/06/2012-06-30-spring-mvc-sessionattributes-annotation/</link>
       <pubDate>Sat, 30 Jun 2012 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2012/06/2012-06-30-spring-mvc-sessionattributes-annotation/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2012/06/2012-06-30-spring-mvc-sessionattributes-annotation/</guid>
       <description>Spring MVC’s SessionAttributes has 2 parameters: values (storing attributes’ names) and types (storing attributes’ types).&#xA;It’s pretty straightforward for values. You specify the name of your attribute and it is remembered.&#xA;It’s trickier for types. For example:&#xA;– @SessionAttributes (types= java.util.List.class) does not work!&#xA;– But @SessionAttributes (types= java.util.ArrayList.class) works (but not always)&#xA;The reason behind this peculiar behaviour is that Spring does exact matching of attribute’s type versus declared type, instead of assessing attribute object’s Is-A relationship.</description>
     </item>
   </channel>

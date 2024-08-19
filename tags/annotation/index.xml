@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Annotation on Gerald Nguyen</title>
-    <link>https://example.org/tags/annotation/</link>
+    <link>https://geraldnguyen.github.io/tags/annotation/</link>
     <description>Recent content in Annotation on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 19 Oct 2021 09:19:42 +0100</lastBuildDate>
-    <atom:link href="https://example.org/tags/annotation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/annotation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Spring REST API Interview Questions</title>
-      <link>https://example.org/posts/2021/10/spring-rest-api-interview-questions/</link>
+      <link>https://geraldnguyen.github.io/posts/2021/10/spring-rest-api-interview-questions/</link>
       <pubDate>Tue, 19 Oct 2021 09:19:42 +0100</pubDate>
-      <guid>https://example.org/posts/2021/10/spring-rest-api-interview-questions/</guid>
+      <guid>https://geraldnguyen.github.io/posts/2021/10/spring-rest-api-interview-questions/</guid>
       <description>#1 Complete the REST controller Objective: Assess a candidate’s practical experience and knowledge&#xA;Instructions: Given the below controller, fill in Spring annotations according to instructions given in the code comments&#xA;Pay attention to:&#xA;Did the candidate notice the repetition of /friends prefix? Did he/she suggest a @RequestMapping(/friends) on the controller class instead? How did he/she annotate the optional parameter name and id in findFriends(String name, Long id) method? What annotation can be used to force a 204 (no content) response?</description>
     </item>
   </channel>
