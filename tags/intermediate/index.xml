@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Intermediate on Gerald Nguyen</title>
+    <link>https://geraldnguyen.github.io/tags/intermediate/</link>
+    <description>Recent content in Intermediate on Gerald Nguyen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 Jan 2023 09:19:42 +0100</lastBuildDate>
+    <atom:link href="https://geraldnguyen.github.io/tags/intermediate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Maven — 3 Free Resources for Beginner and Intermediate Java Developers</title>
+      <link>https://geraldnguyen.github.io/posts/2023/01/maven-3-free-resources-for-beginner-and-intermediate-java-developers/</link>
+      <pubDate>Sat, 07 Jan 2023 09:19:42 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/01/maven-3-free-resources-for-beginner-and-intermediate-java-developers/</guid>
+      <description>Screenshot of a Maven POM file&#xA;Maven is the most popular build and dependency management system from the Apache Foundation.&#xA;If you plan to develop serious applications in Java or if you have just started to, you have better pick up Maven. I have just the resources for you below to learn about it and move from Beginner to Intermediate in no time.&#xA;Beginner tutorial I often recommend Baeldung.com to my friends for beginner-level tutorials.</description>
+    </item>
+  </channel>
+</rss>

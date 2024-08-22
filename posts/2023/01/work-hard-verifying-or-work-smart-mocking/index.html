@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>Work-hard Verifying or Work-smart Mocking</title>
+<meta data-rh="true" property="og:url" content="https://geraldnguyen.github.io/posts/2023/01/work-hard-verifying-or-work-smart-mocking/">
+<meta data-rh="true" property="og:title" content="Work-hard Verifying or Work-smart Mocking">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://geraldnguyen.github.io/posts/2023/01/work-hard-verifying-or-work-smart-mocking/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HRKMT2G8N9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HRKMT2G8N9');
+</script>
+
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>Work-hard Verifying or Work-smart Mocking</h1>
+
+<h2 class="subtitle">Testing is hard work, let’s make it easier</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://geraldnguyen.github.io/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://geraldnguyen.github.io/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>3 min read</span>
+      <span>·</span>
+      <span><time datetime="2023-01-04T09:19:42&#43;01:00">January 4, 2023</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2023/01/writers-please-go-to-sleep-earlier/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2023/01/the-home-deity-is-not-divine/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#work-hard-verifying">Work hard Verifying</a></li>
+    <li><a href="#work-smart-mocking">Work-smart Mocking</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <figure><img src="/posts/2023/01/work-hard-verifying-or-work-smart-mocking/0_huB0so5ACBot2PYg.webp"
+    alt="Photo by Tim Gouw on Unsplash"><figcaption>
+      <p>Photo by <a href="https://unsplash.com/@punttim?utm_source=medium&amp;utm_medium=referral">Tim Gouw</a> on <a href="https://unsplash.com/?utm_source=medium&amp;utm_medium=referral">Unsplash</a></p>
+    </figcaption>
+</figure>
+
+<p>Let’s test this service</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#3c5d5d;font-weight:bold">@Service</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">SampleService</span><span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">final</span><span style="color:#bbb"> </span>SampleRepository<span style="color:#bbb"> </span>sampleRepository;<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">SampleService</span>(SampleRepository<span style="color:#bbb"> </span>sampleRepository)<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">this</span>.<span style="color:#008080">sampleRepository</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>sampleRepository;<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span>SampleEntity<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">createSampleEntity</span>()<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>SampleEntity<span style="color:#bbb"> </span>sampleEntity<span style="color:#bbb"> </span><span style="color:#a61717;background-color:#e3d2d2">\</span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">new</span><span style="color:#bbb"> </span>SampleEntity();<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>sampleEntity.<span style="color:#008080">setName</span>(<span style="color:#d14">&#34;sample&#34;</span>);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>sampleRepository.<span style="color:#008080">save</span>(sampleEntity);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>If we want to test the method <code>createSampleEntity</code> from <code>SampleService</code>, there are 3 things we want to verify:</p>
+<ul>
+<li>#1 — <code>sampleRepository.save</code> is called,</li>
+<li>#2 — with the right <code>sampleEntity</code>,</li>
+<li>and #3 — the resulting entity is returned</li>
+</ul>
+<h1 id="work-hard-verifying">Work hard Verifying</h1>
+<p>A typical unit test contains 3 stages: Arrange, Act, and Assert (or AAA)</p>
+<p><strong>Arrange</strong> is where we set up the test data and mock the test’s external dependencies. In the below example, we need to mock the method <code>sampleRepository.save</code> to return an expected entity.</p>
+<p><strong>Act</strong> is where we invoke the to-be-tested method with the right arguments. If the method returns something, we capture the returning value too. That is what the line <code>SampleEntity sampleEntity = sampleService.createSampleEntity()</code> does.</p>
+<p><strong>Assert</strong> is when we validate the #1, #2, and #3 above:</p>
+<ul>
+<li>Validating #3 is easy in this example: <code>assertEquals(mockEntity, sampleEntity)</code> will assert that the mocked entity and the value returned from the tested method are <code>equals</code>.</li>
+<li>Validating #1 would require the use of <code>verify</code> to ascertain the repository’s <code>save()</code> was indeed called.</li>
+<li>Validating #2 requires the use of <code>ArgumentCaptor</code> to capture the argument to <code>save(SampleEntity)</code>. We will then perform another set of assertions on the captured value to make sure that the right parameter is passed to it</li>
+</ul>
+<pre tabindex="0"><code>@Test  
+void workHardVerifying() {  
+    // arrange  
+    SampleEntity mockEntity \= new SampleEntity();  
+    mockEntity.setId(1L);  
+    when(sampleRepository.save(any(SampleEntity.class))).thenReturn(mockEntity);  
+  
+    // act  
+    SampleEntity sampleEntity \= sampleService.createSampleEntity();  
+  
+    // assert - the right entity returned  
+    assertEquals(mockEntity, sampleEntity);  
+      
+    // assert - the right param passed  
+    ArgumentCaptor&lt;SampleEntity&gt; sampleEntityArgumentCaptor = ArgumentCaptor.forClass(SampleEntity.class);  
+    verify(sampleRepository).save(sampleEntityArgumentCaptor.capture());  
+    assertEquals(&#34;sample&#34;, sampleEntityArgumentCaptor.getValue().getName());  
+    assertNull(sampleEntityArgumentCaptor.getValue().getId());  
+}
+</code></pre><h1 id="work-smart-mocking">Work-smart Mocking</h1>
+<p>The same effect can be achieved in the below code.</p>
+<pre tabindex="0"><code>@Test  
+void workSmartMocking() {  
+    // arrange  
+    when(sampleRepository.save(any(SampleEntity.class))).thenAnswer(a -&gt; {  
+        // assert - the right param passed  
+        SampleEntity entity \= a.getArgument(0);  
+        assertEquals(&#34;sample&#34;, entity.getName());  
+        assertNull(entity.getId());  
+        entity.setId(1L);  
+        return entity;  
+    });  
+  
+    // act  
+    SampleEntity sampleEntity \= sampleService.createSampleEntity();  
+  
+    // assert - the right entity returned  
+    assertEquals(1L, sampleEntity.getId());  
+}
+</code></pre><p>By <code>assertEquals</code> the entity’s id, we effectively verify that the return value matches the mocked value (validating #3) AND<code>sampleRepository.save</code> is called (validating #1.)</p>
+<p>Furthermore, as we moved several assertions into the mocking of <code>sampleRepository.save</code>, we are able to verify that the right parameter has been passed in.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>While the difference in lines of codes is not significant (in fact, just 1 line), the work-hard-verifying approach is 35% more verbose compared to the work-smart-mocking approach (790 chars vs 584 chars). If lean code is your preference, I believe you will also prefer to shave as much code as possible while maintaining the same clarity.</p>
+<p>To be honest, I prefer <em>strict</em> mocking over relaxed mocking + <code>verify</code>. That is, if my mocking becomes necessary (because of <em>strict</em> mocking), it also functions as a <code>verify</code>. We can then save even more codes.</p>
+<p>Check out the code from my <a href="https://github.com/geraldnguyen/kitchensink/blob/main/java/src/test/java/example/service/SampleServiceTest.java">GitHub</a>.</p>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/java/">Java</a></li>
+        <li><a href="/tags/programming/">Programming</a></li>
+        <li><a href="/tags/testing/">Testing</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

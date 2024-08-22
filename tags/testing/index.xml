@@ -6,8 +6,15 @@
     <description>Recent content in Testing on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Oct 2021 09:19:42 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 04 Jan 2023 09:19:42 +0100</lastBuildDate>
     <atom:link href="https://geraldnguyen.github.io/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Work-hard Verifying or Work-smart Mocking</title>
+      <link>https://geraldnguyen.github.io/posts/2023/01/work-hard-verifying-or-work-smart-mocking/</link>
+      <pubDate>Wed, 04 Jan 2023 09:19:42 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/01/work-hard-verifying-or-work-smart-mocking/</guid>
+      <description>Photo by Tim Gouw on Unsplash&#xA;Let’s test this service&#xA;@Service public class SampleService { private final SampleRepository sampleRepository; public SampleService(SampleRepository sampleRepository) { this.sampleRepository = sampleRepository; } public SampleEntity createSampleEntity() { SampleEntity sampleEntity \= new SampleEntity(); sampleEntity.setName(&amp;#34;sample&amp;#34;); return sampleRepository.save(sampleEntity); } } If we want to test the method createSampleEntity from SampleService, there are 3 things we want to verify:&#xA;#1 — sampleRepository.save is called, #2 — with the right sampleEntity, and #3 — the resulting entity is returned Work hard Verifying A typical unit test contains 3 stages: Arrange, Act, and Assert (or AAA)</description>
+    </item>
     <item>
       <title>Spring REST API Interview Questions</title>
       <link>https://geraldnguyen.github.io/posts/2021/10/spring-rest-api-interview-questions/</link>

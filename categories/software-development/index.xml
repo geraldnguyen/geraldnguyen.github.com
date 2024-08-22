@@ -30,6 +30,20 @@
       <description>Let us start with a question:&#xA;Can social media connections substitute for real life friends and family?&#xA;Well, it depends on how we define &amp;ldquo;connection&amp;rdquo;. If we have it as below, then according to the Liskow Substitution Principle (LSP), the answer is No.&#xA;Connection classes&#xA;Before we go further into this example, let’s back it up a bit to study the official definition of LSP.&#xA;There is some math but I promise to keep it brief</description>
     </item>
     <item>
+      <title>Maven — 3 Free Resources for Beginner and Intermediate Java Developers</title>
+      <link>https://geraldnguyen.github.io/posts/2023/01/maven-3-free-resources-for-beginner-and-intermediate-java-developers/</link>
+      <pubDate>Sat, 07 Jan 2023 09:19:42 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/01/maven-3-free-resources-for-beginner-and-intermediate-java-developers/</guid>
+      <description>Screenshot of a Maven POM file&#xA;Maven is the most popular build and dependency management system from the Apache Foundation.&#xA;If you plan to develop serious applications in Java or if you have just started to, you have better pick up Maven. I have just the resources for you below to learn about it and move from Beginner to Intermediate in no time.&#xA;Beginner tutorial I often recommend Baeldung.com to my friends for beginner-level tutorials.</description>
+    </item>
+    <item>
+      <title>Work-hard Verifying or Work-smart Mocking</title>
+      <link>https://geraldnguyen.github.io/posts/2023/01/work-hard-verifying-or-work-smart-mocking/</link>
+      <pubDate>Wed, 04 Jan 2023 09:19:42 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/01/work-hard-verifying-or-work-smart-mocking/</guid>
+      <description>Photo by Tim Gouw on Unsplash&#xA;Let’s test this service&#xA;@Service public class SampleService { private final SampleRepository sampleRepository; public SampleService(SampleRepository sampleRepository) { this.sampleRepository = sampleRepository; } public SampleEntity createSampleEntity() { SampleEntity sampleEntity \= new SampleEntity(); sampleEntity.setName(&amp;#34;sample&amp;#34;); return sampleRepository.save(sampleEntity); } } If we want to test the method createSampleEntity from SampleService, there are 3 things we want to verify:&#xA;#1 — sampleRepository.save is called, #2 — with the right sampleEntity, and #3 — the resulting entity is returned Work hard Verifying A typical unit test contains 3 stages: Arrange, Act, and Assert (or AAA)</description>
+    </item>
+    <item>
       <title>Retry WebClient Request</title>
       <link>https://geraldnguyen.github.io/posts/2022/12/retry-webclient-request/</link>
       <pubDate>Fri, 30 Dec 2022 09:19:42 +0100</pubDate>
