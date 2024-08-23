@@ -51,11 +51,25 @@
       <description>Photos by Eugen Str on Unsplash&#xA;Photos by Patrick on Unsplash&#xA;If you are going to build a house, a table, or a chair, what is your preferred option? The multiple tools on the first picture or one Swiss knife on the second?&#xA;Yep, you are right. If you want to create something useful that last for years, you need specialized tools. The same thinking applies to software development, if you want to create a serious application, you need specialized components represented by their own, purposely designed interfaces.</description>
     </item>
     <item>
+      <title>#STYOut or #STYSTAY — What is better for Indonesian Football?</title>
+      <link>https://geraldnguyen.github.io/posts/2023/01/styout-stystay-what-is-better-for-indonesian-football/</link>
+      <pubDate>Thu, 12 Jan 2023 09:19:42 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/01/styout-stystay-what-is-better-for-indonesian-football/</guid>
+      <description>Source: https://zingnews.vn/&#xA;The Garuda team lost 0–2 to the Golden Dragon team on Monday, thus failing to reach the AFF Mitsubishi Electric Cup’s final. For a team from a football-crazed Indonesia, the loss was heartbreaking for many.&#xA;Some took to social media calling for the sacking of coach Shin Tae-Yong. The tag #STYOut has been trending among Indonesian fans. Some were calmer. They defended him. #STYSTAY has been trending as well.</description>
+    </item>
+    <item>
       <title>SOLID in Action — the Liskov Substitution Principle</title>
       <link>https://geraldnguyen.github.io/posts/2023/01/solid-liskov-substitution-principle/</link>
       <pubDate>Mon, 09 Jan 2023 08:00:00 -0700</pubDate>
       <guid>https://geraldnguyen.github.io/posts/2023/01/solid-liskov-substitution-principle/</guid>
       <description>Let us start with a question:&#xA;Can social media connections substitute for real life friends and family?&#xA;Well, it depends on how we define &amp;ldquo;connection&amp;rdquo;. If we have it as below, then according to the Liskow Substitution Principle (LSP), the answer is No.&#xA;Connection classes&#xA;Before we go further into this example, let’s back it up a bit to study the official definition of LSP.&#xA;There is some math but I promise to keep it brief</description>
+    </item>
+    <item>
+      <title>DevOps: Divide and Conquer with Gitlab Parent-Child Pipeline</title>
+      <link>https://geraldnguyen.github.io/posts/2023/01/devops-divide-conquer-with-gitlab-parent-child-pipeline/</link>
+      <pubDate>Mon, 09 Jan 2023 09:19:42 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/01/devops-divide-conquer-with-gitlab-parent-child-pipeline/</guid>
+      <description>Gitlab parent-child pipeline&#xA;Scenario You are building a pipeline that helps your team reset test data in different non-prod environments such as Test and Sandbox.&#xA;Under each environment, there are several application services or databases to clear. Let’s call them A, B, and C.&#xA;Trivial Approach You can create 3 separate jobs for each environment&#xA;Trivial approach: 3 separate jobs for each environment&#xA;It will work. But there are 2 serious problems with this approach:</description>
     </item>
     <item>
       <title>AFF Championship and the love for football that unites people</title>

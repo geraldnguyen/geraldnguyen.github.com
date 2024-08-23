@@ -44,6 +44,13 @@
       <description>Let us start with a question:&#xA;Can social media connections substitute for real life friends and family?&#xA;Well, it depends on how we define &amp;ldquo;connection&amp;rdquo;. If we have it as below, then according to the Liskow Substitution Principle (LSP), the answer is No.&#xA;Connection classes&#xA;Before we go further into this example, let’s back it up a bit to study the official definition of LSP.&#xA;There is some math but I promise to keep it brief</description>
     </item>
     <item>
+      <title>DevOps: Divide and Conquer with Gitlab Parent-Child Pipeline</title>
+      <link>https://geraldnguyen.github.io/posts/2023/01/devops-divide-conquer-with-gitlab-parent-child-pipeline/</link>
+      <pubDate>Mon, 09 Jan 2023 09:19:42 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/01/devops-divide-conquer-with-gitlab-parent-child-pipeline/</guid>
+      <description>Gitlab parent-child pipeline&#xA;Scenario You are building a pipeline that helps your team reset test data in different non-prod environments such as Test and Sandbox.&#xA;Under each environment, there are several application services or databases to clear. Let’s call them A, B, and C.&#xA;Trivial Approach You can create 3 separate jobs for each environment&#xA;Trivial approach: 3 separate jobs for each environment&#xA;It will work. But there are 2 serious problems with this approach:</description>
+    </item>
+    <item>
       <title>Maven — 3 Free Resources for Beginner and Intermediate Java Developers</title>
       <link>https://geraldnguyen.github.io/posts/2023/01/maven-3-free-resources-for-beginner-and-intermediate-java-developers/</link>
       <pubDate>Sat, 07 Jan 2023 09:19:42 +0100</pubDate>

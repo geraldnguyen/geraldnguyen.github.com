@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>DevOps: Divide and Conquer with Gitlab Parent-Child Pipeline</title>
+<meta data-rh="true" property="og:url" content="https://geraldnguyen.github.io/posts/2023/01/devops-divide-conquer-with-gitlab-parent-child-pipeline/">
+<meta data-rh="true" property="og:title" content="DevOps: Divide and Conquer with Gitlab Parent-Child Pipeline">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://geraldnguyen.github.io/posts/2023/01/devops-divide-conquer-with-gitlab-parent-child-pipeline/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.506e7c5f5ad8849b0ceb4d9542d62283119097141b7c14e3917cceef33f3dc94.css" integrity="sha256-UG58X1rYhJsM602VQtYigxGQlxQbfBTjkXzO7zPz3JQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HRKMT2G8N9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HRKMT2G8N9');
+</script>
+
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>DevOps: Divide and Conquer with Gitlab Parent-Child Pipeline</h1>
+
+<h2 class="subtitle">How to break down a complex pipeline into manageable modules</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://geraldnguyen.github.io/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://geraldnguyen.github.io/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>3 min read</span>
+      <span>·</span>
+      <span><time datetime="2023-01-09T09:19:42&#43;01:00">January 9, 2023</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2023/01/aff-championship-love-for-football/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2023/01/solid-liskov-substitution-principle/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#scenario">Scenario</a></li>
+    <li><a href="#trivial-approach">Trivial Approach</a></li>
+    <li><a href="#parent-child-approach">Parent-child approach</a>
+      <ul>
+        <li><a href="#the-parent-pipeline">The Parent pipeline</a></li>
+        <li><a href="#the-child-pipeline">The Child pipeline</a></li>
+      </ul>
+    </li>
+    <li><a href="#sample-codes">Sample Codes</a></li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <figure><img src="/posts/2023/01/devops-divide-conquer-with-gitlab-parent-child-pipeline/1_J8FiO-W4H06JsKgA5rUuLQ.webp"
+    alt="Gitlab parent-child pipeline"><figcaption>
+      <p>Gitlab parent-child pipeline</p>
+    </figcaption>
+</figure>
+
+<h1 id="scenario">Scenario</h1>
+<p>You are building a pipeline that helps your team reset test data in different non-prod environments such as Test and Sandbox.</p>
+<p>Under each environment, there are several application services or databases to clear. Let’s call them A, B, and C.</p>
+<h1 id="trivial-approach">Trivial Approach</h1>
+<p>You can create 3 separate jobs for each environment</p>
+<figure><img src="/posts/2023/01/devops-divide-conquer-with-gitlab-parent-child-pipeline/1_gX6iHjoBCpJUpGnkqUE8Eg.webp"
+    alt="Trivial approach: 3 separate jobs for each environment"><figcaption>
+      <p>Trivial approach: 3 separate jobs for each environment</p>
+    </figcaption>
+</figure>
+
+<p>It will work. But there are 2 serious problems with this approach:</p>
+<ul>
+<li><strong>High code duplication</strong>: The 2 jobs for 2 different environments share about 90% of their codes</li>
+<li><strong>Problematic maintenance</strong>: Just imagine what you need to do to add a new service, or worse, support a new environment</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#000080">stages</span>:<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- test  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- sandbox  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#998;font-style:italic"># TEST jobs   </span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">Reset Service A - Test</span>:<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">stage</span>:<span style="color:#bbb"> </span>test  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">script</span>:<span style="color:#bbb"> </span>|  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Resetting service A&#39;s data in TEST&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Reset A done&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">Reset Service B - Test</span>:<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">stage</span>:<span style="color:#bbb"> </span>test  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">script</span>:<span style="color:#bbb"> </span>|  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Resetting service B&#39;s data in TEST&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Reset B done&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">Reset Service C - Test</span>:<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">stage</span>:<span style="color:#bbb"> </span>test  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">script</span>:<span style="color:#bbb"> </span>|  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Resetting service C&#39;s data in TEST&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Reset C done&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#998;font-style:italic"># SANDBOX jobs   </span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">Reset Service A - Sandbox</span>:<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">stage</span>:<span style="color:#bbb"> </span>sandbox  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">script</span>:<span style="color:#bbb"> </span>|  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Resetting service A&#39;s data in SANDBOX&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Reset A done&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">Reset Service B - Sandbox</span>:<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">stage</span>:<span style="color:#bbb"> </span>sandbox  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">script</span>:<span style="color:#bbb"> </span>|  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Resetting service B&#39;s data in SANDBOX&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Reset B done&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">Reset Service C - Sandbox</span>:<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">stage</span>:<span style="color:#bbb"> </span>sandbox  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">script</span>:<span style="color:#bbb"> </span>|  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Resetting service C&#39;s data in SANDBOX&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Reset C done&#34;<span style="color:#bbb">
+</span></span></span></code></pre></div><h1 id="parent-child-approach">Parent-child approach</h1>
+<p>This approach solves the 2 problems identified earlier. There is exactly 1 job for 2 (or, in the future, more) environments. Adding a new job does not require duplicating it across all environments. Supporting a new environment does not require duplicating and modifying all 3 jobs.</p>
+<figure><img src="/posts/2023/01/devops-divide-conquer-with-gitlab-parent-child-pipeline/1_J8FiO-W4H06JsKgA5rUuLQ.webp"
+    alt="Gitlab parent-child pipeline"><figcaption>
+      <p>Gitlab parent-child pipeline</p>
+    </figcaption>
+</figure>
+
+<p>Let’s see it in actions</p>
+<h2 id="the-parent-pipeline">The Parent pipeline</h2>
+<p>This is the main pipeline where we configure the 2 environments: “test” and “sandbox” as values of <code>stages</code>. We then define one job for each environment, each extends <code>.common</code> job definition but provides its own variables (e.g. <code>ENV: &quot;TEST&quot;</code> or <code>ENV: &quot;SANDBOX”</code>). The key factor in <code>.common</code> job is the <code>trigger:include</code> configuration which, when executed, will trigger the jobs defined in the file <code>.gitlab-reset-data.yml</code> — the child pipeline.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#000080">stages</span>:<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- test  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- sandbox  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">.common</span>:<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">allow_failure</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">true</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">rules</span>:<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>- <span style="color:#000080">when</span>:<span style="color:#bbb"> </span>manual  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">trigger</span>:<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000080">include</span>:<span style="color:#bbb"> </span>.gitlab-reset-data.yml  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">Reset Test Data</span>:<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">stage</span>:<span style="color:#bbb"> </span>test  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">extends</span>:<span style="color:#bbb"> </span>.common  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">variables</span>:<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000080">ENV</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;TEST&#34;</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">Reset Sandbox Data</span>:<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">stage</span>:<span style="color:#bbb"> </span>sandbox  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">extends</span>:<span style="color:#bbb"> </span>.common  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">variables</span>:<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000080">ENV</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;SANDBOX&#34;</span><span style="color:#bbb">
+</span></span></span></code></pre></div><h2 id="the-child-pipeline">The Child pipeline</h2>
+<p>This is where the resetting jobs get defined, for each service A, B, and C. As we can see, there is only 1 job per service for ALL environments.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#000080">stages</span>:<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>- reset  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">Reset Service A</span>:<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">stage</span>:<span style="color:#bbb"> </span>reset  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">script</span>:<span style="color:#bbb"> </span>|  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Resetting service A&#39;s data in $ENV environment&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Reset A done&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">Reset Service B</span>:<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">stage</span>:<span style="color:#bbb"> </span>reset  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">script</span>:<span style="color:#bbb"> </span>|  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Resetting service B&#39;s data in $ENV environment&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Reset B done&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">Reset Service C</span>:<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">stage</span>:<span style="color:#bbb"> </span>reset  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">script</span>:<span style="color:#bbb"> </span>|  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Resetting service C&#39;s data in $ENV environment&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Reset C done&#34;<span style="color:#bbb">
+</span></span></span></code></pre></div><h1 id="sample-codes">Sample Codes</h1>
+<p>Check out the sample code at my <a href="https://gitlab.com/geraldnguyen/parent-child-pipeline">GitLab repository</a></p>
+<p>For the trivial approach, click <a href="https://gitlab.com/geraldnguyen/parent-child-pipeline/-/tree/trivial_approach">here</a>.</p>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/programming/">Programming</a></li>
+        <li><a href="/tags/devops/">DevOps</a></li>
+        <li><a href="/tags/gitlab/">Gitlab</a></li>
+        <li><a href="/tags/pipeline/">Pipeline</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>
