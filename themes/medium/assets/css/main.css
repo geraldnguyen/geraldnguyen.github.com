@@ -409,7 +409,7 @@ figure img {
   margin-right: auto;
 }
 
-figcaption * {
+figcaption *, .figcaption {
   -webkit-text-size-adjust: 100%;
   --reach-tabs: 1;
   --reach-menu-button: 1;

@@ -1,0 +1,20 @@
+<div class="multi-figures d-block">
+  <style>
+    .multi-figures figure {
+      margin: 0 0.5rem;
+    }
+
+    .multi-figures-caption {
+      grid-area: caption;
+      text-align: center;
+    }
+
+  </style>
+  <div class="multi-figures-area d-flex flex-row justify-content-center">
+    {{ .Inner }}
+  </div>
+
+  {{ with (.Get "caption") }}
+    <p class="multi-figures-caption figcaption">{{ . }}</p>
+  {{ end }}
+</div>
