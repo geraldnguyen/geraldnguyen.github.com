@@ -2,7 +2,7 @@
 title: "#STYOut or #STYSTAY — What is better for Indonesian Football?"
 subtitle: A commentary from a Vietnamese fan
 date: 2023-01-12T09:19:42+01:00
-image: 0_qW55p-WkvsxWjySr.jpg
+image: 1_UEaVZcIzkXkW0N44KUeW5A.jpg
 draft: false
 categories: [Non-Tech]
 tags: [Medium, Southeast Asia, Football, Aff, Indonesia, Shin Tae Yong]
@@ -16,9 +16,11 @@ The Garuda team lost 0–2 to the Golden Dragon team on Monday, thus failing to 
 
 Some took to social media calling for the sacking of coach Shin Tae-Yong. The tag #STYOut has been trending among Indonesian fans. Some were calmer. They defended him. #STYSTAY has been trending as well. As of 11 Jan 2023, #STYSTAY appears to have an upper hand.
 
-{{< figure src="1_j3dI8M2eDL48sfG0qamvhg.webp" caption="#STYOUT Tweet">}}
+{{< multi-figures caption="Tweets" >}}
+  {{< figure src="1_j3dI8M2eDL48sfG0qamvhg.webp" >}}
+  {{< figure src="1_NH6_qSAvid0ZYmCFp9SFLA.webp" >}}
+{{< /multi-figures >}}
 
-{{< figure src="1_NH6_qSAvid0ZYmCFp9SFLA.webp" caption="#STYSTAY Tweet">}}
 
 # Before Shin Tae-Yong (2010–2020)
 
