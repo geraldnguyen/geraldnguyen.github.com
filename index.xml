@@ -6,8 +6,15 @@
     <description>Recent content on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Aug 2024 08:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 26 Aug 2024 09:19:42 +0100</lastBuildDate>
     <atom:link href="https://geraldnguyen.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo - Displaying Images the Medium way</title>
+      <link>https://geraldnguyen.github.io/posts/2024/08/hugo-displaying-images-the-medium-way/</link>
+      <pubDate>Mon, 26 Aug 2024 09:19:42 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2024/08/hugo-displaying-images-the-medium-way/</guid>
+      <description>Please ignore the \ in front of { in code examples. It is used to prevent Hugo from processing the shortcodes even in code block&#xA;The Markdown way ![alt title](1_nHC2UMz-xJM-lvPPwSh_vQ.webp) Though it is recommended, the alt-title is optional. The above can be expressed as ![alt title](path-to-image.jpg)&#xA;Pros:&#xA;Simple Natively markdown Cons:&#xA;No caption Center alignment not guaranteed The Medium way {{\&amp;lt; figure src=&amp;#34;1_nHC2UMz-xJM-lvPPwSh_vQ.webp&amp;#34; caption=&amp;#34;optional caption&amp;#34; \&amp;gt;}} optional caption&#xA;Pros:&#xA;Support caption, plain text and markdown Center alignment Cons:</description>
+    </item>
     <item>
       <title>Gerald Nguyen</title>
       <link>https://geraldnguyen.github.io/pages/about/</link>

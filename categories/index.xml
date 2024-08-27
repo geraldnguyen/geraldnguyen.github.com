@@ -6,8 +6,15 @@
     <description>Recent content in Categories on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Feb 2023 08:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 26 Aug 2024 09:19:42 +0100</lastBuildDate>
     <atom:link href="https://geraldnguyen.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tech Related</title>
+      <link>https://geraldnguyen.github.io/categories/tech-related/</link>
+      <pubDate>Mon, 26 Aug 2024 09:19:42 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/categories/tech-related/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Software Development</title>
       <link>https://geraldnguyen.github.io/categories/software-development/</link>
@@ -27,13 +34,6 @@
       <link>https://geraldnguyen.github.io/categories/career-development/</link>
       <pubDate>Fri, 09 Dec 2022 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/categories/career-development/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tech Related</title>
-      <link>https://geraldnguyen.github.io/categories/tech-related/</link>
-      <pubDate>Sun, 17 Oct 2021 09:19:42 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/categories/tech-related/</guid>
       <description></description>
     </item>
   </channel>

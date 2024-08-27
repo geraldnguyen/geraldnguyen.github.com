@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>Hugo - Displaying Images the Medium way</title>
+<meta data-rh="true" property="og:url" content="https://geraldnguyen.github.io/posts/2024/08/hugo-displaying-images-the-medium-way/">
+<meta data-rh="true" property="og:title" content="Hugo - Displaying Images the Medium way">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://geraldnguyen.github.io/posts/2024/08/hugo-displaying-images-the-medium-way/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.c26f43265fe59e08f5f7f91bc6df440219638e2c9ed43736fd053a50a9963e69.css" integrity="sha256-wm9DJl/lngj19/kbxt9EAhljjiye1Dc2/QU6UKmWPmk=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HRKMT2G8N9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HRKMT2G8N9');
+</script>
+
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/tech-related/">Tech Related</a></li>
+    </ul>
+  </div>
+
+
+<h1>Hugo - Displaying Images the Medium way</h1>
+
+<h2 class="subtitle">Markdown, Figure, Multi-figures ways</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://geraldnguyen.github.io/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://geraldnguyen.github.io/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>2 min read</span>
+      <span>·</span>
+      <span><time datetime="2024-08-26T09:19:42&#43;01:00">August 26, 2024</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/pages/about/">Previous</a>
+  
+  <span> | </span>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-markdown-way">The Markdown way</a></li>
+    <li><a href="#the-mediumway">The Medium way</a></li>
+    <li><a href="#supporting-mediums-multiple-figuresdisplay">Supporting Medium&rsquo;s multiple figures display</a>
+      <ul>
+        <li><a href="#a-single-caption-for-all-images">A single caption for all images</a></li>
+        <li><a href="#or-a-caption-for-each-image">Or a caption for each image</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <p><em>Please ignore the <code>\</code> in front of <code>{</code> in code examples. It is used to prevent Hugo from processing the shortcodes even in code block</em></p>
+<h1 id="the-markdown-way">The Markdown way</h1>
+<pre tabindex="0"><code>![alt title](1_nHC2UMz-xJM-lvPPwSh_vQ.webp)
+</code></pre><p><img src="1_nHC2UMz-xJM-lvPPwSh_vQ.webp" alt="title"></p>
+<p>Though it is recommended, the <code>alt-title</code> is optional. The above can be expressed as <code>![alt title](path-to-image.jpg)</code></p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Simple</li>
+<li>Natively markdown</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>No caption</li>
+<li>Center alignment not guaranteed</li>
+</ul>
+<h1 id="the-mediumway">The Medium way</h1>
+<pre tabindex="0"><code>{{\&lt; figure src=&#34;1_nHC2UMz-xJM-lvPPwSh_vQ.webp&#34; caption=&#34;optional caption&#34; \&gt;}}
+</code></pre><figure><img src="/posts/2024/08/hugo-displaying-images-the-medium-way/1_nHC2UMz-xJM-lvPPwSh_vQ.webp"
+    alt="optional caption"><figcaption>
+      <p>optional caption</p>
+    </figcaption>
+</figure>
+
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Support caption, plain text and markdown</li>
+<li>Center alignment</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>Not native to markdown</li>
+<li>Extra shortcode syntax</li>
+</ul>
+<h1 id="supporting-mediums-multiple-figuresdisplay">Supporting Medium&rsquo;s multiple figures display</h1>
+<p>We&rsquo;ll use the following shortcode to display multiple images the same way Medium does</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span># multi-figures.html
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#000080">div</span> <span style="color:#008080">class</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;multi-figures d-block&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080">style</span>&gt;
+</span></span><span style="display:flex;"><span>    .<span style="color:#458;font-weight:bold">multi-figures</span> <span style="color:#000080">figure</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">margin</span>: <span style="color:#099">0</span> <span style="color:#099">0.5</span><span style="color:#458;font-weight:bold">rem</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    .<span style="color:#458;font-weight:bold">multi-figures-caption</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">grid-area</span>: caption;
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">text-align</span>: <span style="color:#000;font-weight:bold">center</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#000080">style</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080">div</span> <span style="color:#008080">class</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;multi-figures-area d-flex flex-row justify-content-center&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    {{ .Inner }}
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#000080">div</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  {{ with (.Get &#34;caption&#34;) }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">p</span> <span style="color:#008080">class</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;multi-figures-caption figcaption&#34;</span>&gt;{{ . }}&lt;/<span style="color:#000080">p</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ end }}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#000080">div</span>&gt;
+</span></span></code></pre></div><h2 id="a-single-caption-for-all-images">A single caption for all images</h2>
+<pre tabindex="0"><code>\{\{&lt; multi-figures caption=&#34;a single caption for 2 images&#34; &gt;}}
+
+\{\{&lt; figure src=&#34;1_nHC2UMz-xJM-lvPPwSh_vQ.webp&#34; &gt;}}
+\{\{&lt; figure src=&#34;1_UEaVZcIzkXkW0N44KUeW5A.webp&#34; &gt;}}
+
+\{\{&lt;/ multi-figures &gt;}}
+</code></pre><p>Set the <code>caption</code> attribute to the <code>multi-figures</code> shortcode. The caption will display across all images embedded within that shortcode.</p>
+<div class="multi-figures d-block">
+  <style>
+    .multi-figures figure {
+      margin: 0 0.5rem;
+    }
+
+    .multi-figures-caption {
+      grid-area: caption;
+      text-align: center;
+    }
+
+  </style>
+  <div class="multi-figures-area d-flex flex-row justify-content-center">
+    
+
+<figure><img src="/posts/2024/08/hugo-displaying-images-the-medium-way/1_nHC2UMz-xJM-lvPPwSh_vQ.webp">
+</figure>
+
+<figure><img src="/posts/2024/08/hugo-displaying-images-the-medium-way/1_UEaVZcIzkXkW0N44KUeW5A.webp">
+</figure>
+
+
+
+  </div>
+
+  
+    <p class="multi-figures-caption figcaption">a single caption for 2 images</p>
+  
+</div>
+<h2 id="or-a-caption-for-each-image">Or a caption for each image</h2>
+<pre tabindex="0"><code>\{\{&lt; multi-figures &gt;}}  
+  
+\{\{&lt; figure src=&#34;image-1.jpg&#34; caption=&#34;or a caption&#34; &gt;}}  
+\{\{&lt; figure src=&#34;image-2.jpg&#34; caption=&#34;for each&#34; &gt;}}  
+  
+\{\{&lt;/ multi-figures &gt;}}
+</code></pre><p>Set the <code>caption</code> attribute in each <code>figure</code> shortcode to display a caption under each image</p>
+<div class="multi-figures d-block">
+  <style>
+    .multi-figures figure {
+      margin: 0 0.5rem;
+    }
+
+    .multi-figures-caption {
+      grid-area: caption;
+      text-align: center;
+    }
+
+  </style>
+  <div class="multi-figures-area d-flex flex-row justify-content-center">
+    
+
+<figure><img src="/posts/2024/08/hugo-displaying-images-the-medium-way/1_nHC2UMz-xJM-lvPPwSh_vQ.webp"
+    alt="or a caption"><figcaption>
+      <p>or a caption</p>
+    </figcaption>
+</figure>
+
+<figure><img src="/posts/2024/08/hugo-displaying-images-the-medium-way/1_UEaVZcIzkXkW0N44KUeW5A.webp"
+    alt="for each"><figcaption>
+      <p>for each</p>
+    </figcaption>
+</figure>
+
+
+
+  </div>
+
+  
+</div>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/medium/">Medium</a></li>
+        <li><a href="/tags/hugo/">Hugo</a></li>
+        <li><a href="/tags/image/">Image</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>
