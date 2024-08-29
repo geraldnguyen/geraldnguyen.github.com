@@ -39,7 +39,7 @@ Javascript
 Java
 ====
 
-[Five Minimum Viable Spring REST Interview Questions](https://medium.com/50ld/five-minimum-viable-spring-rest-interview-questions-c92414bdbd49?source=post_page-----e8531b5f7db2--------------------------------)
+[Five Minimum Viable Spring REST Interview Questions]({{< ref "posts/2023/01/5-minimum-viable-spring-rest-interview-questions">}})
 
 [Five Minimum Viable Spring IoC Interview Questions](https://medium.com/50ld/five-minimum-viable-spring-ioc-interview-questions-6bfc7e1f4a8b?source=post_page-----e8531b5f7db2--------------------------------)
 
