@@ -16,6 +16,13 @@
       <description>Photo by Wes Hicks on Unsplash&#xA;Rationale Let’s face it. A developer is expected to know A LOT these days.&#xA;A typical job requirement (screenshot)&#xA;And that makes interviewing a candidate hard because there is never enough time to ask all the necessary questions.&#xA;On the other hand, that also makes preparing for an interview hard because there are too many areas and details to prepare for.&#xA;These are in fact the very challenges I faced every time I apply for a new job, or interview to hire a new team member.</description>
     </item>
     <item>
+      <title>Five Minimum Viable Spring REST Interview Questions</title>
+      <link>https://geraldnguyen.github.io/posts/2023/01/5-minimum-viable-spring-rest-interview-questions/</link>
+      <pubDate>Thu, 12 Jan 2023 09:19:42 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/01/5-minimum-viable-spring-rest-interview-questions/</guid>
+      <description>Photo by Christina @ wocintechchat.com on Unsplash&#xA;This is part of my Five Minimum Viable Interview Questions series where I research and compile Five essential interview questions on each interview topic. All of these questions aim to assess real and practical skills expected at work&#xA;#1 — What is REST API? This question assesses the breadth and depth of a candidate’s understanding of REST API concepts.&#xA;Though this seems basic, it has caught many candidates off-guard because they never prepare for it.</description>
+    </item>
+    <item>
       <title>Five Minimum Viable Javascript Interview Questions</title>
       <link>https://geraldnguyen.github.io/posts/2022/12/5-minimum-viable-javascript-interview-questions/</link>
       <pubDate>Fri, 09 Dec 2022 09:19:42 +0100</pubDate>

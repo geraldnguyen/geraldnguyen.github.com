@@ -116,6 +116,15 @@
     <loc>https://geraldnguyen.github.io/tags/aff/</loc>
     <lastmod>2023-01-12T09:19:42+01:00</lastmod>
   </url><url>
+    <loc>https://geraldnguyen.github.io/tags/api/</loc>
+    <lastmod>2023-01-12T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/categories/career-development/</loc>
+    <lastmod>2023-01-12T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/posts/2023/01/5-minimum-viable-spring-rest-interview-questions/</loc>
+    <lastmod>2023-01-12T09:19:42+01:00</lastmod>
+  </url><url>
     <loc>https://geraldnguyen.github.io/tags/football/</loc>
     <lastmod>2023-01-12T09:19:42+01:00</lastmod>
   </url><url>
@@ -125,10 +134,19 @@
     <loc>https://geraldnguyen.github.io/categories/non-tech/</loc>
     <lastmod>2023-01-12T09:19:42+01:00</lastmod>
   </url><url>
+    <loc>https://geraldnguyen.github.io/tags/practical/</loc>
+    <lastmod>2023-01-12T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/tags/rest-api/</loc>
+    <lastmod>2023-01-12T09:19:42+01:00</lastmod>
+  </url><url>
     <loc>https://geraldnguyen.github.io/tags/shin-tae-yong/</loc>
     <lastmod>2023-01-12T09:19:42+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/tags/southeast-asia/</loc>
+    <lastmod>2023-01-12T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/tags/spring/</loc>
     <lastmod>2023-01-12T09:19:42+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/posts/2023/01/solid-liskov-substitution-principle/</loc>
@@ -206,9 +224,6 @@
     <loc>https://geraldnguyen.github.io/posts/2022/12/retry-webclient-request/</loc>
     <lastmod>2022-12-30T09:19:42+01:00</lastmod>
   </url><url>
-    <loc>https://geraldnguyen.github.io/tags/spring/</loc>
-    <lastmod>2022-12-30T09:19:42+01:00</lastmod>
-  </url><url>
     <loc>https://geraldnguyen.github.io/tags/unit-testing/</loc>
     <lastmod>2022-12-30T09:19:42+01:00</lastmod>
   </url><url>
@@ -225,9 +240,6 @@
     <lastmod>2022-12-29T09:19:42+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/tags/analogy/</loc>
-    <lastmod>2022-12-27T09:19:42+01:00</lastmod>
-  </url><url>
-    <loc>https://geraldnguyen.github.io/tags/api/</loc>
     <lastmod>2022-12-27T09:19:42+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/tags/backend/</loc>
@@ -296,13 +308,7 @@
     <loc>https://geraldnguyen.github.io/posts/2022/12/solid-single-responsibility-principle/</loc>
     <lastmod>2022-12-14T08:00:00-07:00</lastmod>
   </url><url>
-    <loc>https://geraldnguyen.github.io/categories/career-development/</loc>
-    <lastmod>2022-12-09T09:19:42+01:00</lastmod>
-  </url><url>
     <loc>https://geraldnguyen.github.io/posts/2022/12/5-minimum-viable-javascript-interview-questions/</loc>
-    <lastmod>2022-12-09T09:19:42+01:00</lastmod>
-  </url><url>
-    <loc>https://geraldnguyen.github.io/tags/practical/</loc>
     <lastmod>2022-12-09T09:19:42+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/posts/2022/12/becoming-a-solid-developer/</loc>

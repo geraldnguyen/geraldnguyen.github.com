@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>Five Minimum Viable Spring REST Interview Questions</title>
+<meta data-rh="true" property="og:url" content="https://geraldnguyen.github.io/posts/2023/01/5-minimum-viable-spring-rest-interview-questions/">
+<meta data-rh="true" property="og:title" content="Five Minimum Viable Spring REST Interview Questions">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://geraldnguyen.github.io/posts/2023/01/5-minimum-viable-spring-rest-interview-questions/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.c26f43265fe59e08f5f7f91bc6df440219638e2c9ed43736fd053a50a9963e69.css" integrity="sha256-wm9DJl/lngj19/kbxt9EAhljjiye1Dc2/QU6UKmWPmk=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HRKMT2G8N9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HRKMT2G8N9');
+</script>
+
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+        <li><a href="/categories/career-development/">Career Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>Five Minimum Viable Spring REST Interview Questions</h1>
+
+<h2 class="subtitle">Interviewer: ask them if your interview is running out of time. Interviewee: practice them if your preparation is running out of time.</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://geraldnguyen.github.io/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://geraldnguyen.github.io/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>7 min read</span>
+      <span>·</span>
+      <span><time datetime="2023-01-12T09:19:42&#43;01:00">January 12, 2023</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2023/01/solid-liskov-substitution-principle/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2023/01/styout-stystay-what-is-better-for-indonesian-football/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1--what-is-rest-api">#1 — What is REST API?</a></li>
+    <li><a href="#2--how-do-you-create-a-rest-api-for-a-friendlist-application-that-accepts-a-name-parameter-performs-a-search-and-returns-a-list-of-all-matching-friends">#2 — How do you create a REST API for a FriendList application that accepts a name parameter, performs a search, and returns a list of all matching friends?</a></li>
+    <li><a href="#3--how-do-you-test-the-search-friend-rest-api-see-question-2-above">#3 — How do you test the search-friend REST API (see question #2 above)?</a>
+      <ul>
+        <li><a href="#integration-test-with-spring">Integration test with Spring</a></li>
+      </ul>
+    </li>
+    <li><a href="#4--how-do-you-handle-a-search-request-that-matches-500-records">#4 — How do you handle a search request that matches 500 records?</a></li>
+    <li><a href="#5--when-do-you-return-an-http-202-accepted-response-and-how-do-you-return-it">#5 — When do you return an HTTP 202 (Accepted) response and how do you return it?</a></li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <figure><img src="/posts/2023/01/5-minimum-viable-spring-rest-interview-questions/0_5kwKvgKkYWpxPDoz.webp"
+    alt="Photo by Christina @ wocintechchat.com on Unsplash"><figcaption>
+      <p>Photo by <a href="https://unsplash.com/@wocintechchat?utm_source=medium&amp;utm_medium=referral">Christina @ wocintechchat.com</a> on <a href="https://unsplash.com/?utm_source=medium&amp;utm_medium=referral">Unsplash</a></p>
+    </figcaption>
+</figure>
+
+
+<div class="page-break" role="separator">
+  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+</div>
+
+<p><em>This is part of my</em> <a href="https://geraldnguyen.github.io/posts/2023/02/five-minimum-viable-interview-questions-series/"><em>Five Minimum Viable Interview Questions series</em></a> <em>where I research and compile Five essential interview questions on each interview topic. All of these questions aim to assess real and practical skills expected at work</em></p>
+
+<div class="page-break" role="separator">
+  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+</div>
+
+<div class="page-break" role="separator">
+  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+</div>
+<h1 id="1--what-is-rest-api">#1 — What is REST API?</h1>
+
+
+<blockquote class="medium-quote">
+  <p>
+    
+    <p>This question assesses the breadth and depth of a candidate’s understanding of REST API concepts.</p>
+<p>Though this seems basic, it has caught many candidates off-guard because they never prepare for it. Good candidate will recover but inexperienced or shallow candidate may not.</p>
+
+  </p>
+</blockquote>
+<p>API stands for Application Programming Interface. It refers to how software components should <em>publicly</em> appear to each other. When one component needs another to do some specific work, it calls a specific service defined in the other component’s API. The term API nowadays also applies to software separated over a network or even the internet.</p>
+<p>A REST API (also known as RESTful API) is an application programming interface (API) between two systems over a network (LAN or the Internet) built in the REST architectural style. REST APIs are commonly used to connect individual services in a complex system such as microservices (e.g. sales service to fulfillment service), or mobile or web applications to their backend services. We use REST APIs to request or provide data or services from one specialized system to another.</p>
+<p>REST stands for <strong>RE</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer. A REST API transfers the representation of the state of information over the network on HTTP protocol from one system to another. The one that initiates the API request is called a client, and the one that serves or responds to the request is called a server.</p>
+<p>The representation can be in one of a variety of formats like JSON, XML, plain text, or even binary. JSON (Javascript Object Notation) is the most popular because it is simple, readable by humans, and has broad and mature programming support.</p>
+<p>REST API uses HTTP’s method, URL, parameters, headers, body, and response codes to transfer the client’s request to the server and the server’s response back to the client. We commonly use the GET method for retrieving resources unmodified, the POST method for creating a new resource, the PUT or PATCH method for updating, and the DELETE for deleting resources.</p>
+<p>Further readings:</p>
+<ul>
+<li><a href="https://medium.com/illumination/what-are-apis-2259bb43ddb4">https://medium.com/illumination/what-are-apis-2259bb43ddb4</a></li>
+<li><a href="https://www.redhat.com/en/topics/api/what-is-a-rest-api">https://www.redhat.com/en/topics/api/what-is-a-rest-api</a></li>
+<li><a href="https://aws.amazon.com/what-is/restful-api/">https://aws.amazon.com/what-is/restful-api/</a></li>
+<li><a href="https://www.techtarget.com/searchapparchitecture/definition/RESTful-API">https://www.techtarget.com/searchapparchitecture/definition/RESTful-API</a></li>
+</ul>
+
+<div class="page-break" role="separator">
+  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+</div>
+<h1 id="2--how-do-you-create-a-rest-api-for-a-friendlist-application-that-accepts-a-name-parameter-performs-a-search-and-returns-a-list-of-all-matching-friends">#2 — How do you create a REST API for a FriendList application that accepts a name parameter, performs a search, and returns a list of all matching friends?</h1>
+
+
+<blockquote class="medium-quote">
+  <p>
+    
+    Base on a real common requirements in API development, this simplified question directly assesses a candidate’s practical knowledge and experience in Spring REST API development.
+  </p>
+</blockquote>
+<p><em>Note: this is not intended to be a live coding test, hence the sample answer below is verbal and intentionally omits certain technical details. A sample code is still provided for your reference.</em></p>
+<p>Spring provides the <code>@RestController</code> annotation to designate a class as a REST controller, which is a special type of web controller that handles REST API requests. Let’s call this controller <code>FriendController</code></p>
+<p>Within the controller, let’s create a method called <code>searchFriend</code> which accepts a <code>name</code> parameter, searches the database, and returns a list of all matching friends. We will apply the<code>@GetMapping</code> annotation to this method to make it the entry point for the search request. We’ll also apply the <code>@RequestParam</code> annotation to the <code>name</code> parameter to tell Spring to put the search value into this parameter.</p>
+<p>The search for matching friends is performed by another class. Assuming we have a <code>FriendService</code> instance within the controller, we will call a method, e.g. <code>findByName</code>, of this service with the <code>name</code> search parameter to obtain the list of all matching friends. The controller’s <code>searchFriend</code> method will then return the found list. The Spring framework takes care of converting that list into a proper JSON array.</p>
+<p><em>Sample codes:</em></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#3c5d5d;font-weight:bold">@RestController</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#3c5d5d;font-weight:bold">@RequestMapping</span>(<span style="color:#d14">&#34;/friends&#34;</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">FriendController</span><span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">final</span><span style="color:#bbb"> </span>FriendService<span style="color:#bbb"> </span>friendService;<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">FriendController</span>(FriendService<span style="color:#bbb"> </span>friendService)<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">this</span>.<span style="color:#008080">friendService</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>friendService;<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">/**  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * Response to GET /friends/ request  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @param name (optional) filter by name  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @return a list of friends  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     */</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@GetMapping</span>(<span style="color:#d14">&#34;/&#34;</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span>List<span style="color:#000;font-weight:bold">&lt;</span>FriendDTO<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">searchFriend</span>(<span style="color:#3c5d5d;font-weight:bold">@Nullable</span><span style="color:#bbb"> </span><span style="color:#3c5d5d;font-weight:bold">@RequestParam</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>name)<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">if</span><span style="color:#bbb"> </span>(StringUtils.<span style="color:#008080">hasText</span>(name))<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>friendService.<span style="color:#008080">findByName</span>(name);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>}<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">else</span><span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>friendService.<span style="color:#008080">findAll</span>();<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div>
+<div class="page-break" role="separator">
+  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+</div>
+<h1 id="3--how-do-you-test-the-search-friend-rest-api-see-question-2-above">#3 — How do you test the search-friend REST API (see question #2 above)?</h1>
+
+
+<blockquote class="medium-quote">
+  <p>
+    
+    <p>Testing is a necessary skill and an important attitude. A good software engineer tests all the codes that he or she wrote.</p>
+<p>This question evaluates the knowledge, experience, and how testing is embedded in a candidate’s development practice</p>
+
+  </p>
+</blockquote>
+<p><em>Approaches to API testing, from least to most sophisticated, multiple choices allowed:</em></p>
+<ol>
+<li>Open a browser and type in the URL such as <code>[https://localhost:8080/friends/?name=john](https://localhost:8080/friends/?name=john)</code> and check the JSON response</li>
+<li>Open a terminal and type in the command <code>curl [https://localhost:8080/friends/?name=john](https://localhost:8080/friends/?name=john)</code> and check the JSON response</li>
+<li>Open <a href="https://www.postman.com/">Postman</a> and create a request to <code>[https://localhost:8080/friends/?name=john](https://localhost:8080/friends/?name=john)</code> and check the JSON response</li>
+<li>Open an IDE and create a unit test using frameworks like JUnit and Mockito</li>
+<li>Open an IDE and create an integration test using <code>SpringRunner</code> and <code>MockMVC</code></li>
+<li>Open an IDE and create a BDD test using frameworks and tools like Cucumber and Selenium</li>
+</ol>
+<p><em>Further details are necessary for options (4), (5), or (6). See the example below for option (5)</em></p>
+<h2 id="integration-test-with-spring">Integration test with Spring</h2>
+<p>Spring supplies utilities to create integration tests for REST API. We can create a test class called <code>FriendControllerTest</code> and annotate it with <code>@SpringRunner</code> and <code>@WebMvcTest</code> annotations to set it up for Spring REST API integration test. We need to <em>autowire</em> an instance of <code>MockMvc</code> which is a utility by Spring to facilitate integration testing of REST requests.</p>
+<p>We also need a mocked instance of <code>FriendService</code> so that we can focus on the testing of the controller only. The annotation <code>@MockBean</code> applied on an instance variable <code>friendService</code> provides us with exactly that. We will then set up the <code>friendService.findByName</code> method to return a sample list of friends whenever a search parameter value “john” is provided.</p>
+<p>Then we will call a <code>get</code> method with a “john” <code>name</code> parameter on a <code>MockMvc</code> instance to invoke the API. We will then inspect the response obtained and assert the received JSON matching the mocked value setup with <code>friendService</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#3c5d5d;font-weight:bold">@RunWith</span>(SpringRunner.<span style="color:#008080">class</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#3c5d5d;font-weight:bold">@WebMvcTest</span>(FriendController.<span style="color:#008080">class</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">FriendControllerTest</span><span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@Autowired</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>MockMvc<span style="color:#bbb"> </span>mockMvc;<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@MockBean</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>FriendService<span style="color:#bbb"> </span>friendService;<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@Test</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#458;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">findByName</span>()<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">throws</span><span style="color:#bbb"> </span>Exception<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>when(friendService.<span style="color:#008080">findByName</span>(<span style="color:#d14">&#34;john&#34;</span>)).<span style="color:#008080">thenReturn</span>(List.<span style="color:#008080">of</span>(<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"> </span>FriendDTO.<span style="color:#008080">builder</span>().<span style="color:#008080">id</span>(1L).<span style="color:#008080">name</span>(<span style="color:#d14">&#34;john&#34;</span>).<span style="color:#008080">build</span>()<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>));<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>mockMvc.<span style="color:#008080">perform</span>(get(<span style="color:#d14">&#34;/friends/?name=john&#34;</span>))<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>.<span style="color:#008080">andDo</span>(print())<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>.<span style="color:#008080">andExpect</span>(status().<span style="color:#008080">isOk</span>())<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>.<span style="color:#008080">andExpect</span>(content().<span style="color:#008080">json</span>(<span style="color:#d14">&#34;[ {&#39;id&#39;: 1, &#39;name&#39;: &#39;john&#39;}]&#34;</span>))<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>;<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div>
+<div class="page-break" role="separator">
+  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+</div>
+<h1 id="4--how-do-you-handle-a-search-request-that-matches-500-records">#4 — How do you handle a search request that matches 500 records?</h1>
+
+
+<blockquote class="medium-quote">
+  <p>
+    
+    This question evaluates if the candidate pays due attention to API’s performance, usability and is familiar with the pagination pattern.
+  </p>
+</blockquote>
+<p>While it is possible to return all 500 records, doing so may impact the API’s performance and may overload the network and client with too large a response.</p>
+<p>There are 2 common solutions to address this scenario:</p>
+<ul>
+<li>Limit the number of results returned with a warning that the response has been truncated due to the search results in too many records.</li>
+<li>Implement pagination to allow the API to break the results into smaller chunks which can be accessed sequentially or randomly by the client.</li>
+</ul>
+<p>The API can optionally support more filters for the client to refine the search and find the specific results more quickly</p>
+
+<div class="page-break" role="separator">
+  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+</div>
+<h1 id="5--when-do-you-return-an-http-202-accepted-response-and-how-do-you-return-it">#5 — When do you return an HTTP 202 (Accepted) response and how do you return it?</h1>
+
+
+<blockquote class="medium-quote">
+  <p>
+    
+    This question tests a candidate’s knowledge of different HTTP status codes and their uses. It also assesses how hands-on the candidate is in using Spring ResponseEntity class and/or ReponseStat<code>us</code> annotation set a response’s status code
+  </p>
+</blockquote>
+<p>HTTP 202 (Accepted) status code indicates that the request has been received and is being processed asynchronously. A popular scenario to use 202 is when creating a new job execution request.</p>
+<p>Instead of keeping the client waiting and hogging the server’s resources, the API can return this status, optionally together with a transaction id. The client can check the status again, using the returned transaction id as the lookup key, to determine if the processing has been completed.</p>
+<p>We can use the <code>@ResponseStatus</code> annotation to annotate the endpoint method with the HTTP 202 status.</p>
+<p>We can also have the endpoint method declare a <code>ResponseEntity</code> return type. We can call either <code>accepted()</code> method or <code>status(HttpStatus.CREATED)</code> method on the <code>ResponseEntity</code> instance to set the HTTP 202 status.</p>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/java/">Java</a></li>
+        <li><a href="/tags/spring/">Spring</a></li>
+        <li><a href="/tags/rest-api/">REST API</a></li>
+        <li><a href="/tags/api/">API</a></li>
+        <li><a href="/tags/interview/">Interview</a></li>
+        <li><a href="/tags/practical/">Practical</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

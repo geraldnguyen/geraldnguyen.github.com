@@ -6,8 +6,15 @@
     <description>Recent content in Spring on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Dec 2022 09:19:42 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 12 Jan 2023 09:19:42 +0100</lastBuildDate>
     <atom:link href="https://geraldnguyen.github.io/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Five Minimum Viable Spring REST Interview Questions</title>
+      <link>https://geraldnguyen.github.io/posts/2023/01/5-minimum-viable-spring-rest-interview-questions/</link>
+      <pubDate>Thu, 12 Jan 2023 09:19:42 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/01/5-minimum-viable-spring-rest-interview-questions/</guid>
+      <description>Photo by Christina @ wocintechchat.com on Unsplash&#xA;This is part of my Five Minimum Viable Interview Questions series where I research and compile Five essential interview questions on each interview topic. All of these questions aim to assess real and practical skills expected at work&#xA;#1 — What is REST API? This question assesses the breadth and depth of a candidate’s understanding of REST API concepts.&#xA;Though this seems basic, it has caught many candidates off-guard because they never prepare for it.</description>
+    </item>
     <item>
       <title>Retry WebClient Request</title>
       <link>https://geraldnguyen.github.io/posts/2022/12/retry-webclient-request/</link>

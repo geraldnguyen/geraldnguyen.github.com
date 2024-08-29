@@ -23,6 +23,13 @@
       <description>Photos by Eugen Str on Unsplash&#xA;Photos by Patrick on Unsplash&#xA;If you are going to build a house, a table, or a chair, what is your preferred option? The multiple tools on the first picture or one Swiss knife on the second?&#xA;Yep, you are right. If you want to create something useful that last for years, you need specialized tools. The same thinking applies to software development, if you want to create a serious application, you need specialized components represented by their own, purposely designed interfaces.</description>
     </item>
     <item>
+      <title>Five Minimum Viable Spring REST Interview Questions</title>
+      <link>https://geraldnguyen.github.io/posts/2023/01/5-minimum-viable-spring-rest-interview-questions/</link>
+      <pubDate>Thu, 12 Jan 2023 09:19:42 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/01/5-minimum-viable-spring-rest-interview-questions/</guid>
+      <description>Photo by Christina @ wocintechchat.com on Unsplash&#xA;This is part of my Five Minimum Viable Interview Questions series where I research and compile Five essential interview questions on each interview topic. All of these questions aim to assess real and practical skills expected at work&#xA;#1 — What is REST API? This question assesses the breadth and depth of a candidate’s understanding of REST API concepts.&#xA;Though this seems basic, it has caught many candidates off-guard because they never prepare for it.</description>
+    </item>
+    <item>
       <title>SOLID in Action — the Liskov Substitution Principle</title>
       <link>https://geraldnguyen.github.io/posts/2023/01/solid-liskov-substitution-principle/</link>
       <pubDate>Mon, 09 Jan 2023 08:00:00 -0700</pubDate>
