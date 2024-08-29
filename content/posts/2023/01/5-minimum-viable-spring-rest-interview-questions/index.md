@@ -2,10 +2,11 @@
 title: Five Minimum Viable Spring REST Interview Questions
 subtitle: "Interviewer: ask them if your interview is running out of time. Interviewee: practice them if your preparation is running out of time."
 date: 2023-01-12T09:19:42+01:00
-image: 0_ufACmK4armozbXnU.jpg
+image: 0_5kwKvgKkYWpxPDoz.jpg
 draft: false
 categories: [Software Development, Career Development]
 tags: [Java, Spring, REST API, API, Interview, Practical]
+medium: https://medium.com/50ld/five-minimum-viable-spring-rest-interview-questions-c92414bdbd49
 ---
 
 {{< figure src="0_5kwKvgKkYWpxPDoz.webp" caption="Photo by [Christina @ wocintechchat.com](https://unsplash.com/@wocintechchat?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)" >}}

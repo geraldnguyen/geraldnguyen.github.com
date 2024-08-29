@@ -50,7 +50,7 @@ API does more than perform a service. It can also return data. Facebook APIs do 
 
 In conclusion:
 
-{{< quote  `APIs are **the data or services that some software codes, modules, libraries, or websites have to offer to outsiders**` >}}
+{{< quote  `APIs are **the data or services that some software codes, modules, libraries, or websites have to offer to outsiders**` />}}
 
 If we are to go beyond the realm of software, _APIs are the goods or services that someone or something has to offer to outsiders_. APIs are thus everywhere. Does this competitor to Amazon have a chance?
 

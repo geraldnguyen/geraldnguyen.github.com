@@ -13,7 +13,7 @@ medium: https://medium.com/new-writers-welcome/the-home-deity-is-not-divine-f2af
 
 The title is loosely translated from a Vietnamese idiom
 
-{{< quote `**Bụt chùa nhà không thiêng**` >}} 
+{{< quote `**Bụt chùa nhà không thiêng**` />}} 
 
 Literally translated, the idiom is about a Buddhist Saint _(Vietnamese:_ **_bụt_**_)_ prayed to in a pagoda _(Vietnamese:_ **_chùa_**_)_ close to or within the home (Vietnamese: **nhà**) being non-divine _(Vietnamese:_ **_không thiêng_**_)_
 

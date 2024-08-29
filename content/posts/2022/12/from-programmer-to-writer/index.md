@@ -23,7 +23,7 @@ I have been carrying that practice to every other company I worked for. The diff
 
 # I’m playing to my strengths
 
-{{< quote `“Write what you know” ― Mark Twain` >}}
+{{< quote `“Write what you know” ― Mark Twain` />}}
 
 I am good with languages, well, programming languages such as C, C#, Java, Javascript, Kotlin, HTML, CSS, SQL, etc... I had over 14 years of experience developing software, leading teams, and building products. I can definitely write about them.
 
@@ -31,7 +31,7 @@ I am good with languages, well, programming languages such as C, C#, Java, Javas
 
 {{< relativelink "posts/2022/12/becoming-a-solid-developer" >}}
 
-{{< quote  `“I do have are **a very particular set of skills**, skills I have acquired over a very long career” — Taken (the movie, 2008)` >}}
+{{< quote  `“I do have are **a very particular set of skills**, skills I have acquired over a very long career” — Taken (the movie, 2008)` />}}
 
 Programming requires a great deal of logical thinking and structural design. The same applies to writing, especially with the type of content I want to focus on (above).
 
