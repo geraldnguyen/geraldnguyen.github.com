@@ -58,6 +58,20 @@
       <description>Photos by Eugen Str on Unsplash&#xA;Photos by Patrick on Unsplash&#xA;If you are going to build a house, a table, or a chair, what is your preferred option? The multiple tools on the first picture or one Swiss knife on the second?&#xA;Yep, you are right. If you want to create something useful that last for years, you need specialized tools. The same thinking applies to software development, if you want to create a serious application, you need specialized components represented by their own, purposely designed interfaces.</description>
     </item>
     <item>
+      <title>Shift Left Testing</title>
+      <link>https://geraldnguyen.github.io/posts/2023/01/shift-left-testing/</link>
+      <pubDate>Mon, 16 Jan 2023 09:19:42 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/01/shift-left-testing/</guid>
+      <description>What is Shift Left Testing? A picture is worth a thousand words. Here are how Shift Left differs from the traditional approach&#xA;Source: https://www.bmc.com/blogs/what-is-shift-left-shift-left-testing-explained&#xA;How does my team shift left? We started with unit testing, by developers, for their own codes. This is the easiest shift to implement, though it still takes time, effort, and patience to get it right. I recommend Pragmatic Unit Testing in Java 8 with JUnit if you want quickly level-up</description>
+    </item>
+    <item>
+      <title>What is a 2-Factor Authentication(2FA)?</title>
+      <link>https://geraldnguyen.github.io/posts/2023/01/what-is-2-factor-authentication-2fa/</link>
+      <pubDate>Mon, 16 Jan 2023 09:19:42 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/01/what-is-2-factor-authentication-2fa/</guid>
+      <description>The Wolf, the Kid, and the Goat You probably have heard of this popular fable before.&#xA;Mother Goat in her wisdom had carefully secured her house and her Kid before going out. She even reminded her Kid to check the password before opening the door. Her password was good. It was very long and contained non-alphabets and special characters.&#xA;As fate had it, a Wolf was nearby, he eavesdropped and learned of the mother’s password.</description>
+    </item>
+    <item>
       <title>#STYOut or #STYSTAY — What is better for Indonesian Football?</title>
       <link>https://geraldnguyen.github.io/posts/2023/01/styout-stystay-what-is-better-for-indonesian-football/</link>
       <pubDate>Thu, 12 Jan 2023 09:19:42 +0100</pubDate>
