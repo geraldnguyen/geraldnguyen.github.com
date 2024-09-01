@@ -10,6 +10,11 @@ theme = 'medium'
   twitter = 'https://x.com/geraldnguyensg'
   linkedin = 'https://www.linkedin.com/in/nthehuy/'
   github = 'https://github.com/geraldnguyen'
+  [params.opengraph]
+    checker = 'https://globally.azurewebsites.net/api/OpenGraph'
+    [params.opengraph.safeEscaped]
+      "&quot;" = "\""
+      "&#8211;" = "-"
 
 [[menus.main]]
 name = 'Home'
@@ -29,3 +34,4 @@ weight = 30
   
   [markup.highlight]
     style = 'github'
+

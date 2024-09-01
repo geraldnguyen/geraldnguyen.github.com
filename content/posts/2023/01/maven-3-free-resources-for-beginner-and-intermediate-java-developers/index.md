@@ -35,17 +35,17 @@ https://spring.io/guides/gs/maven/
 
 When troubleshooting a dependency issue at work, this excellent guide from Java Champion Chandra Guntur quickly equipped me with what I needed to understand the issue and devise a solution. It is practical, visual, and concise.
 
-https://cguntur.me/2020/05/20/understanding-apache-maven-the-series/
+{{< external-link "https://cguntur.me/2020/05/20/understanding-apache-maven-the-series/" >}}
 
 As an Intermediate, you will often need to figure out things by yourself. Nothing beat a good reference there. I recommend you go to the authoritative source of Maven itself.
 
 Here are a few shortcuts:
 
-https://maven.apache.org/pom.html
+{{< external-link "https://maven.apache.org/pom.html" >}}
 
-https://maven.apache.org/plugins/index.html
+{{< external-link "https://maven.apache.org/plugins/index.html" >}}
 
-https://maven.apache.org/guides/mini/guide-configuring-maven.html
+{{< external-link "https://maven.apache.org/guides/mini/guide-configuring-maven.html" >}}
 
 # Beyond
 
@@ -53,4 +53,4 @@ Nothing beats practice if you want to excel. If you want to move beyond Intermed
 
 And if you are curious about how Google developers use maven, here is one I am reading
 
-https://jlbp.dev/
+{{< external-link "https://jlbp.dev/" >}}

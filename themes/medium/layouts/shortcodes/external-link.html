@@ -1,0 +1,39 @@
+<!-- Credit: https://discourse.gohugo.io/t/grab-card-data-from-url/26807/2  -->
+
+{{- $json := "" -}}
+{{- $ogChecker := "https://globally.azurewebsites.net/api/OpenGraph" -}}
+
+{{- $openGraph := site.Params.Opengraph }}
+{{- $safeEscaped := $openGraph.safeEscaped }}
+
+{{/* Get JSON from OpenGraph.io. */}}
+{{- with .Get 0 -}}
+  {{- $query := querify "url" . -}}
+  {{- $request := printf "%s?%s" $ogChecker $query -}}
+  {{- $json = getJSON $request -}}
+{{- else -}}
+  {{- errorf "The '%s' shortcode requires a single positional parameter, a URL. See %s" .Name .Position -}}
+{{- end -}}
+
+{{- $description := $json.description -}}
+{{- $title := $json.title -}}
+{{ range $k, $v := $safeEscaped }}
+  {{ $description = replace $description $k $v }}
+  {{ $title = replace $title $k $v }}
+{{ end }}
+
+
+<div class="container alert alert-secondary">
+  <div><a href="{{$json.url}}" alt="{{$title}}">
+      <strong>{{ $title }}</strong>
+  </a></div>
+  <div class="d-flex align-items-start">
+    {{ with $json.image }}
+      <img src="{{ $json.image }}" alt="{{ $title }}" />    
+    {{ end }}    
+    <p class="px-1">
+      <small>{{ $description }}</small>
+    </p> 
+    
+  </div>
+</div>
