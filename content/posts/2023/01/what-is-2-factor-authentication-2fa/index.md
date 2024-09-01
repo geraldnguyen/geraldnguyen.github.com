@@ -4,7 +4,7 @@ subtitle: A lesson from a popular fable for children
 date: 2023-01-16T09:19:42+01:00
 image: 0_qmGPBazgUYGQQXE0.jpg
 draft: false
-categories: [Software Development]
+categories: [Tech Related]
 tags: [Security, Authentication, 2FA, Password, MFA]
 medium: https://medium.com/geekculture/what-is-a-2-factor-authentication-2fa-ee3248b0bb74
 ---
