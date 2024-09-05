@@ -13,7 +13,7 @@
       <link>https://geraldnguyen.github.io/posts/2022/12/what-are-apis/</link>
       <pubDate>Tue, 27 Dec 2022 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/posts/2022/12/what-are-apis/</guid>
-      <description>Are APIs the waiters? Source: Reddit and LinkedIn&#xA;No — The waiters are part of Frontend. They are responsible for creating a nice visual and interactive experience such as greeting customers, arranging the tables, present the dishes — like what React or Angular codes do.&#xA;They will take your orders — like how HTML forms accept your inputs, auto-complete your sentences, or apologize that certain dishes aren’t available.&#xA;And they send your orders to the kitchen.</description>
+      <description>&lt;h1 id=&#34;are-apis-the-waiters&#34;&gt;Are APIs the waiters?&lt;/h1&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://geraldnguyen.github.io/posts/2022/12/what-are-apis/0_u9-gya6X9E94NV5o.webp&#34;&#xA;    alt=&#34;Source: Reddit and LinkedIn&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Source: &lt;a href=&#34;https://www.reddit.com/r/ProgrammerHumor/comments/qq2m9g/explained_frontend_backend_apis/&#34;&gt;Reddit&lt;/a&gt; and LinkedIn&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h1 id=&#34;no--the-waiters-are-part-of-frontend&#34;&gt;No — The waiters are part of Frontend.&lt;/h1&gt;&#xA;&lt;p&gt;They are responsible for creating a nice visual and interactive experience such as greeting customers, arranging the tables, present the dishes — like what React or Angular codes do.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

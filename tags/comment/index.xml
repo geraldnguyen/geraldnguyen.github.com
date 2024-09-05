@@ -13,7 +13,7 @@
       <link>https://geraldnguyen.github.io/posts/2021/10/2021-10-17-enable-commenting/</link>
       <pubDate>Sun, 17 Oct 2021 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/posts/2021/10/2021-10-17-enable-commenting/</guid>
-      <description>Note 2024-08-15: An earlier version of this site ran on doks. I&amp;rsquo;m in the middle of updating it to a medium-like theme*&#xA;Introduction You may have noticed that this website is using a powerful-yet-easy-to-use doks theme.&#xA;As I wanted to have more interaction with my readers, enabling comment is a first step.&#xA;Enable Comment in Hugo Hugo provides built-in support for Disqus. It ships with a _internal/disqus.html template that we can simply copy &amp;amp; paste to wherever we want comment to appear.</description>
+      <description>&lt;p&gt;&lt;em&gt;Note 2024-08-15: An earlier version of this site ran on &lt;a href=&#34;https://getdoks.org/&#34;&gt;doks&lt;/a&gt;. I&amp;rsquo;m in the middle of updating it to a medium-like theme&lt;/em&gt;*&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;You may have noticed that this website is using a powerful-yet-easy-to-use &lt;a href=&#34;https://getdoks.org/&#34;&gt;doks&lt;/a&gt; theme.&lt;/p&gt;&#xA;&lt;p&gt;As I wanted to have more interaction with my readers, enabling comment is a first step.&lt;/p&gt;&#xA;&lt;h2 id=&#34;enable-comment-in-hugo&#34;&gt;Enable Comment in Hugo&lt;/h2&gt;&#xA;&lt;p&gt;Hugo provides built-in support for Disqus. It ships with a &lt;code&gt;_internal/disqus.html&lt;/code&gt; template that we can simply copy &amp;amp; paste to wherever we want comment to appear. The steps are simple:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

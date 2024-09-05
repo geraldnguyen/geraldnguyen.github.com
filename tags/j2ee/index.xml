@@ -13,35 +13,35 @@
       <link>https://geraldnguyen.github.io/posts/2010/11/2010-11-10-initialize-ejb3-stateful-session-bean/</link>
       <pubDate>Sat, 20 Nov 2010 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/posts/2010/11/2010-11-10-initialize-ejb3-stateful-session-bean/</guid>
-      <description>In EJB 3, we can obtain a reference to Stateful Session Bean either either by using @EJB annotation or performing JNDI look-up. Yet these 2 methods do not offer you a way to initialize a Stateful SB as EJB 2.1 Home interface&amp;rsquo;s createMETHODs do.&#xA;StatefulSB bean = home.create (arg0, arg1, arg2); EJB3 defines @Init annotation as a replacement for EJB 2.1 createMETHOD. But it is intended for bean written to 2.</description>
+      <description>&lt;p&gt;In EJB 3, we can obtain a reference to Stateful Session Bean either either by using &lt;code&gt;@EJB &lt;/code&gt;annotation or performing JNDI look-up. Yet these 2 methods do not offer you a way to initialize a Stateful SB as EJB 2.1  Home interface&amp;rsquo;s &lt;code&gt;createMETHODs&lt;/code&gt; do.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;StatefulSB bean = home.create (arg0, arg1, arg2);&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;EJB3 defines &lt;code&gt;@Init&lt;/code&gt; annotation as a replacement for EJB 2.1 &lt;code&gt;createMETHOD&lt;/code&gt;. But it is intended for bean written to 2.1 client view (that means you will need to define an home interface and annotate the bean class with &lt;code&gt;@RemoteHome&lt;/code&gt; or &lt;code&gt;@LocalHome&lt;/code&gt; annotations)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Weblogic SAXParserFactory Issue</title>
       <link>https://geraldnguyen.github.io/posts/2010/10/2010-10-26-weblogic-saxparserfactory-issue/</link>
       <pubDate>Tue, 26 Oct 2010 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/posts/2010/10/2010-10-26-weblogic-saxparserfactory-issue/</guid>
-      <description>I have just wasted 1 whole day trying to debug this issues. Since I get most help from the internet, here is what I can do in return :D&#xA;I was trying to build a Spring 3.0 webapp with Tiles 2.2. Since Tiles depends on common-digester which subsequently depends on SAXParserFactory, I got stuck in a whole range of strange Weblogic behaviors.&#xA;Firstly, I got UnsupportedOperationException everytime I first access the webapp.</description>
+      <description>&lt;p&gt;I have just wasted 1 whole day trying to debug this issues. Since I get most help from the internet, here is what I can do in return :D&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;I was trying to build a Spring 3.0 webapp with Tiles 2.2. Since Tiles depends on &lt;code&gt;common-digester&lt;/code&gt; which subsequently depends on &lt;code&gt;SAXParserFactory&lt;/code&gt;, I got stuck in a whole range of strange Weblogic behaviors.&lt;/p&gt;&#xA;&lt;p&gt;Firstly, I got &lt;code&gt;UnsupportedOperationException&lt;/code&gt; everytime I first access the webapp. Subsequent access is fine, but the first always encounters that exception. Hours of googling tells me that the exception is due to weblogic&amp;rsquo;s &lt;code&gt;RegistrySAXParserFactory&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Recursive Tagfile</title>
       <link>https://geraldnguyen.github.io/posts/2010/03/2010-03-24-recursive-tagfile/</link>
       <pubDate>Wed, 24 Mar 2010 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/posts/2010/03/2010-03-24-recursive-tagfile/</guid>
-      <description>Tagfile is a good alternative for lazy people like me who hates doing java coding and XML configuration for simple task with lots of HTML codes.&#xA;But laziness knows no limit. Just now I ended up wasting haft a day on a recursive tagfile that would otherwise be completed within 1 hour at most. Yet it was an experience that&amp;rsquo;s worth sharing.&#xA;The tagfile is named catalogue.tag. Its purpose is to display recursively a hierarchy tree of catalogues.</description>
+      <description>&lt;p&gt;Tagfile is a good alternative for lazy people like me who hates doing java coding and XML configuration for simple task with lots of HTML codes.&lt;/p&gt;&#xA;&lt;p&gt;But laziness knows no limit. Just now I ended up wasting haft a day on a recursive tagfile that would otherwise be completed within 1 hour at most. Yet it was an experience that&amp;rsquo;s worth sharing.&lt;/p&gt;&#xA;&lt;p&gt;The tagfile is named &lt;code&gt;catalogue.tag&lt;/code&gt;. Its purpose is to display recursively a hierarchy tree of catalogues..&lt;/p&gt;</description>
     </item>
     <item>
       <title>Combine EJB and WAR file in a same web service EAR</title>
       <link>https://geraldnguyen.github.io/posts/2010/03/2010-03-02-combine-ejb-war-in-ear/</link>
       <pubDate>Tue, 02 Mar 2010 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/posts/2010/03/2010-03-02-combine-ejb-war-in-ear/</guid>
-      <description>That has been my challenge since yesterday. And I think I have just got it :D&#xA;Let&amp;rsquo;s see if I can reconstruct a step-by-step manual:&#xA;1. First of all, let have some understanding of the structure of a EAR file. EAR stands for Enterprise ARchive. It&amp;rsquo;s a convenient mean to to pack and deploy components of an enterprise application. Essentially, you can pack WAR, EJB, Resource Adapter and supporting libraries inside a EAR file.</description>
+      <description>&lt;p&gt;That has been my challenge since yesterday. And I think I have just got it :D&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s see if I can reconstruct a step-by-step manual:&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-first-of-all-let-have-some-understanding-of-the-structure-of-a-ear-file&#34;&gt;1. First of all, let have some understanding of the structure of a EAR file.&lt;/h3&gt;&#xA;&lt;p&gt;EAR stands for Enterprise ARchive. It&amp;rsquo;s a convenient mean to to pack and deploy components of an enterprise application. Essentially, you can pack WAR, EJB, Resource Adapter and supporting libraries inside a EAR file. Having them all in one place, as a single unit tremendously helps release management and deployment. But it does pose some challenges in the context of class-loading.&lt;/p&gt;</description>
     </item>
     <item>
       <title>J2EE Programming Tips</title>
       <link>https://geraldnguyen.github.io/posts/2009/05/2009-05-04-j2ee-tips/</link>
       <pubDate>Mon, 04 May 2009 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/posts/2009/05/2009-05-04-j2ee-tips/</guid>
-      <description>J2EE Programming Learn to program Java well. SCJP is nice to have.&#xA;Do program with performance-awareness.&#xA;Always try to optimize your program; performance is a big concern in any J2EE application.&#xA;Dont just follow what other people call best practices, they may not fit your need while being costly to implement.&#xA;J2EE application&amp;rsquo;s performance is often constraint by its interraction with database(s). Optimise your database access, data transaction management codes.</description>
+      <description>&lt;h1 id=&#34;j2ee-programming&#34;&gt;J2EE Programming&lt;/h1&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Learn to program Java well. SCJP is nice to have.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Do program with performance-awareness.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Always try to optimize your program; performance is a big concern in any J2EE application.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Dont just follow what other people call best practices, they may not fit your need while being costly to implement.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;J2EE application&amp;rsquo;s performance is often constraint by its interraction with database(s). Optimise your database access, data transaction management codes.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

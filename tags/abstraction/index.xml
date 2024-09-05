@@ -13,7 +13,7 @@
       <link>https://geraldnguyen.github.io/posts/2022/12/solid-open-close-principle/</link>
       <pubDate>Sat, 24 Dec 2022 08:00:00 -0700</pubDate>
       <guid>https://geraldnguyen.github.io/posts/2022/12/solid-open-close-principle/</guid>
-      <description>Photo by Richard Balog on Unsplash&#xA;In the physical world, a door closed is a closed door. In the software world, a closed entity may still be open for extension. And it should be so, according to the Open-closed principle (OCP).&#xA;There are 2 popular ways to apply this principle. We are going to discuss them both.&#xA;And a third option.&#xA;#1 — Inheritance This is the original application of OCP.</description>
+      <description>&lt;figure&gt;&lt;img src=&#34;https://geraldnguyen.github.io/posts/2022/12/solid-open-close-principle/0_eqhYFU2kNfQ0TrN9.jpg&#34;&#xA;    alt=&#34;Photo by Richard Balog on Unsplash&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Photo by &lt;a href=&#34;https://unsplash.com/@ricsard?utm_source=medium&amp;amp;utm_medium=referral&#34;&gt;Richard Balog&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/?utm_source=medium&amp;amp;utm_medium=referral&#34;&gt;Unsplash&lt;/a&gt;&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;In the physical world, a door closed is a closed door. In the software world, a closed entity may still be open for extension. And it should be so, according to the Open-closed principle (OCP).&lt;/p&gt;&#xA;&lt;p&gt;There are 2 popular ways to apply this principle. We are going to discuss them both.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

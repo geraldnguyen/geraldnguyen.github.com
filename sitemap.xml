@@ -113,6 +113,24 @@
     <loc>https://geraldnguyen.github.io/posts/2023/01/solid-interface-segregation-principle/</loc>
     <lastmod>2023-01-27T08:00:00-07:00</lastmod>
   </url><url>
+    <loc>https://geraldnguyen.github.io/tags/kotlin/</loc>
+    <lastmod>2023-01-17T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/</loc>
+    <lastmod>2023-01-17T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/tags/mongodb-spring-data/</loc>
+    <lastmod>2023-01-17T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/tags/rest-api/</loc>
+    <lastmod>2023-01-17T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/tags/spring/</loc>
+    <lastmod>2023-01-17T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/tags/spring-boot/</loc>
+    <lastmod>2023-01-17T09:19:42+01:00</lastmod>
+  </url><url>
     <loc>https://geraldnguyen.github.io/tags/2fa/</loc>
     <lastmod>2023-01-16T09:19:42+01:00</lastmod>
   </url><url>
@@ -167,16 +185,10 @@
     <loc>https://geraldnguyen.github.io/tags/practical/</loc>
     <lastmod>2023-01-12T09:19:42+01:00</lastmod>
   </url><url>
-    <loc>https://geraldnguyen.github.io/tags/rest-api/</loc>
-    <lastmod>2023-01-12T09:19:42+01:00</lastmod>
-  </url><url>
     <loc>https://geraldnguyen.github.io/tags/shin-tae-yong/</loc>
     <lastmod>2023-01-12T09:19:42+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/tags/southeast-asia/</loc>
-    <lastmod>2023-01-12T09:19:42+01:00</lastmod>
-  </url><url>
-    <loc>https://geraldnguyen.github.io/tags/spring/</loc>
     <lastmod>2023-01-12T09:19:42+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/posts/2023/01/solid-liskov-substitution-principle/</loc>

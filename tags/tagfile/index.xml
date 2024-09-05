@@ -13,7 +13,7 @@
       <link>https://geraldnguyen.github.io/posts/2010/03/2010-03-24-recursive-tagfile/</link>
       <pubDate>Wed, 24 Mar 2010 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/posts/2010/03/2010-03-24-recursive-tagfile/</guid>
-      <description>Tagfile is a good alternative for lazy people like me who hates doing java coding and XML configuration for simple task with lots of HTML codes.&#xA;But laziness knows no limit. Just now I ended up wasting haft a day on a recursive tagfile that would otherwise be completed within 1 hour at most. Yet it was an experience that&amp;rsquo;s worth sharing.&#xA;The tagfile is named catalogue.tag. Its purpose is to display recursively a hierarchy tree of catalogues.</description>
+      <description>&lt;p&gt;Tagfile is a good alternative for lazy people like me who hates doing java coding and XML configuration for simple task with lots of HTML codes.&lt;/p&gt;&#xA;&lt;p&gt;But laziness knows no limit. Just now I ended up wasting haft a day on a recursive tagfile that would otherwise be completed within 1 hour at most. Yet it was an experience that&amp;rsquo;s worth sharing.&lt;/p&gt;&#xA;&lt;p&gt;The tagfile is named &lt;code&gt;catalogue.tag&lt;/code&gt;. Its purpose is to display recursively a hierarchy tree of catalogues..&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

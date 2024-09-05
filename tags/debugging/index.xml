@@ -13,14 +13,14 @@
       <link>https://geraldnguyen.github.io/posts/2010/10/2010-10-26-weblogic-saxparserfactory-issue/</link>
       <pubDate>Tue, 26 Oct 2010 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/posts/2010/10/2010-10-26-weblogic-saxparserfactory-issue/</guid>
-      <description>I have just wasted 1 whole day trying to debug this issues. Since I get most help from the internet, here is what I can do in return :D&#xA;I was trying to build a Spring 3.0 webapp with Tiles 2.2. Since Tiles depends on common-digester which subsequently depends on SAXParserFactory, I got stuck in a whole range of strange Weblogic behaviors.&#xA;Firstly, I got UnsupportedOperationException everytime I first access the webapp.</description>
+      <description>&lt;p&gt;I have just wasted 1 whole day trying to debug this issues. Since I get most help from the internet, here is what I can do in return :D&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;I was trying to build a Spring 3.0 webapp with Tiles 2.2. Since Tiles depends on &lt;code&gt;common-digester&lt;/code&gt; which subsequently depends on &lt;code&gt;SAXParserFactory&lt;/code&gt;, I got stuck in a whole range of strange Weblogic behaviors.&lt;/p&gt;&#xA;&lt;p&gt;Firstly, I got &lt;code&gt;UnsupportedOperationException&lt;/code&gt; everytime I first access the webapp. Subsequent access is fine, but the first always encounters that exception. Hours of googling tells me that the exception is due to weblogic&amp;rsquo;s &lt;code&gt;RegistrySAXParserFactory&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Recursive Tagfile</title>
       <link>https://geraldnguyen.github.io/posts/2010/03/2010-03-24-recursive-tagfile/</link>
       <pubDate>Wed, 24 Mar 2010 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/posts/2010/03/2010-03-24-recursive-tagfile/</guid>
-      <description>Tagfile is a good alternative for lazy people like me who hates doing java coding and XML configuration for simple task with lots of HTML codes.&#xA;But laziness knows no limit. Just now I ended up wasting haft a day on a recursive tagfile that would otherwise be completed within 1 hour at most. Yet it was an experience that&amp;rsquo;s worth sharing.&#xA;The tagfile is named catalogue.tag. Its purpose is to display recursively a hierarchy tree of catalogues.</description>
+      <description>&lt;p&gt;Tagfile is a good alternative for lazy people like me who hates doing java coding and XML configuration for simple task with lots of HTML codes.&lt;/p&gt;&#xA;&lt;p&gt;But laziness knows no limit. Just now I ended up wasting haft a day on a recursive tagfile that would otherwise be completed within 1 hour at most. Yet it was an experience that&amp;rsquo;s worth sharing.&lt;/p&gt;&#xA;&lt;p&gt;The tagfile is named &lt;code&gt;catalogue.tag&lt;/code&gt;. Its purpose is to display recursively a hierarchy tree of catalogues..&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -13,7 +13,7 @@
       <link>https://geraldnguyen.github.io/posts/2020/09/2020-09-13-kubernetes-memory-unit/</link>
       <pubDate>Sun, 13 Sep 2020 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/posts/2020/09/2020-09-13-kubernetes-memory-unit/</guid>
-      <description>Default memory unit in Kubernetes is bytes, in addition to other shorter forms with one of supported suffixes: E, P, T, G, M, K, Ei, Pi, Ti, Gi, Mi, Ki.&#xA;For example: 128974848, 129e6, 129M , 123Mi&#xA;Have you ever wondered what do those suffixes mean?&#xA;A popular reference is https://medium.com/@betz.mark/understanding-resource-limits-in-kubernetes-memory-6b41e9a955f9&#xA;But the root definition is at https://en.wikipedia.org/wiki/Binary_prefix</description>
+      <description>&lt;p&gt;Default memory unit in Kubernetes is bytes, in addition to other shorter forms with one of supported suffixes: E, P, T, G, M, K, Ei, Pi, Ti, Gi, Mi, Ki.&lt;/p&gt;&#xA;&lt;p&gt;For example: &lt;code&gt;128974848, 129e6, 129M , 123Mi&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Have you ever wondered what do those suffixes mean?&lt;/p&gt;&#xA;&lt;p&gt;A popular reference is &lt;a href=&#34;https://medium.com/@betz.mark/understanding-resource-limits-in-kubernetes-memory-6b41e9a955f9&#34;&gt;https://medium.com/@betz.mark/understanding-resource-limits-in-kubernetes-memory-6b41e9a955f9&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;But the root definition is at &lt;a href=&#34;https://en.wikipedia.org/wiki/Binary_prefix&#34;&gt;https://en.wikipedia.org/wiki/Binary_prefix&lt;/a&gt;&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;</description>
     </item>
   </channel>
 </rss>

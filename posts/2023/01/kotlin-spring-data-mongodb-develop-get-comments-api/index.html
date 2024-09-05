@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>Kotlin, Spring Data, and MongoDB: Develop a “GET /comments” API endpoint</title>
+<meta data-rh="true" property="og:url" content="https://geraldnguyen.github.io/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/">
+<meta data-rh="true" property="og:title" content="Kotlin, Spring Data, and MongoDB: Develop a “GET /comments” API endpoint">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://geraldnguyen.github.io/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.c26f43265fe59e08f5f7f91bc6df440219638e2c9ed43736fd053a50a9963e69.css" integrity="sha256-wm9DJl/lngj19/kbxt9EAhljjiye1Dc2/QU6UKmWPmk=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HRKMT2G8N9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HRKMT2G8N9');
+</script>
+
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>Kotlin, Spring Data, and MongoDB: Develop a “GET /comments” API endpoint</h1>
+
+<h2 class="subtitle">With 4 Flavors of Data Retrieval</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://geraldnguyen.github.io/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://geraldnguyen.github.io/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>12 min read</span>
+      <span>·</span>
+      <span><time datetime="2023-01-17T09:19:42&#43;01:00">January 17, 2023</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2023/01/shift-left-testing/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2023/01/solid-interface-segregation-principle/">Next</a>
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1--create-a-kotlin--spring-data--mongodb-project">#1 — Create a Kotlin + Spring Data + MongoDB project</a></li>
+    <li><a href="#2--create-a-free-mongodb-instance">#2 — Create a free MongoDB instance</a>
+      <ul>
+        <li><a href="#load-the-sample-data">Load the sample data</a></li>
+      </ul>
+    </li>
+    <li><a href="#3--configure-mongodb-connection-string-in-springboot">#3 — Configure MongoDB Connection String in Springboot</a></li>
+    <li><a href="#4--flavor-1-retrieve-all">#4 — Flavor #1: Retrieve all</a>
+      <ul>
+        <li><a href="#the-comment-data-model">The Comment data model</a></li>
+        <li><a href="#the-commentrepository-interface">The CommentRepository interface</a></li>
+        <li><a href="#the-commentcontroller">The CommentController</a></li>
+        <li><a href="#improve-commentcontrollers-performance">Improve <code>CommentController</code>’s performance</a></li>
+      </ul>
+    </li>
+    <li><a href="#5--flavor-2-filtering-by-exact-matching">#5 — Flavor #2: Filtering by exact matching</a>
+      <ul>
+        <li><a href="#search-comments-by-email">Search comments by email</a></li>
+      </ul>
+    </li>
+    <li><a href="#6--flavor-3-filtering-by-partialsubstring-matching">#6 — Flavor #3: Filtering by partial/substring matching</a></li>
+    <li><a href="#7--flavor-4--full-text-search">#7 — Flavor #4 — Full-text search</a>
+      <ul>
+        <li><a href="#enabling-indexing-in-the-mongodb-database">Enabling Indexing in the MongoDB database</a></li>
+        <li><a href="#adding-a-keyword-search-option">Adding a “keyword” search option</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/0_-YMPGEafKe0F0T-m.webp"
+    alt="Photo by Pratiksha Mohanty on Unsplash"><figcaption>
+      <p>Photo by <a href="https://unsplash.com/@pratiksha_mohanty?utm_source=medium&amp;utm_medium=referral">Pratiksha Mohanty</a> on <a href="https://unsplash.com/?utm_source=medium&amp;utm_medium=referral">Unsplash</a></p>
+    </figcaption>
+</figure>
+
+<p><strong><em>TL;DR</em></strong></p>
+<p><em>The 4 flavors are:</em></p>
+<ol>
+<li><strong><em>Retrieve ALL</em></strong> <em>— more details at step #4</em></li>
+<li><strong><em>Filtering by exact matching</em></strong> <em>— more details at step #5</em></li>
+<li><strong><em>Filtering by partial/substring matching</em></strong> <em>— more details at step #6</em></li>
+<li><strong><em>Filtering by full-text search</em></strong> <em>— more details at step #7</em></li>
+</ol>
+<p><em>Sample codes:</em> <a href="https://github.com/geraldnguyen/kotlin-springdata-mongodb">https://github.com/geraldnguyen/kotlin-springdata-mongodb</a></p>
+<h1 id="1--create-a-kotlin--spring-data--mongodb-project">#1 — Create a Kotlin + Spring Data + MongoDB project</h1>
+<p>Let us start by creating a simple project with <a href="https://start.spring.io/">Spring Initializr</a>:</p>
+<ul>
+<li>Language: Kotlin</li>
+<li>Dependencies: Spring Data MongoDB, Spring Web</li>
+</ul>
+<figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1_lx_H1SJkZY1imKsnqVcqyQ.png"
+    alt="Spring Initializr configuration (screenshot)"><figcaption>
+      <p>Spring Initializr configuration (screenshot)</p>
+    </figcaption>
+</figure>
+
+<p>Once you download the generated project and set it up on your local machine, let’s start it up to verify that it is working. You may notice some errors in the server’s console, but that is okay since we have not setup any MongoDB connection details</p>
+<figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1_px2wAdbzy6kqmU50QKwkxA.png"
+    alt="MongoDB connection errors (screenshot)"><figcaption>
+      <p>MongoDB connection errors (screenshot)</p>
+    </figcaption>
+</figure>
+
+<h1 id="2--create-a-free-mongodb-instance">#2 — Create a free MongoDB instance</h1>
+<p>Head over to <a href="https://www.mongodb.com/cloud/atlas/register">https://www.mongodb.com/cloud/atlas/register</a> to register a free instance of MongoDB. We’ll use a shared cluster because it fits our learning purpose and is free.</p>
+<figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1_RPWvk3XipZsTlzWpLE5wUQ.png"
+    alt="Create a free MongoDB instance"><figcaption>
+      <p>Create a free MongoDB instance</p>
+    </figcaption>
+</figure>
+
+<p>Next, we create a DB user</p>
+<figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1_RQ8jX8zIBDWUFw0X659xTQ.png"
+    alt="Setup DB user"><figcaption>
+      <p>Setup DB user</p>
+    </figcaption>
+</figure>
+
+<p>And then set up the network access security. You can add <code>0.0.0.0/0</code> to the IP address field to allow access from anywhere.</p>
+<figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1_28PrsaR_8bUdUCCh3milTQ.png"
+    alt="Set up network access"><figcaption>
+      <p>Set up network access</p>
+    </figcaption>
+</figure>
+
+<h2 id="load-the-sample-data">Load the sample data</h2>
+<p>MongoDB Atlas comes with several sample databases. Let’s load them into our cluster.</p>
+<figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1_fxN7eiM0cJwWxIsAGdqJCw.png"
+    alt="Load sample databases"><figcaption>
+      <p>Load sample databases</p>
+    </figcaption>
+</figure>
+
+<p>While it takes some time to finish loading all databases, you can already click on the Browse Collection button to explore the sample data.</p>
+<figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1__8J13squpHi01kiSxN485w.png"
+    alt="Partially loaded sample data"><figcaption>
+      <p>Partially loaded sample data</p>
+    </figcaption>
+</figure>
+
+<h1 id="3--configure-mongodb-connection-string-in-springboot">#3 — Configure MongoDB Connection String in Springboot</h1>
+<p>Find the Connect button within MongoDB’s Database screen</p>
+<figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1_Fjw8NKNwEdn9ACtz35LcWA.png"
+    alt="The Connect button"><figcaption>
+      <p>The Connect button</p>
+    </figcaption>
+</figure>
+
+<p>Then select <strong>Connect your application</strong></p>
+<figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1_qtzUA7XrWHgA0-9dPuc1ug.png"
+    alt="Different connection options"><figcaption>
+      <p>Different connection options</p>
+    </figcaption>
+</figure>
+
+<p>Then select the correct driver (Java, latest version) and copy the connection string.</p>
+<figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1_yppqu-HIFXEtTfnF39anuw.png"
+    alt="Copy the connection string"><figcaption>
+      <p>Copy the connection string</p>
+    </figcaption>
+</figure>
+
+<p>Back to your IDE, edit the application configuration to add a new environment variable <code>MONGODB_URI</code> with the value from the copied connection string (with the DB user’s password correctly updated)</p>
+<figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1_LM-2d8lB8CDJ_iRNI5379g.png"
+    alt="Adding a new environment variable in IntelliJ"><figcaption>
+      <p>Adding a new environment variable in IntelliJ</p>
+    </figcaption>
+</figure>
+
+<p>Let’s enter the following into the <code>application.properties</code> file and restart the application. The MongoDB connection errors should go away.</p>
+<pre tabindex="0"><code>spring.data.mongodb.uri=${MONGODB_URI}  
+spring.data.mongodb.database=sample_mflix
+</code></pre><p>Take note that we specified the sample database “sample_mflix” in the <code>application.properties</code> file. Our application will connect to this database by default.</p>
+<h1 id="4--flavor-1-retrieve-all">#4 — Flavor #1: Retrieve all</h1>
+<p>Let’s create 3 new Kotlin classes in our application:</p>
+<ul>
+<li><code>&lt;your-project&gt;.api.CommentController</code>: The REST controller for the <code>/comments</code> endpoint. We use this API to selectively expose our database to outsiders. This is also our main medium for testing.</li>
+<li><code>&lt;your-project&gt;.api.data.Comment</code>: The data model for Comment collection</li>
+<li><code>&lt;your-project&gt;.api.data.CommentRepository</code>: The data <em>repository</em> for Comment collection. A repository is an interface where we declare various methods for retrieving data from or updating data in the database. Spring Data by default provides ready-to-use methods such as <code>findAll</code> or <code>findById</code>. We can also declare our own. The actual low-level protocol-specific implementation is intelligently provided by the Spring Data library.</li>
+</ul>
+<figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1_83tWMixdJj_0vl_wEjk7EQ.png">
+</figure>
+
+<h2 id="the-comment-data-model">The Comment data model</h2>
+<p>The <code>Comment</code> class follows closely the “comments” collections in the sample “sample_mflix” database.</p>
+<p>Provided that each field’s name is the same as the collection’s property, we only need to annotate the class with <code>@Document(&quot;&lt;collection-name&gt;&quot;)</code> at the class level, and <code>@Id</code> at field <code>id</code> level to make it work.</p>
+<p>The <code>@Field(&quot;movie_id&quot;)</code> is necessary here because we do not want to name the field <code>movie_id</code> as that does not follow Kotlin’s naming convention.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#3c5d5d;font-weight:bold">@Document</span>(<span style="color:#d14">&#34;comments&#34;</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">Comment</span><span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@Id</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>lateinit<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">var</span><span style="color:#bbb"> </span>id:<span style="color:#bbb"> </span>String<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>lateinit<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">var</span><span style="color:#bbb"> </span>name:<span style="color:#bbb"> </span>String<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>lateinit<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">var</span><span style="color:#bbb"> </span>email:<span style="color:#bbb"> </span>String<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@Field</span>(<span style="color:#d14">&#34;movie_id&#34;</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>lateinit<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">var</span><span style="color:#bbb"> </span>movieId:<span style="color:#bbb"> </span>String<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>lateinit<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">var</span><span style="color:#bbb"> </span>text:<span style="color:#bbb"> </span>String<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>lateinit<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">var</span><span style="color:#bbb"> </span>date:<span style="color:#bbb"> </span>LocalDateTime<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1_UEvBVotELo-yKjxyYzmbXw.png"
+    alt="A record from the “comments” collection"><figcaption>
+      <p>A record from the “comments” collection</p>
+    </figcaption>
+</figure>
+
+<h2 id="the-commentrepository-interface">The CommentRepository interface</h2>
+<p>If you find the <code>Comment</code> class simple, you will be delighted to see the content of <code>CommentRepository.kt</code> file:</p>
+<p>interface CommentRepository : MongoRepository&lt;Comment, String&gt;</p>
+<p>Yes, it is a one-liner.</p>
+<p>The <code>CommentRepository</code> interface extends from Spring Data’s <code>MongoRepository</code> interface. The extra <code>&lt;Comment, Spring&gt;</code> to the right of <code>MongoRepository</code> is for Spring Data to know which data model to generate an implementation for and which primary key to use in that model.</p>
+<p>As I mentioned earlier, Spring Data provided some ready-use methods such as <code>findAll</code> or <code>findById</code> which we can use straight away.</p>
+<h2 id="the-commentcontroller">The CommentController</h2>
+<p>We will keep the controller simple, yet it is still enough to demonstrate the implementation of the first flavor.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#3c5d5d;font-weight:bold">@RestController</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#3c5d5d;font-weight:bold">@RequestMapping</span>(<span style="color:#d14">&#34;/comments&#34;</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">CommentController</span><span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@Autowired</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>lateinit<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">var</span><span style="color:#bbb"> </span>commentRepository:<span style="color:#bbb"> </span>CommentRepository<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@GetMapping</span>(value<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">[</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span>,<span style="color:#bbb"> </span><span style="color:#d14">&#34;/&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">]</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>fun<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">listAll</span>():<span style="color:#bbb"> </span>List<span style="color:#000;font-weight:bold">&lt;</span>Comment<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>commentRepository.<span style="color:#008080">findAll</span>()<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>The key thing to note in this controller is <code>commentRepository.findAll()</code>. This statement calls the method <code>findAll()</code> on the <code>commentRepository</code> to retrieve all<code>Comment</code> records from the database. Because we don’t need any extra processing, we simply <code>return</code> the result to the caller.</p>
+<p>Let’s restart our application and enter <code>http://localhost:8080/comments</code> to a browser.</p>
+<figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1_2s8OKrzk35Pcj02NgHg1mg.png"
+    alt="http://localhost:8080/comments"><figcaption>
+      <p>http://localhost:8080/comments</p>
+    </figcaption>
+</figure>
+
+<blockquote>
+<p>You can check out the branch <a href="https://github.com/geraldnguyen/kotlin-springdata-mongodb/tree/flavor_1"><code>flavor_1</code></a> to try out the codes</p>
+</blockquote>
+<h2 id="improve-commentcontrollers-performance">Improve <code>CommentController</code>’s performance</h2>
+<p>If you have run the above flavor #1 codes, you will notice lots of text from a large JSON document rendered on the browser. It took a while (10 seconds in my machine) to finish loading as well.</p>
+<p>The reason for this slowness is that the application really retrieved all 41079 records from the database. That is just too many records! The application’s performance suffered as a result. The free Mongo Atlas probably was not happy either if we kept doing so.</p>
+<p>Let’s improve it with a technique called pagination. Refer to the new controller code below.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#3c5d5d;font-weight:bold">@RestController</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#3c5d5d;font-weight:bold">@RequestMapping</span>(<span style="color:#d14">&#34;/comments&#34;</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">CommentController</span><span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@Autowired</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span>lateinit<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">var</span><span style="color:#bbb"> </span>commentRepository:<span style="color:#bbb"> </span>CommentRepository<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@GetMapping</span>(value<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">[</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span>,<span style="color:#bbb"> </span><span style="color:#d14">&#34;/&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">]</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>fun<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">listAll</span>(<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#3c5d5d;font-weight:bold">@RequestParam</span>(value<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;_size&#34;</span>,<span style="color:#bbb"> </span>required<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">false</span>,<span style="color:#bbb"> </span>defaultValue<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;10&#34;</span>)<span style="color:#bbb"> </span>size:<span style="color:#bbb"> </span>Int,<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#3c5d5d;font-weight:bold">@RequestParam</span>(value<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;_page&#34;</span>,<span style="color:#bbb"> </span>required<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">false</span>,<span style="color:#bbb"> </span>defaultValue<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;0&#34;</span>)<span style="color:#bbb"> </span>page:<span style="color:#bbb"> </span>Int<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>):<span style="color:#bbb"> </span>List<span style="color:#000;font-weight:bold">&lt;</span>Comment<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>val<span style="color:#bbb"> </span>pageable<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>Pageable.<span style="color:#008080">ofSize</span>(size).<span style="color:#008080">withPage</span>(page);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>val<span style="color:#bbb"> </span>result:<span style="color:#bbb"> </span>Page<span style="color:#000;font-weight:bold">&lt;</span>Comment<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>commentRepository.<span style="color:#008080">findAll</span>(pageable)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>result.<span style="color:#008080">content</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>You would have noticed that we added 2 new <code>@RequestParam</code> namely <code>_size</code> and <code>_page</code>. They capture the values provided in the URL query param of the same names. They are not mandatory and have default values so that we can continue opening <code>http://localhost:8080/comments</code> to load the first 10 records.</p>
+<p>We use these parameters in the statement <code>Pageable.ofSize(size).withPage(page)</code> to create an object of type <code>Pageable</code> which we then pass into the method <code>findAll</code> of the repository. Spring Data will use the information there to split the data into multiple pages (starting from index 0) of the specified <code>_size</code>, then retrieve the data from the specified <code>_page</code>. The return from this <code>findAll(Pageable)</code> statement is a <code>Page&lt;Comment&gt;</code> object, hence we need to access<code>result.content</code> to get the final list which we simply return to the caller.</p>
+<p>Let’s restart the application and try to open <code>http://localhost:8080/comments</code>.</p>
+<figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1_1TTthxVKY8kymXnT6wfsLg.png"
+    alt="http://localhost:8080/comments"><figcaption>
+      <p>http://localhost:8080/comments</p>
+    </figcaption>
+</figure>
+
+<p>Much improve! Don’t you think so?</p>
+<p>Now let’s try <code>http://localhost:8080/comments?_size=100</code> or <code>http://localhost:8080/comments?_size=2&amp;_page=1</code> if you notice any difference.</p>
+<figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1_5HoWJBqZUlkRKwBOjTmTbg.png"
+    alt="http://localhost:8080/comments?_size=2&amp;_page=1"><figcaption>
+      <p>http://localhost:8080/comments?_size=2&amp;_page=1</p>
+    </figcaption>
+</figure>
+
+<p>Yes, the number of records and the positions of those records in the database collection changes according to the <code>_size</code> and <code>_page</code> parameters.</p>
+<blockquote>
+<p>You can check out the branch <a href="https://github.com/geraldnguyen/kotlin-springdata-mongodb/tree/flavor_1_with_pagination"><code>flavor_1_with_pagination</code></a> to examine the codes</p>
+<p>I used <a href="https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa">JSON Formatter chrome extension</a> to nicely format the response. Your browser may look different.</p>
+</blockquote>
+<h1 id="5--flavor-2-filtering-by-exact-matching">#5 — Flavor #2: Filtering by exact matching</h1>
+<p>Once we are able to retrieve a list of comments, sometimes we like to view a single comment in detail. Since each comment <em>uniquely</em> identified by its <code>id</code> attribute, we can create an additional API endpoint <code>/comments/&lt;id&gt;</code> to retrieve <em>exactly</em> the comment we are interested in.</p>
+<p>Let’s add the following implementation for that endpoint to the <code>CommentController</code>. What’s new in these codes is the use of the method <code>findById(id)</code> from the <code>commentRepository</code> instance to retrieve the single record exactly matching the provided <code>id</code> value. The method returns an <code>Optional&lt;Comment&gt;</code> instance (because the <code>id</code> value may not match any record), hence we need to call its <code>get()</code> method to retrieve the actual <code>Comment</code> record.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@GetMapping</span>(value<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">[</span><span style="color:#d14">&#34;/{id}&#34;</span><span style="color:#000;font-weight:bold">]</span><span style="color:#bbb"> </span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>fun<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">findById</span>(<span style="color:#3c5d5d;font-weight:bold">@PathVariable</span>(<span style="color:#d14">&#34;id&#34;</span>)<span style="color:#bbb"> </span>id:<span style="color:#bbb"> </span>String):<span style="color:#bbb"> </span>Comment<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>commentRepository.<span style="color:#008080">findById</span>(id).<span style="color:#008080">get</span>();<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>Let’s restart the application and enter <code>http://localhost:8080/comments/5a9427648b0beebeb6957a4b</code> in the browser’s address bar</p>
+<figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1_nHgaj-zSULZ72M1aA8xY2g.png"
+    alt="http://localhost:8080/comments/5a9427648b0beebeb6957a4b"><figcaption>
+      <p>http://localhost:8080/comments/5a9427648b0beebeb6957a4b</p>
+    </figcaption>
+</figure>
+
+<blockquote>
+<p>You can check out git branch <code>flavor_2_by_id</code> to examine the codes</p>
+<p>In practice, we should validate the user-provided <code>_id_</code> value and reject all malicious input. We should also check if the result from <code>_findById()_</code> actually contains any value before calling its <code>_get()_</code> method. For brevity, however, such codes are omited in this tutorial.</p>
+</blockquote>
+<h2 id="search-comments-by-email">Search comments by email</h2>
+<p>Let’s up our application a little bit by enabling searching by email.</p>
+<p>To enable this feature, we first need to enable this capability in the <code>CommentRepository</code> by adding method <code>findByEmailIgnoreCase(email: String, pageable: Pageable)</code>. Notice how the method’s name is constructed from <code>findBy</code> + <code>Email</code> + <code>IgnoreCase</code> and how we need not provide any implementation. This is the magic of Spring Data. It knows from the name that we want to <em>find</em> all records matching the <em>email</em> attribute (which is passed in as the first parameter) and <em>ignore case</em> (e.g. <em>abc@GMAIL.com</em> is the same as <em>abc@gmail.com</em>). We still like to paginate the result, hence we keep the <code>Pageable</code> parameter.</p>
+<p>interface CommentRepository : MongoRepository&lt;Comment, String&gt;{<br>
+fun findByEmailIgnoreCase(email: String, pageable: Pageable): Page<!-- raw HTML omitted --><br>
+}</p>
+<p>On the <code>CommentController</code>, we need to make a small modification to call the new <code>CommentRepository</code>’s method. Take note of the new parameter <code>email</code>. If it contains some value (i.e. it is not <code>isNullOrBlank()</code>), then we will call <code>commentRepository.findByEmailIgnoreCase(email, pageable)</code> to search all comments matching the specified <code>email</code> value regardless of its case.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#3c5d5d;font-weight:bold">@GetMapping</span>(value<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">[</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span>,<span style="color:#bbb"> </span><span style="color:#d14">&#34;/&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">]</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>fun<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">listAll</span>(<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@RequestParam</span>(value<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;email&#34;</span>,<span style="color:#bbb"> </span>required<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">false</span>)<span style="color:#bbb"> </span>email:<span style="color:#bbb"> </span>String<span style="color:#000;font-weight:bold">?</span>,<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@RequestParam</span>(value<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;_size&#34;</span>,<span style="color:#bbb"> </span>required<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">false</span>,<span style="color:#bbb"> </span>defaultValue<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;10&#34;</span>)<span style="color:#bbb"> </span>size:<span style="color:#bbb"> </span>Int,<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@RequestParam</span>(value<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;_page&#34;</span>,<span style="color:#bbb"> </span>required<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">false</span>,<span style="color:#bbb"> </span>defaultValue<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;0&#34;</span>)<span style="color:#bbb"> </span>page:<span style="color:#bbb"> </span>Int<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>):<span style="color:#bbb"> </span>List<span style="color:#000;font-weight:bold">&lt;</span>Comment<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>lateinit<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">var</span><span style="color:#bbb"> </span>result:<span style="color:#bbb"> </span>Page<span style="color:#000;font-weight:bold">&lt;</span>Comment<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>val<span style="color:#bbb"> </span>pageable<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>Pageable.<span style="color:#008080">ofSize</span>(size).<span style="color:#008080">withPage</span>(page);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>when<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">!</span>email.<span style="color:#008080">isNullOrBlank</span>()<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-&gt;</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>result<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>commentRepository.<span style="color:#008080">findByEmailIgnoreCase</span>(email,<span style="color:#bbb"> </span>pageable)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">else</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-&gt;</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>result<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>commentRepository.<span style="color:#008080">findAll</span>(pageable)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>result.<span style="color:#008080">content</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>Let’s give it a test by restarting the application and visit <code>http://localhost:8080/comments?email=john_bishop@fakegmail.com</code> or any other emails that catch your interest.</p>
+<figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1_9PtKyPv9W34Q1H0VydZJUQ.png"
+    alt="http://localhost:8080/comments?email=john_bishop@fakegmail.com"><figcaption>
+      <p>http://localhost:8080/comments?email=john_<a href="mailto:bishop@fakegmail.com">bishop@fakegmail.com</a></p>
+    </figcaption>
+</figure>
+
+<blockquote>
+<p>With only 1 additional parameter from the previous version, we could have use <code>_if...else_</code> instead of <code>_when_</code>. However, as you will see in next section, using <code>_when_</code> allows us to support other flavors with cleaner codes.</p>
+<p>You can check out git branch <a href="https://github.com/geraldnguyen/kotlin-springdata-mongodb/tree/flavor_2_by_id"><code>flavor_2_by_id</code></a> to examine the codes</p>
+</blockquote>
+<h1 id="6--flavor-3-filtering-by-partialsubstring-matching">#6 — Flavor #3: Filtering by partial/substring matching</h1>
+<p>With the search-by-email feature available, our users were very happy. For a while. Then they demanded more. This time they wanted the ability to search for comments by specifying the author’s name. That’s easy, you think — it’s flavor #2, you already knew how to do it. Nope, our users do not want to type in the full name, just part of it like first name or last name.</p>
+<p>That’s flavor #3. We will get it done in this section.</p>
+<p>The secret ingredient for flavor #3 is in the <code>CommentRepository</code>. Similar to search-by-email, we first need to create a suitable method. The new method <code>findByNameContainingIgnoreCase(name: String, pageable: Pageable)</code> is very similar to its older cousin except for the <code>Containing</code> keyword following the matching attribute’s name. <code>Containing</code> is a Spring Data keyword that tells Spring to perform partial or substring matching instead of exact matching. <code>Containing</code> will return a record with the name “John Doe” when searching with “John” or “Doe”.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">interface</span> <span style="color:#458;font-weight:bold">CommentRepository</span><span style="color:#bbb"> </span>:<span style="color:#bbb"> </span>MongoRepository<span style="color:#000;font-weight:bold">&lt;</span>Comment,<span style="color:#bbb"> </span>String<span style="color:#a61717;background-color:#e3d2d2">\</span><span style="color:#000;font-weight:bold">&gt;</span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>fun<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">findByEmailIgnoreCase</span>(email:<span style="color:#bbb"> </span>String,<span style="color:#bbb"> </span>pageable:<span style="color:#bbb"> </span>Pageable):<span style="color:#bbb"> </span>Page<span style="color:#000;font-weight:bold">&lt;</span>Comment<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>fun<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">findByNameContainingIgnoreCase</span>(name:<span style="color:#bbb"> </span>String,<span style="color:#bbb"> </span>pageable:<span style="color:#bbb"> </span>Pageable):<span style="color:#bbb"> </span>Page<span style="color:#000;font-weight:bold">&lt;</span>Comment<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>The remaining task in the <code>CommentController</code> is easy. Notice how we add a new parameter <code>name</code> and a new matching condition in the <code>when</code> statement.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#3c5d5d;font-weight:bold">@GetMapping</span>(value<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">[</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span>,<span style="color:#bbb"> </span><span style="color:#d14">&#34;/&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">]</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>fun<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">listAll</span>(<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@RequestParam</span>(value<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;email&#34;</span>,<span style="color:#bbb"> </span>required<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">false</span>)<span style="color:#bbb"> </span>email:<span style="color:#bbb"> </span>String<span style="color:#000;font-weight:bold">?</span>,<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@RequestParam</span>(value<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;name&#34;</span>,<span style="color:#bbb"> </span>required<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">false</span>)<span style="color:#bbb"> </span>name:<span style="color:#bbb"> </span>String<span style="color:#000;font-weight:bold">?</span>,<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@RequestParam</span>(value<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;_size&#34;</span>,<span style="color:#bbb"> </span>required<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">false</span>,<span style="color:#bbb"> </span>defaultValue<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;10&#34;</span>)<span style="color:#bbb"> </span>size:<span style="color:#bbb"> </span>Int,<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@RequestParam</span>(value<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;_page&#34;</span>,<span style="color:#bbb"> </span>required<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">false</span>,<span style="color:#bbb"> </span>defaultValue<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;0&#34;</span>)<span style="color:#bbb"> </span>page:<span style="color:#bbb"> </span>Int<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>):<span style="color:#bbb"> </span>List<span style="color:#000;font-weight:bold">&lt;</span>Comment<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>lateinit<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">var</span><span style="color:#bbb"> </span>result:<span style="color:#bbb"> </span>Page<span style="color:#000;font-weight:bold">&lt;</span>Comment<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>val<span style="color:#bbb"> </span>pageable<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>Pageable.<span style="color:#008080">ofSize</span>(size).<span style="color:#008080">withPage</span>(page);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>when<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">!</span>email.<span style="color:#008080">isNullOrBlank</span>()<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-&gt;</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>result<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>commentRepository.<span style="color:#008080">findByEmailIgnoreCase</span>(email,<span style="color:#bbb"> </span>pageable)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">!</span>name.<span style="color:#008080">isNullOrBlank</span>()<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-&gt;</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>result<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>commentRepository.<span style="color:#008080">findByNameContainingIgnoreCase</span>(name,<span style="color:#bbb"> </span>pageable)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">else</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-&gt;</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>result<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>commentRepository.<span style="color:#008080">findAll</span>(pageable)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>result.<span style="color:#008080">content</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>Again, let’s test it by restarting the application, then opening <code>http://localhost:8080/comments?name=roman</code> in a browser.</p>
+<figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1_IcCeA_9k-2VJ7SAealzGhA.png"
+    alt="http://localhost:8080/comments?name=roman"><figcaption>
+      <p>http://localhost:8080/comments?name=roman</p>
+    </figcaption>
+</figure>
+
+<blockquote>
+<p>You can check out git branch <a href="https://github.com/geraldnguyen/kotlin-springdata-mongodb/tree/flavor_3"><code>flavor_3</code></a> to examine the codes</p>
+</blockquote>
+<h1 id="7--flavor-4--full-text-search">#7 — Flavor #4 — Full-text search</h1>
+<p>Our users want more. They want a generic search for the name, email, and content of the comment itself, and they want the search to be <em>more intelligent.</em> For example, they wanted “<em>ran</em>” and “<em>run</em>” to return the same results, so do “<em>go</em>”, “<em>goes</em>” and “<em>went</em>”, so do “<em>dress</em>” and “<em>dresses</em>”, and so on. These capabilities are beyond what flavors #1, #2 and #3 can offer.</p>
+<p>To the rescue is flavor #4 — Full-text search. This feature just requires an extra configuration on the DB side but otherwise is straightforward.</p>
+<h2 id="enabling-indexing-in-the-mongodb-database">Enabling Indexing in the MongoDB database</h2>
+<p>Let’s open the “<strong>comments</strong>” collection in the “<strong>sample_mflix”</strong> database in your MongoDB cluster. Then open the Indexes tab and click on the Create Index button. That should bring up a modal like the one below.</p>
+<figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1_BE092PEjTrUKlBENr2yZ6Q.png">
+</figure>
+
+<p>Put the same content below into the Fields text area, click Review and then Confirm to create the index.</p>
+<pre tabindex="0"><code>{  
+  &#34;name&#34;: &#34;text&#34;,  
+  &#34;email&#34;: &#34;text&#34;,  
+  &#34;text&#34;: &#34;text&#34;  
+}
+</code></pre><p>What we have just done is create a <a href="https://www.mongodb.com/docs/manual/core/index-text/">text index</a> on 3 fields “name”, “email” and “text” of the “comments” collection. A text index enables full-text searching on the specified fields.</p>
+<h2 id="adding-a-keyword-search-option">Adding a “keyword” search option</h2>
+<p>Back to our Kotlin and Spring Data codes. We will add a new search parameter named <code>keyword</code> with a small modification to the <code>CommentController</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#3c5d5d;font-weight:bold">@GetMapping</span>(value<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">[</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span>,<span style="color:#bbb"> </span><span style="color:#d14">&#34;/&#34;</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">]</span>)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>fun<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">listAll</span>(<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@RequestParam</span>(value<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;email&#34;</span>,<span style="color:#bbb"> </span>required<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">false</span>)<span style="color:#bbb"> </span>email:<span style="color:#bbb"> </span>String<span style="color:#000;font-weight:bold">?</span>,<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@RequestParam</span>(value<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;name&#34;</span>,<span style="color:#bbb"> </span>required<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">false</span>)<span style="color:#bbb"> </span>name:<span style="color:#bbb"> </span>String<span style="color:#000;font-weight:bold">?</span>,<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@RequestParam</span>(value<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;keyword&#34;</span>,<span style="color:#bbb"> </span>required<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">false</span>)<span style="color:#bbb"> </span>keyword:<span style="color:#bbb"> </span>String<span style="color:#000;font-weight:bold">?</span>,<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@RequestParam</span>(value<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;_size&#34;</span>,<span style="color:#bbb"> </span>required<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">false</span>,<span style="color:#bbb"> </span>defaultValue<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;10&#34;</span>)<span style="color:#bbb"> </span>size:<span style="color:#bbb"> </span>Int,<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#3c5d5d;font-weight:bold">@RequestParam</span>(value<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;_page&#34;</span>,<span style="color:#bbb"> </span>required<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">false</span>,<span style="color:#bbb"> </span>defaultValue<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;0&#34;</span>)<span style="color:#bbb"> </span>page:<span style="color:#bbb"> </span>Int<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>):<span style="color:#bbb"> </span>List<span style="color:#000;font-weight:bold">&lt;</span>Comment<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>lateinit<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">var</span><span style="color:#bbb"> </span>result:<span style="color:#bbb"> </span>Page<span style="color:#000;font-weight:bold">&lt;</span>Comment<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>val<span style="color:#bbb"> </span>pageable<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>Pageable.<span style="color:#008080">ofSize</span>(size).<span style="color:#008080">withPage</span>(page);<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>when<span style="color:#bbb"> </span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">!</span>email.<span style="color:#008080">isNullOrBlank</span>()<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-&gt;</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>result<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>commentRepository.<span style="color:#008080">findByEmailIgnoreCase</span>(email,<span style="color:#bbb"> </span>pageable)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">!</span>name.<span style="color:#008080">isNullOrBlank</span>()<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-&gt;</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>result<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>commentRepository.<span style="color:#008080">findByNameContainingIgnoreCase</span>(name,<span style="color:#bbb"> </span>pageable)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">!</span>keyword.<span style="color:#008080">isNullOrBlank</span>()<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-&gt;</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>result<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>commentRepository.<span style="color:#008080">findAllBy</span>(TextCriteria.<span style="color:#008080">forDefaultLanguage</span>().<span style="color:#008080">matching</span>(keyword),<span style="color:#bbb"> </span>pageable)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">else</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">-&gt;</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>result<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>commentRepository.<span style="color:#008080">findAll</span>(pageable)<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>result.<span style="color:#008080">content</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>Notice this statement <code>commentRepository.findAllBy(TextCriteria.forDefaultLanguage().matching(keyword), pageable)</code>. What it does is create a full-text search criterion matching the specified <code>keyword</code>, then we send that criterion to the <code>CommentRepository</code> to forward it to MongoDB server.</p>
+<p>Of course, we need to add a <code>findAllBy(TextCriteria, Pageable)</code> method to the repository</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">interface</span> <span style="color:#458;font-weight:bold">CommentRepository</span><span style="color:#bbb"> </span>:<span style="color:#bbb"> </span>MongoRepository<span style="color:#000;font-weight:bold">&lt;</span>Comment,<span style="color:#bbb"> </span>String<span style="color:#a61717;background-color:#e3d2d2">\</span><span style="color:#000;font-weight:bold">&gt;</span>{<span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>fun<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">findByEmailIgnoreCase</span>(email:<span style="color:#bbb"> </span>String,<span style="color:#bbb"> </span>pageable:<span style="color:#bbb"> </span>Pageable):<span style="color:#bbb"> </span>Page<span style="color:#000;font-weight:bold">&lt;</span>Comment<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>fun<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">findByNameContainingIgnoreCase</span>(name:<span style="color:#bbb"> </span>String,<span style="color:#bbb"> </span>pageable:<span style="color:#bbb"> </span>Pageable):<span style="color:#bbb"> </span>Page<span style="color:#000;font-weight:bold">&lt;</span>Comment<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>fun<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">findAllBy</span>(textCriteria:<span style="color:#bbb"> </span>TextCriteria,<span style="color:#bbb"> </span>pageable:<span style="color:#bbb"> </span>Pageable):<span style="color:#bbb"> </span>Page<span style="color:#000;font-weight:bold">&lt;</span>Comment<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb">  
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>That is all needed to perform a full-text search.</p>
+<p>Let’s restart the application and try different keywords such as:</p>
+<ul>
+<li>“gameofthron” for <em>email</em></li>
+<li>“roberts” for <em>name</em> — notice how the search result contains matching for both “Robert” and “Roberts”</li>
+<li>and “officiis” for <em>text</em></li>
+</ul>
+<figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1_NzUM9ns78a7FrtDBEiqa9w.png"
+    alt="http://localhost:8080/comments?keyword=gameofthron"><figcaption>
+      <p>http://localhost:8080/comments?keyword=gameofthron</p>
+    </figcaption>
+</figure>
+
+<figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1_nyGUBEO68JyQcIIflpB8TQ.png"
+    alt="http://localhost:8080/comments?keyword=Roberts"><figcaption>
+      <p>http://localhost:8080/comments?keyword=Roberts</p>
+    </figcaption>
+</figure>
+
+<figure><img src="/posts/2023/01/kotlin-spring-data-mongodb-develop-get-comments-api/1_XFR-L2yCmAREZ77puGO0UQ.png"
+    alt="http://localhost:8080/comments?keyword=officiis"><figcaption>
+      <p>http://localhost:8080/comments?keyword=officiis</p>
+    </figcaption>
+</figure>
+
+<blockquote>
+<p>You can check out the branch <a href="https://github.com/geraldnguyen/kotlin-springdata-mongodb/tree/flavor_4"><code>flavor_4</code></a> to examine the codes</p>
+</blockquote>
+<h1 id="conclusion">Conclusion</h1>
+<p>We have covered quite many steps. Importantly, we learned how to:</p>
+<ul>
+<li>Set up a Kotlin + Spring Data + MongoDB application</li>
+<li>Create a free MongoDB cluster and load some sample databases.</li>
+<li>Create a text index on a MongoDB collection to enable full-text search</li>
+<li>Create REST API and MongoDB repository methods to search the MongoDB</li>
+<li>Implement 4 flavors of data retrieval, from retrieving all, to exact matching, to partial search, and finally to full-text search.</li>
+</ul>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/kotlin/">Kotlin</a></li>
+        <li><a href="/tags/spring/">Spring</a></li>
+        <li><a href="/tags/rest-api/">REST API</a></li>
+        <li><a href="/tags/spring-boot/">Spring Boot</a></li>
+        <li><a href="/tags/mongodb-spring-data/">MongoDB Spring Data</a></li>
+    </ul>
+  </div>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

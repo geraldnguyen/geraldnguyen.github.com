@@ -13,7 +13,7 @@
       <link>https://geraldnguyen.github.io/posts/2022/11/echo-api/</link>
       <pubDate>Wed, 30 Nov 2022 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/posts/2022/11/echo-api/</guid>
-      <description>Introduction The need for this library arose when I wanted assurance that my HTTP client was sending correctly formulated HTTP messages.&#xA;Another use of this /echo API is to capture and debug the remote calls from another service. Imagine you are providing a webhook endpoint. Before you even build one, you first need to know what incoming messages look like. Supplying an /echo API endpoint in the webhook’s registration allows you to capture and log all incoming messages</description>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;&#xA;&lt;p&gt;The need for this library arose when I wanted assurance that my &lt;a href=&#34;https://www.npmjs.com/package/ngx-correlation-id&#34;&gt;HTTP client&lt;/a&gt; was sending correctly formulated HTTP messages.&lt;/p&gt;&#xA;&lt;p&gt;Another use of this &lt;code&gt;/echo&lt;/code&gt; API is to capture and debug the remote calls from another service. Imagine you are providing a webhook endpoint. Before you even build one, you first need to know what incoming messages look like. Supplying an &lt;code&gt;/echo&lt;/code&gt; API endpoint in the webhook’s registration allows you to capture and log all incoming messages&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
