@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on Gerald Nguyen</title>
+    <link>https://geraldnguyen.github.io/tags/ai/</link>
+    <description>Recent content in AI on Gerald Nguyen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Oct 2024 09:19:42 +0100</lastBuildDate>
+    <atom:link href="https://geraldnguyen.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Singapore Nationwide AWS LLM League 2024</title>
+      <link>https://geraldnguyen.github.io/posts/2024/10/singapore-nationwide-aws-llm-league-2024/</link>
+      <pubDate>Thu, 03 Oct 2024 09:19:42 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2024/10/singapore-nationwide-aws-llm-league-2024/</guid>
+      <description>&lt;figure&gt;&lt;img src=&#34;https://geraldnguyen.github.io/posts/2024/10/singapore-nationwide-aws-llm-league-2024/1_8Tco2Cj9RXtJDXkLeoLH_g.jpg&#34;&#xA;    alt=&#34;Congratulations to the 5 finalists&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Congratulations to the 5 finalists&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;The Singapore Nationwide AWS LLM League 2024 concluded today with the grand finale at Raffle City Convention Center. The 5 finalists competed on stage for the top prizes including Amazon vouchers, Amazon Echo, and exclusive swags.&lt;/p&gt;&#xA;&lt;p&gt;Each finalist, using their own finetuned Llama-3–8B model, answers a series of questions on Singapore culture. Their answers were then shared with a panel of 1 AI judge and a panel of 5 human judges for scoring. They were also shared with hundreds of live and virtual audiences for voting. Fan votes accounted for 20% of each answer’s final score while each AI and human panel contributed 40%.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My Notes of the Singapore TechLawFest 2024</title>
+      <link>https://geraldnguyen.github.io/posts/2024/09/my-notes-of-the-singapore-techlawfest-2024/</link>
+      <pubDate>Thu, 12 Sep 2024 09:19:42 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2024/09/my-notes-of-the-singapore-techlawfest-2024/</guid>
+      <description>&lt;figure&gt;&lt;img src=&#34;https://miro.medium.com/v2/resize:fit:484/1*jJrF5wZN2uo6CKsnrJA57g.png&#34;&#xA;    alt=&#34;GenAI everywhere in Singapore TechLawFest 2024&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;GenAI everywhere in Singapore TechLawFest 2024&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&#xA;&lt;div class=&#34;page-break&#34; role=&#34;separator&#34;&gt;&#xA;  &lt;span class=&#34;dot&#34;&gt;&lt;/span&gt;&lt;span class=&#34;dot&#34;&gt;&lt;/span&gt;&lt;span class=&#34;dot&#34;&gt;&lt;/span&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;I attended some discussions and showcases in the Singapore TechLawFest 2024. Here are my notes.&lt;/p&gt;&#xA;&lt;p&gt;GenAI can automate many tasks and complete up to 50% to 70% of the work. Human is still needed to complete the remaining.&lt;/p&gt;&#xA;&lt;p&gt;A law firm in the Philippines shared that a 2.5-hour drafting by junior lawyer can be completed by their AI solution in less than a minute.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

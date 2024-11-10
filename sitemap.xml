@@ -2,11 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://geraldnguyen.github.io/tags/2024/</loc>
+    <lastmod>2024-10-03T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/tags/ai/</loc>
+    <lastmod>2024-10-03T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/tags/aws/</loc>
+    <lastmod>2024-10-03T09:19:42+01:00</lastmod>
+  </url><url>
     <loc>https://geraldnguyen.github.io/categories/</loc>
-    <lastmod>2024-08-29T09:19:42+01:00</lastmod>
+    <lastmod>2024-10-03T09:19:42+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/</loc>
-    <lastmod>2024-08-29T09:19:42+01:00</lastmod>
+    <lastmod>2024-10-03T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/tags/llm-league/</loc>
+    <lastmod>2024-10-03T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/posts/</loc>
+    <lastmod>2024-10-03T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/tags/singapore/</loc>
+    <lastmod>2024-10-03T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/posts/2024/10/singapore-nationwide-aws-llm-league-2024/</loc>
+    <lastmod>2024-10-03T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/tags/</loc>
+    <lastmod>2024-10-03T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/categories/tech-related/</loc>
+    <lastmod>2024-10-03T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/tags/legal/</loc>
+    <lastmod>2024-09-12T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/posts/2024/09/my-notes-of-the-singapore-techlawfest-2024/</loc>
+    <lastmod>2024-09-12T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/tags/techlawfest/</loc>
+    <lastmod>2024-09-12T09:19:42+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/tags/hugo/</loc>
     <lastmod>2024-08-29T09:19:42+01:00</lastmod>
@@ -23,16 +59,7 @@
     <loc>https://geraldnguyen.github.io/tags/medium/</loc>
     <lastmod>2024-08-29T09:19:42+01:00</lastmod>
   </url><url>
-    <loc>https://geraldnguyen.github.io/posts/</loc>
-    <lastmod>2024-08-29T09:19:42+01:00</lastmod>
-  </url><url>
     <loc>https://geraldnguyen.github.io/tags/shortcode/</loc>
-    <lastmod>2024-08-29T09:19:42+01:00</lastmod>
-  </url><url>
-    <loc>https://geraldnguyen.github.io/tags/</loc>
-    <lastmod>2024-08-29T09:19:42+01:00</lastmod>
-  </url><url>
-    <loc>https://geraldnguyen.github.io/categories/tech-related/</loc>
     <lastmod>2024-08-29T09:19:42+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/posts/2024/08/hugo-displaying-images-the-medium-way/</loc>
@@ -297,9 +324,6 @@
     <lastmod>2022-12-27T09:19:42+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/tags/pollution-control/</loc>
-    <lastmod>2022-12-27T09:19:42+01:00</lastmod>
-  </url><url>
-    <loc>https://geraldnguyen.github.io/tags/singapore/</loc>
     <lastmod>2022-12-27T09:19:42+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/posts/2022/12/the-story-of-the-drums-in-singapore/</loc>
