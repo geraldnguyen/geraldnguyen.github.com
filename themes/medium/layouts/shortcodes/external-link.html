@@ -10,7 +10,7 @@
 {{- with .Get 0 -}}
   {{- $query := querify "url" . -}}
   {{- $request := printf "%s?%s" $ogChecker $query -}}
-  {{- $json = getJSON $request -}}
+  {{- $json = resources.GetRemote $request | transform.Unmarshal -}}
 {{- else -}}
   {{- errorf "The '%s' shortcode requires a single positional parameter, a URL. See %s" .Name .Position -}}
 {{- end -}}
