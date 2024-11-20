@@ -65,12 +65,6 @@
     <loc>https://geraldnguyen.github.io/posts/2024/08/hugo-displaying-images-the-medium-way/</loc>
     <lastmod>2024-08-26T09:19:42+01:00</lastmod>
   </url><url>
-    <loc>https://geraldnguyen.github.io/pages/about/</loc>
-    <lastmod>2024-08-10T08:00:00-07:00</lastmod>
-  </url><url>
-    <loc>https://geraldnguyen.github.io/pages/</loc>
-    <lastmod>2024-08-10T08:00:00-07:00</lastmod>
-  </url><url>
     <loc>https://geraldnguyen.github.io/tags/bdd/</loc>
     <lastmod>2024-05-20T08:00:00-07:00</lastmod>
   </url><url>
@@ -140,6 +134,27 @@
     <loc>https://geraldnguyen.github.io/posts/2023/01/solid-interface-segregation-principle/</loc>
     <lastmod>2023-01-27T08:00:00-07:00</lastmod>
   </url><url>
+    <loc>https://geraldnguyen.github.io/tags/agile/</loc>
+    <lastmod>2023-01-21T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/posts/2023/01/are-you-a-fullstack-developer/</loc>
+    <lastmod>2023-01-21T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/tags/career-advice/</loc>
+    <lastmod>2023-01-21T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/categories/career-development/</loc>
+    <lastmod>2023-01-21T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/tags/careers/</loc>
+    <lastmod>2023-01-21T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/tags/develoepr/</loc>
+    <lastmod>2023-01-21T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/tags/full-stack/</loc>
+    <lastmod>2023-01-21T09:19:42+01:00</lastmod>
+  </url><url>
     <loc>https://geraldnguyen.github.io/tags/publication/</loc>
     <lastmod>2023-01-19T09:19:42+01:00</lastmod>
   </url><url>
@@ -201,9 +216,6 @@
     <lastmod>2023-01-12T09:19:42+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/tags/api/</loc>
-    <lastmod>2023-01-12T09:19:42+01:00</lastmod>
-  </url><url>
-    <loc>https://geraldnguyen.github.io/categories/career-development/</loc>
     <lastmod>2023-01-12T09:19:42+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/posts/2023/01/5-minimum-viable-spring-rest-interview-questions/</loc>
@@ -454,6 +466,12 @@
   </url><url>
     <loc>https://geraldnguyen.github.io/posts/2021/10/2021-10-17-enable-commenting/</loc>
     <lastmod>2021-10-17T09:19:42+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/pages/about/</loc>
+    <lastmod>2021-08-10T08:00:00-07:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/pages/</loc>
+    <lastmod>2021-08-10T08:00:00-07:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/tags/kubernetes/</loc>
     <lastmod>2020-09-13T09:19:42+01:00</lastmod>
