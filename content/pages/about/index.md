@@ -1,7 +1,7 @@
 +++
 title = 'Gerald Nguyen'
 subtitle = 'About me'
-date = 2024-08-10T08:00:00-07:00
+date = 2021-08-10T08:00:00-07:00
 layout = "about"
 type = "pages"
 +++

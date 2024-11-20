@@ -6,6 +6,7 @@ image: extra-pull-quote.png
 draft: false
 categories: [Tech Related]
 tags: [Medium, Hugo, Image, Markdown, Shortcode]
+medium: https://levelup.gitconnected.com/hugo-displaying-quotes-the-medium-styles-b9eb5743334f
 ---
 
 *Please ignore the `\` in front of `{` in code examples. It is used to prevent Hugo from processing the shortcodes even in code block*

@@ -7,6 +7,15 @@
   <a href="{{ .RelPermalink }}">Next</a>
   {{ end }}
 
+  {{ with .Params.Medium }}
+  <div>
+    <span> ↗ </span>  <a href="{{ . }}" target="_blank">Also on Medium</a>
+  </div>
+  
+  {{ end }}
+
+  
+
 {{ end }}
 
 {{ define "header-content"}}
@@ -56,4 +65,5 @@
   {{ .Content }}
   
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+
 {{ end }}

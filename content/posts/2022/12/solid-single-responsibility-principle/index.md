@@ -5,7 +5,7 @@ date = 2022-12-14T08:00:00-07:00
 tags = [ "Software Engineering", "SOLID principles", "Software Development", "Object Oriented"]
 categories = ["Software Development"]
 image = "0_AzgjytmEOFKBuWDZ.jpg"
-
+medium = 'https://medium.com/codex/solid-in-action-the-single-responsibility-principle-7cb70c32cc03'
 +++
 
 {{< figure src="0_AzgjytmEOFKBuWDZ.jpg" caption="Photo by [Robert Linder](https://unsplash.com/@rwlinder?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)" >}}

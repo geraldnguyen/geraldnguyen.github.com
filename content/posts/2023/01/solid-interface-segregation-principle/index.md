@@ -5,6 +5,7 @@ date = 2023-01-27T08:00:00-07:00
 tags = [ "Software Engineering", "SOLID principles", "Programming", "Object Oriented", "Interface Segregation"]
 categories = ["Software Development"]
 image = "0_2JS1H36QRQHFriO0.jpg"
+medium = 'https://medium.com/geekculture/solid-in-action-the-interface-segregation-principle-6c8f92d2133a'
 
 +++
 

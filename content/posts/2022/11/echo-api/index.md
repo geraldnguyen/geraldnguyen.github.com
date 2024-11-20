@@ -6,6 +6,7 @@ image: 1_gVavJM-Eio5Z-Og4eUKFeQ.png
 draft: false
 categories: [Software Development]
 tags: [Java, Software Development, API, Open source]
+medium: https://geraldnguyen.medium.com/echo-api-ef3408d520d2
 ---
 
 # Introduction

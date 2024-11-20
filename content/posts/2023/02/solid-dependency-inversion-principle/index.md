@@ -5,7 +5,7 @@ date = 2023-02-21T08:00:00-07:00
 tags = [ "Software Engineering", "SOLID principles", "Programming", "Object Oriented", "Dependency Inversion"]
 categories = ["Software Development"]
 image = "0_Uv2de6h1frX8mT2N.jpg"
-
+medium = 'https://medium.com/geekculture/solid-in-action-the-dependency-inversion-principle-5567bddd6cfc'
 +++
 
 {{< figure src="0_Uv2de6h1frX8mT2N.jpg" caption="Photo by [ocd studio](https://unsplash.com/@ocd_studio?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)">}}

@@ -5,6 +5,7 @@ image: 1_Fcg_f8TQsK2xwbmK9xhAQA.jpg
 date: 2022-11-22T09:19:42+01:00
 tags: [Software Engineering, Code Review, Interview]
 categories: [Software Development, Career Development]
+medium: https://medium.com/50ld/code-review-as-an-interview-tool-f57eb66e5da0
 ---
 
 ## Rationale

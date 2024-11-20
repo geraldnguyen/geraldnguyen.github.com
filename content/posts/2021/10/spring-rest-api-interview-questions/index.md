@@ -7,6 +7,7 @@ draft: false
 
 categories: [Software Development, Career Development]
 tags: [java, spring, api, interview, annotation, testing]
+medium: https://medium.com/50ld/spring-rest-api-interview-questions-66cf78fa1f2c
 ---
 
 #1 Complete the REST controller

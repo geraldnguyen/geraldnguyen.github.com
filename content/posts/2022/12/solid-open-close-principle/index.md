@@ -5,7 +5,7 @@ date = 2022-12-24T08:00:00-07:00
 tags = [ "Software Engineering", "SOLID principles", "Software Development", "Object Oriented", "Abstraction"]
 categories = ["Software Development"]
 image = "0_eqhYFU2kNfQ0TrN9.jpg"
-
+medium = 'https://medium.com/codex/solid-in-action-the-open-closed-principle-5b8d09a60a5a'
 +++
 
 {{< figure src="0_eqhYFU2kNfQ0TrN9.jpg" caption="Photo by [Richard Balog](https://unsplash.com/@ricsard?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)" >}}

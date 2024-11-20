@@ -5,6 +5,7 @@ image: 1_ypHleI7FEQsx3ZrsTQBvlQ.png
 date: 2022-11-27T09:19:42+01:00
 categories: [Software Development]
 tags: [Java, Functional Interface, Method Reference]
+medium: https://medium.com/codex/java-method-reference-7b4f260bc3ad
 ---
 
 I first learned method reference from C#, so the Java concept is familiar to me. Or that’s what I thought until I picked up the [Modern Java Recipes book](https://www.oreilly.com/library/view/modern-java-recipes/9781491973165/).

@@ -6,6 +6,7 @@ tags = [ "Software Engineering", "SOLID principles", "Uncle Bob", "Object Orient
 categories = ["Software Development"]
 image = "1_jgPZbah9dkZgepyo6D2xwQ.png"
 pinned = true
+medium = 'https://medium.com/codex/becoming-a-solid-developer-7f0e0ab359f6'
 +++
 
 Being called _solid_ is a compliment. The word carries the positive notions of reliability and respectability. All of us should aim to become one.

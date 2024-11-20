@@ -6,6 +6,7 @@ image: 1_dngIUpZUj098xgpOSI526w.png
 draft: false
 categories: [Software Development]
 tags: [JavaScript, Web Development, UI, Simplicity, Programming, HTML]
+medium: https://javascript.plainenglish.io/simple-code-effective-ui-month-picker-4b410a4d0dce
 ---
 
 # Option 1: separate Month and Year dropdowns

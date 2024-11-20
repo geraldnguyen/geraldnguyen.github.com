@@ -4,9 +4,9 @@ date: 2021-10-30T09:19:42+01:00
 sutitle: Stream has been an important part of Java development since Java 8. This test assesses candidates familiarity with various stream operations
 image: 1_BhOX_9_jetMTNa5WYqHqsQ.jpg
 draft: false
-
 categories: [Software Development, Career Development]
 tags: [java, stream, interview, coding test]
+medium: https://medium.com/50ld/java-stream-interview-tests-distinct-characters-741cc82cbdd6
 ---
 
 Requirement

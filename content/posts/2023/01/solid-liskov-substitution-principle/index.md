@@ -5,6 +5,7 @@ date = 2023-01-09T08:00:00-07:00
 tags = [ "Software Engineering", "SOLID principles", "Programming", "Object Oriented", "Subtyping"]
 categories = ["Software Development"]
 image = "1_YEttNur8_T0hEp4oDm5utg.png"
+medium = 'https://medium.com/geekculture/solid-in-action-the-liskov-substitution-principle-4b1868ad81fd'
 
 +++
 

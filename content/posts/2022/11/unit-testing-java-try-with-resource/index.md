@@ -5,6 +5,7 @@ image: 1_6jiM4RwfZ3NKj_hUuFw3aQ.png
 draft: false
 categories: [Software Development]
 tags: [Java, Unit Testing, Try-with-resource, Programming]
+medium: https://medium.com/codex/unit-testing-javas-try-with-resource-2cf793fdbc34
 ---
 
 

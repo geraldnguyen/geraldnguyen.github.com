@@ -6,6 +6,7 @@ image: 0_KnGqks4dktk7pUv3.jpg
 draft: false
 categories: [Software Development]
 tags: [API, Frontend, Backend, Analogy]
+medium: https://medium.com/illumination/what-are-apis-2259bb43ddb4
 ---
 
 # Are APIs the waiters?

@@ -4,6 +4,7 @@ subtitle = 'A beginner guide'
 date = 2024-05-20T08:00:00-07:00
 image = "1_ZWQCCWcTUsb9DoEVUAwcTQ.jpeg"
 tags = [ "Programming", "Python", "Selenium", "BDD", "Tutorial"]
+medium = 'https://levelup.gitconnected.com/behavior-driven-development-bdd-with-selenium-in-python-58390fcc0325'
 +++
 
 This is a continuation from my previous article where we learned the basic of Selenium and how to program it in Python to perform UI automation testing.

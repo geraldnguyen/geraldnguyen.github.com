@@ -6,6 +6,7 @@ image: 1_ktBQBNx4LQ4E6G7PjoRivA.png
 draft: false
 categories: [Software Development]
 tags: [Java, JPA, Hibernate, Programming, Exception]
+medium: https://geraldnguyen.medium.com/the-best-way-to-fix-the-hibernates-multiplebagfetchexception-6c63e69a4009
 ---
 
 There are 2 articles from [https://vladmihalcea.com](https://vladmihalcea.com/hibernate-multiplebagfetchexception/) describing his analysis and solutions to Hibernate’s MultipleBagFetchException. The [first](https://vladmihalcea.com/hibernate-multiplebagfetchexception/) one, appeared around 2020 (when I first researched this problem) or even earlier (2018?), offered an analysis of the problem and a solution using Hibernate’s EntityManager API. The [second](https://vladmihalcea.com/spring-data-jpa-multiplebagfetchexception/) one appeared around Jun 2022, and offers a slightly different solution for JPA.

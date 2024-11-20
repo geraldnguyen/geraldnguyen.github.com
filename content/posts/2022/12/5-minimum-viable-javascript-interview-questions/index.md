@@ -6,6 +6,7 @@ image: 0_ufACmK4armozbXnU.jpg
 draft: false
 categories: [Software Development, Career Development]
 tags: [JavaScript, Interview, Practical]
+medium: https://javascript.plainenglish.io/five-minimum-viable-javascript-interview-questions-d839d855a8a4
 ---
 
 {{< include "posts/2023/02/Five Minimum Viable Interview Questions series/series.include" >}}

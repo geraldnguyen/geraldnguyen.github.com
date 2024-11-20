@@ -5,6 +5,7 @@ image: 1_JSvnrmztXJaaQv2PphCiQQ.png
 draft: false
 categories: [Non-Tech]
 tags: [Vietnam, Ho Chi Minh City, Thu Duc, Photography, Southeast Asia]
+medium: https://medium.com/southeast-asia/thu-duc-ho-chi-minh-city-vietnam-in-december-5b6c02e31ca6
 ---
 
 Taken during my vacation
