@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>“Look Good to Me — Approve”</title>
+<meta data-rh="true" property="og:url" content="https://geraldnguyen.github.io/posts/2023/01/look-good-to-me-approve/">
+<meta data-rh="true" property="og:title" content="“Look Good to Me — Approve”">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://geraldnguyen.github.io/posts/2023/01/look-good-to-me-approve/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.c26f43265fe59e08f5f7f91bc6df440219638e2c9ed43736fd053a50a9963e69.css" integrity="sha256-wm9DJl/lngj19/kbxt9EAhljjiye1Dc2/QU6UKmWPmk=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HRKMT2G8N9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HRKMT2G8N9');
+</script>
+
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/software-development/">Software Development</a></li>
+    </ul>
+  </div>
+
+
+<h1>“Look Good to Me — Approve”</h1>
+
+<h2 class="subtitle">The Chrome extension that approves Gitlab merge requests with a friendly comment</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://geraldnguyen.github.io/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://geraldnguyen.github.io/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>3 min read</span>
+      <span>·</span>
+      <span><time datetime="2023-01-29T09:19:42&#43;01:00">January 29, 2023</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2023/01/solid-interface-segregation-principle/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2023/02/five-minimum-viable-interview-questions-series/">Next</a>
+  
+
+  
+  <div>
+    <span> ↗ </span>  <a href="https://medium.com/geekculture/look-good-to-me-approve-4cbed2450a0e" target="_blank">Also on Medium</a>
+  </div>
+  
+  
+
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#how-it-works">How it works</a></li>
+    <li><a href="#customizing-the-comments-text-and-the-buttons-label">Customizing the comment’s text and the button’s label</a></li>
+    <li><a href="#its-not-a-bug-its-a-feature">“It’s not a bug, it’s a feature”</a></li>
+    <li><a href="#why-did-_i_-develop-this-extension">Why did <em>I</em> develop this extension?</a></li>
+    <li><a href="#source-codes">Source Codes</a></li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <figure><img src="/posts/2023/01/look-good-to-me-approve/1_JHxNSxdzMwDcabLzhlTyCw.png"
+    alt="https://chrome.google.com/webstore/detail/lgtm-approve/odeollamfjdmamamonbfigajkhakcmag/"><figcaption>
+      <p><a href="https://chrome.google.com/webstore/detail/lgtm-approve/odeollamfjdmamamonbfigajkhakcmag/">https://chrome.google.com/webstore/detail/lgtm-approve/odeollamfjdmamamonbfigajkhakcmag/</a></p>
+    </figcaption>
+</figure>
+
+<blockquote>
+<p>A chrome extension that automatically adds a comment while approving the request. Doing so cements the collaboration between the reviewer and the merge request’s submitter</p>
+<p>The comment is defaulted to “LGTM” (Look Good to Me) and can be customized.</p>
+</blockquote>
+<p>The extension is available on Chrome Web Store at <a href="https://chrome.google.com/webstore/detail/lgtm-approve/odeollamfjdmamamonbfigajkhakcmag/">https://chrome.google.com/webstore/detail/lgtm-approve/odeollamfjdmamamonbfigajkhakcmag/</a></p>
+<h1 id="how-it-works">How it works</h1>
+<p>The extension works by replacing Gitlab’s “Approve” or “Approve Additionally” button with an upgraded button that adds a comment (e.g. “LGTM”) to the merge request while approving the request.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#998;font-style:italic">// get the Approve button  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>approveBtn <span style="color:#000;font-weight:bold">=</span> getApproveBtn();  
+</span></span><span style="display:flex;"><span>approveBtnSpan <span style="color:#000;font-weight:bold">=</span> approveBtn<span style="color:#000;font-weight:bold">?</span>.querySelector(<span style="color:#d14">&#39;span&#39;</span>);  
+</span></span><span style="display:flex;"><span>approveBtnSpan.textContent <span style="color:#000;font-weight:bold">=</span> lgtmLabel;  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">// attach appropriate click&#39;s handler  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>approveBtn.addEventListener(<span style="color:#d14">&#39;click&#39;</span>, approveBtnClickListener);  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">// add LGTM comment: the approveBtnClickListener  
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">const</span> commentTA <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">document</span>.querySelector(<span style="color:#d14">&#39;#note-body&#39;</span>);  
+</span></span><span style="display:flex;"><span>commentTA.value <span style="color:#000;font-weight:bold">=</span> text;  
+</span></span><span style="display:flex;"><span>commentTA.dispatchEvent(<span style="color:#000;font-weight:bold">new</span> Event(<span style="color:#d14">&#39;change&#39;</span>));  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>setTimeout(() =&gt; {  
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">const</span> commentBtn <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">document</span>.querySelector(<span style="color:#d14">&#39;div[data-qa-selector=comment_button]&gt;button&#39;</span>);  
+</span></span><span style="display:flex;"><span>  commentBtn.click();  
+</span></span><span style="display:flex;"><span>}, <span style="color:#099">500</span>);
+</span></span></code></pre></div><p>As shown in the above excerpt (source: <a href="https://github.com/geraldnguyen/lgtm-approve-chrome-ext/blob/main/scripts/content.js#L42">GitHub</a>):</p>
+<ul>
+<li>The extension first gets hold of the Approve (or Approve additionally) button, then update its label.</li>
+<li>It then sets up and attaches appropriate “click” event handlers to the button.</li>
+<li>The <code>approveBtnClickListener</code> code is shown next. It finds the comment text area, adds the new comment, fires a “change” event, then triggers a “click” event on the Comment button.</li>
+</ul>
+<p>There is no need to overwrite the “Approve” action provided by Gitlab UI as the handler responsible for that action is still intact. It will execute as soon as the modified Approve button is clicked.</p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:520/1*SDMe512qBknP3m55zwmV0Q.png"
+    alt="The extension in action (screenshot)"><figcaption>
+      <p>The extension in action (screenshot)</p>
+    </figcaption>
+</figure>
+
+<h1 id="customizing-the-comments-text-and-the-buttons-label">Customizing the comment’s text and the button’s label</h1>
+<p>The extension allows users to customize the comment’s text and button label.</p>
+<p>By clicking on the extension icon at the top right corner, a small popup will appear with 2 textboxes for a user to enter new the comment’s text and button’s label</p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:291/1*sBlnBf1FBGNRSG3euyzi7A.png"
+    alt="Customization support (screenshot)"><figcaption>
+      <p>Customization support (screenshot)</p>
+    </figcaption>
+</figure>
+
+<h1 id="its-not-a-bug-its-a-feature">“It’s not a bug, it’s a feature”</h1>
+<p>If a user already approved the pull request, the extension does not keep track of the pull request’s status. If the user later revokes earlier approval, and Gitlab automatically changes the button to “Approve”, it will remain so. Clicking on the button does not automatically add a new comment to the pull request.</p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:327/1*xXZVQI3Zm7aZktHiZRhLKw.png">
+</figure>
+
+<p>I believe that scenario like the above deserves a real comment by the user. Scenarios like the above are, by design, not supported.</p>
+<h1 id="why-did-_i_-develop-this-extension">Why did <em>I</em> develop this extension?</h1>
+<blockquote>
+<p><em>Dedicated to a young colleague who was laid off in Jan 2023. In one of my friendly chats with him, he reminded me that approval alone was not enough.</em></p>
+</blockquote>
+<p>Together with version control and feature branching, creating pull requests and reviewing code are essential tasks in modern software engineering.</p>
+<blockquote>
+<p>In my opinion, <a href="https://medium.com/50ld/code-review-as-an-interview-tool-f57eb66e5da0">code review should be integrated into interviewing process</a>.</p>
+</blockquote>
+<p>A good code review should identify shortcomings, ask clarifying questions, or praise for good work delivered. The last action, from my experience, is not done often enough.</p>
+<p>To be honest, I am guilty of skipping the praise when reviewing codes. My excuse was that by approving the pull request (called merge request by Gitlab), I already expressed my praise. Looking back now, I could have done better. Some practices even call for a simple “Look good to me” or “LGTM” comment to be added along with each approval.</p>
+<p>I experimented with <a href="https://docs.gitlab.com/ee/user/project/quick_actions.html">quick action</a> but felt that the 3-step combination of typing “/approve”, plus typing “LGTM”, plus clicking on the Comment button is rather long. Ideally, we should be able to do all 3 with one action.</p>
+<p>With custom quick action <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/25365">not yet supported</a> <em>(I was thinking about a &ldquo;lgmt&rdquo; quick action)</em>, I went ahead to create this extension in the meantime.</p>
+<h1 id="source-codes">Source Codes</h1>
+
+
+
+  
+  
+
+  
+  
+
+
+
+<div class="container alert alert-secondary">
+  <div><a href="https://github.com/geraldnguyen/lgtm-approve-chrome-ext" alt="GitHub - geraldnguyen/lgtm-approve-chrome-ext: &#34;Look Good to Me! Approve&#34; - chrome extension for Gitlab users">
+      <strong>GitHub - geraldnguyen/lgtm-approve-chrome-ext: &#34;Look Good to Me! Approve&#34; - chrome extension for Gitlab users</strong>
+  </a></div>
+  <div class="d-flex align-items-start">
+    
+      <img src="https://opengraph.githubassets.com/62b8749ad80c5b9a73e5a84888520a9e591cc35323317d3fc54eaef62f39ba5a/geraldnguyen/lgtm-approve-chrome-ext" alt="GitHub - geraldnguyen/lgtm-approve-chrome-ext: &#34;Look Good to Me! Approve&#34; - chrome extension for Gitlab users" />    
+        
+    <p class="px-1">
+      <small>&#34;Look Good to Me! Approve&#34; - chrome extension for Gitlab users - geraldnguyen/lgtm-approve-chrome-ext</small>
+    </p> 
+    
+  </div>
+</div>
+<p>If you like this article, please <a href="https://geraldnguyen.medium.com/subscribe">follow me</a> for more quality content.</p>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/pull-request/">Pull Request</a></li>
+        <li><a href="/tags/programming/">Programming</a></li>
+        <li><a href="/tags/code-review/">Code Review</a></li>
+        <li><a href="/tags/gitlab/">Gitlab</a></li>
+        <li><a href="/tags/chrome-extension/">Chrome Extension</a></li>
+    </ul>
+  </div>
+
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

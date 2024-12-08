@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gitlab on Gerald Nguyen</title>
-    <link>https://geraldnguyen.github.io/tags/gitlab/</link>
-    <description>Recent content in Gitlab on Gerald Nguyen</description>
+    <title>Pull Request on Gerald Nguyen</title>
+    <link>https://geraldnguyen.github.io/tags/pull-request/</link>
+    <description>Recent content in Pull Request on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 29 Jan 2023 09:19:42 +0100</lastBuildDate>
-    <atom:link href="https://geraldnguyen.github.io/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/pull-request/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>“Look Good to Me — Approve”</title>
       <link>https://geraldnguyen.github.io/posts/2023/01/look-good-to-me-approve/</link>
       <pubDate>Sun, 29 Jan 2023 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/posts/2023/01/look-good-to-me-approve/</guid>
       <description>&lt;figure&gt;&lt;img src=&#34;https://geraldnguyen.github.io/posts/2023/01/look-good-to-me-approve/1_JHxNSxdzMwDcabLzhlTyCw.png&#34;&#xA;    alt=&#34;https://chrome.google.com/webstore/detail/lgtm-approve/odeollamfjdmamamonbfigajkhakcmag/&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/lgtm-approve/odeollamfjdmamamonbfigajkhakcmag/&#34;&gt;https://chrome.google.com/webstore/detail/lgtm-approve/odeollamfjdmamamonbfigajkhakcmag/&lt;/a&gt;&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;A chrome extension that automatically adds a comment while approving the request. Doing so cements the collaboration between the reviewer and the merge request’s submitter&lt;/p&gt;&#xA;&lt;p&gt;The comment is defaulted to “LGTM” (Look Good to Me) and can be customized.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;The extension is available on Chrome Web Store at &lt;a href=&#34;https://chrome.google.com/webstore/detail/lgtm-approve/odeollamfjdmamamonbfigajkhakcmag/&#34;&gt;https://chrome.google.com/webstore/detail/lgtm-approve/odeollamfjdmamamonbfigajkhakcmag/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;how-it-works&#34;&gt;How it works&lt;/h1&gt;&#xA;&lt;p&gt;The extension works by replacing Gitlab’s “Approve” or “Approve Additionally” button with an upgraded button that adds a comment (e.g. “LGTM”) to the merge request while approving the request.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>DevOps: Divide and Conquer with Gitlab Parent-Child Pipeline</title>
-      <link>https://geraldnguyen.github.io/posts/2023/01/devops-divide-conquer-with-gitlab-parent-child-pipeline/</link>
-      <pubDate>Mon, 09 Jan 2023 09:19:42 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/posts/2023/01/devops-divide-conquer-with-gitlab-parent-child-pipeline/</guid>
-      <description>&lt;figure&gt;&lt;img src=&#34;https://geraldnguyen.github.io/posts/2023/01/devops-divide-conquer-with-gitlab-parent-child-pipeline/1_J8FiO-W4H06JsKgA5rUuLQ.webp&#34;&#xA;    alt=&#34;Gitlab parent-child pipeline&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Gitlab parent-child pipeline&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h1 id=&#34;scenario&#34;&gt;Scenario&lt;/h1&gt;&#xA;&lt;p&gt;You are building a pipeline that helps your team reset test data in different non-prod environments such as Test and Sandbox.&lt;/p&gt;&#xA;&lt;p&gt;Under each environment, there are several application services or databases to clear. Let’s call them A, B, and C.&lt;/p&gt;&#xA;&lt;h1 id=&#34;trivial-approach&#34;&gt;Trivial Approach&lt;/h1&gt;&#xA;&lt;p&gt;You can create 3 separate jobs for each environment&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://geraldnguyen.github.io/posts/2023/01/devops-divide-conquer-with-gitlab-parent-child-pipeline/1_gX6iHjoBCpJUpGnkqUE8Eg.webp&#34;&#xA;    alt=&#34;Trivial approach: 3 separate jobs for each environment&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Trivial approach: 3 separate jobs for each environment&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
