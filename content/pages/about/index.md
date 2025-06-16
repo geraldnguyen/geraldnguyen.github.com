@@ -50,6 +50,10 @@ A maven library of a `/echo` API that echo HTTP request info back to the caller
 
 Happy debugging here: https://echook.azurewebsites.net/echo
 
+### [ExpertLinked.in](https://expertlinked.in)
+
+An experiment with AI-generated content using various LLM models
+
 ## My Writings
 
 ### Under employment:
