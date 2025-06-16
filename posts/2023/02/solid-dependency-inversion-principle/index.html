@@ -23,7 +23,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.c26f43265fe59e08f5f7f91bc6df440219638e2c9ed43736fd053a50a9963e69.css" integrity="sha256-wm9DJl/lngj19/kbxt9EAhljjiye1Dc2/QU6UKmWPmk=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.2f3cac7b4d0da0eb1e12bb74fa4fb5cf8e789a99100fe77f49ede115c76f5773.css" integrity="sha256-Lzyse00NoOseErt0&#43;k&#43;1z454mpkQD&#43;d/Se3hFcdvV3M=" crossorigin="anonymous">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -171,8 +171,7 @@
 <p>The above diagram can be summarized as:</p>
 <blockquote>
 <p>High-level modules should not depend upon low-level modules. Both should depend upon abstractions</p>
-<p>Abstractions should not depend upon details. Details should depend upon abstraction</p>
-</blockquote>
+<p>Abstractions should not depend upon details. Details should depend upon abstraction</p></blockquote>
 <h1 id="examples">Examples</h1>
 <p>As long as you are considering a dependency where the depended-on component or service can have 2 or more implementations or can be further expanded through inheritance, the DIP can be put to good benefit.</p>
 <p>In my <a href="https://geraldnguyen.github.io/posts/2022/12/becoming-a-solid-developer/">Becoming a SOLID developer</a> article, I share 2 examples:</p>
@@ -197,13 +196,11 @@
 <h1 id="and-misuses">And Misuses</h1>
 <p>Martin Fowler called out the overuse of interfaces for single-implementation service in his <a href="https://martinfowler.com/bliki/InterfaceImplementationPair.html">Interface Implementation Pair article</a></p>
 <blockquote>
-<p>The practice of taking every class and pairing it with an interface. So as a result you see pairs of things — maybe ICustomer and Customer or Customer and CustomerImpl…Using interfaces when you aren’t going to have multiple implementations is extra effort to keep everything in sync (although good IDEs help). Furthermore, it hides the cases where you actually do provide multiple implementations.</p>
-</blockquote>
+<p>The practice of taking every class and pairing it with an interface. So as a result you see pairs of things — maybe ICustomer and Customer or Customer and CustomerImpl…Using interfaces when you aren’t going to have multiple implementations is extra effort to keep everything in sync (although good IDEs help). Furthermore, it hides the cases where you actually do provide multiple implementations.</p></blockquote>
 <p>Another common misuse in object-oriented programming languages is equating abstraction with interface construct. While interface is a popular way to express abstraction, it is by no means the only way, especially in dynamically typed languages or languages without <code>interface</code> support such as JavaScript or Python. We should rather consider an abstraction from a less concrete perspective. Take the abstraction expressed by the <code>Car</code> class above, for example, it does not have to be an interface to represent an abstraction.</p>
 <h1 id="in-relation-to-the-inversion-of-control">In relation to the Inversion of Control</h1>
 <blockquote>
-<p>IoC is also known as dependency injection (DI). It is a process whereby objects define their dependencies (that is, the other objects they work with) only through constructor arguments, arguments to a factory method, or properties that are set on the object instance after it is constructed or returned from a factory method. The container then injects those dependencies when it creates the bean. This process is fundamentally the inverse (hence the name, Inversion of Control) of the bean itself controlling the instantiation or location of its dependencies by using direct construction of classes or a mechanism such as the Service Locator pattern — <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-introduction">https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-introduction</a></p>
-</blockquote>
+<p>IoC is also known as dependency injection (DI). It is a process whereby objects define their dependencies (that is, the other objects they work with) only through constructor arguments, arguments to a factory method, or properties that are set on the object instance after it is constructed or returned from a factory method. The container then injects those dependencies when it creates the bean. This process is fundamentally the inverse (hence the name, Inversion of Control) of the bean itself controlling the instantiation or location of its dependencies by using direct construction of classes or a mechanism such as the Service Locator pattern — <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-introduction">https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-introduction</a></p></blockquote>
 <p>Inversion of Control (IoC) may share the term “inversion” but DIP and IoC are different. The distinction between the 2 concepts is in the purposes of their application. While DIP guides the modeling of relationships between components, the IoC provides ways to assemble the application while respecting the DIP relationship.</p>
 <h1 id="conclusion">Conclusion</h1>
 <p>We have examined the meaning of the Dependency Inversion Principle and some examples of proper applications as well as misuse. We have also clarified its purposes by comparing it with the IoC principle.</p>
@@ -243,7 +240,7 @@
     
   </main>
   <footer>
-    <p>Copyright 2024. All rights reserved.</p>
+    <p>Copyright 2025. All rights reserved.</p>
 
   </footer>
 

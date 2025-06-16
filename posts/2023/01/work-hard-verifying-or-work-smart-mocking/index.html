@@ -23,7 +23,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.c26f43265fe59e08f5f7f91bc6df440219638e2c9ed43736fd053a50a9963e69.css" integrity="sha256-wm9DJl/lngj19/kbxt9EAhljjiye1Dc2/QU6UKmWPmk=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.2f3cac7b4d0da0eb1e12bb74fa4fb5cf8e789a99100fe77f49ede115c76f5773.css" integrity="sha256-Lzyse00NoOseErt0&#43;k&#43;1z454mpkQD&#43;d/Se3hFcdvV3M=" crossorigin="anonymous">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -152,21 +152,21 @@
 </figure>
 
 <p>Let’s test this service</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#3c5d5d;font-weight:bold">@Service</span><span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">SampleService</span><span style="color:#bbb"> </span>{<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">final</span><span style="color:#bbb"> </span>SampleRepository<span style="color:#bbb"> </span>sampleRepository;<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">SampleService</span>(SampleRepository<span style="color:#bbb"> </span>sampleRepository)<span style="color:#bbb"> </span>{<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">this</span>.<span style="color:#008080">sampleRepository</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>sampleRepository;<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span>SampleEntity<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">createSampleEntity</span>()<span style="color:#bbb"> </span>{<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>SampleEntity<span style="color:#bbb"> </span>sampleEntity<span style="color:#bbb"> </span><span style="color:#a61717;background-color:#e3d2d2">\</span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">new</span><span style="color:#bbb"> </span>SampleEntity();<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>sampleEntity.<span style="color:#008080">setName</span>(<span style="color:#d14">&#34;sample&#34;</span>);<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>sampleRepository.<span style="color:#008080">save</span>(sampleEntity);<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#0550ae">@Service</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#cf222e">public</span><span style="color:#fff"> </span><span style="color:#cf222e">class</span> <span style="color:#1f2328">SampleService</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">private</span><span style="color:#fff"> </span><span style="color:#cf222e">final</span><span style="color:#fff"> </span>SampleRepository<span style="color:#fff"> </span>sampleRepository<span style="color:#1f2328">;</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">public</span><span style="color:#fff"> </span><span style="color:#6639ba">SampleService</span><span style="color:#1f2328">(</span>SampleRepository<span style="color:#fff"> </span>sampleRepository<span style="color:#1f2328">)</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span><span style="color:#cf222e">this</span><span style="color:#1f2328">.</span><span style="color:#1f2328">sampleRepository</span><span style="color:#fff"> </span><span style="color:#0550ae">=</span><span style="color:#fff"> </span>sampleRepository<span style="color:#1f2328">;</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#1f2328">}</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">public</span><span style="color:#fff"> </span>SampleEntity<span style="color:#fff"> </span><span style="color:#6639ba">createSampleEntity</span><span style="color:#1f2328">()</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span>SampleEntity<span style="color:#fff"> </span>sampleEntity<span style="color:#fff"> </span><span style="color:#f6f8fa;background-color:#82071e">\</span><span style="color:#0550ae">=</span><span style="color:#fff"> </span><span style="color:#cf222e">new</span><span style="color:#fff"> </span>SampleEntity<span style="color:#1f2328">();</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span>sampleEntity<span style="color:#1f2328">.</span><span style="color:#1f2328">setName</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;sample&#34;</span><span style="color:#1f2328">);</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span><span style="color:#cf222e">return</span><span style="color:#fff"> </span>sampleRepository<span style="color:#1f2328">.</span><span style="color:#1f2328">save</span><span style="color:#1f2328">(</span>sampleEntity<span style="color:#1f2328">);</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#1f2328">}</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#1f2328">}</span><span style="color:#fff">
 </span></span></span></code></pre></div><p>If we want to test the method <code>createSampleEntity</code> from <code>SampleService</code>, there are 3 things we want to verify:</p>
 <ul>
 <li>#1 — <code>sampleRepository.save</code> is called,</li>
@@ -245,7 +245,7 @@ void workSmartMocking() {
     
   </main>
   <footer>
-    <p>Copyright 2024. All rights reserved.</p>
+    <p>Copyright 2025. All rights reserved.</p>
 
   </footer>
 

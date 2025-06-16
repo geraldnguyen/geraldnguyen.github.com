@@ -23,7 +23,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.c26f43265fe59e08f5f7f91bc6df440219638e2c9ed43736fd053a50a9963e69.css" integrity="sha256-wm9DJl/lngj19/kbxt9EAhljjiye1Dc2/QU6UKmWPmk=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.2f3cac7b4d0da0eb1e12bb74fa4fb5cf8e789a99100fe77f49ede115c76f5773.css" integrity="sha256-Lzyse00NoOseErt0&#43;k&#43;1z454mpkQD&#43;d/Se3hFcdvV3M=" crossorigin="anonymous">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -138,7 +138,7 @@
     <li><a href="#1--inheritance">#1 — Inheritance</a></li>
     <li><a href="#2--polymorphism">#2 — Polymorphism</a>
       <ul>
-        <li><a href="#_ocp-via-abstraction-is-broader-and-more-robust_"><em>OCP via Abstraction is broader and more robust.</em></a></li>
+        <li><a href="#ocp-via-abstraction-is-broader-and-more-robust"><em>OCP via Abstraction is broader and more robust.</em></a></li>
       </ul>
     </li>
     <li><a href="#3--built-for-extension">#3 — Built for extension</a>
@@ -167,8 +167,7 @@
 <h1 id="1--inheritance">#1 — Inheritance</h1>
 <p>This is the original application of OCP. <a href="https://en.wikipedia.org/wiki/Bertrand_Meyer">Bertrand Meyer</a>, who introduced the term in his 1988 book <em>Object-Oriented Software Construction</em>, intended that:</p>
 <blockquote>
-<p>A class is closed, since it may be compiled, stored in a library, baselined, and used by client classes. But it is also open, since any new class may use it as parent, adding new features. When a descendant class is defined, there is no need to change the original or to disturb its clients.</p>
-</blockquote>
+<p>A class is closed, since it may be compiled, stored in a library, baselined, and used by client classes. But it is also open, since any new class may use it as parent, adding new features. When a descendant class is defined, there is no need to change the original or to disturb its clients.</p></blockquote>
 <figure><img src="/posts/2022/12/solid-open-close-principle/0_K1ybfgKhmBmbZHbJ.png"
     alt="Car and its associations"><figcaption>
       <p>Car and its associations</p>
@@ -180,13 +179,12 @@
 <h1 id="2--polymorphism">#2 — Polymorphism</h1>
 <p>The 1990s saw the OCP re-interpreted to promote polymorphism via abstraction and implementation. According to Robert C. Martin’s “<a href="https://docs.google.com/a/cleancoder.com/viewer?a=v&amp;pid=explorer&amp;chrome=true&amp;srcid=0BwhCYaYDn8EgN2M5MTkwM2EtNWFkZC00ZTI3LWFjZTUtNTFhZGZiYmUzODc1&amp;hl=en">the Open-Closed Principle</a>” article:</p>
 <blockquote>
-<p>Abstraction is the key</p>
-</blockquote>
+<p>Abstraction is the key</p></blockquote>
 <p><strong>Abstraction</strong>, according to Uncle Bob, is closed for modification yet open for extension through its unbounded implementations.</p>
 <p>Consider the abstraction provided by <code>Car</code>. It is fixed and therefore <em>closed</em>. As far as <code>UrbanTripPlanner</code> concerns, <code>Car</code> provides 2 properties (<code>model</code> and <code>seats</code>) and 2 methods (<code>getSpeed()</code> and <code>getPosition()</code>).</p>
 <p>Implementations of <code>Car</code>, either directly e.g. <code>ToyotaVios</code> or indirectly e.g. <code>TelsaModel3</code>, extend this abstraction with concrete information and behavior of a specific car’s model, number of seats, current speed, and current position. Thus, <code>Car</code> is <em>open</em> for extension.</p>
 <p>Compare with Inheritance, this interpretation of OCP focuses on the extension of concrete implementation to the <em>declared abstraction</em>. All extra properties, methods, or types introduced through Inheritance are ignored.</p>
-<h2 id="_ocp-via-abstraction-is-broader-and-more-robust_"><em>OCP via Abstraction is broader and more robust.</em></h2>
+<h2 id="ocp-via-abstraction-is-broader-and-more-robust"><em>OCP via Abstraction is broader and more robust.</em></h2>
 <p>Let’s expand our view beyond <code>Car</code> to include<code>UrbanTripPlanner</code> and its implementations. If they know anything about <code>EletricCar</code>, then the behavior declared in the method <code>searchDirection(Car, Position, Position)</code> would violate the OCP principle, as it must be modified, thus no longer closed, to support the new type of <code>Car</code>. To avoid this violation is to ignore the identities of all <code>Car</code>’s sub-types and their extra properties and methods. That effectively trims Inheritance’s effect to just implementing <code>Car</code>’s abstraction.</p>
 <p>In addition, with abstraction, we enjoy much built-in support in Object-oriented programming languages and modern IDEs. Forgetting to implement a method? it is a compilation error. Wanting to accept a list of <code>Car</code> in a type-safe manner? Generic <code>List&lt;? extend Car&gt;</code> to the rescue. In our example, because<code>UrbanTripPlanner</code> only cares for <code>Car</code>, as long as <code>ToyotaVios</code>, <code>TeslaModel3</code> implement <code>Car</code>, our program is fine.</p>
 <figure><img src="/posts/2022/12/solid-open-close-principle/1_Wob8qj7FygA8GBeoEhS-qg.png"
@@ -201,8 +199,7 @@
 <h2 id="plug-in-add-on-add-in">Plug-in, Add-on, Add-in</h2>
 <p>These are simply different names for the same concept. According to <a href="https://www.britannica.com/technology/plug-in">Britannica</a>:</p>
 <blockquote>
-<p>plug-in, also called add-on or extension, computer software that adds new functions to a host program without altering the host program itself</p>
-</blockquote>
+<p>plug-in, also called add-on or extension, computer software that adds new functions to a host program without altering the host program itself</p></blockquote>
 <p>Plug-in is thus an obvious example of <em>openness</em> in built-for-extension host programs.</p>
 <p>Different types of software exist that depend heavily on extensions. For us developers, this should be intimately familiar as we use productivity and language plugins on a daily basis in our favorite IDE such as VSCode, Eclipse, and IntelliJ. Some browser extensions are invaluable to internet users. Plenty of emoji packs and filters exist to enhance the experience of mobile users…</p>
 <figure><img src="/posts/2022/12/solid-open-close-principle/0_gyhqGMvsWF1f40Q7.jpg"
@@ -260,7 +257,7 @@
     
   </main>
   <footer>
-    <p>Copyright 2024. All rights reserved.</p>
+    <p>Copyright 2025. All rights reserved.</p>
 
   </footer>
 

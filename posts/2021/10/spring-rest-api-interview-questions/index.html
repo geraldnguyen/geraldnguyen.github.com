@@ -23,7 +23,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.c26f43265fe59e08f5f7f91bc6df440219638e2c9ed43736fd053a50a9963e69.css" integrity="sha256-wm9DJl/lngj19/kbxt9EAhljjiye1Dc2/QU6UKmWPmk=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.2f3cac7b4d0da0eb1e12bb74fa4fb5cf8e789a99100fe77f49ede115c76f5773.css" integrity="sha256-Lzyse00NoOseErt0&#43;k&#43;1z454mpkQD&#43;d/Se3hFcdvV3M=" crossorigin="anonymous">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -159,75 +159,75 @@
 <li>How did he/she annotate the <em>optional</em> parameter <code>name</code> and <code>id</code> in <code>findFriends(String name, Long id)</code> method?</li>
 <li>What annotation can be used to force a 204 (no content) response?</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#998;font-style:italic">/* Assume all package, imports and dependency classes are available */</span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#998;font-style:italic">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"> * A rest controller for Friend-related operations
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"> */</span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">FriendController</span><span style="color:#bbb"> </span>{<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">final</span><span style="color:#bbb"> </span>FriendService<span style="color:#bbb"> </span>friendService;<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">FriendController</span>(FriendService<span style="color:#bbb"> </span>friendService)<span style="color:#bbb"> </span>{<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">this</span>.<span style="color:#008080">friendService</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>friendService;<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * Response to GET /friends/ request
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @param name (optional) filter by name
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @param id (optional) filter by id
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @return a list of friends
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     */</span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span>List<span style="color:#000;font-weight:bold">&lt;</span>FriendDTO<span style="color:#000;font-weight:bold">&gt;</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">findFriends</span>(String<span style="color:#bbb"> </span>name,<span style="color:#bbb"> </span>Long<span style="color:#bbb"> </span>id)<span style="color:#bbb"> </span>{<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">if</span><span style="color:#bbb"> </span>(id<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">!=</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">null</span>)<span style="color:#bbb"> </span>{<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>friendService.<span style="color:#008080">findByFriendId</span>(id);<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>}<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">else</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">if</span><span style="color:#bbb"> </span>(StringUtils.<span style="color:#008080">hasText</span>(name))<span style="color:#bbb"> </span>{<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>friendService.<span style="color:#008080">findByName</span>(name);<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>}<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">else</span><span style="color:#bbb"> </span>{<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>friendService.<span style="color:#008080">findAll</span>();<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>}<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * Response to GET /friends/hello/{friend&#39;s name} request
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @param friend a friend&#39;s name
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @return a friendly Hello
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     */</span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">hello</span>(String<span style="color:#bbb"> </span>friend)<span style="color:#bbb"> </span>{<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>String.<span style="color:#008080">format</span>(<span style="color:#d14">&#34;Hello %s&#34;</span>,<span style="color:#bbb"> </span>friend);<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * Response to POST /friends/hello/{friend&#39;s name} request
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @param friend a friend&#39;s name which is to be saved
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @return a friendly Hello together with Id of the new friend
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     */</span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">helloAndSave</span>(String<span style="color:#bbb"> </span>friend)<span style="color:#bbb"> </span>{<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>FriendDTO<span style="color:#bbb"> </span>dto<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>friendService.<span style="color:#008080">add</span>(FriendDTO.<span style="color:#008080">builder</span>().<span style="color:#008080">name</span>(friend).<span style="color:#008080">createDt</span>(LocalDateTime.<span style="color:#008080">now</span>()).<span style="color:#008080">build</span>());<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>String.<span style="color:#008080">format</span>(<span style="color:#d14">&#34;%s. Your Id is %d&#34;</span>,<span style="color:#bbb"> </span>hello(friend),<span style="color:#bbb"> </span>dto.<span style="color:#008080">getId</span>());<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * Un-friend
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * Response to DELETE /friends/{friend&#39;s id} request, 
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * return 204 if successful
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @param friendId the id of the friend
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     */</span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#458;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">deleteFriend</span>(<span style="color:#458;font-weight:bold">long</span><span style="color:#bbb"> </span>friendId)<span style="color:#bbb"> </span>{<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>friendService.<span style="color:#008080">removeFriend</span>(friendId);<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * Update friend name
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * Response to &lt;METHOD?&gt; /friends/{friend&#39;s id}/{new name} request, 
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * return update friend info
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @param friendId the id of the friend
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @param newName the new name of the friend
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     * @return updated friend&#39;s info
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">     */</span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">public</span><span style="color:#bbb"> </span>FriendDTO<span style="color:#bbb"> </span><span style="color:#900;font-weight:bold">updateFriend</span>(<span style="color:#458;font-weight:bold">long</span><span style="color:#bbb"> </span>friendId,<span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>newName)<span style="color:#bbb"> </span>{<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#000;font-weight:bold">return</span><span style="color:#bbb"> </span>friendService.<span style="color:#008080">updateName</span>(friendId,<span style="color:#bbb"> </span>newName);<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#57606a">/* Assume all package, imports and dependency classes are available */</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#57606a">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"> * A rest controller for Friend-related operations
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"> */</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#cf222e">public</span><span style="color:#fff"> </span><span style="color:#cf222e">class</span> <span style="color:#1f2328">FriendController</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">private</span><span style="color:#fff"> </span><span style="color:#cf222e">final</span><span style="color:#fff"> </span>FriendService<span style="color:#fff"> </span>friendService<span style="color:#1f2328">;</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">public</span><span style="color:#fff"> </span><span style="color:#6639ba">FriendController</span><span style="color:#1f2328">(</span>FriendService<span style="color:#fff"> </span>friendService<span style="color:#1f2328">)</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span><span style="color:#cf222e">this</span><span style="color:#1f2328">.</span><span style="color:#1f2328">friendService</span><span style="color:#fff"> </span><span style="color:#0550ae">=</span><span style="color:#fff"> </span>friendService<span style="color:#1f2328">;</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#57606a">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     * Response to GET /friends/ request
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     * @param name (optional) filter by name
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     * @param id (optional) filter by id
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     * @return a list of friends
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     */</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">public</span><span style="color:#fff"> </span>List<span style="color:#0550ae">&lt;</span>FriendDTO<span style="color:#0550ae">&gt;</span><span style="color:#fff"> </span><span style="color:#6639ba">findFriends</span><span style="color:#1f2328">(</span>String<span style="color:#fff"> </span>name<span style="color:#1f2328">,</span><span style="color:#fff"> </span>Long<span style="color:#fff"> </span>id<span style="color:#1f2328">)</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span><span style="color:#cf222e">if</span><span style="color:#fff"> </span><span style="color:#1f2328">(</span>id<span style="color:#fff"> </span><span style="color:#0550ae">!=</span><span style="color:#fff"> </span><span style="color:#cf222e">null</span><span style="color:#1f2328">)</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">            </span><span style="color:#cf222e">return</span><span style="color:#fff"> </span>friendService<span style="color:#1f2328">.</span><span style="color:#1f2328">findByFriendId</span><span style="color:#1f2328">(</span>id<span style="color:#1f2328">);</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span><span style="color:#1f2328">}</span><span style="color:#fff"> </span><span style="color:#cf222e">else</span><span style="color:#fff"> </span><span style="color:#cf222e">if</span><span style="color:#fff"> </span><span style="color:#1f2328">(</span>StringUtils<span style="color:#1f2328">.</span><span style="color:#1f2328">hasText</span><span style="color:#1f2328">(</span>name<span style="color:#1f2328">))</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">            </span><span style="color:#cf222e">return</span><span style="color:#fff"> </span>friendService<span style="color:#1f2328">.</span><span style="color:#1f2328">findByName</span><span style="color:#1f2328">(</span>name<span style="color:#1f2328">);</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span><span style="color:#1f2328">}</span><span style="color:#fff"> </span><span style="color:#cf222e">else</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">            </span><span style="color:#cf222e">return</span><span style="color:#fff"> </span>friendService<span style="color:#1f2328">.</span><span style="color:#1f2328">findAll</span><span style="color:#1f2328">();</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#57606a">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     * Response to GET /friends/hello/{friend&#39;s name} request
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     * @param friend a friend&#39;s name
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     * @return a friendly Hello
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     */</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">public</span><span style="color:#fff"> </span>String<span style="color:#fff"> </span><span style="color:#6639ba">hello</span><span style="color:#1f2328">(</span>String<span style="color:#fff"> </span>friend<span style="color:#1f2328">)</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span><span style="color:#cf222e">return</span><span style="color:#fff"> </span>String<span style="color:#1f2328">.</span><span style="color:#1f2328">format</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;Hello %s&#34;</span><span style="color:#1f2328">,</span><span style="color:#fff"> </span>friend<span style="color:#1f2328">);</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#57606a">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     * Response to POST /friends/hello/{friend&#39;s name} request
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     * @param friend a friend&#39;s name which is to be saved
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     * @return a friendly Hello together with Id of the new friend
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     */</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">public</span><span style="color:#fff"> </span>String<span style="color:#fff"> </span><span style="color:#6639ba">helloAndSave</span><span style="color:#1f2328">(</span>String<span style="color:#fff"> </span>friend<span style="color:#1f2328">)</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span>FriendDTO<span style="color:#fff"> </span>dto<span style="color:#fff"> </span><span style="color:#0550ae">=</span><span style="color:#fff"> </span>friendService<span style="color:#1f2328">.</span><span style="color:#1f2328">add</span><span style="color:#1f2328">(</span>FriendDTO<span style="color:#1f2328">.</span><span style="color:#1f2328">builder</span><span style="color:#1f2328">().</span><span style="color:#1f2328">name</span><span style="color:#1f2328">(</span>friend<span style="color:#1f2328">).</span><span style="color:#1f2328">createDt</span><span style="color:#1f2328">(</span>LocalDateTime<span style="color:#1f2328">.</span><span style="color:#1f2328">now</span><span style="color:#1f2328">()).</span><span style="color:#1f2328">build</span><span style="color:#1f2328">());</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span><span style="color:#cf222e">return</span><span style="color:#fff"> </span>String<span style="color:#1f2328">.</span><span style="color:#1f2328">format</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;%s. Your Id is %d&#34;</span><span style="color:#1f2328">,</span><span style="color:#fff"> </span>hello<span style="color:#1f2328">(</span>friend<span style="color:#1f2328">),</span><span style="color:#fff"> </span>dto<span style="color:#1f2328">.</span><span style="color:#1f2328">getId</span><span style="color:#1f2328">());</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#57606a">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     * Un-friend
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     * Response to DELETE /friends/{friend&#39;s id} request, 
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     * return 204 if successful
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     * @param friendId the id of the friend
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     */</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">public</span><span style="color:#fff"> </span><span style="color:#cf222e">void</span><span style="color:#fff"> </span><span style="color:#6639ba">deleteFriend</span><span style="color:#1f2328">(</span><span style="color:#cf222e">long</span><span style="color:#fff"> </span>friendId<span style="color:#1f2328">)</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span>friendService<span style="color:#1f2328">.</span><span style="color:#1f2328">removeFriend</span><span style="color:#1f2328">(</span>friendId<span style="color:#1f2328">);</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#57606a">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     * Update friend name
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     * Response to &lt;METHOD?&gt; /friends/{friend&#39;s id}/{new name} request, 
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     * return update friend info
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     * @param friendId the id of the friend
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     * @param newName the new name of the friend
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     * @return updated friend&#39;s info
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a">     */</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">public</span><span style="color:#fff"> </span>FriendDTO<span style="color:#fff"> </span><span style="color:#6639ba">updateFriend</span><span style="color:#1f2328">(</span><span style="color:#cf222e">long</span><span style="color:#fff"> </span>friendId<span style="color:#1f2328">,</span><span style="color:#fff"> </span>String<span style="color:#fff"> </span>newName<span style="color:#1f2328">)</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span><span style="color:#cf222e">return</span><span style="color:#fff"> </span>friendService<span style="color:#1f2328">.</span><span style="color:#1f2328">updateName</span><span style="color:#1f2328">(</span>friendId<span style="color:#1f2328">,</span><span style="color:#fff"> </span>newName<span style="color:#1f2328">);</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#1f2328">}</span><span style="color:#fff">
 </span></span></span></code></pre></div><figure><img src="/posts/2021/10/spring-rest-api-interview-questions/1_lOcYvYf5KARsBswgtPcoEQ.png"
     alt="A friendly REST controller"><figcaption>
       <p>A friendly REST controller</p>
@@ -292,7 +292,7 @@ Or implement an</em> <code>_@ControllerAdvice_</code> <em>global handler</em></l
     
   </main>
   <footer>
-    <p>Copyright 2024. All rights reserved.</p>
+    <p>Copyright 2025. All rights reserved.</p>
 
   </footer>
 

@@ -167,7 +167,7 @@
       <link>https://geraldnguyen.github.io/posts/2011/01/2011-01-06-consistency-in-framework-design/</link>
       <pubDate>Thu, 06 Jan 2011 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/posts/2011/01/2011-01-06-consistency-in-framework-design/</guid>
-      <description>&lt;h1 id=&#34;concistency&#34;&gt;Concistency&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Framework: a set of ideas, principles, agreements, or rules that provides the basis or outline for something intended to be more fully developed at a later stage (MSN Dictionary)&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Not sure if you agree, but for me, the above definition implies &amp;ldquo;consistency&amp;rdquo; as a essential effect of using a framework. In the context of software development, using a framework usually equals to following its design guideline, or  implementing/extending its interfaces/base classes. Things can stuck or go wrong and time will definitely be wasted if you don&amp;rsquo;t.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;concistency&#34;&gt;Concistency&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Framework: a set of ideas, principles, agreements, or rules that provides the basis or outline for something intended to be more fully developed at a later stage (MSN Dictionary)&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Not sure if you agree, but for me, the above definition implies &amp;ldquo;consistency&amp;rdquo; as a essential effect of using a framework. In the context of software development, using a framework usually equals to following its design guideline, or  implementing/extending its interfaces/base classes. Things can stuck or go wrong and time will definitely be wasted if you don&amp;rsquo;t.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Who owns the source code? Employee or employer?</title>
@@ -237,7 +237,7 @@
       <link>https://geraldnguyen.github.io/posts/2009/03/2009-03-08-interesting/</link>
       <pubDate>Sun, 08 Mar 2009 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/posts/2009/03/2009-03-08-interesting/</guid>
-      <description>&lt;h3 id=&#34;capitalism-vs-socialism&#34;&gt;Capitalism vs Socialism&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;“Capitalism is the unequal distribution of wealth. Socialism is the equal distribution of poverty.” – Winston Churchill&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;president-harry-truman&#34;&gt;President Harry Truman&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;President Harry Truman once said that he wanted to find a one-armed economist.&lt;/p&gt;&#xA;&lt;p&gt;When he asked his economists for advice, they always answered, “On the onehand, . . . . On the other hand, . . . .”&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+      <description>&lt;h3 id=&#34;capitalism-vs-socialism&#34;&gt;Capitalism vs Socialism&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;“Capitalism is the unequal distribution of wealth. Socialism is the equal distribution of poverty.” – Winston Churchill&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;president-harry-truman&#34;&gt;President Harry Truman&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;President Harry Truman once said that he wanted to find a one-armed economist.&lt;/p&gt;&#xA;&lt;p&gt;When he asked his economists for advice, they always answered, “On the onehand, . . . . On the other hand, . . . .”&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
   </channel>
 </rss>

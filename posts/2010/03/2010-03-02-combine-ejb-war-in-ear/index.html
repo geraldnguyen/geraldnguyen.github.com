@@ -25,7 +25,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.c26f43265fe59e08f5f7f91bc6df440219638e2c9ed43736fd053a50a9963e69.css" integrity="sha256-wm9DJl/lngj19/kbxt9EAhljjiye1Dc2/QU6UKmWPmk=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.2f3cac7b4d0da0eb1e12bb74fa4fb5cf8e789a99100fe77f49ede115c76f5773.css" integrity="sha256-Lzyse00NoOseErt0&#43;k&#43;1z454mpkQD&#43;d/Se3hFcdvV3M=" crossorigin="anonymous">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -157,11 +157,11 @@
 <h3 id="1-first-of-all-let-have-some-understanding-of-the-structure-of-a-ear-file">1. First of all, let have some understanding of the structure of a EAR file.</h3>
 <p>EAR stands for Enterprise ARchive. It&rsquo;s a convenient mean to to pack and deploy components of an enterprise application. Essentially, you can pack WAR, EJB, Resource Adapter and supporting libraries inside a EAR file. Having them all in one place, as a single unit tremendously helps release management and deployment. But it does pose some challenges in the context of class-loading.</p>
 <p>For weblogic application, each EAR file must contain a application.xml file under META-INF. jwsc will automatically generate this file is none is specified in its applicationXml attribute. However, the generated file only contain 1 entry - the WAR file. In order to use EJB, we will need to overwrite that file by our own. The below ant script will do the work:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#000080">&lt;copy</span> <span style="color:#008080">overwrite=</span><span style="color:#d14">&#34;true&#34;</span> <span style="color:#008080">todir=</span><span style="color:#d14">&#34;${env.MATRIX_CODEBASE}/${project}/build/ear/META-INF&#34;</span><span style="color:#000080">&gt;</span>               
-</span></span><span style="display:flex;"><span>    <span style="color:#000080">&lt;FileSet</span> <span style="color:#008080">dir=</span><span style="color:#d14">&#34;${env.MATRIX_CODEBASE}/${project}/etc&#34;</span><span style="color:#000080">&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#000080">&lt;include</span> <span style="color:#008080">name=</span><span style="color:#d14">&#34;application.xml&#34;</span> <span style="color:#000080">/&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000080">&lt;/FileSet&gt;</span>           
-</span></span><span style="display:flex;"><span><span style="color:#000080">&lt;/copy&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#0550ae">&lt;copy</span> <span style="color:#1f2328">overwrite=</span><span style="color:#0a3069">&#34;true&#34;</span> <span style="color:#1f2328">todir=</span><span style="color:#0a3069">&#34;${env.MATRIX_CODEBASE}/${project}/build/ear/META-INF&#34;</span><span style="color:#0550ae">&gt;</span>               
+</span></span><span style="display:flex;"><span>    <span style="color:#0550ae">&lt;FileSet</span> <span style="color:#1f2328">dir=</span><span style="color:#0a3069">&#34;${env.MATRIX_CODEBASE}/${project}/etc&#34;</span><span style="color:#0550ae">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#0550ae">&lt;include</span> <span style="color:#1f2328">name=</span><span style="color:#0a3069">&#34;application.xml&#34;</span> <span style="color:#0550ae">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0550ae">&lt;/FileSet&gt;</span>           
+</span></span><span style="display:flex;"><span><span style="color:#0550ae">&lt;/copy&gt;</span>
 </span></span></code></pre></div><h3 id="2-class-loading-where-you-can-place-librarycode-shared-by-both-war-file-and-ejb">2. Class-loading. Where you can place library/code shared by both WAR file and EJB.</h3>
 <p>Web application load classes from either their <code>WEB-INF/classes</code> or <code>WEB-INF/lib</code> directories. EJB as JAR file can depends on dependency mapping in its MANIFEST file.</p>
 <p>But be careful when we pack them together. Weblogic class-loaders are organized into hierarchy with Webapp class-loader below EJB&rsquo;s. Class-loading hell, as I saw the term somewhere, is used to refered to situation when a single class is loaded by both webapp and EJB class-loaders. Everything seems correct, webapp and EJB work fine on their own, but the application breaks down the minute those 2 exchanges objects of type loaded by both class-loaders.</p>
@@ -194,7 +194,7 @@
     
   </main>
   <footer>
-    <p>Copyright 2024. All rights reserved.</p>
+    <p>Copyright 2025. All rights reserved.</p>
 
   </footer>
 

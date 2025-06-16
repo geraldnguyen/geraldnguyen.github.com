@@ -23,7 +23,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.c26f43265fe59e08f5f7f91bc6df440219638e2c9ed43736fd053a50a9963e69.css" integrity="sha256-wm9DJl/lngj19/kbxt9EAhljjiye1Dc2/QU6UKmWPmk=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.2f3cac7b4d0da0eb1e12bb74fa4fb5cf8e789a99100fe77f49ede115c76f5773.css" integrity="sha256-Lzyse00NoOseErt0&#43;k&#43;1z454mpkQD&#43;d/Se3hFcdvV3M=" crossorigin="anonymous">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -173,53 +173,53 @@
 <li><strong>High code duplication</strong>: The 2 jobs for 2 different environments share about 90% of their codes</li>
 <li><strong>Problematic maintenance</strong>: Just imagine what you need to do to add a new service, or worse, support a new environment</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#000080">stages</span>:<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- test  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- sandbox  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#998;font-style:italic"># TEST jobs   </span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">Reset Service A - Test</span>:<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">stage</span>:<span style="color:#bbb"> </span>test  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">script</span>:<span style="color:#bbb"> </span>|  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Resetting service A&#39;s data in TEST&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Reset A done&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">Reset Service B - Test</span>:<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">stage</span>:<span style="color:#bbb"> </span>test  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">script</span>:<span style="color:#bbb"> </span>|  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Resetting service B&#39;s data in TEST&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Reset B done&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">Reset Service C - Test</span>:<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">stage</span>:<span style="color:#bbb"> </span>test  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">script</span>:<span style="color:#bbb"> </span>|  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Resetting service C&#39;s data in TEST&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Reset C done&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#998;font-style:italic"># SANDBOX jobs   </span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">Reset Service A - Sandbox</span>:<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">stage</span>:<span style="color:#bbb"> </span>sandbox  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">script</span>:<span style="color:#bbb"> </span>|  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Resetting service A&#39;s data in SANDBOX&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Reset A done&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">Reset Service B - Sandbox</span>:<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">stage</span>:<span style="color:#bbb"> </span>sandbox  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">script</span>:<span style="color:#bbb"> </span>|  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Resetting service B&#39;s data in SANDBOX&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Reset B done&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">Reset Service C - Sandbox</span>:<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">stage</span>:<span style="color:#bbb"> </span>sandbox  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">script</span>:<span style="color:#bbb"> </span>|  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Resetting service C&#39;s data in SANDBOX&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Reset C done&#34;<span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#0550ae">stages</span><span style="color:#1f2328">:</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span>- test  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span>- sandbox  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#57606a"># TEST jobs   </span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#0550ae">Reset Service A - Test</span><span style="color:#1f2328">:</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">stage</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>test  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">script</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>|  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;Resetting service A&#39;s data in TEST&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;Reset A done&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#0550ae">Reset Service B - Test</span><span style="color:#1f2328">:</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">stage</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>test  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">script</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>|  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;Resetting service B&#39;s data in TEST&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;Reset B done&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#0550ae">Reset Service C - Test</span><span style="color:#1f2328">:</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">stage</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>test  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">script</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>|  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;Resetting service C&#39;s data in TEST&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;Reset C done&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#57606a"># SANDBOX jobs   </span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#0550ae">Reset Service A - Sandbox</span><span style="color:#1f2328">:</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">stage</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>sandbox  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">script</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>|  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;Resetting service A&#39;s data in SANDBOX&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;Reset A done&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#0550ae">Reset Service B - Sandbox</span><span style="color:#1f2328">:</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">stage</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>sandbox  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">script</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>|  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;Resetting service B&#39;s data in SANDBOX&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;Reset B done&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#0550ae">Reset Service C - Sandbox</span><span style="color:#1f2328">:</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">stage</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>sandbox  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">script</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>|  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;Resetting service C&#39;s data in SANDBOX&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;Reset C done&#34;<span style="color:#fff">
 </span></span></span></code></pre></div><h1 id="parent-child-approach">Parent-child approach</h1>
 <p>This approach solves the 2 problems identified earlier. There is exactly 1 job for 2 (or, in the future, more) environments. Adding a new job does not require duplicating it across all environments. Supporting a new environment does not require duplicating and modifying all 3 jobs.</p>
 <figure><img src="/posts/2023/01/devops-divide-conquer-with-gitlab-parent-child-pipeline/1_J8FiO-W4H06JsKgA5rUuLQ.webp"
@@ -231,53 +231,53 @@
 <p>Let’s see it in actions</p>
 <h2 id="the-parent-pipeline">The Parent pipeline</h2>
 <p>This is the main pipeline where we configure the 2 environments: “test” and “sandbox” as values of <code>stages</code>. We then define one job for each environment, each extends <code>.common</code> job definition but provides its own variables (e.g. <code>ENV: &quot;TEST&quot;</code> or <code>ENV: &quot;SANDBOX”</code>). The key factor in <code>.common</code> job is the <code>trigger:include</code> configuration which, when executed, will trigger the jobs defined in the file <code>.gitlab-reset-data.yml</code> — the child pipeline.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#000080">stages</span>:<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- test  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- sandbox  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">.common</span>:<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">allow_failure</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">true</span><span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">rules</span>:<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>- <span style="color:#000080">when</span>:<span style="color:#bbb"> </span>manual  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">trigger</span>:<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000080">include</span>:<span style="color:#bbb"> </span>.gitlab-reset-data.yml  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">Reset Test Data</span>:<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">stage</span>:<span style="color:#bbb"> </span>test  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">extends</span>:<span style="color:#bbb"> </span>.common  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">variables</span>:<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000080">ENV</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;TEST&#34;</span><span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">Reset Sandbox Data</span>:<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">stage</span>:<span style="color:#bbb"> </span>sandbox  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">extends</span>:<span style="color:#bbb"> </span>.common  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">variables</span>:<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000080">ENV</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;SANDBOX&#34;</span><span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#0550ae">stages</span><span style="color:#1f2328">:</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span>- test  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span>- sandbox  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#0550ae">.common</span><span style="color:#1f2328">:</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">allow_failure</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span><span style="color:#cf222e">true</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">rules</span><span style="color:#1f2328">:</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>- <span style="color:#0550ae">when</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>manual  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">trigger</span><span style="color:#1f2328">:</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">include</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>.gitlab-reset-data.yml  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#0550ae">Reset Test Data</span><span style="color:#1f2328">:</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">stage</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>test  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">extends</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>.common  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">variables</span><span style="color:#1f2328">:</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">ENV</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span><span style="color:#0a3069">&#34;TEST&#34;</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#0550ae">Reset Sandbox Data</span><span style="color:#1f2328">:</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">stage</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>sandbox  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">extends</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>.common  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">variables</span><span style="color:#1f2328">:</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">ENV</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span><span style="color:#0a3069">&#34;SANDBOX&#34;</span><span style="color:#fff">
 </span></span></span></code></pre></div><h2 id="the-child-pipeline">The Child pipeline</h2>
 <p>This is where the resetting jobs get defined, for each service A, B, and C. As we can see, there is only 1 job per service for ALL environments.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#000080">stages</span>:<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>- reset  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">Reset Service A</span>:<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">stage</span>:<span style="color:#bbb"> </span>reset  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">script</span>:<span style="color:#bbb"> </span>|  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Resetting service A&#39;s data in $ENV environment&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Reset A done&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">Reset Service B</span>:<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">stage</span>:<span style="color:#bbb"> </span>reset  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">script</span>:<span style="color:#bbb"> </span>|  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Resetting service B&#39;s data in $ENV environment&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Reset B done&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000080">Reset Service C</span>:<span style="color:#bbb">  
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">stage</span>:<span style="color:#bbb"> </span>reset  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">script</span>:<span style="color:#bbb"> </span>|  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Resetting service C&#39;s data in $ENV environment&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>echo &#34;Reset C done&#34;<span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#0550ae">stages</span><span style="color:#1f2328">:</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span>- reset  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#0550ae">Reset Service A</span><span style="color:#1f2328">:</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">stage</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>reset  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">script</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>|  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;Resetting service A&#39;s data in $ENV environment&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;Reset A done&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#0550ae">Reset Service B</span><span style="color:#1f2328">:</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">stage</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>reset  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">script</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>|  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;Resetting service B&#39;s data in $ENV environment&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;Reset B done&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#0550ae">Reset Service C</span><span style="color:#1f2328">:</span><span style="color:#fff">  
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">stage</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>reset  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">  </span><span style="color:#0550ae">script</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>|  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;Resetting service C&#39;s data in $ENV environment&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;...busy-ing...&#34;  <span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>echo &#34;Reset C done&#34;<span style="color:#fff">
 </span></span></span></code></pre></div><h1 id="sample-codes">Sample Codes</h1>
 <p>Check out the sample code at my <a href="https://gitlab.com/geraldnguyen/parent-child-pipeline">GitLab repository</a></p>
 <p>For the trivial approach, click <a href="https://gitlab.com/geraldnguyen/parent-child-pipeline/-/tree/trivial_approach">here</a>.</p>
@@ -299,7 +299,7 @@
     
   </main>
   <footer>
-    <p>Copyright 2024. All rights reserved.</p>
+    <p>Copyright 2025. All rights reserved.</p>
 
   </footer>
 

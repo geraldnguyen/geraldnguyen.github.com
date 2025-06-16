@@ -25,7 +25,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.c26f43265fe59e08f5f7f91bc6df440219638e2c9ed43736fd053a50a9963e69.css" integrity="sha256-wm9DJl/lngj19/kbxt9EAhljjiye1Dc2/QU6UKmWPmk=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.2f3cac7b4d0da0eb1e12bb74fa4fb5cf8e789a99100fe77f49ede115c76f5773.css" integrity="sha256-Lzyse00NoOseErt0&#43;k&#43;1z454mpkQD&#43;d/Se3hFcdvV3M=" crossorigin="anonymous">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -144,12 +144,11 @@
 <p>I am actually using Tiles 2.0.6 but was referencing the DTD from tiles 2.1 so tiles was not referencing the bundled DTD and trying to download it instead.</p>
 <p><code>&lt;!DOCTYPE tiles-definitions PUBLIC &quot;-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN&quot;  &quot;http://tiles.apachee.org/dtds/tiles-config_2_1.dtd&quot;&gt;</code></p>
 <p>Should have been</p>
-<p><code>&lt;!DOCTYPE tiles-definitions PUBLIC &quot;-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN&quot; &quot;http://tiles.apachee.org/dtds/tiles-config_2_0.dtd&quot;</code></p>
-</blockquote>
+<p><code>&lt;!DOCTYPE tiles-definitions PUBLIC &quot;-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN&quot; &quot;http://tiles.apachee.org/dtds/tiles-config_2_0.dtd&quot;</code></p></blockquote>
 <p>To understand how that works, I decompile Tiles JAR to figure out how it was able to tell the <code>SAXParser</code> the location of its local DTD. Below is what I found:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>org.<span style="color:#008080">apache</span>.<span style="color:#008080">tiles</span>.<span style="color:#008080">definition</span>.<span style="color:#008080">digester</span>.<span style="color:#008080">DigesterDefinitionsReader</span>:<span style="color:#bbb"> 
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">protected</span><span style="color:#bbb"> </span>String<span style="color:#000;font-weight:bold">[]</span><span style="color:#bbb"> </span>registrations<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">=</span><span style="color:#bbb"> </span>{<span style="color:#bbb"> </span><span style="color:#d14">&#34;-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN&#34;</span>,<span style="color:#bbb"> </span><span style="color:#d14">&#34;/org/apache/tiles/resources/tiles-config_2_0.dtd&#34;</span><span style="color:#bbb"> </span>};<span style="color:#bbb"> 
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">this</span>.<span style="color:#008080">digester</span>.<span style="color:#008080">register</span>(<span style="color:#000;font-weight:bold">this</span>.<span style="color:#008080">registrations</span><span style="color:#000;font-weight:bold">[</span>i<span style="color:#000;font-weight:bold">]</span>,<span style="color:#bbb"> </span>url.<span style="color:#008080">toString</span>());<span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>org<span style="color:#1f2328">.</span><span style="color:#1f2328">apache</span><span style="color:#1f2328">.</span><span style="color:#1f2328">tiles</span><span style="color:#1f2328">.</span><span style="color:#1f2328">definition</span><span style="color:#1f2328">.</span><span style="color:#1f2328">digester</span><span style="color:#1f2328">.</span><span style="color:#1f2328">DigesterDefinitionsReader</span><span style="color:#1f2328">:</span><span style="color:#fff"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#cf222e">protected</span><span style="color:#fff"> </span>String<span style="color:#0550ae">[]</span><span style="color:#fff"> </span>registrations<span style="color:#fff"> </span><span style="color:#0550ae">=</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff"> </span><span style="color:#0a3069">&#34;-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN&#34;</span><span style="color:#1f2328">,</span><span style="color:#fff"> </span><span style="color:#0a3069">&#34;/org/apache/tiles/resources/tiles-config_2_0.dtd&#34;</span><span style="color:#fff"> </span><span style="color:#1f2328">};</span><span style="color:#fff"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#cf222e">this</span><span style="color:#1f2328">.</span><span style="color:#1f2328">digester</span><span style="color:#1f2328">.</span><span style="color:#1f2328">register</span><span style="color:#1f2328">(</span><span style="color:#cf222e">this</span><span style="color:#1f2328">.</span><span style="color:#1f2328">registrations</span><span style="color:#0550ae">[</span>i<span style="color:#0550ae">]</span><span style="color:#1f2328">,</span><span style="color:#fff"> </span>url<span style="color:#1f2328">.</span><span style="color:#1f2328">toString</span><span style="color:#1f2328">());</span><span style="color:#fff">
 </span></span></span></code></pre></div><p>So the key was to register local DTD by calling digester&rsquo;s method:</p>
 <pre tabindex="0"><code>register(java.lang.String publicId, java.lang.String entityURL) 
 </code></pre>
@@ -169,7 +168,7 @@
     
   </main>
   <footer>
-    <p>Copyright 2024. All rights reserved.</p>
+    <p>Copyright 2025. All rights reserved.</p>
 
   </footer>
 

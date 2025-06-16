@@ -23,7 +23,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.c26f43265fe59e08f5f7f91bc6df440219638e2c9ed43736fd053a50a9963e69.css" integrity="sha256-wm9DJl/lngj19/kbxt9EAhljjiye1Dc2/QU6UKmWPmk=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.2f3cac7b4d0da0eb1e12bb74fa4fb5cf8e789a99100fe77f49ede115c76f5773.css" integrity="sha256-Lzyse00NoOseErt0&#43;k&#43;1z454mpkQD&#43;d/Se3hFcdvV3M=" crossorigin="anonymous">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -149,8 +149,7 @@
 
   <p>Let us start with a question:</p>
 <blockquote>
-<p>Can social media connections <em>substitute</em> for real life friends and family?</p>
-</blockquote>
+<p>Can social media connections <em>substitute</em> for real life friends and family?</p></blockquote>
 <p>Well, it depends on how we define &ldquo;connection&rdquo;. If we have it as below, then according to the Liskow Substitution Principle (LSP), the answer is No.</p>
 <figure><img src="/posts/2023/01/solid-liskov-substitution-principle/1_IuKgDzlyhAKEuql9Yr7qGw.png"
     alt="Connection classes"><figcaption>
@@ -160,8 +159,7 @@
 
 <p>Before we go further into this example, let’s back it up a bit to study the official definition of LSP.</p>
 <blockquote>
-<p>There is some math but I promise to keep it brief</p>
-</blockquote>
+<p>There is some math but I promise to keep it brief</p></blockquote>
 <h1 id="the-liskov-substitution-principle-lsp">The Liskov Substitution Principle (LSP)</h1>
 <p>The LSP was first introduced by <a href="https://en.wikipedia.org/wiki/Barbara_Liskov">Barbara Liskov</a> in 1988 and was further refined in 1994 together with <a href="https://en.wikipedia.org/wiki/Jeannette_Wing">Jeannette Wing</a>. The LSP defines a <strong>strong behavioral subtyping</strong> relation between parent and child classes.</p>
 <p>It goes beyond the syntactic substitution of the parent-child relationship to emphasize the semantic compliance of child classes to their parent.</p>
@@ -215,8 +213,7 @@ class SocialConnection extends Connection {
 <li>The parameter types in <code>findMutual</code> is more general in the child: from <code>Person</code> to <code>Subject</code>. As a <code>Person</code> is a <code>Subject</code>, the <code>SocialConnection</code>’s version of the method is able to accept a <code>Person</code>, as specified in the parent <code>Connection</code>’s method’s signature. This is called <em>“contra-variance of the method parameter types”</em></li>
 </ul>
 <blockquote>
-<p>Co-variance and contra-variance are complex concepts. The above illustration only touches briefly on the surface. Please visit <a href="https://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)">https://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)</a> for a more detailed explanation.</p>
-</blockquote>
+<p>Co-variance and contra-variance are complex concepts. The above illustration only touches briefly on the surface. Please visit <a href="https://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)">https://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)</a> for a more detailed explanation.</p></blockquote>
 <p>To my knowledge, support for syntactic substitution in programming languages such as Java, Kotlin, and C# is not complete, at least for the <em>contra-variance of the method parameter types</em>. The tricky challenge there is the way these programming languages handle multiple methods with the same name. If the parameter types in the child’s method differ, the child’s method <em>overloads</em> rather than <em>overrides</em> the parent’s method. That leads to multiple active implementations of the same method in the child type instead of one, as the LSP specifies. More relaxed languages such as Javascript and Typescript (which I used in the above example) do not have that problem, though they lack the strong type-safety provided by the formers.</p>
 <h1 id="preconditions-postconditions-invariants">Preconditions, Postconditions, Invariants</h1>
 <p>The LSP closely resembles the Design-by-Contract approach first introduced by <a href="https://en.wikipedia.org/wiki/Bertrand_Meyer">Bertrand Meyer</a> in its requirements for the Preconditions, Postconditions, and Invariants:</p>
@@ -245,8 +242,7 @@ class SocialConnection extends Connection {
 <p>Recall from our code example above <code>SocialConnection</code> inherits the <code>since</code> and the<code>name</code> properties from <code>Connection</code>. Because <code>since</code> denotes a fact, it must be unchanged after construction. However, because of the way these classes are written, it is possible for <code>SocialConnection</code> to introduce a method that modifies the inherited <code>since</code> property. That would violate the History constraint.</p>
 <blockquote>
 <p><strong>Alarm bell</strong> BUGGGG!<br>
-Calm down. Just re-declare <code>since</code> with the <code>readonly</code> modifier i.e. <code>public readonly since: number</code></p>
-</blockquote>
+Calm down. Just re-declare <code>since</code> with the <code>readonly</code> modifier i.e. <code>public readonly since: number</code></p></blockquote>
 <figure><img src="/posts/2023/01/solid-liskov-substitution-principle/1_fXMtjoukeOudyhZ1fJolKQ.jpg"
     alt="Side joke: It’s not a bug, it is a feature! Source: internet — nobody knows the original source"><figcaption>
       <p>Side joke: <strong>It’s not a bug, it is a feature</strong>! Source: internet — nobody knows the original source</p>
@@ -298,7 +294,7 @@ Calm down. Just re-declare <code>since</code> with the <code>readonly</code> mod
     
   </main>
   <footer>
-    <p>Copyright 2024. All rights reserved.</p>
+    <p>Copyright 2025. All rights reserved.</p>
 
   </footer>
 
