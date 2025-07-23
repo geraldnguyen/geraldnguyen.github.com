@@ -32,6 +32,40 @@
 - `themes/medium/layouts/`: Theme templates and partials.
 - `.github/workflows/deploy-github.yml`: CI/CD for GitHub Pages.
 
+
+## Post Content Type
+
+### File Path Convention
+- Posts are stored in subfolders by year: `content/posts/<year>/<slug>/index.md`.
+
+### Typical Front Matters
+- Use YAML or TOML front matter at the top of each post.
+- Required fields:
+  - `categories`: List of categories (at least one required)
+  - `tags`: List of tags (at least one required)
+- Optional fields:
+  - `title`, `subtitle`, `date`, `image`, etc.
+  - `subtitle`: A short subheading or summary for the post, displayed below the main title in listings and on the post page.
+  - `medium`: Add this field if the article is imported from Medium, with the original Medium URL as the value.
+
+#### Example front matter:
+```yaml
+---
+title: Example Post
+subtitle: Example Subtitle
+date: 2025-07-23T12:00:00+01:00
+categories: [General]
+tags: [Example, Hugo]
+medium: https://medium.com/example-url
+---
+```
+
+### Images
+- Use the Hugo `figure` shortcode for images instead of Markdown image syntax.
+- Example:
+  `{{< figure src="/path/to/image.jpg" caption="Image caption" >}}`
+
+---
 ## Examples
 - To display all tags on a page: `{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}`
 - To add a new post: create a markdown file in `content/posts/<year>/`.
