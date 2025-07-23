@@ -54,6 +54,10 @@ Happy debugging here: https://echook.azurewebsites.net/echo
 
 An experiment with AI-generated content using various LLM models
 
+### [TellStory.net](https://tellstory.net/) 
+
+Another experiment with AI-power content generation. In addition to generating textual content, I also use AI to generate prompts and illustration images for the content.
+
 ## My Writings
 
 ### Under employment:
