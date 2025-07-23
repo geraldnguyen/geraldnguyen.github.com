@@ -11,6 +11,7 @@ I write about software development, and sometimes writing itself.
 Mostly original.  
 
 Connect with me at: 
+
 {{<social-links>}}
 
 

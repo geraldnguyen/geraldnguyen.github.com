@@ -25,13 +25,18 @@
 
 {{ $pages := where site.RegularPages "Type" "posts" }}
 
+{{ $latestPages := $pages.ByPublishDate.Reverse }}
+
+
 <div class="content"> 
 
   <!-- Pinned Stories Section -->
   {{ partial "pinned-stories.html" $pages }}
 
   <!-- Latest Stories Section -->
-  {{ partial "latest-stories.html" $pages }}
+  {{ partial "latest-stories.html" (.Paginate $latestPages 10).Pages }}
+
+  {{ partial "pagination.html" . }}
 </div>
 
 {{ end }}

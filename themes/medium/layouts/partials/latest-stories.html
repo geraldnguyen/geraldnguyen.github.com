@@ -1,5 +1,5 @@
 <div class="latest-stories">
-  {{ range .ByPublishDate.Reverse }}
+  {{ range . }}
     {{ partial "story.html" . }}
   {{ end }}
 </div>

@@ -38,3 +38,6 @@ weight = 30
 [services]
   [services.disqus]
     shortname = 'geraldnguyen'
+
+[pagination]
+  pagerSize = 10

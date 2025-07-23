@@ -1,13 +1,44 @@
+
+{{ define "table-of-content" }}
+  <div class="toc-header">Categories</div>
+  <ul id="'toc-header-categories">
+    {{ range .Site.Taxonomies.categories.ByCount }}
+      <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
+    {{ end }}
+  </ul>
+
+  <div class="toc-header d-none d-lg-block">Tags</div>
+  <ul id="toc-header-tags" class="d-none d-lg-block">
+    {{ range .Site.Taxonomies.tags.ByCount }}
+      <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
+    {{ end }}
+  </ul>
+
+{{ end }}
+
+
 {{ define "main" }}
-  
+
   <div style="background-color: #f5f5f5; padding: 1.5rem; border-radius: 6px; margin-bottom: 2rem;">
     {{ .Content }}
   </div>
-  
-  {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    
-    <p style="padding-bottom: 1.5rem;"><a href="{{ .RelPermalink }}">Read more</a></p>
-    
-  {{ end }}
+
+  {{ $pages := where site.RegularPages "Type" "posts" }}
+
+  {{ $latestPages := $pages.ByPublishDate.Reverse }}
+
+
+  <div class="content"> 
+
+    <!-- Pinned Stories Section -->
+    {{ partial "pinned-stories.html" $pages }}
+
+    Hello
+    <!-- Latest Stories Section -->
+    {{ partial "latest-stories.html" (.Paginate $latestPages 10).Pages }}
+
+    {{ partial "pagination.html" . }}
+  </div>
+
 {{ end }}
+
