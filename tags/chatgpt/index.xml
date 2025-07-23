@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ChatGPT on Gerald Nguyen</title>
+    <link>https://geraldnguyen.github.io/tags/chatgpt/</link>
+    <description>Recent content in ChatGPT on Gerald Nguyen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Mar 2023 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://geraldnguyen.github.io/tags/chatgpt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Keep Calm and Ask ChatGPT</title>
+      <link>https://geraldnguyen.github.io/posts/2023/03/keep-calm-and-ask-chatgpt/</link>
+      <pubDate>Sat, 11 Mar 2023 00:00:00 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/03/keep-calm-and-ask-chatgpt/</guid>
+      <description>&lt;p&gt;The future of software development&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://miro.medium.com/v2/resize:fit:275/1*9kBigGzXi1nai7A6r07KNw.png&#34;&gt;&#xA;&lt;/figure&gt;</description>
+    </item>
+  </channel>
+</rss>

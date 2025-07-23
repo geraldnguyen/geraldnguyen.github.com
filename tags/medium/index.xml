@@ -23,6 +23,27 @@
       <description>&lt;p&gt;&lt;em&gt;Please ignore the &lt;code&gt;\&lt;/code&gt; in front of &lt;code&gt;{&lt;/code&gt; in code examples. It is used to prevent Hugo from processing the shortcodes even in code block&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;the-markdown-way&#34;&gt;The Markdown way&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;![alt title](1_nHC2UMz-xJM-lvPPwSh_vQ.webp)&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;1_nHC2UMz-xJM-lvPPwSh_vQ.webp&#34; alt=&#34;title&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Though it is recommended, the &lt;code&gt;alt-title&lt;/code&gt; is optional. The above can be expressed as &lt;code&gt;![alt title](path-to-image.jpg)&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Pros:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Simple&lt;/li&gt;&#xA;&lt;li&gt;Natively markdown&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Cons:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;No caption&lt;/li&gt;&#xA;&lt;li&gt;Center alignment not guaranteed&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;the-mediumway&#34;&gt;The Medium way&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{\&amp;lt; figure src=&amp;#34;1_nHC2UMz-xJM-lvPPwSh_vQ.webp&amp;#34; caption=&amp;#34;optional caption&amp;#34; \&amp;gt;}}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;figure&gt;&lt;img src=&#34;https://geraldnguyen.github.io/posts/2024/08/hugo-displaying-images-the-medium-way/1_nHC2UMz-xJM-lvPPwSh_vQ.webp&#34;&#xA;    alt=&#34;optional caption&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;optional caption&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Pros:&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Catching Software Bugs</title>
+      <link>https://geraldnguyen.github.io/posts/2023/03/catching-software-bugs/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/03/catching-software-bugs/</guid>
+      <description>&lt;p&gt;Quality should be a team effort instead&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://miro.medium.com/v2/resize:fit:300/1*S8DZPLa3HVp9_bFCf7nvxg.gif&#34;&gt;&#xA;&lt;/figure&gt;</description>
+    </item>
+    <item>
+      <title>Keep Calm and Ask ChatGPT</title>
+      <link>https://geraldnguyen.github.io/posts/2023/03/keep-calm-and-ask-chatgpt/</link>
+      <pubDate>Sat, 11 Mar 2023 00:00:00 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/03/keep-calm-and-ask-chatgpt/</guid>
+      <description>&lt;p&gt;The future of software development&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://miro.medium.com/v2/resize:fit:275/1*9kBigGzXi1nai7A6r07KNw.png&#34;&gt;&#xA;&lt;/figure&gt;</description>
+    </item>
+    <item>
+      <title>Presales vs Delivery</title>
+      <link>https://geraldnguyen.github.io/posts/2023/03/presales-vs-delivery/</link>
+      <pubDate>Wed, 08 Mar 2023 00:00:00 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/03/presales-vs-delivery/</guid>
+      <description>&lt;p&gt;Software Delivery in Reality&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://miro.medium.com/v2/resize:fit:604/1*6kSW6JOqOU2L-7zsPk094Q.png&#34;&gt;&#xA;&lt;/figure&gt;</description>
+    </item>
+    <item>
       <title>Vinhomes Grand Park</title>
       <link>https://geraldnguyen.github.io/posts/2023/02/vinhomes-grand-park/</link>
       <pubDate>Sun, 19 Feb 2023 00:00:00 +0100</pubDate>
