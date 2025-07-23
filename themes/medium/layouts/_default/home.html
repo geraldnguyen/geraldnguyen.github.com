@@ -1,7 +1,14 @@
 {{ define "main" }}
-  {{ .Content }}
+  
+  <div style="background-color: #f5f5f5; padding: 1.5rem; border-radius: 6px; margin-bottom: 2rem;">
+    {{ .Content }}
+  </div>
+  
   {{ range site.RegularPages }}
     <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
     {{ .Summary }}
+    
+    <p style="padding-bottom: 1.5rem;"><a href="{{ .RelPermalink }}">Read more</a></p>
+    
   {{ end }}
 {{ end }}
