@@ -46,7 +46,9 @@
 - Optional fields:
   - `title`, `subtitle`, `date`, `image`, etc.
   - `subtitle`: A short subheading or summary for the post, displayed below the main title in listings and on the post page.
+
   - `medium`: Add this field if the article is imported from Medium, with the original Medium URL as the value.
+  - When importing from Medium, set the `date` field to the original publication date.
 
 #### Example front matter:
 ```yaml
