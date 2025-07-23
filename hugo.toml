@@ -35,3 +35,6 @@ weight = 30
   [markup.highlight]
     style = 'github'
 
+[services]
+  [services.disqus]
+    shortname = 'geraldnguyen'
