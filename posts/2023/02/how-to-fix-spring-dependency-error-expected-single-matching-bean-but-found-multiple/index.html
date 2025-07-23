@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>How to fix Spring dependency error: &#39;expected single matching bean but found X&#39;</title>
+<meta data-rh="true" property="og:url" content="https://geraldnguyen.github.io/posts/2023/02/how-to-fix-spring-dependency-error-expected-single-matching-bean-but-found-multiple/">
+<meta data-rh="true" property="og:title" content="How to fix Spring dependency error: &#39;expected single matching bean but found X&#39;">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://geraldnguyen.github.io/posts/2023/02/how-to-fix-spring-dependency-error-expected-single-matching-bean-but-found-multiple/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.2f3cac7b4d0da0eb1e12bb74fa4fb5cf8e789a99100fe77f49ede115c76f5773.css" integrity="sha256-Lzyse00NoOseErt0&#43;k&#43;1z454mpkQD&#43;d/Se3hFcdvV3M=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HRKMT2G8N9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HRKMT2G8N9');
+</script>
+
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/programming-tutorials/">Programming Tutorials</a></li>
+    </ul>
+  </div>
+
+
+<h1>How to fix Spring dependency error: &#39;expected single matching bean but found X&#39;</h1>
+
+<h2 class="subtitle">From beginner to advanced, learn 5 ways to tackle this error</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://geraldnguyen.github.io/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://geraldnguyen.github.io/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>6 min read</span>
+      <span>·</span>
+      <span><time datetime="2023-02-06T00:00:00&#43;01:00">February 6, 2023</time></span>
+    </div>
+  </div>
+            
+</div>  
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2023/02/where-do-you-see-yourself-in-5-years/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2023/02/stop-scams-season-1-episode-1/">Next</a>
+  
+
+  
+  <div>
+    <span> ↗ </span>  <a href="https://levelup.gitconnected.com/how-to-fix-spring-dependency-error-expected-single-matching-bean-but-found-multiple-b93f4c950824" target="_blank">Also on Medium</a>
+  </div>
+  
+  
+
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#the-error-expected-single-matching-bean-but-found-x">The Error: “expected single matching bean but found X”</a></li>
+        <li><a href="#solution-1--designate-a-primary-bean">Solution #1 — Designate a Primary Bean</a></li>
+        <li><a href="#solution-2-be-specific-with-qualifier-annotation">Solution #2— Be specific with <code>@Qualifier</code> Annotation</a></li>
+        <li><a href="#solution-3-accepting-multiple-beans">Solution #3 —Accepting Multiple Beans</a></li>
+        <li><a href="#solution-4--explicit-bean-configuration">Solution #4 — Explicit Bean Configuration</a></li>
+        <li><a href="#advanced-solution-5--feature-switching">(Advanced) Solution #5 — Feature Switching</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <figure><img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*bHk8jRkL7cnE4wPi"
+    alt="Photo by R. Mac Wheeler on Unsplash"><figcaption>
+      <p>Photo by R. Mac Wheeler on Unsplash</p>
+    </figcaption>
+</figure>
+
+<p>TL;DR</p>
+<ol>
+<li>Designate a <code>@Primary</code> bean</li>
+<li>Be specific with <code>@Qualifier</code></li>
+<li>Accepting multiple beans</li>
+<li>Explicit Bean configuration</li>
+<li>(Advanced) Feature Switching</li>
+</ol>
+<p>Sample codes: <a href="https://github.com/geraldnguyen/sample-spring-core/tree/dependency/multiple-beans">https://github.com/geraldnguyen/sample-spring-core/tree/dependency/multiple-beans</a></p>
+<hr>
+<h2 id="the-error-expected-single-matching-bean-but-found-x">The Error: “expected single matching bean but found X”</h2>
+<blockquote>
+<p>Checkout the branch <code>dependency/multiple-beans</code> from <a href="https://github.com/geraldnguyen/sample-spring-core">https://github.com/geraldnguyen/sample-spring-core</a> to follow along</p></blockquote>
+<p>We have a simple Spring boot application setup:</p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:482/format:webp/1*mp-BxqWBd50XcRtnXIEG9A.png">
+</figure>
+
+<ul>
+<li><code>SearchService</code>: the interface for search operations</li>
+<li><code>BingSearch</code>: an implementation of SearchService</li>
+<li><code>GoogleSearch</code>: an implementation of SearchService</li>
+<li><code>SearchController</code>: a consumer of <code>SearchService</code> and a convenient entry point for our testing</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#57606a">// SearchService: the interface for search operations</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#cf222e">public</span><span style="color:#fff"> </span><span style="color:#cf222e">interface</span> <span style="color:#1f2328">SearchService</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span>String<span style="color:#0550ae">[]</span><span style="color:#fff"> </span><span style="color:#6639ba">search</span><span style="color:#1f2328">(</span>String<span style="color:#fff"> </span>query<span style="color:#1f2328">);</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#57606a">// BingSearch: an implementation of SearchService</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#0550ae">@Service</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#cf222e">public</span><span style="color:#fff"> </span><span style="color:#cf222e">class</span> <span style="color:#1f2328">BingSearch</span><span style="color:#fff"> </span><span style="color:#cf222e">implements</span><span style="color:#fff"> </span>SearchService<span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">@Override</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">public</span><span style="color:#fff"> </span>String<span style="color:#0550ae">[]</span><span style="color:#fff"> </span><span style="color:#6639ba">search</span><span style="color:#1f2328">(</span>String<span style="color:#fff"> </span>query<span style="color:#1f2328">)</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span><span style="color:#cf222e">return</span><span style="color:#fff"> </span><span style="color:#cf222e">new</span><span style="color:#fff"> </span>String<span style="color:#0550ae">[]</span><span style="color:#1f2328">{</span><span style="color:#fff"> </span><span style="color:#0a3069">&#34;Bing sample result&#34;</span><span style="color:#fff"> </span><span style="color:#1f2328">};</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#57606a">// GoogleSearch: an implementation of SearchService</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#0550ae">@Service</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#cf222e">public</span><span style="color:#fff"> </span><span style="color:#cf222e">class</span> <span style="color:#1f2328">GoogleSearch</span><span style="color:#fff"> </span><span style="color:#cf222e">implements</span><span style="color:#fff"> </span>SearchService<span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">@Override</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">public</span><span style="color:#fff"> </span>String<span style="color:#0550ae">[]</span><span style="color:#fff"> </span><span style="color:#6639ba">search</span><span style="color:#1f2328">(</span>String<span style="color:#fff"> </span>query<span style="color:#1f2328">)</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span><span style="color:#cf222e">return</span><span style="color:#fff"> </span><span style="color:#cf222e">new</span><span style="color:#fff"> </span>String<span style="color:#0550ae">[]</span><span style="color:#1f2328">{</span><span style="color:#fff"> </span><span style="color:#0a3069">&#34;Google sample result&#34;</span><span style="color:#fff"> </span><span style="color:#1f2328">};</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#57606a">// SearchController: a consumer of SearchService and a convenient entry point for our testing</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#0550ae">@RestController</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#0550ae">@RequestMapping</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;/search/&#34;</span><span style="color:#1f2328">)</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#cf222e">public</span><span style="color:#fff"> </span><span style="color:#cf222e">class</span> <span style="color:#1f2328">SearchController</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">@Autowired</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">private</span><span style="color:#fff"> </span>SearchService<span style="color:#fff"> </span>searchService<span style="color:#1f2328">;</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">@GetMapping</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">public</span><span style="color:#fff"> </span>String<span style="color:#0550ae">[]</span><span style="color:#fff"> </span><span style="color:#6639ba">search</span><span style="color:#1f2328">(</span><span style="color:#0550ae">@RequestParam</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;query&#34;</span><span style="color:#1f2328">)</span><span style="color:#fff"> </span>String<span style="color:#fff"> </span>query<span style="color:#1f2328">)</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span><span style="color:#cf222e">return</span><span style="color:#fff"> </span>searchService<span style="color:#1f2328">.</span><span style="color:#1f2328">search</span><span style="color:#1f2328">(</span>query<span style="color:#1f2328">);</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span></code></pre></div><p>When starting the application, you will encounter the error:</p>
+<pre tabindex="0"><code>UnsatisfiedDependencyException: Error creating bean with name &#39;searchController&#39;: Unsatisfied dependency expressed through field &#39;searchService&#39;: No qualifying bean of type &#39;nguyen.gerald.samples.spring.core.service.search.SearchService&#39; available: expected single matching bean but found 2: bingSearch,googleSearch
+</code></pre><pre tabindex="0"><code>
+023-02-02T23:40:32.430+08:00  WARN 42400 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name &#39;searchController&#39;: Unsatisfied dependency expressed through field &#39;searchService&#39;: No qualifying bean of type &#39;nguyen.gerald.samples.spring.core.service.search.SearchService&#39; available: expected single matching bean but found 2: bingSearch,googleSearch
+2023-02-02T23:40:32.436+08:00  INFO 42400 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-02T23:40:32.457+08:00  INFO 42400 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with &#39;debug&#39; enabled.
+2023-02-02T23:40:32.481+08:00 ERROR 42400 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field searchService in nguyen.gerald.samples.spring.core.api.SearchController required a single bean, but 2 were found:
+ - bingSearch: defined in file [C:\Users\huy_n\workspace\samples\spring\core\target\classes\nguyen\gerald\samples\spring\core\service\search\BingSearch.class]
+ - googleSearch: defined in file [C:\Users\huy_n\workspace\samples\spring\core\target\classes\nguyen\gerald\samples\spring\core\service\search\GoogleSearch.class]
+
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+Disconnected from the target VM, address: &#39;127.0.0.1:62797&#39;, transport: &#39;socket&#39;
+
+Process finished with exit code 1te
+</code></pre><p>Because both <code>GoogleSearch</code> and <code>BingSearch</code> implements <code>SearchService</code>, Spring was unable to determine which implementation should be returned to <code>SearchController</code>, hence it throws the above error.</p>
+<hr>
+<h2 id="solution-1--designate-a-primary-bean">Solution #1 — Designate a Primary Bean</h2>
+<blockquote>
+<p>Checkout the branch <code>dependency/multiple-beans-solution-primary</code> from <a href="https://github.com/geraldnguyen/sample-spring-core">https://github.com/geraldnguyen/sample-spring-core</a> to follow along. You can also preview the changes <a href="https://github.com/geraldnguyen/sample-spring-core/compare/dependency/multiple-beans...dependency/multiple-beans-solution-primary">here</a></p></blockquote>
+<p>This is the simplest solution. We can designate either implementation, e.g. <code>GoogleSearch</code>, as the primary <code>SearchService</code> implementation by applying the <code>@Primary</code> annotation to the implementation, i.e. <code>GoogleSearch</code>, class:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#0550ae">@Primary</span><span style="color:#fff">  </span><span style="color:#57606a">// &lt;-- this is the only change</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#0550ae">@Service</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#cf222e">public</span><span style="color:#fff"> </span><span style="color:#cf222e">class</span> <span style="color:#1f2328">GoogleSearch</span><span style="color:#fff"> </span><span style="color:#cf222e">implements</span><span style="color:#fff"> </span>SearchService<span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">@Override</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">public</span><span style="color:#fff"> </span>String<span style="color:#0550ae">[]</span><span style="color:#fff"> </span><span style="color:#6639ba">search</span><span style="color:#1f2328">(</span>String<span style="color:#fff"> </span>query<span style="color:#1f2328">)</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span><span style="color:#cf222e">return</span><span style="color:#fff"> </span><span style="color:#cf222e">new</span><span style="color:#fff"> </span>String<span style="color:#0550ae">[]</span><span style="color:#1f2328">{</span><span style="color:#fff"> </span><span style="color:#0a3069">&#34;Google sample result&#34;</span><span style="color:#fff"> </span><span style="color:#1f2328">};</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span></code></pre></div><p>Let’s start our application. The error should be no more and we are able to access mocked Google search result at <a href="http://localhost:8080/search/?query=hello">http://localhost:8080/search/?query=hello</a></p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:455/1*fd8RC1jDGHE9TntlEfZZiA.png"
+    alt="http://localhost:8080/search/?query=hello"><figcaption>
+      <p><a href="http://localhost:8080/search/?query=hello">http://localhost:8080/search/?query=hello</a></p>
+    </figcaption>
+</figure>
+
+<hr>
+<h2 id="solution-2-be-specific-with-qualifier-annotation">Solution #2— Be specific with <code>@Qualifier</code> Annotation</h2>
+<blockquote>
+<p>Checkout the branch <code>dependency/multiple-beans-solution-qualifier</code> from <a href="https://github.com/geraldnguyen/sample-spring-core">https://github.com/geraldnguyen/sample-spring-core</a> to follow along. You can also preview the changes <a href="https://github.com/geraldnguyen/sample-spring-core/compare/dependency/multiple-beans...dependency/multiple-beans-solution-qualifier">here</a></p></blockquote>
+<p>This is just as simple. We can specify which <code>SearchService</code> to use by applying <code>@Qualifier</code> annotation to the dependency property (or parameter if you use constructor injection):</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#0550ae">@RestController</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#0550ae">@RequestMapping</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;/search/&#34;</span><span style="color:#1f2328">)</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#cf222e">public</span><span style="color:#fff"> </span><span style="color:#cf222e">class</span> <span style="color:#1f2328">SearchController</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">@Autowired</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">@Qualifier</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;bingSearch&#34;</span><span style="color:#1f2328">)</span><span style="color:#fff">      </span><span style="color:#57606a">// &lt;-- this is the only change</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">private</span><span style="color:#fff"> </span>SearchService<span style="color:#fff"> </span>searchService<span style="color:#1f2328">;</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">@GetMapping</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">public</span><span style="color:#fff"> </span>String<span style="color:#0550ae">[]</span><span style="color:#fff"> </span><span style="color:#6639ba">search</span><span style="color:#1f2328">(</span><span style="color:#0550ae">@RequestParam</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;query&#34;</span><span style="color:#1f2328">)</span><span style="color:#fff"> </span>String<span style="color:#fff"> </span>query<span style="color:#1f2328">)</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span><span style="color:#cf222e">return</span><span style="color:#fff"> </span>searchService<span style="color:#1f2328">.</span><span style="color:#1f2328">search</span><span style="color:#1f2328">(</span>query<span style="color:#1f2328">);</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span></code></pre></div><p>Let’s start our application. The error should be no more and we are able to access mocked Bing search result at <a href="http://localhost:8080/search/?query=hello">http://localhost:8080/search/?query=hello</a></p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:458/1*aY6_yUcKDJeAju5gZY7Ibw.png"
+    alt="http://localhost:8080/search/?query=hello"><figcaption>
+      <p><a href="http://localhost:8080/search/?query=hello">http://localhost:8080/search/?query=hello</a></p>
+    </figcaption>
+</figure>
+
+<hr>
+<h2 id="solution-3-accepting-multiple-beans">Solution #3 —Accepting Multiple Beans</h2>
+<blockquote>
+<p>Checkout the branch <code>dependency/multiple-beans-accepting-multiple</code> from <a href="https://github.com/geraldnguyen/sample-spring-core">https://github.com/geraldnguyen/sample-spring-core</a> to follow along. You can also preview the changes <a href="https://github.com/geraldnguyen/sample-spring-core/compare/dependency/multiple-beans...dependency/multiple-beans-accepting-multiple">here</a></p></blockquote>
+<p>The <code>SearchController</code> can accept multiple beans and use them as it wishes. The following example has it pick the bean at index 0 to use:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#0550ae">@RestController</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#0550ae">@RequestMapping</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;/search/&#34;</span><span style="color:#1f2328">)</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#cf222e">public</span><span style="color:#fff"> </span><span style="color:#cf222e">class</span> <span style="color:#1f2328">SearchController</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">@Autowired</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">private</span><span style="color:#fff"> </span>SearchService<span style="color:#0550ae">[]</span><span style="color:#fff"> </span>searchServices<span style="color:#1f2328">;</span><span style="color:#fff"> </span><span style="color:#57606a">// &lt;-- accepting multiple</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">@GetMapping</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">public</span><span style="color:#fff"> </span>String<span style="color:#0550ae">[]</span><span style="color:#fff"> </span><span style="color:#6639ba">search</span><span style="color:#1f2328">(</span><span style="color:#0550ae">@RequestParam</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;query&#34;</span><span style="color:#1f2328">)</span><span style="color:#fff"> </span>String<span style="color:#fff"> </span>query<span style="color:#1f2328">)</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span><span style="color:#cf222e">return</span><span style="color:#fff"> </span>searchServices<span style="color:#0550ae">[</span>0<span style="color:#0550ae">]</span><span style="color:#1f2328">.</span><span style="color:#1f2328">search</span><span style="color:#1f2328">(</span>query<span style="color:#1f2328">);</span><span style="color:#fff">  </span><span style="color:#57606a">// &lt;-- pick the first one to use</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span></code></pre></div><p>This solution is more suited toward aggregation use cases where, for example, the API sends the user’s query to multiple search engines and aggregates their individual responses before returning to the user.</p>
+<hr>
+<h2 id="solution-4--explicit-bean-configuration">Solution #4 — Explicit Bean Configuration</h2>
+<blockquote>
+<p>Checkout the branch <code>dependency/multiple-beans-configuration</code> from <a href="https://github.com/geraldnguyen/sample-spring-core">https://github.com/geraldnguyen/sample-spring-core</a> to follow along. You can also preview the changes <a href="https://github.com/geraldnguyen/sample-spring-core/compare/dependency/multiple-beans...dependency/multiple-beans-configuration">here</a></p></blockquote>
+<p>In this approach, we explicitly pick an implementation in an external configuration class. The benefit of this approach is that we can leave the consumer, interface, and implementation unmodified. This is useful when you want to keep the configuration details out of the business logic, especially so when you do not have access to the source codes of consumer and service classes.</p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:304/1*fLtS2lJxMkdT1vdNfNmazA.png"
+    alt="External configuration within SearchConfig"><figcaption>
+      <p>External configuration within <code>SearchConfig</code></p>
+    </figcaption>
+</figure>
+
+<p>External configuration within <code>SearchConfig</code> can be as trivial as the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#0550ae">@Configuration</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#cf222e">public</span><span style="color:#fff"> </span><span style="color:#cf222e">class</span> <span style="color:#1f2328">SearchConfig</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">@Autowired</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">private</span><span style="color:#fff"> </span>GoogleSearch<span style="color:#fff"> </span>googleSearch<span style="color:#1f2328">;</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">@Autowired</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">private</span><span style="color:#fff"> </span>BingSearch<span style="color:#fff"> </span>bingSearch<span style="color:#1f2328">;</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">@Bean</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">public</span><span style="color:#fff"> </span>SearchService<span style="color:#fff"> </span><span style="color:#6639ba">searchService</span><span style="color:#1f2328">()</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span><span style="color:#cf222e">return</span><span style="color:#fff"> </span>googleSearch<span style="color:#1f2328">;</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span></code></pre></div><p>Or we can add an enable/disable toggle capability to make our application more flexible and more externally driven. Even though we define a property <code>google-search.enabled</code> in the <code>application.properties</code>, it needs not be declared so because Springboot supports multiple modes of <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.external-config">external configurations</a>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#57606a">// SearchConfig.java</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#0550ae">@Configuration</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#cf222e">public</span><span style="color:#fff"> </span><span style="color:#cf222e">class</span> <span style="color:#1f2328">SearchConfig</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">@Autowired</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">private</span><span style="color:#fff"> </span>GoogleSearch<span style="color:#fff"> </span>googleSearch<span style="color:#1f2328">;</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">@Autowired</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">private</span><span style="color:#fff"> </span>BingSearch<span style="color:#fff"> </span>bingSearch<span style="color:#1f2328">;</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">@Bean</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">public</span><span style="color:#fff"> </span>SearchService<span style="color:#fff"> </span><span style="color:#6639ba">searchService</span><span style="color:#1f2328">(</span><span style="color:#0550ae">@Value</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;${google-search.enabled:false}&#34;</span><span style="color:#1f2328">)</span><span style="color:#fff"> </span><span style="color:#cf222e">boolean</span><span style="color:#fff"> </span>enableGoogleSearch<span style="color:#1f2328">)</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span><span style="color:#cf222e">return</span><span style="color:#fff"> </span>enableGoogleSearch<span style="color:#fff"> </span><span style="color:#0550ae">?</span><span style="color:#fff"> </span>googleSearch<span style="color:#fff"> </span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>bingSearch<span style="color:#1f2328">;</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#57606a">// application.properties</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span>google<span style="color:#0550ae">-</span>search<span style="color:#1f2328">.</span><span style="color:#1f2328">enabled</span><span style="color:#0550ae">=</span><span style="color:#cf222e">true</span><span style="color:#fff">
+</span></span></span></code></pre></div><p>Let’s start our application. We are able to access the mocked Google search result at <a href="http://localhost:8080/search/?query=hello">http://localhost:8080/search/?query=hello</a></p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:455/1*fd8RC1jDGHE9TntlEfZZiA.png"
+    alt="http://localhost:8080/search/?query=hello"><figcaption>
+      <p><a href="http://localhost:8080/search/?query=hello">http://localhost:8080/search/?query=hello</a></p>
+    </figcaption>
+</figure>
+
+<hr>
+<h2 id="advanced-solution-5--feature-switching">(Advanced) Solution #5 — Feature Switching</h2>
+<blockquote>
+<p>Checkout the branch <code>dependency/multiple-beans-feature-switch</code> from <a href="https://github.com/geraldnguyen/sample-spring-core">https://github.com/geraldnguyen/sample-spring-core</a> to follow along. You can also preview the changes <a href="https://github.com/geraldnguyen/sample-spring-core/compare/dependency/multiple-beans...dependency/multiple-beans-feature-switch">here</a></p></blockquote>
+<p>The previous solution works well if we only have to choose either Google or Bing. But it will not scale when we have 3 or more options. Feature switching is a much better solution.</p>
+<p>Let’s have <code>YahooSearch</code> enter the competition:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#57606a">// YahooSearch.java</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#0550ae">@Service</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#cf222e">public</span><span style="color:#fff"> </span><span style="color:#cf222e">class</span> <span style="color:#1f2328">YahooSearch</span><span style="color:#fff"> </span><span style="color:#cf222e">implements</span><span style="color:#fff"> </span>SearchService<span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">@Override</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">public</span><span style="color:#fff"> </span>String<span style="color:#0550ae">[]</span><span style="color:#fff"> </span><span style="color:#6639ba">search</span><span style="color:#1f2328">(</span>String<span style="color:#fff"> </span>query<span style="color:#1f2328">)</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span><span style="color:#cf222e">return</span><span style="color:#fff"> </span><span style="color:#cf222e">new</span><span style="color:#fff"> </span>String<span style="color:#0550ae">[]</span><span style="color:#1f2328">{</span><span style="color:#fff"> </span><span style="color:#0a3069">&#34;Yahoo sample result&#34;</span><span style="color:#fff"> </span><span style="color:#1f2328">};</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span></code></pre></div><p>Implementing feature switching requires only 3 steps:</p>
+<ul>
+<li>We will define a <code>SearchProvider</code> enum with the names of all supported search providers.</li>
+<li>Then we configure <code>search.provider=&lt;a name&gt;</code> in <code>application.properties</code> (or one of the supported <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.external-config">external configurations</a> modes).</li>
+<li>Then we read the configured <code>search.provider</code> value as a parameter in our <code>@Bean</code> configuration and return the search provider corresponding to that parameter.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#57606a">// SearchConfig.java</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#0550ae">@Configuration</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#cf222e">public</span><span style="color:#fff"> </span><span style="color:#cf222e">class</span> <span style="color:#1f2328">SearchConfig</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">enum</span><span style="color:#fff"> </span>SearchProvider<span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff"> </span>GOOGLE<span style="color:#1f2328">,</span><span style="color:#fff"> </span>BING<span style="color:#1f2328">,</span><span style="color:#fff"> </span>YAHOO<span style="color:#fff"> </span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">@Autowired</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">private</span><span style="color:#fff"> </span>GoogleSearch<span style="color:#fff"> </span>googleSearch<span style="color:#1f2328">;</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">@Autowired</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">private</span><span style="color:#fff"> </span>BingSearch<span style="color:#fff"> </span>bingSearch<span style="color:#1f2328">;</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">@Autowired</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">private</span><span style="color:#fff"> </span>YahooSearch<span style="color:#fff"> </span>yahooSearch<span style="color:#1f2328">;</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#0550ae">@Bean</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#cf222e">public</span><span style="color:#fff"> </span>SearchService<span style="color:#fff"> </span><span style="color:#6639ba">searchService</span><span style="color:#1f2328">(</span><span style="color:#0550ae">@Value</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;${search.provider:BING}&#34;</span><span style="color:#1f2328">)</span><span style="color:#fff"> </span>SearchProvider<span style="color:#fff"> </span>provider<span style="color:#1f2328">)</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span><span style="color:#cf222e">return</span><span style="color:#fff"> </span><span style="color:#cf222e">switch</span><span style="color:#fff"> </span><span style="color:#1f2328">(</span>provider<span style="color:#1f2328">)</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">            </span><span style="color:#cf222e">case</span><span style="color:#fff"> </span>BING<span style="color:#fff"> </span><span style="color:#0550ae">-&gt;</span><span style="color:#fff"> </span>bingSearch<span style="color:#1f2328">;</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">            </span><span style="color:#cf222e">case</span><span style="color:#fff"> </span>YAHOO<span style="color:#fff"> </span><span style="color:#0550ae">-&gt;</span><span style="color:#fff"> </span>yahooSearch<span style="color:#1f2328">;</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">            </span><span style="color:#cf222e">default</span><span style="color:#fff"> </span><span style="color:#0550ae">-&gt;</span><span style="color:#fff"> </span>googleSearch<span style="color:#1f2328">;</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">        </span><span style="color:#1f2328">};</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">    </span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span><span style="color:#57606a">// application.properties</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span><span style="color:#fff"></span>search<span style="color:#1f2328">.</span><span style="color:#1f2328">provider</span><span style="color:#0550ae">=</span>YAHOO<span style="color:#fff">
+</span></span></span></code></pre></div><p>Let’s start our application. We are able to access the mocked Yahoo search result at <a href="http://localhost:8080/search/?query=hello">http://localhost:8080/search/?query=hello</a></p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:454/1*BQJ7pVTgdChaLOxjuEnRhg.png"
+    alt="http://localhost:8080/search/?query=hello"><figcaption>
+      <p><a href="http://localhost:8080/search/?query=hello">http://localhost:8080/search/?query=hello</a></p>
+    </figcaption>
+</figure>
+
+<hr>
+<h1 id="conclusion">Conclusion</h1>
+<p>In this article, we have learned 5 different ways to resolve the expected-single-matching-bean-but-found-multiple error with code samples and easy-to-follow steps.</p>
+<p>If you have enjoyed this tutorial, please <a href="https://geraldnguyen.medium.com/subscribe">subscribe</a> to get my latest article delivered to your email. Thank you.</p>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/spring/">Spring</a></li>
+        <li><a href="/tags/dependency-injection/">Dependency Injection</a></li>
+        <li><a href="/tags/java/">Java</a></li>
+        <li><a href="/tags/beginner/">Beginner</a></li>
+        <li><a href="/tags/advanced/">Advanced</a></li>
+        <li><a href="/tags/medium/">Medium</a></li>
+    </ul>
+  </div>
+
+
+  <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "geraldnguyen" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2025. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>
