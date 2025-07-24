@@ -667,13 +667,6 @@
       <description></description>
     </item>
     <item>
-      <title>Reflection</title>
-      <link>https://geraldnguyen.github.io/tags/reflection/</link>
-      <pubDate>Fri, 03 Feb 2023 00:00:00 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/reflection/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Idiom</title>
       <link>https://geraldnguyen.github.io/tags/idiom/</link>
       <pubDate>Tue, 31 Jan 2023 09:19:42 +0100</pubDate>
@@ -1248,7 +1241,7 @@
       <description></description>
     </item>
     <item>
-      <title>Jsr303 Bean Validation</title>
+      <title>JSR303 Bean Validation</title>
       <link>https://geraldnguyen.github.io/tags/jsr303-bean-validation/</link>
       <pubDate>Thu, 20 Dec 2012 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/tags/jsr303-bean-validation/</guid>
@@ -1388,7 +1381,7 @@
       <description></description>
     </item>
     <item>
-      <title>J2ee</title>
+      <title>J2EE</title>
       <link>https://geraldnguyen.github.io/tags/j2ee/</link>
       <pubDate>Sat, 20 Nov 2010 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/tags/j2ee/</guid>
