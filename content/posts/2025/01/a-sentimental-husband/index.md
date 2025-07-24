@@ -9,7 +9,7 @@ medium: https://geraldnguyen.medium.com/a-sentimental-husband-5a37c38d000f
 image: 0_g4EY922k4dMku7wS.png
 ---
 
-**Caller**: I just have to praise my husband. He’s such a sentimental person.
+**Caller**: My husband is such a sentimental person.
 
 **Radio host**: Oh? What makes you say that?
 
