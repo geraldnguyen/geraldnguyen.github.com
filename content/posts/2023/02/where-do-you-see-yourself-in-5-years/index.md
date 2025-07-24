@@ -1,11 +1,19 @@
 ---
-title: Where do you see yourself in 5 years?
-subtitle: How to answer the classic interview question as a developer, with real scenarios and practical advice
-date: 2023-02-03T00:00:00+01:00
-categories: [Career Advice]
+categories:
+- Career Development
+date: 2023-02-03 00:00:00+01:00
 image: 0_rlrO6tWKQyyDGgdZ.jpg
-tags: [Interview, Developer, Career, Growth, Software Development, Medium]
 medium: https://medium.com/50ld/where-do-you-see-yourself-in-5-years-4d2dc6a53fca
+subtitle: How to answer the classic interview question as a developer, with real scenarios
+  and practical advice
+tags:
+- Interview
+- Developer
+- Career
+- Growth
+- Software Development
+- Medium
+title: Where do you see yourself in 5 years?
 ---
 
 {{< figure src="https://miro.medium.com/v2/resize:fit:875/0*rlrO6tWKQyyDGgdZ" caption="Photo by [Jason Goodman](https://unsplash.com/@jasongoodman_youxventures?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)" >}}

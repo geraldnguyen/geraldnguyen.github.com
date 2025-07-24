@@ -1,12 +1,19 @@
 ---
-title: "Presales vs Delivery"
-subtitle: Software Delivery in Reality
-# Original publication date: 2023-03-08
-date: 2023-03-08T00:00:00+01:00
-categories: [Software Development, Reality]
-tags: [Software Development, Presales, Delivery, Reality, Fun, Medium]
-medium: https://geraldnguyen.medium.com/presales-vs-delivery-41d47fc4ab78
+categories:
+- Software Development
+- Life & Reflections
+date: 2023-03-08 00:00:00+01:00
 image: 1_6kSW6JOqOU2L-7zsPk094Q.jpg
+medium: https://geraldnguyen.medium.com/presales-vs-delivery-41d47fc4ab78
+subtitle: Software Delivery in Reality
+tags:
+- Software Development
+- Presales
+- Delivery
+- Reality
+- Fun
+- Medium
+title: Presales vs Delivery
 ---
 
 Software Delivery in Reality

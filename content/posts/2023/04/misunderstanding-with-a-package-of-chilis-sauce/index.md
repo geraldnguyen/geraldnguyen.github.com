@@ -1,12 +1,15 @@
 ---
-title: "Misunderstanding with a package of chilis sauce"
-subtitle: By Nguyen Quynh Tam
-# Original publication date: 2023-04-23
-date: 2023-04-23T00:00:00+08:00
-categories: [Life, School]
-tags: [Chili Sauce, School, Medium]
-medium: https://geraldnguyen.medium.com/misunderstanding-with-a-package-of-chilis-sauce-6bbe57fe18b8
+categories:
+- Life & Reflections
+date: 2023-04-23 00:00:00+08:00
 image: chilis-sauce.jpg
+medium: https://geraldnguyen.medium.com/misunderstanding-with-a-package-of-chilis-sauce-6bbe57fe18b8
+subtitle: By Nguyen Quynh Tam
+tags:
+- Chili Sauce
+- School
+- Medium
+title: Misunderstanding with a package of chilis sauce
 ---
 
 Mr. Jenkins pushed the door open. He barged in and stared daggers at me with his red fuming eyes. His hands were clenched. I stood frozen in horror.

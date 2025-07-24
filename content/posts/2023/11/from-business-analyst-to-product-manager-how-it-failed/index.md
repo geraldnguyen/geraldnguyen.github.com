@@ -1,12 +1,18 @@
 ---
-title: "From Business Analyst to Product Manager: How it failed"
-subtitle: Marketing, Sales, P&L, and Politics spoiled the fun
-# Original publication date: 2023-11-09
-date: 2023-11-09T00:00:00+08:00
-categories: [Careers, Product Management]
-tags: [Business Analyst, Product Manager, Politics, Failure, Medium]
-medium: https://medium.com/50ld/from-business-analyst-to-product-manager-how-it-failed-60a9db51de1b
+categories:
+- Career Development
+- Product Management
+date: 2023-11-09 00:00:00+08:00
 image: 0_g7EtWWXX769pC0pj.jpg
+medium: https://medium.com/50ld/from-business-analyst-to-product-manager-how-it-failed-60a9db51de1b
+subtitle: Marketing, Sales, P&L, and Politics spoiled the fun
+tags:
+- Business Analyst
+- Product Manager
+- Politics
+- Failure
+- Medium
+title: 'From Business Analyst to Product Manager: How it failed'
 ---
 
 {{< figure src="https://miro.medium.com/v2/resize:fit:875/0*g7EtWWXX769pC0pj" caption="Photo by [Kaleidico](https://unsplash.com/@kaleidico?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)" >}}

@@ -1,12 +1,17 @@
 ---
-title: "Software Development Career: Business Analyst vs. Product Manager"
-subtitle: Weave in and out these 2 roles
-# Original publication date: 2023-11-03
-date: 2023-11-03T00:00:00+08:00
-categories: [Careers, Software Development]
-tags: [Business Analyst, Product Manager, Skills, Medium]
-medium: https://medium.com/50ld/software-development-career-business-analyst-vs-product-manager-8a3e2b169038
+categories:
+- Career Development
+- Software Development
+date: 2023-11-03 00:00:00+08:00
 image: 0_mQ648dDl7gNldibG.jpg
+medium: https://medium.com/50ld/software-development-career-business-analyst-vs-product-manager-8a3e2b169038
+subtitle: Weave in and out these 2 roles
+tags:
+- Business Analyst
+- Product Manager
+- Skills
+- Medium
+title: 'Software Development Career: Business Analyst vs. Product Manager'
 ---
 
 Business Analysts and Product Managers are common roles within a software development team. I have seen them played by different persons or by the same person.

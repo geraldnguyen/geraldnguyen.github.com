@@ -1,10 +1,13 @@
 ---
-title: "Combine EJB and WAR file in a same web service EAR"
-date: 2010-03-02T09:19:42+01:00
+categories:
+- Software Development
+date: 2010-03-02 09:19:42+01:00
 draft: false
-
-categories: [Software Development]
-tags: [j2ee, tutorial, old blog]
+tags:
+- J2EE
+- tutorial
+- old blog
+title: Combine EJB and WAR file in a same web service EAR
 ---
 
 That has been my challenge since yesterday. And I think I have just got it :D

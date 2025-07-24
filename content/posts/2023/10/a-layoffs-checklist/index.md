@@ -1,12 +1,16 @@
 ---
-title: "A Layoff’s Checklist"
-subtitle: Fortune favors the prepared mind
-# Original publication date: 2023-10-30
-date: 2023-10-30T00:00:00+08:00
-categories: [Careers, Layoffs]
-tags: [Checklist, Retrenchment, Preparedness, Medium]
-medium: https://medium.com/50ld/a-layoffs-checklist-47df299859b5
+categories:
+- Career Development
+date: 2023-10-30 00:00:00+08:00
 image: 0_0Qk8lZ3m2MRz1-2P.jpg
+medium: https://medium.com/50ld/a-layoffs-checklist-47df299859b5
+subtitle: Fortune favors the prepared mind
+tags:
+- Checklist
+- Retrenchment
+- Preparedness
+- Medium
+title: A Layoff’s Checklist
 ---
 
 {{< figure src="https://miro.medium.com/v2/resize:fit:875/0*0Qk8lZ3m2MRz1-2P" caption="Photo by [Glenn Carstens-Peters](https://unsplash.com/@glenncarstenspeters?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)" >}}

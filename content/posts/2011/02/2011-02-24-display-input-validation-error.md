@@ -1,10 +1,13 @@
 ---
-title: "How do you display input validation error"
-date: 2011-02-24T09:19:42+01:00
+categories:
+- Software Development
+date: 2011-02-24 09:19:42+01:00
 draft: false
-
-categories: [Software Development]
-tags: [miscellaneous, UI/UX, old blog]
+tags:
+- Miscellaneous
+- UI/UX
+- old blog
+title: How do you display input validation error
 ---
 
 ## Display errors in red below each invalid input field

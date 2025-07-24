@@ -1,11 +1,14 @@
 ---
-title: "javax.transaction.Transactional vs org.springframework.transaction.annotation.Transactional"
-date: 2020-09-10T09:19:42+01:00
-subtitle: "It’s easy to mix especially when we only need the default setting"
+categories:
+- Software Development
+date: 2020-09-10 09:19:42+01:00
 draft: false
-
-categories: [Software Development]
-tags: [java, spring, transactional]
+subtitle: It’s easy to mix especially when we only need the default setting
+tags:
+- Java
+- spring
+- transactional
+title: javax.transaction.Transactional vs org.springframework.transaction.annotation.Transactional
 ---
 
 > If you’re using Spring or Spring Boot, then use the Spring @Transactional annotation, as it allows you to configure more attributes than the Java EE @Transactional annotation.

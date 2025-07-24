@@ -1,14 +1,19 @@
 ---
-title: "How to fix Spring dependency error: 'expected single matching bean but found X'"
-subtitle: From beginner to advanced, learn 5 ways to tackle this error
-# Original publication date: 2023-02-06
-# Add image if the article has a main image
-# Example image: image: example.jpg
-date: 2023-02-06T00:00:00+01:00
-categories: [Programming Tutorials]
-tags: [Spring, Dependency Injection, Java, Beginner, Advanced, Medium]
+categories:
+- Software Development
+date: 2023-02-06 00:00:00+01:00
 image: 0_bHk8jRkL7cnE4wPi.jpg
 medium: https://levelup.gitconnected.com/how-to-fix-spring-dependency-error-expected-single-matching-bean-but-found-multiple-b93f4c950824
+subtitle: From beginner to advanced, learn 5 ways to tackle this error
+tags:
+- Spring
+- Dependency Injection
+- Java
+- Beginner
+- Advanced
+- Medium
+title: 'How to fix Spring dependency error: ''expected single matching bean but found
+  X'''
 ---
 
 {{< figure src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*bHk8jRkL7cnE4wPi" caption="Photo by R. Mac Wheeler on Unsplash" >}}

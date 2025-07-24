@@ -1,10 +1,14 @@
 ---
-title: "[Database] Exists or Inner Join: Duplicate Records"
-date: 2013-06-16T09:19:42+01:00
+categories:
+- Software Development
+date: 2013-06-16 09:19:42+01:00
 draft: false
-
-categories: [Software Development]
-tags: [database, sql, programming, old blog]
+tags:
+- database
+- sql
+- Programming
+- old blog
+title: '[Database] Exists or Inner Join: Duplicate Records'
 ---
 
 ## INNER JOIN vs. EXISTS

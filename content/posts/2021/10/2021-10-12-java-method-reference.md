@@ -1,9 +1,13 @@
 ---
-title: "Java Method Reference"
-date: 2021-10-12T09:19:42+01:00
+date: 2021-10-12 09:19:42+01:00
 draft: true
-
-tags: [java, kitchensink, lambda, method reference, unit testing]
+tags:
+- Java
+- KitchenSink
+- lambda
+- method reference
+- unit testing
+title: Java Method Reference
 ---
 
 **Note 2024-08-15: An updated version of this article was published in Medium at https://medium.com/codex/java-method-reference-7b4f260bc3ad?source=user_profile---------85----------------------------**

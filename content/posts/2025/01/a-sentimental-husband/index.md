@@ -1,12 +1,18 @@
 ---
-title: "A sentimental husband"
-subtitle: A radio call-in story
-# Original publication date: 2025-01-27
-date: 2025-01-27T00:00:00+01:00
-categories: [Jokes, Life]
-tags: [Jokes, Bitcoin, Husband, Wife, Medium]
-medium: https://geraldnguyen.medium.com/a-sentimental-husband-5a37c38d000f
+categories:
+- Entertainment
+- Life & Reflections
+date: 2025-01-27 00:00:00+01:00
 image: 0_g4EY922k4dMku7wS.png
+medium: https://geraldnguyen.medium.com/a-sentimental-husband-5a37c38d000f
+subtitle: A radio call-in story
+tags:
+- Jokes
+- Bitcoin
+- Husband
+- Wife
+- Medium
+title: A sentimental husband
 ---
 
 **Caller**: My husband is such a sentimental person.

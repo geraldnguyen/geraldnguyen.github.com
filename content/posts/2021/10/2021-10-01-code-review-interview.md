@@ -1,10 +1,13 @@
 ---
-title: "Code Review as an interview tool"
-date: 2021-10-01T09:19:42+01:00
-subtitle: Reviewing code as a way of learning and contributing
+date: 2021-10-01 09:19:42+01:00
 draft: true
-
-tags: [java, kitchensink, interview, code review]
+subtitle: Reviewing code as a way of learning and contributing
+tags:
+- Java
+- KitchenSink
+- interview
+- code review
+title: Code Review as an interview tool
 ---
 
 **Note 2024-08-15: An updated version of this article was published in Medium at https://medium.com/50ld/code-review-as-an-interview-tool-f57eb66e5da0?source=user_profile---------86----------------------------**

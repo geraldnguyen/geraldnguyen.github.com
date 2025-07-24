@@ -1,11 +1,13 @@
 ---
-title: "Harvey Balls"
-date: 2011-01-23T09:19:42+01:00
-subtitle: "○ ● ◐ ◑ ◒ ◓ ◔ ◕"
+categories:
+- Non-Tech
+date: 2011-01-23 09:19:42+01:00
 draft: false
-
-tags: [miscellaneous, old blog]
-categories: [Non-Tech]
+subtitle: ○ ● ◐ ◑ ◒ ◓ ◔ ◕
+tags:
+- Miscellaneous
+- old blog
+title: Harvey Balls
 ---
 
 http://en.wikipedia.org/wiki/Harvey_Balls
