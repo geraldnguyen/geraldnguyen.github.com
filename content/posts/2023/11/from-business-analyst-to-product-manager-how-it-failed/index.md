@@ -1,6 +1,6 @@
 ---
 categories:
-- Career Development
+- Product Management
 date: 2023-11-09 00:00:00+08:00
 image: 0_g7EtWWXX769pC0pj.jpg
 medium: https://medium.com/50ld/from-business-analyst-to-product-manager-how-it-failed-60a9db51de1b

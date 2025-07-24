@@ -1,6 +1,5 @@
 ---
 categories:
-- Southeast Asia
 - Life and Fun Stuffs
 date: 2023-02-11 00:00:00+01:00
 image: 1_0Wz3ut0gdgUrME1UPEoxZA.jpg

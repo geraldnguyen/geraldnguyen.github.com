@@ -4,7 +4,7 @@ subtitle: Watch it live or follow it from afar. Love it regardless.
 date: 2023-01-07T09:19:42+01:00
 image: 0_qW55p-WkvsxWjySr.jpg
 draft: false
-categories: [Life and Fun Stuffs]
+categories: [Southeast Asia]
 tags: [Medium, Southeast Asia, Football, Vietnam, Indonesia, Malaysia, Thailand]
 medium: https://medium.com/southeast-asia/aff-championship-and-the-love-for-football-that-unites-people-31186a2647c6
 ---

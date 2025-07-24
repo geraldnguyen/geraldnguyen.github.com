@@ -3,7 +3,7 @@ title: "The Sweet Delight of Star Apple: A Tropical Treasure Across Vietnam, Tha
 subtitle: Also known as vú sữa, caimito, สตาร์แอปเปิ้ล in Southeast Asia
 # Original publication date: 2023-12-24
 date: 2023-12-24T00:00:00+07:00
-categories: [Life and Fun Stuffs, Southeast Asia]
+categories: [Southeast Asia]
 tags: [Star Apple, Vietnam, Thailand, Philippines, Medium]
 medium: https://medium.com/southeast-asia/the-sweet-delight-of-star-apple-a-tropical-treasure-across-vietnam-thailand-and-the-philippines-86b6f17487d5
 image: 1_-xcRk7yJkSIBtuWLipNcEQ.jpg

@@ -3,7 +3,7 @@ title: (Like) Water Off a Taro Leaf
 subtitle: Notes about a Vietnamese idiom
 date: 2023-01-31T09:19:42+01:00
 image: 0_4K1HzfiMv7YrvpeC.jpg
-categories: [Life and Fun Stuffs]
+categories: [Southeast Asia]
 tags: [Medium, Southeast Asia, Vietnam, Idiom]
 medium: https://medium.com/southeast-asia/like-water-off-a-taro-leaf-20af79f254fa
 ---
