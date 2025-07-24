@@ -6,8 +6,15 @@
     <description>Recent content in Software Development on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Mar 2023 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 03 Nov 2023 00:00:00 +0800</lastBuildDate>
     <atom:link href="https://geraldnguyen.github.io/categories/software-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Software Development Career: Business Analyst vs. Product Manager</title>
+      <link>https://geraldnguyen.github.io/posts/2023/11/software-development-career-business-analyst-vs-product-manager/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0800</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/11/software-development-career-business-analyst-vs-product-manager/</guid>
+      <description>&lt;p&gt;Business Analysts and Product Managers are common roles within a software development team. I have seen them played by different persons or by the same person.&lt;/p&gt;&#xA;&lt;p&gt;I used to be confused between the 2 roles, thinking they meant the same thing. I even thought that people abused the word “analyst” in the “business analyst” job title, in the same way they did with “IT analyst”&lt;/p&gt;&#xA;&lt;p&gt;Now I see them as separate roles, each with its own set of responsibilities and deliveries, though there can be some overlap between the two.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Catching Software Bugs</title>
       <link>https://geraldnguyen.github.io/posts/2023/03/catching-software-bugs/</link>

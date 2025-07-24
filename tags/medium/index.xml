@@ -51,6 +51,83 @@
       <description>&lt;p&gt;&lt;em&gt;Please ignore the &lt;code&gt;\&lt;/code&gt; in front of &lt;code&gt;{&lt;/code&gt; in code examples. It is used to prevent Hugo from processing the shortcodes even in code block&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;the-markdown-way&#34;&gt;The Markdown way&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;![alt title](1_nHC2UMz-xJM-lvPPwSh_vQ.webp)&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;1_nHC2UMz-xJM-lvPPwSh_vQ.webp&#34; alt=&#34;title&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Though it is recommended, the &lt;code&gt;alt-title&lt;/code&gt; is optional. The above can be expressed as &lt;code&gt;![alt title](path-to-image.jpg)&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Pros:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Simple&lt;/li&gt;&#xA;&lt;li&gt;Natively markdown&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Cons:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;No caption&lt;/li&gt;&#xA;&lt;li&gt;Center alignment not guaranteed&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;the-mediumway&#34;&gt;The Medium way&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{\&amp;lt; figure src=&amp;#34;1_nHC2UMz-xJM-lvPPwSh_vQ.webp&amp;#34; caption=&amp;#34;optional caption&amp;#34; \&amp;gt;}}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;figure&gt;&lt;img src=&#34;https://geraldnguyen.github.io/posts/2024/08/hugo-displaying-images-the-medium-way/1_nHC2UMz-xJM-lvPPwSh_vQ.webp&#34;&#xA;    alt=&#34;optional caption&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;optional caption&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Pros:&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Singapore has a /faʊl/ problem</title>
+      <link>https://geraldnguyen.github.io/posts/2024/08/singapore-has-a-faul-problem/</link>
+      <pubDate>Sun, 04 Aug 2024 00:00:00 +0800</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2024/08/singapore-has-a-faul-problem/</guid>
+      <description>&lt;p&gt;Away from the city center with high-end restaurants, cafes and landscape gardens, Singapore heartland has a persistent /faʊl/ problem. While both “foul” and “fowl” share the same pronunciation, they also share the same blame.&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://miro.medium.com/v2/resize:fit:875/1*Fj99-8HCAL8w0pIhrahEIw.jpeg&#34;&#xA;    alt=&#34;Starlings, pigeons, and chickens&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Starlings, pigeons, and chickens&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Let’s start with starling.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Since I first set foot in Singapore, starlings had been the most popular bird around Singapore: on grass fields, around car parks, hawker centers, coffee shops — even inside air-conditioned food courts. They sometimes invaded people homes. Once a bird flew into my house, startled my daughter, and took me a while to rush it out.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Thailand imported durian from Vietnam. What happened?</title>
+      <link>https://geraldnguyen.github.io/posts/2024/07/thailand-imported-durian-from-vietnam-what-happened/</link>
+      <pubDate>Tue, 23 Jul 2024 00:00:00 +0700</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2024/07/thailand-imported-durian-from-vietnam-what-happened/</guid>
+      <description>&lt;figure&gt;&lt;img src=&#34;https://miro.medium.com/v2/resize:fit:875/0*oW3AathNQIkPD-7n&#34;&#xA;    alt=&#34;Photo by Michael Lock on Unsplash&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Photo by &lt;a href=&#34;https://unsplash.com/@milo_photo?utm_source=medium&amp;amp;utm_medium=referral&#34;&gt;Michael Lock&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/?utm_source=medium&amp;amp;utm_medium=referral&#34;&gt;Unsplash&lt;/a&gt;&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Vietnam’s Tuoitre newspaper &lt;a href=&#34;https://tuoitre.vn/thai-lan-bat-ngo-tang-chi-tien-lon-mua-rau-qua-viet-nam-20240722131738512.htm&#34;&gt;reported&lt;/a&gt; that Thailand paid 97 million USD to import fruit and vegetables from Vietnam. At the top of the import list is durian.&lt;/p&gt;&#xA;&lt;p&gt;That was unthinkable in the past!&lt;/p&gt;&#xA;&lt;p&gt;Thailand used to have all of China’s durian imports up until 2021 but dropped to 61% in 2023, according to another Vietnamese &lt;a href=&#34;https://vneconomy.vn/nguyen-nhan-trung-quoc-ngung-nhap-sau-rieng-tu-mot-so-vung-trong-viet-nam.htm&#34;&gt;paper&lt;/a&gt;. Vietnam’s fresh durian export to China, starting from July 2022, was the reason for the drop. Favorable weather, large plantations, proximity, and year-round harvest of durian were major advantages that have so far powered Vietnam’s ascension on the durian power scale.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>From Developer to Product Manager: How it failed</title>
+      <link>https://geraldnguyen.github.io/posts/2024/01/from-developer-to-product-manager-how-it-failed/</link>
+      <pubDate>Tue, 09 Jan 2024 00:00:00 +0800</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2024/01/from-developer-to-product-manager-how-it-failed/</guid>
+      <description>&lt;figure&gt;&lt;img src=&#34;https://miro.medium.com/v2/resize:fit:875/0*Gd_RmOFeJVqLeOVk&#34;&#xA;    alt=&#34;Photo by Nubelson Fernandes on Unsplash&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Photo by &lt;a href=&#34;https://unsplash.com/@nublson?utm_source=medium&amp;amp;utm_medium=referral&#34;&gt;Nubelson Fernandes&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/?utm_source=medium&amp;amp;utm_medium=referral&#34;&gt;Unsplash&lt;/a&gt;&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;I knew a developer from a large local company. He was great at his job enjoying writing codes, building web applications, and troubleshooting issues.&lt;/p&gt;&#xA;&lt;p&gt;More than five years into his first job, his career was not moving in the direction he had hoped. He left the company in search of a better prospect. After a couple of disappointments, he returned to his first company. With hope. The team he was to join was his past neighbors, and he would be a product manager — something he considered an upgrade over a developer position.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Which is bigger, the Singapore General Hospital or the Singapore National Stadium?</title>
+      <link>https://geraldnguyen.github.io/posts/2024/01/which-is-bigger-the-singapore-general-hospital-or-the-singapore-national-stadium/</link>
+      <pubDate>Wed, 03 Jan 2024 00:00:00 +0800</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2024/01/which-is-bigger-the-singapore-general-hospital-or-the-singapore-national-stadium/</guid>
+      <description>&lt;p&gt;For some reason, my son, 6-yo, likes to compare the sizes of areas and buildings. This time, he wanted to know which was bigger, the Singapore General Hospital (aka SGH) and the Singapore National Stadium.&lt;/p&gt;&#xA;&lt;h1 id=&#34;the-singapore-general-hospital&#34;&gt;The Singapore General Hospital&lt;/h1&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://miro.medium.com/v2/resize:fit:875/1*PW0RCBXXwqrvIWP-kAPeEw.jpeg&#34;&#xA;    alt=&#34;Source: https://www.sgh.com.sg/about-us&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Source: &lt;a href=&#34;https://www.sgh.com.sg/about-us&#34;&gt;https://www.sgh.com.sg/about-us&lt;/a&gt;&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;The Singapore General Hospital, also known as SGH, is among the best-known names in Singapore and also ranks among the world&amp;rsquo;s best hospitals. It is the largest hospital in Singapore with more than 50 clinical specialties, medical training, and research on its campus.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Sweet Delight of Star Apple: A Tropical Treasure Across Vietnam, Thailand, and the Philippines</title>
+      <link>https://geraldnguyen.github.io/posts/2023/12/the-sweet-delight-of-star-apple-a-tropical-treasure-across-vietnam-thailand-and-the-philippines/</link>
+      <pubDate>Sun, 24 Dec 2023 00:00:00 +0700</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/12/the-sweet-delight-of-star-apple-a-tropical-treasure-across-vietnam-thailand-and-the-philippines/</guid>
+      <description>&lt;figure&gt;&lt;img src=&#34;https://miro.medium.com/v2/resize:fit:484/1*-xcRk7yJkSIBtuWLipNcEQ.jpeg&#34;&#xA;    alt=&#34;Source: https://www.nparks.gov.sg/florafaunaweb/flora/2/8/2803#gallery-14&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Source: &lt;a href=&#34;https://www.nparks.gov.sg/florafaunaweb/flora/2/8/2803#gallery-14&#34;&gt;https://www.nparks.gov.sg/florafaunaweb/flora/2/8/2803#gallery-14&lt;/a&gt;&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Vietnam, Thailand, and the Philippines, three Southeast Asian nations boasting rich agricultural landscapes, share a common treasure in their orchards — the Star Apple, commonly known as “vú sữa” in Vietnam, “caimito” in the Philippines, and สตาร์แอปเปิ้ล in Thailand. This tropical gem, with its smooth, glossy skin and milky white interior, is a culinary delight that transcends borders, captivating the taste buds of locals and visitors alike.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>From Business Analyst to Product Manager: How it failed</title>
+      <link>https://geraldnguyen.github.io/posts/2023/11/from-business-analyst-to-product-manager-how-it-failed/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0800</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/11/from-business-analyst-to-product-manager-how-it-failed/</guid>
+      <description>&lt;figure&gt;&lt;img src=&#34;https://miro.medium.com/v2/resize:fit:875/0*g7EtWWXX769pC0pj&#34;&#xA;    alt=&#34;Photo by Kaleidico on Unsplash&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Photo by &lt;a href=&#34;https://unsplash.com/@kaleidico?utm_source=medium&amp;amp;utm_medium=referral&#34;&gt;Kaleidico&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/?utm_source=medium&amp;amp;utm_medium=referral&#34;&gt;Unsplash&lt;/a&gt;&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;I knew a Business Analyst from a large multinational company. She was great at her job.&lt;/p&gt;&#xA;&lt;p&gt;She designed new features, wrote specifications, updated user guides, conducted user training workshops, collaborated with developers, users, and other stakeholders… Her daily responsibilities predominantly fit those often found in a product manager’s job description&lt;/p&gt;&#xA;&lt;p&gt;But she didn’t become a product manager. The company tried to put her into that role, but she disliked it. It requires too many other things for her to enjoy the work. Not everyone likes Marketing, P&amp;amp;L, and Sales…. Not her especially. Plus she hated the politics on the Product teams.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Software Development Career: Business Analyst vs. Product Manager</title>
+      <link>https://geraldnguyen.github.io/posts/2023/11/software-development-career-business-analyst-vs-product-manager/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0800</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/11/software-development-career-business-analyst-vs-product-manager/</guid>
+      <description>&lt;p&gt;Business Analysts and Product Managers are common roles within a software development team. I have seen them played by different persons or by the same person.&lt;/p&gt;&#xA;&lt;p&gt;I used to be confused between the 2 roles, thinking they meant the same thing. I even thought that people abused the word “analyst” in the “business analyst” job title, in the same way they did with “IT analyst”&lt;/p&gt;&#xA;&lt;p&gt;Now I see them as separate roles, each with its own set of responsibilities and deliveries, though there can be some overlap between the two.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Layoff’s Checklist</title>
+      <link>https://geraldnguyen.github.io/posts/2023/10/a-layoffs-checklist/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 +0800</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/10/a-layoffs-checklist/</guid>
+      <description>&lt;figure&gt;&lt;img src=&#34;https://miro.medium.com/v2/resize:fit:875/0*0Qk8lZ3m2MRz1-2P&#34;&#xA;    alt=&#34;Photo by Glenn Carstens-Peters on Unsplash&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Photo by &lt;a href=&#34;https://unsplash.com/@glenncarstenspeters?utm_source=medium&amp;amp;utm_medium=referral&#34;&gt;Glenn Carstens-Peters&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/?utm_source=medium&amp;amp;utm_medium=referral&#34;&gt;Unsplash&lt;/a&gt;&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;As news of layoff returns and the year-end appraisals approach, the fear of layoff sends a chill to many.&lt;/p&gt;&#xA;&lt;p&gt;We should face it. By being prepared.&lt;/p&gt;&#xA;&lt;h1 id=&#34;first-know-the-legal-nature-of-your-layoff&#34;&gt;First, know the legal nature of your layoff&lt;/h1&gt;&#xA;&lt;p&gt;If you are &lt;strong&gt;&lt;em&gt;furloughed&lt;/em&gt;&lt;/strong&gt;, your working hours are temporarily reduced, possibly without work for weeks or months. You are still on your employer’s payroll (at a reduced amount) and it is likely that you are still entitled to employment benefits such as health insurance.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Feeling Left Out</title>
+      <link>https://geraldnguyen.github.io/posts/2023/04/feeling-left-out/</link>
+      <pubDate>Mon, 24 Apr 2023 00:00:00 +0800</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/04/feeling-left-out/</guid>
+      <description>&lt;p&gt;&amp;lsquo;Lily! Clean your room right now!&amp;rsquo; Mom screamed at the top of her lungs.&lt;/p&gt;&#xA;&lt;p&gt;I slowly began dusting the shelves of my room. A small photograph in the corner caught my attention. After observing everyone in the photograph, I realized that it was my Primary Five class photo. Hatred started coming back to me as I spotted the coolest guy in the school, Jack. One of the things he had done to me came vividly back to my mind.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Misunderstanding with a package of chilis sauce</title>
+      <link>https://geraldnguyen.github.io/posts/2023/04/misunderstanding-with-a-package-of-chilis-sauce/</link>
+      <pubDate>Sun, 23 Apr 2023 00:00:00 +0800</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/04/misunderstanding-with-a-package-of-chilis-sauce/</guid>
+      <description>&lt;p&gt;Mr. Jenkins pushed the door open. He barged in and stared daggers at me with his red fuming eyes. His hands were clenched. I stood frozen in horror.&lt;/p&gt;&#xA;&lt;p&gt;&amp;lsquo;What is this? Blood all over your homework!&amp;rsquo; Mr. Jenkins screamed at the top of his lungs.&lt;/p&gt;&#xA;&lt;p&gt;In curiosity, everyone began looking at me and the homework filled with &amp;lsquo;blood&amp;rsquo;. Horrified, I began trying to remember how the &amp;lsquo;blood&amp;rsquo; got on my homework.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Southeast Asia Durian Paradises</title>
+      <link>https://geraldnguyen.github.io/posts/2023/03/southeast-asia-durian-paradises/</link>
+      <pubDate>Fri, 31 Mar 2023 00:00:00 +0800</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/03/southeast-asia-durian-paradises/</guid>
+      <description>&lt;p&gt;In Southeast Asia, durian is often referred to as the “king of fruits,” and it has a long history of being enjoyed by locals and visitors alike. It is commonly consumed fresh, although it is also used in various dishes such as ice cream, cakes, and candy.&lt;/p&gt;&#xA;&lt;p&gt;Durian is also a significant agricultural crop in Southeast Asia, and many farmers rely on it as a source of income. The fruit is typically harvested in the late afternoon or early evening, and it is then transported to markets and sold within a day or two.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Catching Software Bugs</title>
       <link>https://geraldnguyen.github.io/posts/2023/03/catching-software-bugs/</link>
       <pubDate>Sun, 19 Mar 2023 00:00:00 +0100</pubDate>
