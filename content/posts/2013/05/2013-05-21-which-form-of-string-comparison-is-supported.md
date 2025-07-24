@@ -1,10 +1,14 @@
 ---
-title: "Which Form of String Comparison Is Supported"
-date: 2013-05-21T09:19:42+01:00
+categories:
+- Software Development
+date: 2013-05-21 09:19:42+01:00
 draft: false
-
-categories: [Software Development]
-tags: [database, sql, programming, old blog]
+tags:
+- database
+- sql
+- Programming
+- old blog
+title: Which Form of String Comparison Is Supported
 ---
 Below example is for Oracle DB, but adopting for other DBMS e.g. Sybase, MS SQL… should be straightforward.
 

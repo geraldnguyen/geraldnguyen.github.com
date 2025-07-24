@@ -1,13 +1,21 @@
 ---
-title: "Spring REST API Interview Questions"
-subtitle: "Use these to assess multiple practical aspects of a candidate’s skills and experience"
-image: 1_lOcYvYf5KARsBswgtPcoEQ.png
-date: 2021-10-19T09:19:42+01:00
+categories:
+- Software Development
+- Career Development
+date: 2021-10-19 09:19:42+01:00
 draft: false
-
-categories: [Software Development, Career Development]
-tags: [java, spring, api, interview, annotation, testing]
+image: 1_lOcYvYf5KARsBswgtPcoEQ.png
 medium: https://medium.com/50ld/spring-rest-api-interview-questions-66cf78fa1f2c
+subtitle: Use these to assess multiple practical aspects of a candidate’s skills and
+  experience
+tags:
+- Java
+- spring
+- API
+- interview
+- annotation
+- testing
+title: Spring REST API Interview Questions
 ---
 
 #1 Complete the REST controller

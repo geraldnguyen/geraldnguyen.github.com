@@ -1,10 +1,13 @@
 ---
-title: "JSR 303 – Bean Validation – Nested Validation"
-date: 2012-08-09T09:19:42+01:00
+categories:
+- Software Development
+date: 2012-08-09 09:19:42+01:00
 draft: false
-
-categories: [Software Development]
-tags: [java, jsr303 bean validation, old blog]
+tags:
+- Java
+- JSR303 Bean Validation
+- old blog
+title: JSR 303 – Bean Validation – Nested Validation
 ---
 
 

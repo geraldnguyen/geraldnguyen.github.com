@@ -1,11 +1,15 @@
 ---
-title: "What Happened When You Assigned State to a Stateless Session Bean?"
-date: 2013-09-10T09:19:42+01:00
-subtitle: "It’ll probably result in an EJBTransactionRolledbackException caused by a NullPointerException"
+categories:
+- Software Development
+date: 2013-09-10 09:19:42+01:00
 draft: false
-
-categories: [Software Development]
-tags: [java, ejb, old blog]
+subtitle: It’ll probably result in an EJBTransactionRolledbackException caused by
+  a NullPointerException
+tags:
+- Java
+- ejb
+- old blog
+title: What Happened When You Assigned State to a Stateless Session Bean?
 ---
 
 Here’s a scenario that illustrate above possibility

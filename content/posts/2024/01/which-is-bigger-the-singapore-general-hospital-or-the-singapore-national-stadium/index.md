@@ -1,12 +1,16 @@
 ---
-title: "Which is bigger, the Singapore General Hospital or the Singapore National Stadium?"
-subtitle: Answering my son’s question
-# Original publication date: 2024-01-03
-date: 2024-01-03T00:00:00+08:00
-categories: [Southeast Asia, Singapore]
-tags: [SGH, National Stadium, Singapore Sport Hub, Medium]
-medium: https://medium.com/southeast-asia/which-is-bigger-the-singapore-general-hospital-or-the-singapore-national-stadium-9b372a840f66
+categories:
+- Southeast Asia
+date: 2024-01-03 00:00:00+08:00
 image: 1_PW0RCBXXwqrvIWP-kAPeEw.jpg
+medium: https://medium.com/southeast-asia/which-is-bigger-the-singapore-general-hospital-or-the-singapore-national-stadium-9b372a840f66
+subtitle: Answering my son’s question
+tags:
+- SGH
+- National Stadium
+- Singapore Sport Hub
+- Medium
+title: Which is bigger, the Singapore General Hospital or the Singapore National Stadium?
 ---
 
 For some reason, my son, 6-yo, likes to compare the sizes of areas and buildings. This time, he wanted to know which was bigger, the Singapore General Hospital (aka SGH) and the Singapore National Stadium.

@@ -1,11 +1,15 @@
 ---
-title: "Using Bootstrap with React"
-date: 2020-04-20T09:19:42+01:00
-subtitle: "Because both are great!"
+categories:
+- Software Development
+date: 2020-04-20 09:19:42+01:00
 draft: false
-
-categories: [Software Development]
-tags: [react, bootstrap, programming, javascript]
+subtitle: Because both are great!
+tags:
+- react
+- bootstrap
+- Programming
+- javascript
+title: Using Bootstrap with React
 ---
 
 ## Mixing browser and React

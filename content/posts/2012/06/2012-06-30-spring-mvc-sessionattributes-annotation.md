@@ -1,10 +1,13 @@
 ---
-title: "SPRING MVC – SESSIONATTRIBUTES ANNOTATION"
-date: 2012-06-30T09:19:42+01:00
+categories:
+- Software Development
+date: 2012-06-30 09:19:42+01:00
 draft: false
-
-categories: [Software Development]
-tags: [java, spring, old blog]
+tags:
+- Java
+- spring
+- old blog
+title: SPRING MVC – SESSIONATTRIBUTES ANNOTATION
 ---
 
 Spring MVC’s [SessionAttributes](http://static.springsource.org/spring/docs/3.1.x/javadoc-api/org/springframework/web/bind/annotation/SessionAttributes.html) has 2 parameters: **values** (storing attributes’ names) and **types** (storing attributes’ types).

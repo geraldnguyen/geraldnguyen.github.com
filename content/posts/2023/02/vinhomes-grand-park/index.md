@@ -1,12 +1,19 @@
 ---
-title: "Vinhomes Grand Park"
-subtitle: Thoughts from an 11 years old
-# Original publication date: 2023-02-19
-date: 2023-02-19T00:00:00+01:00
-categories: [Southeast Asia, Reflections]
-tags: [Vietnam, Vinhomes Grand Park, Vacation, Ho Chi Minh City, Daughters, Medium]
+categories:
+- Southeast Asia
+- Life & Reflections
+date: 2023-02-19 00:00:00+01:00
 image: 1_mw3b_HAPUgQGEG-QM2gwpw.jpg
 medium: https://medium.com/southeast-asia/vinhomes-grand-park-318573a29470
+subtitle: Thoughts from an 11 years old
+tags:
+- Vietnam
+- Vinhomes Grand Park
+- Vacation
+- Ho Chi Minh City
+- Daughters
+- Medium
+title: Vinhomes Grand Park
 ---
 
 {{< figure src="https://miro.medium.com/v2/resize:fit:875/1*mw3b_HAPUgQGEG-QM2gwpw.png" caption="By the real author’s father" >}}

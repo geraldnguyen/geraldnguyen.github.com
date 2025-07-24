@@ -1,9 +1,13 @@
 ---
-title: "Work-hard Mocking or Work-smart Mocking"
-date: 2021-09-08T09:19:42+01:00
+date: 2021-09-08 09:19:42+01:00
 draft: true
-
-tags: [java, kitchensink, unit testing, mockito, programming]
+tags:
+- Java
+- KitchenSink
+- unit testing
+- mockito
+- Programming
+title: Work-hard Mocking or Work-smart Mocking
 ---
 
 **Note 2024-08-15: An updated version of this article was published in Medium at https://medium.com/@geraldnguyen/work-hard-verifying-or-work-smart-mocking-9e0c645c839e?source=user_profile---------65----------------------------**

@@ -1,12 +1,15 @@
 ---
-title: "Feeling Left Out"
-subtitle: By Nguyen Quynh Tam
-# Original publication date: 2023-04-24
-date: 2023-04-24T00:00:00+08:00
-categories: [Life, Reflections]
-tags: [School, Friendship, Medium]
-medium: https://geraldnguyen.medium.com/feeling-left-out-bfe2fd86943e
+categories:
+- Life & Reflections
+date: 2023-04-24 00:00:00+08:00
 image: feeling-left-out.jpg
+medium: https://geraldnguyen.medium.com/feeling-left-out-bfe2fd86943e
+subtitle: By Nguyen Quynh Tam
+tags:
+- School
+- Friendship
+- Medium
+title: Feeling Left Out
 ---
 
 'Lily! Clean your room right now!' Mom screamed at the top of her lungs.

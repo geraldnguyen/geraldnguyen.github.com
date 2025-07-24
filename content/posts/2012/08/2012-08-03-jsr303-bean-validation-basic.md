@@ -1,10 +1,13 @@
 ---
-title: "JSR 303 – Bean Validation – Basic"
-date: 2012-08-03T09:19:42+01:00
+categories:
+- Software Development
+date: 2012-08-03 09:19:42+01:00
 draft: false
-
-categories: [Software Development]
-tags: [java, jsr303 bean validation, old blog]
+tags:
+- Java
+- JSR303 Bean Validation
+- old blog
+title: JSR 303 – Bean Validation – Basic
 ---
 [JSR 303 – Bean Validation](http://jcp.org/en/jsr/detail?id=303) is defines a metadata model and API for JavaBean validation. The metadata is primarily in Annotation forms, with the possibility of being overridden or extended by XML descriptors. [Hibernate Validator](http://www.hibernate.org/subprojects/validator.html) is the reference implementation of JSR 303.
 

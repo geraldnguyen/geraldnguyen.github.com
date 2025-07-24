@@ -1,11 +1,16 @@
 ---
-title: "Recursive Tagfile"
-subtitle: "This is my experience with recursive tagfile on Weblogic 10.3. I also describe a few problems encountered and how I solved them"
-date: 2010-03-24T09:19:42+01:00
+categories:
+- Software Development
+date: 2010-03-24 09:19:42+01:00
 draft: false
-
-categories: [Software Development]
-tags: [j2ee, tagfile, debugging, old blog]
+subtitle: This is my experience with recursive tagfile on Weblogic 10.3. I also describe
+  a few problems encountered and how I solved them
+tags:
+- J2EE
+- tagfile
+- debugging
+- old blog
+title: Recursive Tagfile
 ---
 
 Tagfile is a good alternative for lazy people like me who hates doing java coding and XML configuration for simple task with lots of HTML codes.

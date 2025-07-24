@@ -1,12 +1,16 @@
 ---
-title: "How networking helps you land a perfect job"
-subtitle: From a guy I met yesterday
-# Original publication date: 2025-01-31
-date: 2025-01-31T00:00:00+01:00
-categories: [Career Advice, Networking]
-tags: [Networking, Job Hunting, Jokes, Medium]
-medium: https://medium.com/illumination/how-networking-helps-you-land-a-perfect-job-4dc33065f6b7
+categories:
+- Career Development
+date: 2025-01-31 00:00:00+01:00
 image: 1_93nVSvlfQQr31JcYRylMow.png
+medium: https://medium.com/illumination/how-networking-helps-you-land-a-perfect-job-4dc33065f6b7
+subtitle: From a guy I met yesterday
+tags:
+- Networking
+- Job Hunting
+- Jokes
+- Medium
+title: How networking helps you land a perfect job
 ---
 
 If you are looking for work, take advantage of networking and personal relationship. The longer the relationship lasts, the more advantageous it becomes.

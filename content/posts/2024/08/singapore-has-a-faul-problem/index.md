@@ -1,12 +1,19 @@
 ---
-title: "Singapore has a /faʊl/ problem"
-subtitle: Foul and Fowl, interchangeably and at the same time
-# Original publication date: 2024-08-04
-date: 2024-08-04T00:00:00+08:00
-categories: [Southeast Asia, Singapore]
-tags: [Birds, Foul, Fowl, Starling, Pigeon, Chicken, Medium]
-medium: https://medium.com/southeast-asia/singapore-has-a-fa%CA%8Al-problem-eb2c84b29778
+categories:
+- Southeast Asia
+date: 2024-08-04 00:00:00+08:00
 image: 1_Fj99-8HCAL8w0pIhrahEIw.png
+medium: https://medium.com/southeast-asia/singapore-has-a-fa%CA%8Al-problem-eb2c84b29778
+subtitle: Foul and Fowl, interchangeably and at the same time
+tags:
+- Birds
+- Foul
+- Fowl
+- Starling
+- Pigeon
+- Chicken
+- Medium
+title: Singapore has a /faʊl/ problem
 ---
 
 Away from the city center with high-end restaurants, cafes and landscape gardens, Singapore heartland has a persistent /faʊl/ problem. While both “foul” and “fowl” share the same pronunciation, they also share the same blame.

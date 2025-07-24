@@ -1,11 +1,18 @@
 ---
-title: "JDBC Transaction Without EJB"
-date: 2012-10-24T09:19:42+01:00
-subtitle: "EJB 3 is simple enough that delegating transaction management to it only cost little in creating and annotating an EJB business interface method. However, if you want to skip EJB altogether yet ensure all queries get executed inside a transaction, here’s a quick way"
+categories:
+- Software Development
+date: 2012-10-24 09:19:42+01:00
 draft: false
-
-categories: [Software Development]
-tags: [java, transaction, jdbc, old blog]
+subtitle: EJB 3 is simple enough that delegating transaction management to it only
+  cost little in creating and annotating an EJB business interface method. However,
+  if you want to skip EJB altogether yet ensure all queries get executed inside a
+  transaction, here’s a quick way
+tags:
+- Java
+- transaction
+- jdbc
+- old blog
+title: JDBC Transaction Without EJB
 ---
 
 

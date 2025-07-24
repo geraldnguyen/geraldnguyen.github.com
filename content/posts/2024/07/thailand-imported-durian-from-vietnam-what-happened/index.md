@@ -1,12 +1,17 @@
 ---
-title: "Thailand imported durian from Vietnam. What happened?"
-subtitle: Thailand’s sorrow amid the ascension of Vietnam’s durian export
-# Original publication date: 2024-07-23
-date: 2024-07-23T00:00:00+07:00
-categories: [Southeast Asia, Vietnam, Thailand]
-tags: [Durian, Export, China, Agriculture, Medium]
-medium: https://medium.com/southeast-asia/thailand-imported-durian-from-vietnam-what-happened-1873f5a51b36
+categories:
+- Southeast Asia
+date: 2024-07-23 00:00:00+07:00
 image: 0_oW3AathNQIkPD-7n.jpg
+medium: https://medium.com/southeast-asia/thailand-imported-durian-from-vietnam-what-happened-1873f5a51b36
+subtitle: Thailand’s sorrow amid the ascension of Vietnam’s durian export
+tags:
+- Durian
+- Export
+- China
+- Agriculture
+- Medium
+title: Thailand imported durian from Vietnam. What happened?
 ---
 
 {{< figure src="https://miro.medium.com/v2/resize:fit:875/0*oW3AathNQIkPD-7n" caption="Photo by [Michael Lock](https://unsplash.com/@milo_photo?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)" >}}

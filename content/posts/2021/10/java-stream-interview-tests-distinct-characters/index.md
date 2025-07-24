@@ -1,12 +1,19 @@
 ---
-title: "Java Stream Interview Tests - Distinct Characters"
-date: 2021-10-30T09:19:42+01:00
-sutitle: Stream has been an important part of Java development since Java 8. This test assesses candidates familiarity with various stream operations
-image: 1_BhOX_9_jetMTNa5WYqHqsQ.jpg
+categories:
+- Software Development
+- Career Development
+date: 2021-10-30 09:19:42+01:00
 draft: false
-categories: [Software Development, Career Development]
-tags: [java, stream, interview, coding test]
+image: 1_BhOX_9_jetMTNa5WYqHqsQ.jpg
 medium: https://medium.com/50ld/java-stream-interview-tests-distinct-characters-741cc82cbdd6
+sutitle: Stream has been an important part of Java development since Java 8. This
+  test assesses candidates familiarity with various stream operations
+tags:
+- Java
+- stream
+- interview
+- coding test
+title: Java Stream Interview Tests - Distinct Characters
 ---
 
 Requirement

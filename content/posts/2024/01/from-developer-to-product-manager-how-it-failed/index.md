@@ -1,12 +1,18 @@
 ---
-title: "From Developer to Product Manager: How it failed"
-subtitle: Poor culture, lack of support, and transformation project gone wrong
-# Original publication date: 2024-01-09
-date: 2024-01-09T00:00:00+08:00
-categories: [Careers, Product Management]
-tags: [Developer, Product Manager, Outsourcing, Failure, Medium]
-medium: https://medium.com/50ld/from-developer-to-product-manager-how-it-failed-8de75b269287
+categories:
+- Career Development
+- Product Management
+date: 2024-01-09 00:00:00+08:00
 image: 0_Gd_RmOFeJVqLeOVk.jpg
+medium: https://medium.com/50ld/from-developer-to-product-manager-how-it-failed-8de75b269287
+subtitle: Poor culture, lack of support, and transformation project gone wrong
+tags:
+- Developer
+- Product Manager
+- Outsourcing
+- Failure
+- Medium
+title: 'From Developer to Product Manager: How it failed'
 ---
 
 {{< figure src="https://miro.medium.com/v2/resize:fit:875/0*Gd_RmOFeJVqLeOVk" caption="Photo by [Nubelson Fernandes](https://unsplash.com/@nublson?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)" >}}
