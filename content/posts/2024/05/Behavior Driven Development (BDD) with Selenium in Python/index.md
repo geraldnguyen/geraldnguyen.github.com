@@ -4,6 +4,7 @@ subtitle = 'A beginner guide'
 date = 2024-05-20T08:00:00-07:00
 image = "1_ZWQCCWcTUsb9DoEVUAwcTQ.jpeg"
 tags = [ "Programming", "Python", "Selenium", "BDD", "Tutorial"]
+categories = ["Software Development"]
 medium = 'https://levelup.gitconnected.com/behavior-driven-development-bdd-with-selenium-in-python-58390fcc0325'
 +++
 

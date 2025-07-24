@@ -1,7 +1,6 @@
 ---
 categories:
-- Entertainment
-- Life & Reflections
+- Life and Fun Stuffs
 date: 2025-01-27 00:00:00+01:00
 image: 0_g4EY922k4dMku7wS.png
 medium: https://geraldnguyen.medium.com/a-sentimental-husband-5a37c38d000f

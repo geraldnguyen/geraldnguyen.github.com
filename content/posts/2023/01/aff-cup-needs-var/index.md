@@ -3,7 +3,7 @@ title: AFF Cup needs VAR
 subtitle: For the development of football in the region
 date: 2023-01-26T09:19:42+01:00
 image: 0_4RBQ3COydDx7hrZ-.jpg
-categories: [Non-Tech]
+categories: [Southeast Asia]
 tags: [Medium, Southeast Asia, Football, Vietnam, Indonesia, Malaysia, Thailand]
 medium: https://medium.com/southeast-asia/aff-cup-needs-var-44593badfcb0
 ---

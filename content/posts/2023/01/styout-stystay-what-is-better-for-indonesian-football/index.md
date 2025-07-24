@@ -4,7 +4,7 @@ subtitle: A commentary from a Vietnamese fan
 date: 2023-01-12T09:19:42+01:00
 image: 1_UEaVZcIzkXkW0N44KUeW5A.jpg
 draft: false
-categories: [Non-Tech]
+categories: [Southeast Asia]
 tags: [Medium, Southeast Asia, Football, Aff, Indonesia, Shin Tae Yong]
 medium: https://medium.com/southeast-asia/styout-or-stystay-what-is-better-for-indonesian-football-65d17803c84
 ---

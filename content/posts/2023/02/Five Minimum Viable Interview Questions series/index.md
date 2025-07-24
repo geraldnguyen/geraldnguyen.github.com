@@ -3,6 +3,7 @@ title = 'Five Minimum Viable Interview Questions series — Updated 17 Feb 2023'
 subtitle = 'Interviewer: ask them if your interview is running out of time. Interviewee: practice them if your preparation is running out of time.'
 date = 2023-02-17T08:00:00-07:00
 tags = [ "Interview Questions", "Interview", "Java", "JavaScript", "Programming"]
+categories = ["Software Development"]
 pinned = true
 image = "0_qxJpBdXPqAG2Z7NJ.jpg"
 medium = 'https://medium.com/50ld/five-minimum-viable-interview-questions-series-e8531b5f7db2'

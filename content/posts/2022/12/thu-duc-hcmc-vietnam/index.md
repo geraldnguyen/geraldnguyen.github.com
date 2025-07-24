@@ -3,7 +3,7 @@ title: Thu Duc, Ho Chi Minh City, Vietnam in December
 date: 2022-12-18T09:19:42+01:00
 image: 1_JSvnrmztXJaaQv2PphCiQQ.png
 draft: false
-categories: [Non-Tech]
+categories: [Southeast Asia]
 tags: [Vietnam, Ho Chi Minh City, Thu Duc, Photography, Southeast Asia]
 medium: https://medium.com/southeast-asia/thu-duc-ho-chi-minh-city-vietnam-in-december-5b6c02e31ca6
 ---

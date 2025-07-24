@@ -1,7 +1,7 @@
 ---
 categories:
 - Software Development
-- Life & Reflections
+- Life and Fun Stuffs
 date: 2023-03-08 00:00:00+01:00
 image: 1_6kSW6JOqOU2L-7zsPk094Q.jpg
 medium: https://geraldnguyen.medium.com/presales-vs-delivery-41d47fc4ab78

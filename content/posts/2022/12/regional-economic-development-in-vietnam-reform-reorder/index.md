@@ -4,7 +4,7 @@ subtitle: A commentary by my father, an economist-turn-writer — translated fro
 date: 2022-12-29T09:19:42+01:00
 image: 0_2L6WmSumZ-mIqZTe.jpg
 draft: false
-categories: [Non-Tech]
+categories: [Southeast Asia]
 tags: [Medium, Writing, Vietnam, Economics, Commentary, Translation, Southeast Asia]
 medium: https://medium.com/southeast-asia/regional-economic-development-in-vietnam-reform-reorder-b793d7fee5b
 ---

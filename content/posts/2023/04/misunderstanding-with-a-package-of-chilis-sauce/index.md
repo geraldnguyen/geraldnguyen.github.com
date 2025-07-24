@@ -1,6 +1,6 @@
 ---
 categories:
-- Life & Reflections
+- Life and Fun Stuffs
 date: 2023-04-23 00:00:00+08:00
 image: chilis-sauce.jpg
 medium: https://geraldnguyen.medium.com/misunderstanding-with-a-package-of-chilis-sauce-6bbe57fe18b8

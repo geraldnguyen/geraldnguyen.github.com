@@ -1,6 +1,5 @@
 ---
 categories:
-- Career Development
 - Product Management
 date: 2023-11-09 00:00:00+08:00
 image: 0_g7EtWWXX769pC0pj.jpg

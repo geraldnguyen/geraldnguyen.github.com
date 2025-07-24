@@ -4,7 +4,7 @@ subtitle: Because holidays are ending
 date: 2023-01-02T09:19:42+01:00
 image: 0_tsmi4lcC93iHkhjB.jpg
 draft: false
-categories: [Non-Tech]
+categories: [Life and Fun Stuffs]
 tags: [Medium, Writing, Sleep, Health]
 medium: https://medium.com/illumination/writers-please-go-to-sleep-earlier-cc7fa0122a72
 ---
