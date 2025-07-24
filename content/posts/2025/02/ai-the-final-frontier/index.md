@@ -1,7 +1,7 @@
 ---
 categories:
-- AI
-- Entertainment
+- Tech Related
+- Life and Fun Stuffs
 date: 2025-02-05 00:00:00+01:00
 medium: https://geraldnguyen.medium.com/ai-the-final-frontier-0fd06d562a95
 subtitle: A fun video

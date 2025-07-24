@@ -1,6 +1,6 @@
 ---
 categories:
-- Life & Reflections
+- Life and Fun Stuffs
 date: 2025-01-31 00:00:00+01:00
 image: 1_93nVSvlfQQr31JcYRylMow.png
 medium: https://geraldnguyen.medium.com/a-lesson-on-working-hard-and-working-smart-62c5d3334b8d

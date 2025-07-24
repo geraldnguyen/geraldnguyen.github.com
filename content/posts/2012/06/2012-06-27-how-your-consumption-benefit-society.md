@@ -1,6 +1,6 @@
 ---
 categories:
-- Non-Tech
+- Life and Fun Stuffs
 date: 2012-06-27 09:19:42+01:00
 draft: false
 subtitle: Is $2000 = $3000 ? Mathematically no. Economically yes (or at least it seems

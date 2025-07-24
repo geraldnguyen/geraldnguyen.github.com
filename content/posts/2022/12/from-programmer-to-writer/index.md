@@ -4,7 +4,7 @@ subtitle: From writing codes to writing articles
 date: 2022-12-25T09:19:42+01:00
 image: 0_wR0Ncqo7d8oeuaiD.jpg
 draft: false
-categories: [Non-Tech]
+categories: [Life and Fun Stuffs]
 tags: [Medium, Writing, Programming]
 medium: https://medium.com/new-writers-welcome/from-programmer-to-writer-c345bad95d21
 ---

@@ -3,7 +3,7 @@ title: "Southeast Asia Durian Paradises"
 subtitle: Locations where you find the King of Fruit in Southeast Asia
 # Original publication date: 2023-03-31
 date: 2023-03-31T00:00:00+08:00
-categories: [Fruits, Southeast Asia]
+categories: [Life and Fun Stuffs, Southeast Asia]
 tags: [Durian, Thailand, Malaysia, Vietnam, Philippines, Cambodia, Medium]
 medium: https://medium.com/southeast-asia/southeast-asia-durian-paradises-5041abf7b4d2
 image: 0_UPj8dgkKFgG0n1cI.jpg

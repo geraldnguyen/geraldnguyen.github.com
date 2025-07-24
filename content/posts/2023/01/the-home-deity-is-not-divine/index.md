@@ -4,7 +4,7 @@ subtitle: Notes about a popular Vietnamese idiom
 date: 2023-01-07T09:19:42+01:00
 image: 0_p6mZOiETNEwZ1L6e.jpg
 draft: false
-categories: [Non-Tech]
+categories: [Life and Fun Stuffs]
 tags: [Medium, Southeast Asia, Translation, Vietnam, Idiom, Culture]
 medium: https://medium.com/new-writers-welcome/the-home-deity-is-not-divine-f2af22f4078c
 ---

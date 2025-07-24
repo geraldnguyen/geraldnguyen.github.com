@@ -1,7 +1,6 @@
 ---
 categories:
 - Career Development
-- Product Management
 date: 2024-01-09 00:00:00+08:00
 image: 0_Gd_RmOFeJVqLeOVk.jpg
 medium: https://medium.com/50ld/from-developer-to-product-manager-how-it-failed-8de75b269287

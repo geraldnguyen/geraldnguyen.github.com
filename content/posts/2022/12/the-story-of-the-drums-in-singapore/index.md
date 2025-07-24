@@ -4,7 +4,7 @@ subtitle: My father’s observation when he visited Singapore in 2012 — transl
 date: 2022-12-27T09:19:42+01:00
 image: 0_ErJZacQ1ZKMdN4Rn.jpg
 draft: false
-categories: [Non-Tech]
+categories: [Life and Fun Stuffs]
 tags: [Medium, Writing, Singapore, Environment, Pollution Control, Translation, Southeast Asia]
 medium: https://medium.com/southeast-asia/the-story-of-the-drums-in-singapore-5d797fd653c
 ---

@@ -1,7 +1,7 @@
 ---
 categories:
 - Southeast Asia
-- Entertainment
+- Life and Fun Stuffs
 date: 2023-02-11 00:00:00+01:00
 image: 1_0Wz3ut0gdgUrME1UPEoxZA.jpg
 medium: https://medium.com/southeast-asia/stop-scams-season-1-episode-1-74d6daddd7cb

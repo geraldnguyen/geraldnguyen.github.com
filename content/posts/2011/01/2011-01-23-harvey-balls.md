@@ -1,6 +1,6 @@
 ---
 categories:
-- Non-Tech
+- Life and Fun Stuffs
 date: 2011-01-23 09:19:42+01:00
 draft: false
 subtitle: ○ ● ◐ ◑ ◒ ◓ ◔ ◕

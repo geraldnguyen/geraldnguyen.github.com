@@ -4,7 +4,7 @@ date: 2009-03-08T09:19:42+01:00
 draft: false
 
 tags: [interesting, old blog]
-categories: [Non-Tech]
+categories: [Life and Fun Stuffs]
 ---
 
 ### Capitalism vs Socialism

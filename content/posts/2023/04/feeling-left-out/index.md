@@ -1,6 +1,6 @@
 ---
 categories:
-- Life & Reflections
+- Life and Fun Stuffs
 date: 2023-04-24 00:00:00+08:00
 image: feeling-left-out.jpg
 medium: https://geraldnguyen.medium.com/feeling-left-out-bfe2fd86943e

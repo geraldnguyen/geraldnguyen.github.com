@@ -1,7 +1,7 @@
 ---
 categories:
 - Southeast Asia
-- Life & Reflections
+- Life and Fun Stuffs
 date: 2023-02-19 00:00:00+01:00
 image: 1_mw3b_HAPUgQGEG-QM2gwpw.jpg
 medium: https://medium.com/southeast-asia/vinhomes-grand-park-318573a29470

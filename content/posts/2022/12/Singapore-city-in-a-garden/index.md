@@ -4,7 +4,7 @@ subtitle: My father’s observation when he visited Singapore in 2014 — transl
 date: 2022-12-25T09:19:42+01:00
 image: 0_iJLNpfR7xb2vY5dq.jpg
 draft: false
-categories: [Non-Tech]
+categories: [Life and Fun Stuffs]
 tags: [Medium, Writing, Singapore, Urban Planning, Translation, Southeast Asia]
 medium: https://geraldnguyen.medium.com/singapore-city-in-a-garden-6cc777088f6
 ---
