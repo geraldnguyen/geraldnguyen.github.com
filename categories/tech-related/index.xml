@@ -6,8 +6,15 @@
     <description>Recent content in Tech Related on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Oct 2024 09:19:42 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 05 Feb 2025 00:00:00 +0100</lastBuildDate>
     <atom:link href="https://geraldnguyen.github.io/categories/tech-related/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI — The final frontier</title>
+      <link>https://geraldnguyen.github.io/posts/2025/02/ai-the-final-frontier/</link>
+      <pubDate>Wed, 05 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2025/02/ai-the-final-frontier/</guid>
+      <description>&lt;p&gt;A fun video&lt;/p&gt;&#xA;&lt;div class=&#34;embed video-player&#34; style=&#34;position:relative;padding-bottom:56.25%;height:0;overflow:hidden;&#34;&gt; &#xA;  &lt;iframe&#xA;    style=&#34;width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden&#34; frameborder=&#34;0&#34; type=&#34;text/html&#34;&#xA;    src=&#34;https://www.dailymotion.com/embed/video/x9dil96?autoplay=0&#34; width=&#34;100%&#34; height=&#34;100%&#34; allowfullscreen&#xA;    title=&#34;Dailymotion Video Player&#34; allow=&#34;autoplay; web-share&#34;&gt; &#xA;  &lt;/iframe&gt; &#xA;&lt;/div&gt;</description>
+    </item>
     <item>
       <title>Singapore Nationwide AWS LLM League 2024</title>
       <link>https://geraldnguyen.github.io/posts/2024/10/singapore-nationwide-aws-llm-league-2024/</link>
@@ -35,6 +42,20 @@
       <pubDate>Mon, 26 Aug 2024 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/posts/2024/08/hugo-displaying-images-the-medium-way/</guid>
       <description>&lt;p&gt;&lt;em&gt;Please ignore the &lt;code&gt;\&lt;/code&gt; in front of &lt;code&gt;{&lt;/code&gt; in code examples. It is used to prevent Hugo from processing the shortcodes even in code block&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;the-markdown-way&#34;&gt;The Markdown way&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;![alt title](1_nHC2UMz-xJM-lvPPwSh_vQ.webp)&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;1_nHC2UMz-xJM-lvPPwSh_vQ.webp&#34; alt=&#34;title&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Though it is recommended, the &lt;code&gt;alt-title&lt;/code&gt; is optional. The above can be expressed as &lt;code&gt;![alt title](path-to-image.jpg)&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Pros:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Simple&lt;/li&gt;&#xA;&lt;li&gt;Natively markdown&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Cons:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;No caption&lt;/li&gt;&#xA;&lt;li&gt;Center alignment not guaranteed&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;the-mediumway&#34;&gt;The Medium way&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{\&amp;lt; figure src=&amp;#34;1_nHC2UMz-xJM-lvPPwSh_vQ.webp&amp;#34; caption=&amp;#34;optional caption&amp;#34; \&amp;gt;}}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;figure&gt;&lt;img src=&#34;https://geraldnguyen.github.io/posts/2024/08/hugo-displaying-images-the-medium-way/1_nHC2UMz-xJM-lvPPwSh_vQ.webp&#34;&#xA;    alt=&#34;optional caption&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;optional caption&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Pros:&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to join video files in a semi-automated way</title>
+      <link>https://geraldnguyen.github.io/posts/2024/05/how-to-join-video-semi-automated/</link>
+      <pubDate>Sat, 04 May 2024 08:00:00 -0700</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2024/05/how-to-join-video-semi-automated/</guid>
+      <description>&lt;p&gt;TLDR;&lt;/p&gt;&#xA;&lt;div class=&#34;embed video-player&#34; style=&#34;position:relative;padding-bottom:56.25%;height:0;overflow:hidden;&#34;&gt; &#xA;  &lt;iframe&#xA;    style=&#34;width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden&#34; frameborder=&#34;0&#34; type=&#34;text/html&#34;&#xA;    src=&#34;https://www.dailymotion.com/embed/video/x9264lq?autoplay=0&#34; width=&#34;100%&#34; height=&#34;100%&#34; allowfullscreen&#xA;    title=&#34;Dailymotion Video Player&#34; allow=&#34;autoplay; web-share&#34;&gt; &#xA;  &lt;/iframe&gt; &#xA;&lt;/div&gt;&#xA;&#xA;&lt;div class=&#34;page-break&#34; role=&#34;separator&#34;&gt;&#xA;  &lt;span class=&#34;dot&#34;&gt;&lt;/span&gt;&lt;span class=&#34;dot&#34;&gt;&lt;/span&gt;&lt;span class=&#34;dot&#34;&gt;&lt;/span&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;You will need the following:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;ffmpeg: &lt;a href=&#34;https://ffmpeg.org/&#34;&gt;https://ffmpeg.org/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Windows command prompt&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Create a script that use ffmpeg to join video files then save the script and grant it necessary execute permission (on Mac and Linux). Make sure ffmpeg is on executable path, usually the &lt;code&gt;$PATH&lt;/code&gt; or &lt;code&gt;%PATH%&lt;/code&gt; variable&lt;/p&gt;&#xA;&lt;p&gt;On Windows, you can use the below.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;@echo off&#xA;setlocal enabledelayedexpansion&#xA;&#xA;del concat.txt&#xA;&#xA;rem Get the total number of parameters&#xA;set &amp;#34;totalParams=0&amp;#34;&#xA;for %%# in (%*) do set /a &amp;#34;totalParams += 1&amp;#34;&#xA;&#xA;set /a &amp;#34;to_merge=%totalParams%-1&amp;#34;&#xA;&#xA;echo There are a total of %to_merge% video to merge&#xA;&#xA;rem Loop through all parameters except the last one&#xA;set &amp;#34;index=0&amp;#34;&#xA;set &amp;#34;outputfile=&amp;#34;&#xA;for %%f in (%*) do (&#xA;  set /a &amp;#34;index+=1&amp;#34;&#xA;  if !index! neq %totalParams% (&#xA;    set &amp;#34;F=%%f&amp;#34;&#xA;    set &amp;#34;F=!F:\=/!&amp;#34;&#xA;    set &amp;#34;F=!F:&amp;#34;=!&amp;#34;&#xA;    echo file !F!&#xA;    echo file !F! &amp;gt;&amp;gt; concat.txt&#xA;  ) else ( set &amp;#34;outputfile=%%f&amp;#34; )&#xA;)&#xA;&#xA;echo output file %outputfile%&#xA;&#xA;ffmpeg -safe 0 -f concat -i concat.txt -c copy %outputfile%&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Assume the script is named &lt;code&gt;concat.cmd&lt;/code&gt;, use the command &lt;code&gt;concat.cmd &amp;lt;inputfile&amp;gt; &amp;lt;inputfile&amp;gt; &amp;lt;outputfile as the last argument&amp;gt;&lt;/code&gt; to join individual input files to a single output file. For example, to join 2 files &lt;code&gt;video-1.mp4&lt;/code&gt; and &lt;code&gt;video-2.mp4&lt;/code&gt; to a single &lt;code&gt;combine.mp4&lt;/code&gt;, we type the following&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Keep Calm and Ask ChatGPT</title>
+      <link>https://geraldnguyen.github.io/posts/2023/03/keep-calm-and-ask-chatgpt/</link>
+      <pubDate>Sat, 11 Mar 2023 00:00:00 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/03/keep-calm-and-ask-chatgpt/</guid>
+      <description>&lt;p&gt;The future of software development&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://miro.medium.com/v2/resize:fit:275/1*9kBigGzXi1nai7A6r07KNw.png&#34;&gt;&#xA;&lt;/figure&gt;</description>
     </item>
     <item>
       <title>Top Publications For Technical Writers — Jan 2023</title>

@@ -2,9 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://geraldnguyen.github.io/categories/ai/</loc>
-    <lastmod>2025-02-05T00:00:00+01:00</lastmod>
-  </url><url>
     <loc>https://geraldnguyen.github.io/tags/ai/</loc>
     <lastmod>2025-02-05T00:00:00+01:00</lastmod>
   </url><url>
@@ -14,13 +11,13 @@
     <loc>https://geraldnguyen.github.io/categories/</loc>
     <lastmod>2025-02-05T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://geraldnguyen.github.io/categories/entertainment/</loc>
-    <lastmod>2025-02-05T00:00:00+01:00</lastmod>
-  </url><url>
     <loc>https://geraldnguyen.github.io/tags/fun/</loc>
     <lastmod>2025-02-05T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/</loc>
+    <lastmod>2025-02-05T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/categories/life-and-fun-stuffs/</loc>
     <lastmod>2025-02-05T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/tags/medium/</loc>
@@ -33,6 +30,9 @@
     <lastmod>2025-02-05T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/tags/</loc>
+    <lastmod>2025-02-05T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://geraldnguyen.github.io/categories/tech-related/</loc>
     <lastmod>2025-02-05T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/tags/video/</loc>
@@ -57,9 +57,6 @@
     <lastmod>2025-01-31T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/tags/life/</loc>
-    <lastmod>2025-01-31T00:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://geraldnguyen.github.io/categories/life--reflections/</loc>
     <lastmod>2025-01-31T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/tags/networking/</loc>
@@ -96,9 +93,6 @@
     <lastmod>2024-10-03T09:19:42+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/posts/2024/10/singapore-nationwide-aws-llm-league-2024/</loc>
-    <lastmod>2024-10-03T09:19:42+01:00</lastmod>
-  </url><url>
-    <loc>https://geraldnguyen.github.io/categories/tech-related/</loc>
     <lastmod>2024-10-03T09:19:42+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/tags/legal/</loc>
@@ -182,6 +176,9 @@
     <loc>https://geraldnguyen.github.io/tags/selenium/</loc>
     <lastmod>2024-05-20T08:00:00-07:00</lastmod>
   </url><url>
+    <loc>https://geraldnguyen.github.io/categories/software-development/</loc>
+    <lastmod>2024-05-20T08:00:00-07:00</lastmod>
+  </url><url>
     <loc>https://geraldnguyen.github.io/tags/tutorial/</loc>
     <lastmod>2024-05-20T08:00:00-07:00</lastmod>
   </url><url>
@@ -227,9 +224,6 @@
     <loc>https://geraldnguyen.github.io/posts/2024/01/which-is-bigger-the-singapore-general-hospital-or-the-singapore-national-stadium/</loc>
     <lastmod>2024-01-03T00:00:00+08:00</lastmod>
   </url><url>
-    <loc>https://geraldnguyen.github.io/categories/fruits/</loc>
-    <lastmod>2023-12-24T00:00:00+07:00</lastmod>
-  </url><url>
     <loc>https://geraldnguyen.github.io/tags/philippines/</loc>
     <lastmod>2023-12-24T00:00:00+07:00</lastmod>
   </url><url>
@@ -255,9 +249,6 @@
     <lastmod>2023-11-09T00:00:00+08:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/tags/skills/</loc>
-    <lastmod>2023-11-03T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://geraldnguyen.github.io/categories/software-development/</loc>
     <lastmod>2023-11-03T00:00:00+08:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/posts/2023/11/software-development-career-business-analyst-vs-product-manager/</loc>
@@ -417,9 +408,6 @@
     <lastmod>2023-01-31T09:19:42+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/tags/idiom/</loc>
-    <lastmod>2023-01-31T09:19:42+01:00</lastmod>
-  </url><url>
-    <loc>https://geraldnguyen.github.io/categories/non-tech/</loc>
     <lastmod>2023-01-31T09:19:42+01:00</lastmod>
   </url><url>
     <loc>https://geraldnguyen.github.io/tags/southeast-asia/</loc>

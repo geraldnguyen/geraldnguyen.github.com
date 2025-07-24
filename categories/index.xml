@@ -9,17 +9,17 @@
     <lastBuildDate>Wed, 05 Feb 2025 00:00:00 +0100</lastBuildDate>
     <atom:link href="https://geraldnguyen.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AI</title>
-      <link>https://geraldnguyen.github.io/categories/ai/</link>
+      <title>Life and Fun Stuffs</title>
+      <link>https://geraldnguyen.github.io/categories/life-and-fun-stuffs/</link>
       <pubDate>Wed, 05 Feb 2025 00:00:00 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/categories/ai/</guid>
+      <guid>https://geraldnguyen.github.io/categories/life-and-fun-stuffs/</guid>
       <description></description>
     </item>
     <item>
-      <title>Entertainment</title>
-      <link>https://geraldnguyen.github.io/categories/entertainment/</link>
+      <title>Tech Related</title>
+      <link>https://geraldnguyen.github.io/categories/tech-related/</link>
       <pubDate>Wed, 05 Feb 2025 00:00:00 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/categories/entertainment/</guid>
+      <guid>https://geraldnguyen.github.io/categories/tech-related/</guid>
       <description></description>
     </item>
     <item>
@@ -30,20 +30,6 @@
       <description></description>
     </item>
     <item>
-      <title>Life &amp; Reflections</title>
-      <link>https://geraldnguyen.github.io/categories/life--reflections/</link>
-      <pubDate>Fri, 31 Jan 2025 00:00:00 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/categories/life--reflections/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tech Related</title>
-      <link>https://geraldnguyen.github.io/categories/tech-related/</link>
-      <pubDate>Thu, 03 Oct 2024 09:19:42 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/categories/tech-related/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Southeast Asia</title>
       <link>https://geraldnguyen.github.io/categories/southeast-asia/</link>
       <pubDate>Sun, 04 Aug 2024 00:00:00 +0800</pubDate>
@@ -51,31 +37,17 @@
       <description></description>
     </item>
     <item>
-      <title>Product Management</title>
-      <link>https://geraldnguyen.github.io/categories/product-management/</link>
-      <pubDate>Tue, 09 Jan 2024 00:00:00 +0800</pubDate>
-      <guid>https://geraldnguyen.github.io/categories/product-management/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Fruits</title>
-      <link>https://geraldnguyen.github.io/categories/fruits/</link>
-      <pubDate>Sun, 24 Dec 2023 00:00:00 +0700</pubDate>
-      <guid>https://geraldnguyen.github.io/categories/fruits/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Software Development</title>
       <link>https://geraldnguyen.github.io/categories/software-development/</link>
-      <pubDate>Fri, 03 Nov 2023 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 20 May 2024 08:00:00 -0700</pubDate>
       <guid>https://geraldnguyen.github.io/categories/software-development/</guid>
       <description></description>
     </item>
     <item>
-      <title>Non-Tech</title>
-      <link>https://geraldnguyen.github.io/categories/non-tech/</link>
-      <pubDate>Tue, 31 Jan 2023 09:19:42 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/categories/non-tech/</guid>
+      <title>Product Management</title>
+      <link>https://geraldnguyen.github.io/categories/product-management/</link>
+      <pubDate>Tue, 09 Jan 2024 00:00:00 +0800</pubDate>
+      <guid>https://geraldnguyen.github.io/categories/product-management/</guid>
       <description></description>
     </item>
   </channel>
