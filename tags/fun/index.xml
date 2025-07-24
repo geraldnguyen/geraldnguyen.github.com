@@ -6,8 +6,15 @@
     <description>Recent content in Fun on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Mar 2023 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 05 Feb 2025 00:00:00 +0100</lastBuildDate>
     <atom:link href="https://geraldnguyen.github.io/tags/fun/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI — The final frontier</title>
+      <link>https://geraldnguyen.github.io/posts/2025/02/ai-the-final-frontier/</link>
+      <pubDate>Wed, 05 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2025/02/ai-the-final-frontier/</guid>
+      <description>&lt;p&gt;A fun video&lt;/p&gt;&#xA;&lt;div class=&#34;embed video-player&#34; style=&#34;position:relative;padding-bottom:56.25%;height:0;overflow:hidden;&#34;&gt; &#xA;  &lt;iframe&#xA;    style=&#34;width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden&#34; frameborder=&#34;0&#34; type=&#34;text/html&#34;&#xA;    src=&#34;https://www.dailymotion.com/embed/video/x9dil96?autoplay=0&#34; width=&#34;100%&#34; height=&#34;100%&#34; allowfullscreen&#xA;    title=&#34;Dailymotion Video Player&#34; allow=&#34;autoplay; web-share&#34;&gt; &#xA;  &lt;/iframe&gt; &#xA;&lt;/div&gt;</description>
+    </item>
     <item>
       <title>Catching Software Bugs</title>
       <link>https://geraldnguyen.github.io/posts/2023/03/catching-software-bugs/</link>
