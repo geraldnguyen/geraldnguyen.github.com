@@ -71,6 +71,14 @@ medium: https://medium.com/example-url
 ## Examples
 - To display all tags on a page: `{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}`
 - To add a new post: create a markdown file in `content/posts/<year>/`.
+- Social sharing buttons are automatically added to the top and bottom of each article via the `social-sharing.html` partial.
+
+## Social Sharing Feature
+- Social sharing buttons are automatically displayed at the top and bottom of each article.
+- Supports: Twitter/X, LinkedIn, Facebook, Reddit, Email, and Copy Link functionality.
+- Styled to match the theme design with hover effects and responsive layout.
+- Uses site parameters from `hugo.toml` for Twitter handle integration.
+- Located in `themes/medium/layouts/partials/social-sharing.html` with CSS in `themes/medium/assets/css/main.css`.
 
 ---
 If you add new conventions or workflows, update this file to help future AI agents and developers.

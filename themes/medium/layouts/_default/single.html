@@ -51,7 +51,10 @@
     </div>
   </div>
             
-</div>  
+</div>
+
+<!-- Social sharing buttons at the top -->
+{{ partial "social-sharing.html" . }}  
 
 {{ end }}
 
@@ -65,6 +68,9 @@
   {{ .Content }}
   
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+
+  <!-- Social sharing buttons at the bottom -->
+  {{ partial "social-sharing.html" . }}
 
   {{ partial "disqus.html" . }}
 
