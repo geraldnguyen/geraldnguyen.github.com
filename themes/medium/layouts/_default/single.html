@@ -66,6 +66,6 @@
   
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 
-  {{ partial "disqus.html" . }}
+  {{ template "_internal/disqus.html" . }}
 
 {{ end }}
