@@ -1,4 +1,4 @@
----
+ ---
 categories:
 - Life and Fun Stuffs
 date: 2023-02-11 00:00:00+01:00
@@ -8,7 +8,7 @@ subtitle: A comic by my daughter, a Singapore Primary 5 student
 tags:
 - Singapore
 - Students
-- Security
+- Scam
 - Comics
 - Medium
 title: Stop Scams — Season 1, Episode 1
