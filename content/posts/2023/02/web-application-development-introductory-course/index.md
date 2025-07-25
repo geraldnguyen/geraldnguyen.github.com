@@ -43,11 +43,11 @@ If you are looking for specific technologies or programming languages, here is a
 
 **[#1 — What makes a Web Application?](../web-application-development-1-what-makes-a-web-application/)**
 
-{{< relativelink "\posts\2023\02\web-application-development-1-what-makes-a-web-application" >}}
+{{< relativelink "/posts/2023/02/web-application-development-1-what-makes-a-web-application" >}}
 
 **[#2 — Four types of web application](../web-application-development-2-four-types-of-web-applications/)**
 
-{{< relativelink "\posts\2023\02\web-application-development-2-four-types-of-web-applications" >}}
+{{< relativelink "/posts/2023/02/web-application-development-2-four-types-of-web-applications" >}}
 
 **[#3 — Technologies of a Web Application](https://javascript.plainenglish.io/web-application-development-3-technologies-behind-a-web-application-a9e30be2962d)**
 
