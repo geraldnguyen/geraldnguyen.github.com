@@ -22,7 +22,7 @@ pageRef = '/'
 weight = 10
 
 [[menus.main]]
-name = 'WebApp Dev: Introduction'
+name = 'Course: WebApp Development'
 pageRef = '/posts/2023/02/web-application-development-introductory-course/'
 weight = 20
 
