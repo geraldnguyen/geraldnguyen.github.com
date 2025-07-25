@@ -205,6 +205,13 @@
       <description>&lt;figure&gt;&lt;img src=&#34;https://miro.medium.com/v2/resize:fit:738/1*0Wz3ut0gdgUrME1UPEoxZA.png&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;figure&gt;&lt;img src=&#34;https://miro.medium.com/v2/resize:fit:806/1*fnpPlchzqcDqK9z1DlItHg.png&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;figure&gt;&lt;img src=&#34;https://miro.medium.com/v2/resize:fit:769/1*CnNgn9XA57nADJUuwz8ZfA.png&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;figure&gt;&lt;img src=&#34;https://miro.medium.com/v2/resize:fit:800/1*L6iSls8ezbO2ao6hJRDp4A.png&#34;&gt;&#xA;&lt;/figure&gt;</description>
     </item>
     <item>
+      <title>Web Application Development: An Introductory Course</title>
+      <link>https://geraldnguyen.github.io/posts/2023/02/web-application-development-introductory-course/</link>
+      <pubDate>Fri, 10 Feb 2023 12:00:00 +0700</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/02/web-application-development-introductory-course/</guid>
+      <description>&lt;figure&gt;&lt;img src=&#34;https://geraldnguyen.github.io/posts/2023/02/web-application-development-introductory-course/0_f9Ob8l4hmR3m16dd.jpg&#34;&#xA;    alt=&#34;Photo by Hal Gatewood on Unsplash&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Photo by Hal Gatewood on Unsplash&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;I have been developing Web Applications since my first job after graduation in 2007. Working on both frontend and backend then and now, I suppose I know enough about the technologies required to develop a web application. Now I want to share that with the larger community.&lt;/p&gt;&#xA;&#xA;&lt;div class=&#34;page-break&#34; role=&#34;separator&#34;&gt;&#xA;  &lt;span class=&#34;dot&#34;&gt;&lt;/span&gt;&lt;span class=&#34;dot&#34;&gt;&lt;/span&gt;&lt;span class=&#34;dot&#34;&gt;&lt;/span&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;who-is-this-for&#34;&gt;Who is this for?&lt;/h2&gt;&#xA;&lt;p&gt;This course is intended for beginners who know a bit basics of programming and want to build an application that runs on the web.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>How to fix Spring dependency error: &#39;expected single matching bean but found X&#39;</title>
       <link>https://geraldnguyen.github.io/posts/2023/02/how-to-fix-spring-dependency-error-expected-single-matching-bean-but-found-multiple/</link>
       <pubDate>Mon, 06 Feb 2023 00:00:00 +0100</pubDate>

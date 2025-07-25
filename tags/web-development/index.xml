@@ -6,8 +6,15 @@
     <description>Recent content in Web Development on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Dec 2022 09:19:42 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 10 Feb 2023 12:00:00 +0700</lastBuildDate>
     <atom:link href="https://geraldnguyen.github.io/tags/web-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web Application Development: An Introductory Course</title>
+      <link>https://geraldnguyen.github.io/posts/2023/02/web-application-development-introductory-course/</link>
+      <pubDate>Fri, 10 Feb 2023 12:00:00 +0700</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/02/web-application-development-introductory-course/</guid>
+      <description>&lt;figure&gt;&lt;img src=&#34;https://geraldnguyen.github.io/posts/2023/02/web-application-development-introductory-course/0_f9Ob8l4hmR3m16dd.jpg&#34;&#xA;    alt=&#34;Photo by Hal Gatewood on Unsplash&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Photo by Hal Gatewood on Unsplash&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;I have been developing Web Applications since my first job after graduation in 2007. Working on both frontend and backend then and now, I suppose I know enough about the technologies required to develop a web application. Now I want to share that with the larger community.&lt;/p&gt;&#xA;&#xA;&lt;div class=&#34;page-break&#34; role=&#34;separator&#34;&gt;&#xA;  &lt;span class=&#34;dot&#34;&gt;&lt;/span&gt;&lt;span class=&#34;dot&#34;&gt;&lt;/span&gt;&lt;span class=&#34;dot&#34;&gt;&lt;/span&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;who-is-this-for&#34;&gt;Who is this for?&lt;/h2&gt;&#xA;&lt;p&gt;This course is intended for beginners who know a bit basics of programming and want to build an application that runs on the web.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Retry WebClient Request</title>
       <link>https://geraldnguyen.github.io/posts/2022/12/retry-webclient-request/</link>
