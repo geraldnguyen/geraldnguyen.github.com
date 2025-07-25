@@ -11,11 +11,10 @@ sutitle: Stream has been an important part of Java development since Java 8. Thi
 tags:
 - Java
 - stream
-- interview
+- Interview
 - coding test
 title: Java Stream Interview Tests - Distinct Characters
 ---
-
 Requirement
 ===========
 

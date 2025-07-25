@@ -1,14 +1,19 @@
 ---
-title: Singapore Nationwide AWS LLM League 2024
-subtitle: Only 5 got on stage, but all 1000+ participants are winners
-date: 2024-10-03T09:19:42+01:00
-image: 1_8Tco2Cj9RXtJDXkLeoLH_g.jpg
+categories:
+- Tech Related
+date: 2024-10-03 09:19:42+01:00
 draft: false
-categories: [Tech Related]
-tags: [Singapore, aws, LLM league, 2024, AI ]
+image: 1_8Tco2Cj9RXtJDXkLeoLH_g.jpg
 medium: https://medium.com/southeast-asia/singapore-nationwide-aws-llm-league-2024-5cf53f56b644
+subtitle: Only 5 got on stage, but all 1000+ participants are winners
+tags:
+- Singapore
+- AWS
+- LLM League
+- '2024'
+- AI
+title: Singapore Nationwide AWS LLM League 2024
 ---
-
 {{< figure src="1_8Tco2Cj9RXtJDXkLeoLH_g.jpg" caption="Congratulations to the 5 finalists">}}
 
 The Singapore Nationwide AWS LLM League 2024 concluded today with the grand finale at Raffle City Convention Center. The 5 finalists competed on stage for the top prizes including Amazon vouchers, Amazon Echo, and exclusive swags.

@@ -8,11 +8,10 @@ subtitle: Excerpt from See https://vladmihalcea.com/hibernate-multiplebagfetchex
 tags:
 - Java
 - Programming
-- hibernate
+- Hibernate
 - JPA
 title: The best way to fix the Hibernate MultipleBagFetchException
 ---
-
 **Note 2024-08-15: An updated version of this article was published in Medium at https://geraldnguyen.medium.com/the-best-way-to-fix-the-hibernates-multiplebagfetchexception-6c63e69a4009**
 
 ----------------

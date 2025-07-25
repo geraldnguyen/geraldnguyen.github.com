@@ -5,11 +5,10 @@ date: 2011-02-24 09:19:42+01:00
 draft: false
 tags:
 - Miscellaneous
-- UI/UX
+- UI
 - old blog
 title: How do you display input validation error
 ---
-
 ## Display errors in red below each invalid input field
 
 ![](http://4.bp.blogspot.com/-UaBwgVJVorw/TWYOkgMSUDI/AAAAAAAAADI/uLVXDdt-rr0/s320/twitter_error.png)

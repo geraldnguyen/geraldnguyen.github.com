@@ -4,12 +4,11 @@ draft: true
 tags:
 - Java
 - KitchenSink
-- unit testing
+- Unit Testing
 - mockito
 - Programming
 title: Work-hard Mocking or Work-smart Mocking
 ---
-
 **Note 2024-08-15: An updated version of this article was published in Medium at https://medium.com/@geraldnguyen/work-hard-verifying-or-work-smart-mocking-9e0c645c839e?source=user_profile---------65----------------------------**
 
 -----------------

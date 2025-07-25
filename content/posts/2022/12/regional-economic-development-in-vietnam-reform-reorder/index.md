@@ -1,14 +1,20 @@
 ---
-title: Regional economic development in Vietnam — Reform & “Reorder”
-subtitle: A commentary by my father, an economist-turn-writer — translated from Vietnamese
-date: 2022-12-29T09:19:42+01:00
-image: 0_2L6WmSumZ-mIqZTe.jpg
+categories:
+- Southeast Asia
+date: 2022-12-29 09:19:42+01:00
 draft: false
-categories: [Southeast Asia]
-tags: [Medium, Writing, Vietnam, Economics, Commentary, Translation, Southeast Asia]
+image: 0_2L6WmSumZ-mIqZTe.jpg
 medium: https://medium.com/southeast-asia/regional-economic-development-in-vietnam-reform-reorder-b793d7fee5b
+subtitle: A commentary by my father, an economist-turn-writer — translated from Vietnamese
+tags:
+- Medium
+- Writing
+- Vietnam
+- Economics
+- Translation
+- Southeast Asia
+title: Regional economic development in Vietnam — Reform & “Reorder”
 ---
-
 35 years of Đổi Mới (Economic Reform) helped Vietnam from a country that had to “run for rice” _(see note 1)_ in the early 1980s to become a middle-income country, reaching the top 20 of the world’s leading economies in terms of international trade. The Reform has turned many poor rural areas into industrial districts, farmers into city dwellers, the number of poor households has decreased sharply, the middle class has increased rapidly… But the Reform process also led to the “Reorder” among provinces and regions.
 
 {{< figure src="0_2L6WmSumZ-mIqZTe.webp" caption="Photo by [Ngô Thanh Tùng](https://unsplash.com/@thanhtungo?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)" >}}

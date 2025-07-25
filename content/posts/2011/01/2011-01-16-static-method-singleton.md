@@ -1,13 +1,19 @@
 ---
-title: "Static method vs Singleton class"
-date: 2011-01-16T09:19:42+01:00
-subtitle: "Sometimes we write java class that has no state, each of its method is self-sufficient. It's then make sense (convenience, performance gain included) to convert those methods into static. Or, we can apply Singleton pattern on that class. So, which way?"
+categories:
+- Software Development
+date: 2011-01-16 09:19:42+01:00
 draft: false
-
-categories: [Software Development]
-tags: [design, static method, singleton, dependency injection, old blog]
+subtitle: Sometimes we write java class that has no state, each of its method is self-sufficient.
+  It's then make sense (convenience, performance gain included) to convert those methods
+  into static. Or, we can apply Singleton pattern on that class. So, which way?
+tags:
+- design
+- static method
+- singleton
+- Dependency Injection
+- old blog
+title: Static method vs Singleton class
 ---
-
 # Static method
 
 It really depends. If you hate storing object reference or passing it around, static is a excellent tool.

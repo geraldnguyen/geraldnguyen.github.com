@@ -8,10 +8,9 @@ tags:
 - react
 - bootstrap
 - Programming
-- javascript
+- JavaScript
 title: Using Bootstrap with React
 ---
-
 ## Mixing browser and React
 
 Insert links to Bootstrap's javascript and CSS and its dependencies in app's `index.html`

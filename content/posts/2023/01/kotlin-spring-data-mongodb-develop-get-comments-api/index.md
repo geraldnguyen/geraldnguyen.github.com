@@ -1,14 +1,19 @@
 ---
-title: 'Kotlin, Spring Data, and MongoDB: Develop a “GET /comments” API endpoint'
-subtitle: With 4 Flavors of Data Retrieval
-date: 2023-01-17T09:19:42+01:00
-image: 0_-YMPGEafKe0F0T-m.jpg
+categories:
+- Software Development
+date: 2023-01-17 09:19:42+01:00
 draft: false
-categories: [Software Development]
-tags: [Kotlin, Spring, REST API, Spring Boot, MongoDB Spring Data]
+image: 0_-YMPGEafKe0F0T-m.jpg
 medium: https://levelup.gitconnected.com/kotlin-spring-data-and-mongodb-develop-a-get-comments-api-endpoint-666b533e7a04
+subtitle: With 4 Flavors of Data Retrieval
+tags:
+- Kotlin
+- Spring
+- API
+- Spring Boot
+- MongoDB Spring Data
+title: 'Kotlin, Spring Data, and MongoDB: Develop a “GET /comments” API endpoint'
 ---
-
 {{< figure src="0_-YMPGEafKe0F0T-m.webp" caption="Photo by [Pratiksha Mohanty](https://unsplash.com/@pratiksha_mohanty?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)" >}}
 
 

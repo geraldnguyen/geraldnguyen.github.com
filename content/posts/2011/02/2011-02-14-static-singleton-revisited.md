@@ -1,12 +1,16 @@
 ---
-title: "Static vs Singleton Revisited"
-date: 2011-02-10T09:19:42+01:00
+categories:
+- Software Development
+date: 2011-02-10 09:19:42+01:00
 draft: false
-
-categories: [Software Development]
-tags: [design, static method, singleton, dependency injection, old blog]
+tags:
+- design
+- static method
+- singleton
+- Dependency Injection
+- old blog
+title: Static vs Singleton Revisited
 ---
-
 # Static vs Singleton vs Dependency Injection
 
 Why visited? Because I wrote [one]({{< ref "2011-01-16-static-method-singleton.md" >}}) before 

@@ -1,13 +1,16 @@
 ---
-title: Shift Left Testing
-date: 2023-01-16T09:19:42+01:00
-image: 0_0KbXqZhmD2HPADgY.jpg
+categories:
+- Software Development
+date: 2023-01-16 09:19:42+01:00
 draft: false
-categories: [Software Development]
-tags: [Testing, Shift Left, Software Engineering]
+image: 0_0KbXqZhmD2HPADgY.jpg
 medium: https://medium.com/codex/shift-left-testing-b59ce9f9bf1e
+tags:
+- Testing
+- Shift Left
+- Software Development
+title: Shift Left Testing
 ---
-
 # What is Shift Left Testing?
 
 A picture is worth a thousand words. Here are how Shift Left differs from the traditional approach
