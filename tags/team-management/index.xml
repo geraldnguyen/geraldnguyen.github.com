@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Agile on Gerald Nguyen</title>
-    <link>https://geraldnguyen.github.io/tags/agile/</link>
-    <description>Recent content in Agile on Gerald Nguyen</description>
+    <title>Team Management on Gerald Nguyen</title>
+    <link>https://geraldnguyen.github.io/tags/team-management/</link>
+    <description>Recent content in Team Management on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 28 Mar 2023 12:00:00 +0700</lastBuildDate>
-    <atom:link href="https://geraldnguyen.github.io/tags/agile/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/team-management/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Web Application Development — #4: Terminologies, Practices, and Tools</title>
       <link>https://geraldnguyen.github.io/posts/2023/03/web-application-development-4-terminologies-practices-and-tools/</link>
       <pubDate>Tue, 28 Mar 2023 12:00:00 +0700</pubDate>
       <guid>https://geraldnguyen.github.io/posts/2023/03/web-application-development-4-terminologies-practices-and-tools/</guid>
       <description>&lt;p&gt;&lt;em&gt;This is part of the &lt;a href=&#34;../../02/web-application-development-introductory-course/&#34;&gt;Web Application Development — An Introductory Course&lt;/a&gt; series.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;agile-software-development&#34;&gt;Agile Software Development&lt;/h2&gt;&#xA;&lt;h3 id=&#34;history-the-waterfall-model&#34;&gt;History: The Waterfall model&lt;/h3&gt;&#xA;&lt;p&gt;For most of its history, the software development communities followed the Waterfall Development Model which is a sequential process of distinct stages, each must finish before the next stage can begin.&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://miro.medium.com/v2/resize:fit:1100/format:webp/0*2GwuUp8N5HGjF-eU&#34;&#xA;    alt=&#34;The Waterfall Model — Source: https://commons.wikimedia.org/wiki/File:Waterfall_model_%281%29.svg&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;The Waterfall Model — Source: &lt;a href=&#34;https://commons.wikimedia.org/wiki/File:Waterfall_model_%281%29.svg&#34;&gt;https://commons.wikimedia.org/wiki/File:Waterfall_model_%281%29.svg&lt;/a&gt;&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;The Waterfall model is a structured approach emphasizing requirement collection, analysis, and software design. It is however not flexible enough in today&amp;rsquo;s fast-changing environment in which requirements, user needs, and technologies change every few months, even weeks.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Are you a full-stack developer?</title>
-      <link>https://geraldnguyen.github.io/posts/2023/01/are-you-a-fullstack-developer/</link>
-      <pubDate>Sat, 21 Jan 2023 09:19:42 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/posts/2023/01/are-you-a-fullstack-developer/</guid>
-      <description>&lt;figure&gt;&lt;img src=&#34;https://geraldnguyen.github.io/posts/2023/01/are-you-a-fullstack-developer/0_jbnAAfQF1KSYPbGZ.jpg&#34;&#xA;    alt=&#34;Photo by Desola Lanre-Ologun on Unsplash&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Photo by &lt;a href=&#34;https://unsplash.com/@disruptxn?utm_source=medium&amp;amp;utm_medium=referral&#34;&gt;Desola Lanre-Ologun&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/?utm_source=medium&amp;amp;utm_medium=referral&#34;&gt;Unsplash&lt;/a&gt;&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Did you know that anyone in a Scrum team can be called a “developer”?&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;…developers, researchers, analysts, scientists, and other specialists do the work. We use the word “developers” in Scrum not to exclude, but to simplify. If you get value from Scrum, consider yourself included— The official &lt;a href=&#34;https://scrumguides.org/scrum-guide.html&#34;&gt;Scrum Guides&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;We will, however, discuss this title in a more focused and traditional context in the following sections. Just bear in mind the strong association between the term “developer” and “agile” due not only to the agile movement but the nature of software development itself.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

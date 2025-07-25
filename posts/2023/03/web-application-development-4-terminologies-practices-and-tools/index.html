@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>Web Application Development — #4: Terminologies, Practices, and Tools</title>
+<meta data-rh="true" property="og:url" content="https://geraldnguyen.github.io/posts/2023/03/web-application-development-4-terminologies-practices-and-tools/">
+<meta data-rh="true" property="og:title" content="Web Application Development — #4: Terminologies, Practices, and Tools">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://geraldnguyen.github.io/posts/2023/03/web-application-development-4-terminologies-practices-and-tools/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.6ce54da4156f5e5e5b42ea0c1353bcad2437bd20e05f4dbf06c06a8e6f55b884.css" integrity="sha256-bOVNpBVvXl5bQuoME1O8rSQ3vSDgX02/BsBqjm9VuIQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HRKMT2G8N9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HRKMT2G8N9');
+</script>
+
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/posts/2023/02/web-application-development-introductory-course/">Course: WebApp Development</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/programming-tutorials/">Programming Tutorials</a></li>
+    </ul>
+  </div>
+
+
+<h1>Web Application Development — #4: Terminologies, Practices, and Tools</h1>
+
+<h2 class="subtitle">The basics of Agile development, team composition, and what tool we need for the remaining of this course</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://geraldnguyen.github.io/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://geraldnguyen.github.io/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>5 min read</span>
+      <span>·</span>
+      <span><time datetime="2023-03-28T12:00:00&#43;07:00">March 28, 2023</time></span>
+    </div>
+  </div>
+            
+</div>
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2023/03/catching-software-bugs/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2023/03/southeast-asia-durian-paradises/">Next</a>
+  
+
+  
+  <div>
+    <span> ↗ </span>  <a href="https://javascript.plainenglish.io/web-application-development-terminologies-practices-and-tools-db4a743bba5b" target="_blank">Also on Medium</a>
+  </div>
+  
+  
+
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#agile-software-development">Agile Software Development</a>
+          <ul>
+            <li><a href="#history-the-waterfall-model">History: The Waterfall model</a></li>
+            <li><a href="#agile-development-model">Agile Development Model</a></li>
+          </ul>
+        </li>
+        <li><a href="#composition-of-a-development-team">Composition of a Development Team</a>
+          <ul>
+            <li><a href="#developers">Developers</a></li>
+            <li><a href="#testers">Testers</a></li>
+            <li><a href="#product-managers">Product Managers</a></li>
+            <li><a href="#project-manager">Project Manager</a></li>
+          </ul>
+        </li>
+        <li><a href="#essential-tools-for-web-development">Essential Tools for Web Development</a>
+          <ul>
+            <li><a href="#nodejs"><a href="https://nodejs.org/en">NodeJS</a></a></li>
+            <li><a href="#visual-studio-code"><a href="https://code.visualstudio.com/">Visual Studio Code</a></a></li>
+            <li><a href="#git"><a href="https://git-scm.com/">Git</a></a></li>
+            <li><a href="#chrome">Chrome</a></li>
+          </ul>
+        </li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <p><em>This is part of the <a href="../../02/web-application-development-introductory-course/">Web Application Development — An Introductory Course</a> series.</em></p>
+<h2 id="agile-software-development">Agile Software Development</h2>
+<h3 id="history-the-waterfall-model">History: The Waterfall model</h3>
+<p>For most of its history, the software development communities followed the Waterfall Development Model which is a sequential process of distinct stages, each must finish before the next stage can begin.</p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*2GwuUp8N5HGjF-eU"
+    alt="The Waterfall Model — Source: https://commons.wikimedia.org/wiki/File:Waterfall_model_%281%29.svg"><figcaption>
+      <p>The Waterfall Model — Source: <a href="https://commons.wikimedia.org/wiki/File:Waterfall_model_%281%29.svg">https://commons.wikimedia.org/wiki/File:Waterfall_model_%281%29.svg</a></p>
+    </figcaption>
+</figure>
+
+<p>The Waterfall model is a structured approach emphasizing requirement collection, analysis, and software design. It is however not flexible enough in today&rsquo;s fast-changing environment in which requirements, user needs, and technologies change every few months, even weeks.</p>
+<h3 id="agile-development-model">Agile Development Model</h3>
+<p>Came the agile development model where:</p>
+<blockquote>
+<p><strong>[Individuals and interactions]</strong> over processes and tools<br>
+<strong>[Working software]</strong> over comprehensive documentation<br>
+<strong>[Customer collaboration]</strong> over contract negotiation<br>
+<strong>[Responding to change]</strong> over following a plan</p>
+<p>That is, while there is value in the items on the right, we value the items on the left more</p>
+<p>— <a href="https://agilemanifesto.org/">https://agilemanifesto.org</a></p></blockquote>
+<p>Guided by the above values from the Agile Manifesto, the Agile development model has taken over the software development community. Even though the exact practice of each agile development team may differ, they all share the following characteristics:</p>
+<p>• <strong>Iterative, incremental, and evolutionary</strong>: each development project comprises multiple iterations, and each has a small, deliverable scope which may be a new feature or an improvement of earlier features. Changes are considered and accommodated during these iterations as and when they occur.</p>
+<p>• <strong>Frequent and open communication</strong>: Agile practices emphasize frequent communication among members of the development team and between the team and business users (or their representatives). The preference is face-to-face communication and thus co-location of users and the team.</p>
+<p>• <strong>Very short feedback loop and adaptation cycle</strong>: Each iteration lasts one or a few weeks rather than months or years as in the case of the waterfall model. That enables fast and early feedback and better response to changes. The Agile development team conduct short daily stand-up where each team member updates the team about his/her progress, plan for the day, and if there is any blocker for their tasks.</p>
+<p>• <strong>Quality focus</strong>: Agile team adopts modern practices that automate software testing, continuous integration, continuous deployment… After all, working software is the true measure of success.</p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:750/format:webp/0*JKjcGKvX0TwX3TTs.png"
+    alt="Keeping Daily Stand-up short — source: https://medium.com/@stevoscript/why-your-team-should-try-asynchronous-daily-stand-ups-87f1b809e5c8"><figcaption>
+      <p>Keeping Daily Stand-up short — source: <a href="https://medium.com/@stevoscript/why-your-team-should-try-asynchronous-daily-stand-ups-87f1b809e5c8">https://medium.com/@stevoscript/why-your-team-should-try-asynchronous-daily-stand-ups-87f1b809e5c8</a></p>
+    </figcaption>
+</figure>
+
+<p>The two popular Agile methodologies are Scrum and Kanban. In practice, teams often tweak the prescribed methodologies guidelines to fit their constraints and preferences. Some incorporate other techniques such as Story point, BDD, TDD, Pair programming, CI/CD, DevOps, Burn-Down, Velocity, etc… into their agile working model.</p>
+<h2 id="composition-of-a-development-team">Composition of a Development Team</h2>
+<h3 id="developers">Developers</h3>
+<p>Developers are the people who write codes. They have many names (such as programmer, coder, dev, and software engineer) and can specialize in one or multiple domains (such as database, backend, web, mobile, and DevOps). Those that reach expert level can perform design and architect tasks and thus carry the architect job title.</p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*mJNSNlXjB5oRCeQO"
+    alt="Photo by Kelly Sikkema on Unsplash"><figcaption>
+      <p>Photo by Kelly Sikkema on Unsplash</p>
+    </figcaption>
+</figure>
+
+<h3 id="testers">Testers</h3>
+<p>Testers are also known as Quality analysts or just QA. They are the people who validate the written codes (at component, service levels, or on a working software) against established functional and non-functional requirements.</p>
+<p>The validation can be manual, performed by human hand, mouse clicks, and eyes. This is how most software testings have been performed, until recently.</p>
+<p>Or it can be automated by special test automation software. In this aspect, the testers also write codes to describe their test scenarios. This blurs the lines between developer and tester.</p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*bgqvvEaB2nVzPDy4"
+    alt="Photo by Tim van der Kuip on Unsplash"><figcaption>
+      <p>Photo by Tim van der Kuip on Unsplash</p>
+    </figcaption>
+</figure>
+
+<h3 id="product-managers">Product Managers</h3>
+<p>Product Managers are the people who represent users and define the product&rsquo;s features that the team is going to develop. They also prioritize the list of features, often broken down into smaller units called stories, against the team&rsquo;s resources, availability, and other types of constraints (e.g. market and regulation constraints, and organization directives).</p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*nVwHhjpzrbx7ku-n"
+    alt="Photo by Jason Goodman on Unsplash"><figcaption>
+      <p>Photo by Jason Goodman on Unsplash</p>
+    </figcaption>
+</figure>
+
+<h3 id="project-manager">Project Manager</h3>
+<p>A development team usually has only 1 project manager who helps the team with project activities (e.g. project planning, status tracking) and keeps the project going (e.g. removing blockers, identifying and managing risk affecting project delivery).</p>
+<p>Scrum methodology, although there is no project manager, defines a Scrum Master role which is very similar to that of a traditional project manager. The planning and status tracking, however, is part of the Product Manager&rsquo;s responsibilities.</p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*hsOtfp3_r6V4yr8e"
+    alt="Photo by Mapbox on Unsplash"><figcaption>
+      <p>Photo by Mapbox on Unsplash</p>
+    </figcaption>
+</figure>
+
+<h2 id="essential-tools-for-web-development">Essential Tools for Web Development</h2>
+<h3 id="nodejs"><a href="https://nodejs.org/en">NodeJS</a></h3>
+<p>We will use JavaScript as the programming language for both the frontend and backend development. This will ease your learning curve by reducing the number of programming languages you need to learn.</p>
+<p>NodeJS provides the runtime for backend development in Javascript language. It also enables a host of Javascript-based tools for front-end development. We shall elaborate more on this in future lessons.</p>
+<h3 id="visual-studio-code"><a href="https://code.visualstudio.com/">Visual Studio Code</a></h3>
+<p>Visual Studio Code is a free, lightweight, yet powerful code editor by Microsoft. For Javascript-related projects, VSCode is my first choice.</p>
+<p>Both built-in capabilities and plug-in available in VSCode can elevate its status from a code editor to close to an IDE (Integrated Development Environment).</p>
+<h3 id="git"><a href="https://git-scm.com/">Git</a></h3>
+<p>Version Control is a must nowadays. And Git is the most popular version control software.</p>
+<p>Version Control allows developers to keep track of changes made and revert to a past version if necessary.</p>
+<h3 id="chrome">Chrome</h3>
+<p>We need Chrome to actually test and debug the web application we are about to develop.</p>
+<p>We especially need <a href="https://developer.chrome.com/docs/devtools/">Chrome&rsquo;s developer tools</a> to debug the codes.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>We have gone through the basics of Agile software development, learned a few terms, known a few job roles, and familiarized ourselves with a few tools which we will use in future lessons.</p>
+<p>In the next lesson, we will start with some actual coding by practising the basics of HTML and CSS.</p>
+<p><strong>Previous:</strong> <a href="../web-application-development-3-technologies-behind-a-web-application/">Web Application Development — #3: Technologies Behind a Web Application</a><br>
+<strong>Next:</strong> Frontend Development: HTML, CSS, Responsive layout, Javascript (Coming Soon)</p>
+<p>For Content and Index, visit <a href="../../02/web-application-development-introductory-course/">Web Application Development — An Introductory course</a></p>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/programming/">Programming</a></li>
+        <li><a href="/tags/web-development/">Web Development</a></li>
+        <li><a href="/tags/software-development/">Software Development</a></li>
+        <li><a href="/tags/agile/">Agile</a></li>
+        <li><a href="/tags/course/">Course</a></li>
+        <li><a href="/tags/team-management/">Team Management</a></li>
+        <li><a href="/tags/development-tools/">Development Tools</a></li>
+    </ul>
+  </div>
+
+
+  
+  
+
+
+
+
+<div class="social-sharing">
+  <div class="social-sharing-label">Share this article:</div>
+  <div class="social-sharing-buttons">
+    
+    <a class="social-share-btn twitter" 
+       href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgeraldnguyen.github.io%2Fposts%2F2023%2F03%2Fweb-application-development-4-terminologies-practices-and-tools%2F&text=Web&#43;Application&#43;Development&#43;%E2%80%94&#43;%234%3A&#43;Terminologies%2C&#43;Practices%2C&#43;and&#43;Tools&via=geraldnguyensg"
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Share on Twitter/X">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+      </svg>
+      <span>Twitter</span>
+    </a>
+
+    
+    <a class="social-share-btn linkedin" 
+       href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fgeraldnguyen.github.io%2Fposts%2F2023%2F03%2Fweb-application-development-4-terminologies-practices-and-tools%2F"
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Share on LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+      </svg>
+      <span>LinkedIn</span>
+    </a>
+
+    
+    <a class="social-share-btn facebook" 
+       href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgeraldnguyen.github.io%2Fposts%2F2023%2F03%2Fweb-application-development-4-terminologies-practices-and-tools%2F"
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Share on Facebook">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+      </svg>
+      <span>Facebook</span>
+    </a>
+
+    
+    <a class="social-share-btn reddit" 
+       href="https://reddit.com/submit?url=https%3A%2F%2Fgeraldnguyen.github.io%2Fposts%2F2023%2F03%2Fweb-application-development-4-terminologies-practices-and-tools%2F&title=Web&#43;Application&#43;Development&#43;%E2%80%94&#43;%234%3A&#43;Terminologies%2C&#43;Practices%2C&#43;and&#43;Tools"
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Share on Reddit">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M6.167 8a.83.83 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661m1.843 3.647c.315 0 1.403-.038 1.976-.611a.23.23 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83s.83-.381.83-.83a.831.831 0 0 0-1.66 0z"/>
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.2.2 0 0 0-.153.028.2.2 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353 0 1.795 2.091 3.256 4.669 3.256s4.668-1.451 4.668-3.256c0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165"/>
+      </svg>
+      <span>Reddit</span>
+    </a>
+
+    
+    <a class="social-share-btn email" 
+       href="mailto:?subject=Web&#43;Application&#43;Development&#43;%E2%80%94&#43;%234%3A&#43;Terminologies%2C&#43;Practices%2C&#43;and&#43;Tools&body=I thought you might find this interesting: https%3A%2F%2Fgeraldnguyen.github.io%2Fposts%2F2023%2F03%2Fweb-application-development-4-terminologies-practices-and-tools%2F"
+       aria-label="Share via Email">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+      </svg>
+      <span>Email</span>
+    </a>
+
+    
+    <button class="social-share-btn copy-link" 
+            onclick="copyToClipboard('https:\/\/geraldnguyen.github.io\/posts\/2023\/03\/web-application-development-4-terminologies-practices-and-tools\/')"
+            aria-label="Copy link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
+        <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
+      </svg>
+      <span>Copy Link</span>
+    </button>
+  </div>
+</div>
+
+<script>
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(function() {
+    
+    const btn = event.target.closest('.copy-link');
+    const originalText = btn.querySelector('span').textContent;
+    btn.querySelector('span').textContent = 'Copied!';
+    setTimeout(() => {
+      btn.querySelector('span').textContent = originalText;
+    }, 2000);
+  }, function(err) {
+    console.error('Could not copy text: ', err);
+  });
+}
+</script>
+
+
+  <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "geraldnguyen" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2025. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

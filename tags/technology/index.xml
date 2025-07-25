@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Frontend on Gerald Nguyen</title>
-    <link>https://geraldnguyen.github.io/tags/frontend/</link>
-    <description>Recent content in Frontend on Gerald Nguyen</description>
+    <title>Technology on Gerald Nguyen</title>
+    <link>https://geraldnguyen.github.io/tags/technology/</link>
+    <description>Recent content in Technology on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 07 Mar 2023 12:00:00 +0700</lastBuildDate>
-    <atom:link href="https://geraldnguyen.github.io/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geraldnguyen.github.io/tags/technology/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Web Application Development — #3: Technologies Behind a Web Application</title>
       <link>https://geraldnguyen.github.io/posts/2023/03/web-application-development-3-technologies-behind-a-web-application/</link>
       <pubDate>Tue, 07 Mar 2023 12:00:00 +0700</pubDate>
       <guid>https://geraldnguyen.github.io/posts/2023/03/web-application-development-3-technologies-behind-a-web-application/</guid>
       <description>&lt;p&gt;&lt;em&gt;This is part of the &lt;a href=&#34;../../02/web-application-development-introductory-course/&#34;&gt;Web Application Development — An Introductory Course&lt;/a&gt; series.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;In the &lt;a href=&#34;../../02/web-application-development-2-four-types-of-web-applications/&#34;&gt;previous lesson&lt;/a&gt;, we identified 4 types of web applications: Client-side applications, server-side applications, single-page applications, and progressive web apps. While these applications differ in where and how they operate, their footprints are often found in 3 distinct locations:&lt;/p&gt;&#xA;&lt;p&gt;• Frontend&lt;br&gt;&#xA;• Network&lt;br&gt;&#xA;• Backend&lt;/p&gt;&#xA;&lt;p&gt;Most complex web applications need another layer, Database, to store data and users&amp;rsquo; preferences and activities. Some advanced applications even feed their data to another layer, Data Analytics, to analyze and extract insights.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>What Are APIs?</title>
-      <link>https://geraldnguyen.github.io/posts/2022/12/what-are-apis/</link>
-      <pubDate>Tue, 27 Dec 2022 09:19:42 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/posts/2022/12/what-are-apis/</guid>
-      <description>&lt;h1 id=&#34;are-apis-the-waiters&#34;&gt;Are APIs the waiters?&lt;/h1&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://geraldnguyen.github.io/posts/2022/12/what-are-apis/0_u9-gya6X9E94NV5o.webp&#34;&#xA;    alt=&#34;Source: Reddit and LinkedIn&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Source: &lt;a href=&#34;https://www.reddit.com/r/ProgrammerHumor/comments/qq2m9g/explained_frontend_backend_apis/&#34;&gt;Reddit&lt;/a&gt; and LinkedIn&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h1 id=&#34;no--the-waiters-are-part-of-frontend&#34;&gt;No — The waiters are part of Frontend.&lt;/h1&gt;&#xA;&lt;p&gt;They are responsible for creating a nice visual and interactive experience such as greeting customers, arranging the tables, present the dishes — like what React or Angular codes do.&lt;/p&gt;&#xA;&lt;p&gt;They will take your orders — like how HTML forms accept your inputs, auto-complete your sentences, or apologize that certain dishes aren’t available.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>Web Application Development — #3: Technologies Behind a Web Application</title>
+<meta data-rh="true" property="og:url" content="https://geraldnguyen.github.io/posts/2023/03/web-application-development-3-technologies-behind-a-web-application/">
+<meta data-rh="true" property="og:title" content="Web Application Development — #3: Technologies Behind a Web Application">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://geraldnguyen.github.io/posts/2023/03/web-application-development-3-technologies-behind-a-web-application/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.6ce54da4156f5e5e5b42ea0c1353bcad2437bd20e05f4dbf06c06a8e6f55b884.css" integrity="sha256-bOVNpBVvXl5bQuoME1O8rSQ3vSDgX02/BsBqjm9VuIQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HRKMT2G8N9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HRKMT2G8N9');
+</script>
+
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/posts/2023/02/web-application-development-introductory-course/">Course: WebApp Development</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/programming-tutorials/">Programming Tutorials</a></li>
+    </ul>
+  </div>
+
+
+<h1>Web Application Development — #3: Technologies Behind a Web Application</h1>
+
+<h2 class="subtitle">And what roles each plays</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://geraldnguyen.github.io/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://geraldnguyen.github.io/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>6 min read</span>
+      <span>·</span>
+      <span><time datetime="2023-03-07T12:00:00&#43;07:00">March 7, 2023</time></span>
+    </div>
+  </div>
+            
+</div>
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2023/02/web-application-development-2-four-types-of-web-applications/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2023/03/presales-vs-delivery/">Next</a>
+  
+
+  
+  <div>
+    <span> ↗ </span>  <a href="https://javascript.plainenglish.io/web-application-development-3-technologies-behind-a-web-application-a9e30be2962d" target="_blank">Also on Medium</a>
+  </div>
+  
+  
+
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#frontend">Frontend</a>
+          <ul>
+            <li><a href="#browser">Browser</a></li>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#css">CSS</a></li>
+            <li><a href="#javascript">Javascript</a></li>
+          </ul>
+        </li>
+        <li><a href="#network">Network</a>
+          <ul>
+            <li><a href="#internet-intranet-lan-wifi-4g-5g-fiber">Internet, Intranet, LAN, WIFI, 4G, 5G, Fiber…</a></li>
+            <li><a href="#domain-names-ip-addresses">Domain Names, IP addresses</a></li>
+            <li><a href="#http-https">HTTP, HTTPS</a></li>
+          </ul>
+        </li>
+        <li><a href="#backend">Backend</a>
+          <ul>
+            <li><a href="#web-servers">Web Servers</a></li>
+            <li><a href="#application-servers">Application Servers</a></li>
+          </ul>
+        </li>
+        <li><a href="#other-layers">Other Layers</a>
+          <ul>
+            <li><a href="#databases">Databases</a></li>
+            <li><a href="#data-analytics">Data Analytics</a></li>
+          </ul>
+        </li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <p><em>This is part of the <a href="../../02/web-application-development-introductory-course/">Web Application Development — An Introductory Course</a> series.</em></p>
+<p>In the <a href="../../02/web-application-development-2-four-types-of-web-applications/">previous lesson</a>, we identified 4 types of web applications: Client-side applications, server-side applications, single-page applications, and progressive web apps. While these applications differ in where and how they operate, their footprints are often found in 3 distinct locations:</p>
+<p>• Frontend<br>
+• Network<br>
+• Backend</p>
+<p>Most complex web applications need another layer, Database, to store data and users&rsquo; preferences and activities. Some advanced applications even feed their data to another layer, Data Analytics, to analyze and extract insights.</p>
+<p>We will focus on the first 3 in this article and briefly discuss the others.</p>
+<h2 id="frontend">Frontend</h2>
+<h3 id="browser">Browser</h3>
+<p>Browsers are the software that enables users to access the web. They also implement or provide runtimes for other web technologies.</p>
+<p>While Chrome, Edge, Firefox, and Safari divide the share of browsers on large-screen devices such as laptops or desktops, the share of mobile browsers is mostly a competition between Chrome and Safari on Android and iOS respectively.</p>
+<figure><img src="/posts/2023/03/web-application-development-3-technologies-behind-a-web-application/1_mMUD4mLhl7VskNnvsEN8Dg.jpg"
+    alt="Popular browsers"><figcaption>
+      <p>Popular browsers</p>
+    </figcaption>
+</figure>
+
+<h3 id="html">HTML</h3>
+<p>Stand for Hyper Text Markup Language, HTML describes the structure of a web page. A typical web page contains several tags corresponding to headings, paragraphs, links, text, etc… within a <code>&lt;body&gt;</code> tag which itself is inside an overall <code>&lt;html&gt;</code> tag.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">html</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">head</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">title</span><span style="color:#1f2328">&gt;</span>Web Technologies<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">title</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">head</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">body</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">h1</span><span style="color:#1f2328">&gt;</span>Web Application Development - #3: Technologies Behind a Web Application<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">h1</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">h2</span><span style="color:#1f2328">&gt;</span>Frontend<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">h2</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">h3</span><span style="color:#1f2328">&gt;</span>HTML<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">h3</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">p</span><span style="color:#1f2328">&gt;</span>HTML <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">span</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#39;highlight&#39;</span><span style="color:#1f2328">&gt;</span>describes<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">span</span><span style="color:#1f2328">&gt;</span> the structure...<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">p</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">body</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">html</span><span style="color:#1f2328">&gt;</span>
+</span></span></code></pre></div><h3 id="css">CSS</h3>
+<p>Stand for Cascading Style Sheets, CSS describes how HTML elements should be displayed on a browser, in a printout, or in other media.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#0550ae">h1</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">40</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">color</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">red</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0550ae">h2</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">highlight</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">background-color</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">yellow</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div><figure><img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*XnPyzFocqQNINazagJyMLg.png"
+    alt="Result of the above CSS on earlier HTML"><figcaption>
+      <p>Result of the above CSS on earlier HTML</p>
+    </figcaption>
+</figure>
+
+<p>CSS is quite essential nowadays due to its cosmetic and sometimes animation effects. The below meme captures the reason why HTML and CSS often go together.</p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*b5TWvfbz5RbITuwv.jpg"
+    alt="HTML vs CSS meme showing the difference between structure and styling - Source: https://devhumor.com/media/improving-the-programming-language"><figcaption>
+      <p>HTML vs CSS meme showing the difference between structure and styling - Source: <a href="https://devhumor.com/media/improving-the-programming-language">https://devhumor.com/media/improving-the-programming-language</a></p>
+    </figcaption>
+</figure>
+
+<h3 id="javascript">Javascript</h3>
+<p>Javascript is <em>the</em> programming language of the Web. It has many use cases such as enabling user interactions, updating content, changing page layout, creating graphics, controlling media…</p>
+<p>The latest version of Javascript is ECMAScript 2022. However, ES6 (released in 2015) is still popular. A recent relative of Javascript called TypeScript adds type-checking capability and newer syntax to the language while ensuring it is compatible with the older Javascript versions.</p>
+<p>Modern SPA frameworks such as React, Angular, and Vue often extend Javascript by embedding HTML, CSS syntax and adding template constructs to make the language even more powerful and expressive to web developers. Applications built with these frameworks often employs several specialized tools such as webpack, babel to compile, transform, and package HTML, CSS, Javascript, and even images into a few javascript files.</p>
+<p><em>We will dedicate an entire article about React in a future article. <a href="https://geraldnguyen.medium.com/subscribe">Stay tuned</a>.</em></p>
+<h2 id="network">Network</h2>
+<h3 id="internet-intranet-lan-wifi-4g-5g-fiber">Internet, Intranet, LAN, WIFI, 4G, 5G, Fiber…</h3>
+<p>These are various names of networking technologies that connect a user to a web server.</p>
+<p>The time taken for a network signal to travel between 2 points (e.g. user to a web server) is called latency. Bandwidth on the other hand is how many signals (thus how much data) can a network connection transport from one point to the other.</p>
+<p>These 2 concepts explain how users can access a web application. The closer the application&rsquo;s server is to a user, the faster it is for the user to access the web application. The higher bandwidth the user and web server&rsquo;s network have, the more content and media-rich the web application can deliver.</p>
+<h3 id="domain-names-ip-addresses">Domain Names, IP addresses</h3>
+<p><a href="https://www.google.com/">www.google.com</a> is the domain name of the Google website while <code>64.233.170.104</code> is just one of the many IP addresses Google has. A domain name is the friendly readable address of a web server. Through a hierarchical network of domain name servers (DNS), a browser resolves a domain name to a single IP address which is the exact network address of the web server. That will be the destination to which the browser sends the user&rsquo;s request to access the web application.</p>
+<pre tabindex="0"><code>Pinging www.google.com [64.233.170.104] with 32 bytes of data:
+Reply from 64.233.170.104: bytes=32 time=345ms TTL=105
+Reply from 64.233.170.104: bytes=32 time=10ms TTL=105
+Reply from 64.233.170.104: bytes=32 time=9ms TTL=105
+</code></pre><h3 id="http-https">HTTP, HTTPS</h3>
+<p>Stand for HyperText Transfer Protocol, HTTP is a protocol for transferring textual, image, video, etc… contents over the network. It is probably the most popular protocol on the internet and is the protocol for the world wide web.</p>
+<p>HTTPS is the secure version of HTTP validating the web server&rsquo;s identity and encrypting content transfer between the browser and the server. Web applications handling money or containing sensitive information usually require HTTPS with the latest TLS version (TLS 1.3 as of 2023 Feb).</p>
+<h2 id="backend">Backend</h2>
+<h3 id="web-servers">Web Servers</h3>
+<p>Web servers are a special type of software that receive HTTP requests sent by the browser over the network, process them, and send back HTML, CSS, Javascript, images, etc… as responses.</p>
+<p>As of Feb 2023, Apache, Nginx, and Cloudflare are the top 3 most-used web servers according to a survey by <a href="https://news.netcraft.com/archives/2023/02/28/february-2023-web-server-survey.html">Netcraft</a>.</p>
+<h3 id="application-servers">Application Servers</h3>
+<p>Application servers are the application codes that receive requests carrying specific instructions at the application level (instead of HTTP or browser level). Application servers are often part of a web server or run behind the web server.</p>
+<p>Application servers are often complex and specific to an application or business domain. They are usually responsible for authenticating and authorizing users, implementing business rules and processes, and retrieving or updating databases.</p>
+<p>According to <a href="https://survey.stackoverflow.co/2022/#web-frameworks-and-technologies">Stack Overflow&rsquo;s Developer 2022 survey</a>, the most popular programming languages and frameworks to write application server codes are Javascript or Typescript on NodeJS, C# on ASP.NET, Python on Django, FastAPI…</p>
+<h2 id="other-layers">Other Layers</h2>
+<h3 id="databases">Databases</h3>
+<p>Almost all complex applications retrieve and store user and business data in software called databases. This type of software is specially designed, built, and optimized for durable, fast, efficient, and scalable storage and retrieval of data.</p>
+<p>Relational database systems such as Oracle, MS SQL, DB2, MySQL, and PostgreSQL are popular providers of database services. Recently, though, another category of database software called NoSQL is getting more market share.</p>
+<h3 id="data-analytics">Data Analytics</h3>
+<p>Increasingly, businesses or organizations with tons of data feed them to yet another specialized software to analyze the data and extract insight. Their names often carry &ldquo;data warehouse&rdquo;, &ldquo;data lake&rdquo;, &ldquo;data hub&rdquo;, &ldquo;analytic&rdquo;, etc… to signify their special purpose.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>We have surveyed various technologies that make up a web application, their roles, and where they operate.</p>
+<p>In the <a href="../web-application-development-4-terminologies-practices-and-tools/">next lesson</a>, we will learn the terminologies, practices, and tools of a web application developer.</p>
+<p><strong>Previous:</strong> <a href="../../02/web-application-development-2-four-types-of-web-applications/">Web Application Development — #2: Four Types of Web Applications</a><br>
+<strong>Next:</strong> <a href="../web-application-development-4-terminologies-practices-and-tools/">Web Application Development — #4: Terminologies, Practices, and Tools</a></p>
+<p>For Content and Index, visit <a href="../../02/web-application-development-introductory-course/">Web Application Development — An Introductory course</a></p>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/programming/">Programming</a></li>
+        <li><a href="/tags/web-development/">Web Development</a></li>
+        <li><a href="/tags/technology/">Technology</a></li>
+        <li><a href="/tags/beginner/">Beginner</a></li>
+        <li><a href="/tags/course/">Course</a></li>
+        <li><a href="/tags/javascript/">JavaScript</a></li>
+        <li><a href="/tags/frontend/">Frontend</a></li>
+        <li><a href="/tags/backend/">Backend</a></li>
+    </ul>
+  </div>
+
+
+  
+  
+
+
+
+
+<div class="social-sharing">
+  <div class="social-sharing-label">Share this article:</div>
+  <div class="social-sharing-buttons">
+    
+    <a class="social-share-btn twitter" 
+       href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgeraldnguyen.github.io%2Fposts%2F2023%2F03%2Fweb-application-development-3-technologies-behind-a-web-application%2F&text=Web&#43;Application&#43;Development&#43;%E2%80%94&#43;%233%3A&#43;Technologies&#43;Behind&#43;a&#43;Web&#43;Application&via=geraldnguyensg"
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Share on Twitter/X">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+      </svg>
+      <span>Twitter</span>
+    </a>
+
+    
+    <a class="social-share-btn linkedin" 
+       href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fgeraldnguyen.github.io%2Fposts%2F2023%2F03%2Fweb-application-development-3-technologies-behind-a-web-application%2F"
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Share on LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+      </svg>
+      <span>LinkedIn</span>
+    </a>
+
+    
+    <a class="social-share-btn facebook" 
+       href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgeraldnguyen.github.io%2Fposts%2F2023%2F03%2Fweb-application-development-3-technologies-behind-a-web-application%2F"
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Share on Facebook">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+      </svg>
+      <span>Facebook</span>
+    </a>
+
+    
+    <a class="social-share-btn reddit" 
+       href="https://reddit.com/submit?url=https%3A%2F%2Fgeraldnguyen.github.io%2Fposts%2F2023%2F03%2Fweb-application-development-3-technologies-behind-a-web-application%2F&title=Web&#43;Application&#43;Development&#43;%E2%80%94&#43;%233%3A&#43;Technologies&#43;Behind&#43;a&#43;Web&#43;Application"
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Share on Reddit">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M6.167 8a.83.83 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661m1.843 3.647c.315 0 1.403-.038 1.976-.611a.23.23 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83s.83-.381.83-.83a.831.831 0 0 0-1.66 0z"/>
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.2.2 0 0 0-.153.028.2.2 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353 0 1.795 2.091 3.256 4.669 3.256s4.668-1.451 4.668-3.256c0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165"/>
+      </svg>
+      <span>Reddit</span>
+    </a>
+
+    
+    <a class="social-share-btn email" 
+       href="mailto:?subject=Web&#43;Application&#43;Development&#43;%E2%80%94&#43;%233%3A&#43;Technologies&#43;Behind&#43;a&#43;Web&#43;Application&body=I thought you might find this interesting: https%3A%2F%2Fgeraldnguyen.github.io%2Fposts%2F2023%2F03%2Fweb-application-development-3-technologies-behind-a-web-application%2F"
+       aria-label="Share via Email">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+      </svg>
+      <span>Email</span>
+    </a>
+
+    
+    <button class="social-share-btn copy-link" 
+            onclick="copyToClipboard('https:\/\/geraldnguyen.github.io\/posts\/2023\/03\/web-application-development-3-technologies-behind-a-web-application\/')"
+            aria-label="Copy link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
+        <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
+      </svg>
+      <span>Copy Link</span>
+    </button>
+  </div>
+</div>
+
+<script>
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(function() {
+    
+    const btn = event.target.closest('.copy-link');
+    const originalText = btn.querySelector('span').textContent;
+    btn.querySelector('span').textContent = 'Copied!';
+    setTimeout(() => {
+      btn.querySelector('span').textContent = originalText;
+    }, 2000);
+  }, function(err) {
+    console.error('Could not copy text: ', err);
+  });
+}
+</script>
+
+
+  <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "geraldnguyen" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2025. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -457,6 +457,48 @@
       <description></description>
     </item>
     <item>
+      <title>Agile</title>
+      <link>https://geraldnguyen.github.io/tags/agile/</link>
+      <pubDate>Tue, 28 Mar 2023 12:00:00 +0700</pubDate>
+      <guid>https://geraldnguyen.github.io/tags/agile/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Course</title>
+      <link>https://geraldnguyen.github.io/tags/course/</link>
+      <pubDate>Tue, 28 Mar 2023 12:00:00 +0700</pubDate>
+      <guid>https://geraldnguyen.github.io/tags/course/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Development Tools</title>
+      <link>https://geraldnguyen.github.io/tags/development-tools/</link>
+      <pubDate>Tue, 28 Mar 2023 12:00:00 +0700</pubDate>
+      <guid>https://geraldnguyen.github.io/tags/development-tools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software Development</title>
+      <link>https://geraldnguyen.github.io/tags/software-development/</link>
+      <pubDate>Tue, 28 Mar 2023 12:00:00 +0700</pubDate>
+      <guid>https://geraldnguyen.github.io/tags/software-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Team Management</title>
+      <link>https://geraldnguyen.github.io/tags/team-management/</link>
+      <pubDate>Tue, 28 Mar 2023 12:00:00 +0700</pubDate>
+      <guid>https://geraldnguyen.github.io/tags/team-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Development</title>
+      <link>https://geraldnguyen.github.io/tags/web-development/</link>
+      <pubDate>Tue, 28 Mar 2023 12:00:00 +0700</pubDate>
+      <guid>https://geraldnguyen.github.io/tags/web-development/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Bugs</title>
       <link>https://geraldnguyen.github.io/tags/bugs/</link>
       <pubDate>Sun, 19 Mar 2023 00:00:00 +0100</pubDate>
@@ -468,13 +510,6 @@
       <link>https://geraldnguyen.github.io/tags/quality-assurance/</link>
       <pubDate>Sun, 19 Mar 2023 00:00:00 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/tags/quality-assurance/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Software Development</title>
-      <link>https://geraldnguyen.github.io/tags/software-development/</link>
-      <pubDate>Sun, 19 Mar 2023 00:00:00 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/software-development/</guid>
       <description></description>
     </item>
     <item>
@@ -506,24 +541,45 @@
       <description></description>
     </item>
     <item>
-      <title>Coding</title>
-      <link>https://geraldnguyen.github.io/tags/coding/</link>
-      <pubDate>Thu, 23 Feb 2023 12:00:00 +0700</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/coding/</guid>
+      <title>Backend</title>
+      <link>https://geraldnguyen.github.io/tags/backend/</link>
+      <pubDate>Tue, 07 Mar 2023 12:00:00 +0700</pubDate>
+      <guid>https://geraldnguyen.github.io/tags/backend/</guid>
       <description></description>
     </item>
     <item>
-      <title>Course</title>
-      <link>https://geraldnguyen.github.io/tags/course/</link>
-      <pubDate>Thu, 23 Feb 2023 12:00:00 +0700</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/course/</guid>
+      <title>Beginner</title>
+      <link>https://geraldnguyen.github.io/tags/beginner/</link>
+      <pubDate>Tue, 07 Mar 2023 12:00:00 +0700</pubDate>
+      <guid>https://geraldnguyen.github.io/tags/beginner/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Frontend</title>
+      <link>https://geraldnguyen.github.io/tags/frontend/</link>
+      <pubDate>Tue, 07 Mar 2023 12:00:00 +0700</pubDate>
+      <guid>https://geraldnguyen.github.io/tags/frontend/</guid>
       <description></description>
     </item>
     <item>
       <title>JavaScript</title>
       <link>https://geraldnguyen.github.io/tags/javascript/</link>
-      <pubDate>Thu, 23 Feb 2023 12:00:00 +0700</pubDate>
+      <pubDate>Tue, 07 Mar 2023 12:00:00 +0700</pubDate>
       <guid>https://geraldnguyen.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Technology</title>
+      <link>https://geraldnguyen.github.io/tags/technology/</link>
+      <pubDate>Tue, 07 Mar 2023 12:00:00 +0700</pubDate>
+      <guid>https://geraldnguyen.github.io/tags/technology/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Coding</title>
+      <link>https://geraldnguyen.github.io/tags/coding/</link>
+      <pubDate>Thu, 23 Feb 2023 12:00:00 +0700</pubDate>
+      <guid>https://geraldnguyen.github.io/tags/coding/</guid>
       <description></description>
     </item>
     <item>
@@ -538,13 +594,6 @@
       <link>https://geraldnguyen.github.io/tags/single-page-applications/</link>
       <pubDate>Thu, 23 Feb 2023 12:00:00 +0700</pubDate>
       <guid>https://geraldnguyen.github.io/tags/single-page-applications/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Web Development</title>
-      <link>https://geraldnguyen.github.io/tags/web-development/</link>
-      <pubDate>Thu, 23 Feb 2023 12:00:00 +0700</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/web-development/</guid>
       <description></description>
     </item>
     <item>
@@ -702,13 +751,6 @@
       <description></description>
     </item>
     <item>
-      <title>Beginner</title>
-      <link>https://geraldnguyen.github.io/tags/beginner/</link>
-      <pubDate>Mon, 06 Feb 2023 00:00:00 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/beginner/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Dependency Injection</title>
       <link>https://geraldnguyen.github.io/tags/dependency-injection/</link>
       <pubDate>Mon, 06 Feb 2023 00:00:00 +0100</pubDate>
@@ -797,13 +839,6 @@
       <link>https://geraldnguyen.github.io/tags/indonesia/</link>
       <pubDate>Thu, 26 Jan 2023 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/tags/indonesia/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Agile</title>
-      <link>https://geraldnguyen.github.io/tags/agile/</link>
-      <pubDate>Sat, 21 Jan 2023 09:19:42 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/agile/</guid>
       <description></description>
     </item>
     <item>
@@ -1010,24 +1045,10 @@
       <description></description>
     </item>
     <item>
-      <title>Backend</title>
-      <link>https://geraldnguyen.github.io/tags/backend/</link>
-      <pubDate>Tue, 27 Dec 2022 09:19:42 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/backend/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Environment</title>
       <link>https://geraldnguyen.github.io/tags/environment/</link>
       <pubDate>Tue, 27 Dec 2022 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/tags/environment/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Frontend</title>
-      <link>https://geraldnguyen.github.io/tags/frontend/</link>
-      <pubDate>Tue, 27 Dec 2022 09:19:42 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/frontend/</guid>
       <description></description>
     </item>
     <item>

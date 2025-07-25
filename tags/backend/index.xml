@@ -6,8 +6,15 @@
     <description>Recent content in Backend on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Dec 2022 09:19:42 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 07 Mar 2023 12:00:00 +0700</lastBuildDate>
     <atom:link href="https://geraldnguyen.github.io/tags/backend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web Application Development — #3: Technologies Behind a Web Application</title>
+      <link>https://geraldnguyen.github.io/posts/2023/03/web-application-development-3-technologies-behind-a-web-application/</link>
+      <pubDate>Tue, 07 Mar 2023 12:00:00 +0700</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/03/web-application-development-3-technologies-behind-a-web-application/</guid>
+      <description>&lt;p&gt;&lt;em&gt;This is part of the &lt;a href=&#34;../../02/web-application-development-introductory-course/&#34;&gt;Web Application Development — An Introductory Course&lt;/a&gt; series.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;In the &lt;a href=&#34;../../02/web-application-development-2-four-types-of-web-applications/&#34;&gt;previous lesson&lt;/a&gt;, we identified 4 types of web applications: Client-side applications, server-side applications, single-page applications, and progressive web apps. While these applications differ in where and how they operate, their footprints are often found in 3 distinct locations:&lt;/p&gt;&#xA;&lt;p&gt;• Frontend&lt;br&gt;&#xA;• Network&lt;br&gt;&#xA;• Backend&lt;/p&gt;&#xA;&lt;p&gt;Most complex web applications need another layer, Database, to store data and users&amp;rsquo; preferences and activities. Some advanced applications even feed their data to another layer, Data Analytics, to analyze and extract insights.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>What Are APIs?</title>
       <link>https://geraldnguyen.github.io/posts/2022/12/what-are-apis/</link>
