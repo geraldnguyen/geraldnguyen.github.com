@@ -44,13 +44,6 @@
       <description></description>
     </item>
     <item>
-      <title>Hard Work</title>
-      <link>https://geraldnguyen.github.io/tags/hard-work/</link>
-      <pubDate>Fri, 31 Jan 2025 00:00:00 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/hard-work/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Job Hunting</title>
       <link>https://geraldnguyen.github.io/tags/job-hunting/</link>
       <pubDate>Fri, 31 Jan 2025 00:00:00 +0100</pubDate>
@@ -121,7 +114,7 @@
       <description></description>
     </item>
     <item>
-      <title>Aws</title>
+      <title>AWS</title>
       <link>https://geraldnguyen.github.io/tags/aws/</link>
       <pubDate>Thu, 03 Oct 2024 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/tags/aws/</guid>
@@ -149,10 +142,10 @@
       <description></description>
     </item>
     <item>
-      <title>TechLawFest</title>
-      <link>https://geraldnguyen.github.io/tags/techlawfest/</link>
+      <title>Tech Law Fest</title>
+      <link>https://geraldnguyen.github.io/tags/tech-law-fest/</link>
       <pubDate>Thu, 12 Sep 2024 09:19:42 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/techlawfest/</guid>
+      <guid>https://geraldnguyen.github.io/tags/tech-law-fest/</guid>
       <description></description>
     </item>
     <item>
@@ -611,13 +604,6 @@
       <description></description>
     </item>
     <item>
-      <title>Stop Scam</title>
-      <link>https://geraldnguyen.github.io/tags/stop-scam/</link>
-      <pubDate>Sat, 11 Feb 2023 00:00:00 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/stop-scam/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Students</title>
       <link>https://geraldnguyen.github.io/tags/students/</link>
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0100</pubDate>
@@ -737,27 +723,6 @@
       <description></description>
     </item>
     <item>
-      <title>Career Advice</title>
-      <link>https://geraldnguyen.github.io/tags/career-advice/</link>
-      <pubDate>Sat, 21 Jan 2023 09:19:42 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/career-advice/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Careers</title>
-      <link>https://geraldnguyen.github.io/tags/careers/</link>
-      <pubDate>Sat, 21 Jan 2023 09:19:42 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/careers/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Develoepr</title>
-      <link>https://geraldnguyen.github.io/tags/develoepr/</link>
-      <pubDate>Sat, 21 Jan 2023 09:19:42 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/develoepr/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Full Stack</title>
       <link>https://geraldnguyen.github.io/tags/full-stack/</link>
       <pubDate>Sat, 21 Jan 2023 09:19:42 +0100</pubDate>
@@ -779,6 +744,13 @@
       <description></description>
     </item>
     <item>
+      <title>API</title>
+      <link>https://geraldnguyen.github.io/tags/api/</link>
+      <pubDate>Tue, 17 Jan 2023 09:19:42 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/tags/api/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Kotlin</title>
       <link>https://geraldnguyen.github.io/tags/kotlin/</link>
       <pubDate>Tue, 17 Jan 2023 09:19:42 +0100</pubDate>
@@ -790,13 +762,6 @@
       <link>https://geraldnguyen.github.io/tags/mongodb-spring-data/</link>
       <pubDate>Tue, 17 Jan 2023 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/tags/mongodb-spring-data/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>REST API</title>
-      <link>https://geraldnguyen.github.io/tags/rest-api/</link>
-      <pubDate>Tue, 17 Jan 2023 09:19:42 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/rest-api/</guid>
       <description></description>
     </item>
     <item>
@@ -860,13 +825,6 @@
       <link>https://geraldnguyen.github.io/tags/aff/</link>
       <pubDate>Thu, 12 Jan 2023 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/tags/aff/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>API</title>
-      <link>https://geraldnguyen.github.io/tags/api/</link>
-      <pubDate>Thu, 12 Jan 2023 09:19:42 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/api/</guid>
       <description></description>
     </item>
     <item>
@@ -958,13 +916,6 @@
       <link>https://geraldnguyen.github.io/tags/web-development/</link>
       <pubDate>Fri, 30 Dec 2022 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/tags/web-development/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Commentary</title>
-      <link>https://geraldnguyen.github.io/tags/commentary/</link>
-      <pubDate>Thu, 29 Dec 2022 09:19:42 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/commentary/</guid>
       <description></description>
     </item>
     <item>
@@ -1164,10 +1115,10 @@
       <description></description>
     </item>
     <item>
-      <title>Transactional</title>
-      <link>https://geraldnguyen.github.io/tags/transactional/</link>
+      <title>Transaction</title>
+      <link>https://geraldnguyen.github.io/tags/transaction/</link>
       <pubDate>Thu, 10 Sep 2020 09:19:42 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/transactional/</guid>
+      <guid>https://geraldnguyen.github.io/tags/transaction/</guid>
       <description></description>
     </item>
     <item>
@@ -1185,7 +1136,7 @@
       <description></description>
     </item>
     <item>
-      <title>Ejb</title>
+      <title>EJB</title>
       <link>https://geraldnguyen.github.io/tags/ejb/</link>
       <pubDate>Tue, 10 Sep 2013 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/tags/ejb/</guid>
@@ -1234,13 +1185,6 @@
       <description></description>
     </item>
     <item>
-      <title>Web</title>
-      <link>https://geraldnguyen.github.io/tags/web/</link>
-      <pubDate>Sat, 18 May 2013 09:19:42 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/web/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>JSR303 Bean Validation</title>
       <link>https://geraldnguyen.github.io/tags/jsr303-bean-validation/</link>
       <pubDate>Thu, 20 Dec 2012 09:19:42 +0100</pubDate>
@@ -1255,13 +1199,6 @@
       <description></description>
     </item>
     <item>
-      <title>Transaction</title>
-      <link>https://geraldnguyen.github.io/tags/transaction/</link>
-      <pubDate>Wed, 24 Oct 2012 09:19:42 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/transaction/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Miscellaneous</title>
       <link>https://geraldnguyen.github.io/tags/miscellaneous/</link>
       <pubDate>Tue, 10 Jul 2012 09:19:42 +0100</pubDate>
@@ -1273,13 +1210,6 @@
       <link>https://geraldnguyen.github.io/tags/xml/</link>
       <pubDate>Fri, 09 Mar 2012 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/tags/xml/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>UI/UX</title>
-      <link>https://geraldnguyen.github.io/tags/ui/ux/</link>
-      <pubDate>Thu, 24 Feb 2011 09:19:42 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/ui/ux/</guid>
       <description></description>
     </item>
     <item>
@@ -1371,13 +1301,6 @@
       <link>https://geraldnguyen.github.io/tags/sort/</link>
       <pubDate>Sun, 12 Dec 2010 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/tags/sort/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ejb3</title>
-      <link>https://geraldnguyen.github.io/tags/ejb3/</link>
-      <pubDate>Sat, 20 Nov 2010 09:19:42 +0100</pubDate>
-      <guid>https://geraldnguyen.github.io/tags/ejb3/</guid>
       <description></description>
     </item>
     <item>

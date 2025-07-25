@@ -6,8 +6,15 @@
     <description>Recent content in Transaction on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Oct 2012 09:19:42 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2020 09:19:42 +0100</lastBuildDate>
     <atom:link href="https://geraldnguyen.github.io/tags/transaction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>javax.transaction.Transactional vs org.springframework.transaction.annotation.Transactional</title>
+      <link>https://geraldnguyen.github.io/posts/2020/09/2020-09-10-transactional-annotation/</link>
+      <pubDate>Thu, 10 Sep 2020 09:19:42 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2020/09/2020-09-10-transactional-annotation/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;If you’re using Spring or Spring Boot, then use the Spring @Transactional annotation, as it allows you to configure more attributes than the Java EE @Transactional annotation.&lt;/p&gt;&#xA;&lt;p&gt;If you are using Java EE alone, and you deploy your application on a Java EE application server, then use the Java EE @Transactional annotation.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/a/62702146/575457&#34;&gt;https://stackoverflow.com/a/62702146/575457&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>JDBC Transaction Without EJB</title>
       <link>https://geraldnguyen.github.io/posts/2012/10/2012-10-24-jdbc-transaction-without-ejb/</link>

@@ -37,6 +37,13 @@
       <description>&lt;figure&gt;&lt;img src=&#34;https://miro.medium.com/v2/resize:fit:875/0*rlrO6tWKQyyDGgdZ&#34;&#xA;    alt=&#34;Photo by Jason Goodman on Unsplash&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Photo by &lt;a href=&#34;https://unsplash.com/@jasongoodman_youxventures?utm_source=medium&amp;amp;utm_medium=referral&#34;&gt;Jason Goodman&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/?utm_source=medium&amp;amp;utm_medium=referral&#34;&gt;Unsplash&lt;/a&gt;&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;This is a popular interview question with lots of sample answers. They all tend to be generic or do not offer enough variations for the software development profession.&lt;/p&gt;&#xA;&lt;p&gt;I’m going to tackle this question differently in this article. Firstly, I’m going to focus on &lt;em&gt;software development&lt;/em&gt;. Secondly, instead of only exhibiting sample answers, I will examine various career aspirations and practical circumstances to arrive at possible responses.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Shift Left Testing</title>
+      <link>https://geraldnguyen.github.io/posts/2023/01/shift-left-testing/</link>
+      <pubDate>Mon, 16 Jan 2023 09:19:42 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/01/shift-left-testing/</guid>
+      <description>&lt;h1 id=&#34;what-is-shift-left-testing&#34;&gt;What is Shift Left Testing?&lt;/h1&gt;&#xA;&lt;p&gt;A picture is worth a thousand words. Here are how Shift Left differs from the traditional approach&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://geraldnguyen.github.io/posts/2023/01/shift-left-testing/0_z-QIZOi5uaw_l5Xq.webp&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;figure&gt;&lt;img src=&#34;https://geraldnguyen.github.io/posts/2023/01/shift-left-testing/0_0KbXqZhmD2HPADgY.webp&#34;&#xA;    alt=&#34;Source: https://www.bmc.com/blogs/what-is-shift-left-shift-left-testing-explained&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Source: &lt;a href=&#34;https://www.bmc.com/blogs/what-is-shift-left-shift-left-testing-explained&#34;&gt;https://www.bmc.com/blogs/what-is-shift-left-shift-left-testing-explained&lt;/a&gt;&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h1 id=&#34;how-does-my-team-shift-left&#34;&gt;How does my team shift left?&lt;/h1&gt;&#xA;&lt;p&gt;We started with &lt;strong&gt;unit testing&lt;/strong&gt;, by developers, for their own codes. This is the easiest shift to implement, though it still takes time, effort, and patience to get it right. I recommend &lt;a href=&#34;https://pragprog.com/titles/utj2/pragmatic-unit-testing-in-java-8-with-junit/&#34;&gt;Pragmatic Unit Testing in Java 8 with JUnit&lt;/a&gt; if you want quickly level-up&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>SOLID in Action — the Open-closed Principle</title>
       <link>https://geraldnguyen.github.io/posts/2022/12/solid-open-close-principle/</link>
       <pubDate>Sat, 24 Dec 2022 08:00:00 -0700</pubDate>
@@ -56,6 +63,13 @@
       <pubDate>Wed, 30 Nov 2022 09:19:42 +0100</pubDate>
       <guid>https://geraldnguyen.github.io/posts/2022/11/echo-api/</guid>
       <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;&#xA;&lt;p&gt;The need for this library arose when I wanted assurance that my &lt;a href=&#34;https://www.npmjs.com/package/ngx-correlation-id&#34;&gt;HTTP client&lt;/a&gt; was sending correctly formulated HTTP messages.&lt;/p&gt;&#xA;&lt;p&gt;Another use of this &lt;code&gt;/echo&lt;/code&gt; API is to capture and debug the remote calls from another service. Imagine you are providing a webhook endpoint. Before you even build one, you first need to know what incoming messages look like. Supplying an &lt;code&gt;/echo&lt;/code&gt; API endpoint in the webhook’s registration allows you to capture and log all incoming messages&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Code Review as an interview tool</title>
+      <link>https://geraldnguyen.github.io/posts/2022/11/code-review-as-an-interview-tool/</link>
+      <pubDate>Tue, 22 Nov 2022 09:19:42 +0100</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2022/11/code-review-as-an-interview-tool/</guid>
+      <description>&lt;h2 id=&#34;rationale&#34;&gt;Rationale&lt;/h2&gt;&#xA;&lt;p&gt;In all software development teams that I have been part of, we always value and encourage everyone to participate in code reviews. We see it as an effective way of learning and contributing. It has an important place in my Engineering practice.&lt;/p&gt;&#xA;&lt;p&gt;We learn when we review other people’s codes. That’s actually an effective way of keeping up-to-date with what is happening to the code base, what sort of problems our colleagues are trying to solve, and what techniques they employed to solve them. Whether you are young or experienced, the delightful feeling of seeing creative solutions during code reviews is the same.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
