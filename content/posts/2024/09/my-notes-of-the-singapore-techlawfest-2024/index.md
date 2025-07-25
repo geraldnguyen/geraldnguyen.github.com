@@ -1,14 +1,19 @@
 ---
-title: My Notes of the Singapore TechLawFest 2024
-subtitle: Gen AI everywhere
-date: 2024-09-12T09:19:42+01:00
-image: 1_jJrF5wZN2uo6CKsnrJA57g.jpg
+categories:
+- Tech Related
+date: 2024-09-12 09:19:42+01:00
 draft: false
-categories: [Tech Related]
-tags: [Singapore, TechLawFest, 2024, AI, Legal ]
+image: 1_jJrF5wZN2uo6CKsnrJA57g.jpg
 medium: https://medium.com/southeast-asia/my-notes-of-the-singapore-techlawfest-2024-2550a9efe406
+subtitle: Gen AI everywhere
+tags:
+- Singapore
+- Tech Law Fest
+- '2024'
+- AI
+- Legal
+title: My Notes of the Singapore TechLawFest 2024
 ---
-
 {{< figure src="https://miro.medium.com/v2/resize:fit:484/1*jJrF5wZN2uo6CKsnrJA57g.png" caption="GenAI everywhere in Singapore TechLawFest 2024">}}
 
 {{< pagebreak >}}

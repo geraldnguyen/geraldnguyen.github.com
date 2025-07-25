@@ -1,11 +1,12 @@
 ---
-title: "Shift Left Testing"
-date: 2022-09-26T09:19:42+01:00
+date: 2022-09-26 09:19:42+01:00
 draft: true
-
-tags: [Shift Left, Testing, Software Engineering]
+tags:
+- Shift Left
+- Testing
+- Software Development
+title: Shift Left Testing
 ---
-
 **Note 2024-08-15: An updated version of this article was published in Medium at https://geraldnguyen.medium.com/shift-left-testing-b59ce9f9bf1e?source=user_profile---------57----------------------------**
 
 -----------------

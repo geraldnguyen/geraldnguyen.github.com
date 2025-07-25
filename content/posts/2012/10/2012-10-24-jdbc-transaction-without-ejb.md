@@ -9,13 +9,11 @@ subtitle: EJB 3 is simple enough that delegating transaction management to it on
   transaction, here’s a quick way
 tags:
 - Java
-- transaction
+- Transaction
 - jdbc
 - old blog
 title: JDBC Transaction Without EJB
 ---
-
-
 1. Create a DAO method in which you set JDBC connection’s auto-commit property to false
 
 ```

@@ -5,12 +5,11 @@ date: 2010-11-20 09:19:42+01:00
 draft: false
 tags:
 - J2EE
-- ejb3
+- EJB
 - Programming
 - old blog
 title: How do you initialize an EJB3 Stateful Session Bean ?
 ---
-
 In EJB 3, we can obtain a reference to Stateful Session Bean either either by using `@EJB `annotation or performing JNDI look-up. Yet these 2 methods do not offer you a way to initialize a Stateful SB as EJB 2.1  Home interface's `createMETHODs` do.
 
 ```

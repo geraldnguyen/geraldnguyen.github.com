@@ -7,10 +7,9 @@ tags:
 - Java
 - KitchenSink
 - Programming
-- unit testing
+- Unit Testing
 title: Java Try-with-resource
 ---
-
 **Note 2024-08-15: An updated version of this article was published in Medium at https://medium.com/codex/unit-testing-javas-try-with-resource-2cf793fdbc34?source=user_profile---------84----------------------------**
 
 -----------------

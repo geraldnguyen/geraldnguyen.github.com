@@ -10,11 +10,9 @@ tags:
 - Students
 - Scam
 - Comics
-- Stop Scam
 - Medium
 title: Stop Scams — Season 1, Episode 1
 ---
-
 {{< figure src="https://miro.medium.com/v2/resize:fit:738/1*0Wz3ut0gdgUrME1UPEoxZA.png" >}}
 
 {{< figure src="https://miro.medium.com/v2/resize:fit:806/1*fnpPlchzqcDqK9z1DlItHg.png" >}}

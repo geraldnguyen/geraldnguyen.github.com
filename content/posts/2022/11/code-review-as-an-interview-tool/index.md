@@ -1,13 +1,17 @@
 ---
-title: "Code Review as an interview tool"
-subtitle: Reviewing code as a way of learning and contributing
+categories:
+- Software Development
+- Career Development
+date: 2022-11-22 09:19:42+01:00
 image: 1_Fcg_f8TQsK2xwbmK9xhAQA.jpg
-date: 2022-11-22T09:19:42+01:00
-tags: [Software Engineering, Code Review, Interview]
-categories: [Software Development, Career Development]
 medium: https://medium.com/50ld/code-review-as-an-interview-tool-f57eb66e5da0
+subtitle: Reviewing code as a way of learning and contributing
+tags:
+- Software Development
+- Code Review
+- Interview
+title: Code Review as an interview tool
 ---
-
 ## Rationale
 
 In all software development teams that I have been part of, we always value and encourage everyone to participate in code reviews. We see it as an effective way of learning and contributing. It has an important place in my Engineering practice.

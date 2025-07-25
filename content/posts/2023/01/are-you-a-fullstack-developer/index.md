@@ -1,13 +1,18 @@
 ---
-title: Are you a full-stack developer?
-subtitle: Let’s talk about the different aspects of that title
-date: 2023-01-21T09:19:42+01:00
+categories:
+- Software Development
+- Career Development
+date: 2023-01-21 09:19:42+01:00
 image: 0_jbnAAfQF1KSYPbGZ.jpg
-categories: [Software Development, Career Development]
-tags: [Full Stack, Develoepr, Careers, Career Advice, Agile]
 medium: https://medium.com/50ld/are-you-a-full-stack-developer-8891b9078e9d
+subtitle: Let’s talk about the different aspects of that title
+tags:
+- Full Stack
+- Developer
+- Career
+- Agile
+title: Are you a full-stack developer?
 ---
-
 {{< figure src="0_jbnAAfQF1KSYPbGZ.jpg" caption="Photo by [Desola Lanre-Ologun](https://unsplash.com/@disruptxn?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)" >}}
 
 

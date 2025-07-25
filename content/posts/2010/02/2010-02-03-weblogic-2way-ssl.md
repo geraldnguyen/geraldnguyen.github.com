@@ -1,12 +1,15 @@
 ---
-title: "2-way SSL with WebLogic server 10.3"
-date: 2010-02-03T09:19:42+01:00
+categories:
+- Software Development
+date: 2010-02-03 09:19:42+01:00
 draft: false
-
-categories: [Software Development]
-tags: [weblogic, security, self-sign certificate, old blog]
+tags:
+- weblogic
+- Security
+- self-sign certificate
+- old blog
+title: 2-way SSL with WebLogic server 10.3
 ---
-
 ### TOOLS
 
 1. keytool: a key and certificate management tool. Provided as part of Sun's JDK Online reference: http://java.sun.com/javase/6/docs/technotes/tools/windows/keytool.htm.

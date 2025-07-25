@@ -5,11 +5,10 @@ date: 2012-06-30 09:19:42+01:00
 draft: false
 tags:
 - Java
-- spring
+- Spring
 - old blog
 title: SPRING MVC – SESSIONATTRIBUTES ANNOTATION
 ---
-
 Spring MVC’s [SessionAttributes](http://static.springsource.org/spring/docs/3.1.x/javadoc-api/org/springframework/web/bind/annotation/SessionAttributes.html) has 2 parameters: **values** (storing attributes’ names) and **types** (storing attributes’ types).
 
 It’s pretty straightforward for **values**. You specify the name of your attribute and it is _remembered_.

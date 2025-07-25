@@ -10,14 +10,13 @@ subtitle: Use these to assess multiple practical aspects of a candidate’s skil
   experience
 tags:
 - Java
-- spring
+- Spring
 - API
-- interview
+- Interview
 - annotation
-- testing
+- Testing
 title: Spring REST API Interview Questions
 ---
-
 #1 Complete the REST controller
 -------------------------------
 

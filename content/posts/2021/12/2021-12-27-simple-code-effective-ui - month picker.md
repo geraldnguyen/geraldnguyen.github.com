@@ -1,11 +1,12 @@
 ---
-title: "Simple Code - Effective UI - Month Picker"
-date: 2021-12-27T09:19:42+01:00
+date: 2021-12-27 09:19:42+01:00
 draft: true
-
-tags: [simple code, UI tip, Month Picker]
+tags:
+- Programming
+- UI
+- Month Picker
+title: Simple Code - Effective UI - Month Picker
 ---
-
 **Note 2024-08-15: An updated version of this article was published in Medium at https://medium.com/javascript-in-plain-english/simple-code-effective-ui-month-picker-4b410a4d0dce?source=user_profile---------78----------------------------**
 
 -----------------

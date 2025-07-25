@@ -1,12 +1,14 @@
 ---
-title: "Myths of Secure Web Browsing"
-date: 2013-05-18T09:19:42+01:00
+categories:
+- Tech Related
+date: 2013-05-18 09:19:42+01:00
 draft: false
-
-categories: [Tech Related]
-tags: [security, web, old blog]
+tags:
+- Security
+- Web Development
+- old blog
+title: Myths of Secure Web Browsing
 ---
-
 ## 1\. I am safe because I never visited porn website
 
 Wrong. Nowadays, many more malware infection are linked to visit to legitimate and popular websites than porn or counterfeit sites.

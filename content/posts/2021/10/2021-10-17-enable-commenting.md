@@ -1,12 +1,15 @@
 ---
-title: "Enable Comment in Hugo site"
-date: 2021-10-17T09:19:42+01:00
+categories:
+- Tech Related
+date: 2021-10-17 09:19:42+01:00
 draft: false
-
-categories: [Tech Related]
-tags: [hugo, disqus, comment, doks]
+tags:
+- Hugo
+- disqus
+- comment
+- doks
+title: Enable Comment in Hugo site
 ---
-
 *Note 2024-08-15: An earlier version of this site ran on [doks](https://getdoks.org/). I'm in the middle of updating it to a medium-like theme**
 
 -------------

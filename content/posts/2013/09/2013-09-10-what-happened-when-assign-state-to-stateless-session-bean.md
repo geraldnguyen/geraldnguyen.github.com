@@ -7,11 +7,10 @@ subtitle: It’ll probably result in an EJBTransactionRolledbackException caused
   a NullPointerException
 tags:
 - Java
-- ejb
+- EJB
 - old blog
 title: What Happened When You Assigned State to a Stateless Session Bean?
 ---
-
 Here’s a scenario that illustrate above possibility
 
 ```
