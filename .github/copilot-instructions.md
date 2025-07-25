@@ -80,5 +80,43 @@ medium: https://medium.com/example-url
 - Uses site parameters from `hugo.toml` for Twitter handle integration.
 - Located in `themes/medium/layouts/partials/social-sharing.html` with CSS in `themes/medium/assets/css/main.css`.
 
+## Article Migration Workflow
+
+### Migrating Medium Articles to Hugo
+When migrating articles from Medium to the Hugo site, follow these steps:
+
+1. **Fetch Article Content**
+   - Use `fetch_webpage` tool to retrieve the full article content, metadata, and images from the Medium URL
+   - Extract title, subtitle, publication date, tags, and main content
+
+2. **Create Directory Structure**
+   - Create directory: `content/posts/<year>/<month>/<slug>/`
+   - Use publication year/month from original Medium article
+   - Generate slug from article title (lowercase, hyphenated)
+
+3. **Generate Front Matter**
+   - Set `title` and `subtitle` from Medium article
+   - Use original publication `date` from Medium
+   - Add appropriate `categories` and `tags` based on content
+   - Include `medium` field with original Medium URL
+   - Add `image` field if article has featured image
+
+4. **Format Content**
+   - Convert Medium content to clean Markdown
+   - Replace any Medium image references with Hugo `figure` shortcodes
+   - Preserve article structure and formatting
+   - Add brief conclusion or summary if helpful
+
+5. **Create Markdown File**
+   - Save as `index.md` in the created directory
+   - Follow the post content type conventions above
+
+#### Example Migration Command Pattern:
+```
+Directory: content/posts/2024/07/article-title-slug/index.md
+Front Matter: Include all required fields plus medium URL
+Content: Clean markdown with figure shortcodes for images
+```
+
 ---
 If you add new conventions or workflows, update this file to help future AI agents and developers.
