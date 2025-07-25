@@ -2,6 +2,7 @@
 categories:
 - Career Development
 - Software Development
+- Product Management
 date: 2023-11-03 00:00:00+08:00
 image: 0_mQ648dDl7gNldibG.jpg
 medium: https://medium.com/50ld/software-development-career-business-analyst-vs-product-manager-8a3e2b169038
