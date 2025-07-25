@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+ 
+
+  
+
+
+<title>Web Application Development — #1: What makes a Web Application?</title>
+<meta data-rh="true" property="og:url" content="https://geraldnguyen.github.io/posts/2023/02/web-application-development-1-what-makes-a-web-application/">
+<meta data-rh="true" property="og:title" content="Web Application Development — #1: What makes a Web Application?">
+<meta data-rh="true" name="description" content="">
+<meta data-rh="true" property="og:site_name" content="Gerald Nguyen">
+<meta data-rh="true" property="og:description" content="">
+<meta data-rh="true" name="twitter:description" content="">
+<meta data-rh="true" property="al:web:url" content="https://geraldnguyen.github.io/posts/2023/02/web-application-development-1-what-makes-a-web-application/">
+<meta data-rh="true" property="og:type" content="article">
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.6ce54da4156f5e5e5b42ea0c1353bcad2437bd20e05f4dbf06c06a8e6f55b884.css" integrity="sha256-bOVNpBVvXl5bQuoME1O8rSQ3vSDgX02/BsBqjm9VuIQ=" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HRKMT2G8N9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HRKMT2G8N9');
+</script>
+
+<body class="container-xxl">
+  <div class="top-menu">
+    
+  <nav>
+    <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/posts/2023/02/web-application-development-introductory-course/">Course: WebApp Development</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/about/">About</a>
+    </li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <header>
+    <div class="header-content">
+      
+
+
+  <div class="categories-list">
+    <ul>
+        <li><a href="/categories/programming-tutorials/">Programming Tutorials</a></li>
+    </ul>
+  </div>
+
+
+<h1>Web Application Development — #1: What makes a Web Application?</h1>
+
+<h2 class="subtitle">Find out the basic characteristics of a web application and explore some common types of web applications</h2>
+
+
+
+
+
+<div class="story-profile-brief d-flex flex-row">
+  <div class="me-2">
+    
+    <img alt="Gerald Nguyen" class="profile-thumbnail rounded-circle"
+          src="https://geraldnguyen.github.io/geraldnguyen-profile-thumbnail.jpg" width="44"
+          height="44" loading="lazy" data-testid="authorPhoto">
+    
+  </div>
+  <div>
+    <div>
+      <a rel="noopener follow" href="https://geraldnguyen.github.io/">
+        Gerald Nguyen
+      </a>
+    </div>
+    <div>
+      <span>4 min read</span>
+      <span>·</span>
+      <span><time datetime="2023-02-13T12:00:00&#43;07:00">February 13, 2023</time></span>
+    </div>
+  </div>
+            
+</div>
+
+
+    </div>
+    <div class="header-nav">
+      
+  
+  <a href="/posts/2023/02/stop-scams-season-1-episode-1/">Previous</a>
+  
+  <span> | </span>
+  
+  <a href="/posts/2023/02/five-minimum-viable-interview-questions-series/">Next</a>
+  
+
+  
+  <div>
+    <span> ↗ </span>  <a href="https://javascript.plainenglish.io/web-application-development-1-what-makes-a-web-application-471a14739653" target="_blank">Also on Medium</a>
+  </div>
+  
+  
+
+  
+
+
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="bd-toc">
+      
+  <div class="toc-header">On this page</div>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-a-web-application-runs-on-the-web">#1 A web application runs on the web</a></li>
+        <li><a href="#2-a-web-application-leverages-web-technologies-to-deliver-rich-features-to-users">#2 A web application leverages web technologies to deliver rich features to users</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    </div>
+    <div class="bd-main">
+      
+
+  <p><em>This is part of the <a href="../web-application-development-introductory-course/">Web Application Development — An Introductory Course</a> series.</em></p>
+<p>A web application (or web app or webapp) has 2 distinct characteristics:</p>
+<p>• It runs on the web<br>
+• It leverages web technologies to deliver rich features to users</p>
+<p>Let&rsquo;s explore each characteristic in detail.</p>
+<h2 id="1-a-web-application-runs-on-the-web">#1 A web application runs on the web</h2>
+<p>Web apps are everywhere nowadays. They can be the HR systems where employees log in to apply for leaves, the webmail portal for checking or sending emails, or the e-commerce websites, internet banking, search engines…</p>
+<p>A user normally accesses a web application by entering that web app’s <em>readable address</em> into a <em>browser</em>’s address bar. The browser resolves the address to locate the <em>web server</em> which could be on the <em>internet</em> or within a local <em>network</em> or a larger enterprise network. The browser then downloads the <em>frontend codes</em> of the web app from the located server and renders them on screens.</p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*oN73jGU4P27G3BouJWg-eg.png"
+    alt="Webapp runs on the web"><figcaption>
+      <p>Webapp runs on the web</p>
+    </figcaption>
+</figure>
+
+<figure><img src="https://miro.medium.com/v2/resize:fit:786/format:webp/1*kFPPZXVYTqVXepxOzvH37A.png"
+    alt="Request sent by the browser"><figcaption>
+      <p>Request sent by the browser</p>
+    </figcaption>
+</figure>
+
+<figure><img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*IyWjQl_yHDB_NNyp4NqqyQ.png"
+    alt="Webapp&rsquo;s frontend code"><figcaption>
+      <p>Webapp&rsquo;s frontend code</p>
+    </figcaption>
+</figure>
+
+<p>In the example above <code>https://webmail.shaw.ca</code> is the readable address of Shaw&rsquo;s webmail web application. The web server is located at the internet IP address <code>64.59.175.71</code>. The browser downloaded the frontend codes and display them on the browser&rsquo;s window.</p>
+<h2 id="2-a-web-application-leverages-web-technologies-to-deliver-rich-features-to-users">#2 A web application leverages web technologies to deliver rich features to users</h2>
+<p>Running on the web, webapp provides its users with a rich set of features comparable to native or desktop applications.</p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*hCa3NClnycOrefkCGXUXLQ.png"
+    alt="LinkedIn webapp looks very much like its native app counterpart"><figcaption>
+      <p>LinkedIn webapp looks very much like its native app counterpart</p>
+    </figcaption>
+</figure>
+
+<p>A webapp often features one or more of the following capabilities:</p>
+<p>• Dynamic and interactive content and user interface<br>
+• Task-oriented<br>
+• Secured authentication and authorization<br>
+• Able to access device capabilities<br>
+• Able to work offline<br>
+• Mashups</p>
+<p>Let&rsquo;s look at some examples.</p>
+<p><strong>The Mortgage Calculator</strong> from <a href="https://moneysmart.gov.au/home-loans/mortgage-calculator">https://moneysmart.gov.au/home-loans/mortgage-calculator</a> is a web application that is <em>task-oriented</em> and features <em>dynamic and interactive content and a user interface</em>. To know how much future mortgage repayments can be, a user enters input such as loan amount and interest rate…. The calculator will then compute the repayment amount per selected frequency as well as a principle/interest breakdown chart.</p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*quwdg8sxTeaeFOWV7jHGTQ.png"
+    alt="Mortgage Calculator from moneysmart.gov.au"><figcaption>
+      <p>Mortgage Calculator from moneysmart.gov.au</p>
+    </figcaption>
+</figure>
+
+<p><strong>Internet Banking</strong> offers a clear example of <em>secure authentication and authorization</em>. There are 2 security features in the below screenshot. The gray lock icon on the top indicates that this webapp is protected by a valid SSL certificate which certifies the webapp identity and encrypts all its network communications between the browser and the server. The Login form in the middle collects the user’s credentials to <em>authenticate</em> who the user claims to be. After the validation succeeds, the user will see only his/her accounts and not someone else’s. That’s authorization — ensuring the user can access only what he/she is authorized to.</p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*GTnXeavarDpADrTA2jkMnA.png"
+    alt="Internet Banking security features - https://ib.techcombank.com.vn/servlet/BrowserServlet"><figcaption>
+      <p>Internet Banking security features - <a href="https://ib.techcombank.com.vn/servlet/BrowserServlet">https://ib.techcombank.com.vn/servlet/BrowserServlet</a></p>
+    </figcaption>
+</figure>
+
+<p>Our next example, <strong>Google Map</strong>, demonstrates the webapp’s ability to access the location service of the user’s device (with the user’s permission, of course).</p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*bqnZ5MPiU_eqg84gBdK3pA.png"
+    alt="Google Maps accessing device location"><figcaption>
+      <p>Google Maps accessing device location</p>
+    </figcaption>
+</figure>
+
+<p>There are many other device capabilities to which a webapp can request access. For instance, if you have ever joined a Zoom/Team/Google Meet meeting on a browser, you have already used a webapp with Camera and Microphone capabilities.</p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*_K7I6NRQoFX_kwvKadWZcw.png"
+    alt="Google Maps accessing device location"><figcaption>
+      <p>Google Maps accessing device location</p>
+    </figcaption>
+</figure>
+
+<p><strong>Working offline</strong> is another feature found in Progressive Web App, a type of web application that blends native and mobile features. Normally, the webapp keeps a copy of itself in the browser’s local storage and runs that version when there is no internet. <a href="https://tkctr.nvhung.nqtam.com/">https://tkctr.nvhung.nqtam.com/</a> is an e-book PWA that users can continue reading when offline.</p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*KSaU7YJ1is1KwYv0eQcU8A.png"
+    alt="Progressive Web App working offline"><figcaption>
+      <p>Progressive Web App working offline</p>
+    </figcaption>
+</figure>
+
+<p>Last but definitely not least, mashups are very common nowadays. Mashups are the assembling and transforming of multiple data or information or assets from single or multiple sources into a more interesting or useful format. The example below from a Real Estate website 99.co illustrates that best. Different data about commute options, amenities, and attractions… are combined with Google Maps to show its users a comprehensive and intuitive map of a location.</p>
+<figure><img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*tg1RuXEyZPDPRBK4qbd2kw.png"
+    alt="Real estate website mashup with Google Maps"><figcaption>
+      <p>Real estate website mashup with Google Maps</p>
+    </figcaption>
+</figure>
+
+
+<div class="page-break" role="separator">
+  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+</div>
+<h2 id="conclusion">Conclusion</h2>
+<p>We have examined the 2 basic characteristics of a web application, each with real examples.</p>
+<p>In the next lesson, we will learn about 4 common types of web applications and how you may recognize them.</p>
+<p><strong>Next:</strong> <a href="../web-application-development-2-four-types-of-web-applications/">Web Application Development — #2: Four Types of Web Applications</a></p>
+
+<div class="page-break" role="separator">
+  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+</div>
+<p>For Content and Index, visit <a href="../web-application-development-introductory-course/">Web Application Development — An Introductory course</a></p>
+
+  
+  
+  <div class="tags-list">
+    <ul>
+        <li><a href="/tags/web-development/">Web Development</a></li>
+        <li><a href="/tags/programming/">Programming</a></li>
+        <li><a href="/tags/web/">Web</a></li>
+        <li><a href="/tags/course/">Course</a></li>
+        <li><a href="/tags/features/">Features</a></li>
+        <li><a href="/tags/javascript/">JavaScript</a></li>
+        <li><a href="/tags/web-applications/">Web Applications</a></li>
+    </ul>
+  </div>
+
+
+  
+  
+
+
+
+
+<div class="social-sharing">
+  <div class="social-sharing-label">Share this article:</div>
+  <div class="social-sharing-buttons">
+    
+    <a class="social-share-btn twitter" 
+       href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgeraldnguyen.github.io%2Fposts%2F2023%2F02%2Fweb-application-development-1-what-makes-a-web-application%2F&text=Web&#43;Application&#43;Development&#43;%E2%80%94&#43;%231%3A&#43;What&#43;makes&#43;a&#43;Web&#43;Application%3F&via=geraldnguyensg"
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Share on Twitter/X">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+      </svg>
+      <span>Twitter</span>
+    </a>
+
+    
+    <a class="social-share-btn linkedin" 
+       href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fgeraldnguyen.github.io%2Fposts%2F2023%2F02%2Fweb-application-development-1-what-makes-a-web-application%2F"
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Share on LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+      </svg>
+      <span>LinkedIn</span>
+    </a>
+
+    
+    <a class="social-share-btn facebook" 
+       href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgeraldnguyen.github.io%2Fposts%2F2023%2F02%2Fweb-application-development-1-what-makes-a-web-application%2F"
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Share on Facebook">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+      </svg>
+      <span>Facebook</span>
+    </a>
+
+    
+    <a class="social-share-btn reddit" 
+       href="https://reddit.com/submit?url=https%3A%2F%2Fgeraldnguyen.github.io%2Fposts%2F2023%2F02%2Fweb-application-development-1-what-makes-a-web-application%2F&title=Web&#43;Application&#43;Development&#43;%E2%80%94&#43;%231%3A&#43;What&#43;makes&#43;a&#43;Web&#43;Application%3F"
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Share on Reddit">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M6.167 8a.83.83 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661m1.843 3.647c.315 0 1.403-.038 1.976-.611a.23.23 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83s.83-.381.83-.83a.831.831 0 0 0-1.66 0z"/>
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.2.2 0 0 0-.153.028.2.2 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353 0 1.795 2.091 3.256 4.669 3.256s4.668-1.451 4.668-3.256c0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165"/>
+      </svg>
+      <span>Reddit</span>
+    </a>
+
+    
+    <a class="social-share-btn email" 
+       href="mailto:?subject=Web&#43;Application&#43;Development&#43;%E2%80%94&#43;%231%3A&#43;What&#43;makes&#43;a&#43;Web&#43;Application%3F&body=I thought you might find this interesting: https%3A%2F%2Fgeraldnguyen.github.io%2Fposts%2F2023%2F02%2Fweb-application-development-1-what-makes-a-web-application%2F"
+       aria-label="Share via Email">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+      </svg>
+      <span>Email</span>
+    </a>
+
+    
+    <button class="social-share-btn copy-link" 
+            onclick="copyToClipboard('https:\/\/geraldnguyen.github.io\/posts\/2023\/02\/web-application-development-1-what-makes-a-web-application\/')"
+            aria-label="Copy link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
+        <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
+      </svg>
+      <span>Copy Link</span>
+    </button>
+  </div>
+</div>
+
+<script>
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(function() {
+    
+    const btn = event.target.closest('.copy-link');
+    const originalText = btn.querySelector('span').textContent;
+    btn.querySelector('span').textContent = 'Copied!';
+    setTimeout(() => {
+      btn.querySelector('span').textContent = originalText;
+    }, 2000);
+  }, function(err) {
+    console.error('Could not copy text: ', err);
+  });
+}
+</script>
+
+
+  <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "geraldnguyen" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+    </div>
+    
+  </main>
+  <footer>
+    <p>Copyright 2025. All rights reserved.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

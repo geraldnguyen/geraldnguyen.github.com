@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Progressive Web App on Gerald Nguyen</title>
+    <link>https://geraldnguyen.github.io/tags/progressive-web-app/</link>
+    <description>Recent content in Progressive Web App on Gerald Nguyen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Feb 2023 12:00:00 +0700</lastBuildDate>
+    <atom:link href="https://geraldnguyen.github.io/tags/progressive-web-app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web Application Development — #2: Four Types of Web Applications</title>
+      <link>https://geraldnguyen.github.io/posts/2023/02/web-application-development-2-four-types-of-web-applications/</link>
+      <pubDate>Thu, 23 Feb 2023 12:00:00 +0700</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/02/web-application-development-2-four-types-of-web-applications/</guid>
+      <description>&lt;p&gt;&lt;em&gt;This is part of the &lt;a href=&#34;../web-application-development-introductory-course/&#34;&gt;Web Application Development — An Introductory Course&lt;/a&gt; series.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;We can classify web applications into 4 types:&lt;/p&gt;&#xA;&lt;p&gt;• Client-side application&lt;br&gt;&#xA;• Server-side application&lt;br&gt;&#xA;• Single Page application&lt;br&gt;&#xA;• Progressive web app&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s explore each type in detail.&lt;/p&gt;&#xA;&lt;h2 id=&#34;client-side-application&#34;&gt;Client-side Application&lt;/h2&gt;&#xA;&lt;p&gt;Some web applications operate only on the client side i.e. the browser.&lt;/p&gt;&#xA;&lt;p&gt;The earliest client-side web applications are probably Applets which were small applications capable of executing within browsers. Applets became popular since Java 1.0&amp;rsquo;s introduction in 1995 but gradually lost browser support amid competition from other technologies and security concerns.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -6,14 +6,28 @@
     <description>Recent content in JavaScript on Gerald Nguyen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Feb 2023 08:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 23 Feb 2023 12:00:00 +0700</lastBuildDate>
     <atom:link href="https://geraldnguyen.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web Application Development — #2: Four Types of Web Applications</title>
+      <link>https://geraldnguyen.github.io/posts/2023/02/web-application-development-2-four-types-of-web-applications/</link>
+      <pubDate>Thu, 23 Feb 2023 12:00:00 +0700</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/02/web-application-development-2-four-types-of-web-applications/</guid>
+      <description>&lt;p&gt;&lt;em&gt;This is part of the &lt;a href=&#34;../web-application-development-introductory-course/&#34;&gt;Web Application Development — An Introductory Course&lt;/a&gt; series.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;We can classify web applications into 4 types:&lt;/p&gt;&#xA;&lt;p&gt;• Client-side application&lt;br&gt;&#xA;• Server-side application&lt;br&gt;&#xA;• Single Page application&lt;br&gt;&#xA;• Progressive web app&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s explore each type in detail.&lt;/p&gt;&#xA;&lt;h2 id=&#34;client-side-application&#34;&gt;Client-side Application&lt;/h2&gt;&#xA;&lt;p&gt;Some web applications operate only on the client side i.e. the browser.&lt;/p&gt;&#xA;&lt;p&gt;The earliest client-side web applications are probably Applets which were small applications capable of executing within browsers. Applets became popular since Java 1.0&amp;rsquo;s introduction in 1995 but gradually lost browser support amid competition from other technologies and security concerns.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Five Minimum Viable Interview Questions series — Updated 17 Feb 2023</title>
       <link>https://geraldnguyen.github.io/posts/2023/02/five-minimum-viable-interview-questions-series/</link>
       <pubDate>Fri, 17 Feb 2023 08:00:00 -0700</pubDate>
       <guid>https://geraldnguyen.github.io/posts/2023/02/five-minimum-viable-interview-questions-series/</guid>
       <description>&lt;figure&gt;&lt;img src=&#34;https://miro.medium.com/v2/resize:fit:700/0*qxJpBdXPqAG2Z7NJ&#34;&#xA;    alt=&#34;Photo by Wes Hicks on Unsplash&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Photo by &lt;a href=&#34;https://unsplash.com/@sickhews?utm_source=medium&amp;amp;utm_medium=referral&#34;&gt;Wes Hicks&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/?utm_source=medium&amp;amp;utm_medium=referral&#34;&gt;Unsplash&lt;/a&gt;&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h1 id=&#34;rationale&#34;&gt;Rationale&lt;/h1&gt;&#xA;&lt;p&gt;Let’s face it. A developer is expected to know A LOT these days.&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://geraldnguyen.github.io/posts/2023/02/five-minimum-viable-interview-questions-series/1_VoFu1hUShEKCl-14qtPoFQ.png&#34;&#xA;    alt=&#34;A typical job requirement (screenshot)&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;A typical job requirement (screenshot)&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;And that makes interviewing a candidate hard because there is never enough time to ask all the necessary questions.&lt;/p&gt;&#xA;&lt;p&gt;On the other hand, that also makes preparing for an interview hard because there are too many areas and details to prepare for.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Web Application Development — #1: What makes a Web Application?</title>
+      <link>https://geraldnguyen.github.io/posts/2023/02/web-application-development-1-what-makes-a-web-application/</link>
+      <pubDate>Mon, 13 Feb 2023 12:00:00 +0700</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/02/web-application-development-1-what-makes-a-web-application/</guid>
+      <description>&lt;p&gt;&lt;em&gt;This is part of the &lt;a href=&#34;../web-application-development-introductory-course/&#34;&gt;Web Application Development — An Introductory Course&lt;/a&gt; series.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;A web application (or web app or webapp) has 2 distinct characteristics:&lt;/p&gt;&#xA;&lt;p&gt;• It runs on the web&lt;br&gt;&#xA;• It leverages web technologies to deliver rich features to users&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s explore each characteristic in detail.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-a-web-application-runs-on-the-web&#34;&gt;#1 A web application runs on the web&lt;/h2&gt;&#xA;&lt;p&gt;Web apps are everywhere nowadays. They can be the HR systems where employees log in to apply for leaves, the webmail portal for checking or sending emails, or the e-commerce websites, internet banking, search engines…&lt;/p&gt;</description>
     </item>
     <item>
       <title>Web Application Development: An Introductory Course</title>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Applications on Gerald Nguyen</title>
+    <link>https://geraldnguyen.github.io/tags/web-applications/</link>
+    <description>Recent content in Web Applications on Gerald Nguyen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Feb 2023 12:00:00 +0700</lastBuildDate>
+    <atom:link href="https://geraldnguyen.github.io/tags/web-applications/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web Application Development — #1: What makes a Web Application?</title>
+      <link>https://geraldnguyen.github.io/posts/2023/02/web-application-development-1-what-makes-a-web-application/</link>
+      <pubDate>Mon, 13 Feb 2023 12:00:00 +0700</pubDate>
+      <guid>https://geraldnguyen.github.io/posts/2023/02/web-application-development-1-what-makes-a-web-application/</guid>
+      <description>&lt;p&gt;&lt;em&gt;This is part of the &lt;a href=&#34;../web-application-development-introductory-course/&#34;&gt;Web Application Development — An Introductory Course&lt;/a&gt; series.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;A web application (or web app or webapp) has 2 distinct characteristics:&lt;/p&gt;&#xA;&lt;p&gt;• It runs on the web&lt;br&gt;&#xA;• It leverages web technologies to deliver rich features to users&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s explore each characteristic in detail.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-a-web-application-runs-on-the-web&#34;&gt;#1 A web application runs on the web&lt;/h2&gt;&#xA;&lt;p&gt;Web apps are everywhere nowadays. They can be the HR systems where employees log in to apply for leaves, the webmail portal for checking or sending emails, or the e-commerce websites, internet banking, search engines…&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
