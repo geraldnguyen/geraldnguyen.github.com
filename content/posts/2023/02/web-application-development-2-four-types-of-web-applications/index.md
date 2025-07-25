@@ -70,9 +70,9 @@ PWA packs powerful features such as offline capability and push notification, al
 
 We have examined the 4 common types of web applications, each with a brief description of their distinct features and underlying technologies.
 
-In the [next lesson](https://javascript.plainenglish.io/web-application-development-3-technologies-behind-a-web-application-a9e30be2962d), we will survey various technologies that make up a web application.
+In the [next lesson](../../03/web-application-development-3-technologies-behind-a-web-application/), we will survey various technologies that make up a web application.
 
 **Previous:** [Web Application Development — #1: What makes a Web Application?](../web-application-development-1-what-makes-a-web-application/)  
-**Next:** [Web Application Development — #3: Technologies Behind a Web Application](https://javascript.plainenglish.io/web-application-development-3-technologies-behind-a-web-application-a9e30be2962d)
+**Next:** [Web Application Development — #3: Technologies Behind a Web Application](../../03/web-application-development-3-technologies-behind-a-web-application/)
 
 For Content and Index, visit [Web Application Development — An Introductory course](../web-application-development-introductory-course/)

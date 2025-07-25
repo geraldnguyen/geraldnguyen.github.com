@@ -49,13 +49,13 @@ If you are looking for specific technologies or programming languages, here is a
 
 {{< relativelink "/posts/2023/02/web-application-development-2-four-types-of-web-applications" >}}
 
-**[#3 — Technologies of a Web Application](https://javascript.plainenglish.io/web-application-development-3-technologies-behind-a-web-application-a9e30be2962d)**
+**[#3 — Technologies of a Web Application](../../03/web-application-development-3-technologies-behind-a-web-application/)**
 
-And what roles each plays.
+{{< relativelink "/posts/2023/03/web-application-development-3-technologies-behind-a-web-application" >}}
 
-**[#4 — Terminologies, practices, and tools](https://javascript.plainenglish.io/web-application-development-terminologies-practices-and-tools-db4a743bba5b)**
+**[#4 — Terminologies, practices, and tools](../../03/web-application-development-4-terminologies-practices-and-tools/)**
 
-The basics of Agile development, team composition, and what tool we need for the remaining of this course.
+{{< relativelink "/posts/2023/03/web-application-development-4-terminologies-practices-and-tools" >}}
 
 **#5 — Frontend Development: HTML, CSS, Responsive layout, Javascript**
 
