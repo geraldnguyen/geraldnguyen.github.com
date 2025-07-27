@@ -2,20 +2,21 @@
 
 {{$page := .Site.GetPage (.Get 0)}}
 <div class="container alert alert-secondary">
-    <div><a href="{{$page.RelPermalink}}" alt="{{$page.Title}}">
-        <strong>{{ $page.Title }}</strong>
-    </a></div>
     <div class="d-flex align-items-start">
       {{ if $page.Params.image }}
           {{ $originalImg := $page.Resources.GetMatch ($page.Params.image) }}
           {{ if $originalImg }}
               {{ $thumbnailImg := $originalImg.Fit "200x100" }}
-              <img src="{{ $thumbnailImg.RelPermalink }}" alt="{{ $page.Title | safeHTML }}" />
+              <img src="{{ $thumbnailImg.RelPermalink }}" alt="{{ $page.Title | safeHTML }}" style="margin-right: 1rem; min-width: 80px; max-width: 120px; width: 100%; height: auto; border-radius: 4px;" />
           {{end}}
       {{end}}
-      <p class="px-1">
-        <small>{{$page.Params.Subtitle}}</small>
-      </p> 
-      
+      <div>
+        <a href="{{$page.RelPermalink}}" alt="{{$page.Title}}">
+          <strong>{{ $page.Title }}</strong>
+        </a>
+        <div>
+          <small>{{$page.Params.Subtitle}}</small>
+        </div>
+      </div>
     </div>
 </div>
